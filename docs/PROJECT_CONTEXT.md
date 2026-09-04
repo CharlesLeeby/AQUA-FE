@@ -29,7 +29,7 @@ This repository does not contain the main pose-estimation backend. It exports RO
 - CLAUDE.md: existing workspace guidance.
 - docs/: shared Codex/ChatGPT research memory established on 2026-09-04.
 
-README.md provides the repository entrypoint; uw_frontend/README.md contains the detailed package recipes. The workspace is a standalone Git repository on branch main with origin https://github.com/CharlesLeeby/AQUA-FE.git.
+README.md provides the repository entrypoint; uw_frontend/README.md contains the detailed package recipes. The workspace is a standalone Git repository on branch main, published at https://github.com/CharlesLeeby/AQUA-FE with SSH origin git@github.com:CharlesLeeby/AQUA-FE.git.
 
 ## Current Baseline
 
@@ -98,7 +98,7 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 
 - 2026-09-04: froze a 12-sequence same-backend confirmatory experiment for KLT, SP+LG, and XFeat churn-guard v3; execution notes record infrastructure recovery and an A04 archive-layout correction. Terminal results were not confirmed in this inspection.
 - 2026-09-04: External-KLT gate-transfer quick probe returned NO-GO and stopped before VINS replay.
-- 2026-09-04: initialized the standalone Git repository, added publication-safe ignore rules, and connected the main branch to the public GitHub origin.
+- 2026-09-04: initialized the standalone Git repository, added publication-safe ignore rules, and published the initial code/research-evidence snapshot to the public GitHub main branch.
 - 2026-09-03: churn-guard v3 repaired a known harmful startup while retaining two historical positive feature bags on a locked n=4 development set; this remains development evidence.
 - 2026-08-08: final claim-evidence map narrowed the submission story to exact fallback/no-harm, development-only selective rescue, a scoped XFeat initialization-failure result, and an M2 diagnostic negative-accuracy result.
 

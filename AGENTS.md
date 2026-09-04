@@ -4,7 +4,7 @@
 
 These instructions apply to the entire /home/ma/AQUA-FE_WS workspace. Read this file, CLAUDE.md, uw_frontend/README.md, and the nearest experiment protocol before making changes. More specific frozen protocols and preregistrations take precedence for the experiment they govern.
 
-This workspace is a standalone Git repository on branch main with origin https://github.com/CharlesLeeby/AQUA-FE.git. Always confirm that git rev-parse --show-toplevel returns /home/ma/AQUA-FE_WS; never interpret the host-root repository as project status. Do not commit, push, rewrite history, or change remotes unless the user explicitly requests it.
+This workspace is a standalone Git repository on branch main with SSH origin git@github.com:CharlesLeeby/AQUA-FE.git (public page: https://github.com/CharlesLeeby/AQUA-FE). Always confirm that git rev-parse --show-toplevel returns /home/ma/AQUA-FE_WS; never interpret the host-root repository as project status. Do not commit, push, rewrite history, or change remotes unless the user explicitly requests it.
 
 ## Project context
 

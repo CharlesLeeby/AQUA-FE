@@ -113,6 +113,7 @@ The previous workspace was nested under an unrelated host-root Git repository an
 - Added .gitignore rules for external data/tool/log links, run-scale artifacts, model and bag payloads, caches, builds, backups, scratch materializations, and large reproducible per-frame evidence intermediates.
 - Initialized a standalone Git repository with branch main.
 - Configured origin as https://github.com/CharlesLeeby/AQUA-FE.git.
+- Created root commit e8995611cd45641e3b416380e04aa0e894f7e569 and pushed main to the public GitHub repository. HTTPS credentials were unavailable, so origin was switched to the authenticated SSH transport for the same repository.
 - Updated AGENTS.md and project-context documents to reflect the new repository state.
 
 ### Files Modified
@@ -158,7 +159,7 @@ Engineering validation:
 
 ### Quantitative Results
 
-Before staging, the publication candidate contained 4,921 files totaling 160,269,714 working-tree bytes. No unignored file larger than 5 MB remained. These are repository packaging measurements, not SLAM results.
+Before the final exclusions, the publication candidate contained 4,921 files totaling 160,269,714 working-tree bytes. The committed snapshot contains 4,620 files totaling 94,651,971 working-tree bytes; its largest blob is 3,465,628 bytes and the packed Git objects were approximately 20.39 MiB after local packing. These are repository packaging measurements, not SLAM results.
 
 ### Qualitative Observations
 
@@ -168,7 +169,7 @@ Before staging, the publication candidate contained 4,921 files totaling 160,269
 
 ### Failed Attempts
 
-The installed Git version does not support git init -b main. That first command failed before initialization; the immediately following remote command still targeted the host-root repository and was rejected for lack of permission. No host or remote state changed. Initialization then succeeded with the compatible sequence git init followed by git checkout -b main.
+The installed Git version does not support git init -b main. That first command failed before initialization; the immediately following remote command still targeted the host-root repository and was rejected for lack of permission. No host or remote state changed. Initialization then succeeded with the compatible sequence git init followed by git checkout -b main. The first HTTPS push also failed safely because no non-interactive HTTPS credentials were configured; existing GitHub SSH authentication was verified and used successfully.
 
 ### Known Issues
 
@@ -184,10 +185,9 @@ The Git repository is a publication and provenance layer for executable code, pr
 
 ### Next Steps
 
-1. Verify the staged file list, maximum blob size, and ignored-file boundary.
-2. Run lightweight source/test validation that does not require datasets or external backends.
-3. Create the initial commit and push main to origin.
-4. Verify the remote branch and commit identity after push.
+1. Choose and add an open-source license if public reuse is intended.
+2. Reconcile stale experiment-status documents with the later claim-evidence map and September work.
+3. Keep future run-scale artifacts external and version their compact manifests, hashes, reports, and log entries.
 
 ## 2026-09-04 — Positive-window coverage expansion direction audit
 
