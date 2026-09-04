@@ -1,0 +1,25 @@
+{
+  "base_bag": "/mnt/data/AQUA-FE_WS/logs/ntnu_vins/external_hybrid_xfeat_every2_validation_20260804_ntnu_fjord1_s83_d30_xfeat_historical_profile_nativeq/features.bag",
+  "base_bag_sha256": "6a0d38686f823c273dea3fc23495de5f10e3c6b52ad4c43f84f287585434102f",
+  "contract_pass": true,
+  "eligible_tracks_with_any_increased_sqrt_q": 2286,
+  "feature_frames": 300,
+  "full_bag_pair_opportunities_in_those_tracks": 34565,
+  "full_bag_tracks_with_at_least_four_observations": 3046,
+  "gftt_birth_is_unique_first_observation": true,
+  "gftt_birth_observations": 21424,
+  "gftt_birth_q_max": 0.8791794776916504,
+  "gftt_birth_q_median": 0.8722089529037476,
+  "gftt_birth_q_min": 0.8581883311271667,
+  "gftt_continued_as_source1_tracks": 5182,
+  "gftt_singleton_tracks": 16242,
+  "pair_opportunities_with_increased_sqrt_q_if_birth_q_is_one": 22226,
+  "pair_opportunity_caveat": "Static full-bag lineage diagnostic, not a count of repeated Ceres residual evaluations inside sliding-window optimization.",
+  "schema_version": "aqua-fe-ntnu-q-partition-lineage-audit-v1",
+  "source_observation_counts": {
+    "1": 83358,
+    "2": 21424,
+    "20": 8
+  },
+  "track_count": 28226
+}

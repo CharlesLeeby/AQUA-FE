@@ -1,0 +1,107 @@
+{
+  "actual_environment": {
+    "AQUAFE_FORMAL_G0_BASE_FD": "/proc/self/fd/19",
+    "AQUAFE_FORMAL_G0_CORE_FD": "/proc/self/fd/20",
+    "AQUAFE_FORMAL_G0_ROLE": "runtime_probe",
+    "AQUAFE_FORMAL_G0_WRAPPER_FD": "/proc/self/fd/18",
+    "AQUAFE_P07_SEALED_EVALUATOR_BASE": "/proc/self/fd/19",
+    "AQUAFE_P07_SEALED_EVALUATOR_CORE": "/proc/self/fd/20",
+    "HOME": "/home/ma",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "LOGNAME": "ma",
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONHASHSEED": "0",
+    "PYTHONNOUSERSITE": "1",
+    "SHELL": "/bin/bash",
+    "USER": "ma"
+  },
+  "actual_environment_sha256": "0d14932fd4e906841f3286ec926b76db76171ddc70cc64a0e69a0a4d0f904148",
+  "actual_procfd_argv": [
+    "/proc/self/fd/16",
+    "-I",
+    "-B",
+    "/proc/self/fd/17",
+    "--runtime-probe",
+    "/proc/self/fd/21",
+    "/aqualoc/colmap_gt"
+  ],
+  "attempt_count": 1,
+  "authorized_canonical_argv": [
+    "/usr/bin/python3.8",
+    "-I",
+    "-B",
+    "/home/ma/AQUA-FE_WS/scripts/formal_g0_child_bootstrap_v1.py",
+    "--runtime-probe",
+    "/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_6300.bag",
+    "/aqualoc/colmap_gt"
+  ],
+  "authorized_process_start_count": 1,
+  "failure_path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_failure_receipt_v2.json",
+  "intent_path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_launch_intent_v2.json",
+  "no_retry_after_pending_evidence": true,
+  "pass_fd_numbers": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "probe_launch_intent_hash": "3a4bea582666e9406aff2f6b0116e7445c4e44a6b001f1a5ebf7bb03c9074514",
+  "probe_source": {
+    "base": {
+      "path": "scripts/evaluate_vins_common_support.py",
+      "sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110",
+      "size_bytes": 27933
+    },
+    "bootstrap": {
+      "path": "scripts/formal_g0_child_bootstrap_v1.py",
+      "sha256": "331d687f6249a3b7a87898237c542948beb456f8942f59531fa6f63875faeeb5",
+      "size_bytes": 80068
+    },
+    "core": {
+      "path": "scripts/trajectory_eval_core.py",
+      "sha256": "aa9ac4da81df7298d1f1c369548ca98a57235916004337cad66f4cf331560635",
+      "size_bytes": 27945
+    },
+    "python": {
+      "path": "/usr/bin/python3.8",
+      "sha256": "298a9e830ed52f36c299427565485d717d1ce0179c0597cc16560513eb780b06",
+      "size_bytes": 5490456
+    },
+    "reference_bag": {
+      "path": "datasets/aqualoc/rosbags/archaeo02_4500_6300.bag",
+      "sha256": "eebd45439e76c461e58a2a1d6321f3fcb82dbcf57ea4093929548c9620e63a83",
+      "size_bytes": 449056538
+    },
+    "wrapper": {
+      "path": "scripts/evaluate_vins_common_support_epoch_v2.py",
+      "sha256": "3c455299b23157cc749b474b9460ca4a408b3bee516e9d1bf2109f253cf89f91",
+      "size_bytes": 5447
+    }
+  },
+  "schema_version": "aqua-fe-matched-birth-r4-vins-g0-runtime-probe-launch-intent-v2",
+  "spawn_signal_policy": {
+    "api": "signal.signal_handlers_with_masked_install_restore_transitions",
+    "guarded_signals": [
+      "SIGHUP",
+      "SIGINT",
+      "SIGTERM"
+    ],
+    "require_initially_unblocked": true,
+    "required_prior_handlers": {
+      "SIGHUP": "SIG_DFL",
+      "SIGINT": "signal.default_int_handler",
+      "SIGTERM": "SIG_DFL"
+    },
+    "restore_only_after_child_reaped": true,
+    "spawn_mask_must_be_empty": true
+  },
+  "status": "DURABLE_RUNTIME_PROBE_LAUNCH_PENDING_NO_RETRY",
+  "timeout_seconds": 120
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "aqua-fe-anyfeature-runner-preflight-failure-seal-v1",
+  "status": "INFRASTRUCTURE_INVALID_PRE_OFFICIAL_PROCESS",
+  "sealed_utc": "2026-08-11T12:29:30Z",
+  "scientific_attempt_consumed": false,
+  "official_process_started": false,
+  "accuracy_evaluated": false,
+  "trajectory_generated": false,
+  "outer_return_code": 2,
+  "outer_wall_seconds": 1.2,
+  "command": [
+    "/usr/bin/python3",
+    "/home/ma/AQUA-FE_WS/scripts/run_anyfeature_vslam_official_v1.py",
+    "--action",
+    "run",
+    "--profile",
+    "r2d2-smoke",
+    "--sequence-path",
+    "/mnt/data/AQUA-FE_WS/anyfeature_adapter/aqualoc_a02_0005_frame000_smoke_view_r1",
+    "--exp-folder",
+    "/mnt/data/AQUA-FE_WS/published_anyfeature_vslam_v1/model_smokes/a02_frame000_r1"
+  ],
+  "runner_result": {
+    "schema": "aqua-fe-anyfeature-official-run-v1",
+    "status": "INTEGRITY_ERROR",
+    "profile": "r2d2-smoke",
+    "error": "LDD_REQUIRED_RESOLUTION_MISSING:/mnt/data/opt/anyfeature-paper-2024-r3/env/lib/libopencv_core.so.4.9.0",
+    "official_process_started": false,
+    "accuracy_evaluated": false
+  },
+  "artifact_boundary": {
+    "experiment_folder": "/mnt/data/AQUA-FE_WS/published_anyfeature_vslam_v1/model_smokes/a02_frame000_r1",
+    "experiment_folder_absent_after_call": true,
+    "run_manifest_absent": true,
+    "return_code_file_absent": true,
+    "stdout_log_absent": true,
+    "stderr_log_absent": true,
+    "note": "The frozen v1 runner failed during its project-side ldd preflight before it created the reserved experiment folder. This seal is a transparent post-call evidence record, not an upstream run artifact."
+  },
+  "frozen_identity": {
+    "runner_v1_sha256": "0c60fa8126dbc9dfb309b995c15bb324eea29899b07145afc69c10324538707f",
+    "preregistration_sha256": "74eb99a57aee660270561850a0b72f288951a80082b9c7a6200ecfed60a3c680",
+    "execution_tools_freeze_r1_sha256": "c53a2d18a24b2eb5dbd54a9c312ed16cda1ffd730c149e61a4603c6c97a91b4e",
+    "official_binary_sha256": "9adb623fc8d83ce35297be7a7d810d269cd65273bd0f4fb1bddebbec0b8bdd59",
+    "official_core_library_sha256": "eea4a5a6c5dccb5825a8e6a1a3249c6b808881a22c7fe301d0a2a90efaa99954",
+    "official_dbow2_library_sha256": "7215c8425e3620834ef24ea17f26fd0635b15d9d85b0093b00220e553a40c8c5",
+    "smoke_view_manifest_sha256": "68ac4ec0fc1217c9e4950a20cd97e46d1f96c47ec68ee0bc2e42bc5db7f87ac8",
+    "smoke_view_validation_report_sha256": "d5c690ee82097ffd287bbb9470e81388f6b9e68686cfce0f9a015fd905e4da42"
+  },
+  "read_only_reproduction": {
+    "ldd_return_code": 0,
+    "ldd_not_found_count": 0,
+    "ldd_address_stripped_sha256": "1674b994d1110be08208619e34c949660d8e15fa447265e99c0c5a443369f96c",
+    "ldd_observed_line": "libopencv_core.so.409 => /mnt/data/opt/anyfeature-paper-2024-r3/env/lib/libopencv_core.so.409",
+    "symlink_path": "/mnt/data/opt/anyfeature-paper-2024-r3/env/lib/libopencv_core.so.409",
+    "symlink_target": "libopencv_core.so.4.9.0",
+    "resolved_target": "/mnt/data/opt/anyfeature-paper-2024-r3/env/lib/libopencv_core.so.4.9.0",
+    "resolved_target_sha256": "a1c8ef7984b104b5198804ffa83622010a9c8156637eca0a37dd307d9809d9d2",
+    "cause": "The v1 checker called Path.resolve() on the expected SONAME symlink and then required the resolved target string to occur literally in ldd output. Normal ldd output reports the SONAME symlink path, so the equality test was a deterministic false negative despite a closed ELF dependency graph."
+  },
+  "governance": {
+    "classification": "project-side wrapper preflight defect; not an AnyFeature-VSLAM or R2D2 runtime outcome",
+    "v1_runner_must_not_be_modified": true,
+    "v1_call_must_not_be_erased_or_reclassified_as_success": true,
+    "permitted_next_step": "Freeze a new narrowly scoped runner-v2 and addendum before any further call. The only allowed code change is SONAME-symlink/realpath-equivalent ldd validation with a regression test. If v2 preflight fails, stop without another iteration. If it passes, exactly one official binary smoke start remains available.",
+    "accuracy_or_model_output_observed_before_decision": false
+  }
+}

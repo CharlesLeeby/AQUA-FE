@@ -1,0 +1,5 @@
+# Reproduction commands for the P02 history audit (read-only)
+find -L logs papers '正反例窗口整理' scripts -type f -printf '%p\n' | sort
+rg -n -i 'aqualoc|archaeo|harbor|fjord|mclab|afrl|cirs|tank|uvvid|learn|vins|ape|rpe|window|sequence' logs papers '正反例窗口整理' scripts
+python3 scripts/build_p02_audit.py --hash-local-inputs
+# The builder excludes its own governance bundle from the scan and records exact evidence paths in history_exclusion_manifest.csv.

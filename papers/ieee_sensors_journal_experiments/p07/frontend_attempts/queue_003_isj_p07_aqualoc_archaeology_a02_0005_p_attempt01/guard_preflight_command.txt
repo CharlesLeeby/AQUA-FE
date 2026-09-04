@@ -1,0 +1,1 @@
+AQUAFE_GUARD_ONLY=1 RUN_VINS=0 FORCE_EXPORT=1 TAG_BASE=isj_p07_aqualoc_archaeology_a02_0005_p_attempt01 bash scripts/run_isj_nativeq_contract_guarded_v4.sh aqualoc_archaeo 2 4500 5400 hybrid_xfeat 2

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "scripts/audit_p07_frontend_export_v3.py", line 482, in <module>
+    raise SystemExit(main())
+  File "scripts/audit_p07_frontend_export_v3.py", line 464, in main
+    payload = build_audit(
+  File "scripts/audit_p07_frontend_export_v3.py", line 391, in build_audit
+    raise AuditViolation(f"trajectory outcome artifact found: {forbidden}")
+audit_p07_mp_frontend_export_v2.AuditViolation: trajectory outcome artifact found: ['logs/afrl_cave_v31/external_klt_every2_isj_p07_afrl_bus_outside_0001_b1_attempt01/replay_manifest.txt']

@@ -1,0 +1,67 @@
+{
+  "artifacts": [
+    {
+      "path": "papers/ieee_sensors_journal_experiments/dataset_manifest_v4.csv",
+      "sha256": "aae68a271e2b9b258a3f91ba18a79eea1f37ab2dc373221be93cac814a493a00",
+      "size_bytes": 7348
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/arm_order.csv",
+      "sha256": "1afc17e256274d86725b146728cca51fd59df1a630e23c2c109a1cec2137c9f4",
+      "size_bytes": 34303
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/method_lock.json",
+      "sha256": "eae7a0fc6e94766a119be6abe5763fbfba8f64d9663f45f2f48ee591cf62a3cf",
+      "size_bytes": 9634
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/execution_adapter_lock_v1.json",
+      "sha256": "92bf8b67caca2186c9665b0b78488363b9f28ee5eb404f0e7c86a0a7c325bff2",
+      "size_bytes": 5998
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/execution_adapter_addendum_v1.md",
+      "sha256": "17299c9a48d04a7528a9c09223e01d3826398d48f18317182add77c9a7ba58b9",
+      "size_bytes": 1520
+    },
+    {
+      "path": "scripts/build_p07_frontend_export_queue_v1.py",
+      "sha256": "a6764b0c7051cf3345cef7d46b3b8a564d0f29cdd8a3fae612e3674b8a61e083",
+      "size_bytes": 13327
+    },
+    {
+      "path": "scripts/tests/test_p07_frontend_export_queue_v1.py",
+      "sha256": "e36d3c48aac50b72af63b1ceebae121219884efe6587f7e196a3a7bdaf9b4b70",
+      "size_bytes": 2407
+    }
+  ],
+  "commands_require": [
+    "RUN_VINS=0",
+    "FORCE_EXPORT=1"
+  ],
+  "conditional_d_slots": 20,
+  "d_applicability_queue": {
+    "path": "papers/ieee_sensors_journal_experiments/p07/d_applicability_queue_v1.csv",
+    "sha256": "5b177636673db2a3198638a5bdca42d8e53de024b91081ac206f939f367ce45c",
+    "size_bytes": 8914
+  },
+  "execution_adapter_lock_hash": "8db890ed77885e3359e29ec8d22edb7c9ef07d422ef1e4254b0ee01a2be494be",
+  "final_method_lock_hash": "1d032e4d43b2a647626b40cef906144dcceab523126bfee3b345b05b4efb578d",
+  "frontend_export_jobs": 60,
+  "frontend_export_queue": {
+    "path": "papers/ieee_sensors_journal_experiments/p07/frontend_export_queue_v1.csv",
+    "sha256": "8ced85066e7cd5aa8e7a0fc7d5f42ce07e99e97a36703b9404b8aab9f2103457",
+    "size_bytes": 36841
+  },
+  "held_out_trajectory_outcome_read": false,
+  "jobs_per_arm": {
+    "B1_klt_nativeq_v3": 20,
+    "M_xfeat_pairwise_nativeq_v1": 20,
+    "P_legacy_nativeq_xfeat_seedchain_v3": 20
+  },
+  "outcome_boundary": "FRONTEND_EXPORT_ONLY_NO_VINS_APE_RPE_TRAJECTORY",
+  "queue_lock_hash": "23095fffe3474d3c85fd809c94b0bf4cd0094aa8bbc083b65dd1a4cc950144eb",
+  "schema_version": "isj-p07-frontend-queue-lock-v1",
+  "status": "FROZEN_FOR_EXPORT_EXECUTION"
+}

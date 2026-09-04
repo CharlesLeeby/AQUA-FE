@@ -1,0 +1,91 @@
+{
+  "schema_version": "aqua-fe-a10-samehistory-user-waived-common-support-diagnostic-freeze-v1",
+  "frozen_at_utc": "2026-08-26T08:52:46Z",
+  "status": "PASS_DEVELOPMENT_ONLY_USER_WAIVED_DIAGNOSTIC",
+  "scope": "A10 natural-history prefix 0000-2800, score window 2400-2800",
+  "protocol": {
+    "path": "papers/a10_samehistory_user_waived_common_support_diagnostic_v1_protocol.md",
+    "size_bytes": 6515,
+    "sha256": "682983f5bd63b6aca8a184de24eadf51d50d96f715c9a43438f4bf233016ca33"
+  },
+  "runner": {
+    "path": "scripts/run_a10_samehistory_user_waived_common_support_diagnostic_v1.py",
+    "size_bytes": 25718,
+    "sha256": "9db50f45fcb00781caae03faef6d8b6857945888a1652cef1973e27860f4920b"
+  },
+  "output": {
+    "root": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_user_waived_diagnostic_v1",
+    "result_manifest": {
+      "size_bytes": 5625,
+      "sha256": "33f8e790e79cf45348d53fe19138c4423a17f1907b23fb2e46c38adbea0a159a"
+    },
+    "registered_artifact_count": 30,
+    "registered_artifact_hash_mismatch_count": 0,
+    "unexpected_artifact_count": 0,
+    "symlink_count": 0,
+    "residual_staging_directory_count": 0
+  },
+  "support": {
+    "uniform_grid_count": 20,
+    "jointly_matched_count": 20,
+    "common_coverage": 1.0,
+    "segment_count": 1,
+    "exact_1s_rpe_pair_count": 19,
+    "native_proxy_rows_in_window": 21,
+    "formal_ape_gate_open": false,
+    "descriptive_rpe_gate_open": true
+  },
+  "fixed_order_metrics_m": {
+    "VANILLA_ORIGIN_NATIVE_IMAGE_CONTEXT": {
+      "ape_rmse": 1.581689537280874,
+      "rpe_1s_rmse": 0.2788175291202824
+    },
+    "EXTERNAL_KLT_FINALONLINE_BACKBONE": {
+      "ape_rmse": 0.5996215111826825,
+      "rpe_1s_rmse": 0.11145193788046229
+    },
+    "AQUAFE_FINALONLINE_XFEAT_LINEAGE": {
+      "ape_rmse": 0.6064112645034802,
+      "rpe_1s_rmse": 0.11270866804871361
+    },
+    "HFNET_SLAM_WARMSTART": {
+      "ape_rmse": 0.8871281375947551,
+      "rpe_1s_rmse": 0.1569675519974845
+    }
+  },
+  "crosscheck": {
+    "tool": "evo 1.31.1",
+    "maximum_ape_absolute_difference_m": 4.88817317512158e-7,
+    "maximum_rpe_absolute_difference_m": 4.708797176067314e-7,
+    "frozen_tolerance_m": 1e-5,
+    "status": "PASS"
+  },
+  "alignment": {
+    "primary": "fixed-scale SE(3)",
+    "body_to_camera_applied": true,
+    "sim3_or_scale_correction_used": false
+  },
+  "klt_local_policy_waiver": {
+    "source_receipt_sha256": "bc8aae68cad14fc746969c45ff3c097e7ae800ec51ce5a0e851d2a696feea350",
+    "frozen_status": "TERMINAL_PROCESS_RC0",
+    "frozen_overall_disposition": "EXECUTION_INTEGRITY_FAILED",
+    "execution_integrity_status": "FAIL",
+    "artifact_contract_status": "PASS",
+    "score_usability_status": "PASS",
+    "prior_receipt_relabelled": false
+  },
+  "claim_boundary": {
+    "reference": "same-image COLMAP/depth-scale proxy, not independent ground truth",
+    "independent_run_count_for_inference": 1,
+    "development_only": true,
+    "primary_paper_evidence_permitted": false,
+    "ranking_or_winner_permitted": false,
+    "significance_or_confidence_interval_permitted": false,
+    "superiority_claim_permitted": false
+  },
+  "independent_read_only_audit": {
+    "status": "PASS",
+    "completed_after_generation": true,
+    "files_modified_by_audit": 0
+  }
+}

@@ -1,0 +1,17 @@
+SYS:
+  backend_hz: 200
+  sensors: [IMU, CAM0_FEATURE]
+  topics:
+    - {IMU: /rtimulib_node/imu}
+    - {CAM0_FEATURE: /feature_tracker/feature}
+  buffers:
+    - {CAM0_FEATURE: 10}
+
+MSCKF:
+  cam_exterisic_R: false
+  cam_exterisic_p: false
+  cam_timeoffset: false
+  cam_clone: 20
+  marg_meas_index: [-1]
+  marg_pose_index: [-1]
+  max_msckf_update: 20

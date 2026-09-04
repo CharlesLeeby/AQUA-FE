@@ -1,0 +1,21 @@
+{
+  "changed_observations": 315000,
+  "contract_pass": true,
+  "feature_frames": 900,
+  "feature_topic": "/feature_tracker/feature",
+  "input_bag": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_native_r1/features.bag",
+  "input_sha256": "dbe85f68c91e523f56c7f7488accd216a6b56ffc3949eb9e6a09745fa2e5d6cb",
+  "output_bag": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_r1/features.bag",
+  "output_sha256": "a91b159c46c51c0d3d7232e86901e86862b4f58fbf9bef58a224f9f8444db523",
+  "quality": 1.0,
+  "raw_equal_nonfeature_messages": 18175,
+  "schema_version": "aqua-fe-quality-partition-audit-v1",
+  "selected_observations": 315000,
+  "sigma": 1.0,
+  "source_codes": [
+    1,
+    2
+  ],
+  "total_messages": 19075,
+  "untouched_observations": 0
+}

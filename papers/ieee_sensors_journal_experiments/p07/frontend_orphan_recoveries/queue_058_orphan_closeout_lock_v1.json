@@ -1,0 +1,1050 @@
+{
+  "arm": "M_xfeat_pairwise_nativeq_v1",
+  "artifacts": [
+    {
+      "path": "logs/aqualoc_archaeo_vins/external_xfeat_every2_isj_p07_aqualoc_archaeology_a07_0001_m_attempt01/aqualoc_archaeo07_pinhole.yaml",
+      "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+      "size_bytes": 357
+    },
+    {
+      "path": "logs/aqualoc_archaeo_vins/external_xfeat_every2_isj_p07_aqualoc_archaeology_a07_0001_m_attempt01/features.bag",
+      "sha256": "23158fed633e542195a6b1db856bb2c1aae907941ee12b591e9a4c18f2a92bb5",
+      "size_bytes": 12498017
+    },
+    {
+      "path": "logs/aqualoc_archaeo_vins/external_xfeat_every2_isj_p07_aqualoc_archaeology_a07_0001_m_attempt01/frontend_metrics.csv",
+      "sha256": "17fa761b57710ea8ae6857b627f3421f5768e92717a64f1a5fa23e3ca2941493",
+      "size_bytes": 287950
+    },
+    {
+      "path": "logs/backend_contract_decisions/p05/p05_xfeat_guard_20260807T193127Z_49133_decision.json",
+      "sha256": "b5c0d167feba019ad91e42b131a3a623efe2512e5a1d087fea8c7d8d8c0e5488",
+      "size_bytes": 862
+    },
+    {
+      "path": "logs/backend_contract_decisions/p05/p05_xfeat_guard_20260807T193127Z_49141_decision.json",
+      "sha256": "b5c0d167feba019ad91e42b131a3a623efe2512e5a1d087fea8c7d8d8c0e5488",
+      "size_bytes": 862
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/arm_order.csv",
+      "sha256": "1afc17e256274d86725b146728cca51fd59df1a630e23c2c109a1cec2137c9f4",
+      "size_bytes": 34303
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/backend_quality_contract_v1.json",
+      "sha256": "14abab7ca7ad0f48af8856372b3cf97470d405c1e20081cdb4247f3c87b64957",
+      "size_bytes": 4893
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/data_eligibility_manifest.csv",
+      "sha256": "510c276c33217706eef11ea53e58de4b37318828f8a6dc793dea9262f0a0a0f5",
+      "size_bytes": 46310
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/dataset_checksum_manifest.txt",
+      "sha256": "8b4715d0e55414bade394935472a2ef6a88132492c96b58edfbe2d6961f1a2e7",
+      "size_bytes": 6924
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/dataset_manifest_v4.csv",
+      "sha256": "aae68a271e2b9b258a3f91ba18a79eea1f37ab2dc373221be93cac814a493a00",
+      "size_bytes": 7348
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/method_lock.json",
+      "sha256": "eae7a0fc6e94766a119be6abe5763fbfba8f64d9663f45f2f48ee591cf62a3cf",
+      "size_bytes": 9634
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p05/backend_consumer_contract_xfeat_v1.json",
+      "sha256": "7cc27811379148db92937e563ba97f0c8aec7ebcfc49834f9707a4306858ab61",
+      "size_bytes": 8792
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/a01_frontend_execution_lock_v3.json",
+      "sha256": "45eeddfc5fb70f76b368a715ff65eec8c86ee74220f0a0763808ffff89d062a3",
+      "size_bytes": 16950
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/a02_d_resolution_lock_v1.json",
+      "sha256": "2ab5bf2c87200dcc8e9c58a15dac79b8f3d7c46a3684694cd062d1c4fb457fa7",
+      "size_bytes": 6349
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/afrl_replay_manifest_auditor_correction_lock_v4.json",
+      "sha256": "a1cd0191611759b2c72a830ccaa1e1a83794e3ea122b18168c2743ecb0353708",
+      "size_bytes": 6069
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/d_applicability_queue_v1.csv",
+      "sha256": "5b177636673db2a3198638a5bdca42d8e53de024b91081ac206f939f367ce45c",
+      "size_bytes": 8914
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/d_resolution_locks/aqualoc_archaeology_a04_0002_v4.json",
+      "sha256": "748d93ec9533475b8e68e1c254803fe52f24c8c435c27113cb547a5309c31384",
+      "size_bytes": 13730
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/d_resolutions/a02_0005_not_applicable_v1.json",
+      "sha256": "9bfcaf470877478a2c8067ca1b5581854dcfc9762bbc931e1056286a561972dc",
+      "size_bytes": 2318
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/d_resolutions/aqualoc_archaeology_a04_0002_not_applicable_v2.json",
+      "sha256": "bb3f4dc9987be0066a81497ebdd8f71aa54e330561a96e123bb8387f87951b6c",
+      "size_bytes": 1853
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/execution_adapter_lock_v1.json",
+      "sha256": "92bf8b67caca2186c9665b0b78488363b9f28ee5eb404f0e7c86a0a7c325bff2",
+      "size_bytes": 5998
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_005_isj_p07_aqualoc_archaeology_a01_0018_p_attempt01/audit_v3.json",
+      "sha256": "3a0d304a482d91f6cbe917d53a17d9e2a4155a9898461ffd7f885b960012fa69",
+      "size_bytes": 4669
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_028_isj_p07_afrl_bus_outside_0001_b1_attempt01/audit_correction_closeout_v4.json",
+      "sha256": "5edca55e8532a596d00499fc5dfbd5f2b5c7b78b3aeca4f1456e2d41a5a49cc6",
+      "size_bytes": 1607
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_028_isj_p07_afrl_bus_outside_0001_b1_attempt01/audit_v4.json",
+      "sha256": "ae38adfc2a065132ba1777ace72f8d439648f743923b36cc6989428dbd08aea5",
+      "size_bytes": 3649
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_028_isj_p07_afrl_bus_outside_0001_b1_attempt01/output_hash_manifest_v4.sha256",
+      "sha256": "8e2a95b34831a3bec72d8b91eee505db202c3ca9ee4f7c76f9e7f77d5cab37db",
+      "size_bytes": 3162
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_058_isj_p07_aqualoc_archaeology_a07_0001_m_attempt01/capacity_preflight.json",
+      "sha256": "fda42140b955d7e5e43d33d8f7511e6808fe304baa0037333543609dd3e5c38f",
+      "size_bytes": 433
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_058_isj_p07_aqualoc_archaeology_a07_0001_m_attempt01/command.log",
+      "sha256": "c883dd9d0a78c500bb0627ea6e6f2c801145d4c913d6ec101ac5749c1198613a",
+      "size_bytes": 1257
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_058_isj_p07_aqualoc_archaeology_a07_0001_m_attempt01/command.txt",
+      "sha256": "2da0b3ddd9567e390cb46f61e02fcfe745eb22d7be9cbf06e27fc2c645b79f21",
+      "size_bytes": 169
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_058_isj_p07_aqualoc_archaeology_a07_0001_m_attempt01/guard_preflight.log",
+      "sha256": "491157c6ba0e48cc1922261d29abbf51f0825df1570b3fa8a8a465f8c8d9f9d4",
+      "size_bytes": 324
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_058_isj_p07_aqualoc_archaeology_a07_0001_m_attempt01/guard_preflight_command.txt",
+      "sha256": "ea7ad588107a64a2c849c3de179fcbd966b44a534be32bc38bdfc7dc83ccfef3",
+      "size_bytes": 193
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_058_isj_p07_aqualoc_archaeology_a07_0001_m_attempt01/input_hash_manifest.sha256",
+      "sha256": "85ff45c5234bccfc8cd43c965757c93ea8873d015eceb3a7e1ee21a7991c9388",
+      "size_bytes": 10115
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_execution_correction_lock_v4.json",
+      "sha256": "8eab4cba2abf689c873d2e6d503756ea70508163a6f027667f3daf91d2378541",
+      "size_bytes": 5277
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_execution_correction_lock_v5.json",
+      "sha256": "76a75780cf515e21157ddd06d67e0753b7a83e02ea2c276ddbfda1f984d5f47e",
+      "size_bytes": 4947
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_execution_lock_v3.json",
+      "sha256": "b24aed8b92e8c4b84440105bcb4f58a04e3ae48bae693cf885d3db215752016a",
+      "size_bytes": 68482
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_export_queue_v1.csv",
+      "sha256": "8ced85066e7cd5aa8e7a0fc7d5f42ce07e99e97a36703b9404b8aab9f2103457",
+      "size_bytes": 36841
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_prestart_failures/queue_007_isj_p07_aqualoc_harbor_h05_0002_p_attempt01_v3_adapter_recursion/preexecution_failure.json",
+      "sha256": "a32fb3a7752bbb8239373d7d42f8a116af5a4230f33ea2251b901ab0ae65786c",
+      "size_bytes": 1574
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_queue_lock_v1.json",
+      "sha256": "92300f09d0c29c7e5db6e24e36bedaf518722c0b5a36e720e33f79065be517e1",
+      "size_bytes": 2645
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_replacements/queue_055_a04_d_path_correction_lock_v1.json",
+      "sha256": "f9795f7878d5b509bd8d9c485e0203f747f15caf3704ca3cd98b7ddeecbf7b1f",
+      "size_bytes": 47213
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_replacements/queue_055_a04_layout_attempt02_closeout_v1.json",
+      "sha256": "59f1dc3c56ce67b4d7ae350c39080b3258b38cd5f58ab74c936391db00e821ca",
+      "size_bytes": 10832
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_replacements/queue_055_a04_layout_attempt02_lock_v1.json",
+      "sha256": "b17a99853ac9e2519be017bfbc82cc465b67f8798b2899a38aded6ea146b5c54",
+      "size_bytes": 25608
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_replacements/queue_055_a04_layout_attempt02_registration_v1.json",
+      "sha256": "e6793741d243725397b93ff762f1332aca0eeb85f005445cfa0f998a84a87fdb",
+      "size_bytes": 5130
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_run_allocation_v1.csv",
+      "sha256": "05b706010ce5fc1d5032bf680dc286d2b69fc98c190a25fdf4e1ceee84df84ec",
+      "size_bytes": 40388
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/mp_smoke_execution_lock_v2.json",
+      "sha256": "9397a3ba67f3fd8b24e70992664ae3ce051afa0921fc74fd2a8a6f098b2c1338",
+      "size_bytes": 15136
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/preoutcome_analysis_lock_v1.json",
+      "sha256": "207f2654fe0dd660205298c63a389ea894461b8224c596cd5537b28cfc2d0835",
+      "size_bytes": 9042
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/protocol_v1_nativeq_v3.md",
+      "sha256": "4466cff65d9df2be4dab97350041c2c79f687e624e6b658fb734a70459222bda",
+      "size_bytes": 2978
+    },
+    {
+      "path": "scripts/attest_nativeq_feature_bag.py",
+      "sha256": "ff4fcd9a9d97178c5a54935a4c6efe766a183af2546e30f33b55f831c4f2608e",
+      "size_bytes": 5250
+    },
+    {
+      "path": "scripts/attest_p05_xfeat_feature_bag_v1.py",
+      "sha256": "c43099995255dc7b5a7882eac5003d9051f59dcd96ca516bdd318f979d2d986a",
+      "size_bytes": 10390
+    },
+    {
+      "path": "scripts/audit_p07_a01_frontend_export_v3.py",
+      "sha256": "03fdd6d64c34b130dc236be721a855e29dfbe1d9d5059ee8d12d3c158f11962e",
+      "size_bytes": 20332
+    },
+    {
+      "path": "scripts/audit_p07_frontend_export_v3.py",
+      "sha256": "49d02f496f1c7f412aa8625c853941e8c3f4b25701dca423c35e2ad9c42e8013",
+      "size_bytes": 20672
+    },
+    {
+      "path": "scripts/audit_p07_frontend_export_v4.py",
+      "sha256": "80100b690cb1642d1e1a8598424156b36429a5f4d5b6e8ee0edda5e460c70155",
+      "size_bytes": 6556
+    },
+    {
+      "path": "scripts/audit_p07_mp_frontend_export_v2.py",
+      "sha256": "071c0f6627afc9111bf4bb3efabddad4bf02e48d2305a60381056e7f52b0c7dc",
+      "size_bytes": 28967
+    },
+    {
+      "path": "scripts/audit_whole_lineage_exact_drop_v1.py",
+      "sha256": "bf6ccbf47d3b6b1e4fdad8b9e8b49d17f9545b312ce64970b61ed6c56cdf71b4",
+      "size_bytes": 27756
+    },
+    {
+      "path": "scripts/build_nativeq_backend_contract.py",
+      "sha256": "0c5bbdf3fd1f0948a94df346d29dc8b26ee66666c51287b933db5e7e79a0decc",
+      "size_bytes": 8544
+    },
+    {
+      "path": "scripts/build_p07_a01_frontend_execution_lock_v3.py",
+      "sha256": "8f431ff8c91f47bf0d6cda75107034eb9d9403da7b5e193279f92a8afb24dc27",
+      "size_bytes": 15745
+    },
+    {
+      "path": "scripts/build_p07_d_resolution_lock_v2.py",
+      "sha256": "f65a169571385ac28f84dbef8c72104e956bbd38ccad3c0d8718c255ae789fc8",
+      "size_bytes": 7162
+    },
+    {
+      "path": "scripts/build_p07_frontend_execution_correction_lock_v4.py",
+      "sha256": "f79e839e2ec21d3cb80ed6cd1b20eb0cc3808138d04ac6564ffd861b1bb767de",
+      "size_bytes": 6301
+    },
+    {
+      "path": "scripts/build_p07_frontend_execution_correction_lock_v5.py",
+      "sha256": "c5dbf37e63ac1122772e7c855d749eee9a19902649be7eecdddc2798af6b0b47",
+      "size_bytes": 6634
+    },
+    {
+      "path": "scripts/build_p07_frontend_execution_lock_v3.py",
+      "sha256": "9822aa823f7062cca6e60193c246121d564a6cffb67a3a6e6933b5691a302773",
+      "size_bytes": 15930
+    },
+    {
+      "path": "scripts/build_p07_preoutcome_governance_v1.py",
+      "sha256": "02253550667b322da433adb20b44ed69200bd0f8f2c7179c2c3fa038bb2414b1",
+      "size_bytes": 22982
+    },
+    {
+      "path": "scripts/build_p07_q55_a04_layout_replacement_lock_v1.py",
+      "sha256": "8828ee652c13c9cd2736fc8a5c1b59ed27ca04c63b517ac15056554b33a16382",
+      "size_bytes": 23575
+    },
+    {
+      "path": "scripts/build_p07_q58_orphan_closeout_lock_v1.py",
+      "sha256": "03a2292c488786b62f2439b6715f6130ce48eee9e16fcb425c2fb72bd9653fdd",
+      "size_bytes": 23169
+    },
+    {
+      "path": "scripts/check_b1_klt_nativeq_contract_v1.py",
+      "sha256": "8dafcb3e40278210e4fb545c5e19e347b69898cd45e5af3ec7736ceb682bad15",
+      "size_bytes": 3480
+    },
+    {
+      "path": "scripts/check_nativeq_backend_contract.py",
+      "sha256": "37c61326e38d17e2a950fff66c9bd062bed8eab015385da36474c3bb558d3f4f",
+      "size_bytes": 11394
+    },
+    {
+      "path": "scripts/check_p05_xfeat_backend_contract_v1.py",
+      "sha256": "fa19cbfb5e94803ef8bbc470f2d6a1eb0ea0108fe1805891eaeed5aa9bc35e00",
+      "size_bytes": 23546
+    },
+    {
+      "path": "scripts/closeout_p07_q58_orphan_execution_v1.py",
+      "sha256": "f7aa4d9e3cc827ee2d1283f9cf170216ab536e7ba74c9172615928572b69f331",
+      "size_bytes": 14885
+    },
+    {
+      "path": "scripts/filter_feature_bag_by_channel.py",
+      "sha256": "745d8c5c07cbc8fb65e307221f744e5c4b44b3f93618c4ca68754a7060430e0d",
+      "size_bytes": 15000
+    },
+    {
+      "path": "scripts/reclaim_p07_raw_cache_v1.py",
+      "sha256": "40d645f0d8ed240f24ce61e1cc61544b9220c29925cda7b877b26144fa96128d",
+      "size_bytes": 62564
+    },
+    {
+      "path": "scripts/resolve_p07_d_applicability_v2.py",
+      "sha256": "c6200bc927784f4589d9997e96420f288f544f46db008a7cc46b359aa0a1823d",
+      "size_bytes": 17464
+    },
+    {
+      "path": "scripts/resolve_p07_d_applicability_v3.py",
+      "sha256": "d11aa506796495ffd7e1dc82adbff54b96f10ab62766166711dbf6c81bc39013",
+      "size_bytes": 5619
+    },
+    {
+      "path": "scripts/resolve_p07_d_applicability_v4.py",
+      "sha256": "c8402c8357617aee2b165c9c033fe7c6ef0a0192bef0cb37c534f0347663e080",
+      "size_bytes": 26700
+    },
+    {
+      "path": "scripts/run_afrl_cave_vins_eval.sh",
+      "sha256": "16966ce2663cf4dff5eb1bdc36c8c975a912dd3089da8dae9ae376799bd547da",
+      "size_bytes": 59481
+    },
+    {
+      "path": "scripts/run_aqualoc_archaeo_vins_eval.sh",
+      "sha256": "4ed3612d7a105ac0f1dab69a44f982381808d21cd93f25984dadb390b431cdfe",
+      "size_bytes": 52310
+    },
+    {
+      "path": "scripts/run_aqualoc_real_vins_eval.sh",
+      "sha256": "400d3287b3d0f168b89a05643587d19c353086c5821b94b4e738487025dd3e5a",
+      "size_bytes": 51054
+    },
+    {
+      "path": "scripts/run_isj_b1_klt_nativeq_guarded_v1.sh",
+      "sha256": "6c112ebdb916becf615b0772c4474a119bf774a17b4f85391ceb88d46d0505d1",
+      "size_bytes": 5604
+    },
+    {
+      "path": "scripts/run_isj_nativeq_contract_guarded_v4.sh",
+      "sha256": "f4bffa30037261c0896bb4fd4f14929bc4445f854ca409ac82b6240ac4706373",
+      "size_bytes": 2217
+    },
+    {
+      "path": "scripts/run_isj_nativeq_legacy_candidate.sh",
+      "sha256": "495074b495da085af459eec6655cbe58ab57de8afe02246102268f1c8558cc9e",
+      "size_bytes": 4759
+    },
+    {
+      "path": "scripts/run_learned_seedchain_eval.sh",
+      "sha256": "8b2db28e5a5c1cc4dfd8ce365d44bdc618e6ec2c4a70db4ea2549b73a965b106",
+      "size_bytes": 4061
+    },
+    {
+      "path": "scripts/run_ntnu_vins_eval.sh",
+      "sha256": "9f9c6f36b947185666d438309098a592c3675b93bf0ee1d5bc84357bae8ba422",
+      "size_bytes": 50834
+    },
+    {
+      "path": "scripts/run_p05_modern_xfeat_baseline.sh",
+      "sha256": "adb5330dd4ab47bcf0d530edd6d8c6bb95d0eb25195f70e83b6e283d255bf81c",
+      "size_bytes": 6597
+    },
+    {
+      "path": "scripts/run_p05_modern_xfeat_baseline_guarded_v2.sh",
+      "sha256": "6af0f33684a717fa8403cf668b03e5f3040592f11e1ccb2e6173cc86742945df",
+      "size_bytes": 4659
+    },
+    {
+      "path": "scripts/run_p07_a01_frontend_export_job_v3.py",
+      "sha256": "f8becb458d1a26c965894a3ab03e4e8d0d73a64d2f0a144f4bc3a436baec5421",
+      "size_bytes": 19340
+    },
+    {
+      "path": "scripts/run_p07_a04_d_path_correction_v1.py",
+      "sha256": "9f03c5de62da44db4d6fb3a90029e974b774dc6747e1c022a54655d09385bc55",
+      "size_bytes": 34478
+    },
+    {
+      "path": "scripts/run_p07_frontend_export_job_v3.py",
+      "sha256": "fe1b9b2cd6dc6cb2d1468465a0c16d05eb528e7ab9dfdd41150105a6c04b3cb7",
+      "size_bytes": 10834
+    },
+    {
+      "path": "scripts/run_p07_frontend_export_job_v4.py",
+      "sha256": "5a98347da812a434f2441b65df81958d65146e119a2f18b68a37b0e5f8fc0caf",
+      "size_bytes": 5151
+    },
+    {
+      "path": "scripts/run_p07_frontend_export_job_v5.py",
+      "sha256": "75a1f1f198c1b057c1dcbf9fe37a252839c8a13b3348a12819bd5ba19b20904f",
+      "size_bytes": 6297
+    },
+    {
+      "path": "scripts/run_p07_frontend_queue_v3.py",
+      "sha256": "625f20ff94aa819b99cdd0f419bf9cfce99a4d3e3abb04b7e2a51182fd2ba57b",
+      "size_bytes": 4567
+    },
+    {
+      "path": "scripts/run_p07_frontend_queue_v4.py",
+      "sha256": "73851bb7c17d87e368c52a40d922a275c88500ce576523634c18fbce977eb01a",
+      "size_bytes": 6109
+    },
+    {
+      "path": "scripts/run_p07_frontend_queue_v5.py",
+      "sha256": "b00ffecdac713f9451c6c1fe2bd14ee3c6d77003381ac08db03951a94a1686c8",
+      "size_bytes": 4329
+    },
+    {
+      "path": "scripts/run_p07_frontend_queue_v6.py",
+      "sha256": "4da71d1c078c6e7352d23e6cc587a679dbb09c1be5abc7ee24803b8928fbb62f",
+      "size_bytes": 6470
+    },
+    {
+      "path": "scripts/run_p07_mp_frontend_export_job_v2.py",
+      "sha256": "191c7b44a511b358c7e1a5b13418db14f0ed6a069af6074e164652d82b8da7a0",
+      "size_bytes": 25107
+    },
+    {
+      "path": "scripts/run_p07_q55_a04_layout_replacement_v1.py",
+      "sha256": "6be6d94da9f330b20d96cbd5a7c5e5fdc6d20696a8f772d2ebe2cfe2a3e6fc0d",
+      "size_bytes": 66501
+    },
+    {
+      "path": "scripts/run_xfeat_seedchain_arbitrated_eval.sh",
+      "sha256": "82bd47f019a423fc3e8f92bf533c06556dd1eb9b2d20c49ba8ff09e435744fb0",
+      "size_bytes": 91687
+    },
+    {
+      "path": "scripts/tests/test_p07_frontend_execution_correction_v4.py",
+      "sha256": "c14fba2d7eca40ad8fe6a747985971991502a7551f7abe12544bccf595ed0b7c",
+      "size_bytes": 1565
+    },
+    {
+      "path": "scripts/tests/test_p07_frontend_execution_correction_v5.py",
+      "sha256": "9fbe052151fc5347f5d7d2b1e460434ac5c32c0adcae4775ea216e97a766734a",
+      "size_bytes": 1254
+    },
+    {
+      "path": "scripts/tests/test_p07_q58_orphan_closeout_v1.py",
+      "sha256": "7771a3998e10505a55a4f73bfb5f81a0d536c31501acfc79fe5ee5424cd3b3aa",
+      "size_bytes": 16173
+    },
+    {
+      "path": "uw_frontend/configs/experiments/isj_p05_xfeat_pairwise_nativeq.yaml",
+      "sha256": "118f14bedf0995b1f64e4099ab2eddf653297bc1b55170bc61556e8bcde71d20",
+      "size_bytes": 578
+    },
+    {
+      "path": "uw_frontend/configs/experiments/low_texture_xfeat_seedchain_frontend.yaml",
+      "sha256": "6f89d861cc002dfaf0eaf5f1294b0dbcfab9fe268c5dc0d09082f79811000bf3",
+      "size_bytes": 1493
+    },
+    {
+      "path": "uw_frontend/datasets/afrl_cave_to_rosbag.py",
+      "sha256": "ab73d69a2ea652cd0cdede5eb9831ffb1fd325111ee1edf9f39c853737fecfb7",
+      "size_bytes": 8648
+    },
+    {
+      "path": "uw_frontend/datasets/aqualoc_raw_to_rosbag.py",
+      "sha256": "b0c4b7ce7f3e29dcb18cb1604190cc8690cae370fc222246c8dfeb4fc79ffbec",
+      "size_bytes": 8310
+    },
+    {
+      "path": "uw_frontend/datasets/image_sequence.py",
+      "sha256": "2ba225a52a7caab9e92eb6b06c3ae7ff9a0030b96ea78e6f20f4228e97337384",
+      "size_bytes": 4844
+    },
+    {
+      "path": "uw_frontend/ros/export_vins_features.py",
+      "sha256": "7ed31890e3a55a528430e912df885830176b3c3432c420860a39d714bceae7cf",
+      "size_bytes": 435551
+    }
+  ],
+  "canonical_registry_state": {
+    "e00": {
+      "accepted_lineage_count": "",
+      "active": "",
+      "algorithm_hard_failure": "",
+      "any_repeat_hard_failure": "",
+      "applicability_rule": "ALWAYS",
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "arm_applicability": "REQUIRED",
+      "arm_version": "xfeat-pairwise-nativeq-v1",
+      "backend_replay": "b00",
+      "candidate_pool_hash": "",
+      "command_file": "papers/ieee_sensors_journal_experiments/p07/frontend_export_queue_v1.csv",
+      "dataset_family": "aqualoc_archaeology",
+      "frame_chain_hash": "",
+      "frontend_seed": "0",
+      "full_coverage": "",
+      "infrastructure_failure": "",
+      "init_failure": "",
+      "input_hash_manifest": "papers/ieee_sensors_journal_experiments/dataset_checksum_manifest.txt",
+      "method_profile": "M_xfeat_pairwise_nativeq_v1",
+      "notes": "queue_index=58; window_id=aqualoc_archaeology:A07:0001; tag=isj_p07_aqualoc_archaeology_a07_0001_m_attempt01; command_sha256=90062bbc515e752be6cf0c05162053248e72b0a08a3cb1800577ed3b5e1fb4b5; frontend export only; trajectory outcome not read",
+      "output_hash_manifest": "",
+      "protocol_version": "isj-nativeq-v3-confirmatory-protocol-v1",
+      "queue_drop_rate": "",
+      "recorded_at": "2026-08-06T16:45:00+08:00",
+      "registry_event_id": "isj-nativeq-v3_P07_aqualoc_archaeology-A07_900-1800_M_f0_b00_20260806T084500Z_e00",
+      "replacement_for": "",
+      "replay_evaluable": "false",
+      "replay_hard_failure": "",
+      "run_dir": "logs/aqualoc_archaeo_vins/external_xfeat_every2_isj_p07_aqualoc_archaeology_a07_0001_m_attempt01",
+      "run_id": "isj-nativeq-v3_P07_aqualoc_archaeology-A07_900-1800_M_f0_b00_20260806T084500Z",
+      "selection_active": "",
+      "selection_hash": "",
+      "sequence": "A07",
+      "solver_risk": "",
+      "split_role": "HISTORY_EXCLUDED_WINDOW_WITHIN_DEVELOPMENT_EXPOSED_SEQUENCE",
+      "stage": "P07_FRONTEND_EXPORT",
+      "status": "PLANNED",
+      "supersedes_event_id": "",
+      "sustained_queue_drop": "",
+      "texture_stratum": "normal",
+      "window_arm_hard_failure": "",
+      "window_arm_solver_risk": "",
+      "window_end": "1800",
+      "window_start": "900"
+    },
+    "e01": {
+      "accepted_lineage_count": "",
+      "active": "",
+      "algorithm_hard_failure": "",
+      "any_repeat_hard_failure": "",
+      "applicability_rule": "ALWAYS",
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "arm_applicability": "REQUIRED",
+      "arm_version": "xfeat-pairwise-nativeq-v1",
+      "backend_replay": "b00",
+      "candidate_pool_hash": "",
+      "command_file": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_058_isj_p07_aqualoc_archaeology_a07_0001_m_attempt01/command.txt",
+      "dataset_family": "aqualoc_archaeology",
+      "frame_chain_hash": "",
+      "frontend_seed": "0",
+      "full_coverage": "",
+      "infrastructure_failure": "",
+      "init_failure": "",
+      "input_hash_manifest": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_058_isj_p07_aqualoc_archaeology_a07_0001_m_attempt01/input_hash_manifest.sha256",
+      "method_profile": "M_xfeat_pairwise_nativeq_v1",
+      "notes": "queue_index=58; window_id=aqualoc_archaeology:A07:0001; tag=isj_p07_aqualoc_archaeology_a07_0001_m_attempt01; command_sha256=90062bbc515e752be6cf0c05162053248e72b0a08a3cb1800577ed3b5e1fb4b5; frontend export only; trajectory outcome not read; generalized v3 no-clobber executor started queue_index=58; guard-only preflight exact PASS; predecessor queue_index=55 satisfied by additive replacement run_id=isj-nativeq-v3_P07_aqualoc_archaeology-A04_1800-2700_P_f0_b00_20260806T084500Z_layout_attempt02; closeout=papers/ieee_sensors_journal_experiments/p07/frontend_replacements/queue_055_a04_layout_attempt02_closeout_v1.json; closeout_sha256=59f1dc3c56ce67b4d7ae350c39080b3258b38cd5f58ab74c936391db00e821ca; canonical q55 remains FAILED",
+      "output_hash_manifest": "",
+      "protocol_version": "isj-nativeq-v3-confirmatory-protocol-v1",
+      "queue_drop_rate": "",
+      "recorded_at": "2026-08-08T03:31:27+08:00",
+      "registry_event_id": "isj-nativeq-v3_P07_aqualoc_archaeology-A07_900-1800_M_f0_b00_20260806T084500Z_e01",
+      "replacement_for": "",
+      "replay_evaluable": "false",
+      "replay_hard_failure": "",
+      "run_dir": "logs/aqualoc_archaeo_vins",
+      "run_id": "isj-nativeq-v3_P07_aqualoc_archaeology-A07_900-1800_M_f0_b00_20260806T084500Z",
+      "selection_active": "",
+      "selection_hash": "",
+      "sequence": "A07",
+      "solver_risk": "",
+      "split_role": "HISTORY_EXCLUDED_WINDOW_WITHIN_DEVELOPMENT_EXPOSED_SEQUENCE",
+      "stage": "P07_FRONTEND_EXPORT",
+      "status": "RUNNING",
+      "supersedes_event_id": "isj-nativeq-v3_P07_aqualoc_archaeology-A07_900-1800_M_f0_b00_20260806T084500Z_e00",
+      "sustained_queue_drop": "",
+      "texture_stratum": "normal",
+      "window_arm_hard_failure": "",
+      "window_arm_solver_risk": "",
+      "window_end": "1800",
+      "window_start": "900"
+    },
+    "fabricate_failed_event": false,
+    "required_closeout_transition": "RUNNING_e01_TO_COMPLETED_e02"
+  },
+  "closeout_lock_hash": "118278f8a8e26491def1019695dc5b1fb9dc1defdcbedf0055dc7ab5bc792ecd",
+  "command": "RUN_VINS=0 FORCE_EXPORT=1 TAG=isj_p07_aqualoc_archaeology_a07_0001_m_attempt01 bash scripts/run_p05_modern_xfeat_baseline_guarded_v2.sh aqualoc_archaeology 7 900 1800 2",
+  "command_sha256": "90062bbc515e752be6cf0c05162053248e72b0a08a3cb1800577ed3b5e1fb4b5",
+  "held_out_frontend_outcome_read_before_lock": false,
+  "held_out_trajectory_outcome_read": false,
+  "input_manifest_verified_artifacts": [
+    {
+      "path": "papers/ieee_sensors_journal_experiments/arm_order.csv",
+      "sha256": "1afc17e256274d86725b146728cca51fd59df1a630e23c2c109a1cec2137c9f4",
+      "size_bytes": 34303
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/backend_quality_contract_v1.json",
+      "sha256": "14abab7ca7ad0f48af8856372b3cf97470d405c1e20081cdb4247f3c87b64957",
+      "size_bytes": 4893
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/data_eligibility_manifest.csv",
+      "sha256": "510c276c33217706eef11ea53e58de4b37318828f8a6dc793dea9262f0a0a0f5",
+      "size_bytes": 46310
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/dataset_checksum_manifest.txt",
+      "sha256": "8b4715d0e55414bade394935472a2ef6a88132492c96b58edfbe2d6961f1a2e7",
+      "size_bytes": 6924
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/dataset_manifest_v4.csv",
+      "sha256": "aae68a271e2b9b258a3f91ba18a79eea1f37ab2dc373221be93cac814a493a00",
+      "size_bytes": 7348
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/method_lock.json",
+      "sha256": "eae7a0fc6e94766a119be6abe5763fbfba8f64d9663f45f2f48ee591cf62a3cf",
+      "size_bytes": 9634
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p05/backend_consumer_contract_xfeat_v1.json",
+      "sha256": "7cc27811379148db92937e563ba97f0c8aec7ebcfc49834f9707a4306858ab61",
+      "size_bytes": 8792
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/a01_frontend_execution_lock_v3.json",
+      "sha256": "45eeddfc5fb70f76b368a715ff65eec8c86ee74220f0a0763808ffff89d062a3",
+      "size_bytes": 16950
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/a02_d_resolution_lock_v1.json",
+      "sha256": "2ab5bf2c87200dcc8e9c58a15dac79b8f3d7c46a3684694cd062d1c4fb457fa7",
+      "size_bytes": 6349
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/afrl_replay_manifest_auditor_correction_lock_v4.json",
+      "sha256": "a1cd0191611759b2c72a830ccaa1e1a83794e3ea122b18168c2743ecb0353708",
+      "size_bytes": 6069
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/d_applicability_queue_v1.csv",
+      "sha256": "5b177636673db2a3198638a5bdca42d8e53de024b91081ac206f939f367ce45c",
+      "size_bytes": 8914
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/d_resolution_locks/aqualoc_archaeology_a04_0002_v4.json",
+      "sha256": "748d93ec9533475b8e68e1c254803fe52f24c8c435c27113cb547a5309c31384",
+      "size_bytes": 13730
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/d_resolutions/a02_0005_not_applicable_v1.json",
+      "sha256": "9bfcaf470877478a2c8067ca1b5581854dcfc9762bbc931e1056286a561972dc",
+      "size_bytes": 2318
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/d_resolutions/aqualoc_archaeology_a04_0002_not_applicable_v2.json",
+      "sha256": "bb3f4dc9987be0066a81497ebdd8f71aa54e330561a96e123bb8387f87951b6c",
+      "size_bytes": 1853
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/execution_adapter_lock_v1.json",
+      "sha256": "92bf8b67caca2186c9665b0b78488363b9f28ee5eb404f0e7c86a0a7c325bff2",
+      "size_bytes": 5998
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_005_isj_p07_aqualoc_archaeology_a01_0018_p_attempt01/audit_v3.json",
+      "sha256": "3a0d304a482d91f6cbe917d53a17d9e2a4155a9898461ffd7f885b960012fa69",
+      "size_bytes": 4669
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_028_isj_p07_afrl_bus_outside_0001_b1_attempt01/audit_correction_closeout_v4.json",
+      "sha256": "5edca55e8532a596d00499fc5dfbd5f2b5c7b78b3aeca4f1456e2d41a5a49cc6",
+      "size_bytes": 1607
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_028_isj_p07_afrl_bus_outside_0001_b1_attempt01/audit_v4.json",
+      "sha256": "ae38adfc2a065132ba1777ace72f8d439648f743923b36cc6989428dbd08aea5",
+      "size_bytes": 3649
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_028_isj_p07_afrl_bus_outside_0001_b1_attempt01/output_hash_manifest_v4.sha256",
+      "sha256": "8e2a95b34831a3bec72d8b91eee505db202c3ca9ee4f7c76f9e7f77d5cab37db",
+      "size_bytes": 3162
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_execution_correction_lock_v4.json",
+      "sha256": "8eab4cba2abf689c873d2e6d503756ea70508163a6f027667f3daf91d2378541",
+      "size_bytes": 5277
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_execution_correction_lock_v5.json",
+      "sha256": "76a75780cf515e21157ddd06d67e0753b7a83e02ea2c276ddbfda1f984d5f47e",
+      "size_bytes": 4947
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_execution_lock_v3.json",
+      "sha256": "b24aed8b92e8c4b84440105bcb4f58a04e3ae48bae693cf885d3db215752016a",
+      "size_bytes": 68482
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_export_queue_v1.csv",
+      "sha256": "8ced85066e7cd5aa8e7a0fc7d5f42ce07e99e97a36703b9404b8aab9f2103457",
+      "size_bytes": 36841
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_prestart_failures/queue_007_isj_p07_aqualoc_harbor_h05_0002_p_attempt01_v3_adapter_recursion/preexecution_failure.json",
+      "sha256": "a32fb3a7752bbb8239373d7d42f8a116af5a4230f33ea2251b901ab0ae65786c",
+      "size_bytes": 1574
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_queue_lock_v1.json",
+      "sha256": "92300f09d0c29c7e5db6e24e36bedaf518722c0b5a36e720e33f79065be517e1",
+      "size_bytes": 2645
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_replacements/queue_055_a04_d_path_correction_lock_v1.json",
+      "sha256": "f9795f7878d5b509bd8d9c485e0203f747f15caf3704ca3cd98b7ddeecbf7b1f",
+      "size_bytes": 47213
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_replacements/queue_055_a04_layout_attempt02_closeout_v1.json",
+      "sha256": "59f1dc3c56ce67b4d7ae350c39080b3258b38cd5f58ab74c936391db00e821ca",
+      "size_bytes": 10832
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_replacements/queue_055_a04_layout_attempt02_lock_v1.json",
+      "sha256": "b17a99853ac9e2519be017bfbc82cc465b67f8798b2899a38aded6ea146b5c54",
+      "size_bytes": 25608
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_replacements/queue_055_a04_layout_attempt02_registration_v1.json",
+      "sha256": "e6793741d243725397b93ff762f1332aca0eeb85f005445cfa0f998a84a87fdb",
+      "size_bytes": 5130
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_run_allocation_v1.csv",
+      "sha256": "05b706010ce5fc1d5032bf680dc286d2b69fc98c190a25fdf4e1ceee84df84ec",
+      "size_bytes": 40388
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/mp_smoke_execution_lock_v2.json",
+      "sha256": "9397a3ba67f3fd8b24e70992664ae3ce051afa0921fc74fd2a8a6f098b2c1338",
+      "size_bytes": 15136
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/preoutcome_analysis_lock_v1.json",
+      "sha256": "207f2654fe0dd660205298c63a389ea894461b8224c596cd5537b28cfc2d0835",
+      "size_bytes": 9042
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/protocol_v1_nativeq_v3.md",
+      "sha256": "4466cff65d9df2be4dab97350041c2c79f687e624e6b658fb734a70459222bda",
+      "size_bytes": 2978
+    },
+    {
+      "path": "scripts/attest_nativeq_feature_bag.py",
+      "sha256": "ff4fcd9a9d97178c5a54935a4c6efe766a183af2546e30f33b55f831c4f2608e",
+      "size_bytes": 5250
+    },
+    {
+      "path": "scripts/attest_p05_xfeat_feature_bag_v1.py",
+      "sha256": "c43099995255dc7b5a7882eac5003d9051f59dcd96ca516bdd318f979d2d986a",
+      "size_bytes": 10390
+    },
+    {
+      "path": "scripts/audit_p07_a01_frontend_export_v3.py",
+      "sha256": "03fdd6d64c34b130dc236be721a855e29dfbe1d9d5059ee8d12d3c158f11962e",
+      "size_bytes": 20332
+    },
+    {
+      "path": "scripts/audit_p07_frontend_export_v3.py",
+      "sha256": "49d02f496f1c7f412aa8625c853941e8c3f4b25701dca423c35e2ad9c42e8013",
+      "size_bytes": 20672
+    },
+    {
+      "path": "scripts/audit_p07_frontend_export_v4.py",
+      "sha256": "80100b690cb1642d1e1a8598424156b36429a5f4d5b6e8ee0edda5e460c70155",
+      "size_bytes": 6556
+    },
+    {
+      "path": "scripts/audit_whole_lineage_exact_drop_v1.py",
+      "sha256": "bf6ccbf47d3b6b1e4fdad8b9e8b49d17f9545b312ce64970b61ed6c56cdf71b4",
+      "size_bytes": 27756
+    },
+    {
+      "path": "scripts/build_p07_a01_frontend_execution_lock_v3.py",
+      "sha256": "8f431ff8c91f47bf0d6cda75107034eb9d9403da7b5e193279f92a8afb24dc27",
+      "size_bytes": 15745
+    },
+    {
+      "path": "scripts/build_p07_d_resolution_lock_v2.py",
+      "sha256": "f65a169571385ac28f84dbef8c72104e956bbd38ccad3c0d8718c255ae789fc8",
+      "size_bytes": 7162
+    },
+    {
+      "path": "scripts/build_p07_frontend_execution_correction_lock_v4.py",
+      "sha256": "f79e839e2ec21d3cb80ed6cd1b20eb0cc3808138d04ac6564ffd861b1bb767de",
+      "size_bytes": 6301
+    },
+    {
+      "path": "scripts/build_p07_frontend_execution_correction_lock_v5.py",
+      "sha256": "c5dbf37e63ac1122772e7c855d749eee9a19902649be7eecdddc2798af6b0b47",
+      "size_bytes": 6634
+    },
+    {
+      "path": "scripts/build_p07_frontend_execution_lock_v3.py",
+      "sha256": "9822aa823f7062cca6e60193c246121d564a6cffb67a3a6e6933b5691a302773",
+      "size_bytes": 15930
+    },
+    {
+      "path": "scripts/check_b1_klt_nativeq_contract_v1.py",
+      "sha256": "8dafcb3e40278210e4fb545c5e19e347b69898cd45e5af3ec7736ceb682bad15",
+      "size_bytes": 3480
+    },
+    {
+      "path": "scripts/check_nativeq_backend_contract.py",
+      "sha256": "37c61326e38d17e2a950fff66c9bd062bed8eab015385da36474c3bb558d3f4f",
+      "size_bytes": 11394
+    },
+    {
+      "path": "scripts/check_p05_xfeat_backend_contract_v1.py",
+      "sha256": "fa19cbfb5e94803ef8bbc470f2d6a1eb0ea0108fe1805891eaeed5aa9bc35e00",
+      "size_bytes": 23546
+    },
+    {
+      "path": "scripts/filter_feature_bag_by_channel.py",
+      "sha256": "745d8c5c07cbc8fb65e307221f744e5c4b44b3f93618c4ca68754a7060430e0d",
+      "size_bytes": 15000
+    },
+    {
+      "path": "scripts/resolve_p07_d_applicability_v2.py",
+      "sha256": "c6200bc927784f4589d9997e96420f288f544f46db008a7cc46b359aa0a1823d",
+      "size_bytes": 17464
+    },
+    {
+      "path": "scripts/run_afrl_cave_vins_eval.sh",
+      "sha256": "16966ce2663cf4dff5eb1bdc36c8c975a912dd3089da8dae9ae376799bd547da",
+      "size_bytes": 59481
+    },
+    {
+      "path": "scripts/run_aqualoc_archaeo_vins_eval.sh",
+      "sha256": "4ed3612d7a105ac0f1dab69a44f982381808d21cd93f25984dadb390b431cdfe",
+      "size_bytes": 52310
+    },
+    {
+      "path": "scripts/run_aqualoc_real_vins_eval.sh",
+      "sha256": "400d3287b3d0f168b89a05643587d19c353086c5821b94b4e738487025dd3e5a",
+      "size_bytes": 51054
+    },
+    {
+      "path": "scripts/run_isj_b1_klt_nativeq_guarded_v1.sh",
+      "sha256": "6c112ebdb916becf615b0772c4474a119bf774a17b4f85391ceb88d46d0505d1",
+      "size_bytes": 5604
+    },
+    {
+      "path": "scripts/run_isj_nativeq_contract_guarded_v4.sh",
+      "sha256": "f4bffa30037261c0896bb4fd4f14929bc4445f854ca409ac82b6240ac4706373",
+      "size_bytes": 2217
+    },
+    {
+      "path": "scripts/run_isj_nativeq_legacy_candidate.sh",
+      "sha256": "495074b495da085af459eec6655cbe58ab57de8afe02246102268f1c8558cc9e",
+      "size_bytes": 4759
+    },
+    {
+      "path": "scripts/run_learned_seedchain_eval.sh",
+      "sha256": "8b2db28e5a5c1cc4dfd8ce365d44bdc618e6ec2c4a70db4ea2549b73a965b106",
+      "size_bytes": 4061
+    },
+    {
+      "path": "scripts/run_ntnu_vins_eval.sh",
+      "sha256": "9f9c6f36b947185666d438309098a592c3675b93bf0ee1d5bc84357bae8ba422",
+      "size_bytes": 50834
+    },
+    {
+      "path": "scripts/run_p05_modern_xfeat_baseline.sh",
+      "sha256": "adb5330dd4ab47bcf0d530edd6d8c6bb95d0eb25195f70e83b6e283d255bf81c",
+      "size_bytes": 6597
+    },
+    {
+      "path": "scripts/run_p05_modern_xfeat_baseline_guarded_v2.sh",
+      "sha256": "6af0f33684a717fa8403cf668b03e5f3040592f11e1ccb2e6173cc86742945df",
+      "size_bytes": 4659
+    },
+    {
+      "path": "scripts/run_p07_a01_frontend_export_job_v3.py",
+      "sha256": "f8becb458d1a26c965894a3ab03e4e8d0d73a64d2f0a144f4bc3a436baec5421",
+      "size_bytes": 19340
+    },
+    {
+      "path": "scripts/run_p07_a04_d_path_correction_v1.py",
+      "sha256": "9f03c5de62da44db4d6fb3a90029e974b774dc6747e1c022a54655d09385bc55",
+      "size_bytes": 34478
+    },
+    {
+      "path": "scripts/run_p07_frontend_export_job_v3.py",
+      "sha256": "fe1b9b2cd6dc6cb2d1468465a0c16d05eb528e7ab9dfdd41150105a6c04b3cb7",
+      "size_bytes": 10834
+    },
+    {
+      "path": "scripts/run_p07_frontend_export_job_v4.py",
+      "sha256": "5a98347da812a434f2441b65df81958d65146e119a2f18b68a37b0e5f8fc0caf",
+      "size_bytes": 5151
+    },
+    {
+      "path": "scripts/run_p07_frontend_export_job_v5.py",
+      "sha256": "75a1f1f198c1b057c1dcbf9fe37a252839c8a13b3348a12819bd5ba19b20904f",
+      "size_bytes": 6297
+    },
+    {
+      "path": "scripts/run_p07_frontend_queue_v3.py",
+      "sha256": "625f20ff94aa819b99cdd0f419bf9cfce99a4d3e3abb04b7e2a51182fd2ba57b",
+      "size_bytes": 4567
+    },
+    {
+      "path": "scripts/run_p07_frontend_queue_v4.py",
+      "sha256": "73851bb7c17d87e368c52a40d922a275c88500ce576523634c18fbce977eb01a",
+      "size_bytes": 6109
+    },
+    {
+      "path": "scripts/run_p07_frontend_queue_v5.py",
+      "sha256": "b00ffecdac713f9451c6c1fe2bd14ee3c6d77003381ac08db03951a94a1686c8",
+      "size_bytes": 4329
+    },
+    {
+      "path": "scripts/run_p07_q55_a04_layout_replacement_v1.py",
+      "sha256": "6be6d94da9f330b20d96cbd5a7c5e5fdc6d20696a8f772d2ebe2cfe2a3e6fc0d",
+      "size_bytes": 66501
+    },
+    {
+      "path": "scripts/run_xfeat_seedchain_arbitrated_eval.sh",
+      "sha256": "82bd47f019a423fc3e8f92bf533c06556dd1eb9b2d20c49ba8ff09e435744fb0",
+      "size_bytes": 91687
+    },
+    {
+      "path": "scripts/tests/test_p07_frontend_execution_correction_v4.py",
+      "sha256": "c14fba2d7eca40ad8fe6a747985971991502a7551f7abe12544bccf595ed0b7c",
+      "size_bytes": 1565
+    },
+    {
+      "path": "scripts/tests/test_p07_frontend_execution_correction_v5.py",
+      "sha256": "9fbe052151fc5347f5d7d2b1e460434ac5c32c0adcae4775ea216e97a766734a",
+      "size_bytes": 1254
+    },
+    {
+      "path": "uw_frontend/configs/experiments/isj_p05_xfeat_pairwise_nativeq.yaml",
+      "sha256": "118f14bedf0995b1f64e4099ab2eddf653297bc1b55170bc61556e8bcde71d20",
+      "size_bytes": 578
+    },
+    {
+      "path": "uw_frontend/configs/experiments/low_texture_xfeat_seedchain_frontend.yaml",
+      "sha256": "6f89d861cc002dfaf0eaf5f1294b0dbcfab9fe268c5dc0d09082f79811000bf3",
+      "size_bytes": 1493
+    },
+    {
+      "path": "uw_frontend/datasets/afrl_cave_to_rosbag.py",
+      "sha256": "ab73d69a2ea652cd0cdede5eb9831ffb1fd325111ee1edf9f39c853737fecfb7",
+      "size_bytes": 8648
+    },
+    {
+      "path": "uw_frontend/datasets/aqualoc_raw_to_rosbag.py",
+      "sha256": "b0c4b7ce7f3e29dcb18cb1604190cc8690cae370fc222246c8dfeb4fc79ffbec",
+      "size_bytes": 8310
+    },
+    {
+      "path": "uw_frontend/datasets/image_sequence.py",
+      "sha256": "2ba225a52a7caab9e92eb6b06c3ae7ff9a0030b96ea78e6f20f4228e97337384",
+      "size_bytes": 4844
+    },
+    {
+      "path": "uw_frontend/ros/export_vins_features.py",
+      "sha256": "7ed31890e3a55a528430e912df885830176b3c3432c420860a39d714bceae7cf",
+      "size_bytes": 435551
+    }
+  ],
+  "mutable_stream_prefix_snapshots": [
+    {
+      "path": "papers/ieee_sensors_journal_experiments/run_registry.csv",
+      "sha256": "98fb311807d4329704d729bd766de77080cfe00a659519d51c577c9ed2349918",
+      "size_bytes": 223980
+    }
+  ],
+  "orphan_class": "OUTER_EXECUTOR_TERMINATED_CHILD_SESSION_PRESERVED",
+  "outcome_boundary": "FRONTEND_EXPORT_ONLY_NO_VINS_APE_RPE_TRAJECTORY",
+  "physical_command_completion": {
+    "command_log": {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_058_isj_p07_aqualoc_archaeology_a07_0001_m_attempt01/command.log",
+      "sha256": "c883dd9d0a78c500bb0627ea6e6f2c801145d4c913d6ec101ac5749c1198613a",
+      "size_bytes": 1257
+    },
+    "direct_returncode_observed": false,
+    "guard": {
+      "action": "ALLOW_M_XFEAT",
+      "path": "logs/backend_contract_decisions/p05/p05_xfeat_guard_20260807T193127Z_49141_decision.json",
+      "schema_version": "aqua-fe-p05-xfeat-backend-guard-decision-v1",
+      "sha256": "b5c0d167feba019ad91e42b131a3a623efe2512e5a1d087fea8c7d8d8c0e5488"
+    },
+    "terminal_markers_exact": true,
+    "terminal_tail_sha256": "d59d53f8159059f0d6b58a4afc9d3e9ae4625969ddac251eafb1870baa0b1e5b"
+  },
+  "physical_frontend_rerun": false,
+  "preserved_run": {
+    "ephemeral_raw_cache": {
+      "path": "datasets/aqualoc/rosbags/archaeo07_900_1800.bag",
+      "sha256": "4097aed3759d22e130c1fc418422d14c6dba8517fa5433e4f6b65ccab7413d9d",
+      "size_bytes": 250669586
+    },
+    "forbidden_trajectory_outcomes": [],
+    "run_dir": "logs/aqualoc_archaeo_vins/external_xfeat_every2_isj_p07_aqualoc_archaeology_a07_0001_m_attempt01",
+    "run_file_count": 3,
+    "vins_output_empty": true
+  },
+  "q55_replacement_and_d_predecessor_binding": {
+    "d_resolution": "NOT_APPLICABLE",
+    "d_resolution_status": "PASS_NOT_APPLICABLE",
+    "replacement_closeout_hash": "08f5984db92da490c9d735752c07d1ff5c7c6b4bb35a7129d23144812d036e56"
+  },
+  "queue_index": 58,
+  "required_closeout": {
+    "adapter": "scripts/run_p07_frontend_export_job_v5.py",
+    "attester": "scripts/attest_p05_xfeat_feature_bag_v1.py",
+    "auditor": "scripts/audit_p07_frontend_export_v4.py",
+    "closeout": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_058_isj_p07_aqualoc_archaeology_a07_0001_m_attempt01/orphan_execution_closeout_v1.json",
+    "on_pass_registry_transition": "append_e02_COMPLETED_from_e01_RUNNING",
+    "output_manifest": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_058_isj_p07_aqualoc_archaeology_a07_0001_m_attempt01/output_hash_manifest.sha256",
+    "physical_frontend_rerun": false
+  },
+  "run_id": "isj-nativeq-v3_P07_aqualoc_archaeology-A07_900-1800_M_f0_b00_20260806T084500Z",
+  "schema_version": "isj-p07-q58-orphan-closeout-lock-v1",
+  "status": "FROZEN_POST_PHYSICAL_COMMAND_PRE_ATTESTATION_AUDIT",
+  "tag": "isj_p07_aqualoc_archaeology_a07_0001_m_attempt01",
+  "trajectory_outcome_read": false
+}

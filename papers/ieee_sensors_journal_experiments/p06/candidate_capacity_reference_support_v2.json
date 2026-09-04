@@ -1,0 +1,14 @@
+{
+  "corrected_capped_slot_count": 49,
+  "corrected_domain_count": 4,
+  "excluded_sequences": [
+    "afrl/cave_gennie"
+  ],
+  "learned_outcome_read": false,
+  "outcome_boundary": "KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME",
+  "protocol_version": "isj-window-selection-v2",
+  "reference_eligible_sequence_count": 17,
+  "registered_sequence_count": 18,
+  "schema_version": "isj-p06-reference-capacity-summary-v2",
+  "trajectory_outcome_read": false
+}

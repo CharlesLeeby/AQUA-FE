@@ -1,0 +1,8 @@
+# Underwater-adapted checkpoint arm for the historical XFeat seed-chain
+# contract.  The inherited stock profile supplies every tracker, gate,
+# selection, export, and backend-facing setting; this file changes only the
+# XFeat checkpoint.
+extends: low_texture_xfeat_seedchain_frontend.yaml
+
+xfeat:
+  weights: weights/xfeat_uw_expanded.pt

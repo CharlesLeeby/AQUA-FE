@@ -1,0 +1,70 @@
+%YAML:1.0
+
+# Dataset-only adaptation of the already adopted official HFNet-SLAM
+# monocular-inertial stack for NTNU cam0 underwater imagery.
+#
+# Camera intrinsics/distortion come from the NTNU underwater stereo
+# calibration.  The rigid camera/IMU transform and IMU noise values come from
+# the NTNU air extrinsic/noise calibration for the same rigid sensor head.
+# IMU samples are shifted into the camera clock by the input materializer:
+# output_ns = raw_imu_header_ns - 1765624.
+#
+# Learned model, cache seed, extractor parameters, tracker, initializer,
+# optimizer, and loop closing are unchanged from the previously adopted
+# underwater HFNet-SLAM configuration family.
+
+File.version: "1.0"
+
+Camera.type: "KannalaBrandt8"
+
+Camera1.fx: 460.1163446727443
+Camera1.fy: 460.4372977453345
+Camera1.cx: 357.8825573770236
+Camera1.cy: 266.43728860156045
+
+Camera1.k1: 0.04816514299784573
+Camera1.k2: 0.1707359987229406
+Camera1.k3: -0.30080163056061726
+Camera1.k4: 0.47220233022405056
+
+Camera.width: 720
+Camera.height: 540
+Camera.fps: 20
+Camera.RGB: 1
+
+# HFNet/ORB-SLAM3 reads this field as T_b_c1 (body/IMU <- camera).
+# The matrix below is the inverse of NTNU Kalibr T_cam_imu.
+IMU.T_b_c1: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [0.0057458859421451467,   0.0059871695939255187,   0.99996556870473907,    0.048394787222036377,
+          0.99998327772195839,     0.00062063217470202409, -0.0057497036576724505,  0.047997811513954845,
+         -0.00065503525644562818,  0.99998188414388589,    -0.0059835033931230361, -0.0097706618631980095,
+          0.0,                      0.0,                     0.0,                     1.0]
+
+IMU.NoiseGyro: 0.000587
+IMU.NoiseAcc: 0.0186
+IMU.GyroWalk: 0.002866
+IMU.AccWalk: 0.00433
+IMU.Frequency: 200.0
+
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -3.5
+Viewer.ViewpointF: 500.0
+
+Extractor.type: "HFNetRT"
+Extractor.modelPath: "/home/ma/SLAM/HFNet-SLAM-runtime-model-a02-r1/HFNet-RT/"
+Extractor.scaleFactor: 1.2
+Extractor.nLevels: 4
+Extractor.nFeatures: 675
+Extractor.threshold: 0.01
+
+loopClosing: 1

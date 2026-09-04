@@ -1,0 +1,12 @@
+extends: formal_loftr_positive_vins_frontend.yaml
+
+hybrid:
+  # Experimental profile: keep the validated positive LoFTR proposal/export
+  # gates, but remember the learned origin after LK continues the track. This
+  # prevents a LoFTR-born landmark from immediately becoming a high-confidence
+  # ordinary KLT observation in VINS.
+  enable_source_provenance_memory: true
+  source_provenance_recovered_hold_frames: 0
+  source_provenance_learned_hold_frames: 20
+  source_provenance_quality_scale_recovered: 1.0
+  source_provenance_quality_scale_learned: 0.82

@@ -1,0 +1,234 @@
+{
+  "attempt": {
+    "maximum_elf_starts": 1,
+    "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h07_0001_1720/attempt_001",
+    "process_start_claim_absent": true,
+    "retry": false,
+    "run_result_absent": true
+  },
+  "claim_boundary": {
+    "accuracy_claimed_by_run_controller": false,
+    "comparison_requires_common_support_evaluation": true,
+    "development_exposed_window": true,
+    "external_learned_system_trajectory_only": true,
+    "formal_minimum_30_native_pose_accuracy_ranking_met": false,
+    "native_reference_pose_count_in_score_window": 13,
+    "superiority_claimed": false
+  },
+  "config": {
+    "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_h07_0001_1720_exact_window_v1.yaml",
+    "sha256": "97ff0f0e9e2dab17f87ddcb603265a67d841c509d4ffc225ba3695b54a1444e3",
+    "size_bytes": 2150
+  },
+  "dependency_inventory": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_h07_0001_1720_exact_window_dependency_inventory_v1.json",
+    "sha256": "65cdc34ce65402a8ecb7247c226862bd0456a41cb7dcf146d74098e22dd50e4d",
+    "size_bytes": 56662
+  },
+  "exploratory_usability_gate": {
+    "minimum_contiguous_score_poses": 20,
+    "minimum_last_camera_index": 1659,
+    "minimum_score_keyframes": 1,
+    "minimum_score_poses": 20,
+    "raw_returncode_zero": true,
+    "synchronously_reaped": true,
+    "timed_out": false
+  },
+  "frozen_profile_sha256": "e0c9352dd329869a2d10215126926c460ec9c145f47b952a255f3c178293334b",
+  "full_input_tree": {
+    "file_count": 1724,
+    "record_algorithm": "sorted_utf8_relative_path_NUL_size_NUL_sha256_NUL_crc32_newline",
+    "root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_h07_exact_window_v1/aqualoc_harbor_h07_0001_1720",
+    "total_bytes": 280725559,
+    "tree_crc32": "9fd8d477",
+    "tree_sha256": "925c5d3478a63bf84b4ddd96f2a64f240c3e1d3f23d7b8b0901e600516d7d5cf"
+  },
+  "h07_wrapper": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_h07_0001_1720_exact_window_v1.py",
+    "sha256": "d61e6a2218af2598504627afdaf7e647abd6fbbb7f8ae7e6eb2354cd21d63b20",
+    "size_bytes": 18470
+  },
+  "headless_source": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/harnesses/hfnet_slam_mono_inertial_euroc_headless_v3.cc",
+    "sha256": "303947840bdc5377656554560c6785b3218a52e034862a63d5d6da0036b81d90",
+    "size_bytes": 1112
+  },
+  "input_auditor": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/audit_hfnet_v6_h07_0001_1720_exact_window_input_v1.py",
+    "sha256": "2afe567c6f11c5c7494c81222eafbee30dc31a498f26a9714e7b86364b316336",
+    "size_bytes": 19930
+  },
+  "launch": {
+    "argv": [
+      "/home/ma/AQUA-FE_WS/build/published_baselines/hfnet_slam_headless_entry_v3/mono_inertial_euroc_headless_v3",
+      "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h07_0001_1720/attempt_001/runtime_config_model_path_only.yaml",
+      "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h07_0001_1720/attempt_001/result/",
+      "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_h07_exact_window_v1/aqualoc_harbor_h07_0001_1720",
+      "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_h07_exact_window_v1/aqualoc_harbor_h07_0001_1720/cam0_times.txt"
+    ],
+    "authorization_token": "HFNET_V6_H07_0001_1720_ATTEMPT_001_START_EXACTLY_ONCE",
+    "cwd": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h07_0001_1720/attempt_001",
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "0",
+      "HOME": "/home/ma",
+      "LANG": "C",
+      "LC_ALL": "C",
+      "LD_LIBRARY_PATH": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/lib:/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Thirdparty/g2o/lib:/home/ma/SLAM/aqua_deps/install/lib:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.6/targets/x86_64-linux/lib:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.6/targets/x86_64-linux/lib:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.8/targets/x86_64-linux/lib:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.8/targets/x86_64-linux/lib",
+      "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "USER": "ma"
+    },
+    "maximum_elf_starts": 1,
+    "maximum_popen_invocations": 1,
+    "retry": false,
+    "timeout_seconds": 900
+  },
+  "locked_at_utc": "2026-08-22T13:17:12+00:00",
+  "materializer": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/materialize_hfnet_v6_h07_0001_1720_exact_window_v1.py",
+    "sha256": "09eaf20d2d151ee4d08e41157c841f558f32c04b86ea69b2300d3696a4e06247",
+    "size_bytes": 16880
+  },
+  "official_elf": {
+    "path": "/home/ma/AQUA-FE_WS/build/published_baselines/hfnet_slam_headless_entry_v3/mono_inertial_euroc_headless_v3",
+    "sha256": "4d17eecc74ec8f4bcbe4381d579d2bb48160cf63f6dc948f7857d92e681affeb",
+    "size_bytes": 118280
+  },
+  "official_entry": {
+    "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Examples/Monocular-Inertial/mono_inertial_euroc.cc",
+    "sha256": "fa3effb0c2b99bc4dd83abda443180cf2f017f61710e02fa6b3f9278cc774d39",
+    "size_bytes": 10201
+  },
+  "official_library": {
+    "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/lib/libHFNet_SLAM.so",
+    "sha256": "a56dfd1b48dee4af5be4e55b076d32eac2cf8fb463da8ab943b690377f193717",
+    "size_bytes": 4807712
+  },
+  "passed_stack_lock": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_passed_stack_lock_v1.json",
+    "sha256": "cb826526a28f28e77f546d4647e16fd19426494e9a15ab01108301136cbfadad",
+    "size_bytes": 8111
+  },
+  "preparation_audit": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_h07_0001_1720_exact_window_preparation_audit_v1.json",
+    "sha256": "fd54bf547b4487d17fc440b525111d8b97a7cc125b2959b297f118a69ebcf1ec",
+    "size_bytes": 4388
+  },
+  "prepared_manifest": {
+    "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h07_0001_1720/attempt_001/prepared_manifest.json",
+    "sha256": "c2ff55284927ec50f82c4c7f4d7cb5b57feb6cc707990f2abe4e43ec3ca283da",
+    "size_bytes": 79262
+  },
+  "resolved_dependencies": {
+    "count": 211,
+    "records_sha256": "9be9cb1459ce2b925a0cbeb0850a012b486a5f52da5f7f8597913f8b57f52cb5",
+    "total_bytes": 1399072400
+  },
+  "resource_gate": {
+    "checked_again_immediately_before_start": true,
+    "minimum_gpu_free_mib": 3072,
+    "no_matching_hfnet_vins_orb_detector_evaluator_processes": true,
+    "no_nvidia_compute_applications": true
+  },
+  "reused_h03_engine": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_phase_f_h03_1800_3600_v1.py",
+    "sha256": "36b570d223b4718aed658d4333466ef2788fcc8ea14ee1db50cc06ae5b0424a7",
+    "size_bytes": 60508
+  },
+  "run_local": {
+    "cache_seed": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h07_0001_1720/attempt_001/run_local_model/HFNet-RT/HF-Net.cache",
+      "sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7",
+      "size_bytes": 853319
+    },
+    "onnx": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h07_0001_1720/attempt_001/run_local_model/HFNet-RT/HF-Net.onnx",
+      "sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5",
+      "size_bytes": 132238602
+    },
+    "runtime_config": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h07_0001_1720/attempt_001/runtime_config_model_path_only.yaml",
+      "sha256": "ee144ac168d984db96b1133c58e741a20c67459a12de0cd515abdb408ec8cc04",
+      "size_bytes": 2228
+    }
+  },
+  "runner": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_h07_0001_1720_exact_window_v1.py",
+    "sha256": "d61e6a2218af2598504627afdaf7e647abd6fbbb7f8ae7e6eb2354cd21d63b20",
+    "size_bytes": 18470
+  },
+  "runner_test": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_hfnet_v6_h07_0001_1720_exact_window_v1.py",
+    "sha256": "1a6c2716931272bb8089ca32331936e0bd2a0fdd6e6d1bfa5943529aae3fa166",
+    "size_bytes": 6601
+  },
+  "schema_version": "aqua-fe-hfnet-v6-h07-0001-1720-execution-lock-v1",
+  "scientific_role": "HFNET_V6_H07_EXACT_WINDOW_EXTERNAL_LEARNED_SYSTEM_DEVELOPMENT_ONLY",
+  "selection": {
+    "camera_count": 1720,
+    "preroll_nominal_seconds": 82.95,
+    "preroll_relative_indices_inclusive": [
+      0,
+      1658
+    ],
+    "preroll_source_indices_inclusive": [
+      1,
+      1659
+    ],
+    "score_nominal_seconds": 3.05,
+    "score_relative_indices_inclusive": [
+      1659,
+      1719
+    ],
+    "score_source_indices_inclusive": [
+      1660,
+      1720
+    ],
+    "sequence": "AQUALOC harbor_sequence_07",
+    "shared_existing_aqua_fe_window_source_indices_inclusive": [
+      1660,
+      1720
+    ],
+    "source_frame_indices_inclusive": [
+      1,
+      1720
+    ],
+    "synchronization_boundary": {
+      "camera0_has_shifted_imu_predecessor": false,
+      "camera0_timestamp_ns": 1523387546122930336,
+      "earliest_shifted_imu_timestamp_ns": 1523387546153594095,
+      "feed_first_frame_reader_bracket_valid": true,
+      "feed_first_source_frame": 1,
+      "official_entry_first_imu_risk": "with frame zero, first_imu-- reaches -1 and later access is out of bounds",
+      "post_result_window_change": false,
+      "source_frame_zero_excluded_before_result": true,
+      "synthetic_or_extrapolated_imu_used": false
+    }
+  },
+  "selector": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_h07_0001_1720_exact_window_selector_freeze_v1.json",
+    "sha256": "51430c83aa7b9870e1c1106f453cd527005c8adcd84990b544fecdea84294387",
+    "size_bytes": 6108
+  },
+  "shared_cache_seed": {
+    "path": "/home/ma/SLAM/HFNet-SLAM-runtime-model-a02-r1/HFNet-RT/HF-Net.cache",
+    "sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7",
+    "size_bytes": 853319
+  },
+  "shared_model": {
+    "path": "/home/ma/SLAM/HFNet-SLAM-runtime-model-a02-r1/HFNet-RT/HF-Net.onnx",
+    "sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5",
+    "size_bytes": 132238602
+  },
+  "status": "LOCKED_PRESTART_EXACTLY_ONE_HFNET_ELF_START",
+  "synchronization_boundary": {
+    "camera0_has_shifted_imu_predecessor": false,
+    "camera0_timestamp_ns": 1523387546122930336,
+    "earliest_shifted_imu_timestamp_ns": 1523387546153594095,
+    "feed_first_frame_reader_bracket_valid": true,
+    "feed_first_source_frame": 1,
+    "official_entry_first_imu_risk": "with frame zero, first_imu-- reaches -1 and later access is out of bounds",
+    "post_result_window_change": false,
+    "source_frame_zero_excluded_before_result": true,
+    "synthetic_or_extrapolated_imu_used": false
+  }
+}

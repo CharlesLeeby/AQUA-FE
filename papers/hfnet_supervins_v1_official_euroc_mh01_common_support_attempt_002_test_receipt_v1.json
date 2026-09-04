@@ -1,0 +1,98 @@
+{
+  "schema_version": "aqua-fe-hfnet-supervins-mh01-common-support-attempt-002-test-receipt-v1",
+  "created_at": "2026-08-21T03:48:43+08:00",
+  "status": "PASS_ATTEMPT_001_INHERITED_AND_ATTEMPT_002_CORRECTIVE_SYNTHETIC_TIMESTAMP_ONLY_TESTS",
+  "exact_command": [
+    "/usr/bin/python3.8",
+    "-B",
+    "-m",
+    "unittest",
+    "-q",
+    "scripts.tests.test_evaluate_hfnet_supervins_v1_official_euroc_mh01_common_support_v1",
+    "scripts.tests.test_evaluate_hfnet_supervins_v1_official_euroc_mh01_common_support_attempt_002_v1"
+  ],
+  "working_directory": "/home/ma/AQUA-FE_WS",
+  "return_code": 0,
+  "stdout_exact": "",
+  "stderr_exact": "----------------------------------------------------------------------\nRan 101 tests in 1.436s\n\nOK (skipped=1)\n",
+  "test_count": 101,
+  "expected_skip_count": 1,
+  "expected_skip_reason": "The inherited attempt_001 test that requires its authority to be absent is skipped because the exact sealed attempt_001 authority is now burned and adopted; all attempt_002 authority-absence tests pass.",
+  "unittest_reported_runtime_seconds": 1.436,
+  "controller_observed_wall_time_seconds": 1.64,
+  "identities": {
+    "corrective_addendum": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_supervins_v1_official_euroc_mh01_common_support_attempt_002_corrective_addendum_v1.json",
+      "sha256": "c2cf6b4a8f9a0660399f862f36ac1a2d55f83047772cfe480fbbd6b1d2a27121",
+      "size_bytes": 17982,
+      "mode": "0444",
+      "nlink": 1
+    },
+    "failure_adoption": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_supervins_v1_official_euroc_mh01_common_support_attempt_001_failure_adoption_v1.json",
+      "sha256": "dead672758a5bd573291d804f817b3c234bcdc474b5eb6600d6033fe4536ffbb",
+      "size_bytes": 6814,
+      "mode": "0444",
+      "nlink": 1
+    },
+    "sealed_scientific_base_runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_hfnet_supervins_v1_official_euroc_mh01_common_support_v1.py",
+      "sha256": "f42ad63159e4cfc292540fc0b137eb211aa15569de765e8d478b6eb67d4ed9a2",
+      "size_bytes": 87654,
+      "mode": "0444",
+      "nlink": 1
+    },
+    "sealed_inherited_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_evaluate_hfnet_supervins_v1_official_euroc_mh01_common_support_v1.py",
+      "sha256": "a4d977347a9633884bfb48ed5abb813beb56c7067b68b7dfe5c0cdb0b61e94ac",
+      "size_bytes": 39542,
+      "mode": "0444",
+      "nlink": 1
+    },
+    "attempt_002_runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_hfnet_supervins_v1_official_euroc_mh01_common_support_attempt_002_v1.py",
+      "sha256": "264aeb0ee10941ea9a06d2e83a96d363dac79c2ce6ed93c90f1572a3bc4450da",
+      "size_bytes": 57577,
+      "mode": "0444",
+      "nlink": 1
+    },
+    "attempt_002_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_evaluate_hfnet_supervins_v1_official_euroc_mh01_common_support_attempt_002_v1.py",
+      "sha256": "68d88be7f0f59a2c183b9230f2700a0ef005a90bf02cca324c75662ec606c566",
+      "size_bytes": 52790,
+      "mode": "0444",
+      "nlink": 1
+    }
+  },
+  "coverage": [
+    "all 65 inherited attempt_001 synthetic/timestamp-only tests, with only the now-burned old-authority absence test expectedly skipped",
+    "whole-token lexer allows generation/operation/restoration/calibration and rejects standalone ratio, metric_ratio, cross-system ratio, explicit inflections, phrases, and percent symbols",
+    "the exact inherited analysis-report, stats-appendix, and figure-catalog templates rendered from synthetic 1358/1348 data pass the corrected lexer",
+    "scientific parsing/support/alignment/metrics/tables/figures/bundle functions execute directly from the exact sealed attempt_001 runner",
+    "attempt_001 failure adoption self-hash, identities, formal FAIL, burned authority, exact three-file set, empty bundle, and directory identities",
+    "extra empty old-tree directory and directory-symlink-to-outside negatives",
+    "new token and count 1-to-2 lifecycle, fresh attempt_002 root/claim/new authority absence",
+    "authority schema uses an exact top-level allowlist and rejects attempt_003 authorization or extra permission/count fields",
+    "root-parent-fsync-after-mkdir and ordinary post-claim failures each produce exactly one sealed attempt_002 FAIL terminal with attempt_003 denied",
+    "atomic terminal publisher holds the O_EXCL staging fd, embeds and verifies its dev/inode token, uses renameat2(RENAME_NOREPLACE), and never exposes partial or mode0600 final bytes",
+    "actual run_once partial-write, fchmod, file-fsync, copy-EEXIST, hardlink-EEXIST with staging present/removed, and transient unlink faults close out as one owned-token-valid FAIL with matching rc",
+    "actual run_once confirmed-rename post-hook, transient/persistent postcommit audit, postcommit diagnostic exception, postcommit staging reappearance, pending signal, and PASS/FAIL finalizer faults never invert the committed rc",
+    "PASS and FAIL transient or persistent parent-directory-fsync faults record confirmed/unconfirmed durability without creating JSON/process return-code divergence",
+    "inherited 31-pin count and canonical digest remain exact"
+  ],
+  "scientific_boundary": {
+    "official_timestamps_parsed": true,
+    "real_trajectory_positions_parsed": false,
+    "real_alignment_computed": false,
+    "real_ape_or_rpe_computed": false,
+    "synthetic_positions_alignment_errors_reports_and_figures_only": true,
+    "attempt_001_modified_or_rerun": false,
+    "attempt_002_real_evaluator_started": false,
+    "attempt_002_authority_created": false,
+    "attempt_002_evidence_root_created": false,
+    "ros_model_publisher_or_trajectory_generation_started": false,
+    "subprocess_scientific_run_started": false
+  },
+  "self_hash_algorithm": "SHA-256 over compact canonical JSON sort_keys=true,separators comma/colon,allow_nan=false with self_hash set to null",
+  "self_hash": "f2453e127d2d05b66963b74c66084fbbc6df5caa02bef805b5d3b53596051cf2"
+}

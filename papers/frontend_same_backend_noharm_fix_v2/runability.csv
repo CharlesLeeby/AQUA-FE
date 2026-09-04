@@ -1,0 +1,5 @@
+window_id,arm,repeat,feature_bag_sha256,poses,output_duration_s,coverage_ratio,init_success,tracking_lost_count_proxy,solver_failures,status
+a06_s000_d045,xfeat_noharm_v4,1,500c4f016e67febdd6b6298765aa8b7f590b3b0a45114157689c20837264ab97,406,40.494568,0.899996,1,0,0,PASS
+a06_s000_d045,xfeat_noharm_v4,2,500c4f016e67febdd6b6298765aa8b7f590b3b0a45114157689c20837264ab97,406,40.494568,0.899996,1,0,0,PASS
+a06_s000_d045,xfeat_noharm_v4,3,500c4f016e67febdd6b6298765aa8b7f590b3b0a45114157689c20837264ab97,406,40.494568,0.899996,1,0,0,PASS
+h07_s000_d050,xfeat_noharm_v4,frontend_only,d2572daad26a0a626cf4f013c3dfafd872edaffc3bf41c302ff1406c07246358,,,,,,,PASS_BYTE_IDENTICAL_TO_FROZEN_KLT

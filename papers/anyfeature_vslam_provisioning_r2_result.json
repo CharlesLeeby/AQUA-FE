@@ -1,0 +1,77 @@
+{
+  "schema_version": "aqua-fe-published-anyfeature-provisioning-result-v1",
+  "recorded_at": "2026-08-11T18:46:30+08:00",
+  "status": "STOP_PROVISIONING",
+  "scientific_execution_started": false,
+  "model_inference_started": false,
+  "a02_data_export_started": false,
+  "trajectory_generated": false,
+  "authorization": {
+    "addendum": "papers/anyfeature_vslam_provisioning_addendum_r2.md",
+    "addendum_sha256": "31a7754b7f338158d3cbf72079b3def98152fd6f4c1a596c3f1d8582e59884c0",
+    "main_preregistration_sha256_at_r2_freeze": "0d6c5d59651371821e0993985b59db1e299c56fdead5ae14938c79fc26bbc37b"
+  },
+  "official_system": {
+    "name": "AnyFeature-VSLAM",
+    "commit": "6aa014b724f7a61bcbff2f8f28f20836986a43dc",
+    "tree": "36b264e1da05c6fe9cd987965e9a75ba96930b63",
+    "dbow2_submodule_commit": "f4d585b45237836dbde757c0c8ec8b098ad1164a",
+    "origin": "https://github.com/alejandrofontan/AnyFeature-VSLAM.git",
+    "source_modified": false,
+    "tracked_worktree_clean": true,
+    "staged_diff_empty": true
+  },
+  "environment": {
+    "solve_plan_sha256": "c6a38210878a84745e4e8b2ce2635b9d5b2a7dbd7075a4acc82d65db056d0555",
+    "explicit_lock_sha256": "c3ec38a1f9108145805d71dfe50ab4c85cceaf2cd4c357471f20dd26fc6b3c0f",
+    "installed_package_inventory_sha256": "f1eb105de9a015be44c852f973c3638a7ff26ac6d37f111cb89bda738f987c71",
+    "package_count": 340,
+    "resolved_python": "3.10.20",
+    "resolved_opencv": "4.10.0",
+    "resolved_eigen": "3.4.0",
+    "resolved_cmake": "3.29.6",
+    "installed_set_matches_solve_plan": true
+  },
+  "build": {
+    "upstream_build_script_rc": 0,
+    "upstream_build_log_sha256": "aea64907b68a67c3717255efadc576122c7e1cf4d463a3fc3331e8cddaf09d3e",
+    "independent_dbow2_build_rc": 0,
+    "independent_dbow2_log_sha256": "8c35b1682f73592d30612d7b0fabdb384fcfff35cb5a076cb48b85b1368aa794",
+    "independent_anyfeature_build_rc": 0,
+    "independent_anyfeature_log_sha256": "8c35b1682f73592d30612d7b0fabdb384fcfff35cb5a076cb48b85b1368aa794",
+    "mono_binary_sha256": "7708d5b384b9988502185f276b5e1821de2dc37214fd6c9705e50c545991202d",
+    "core_library_sha256": "d30d73af1ae00309ab1f8fbd4acfcb1730ae0ffceab7278ecb1f172d7e976591",
+    "dbow2_library_sha256": "5e596fb755fc03ec489e7d8a373a767cd5809de9e435c1a2221a625e305a58d4"
+  },
+  "runtime_link_gate": {
+    "passed": false,
+    "ldd_evidence_sha256": "366e2bacd09f0feed7c5edce331f546528ff6e3b682a32606fd7b9dc99fc87f6",
+    "readelf_evidence_sha256": "58d3ca3cedaf4b7e5a796ba55c969c206fe9fb4d21cedb3850fbeacabf23fbca",
+    "missing_sonames": [
+      "libopencv_features2d.so.409",
+      "libopencv_core.so.409",
+      "libopencv_imgcodecs.so.409",
+      "libopencv_calib3d.so.409",
+      "libopencv_imgproc.so.409"
+    ],
+    "official_brisk_library_sha256": "4829d4e0b4641503106f4b0e03f2b4ce6071f1f0bc3f3e1e891f285f31d2756d",
+    "official_akaze_library_sha256": "37538d116902f70df451e2b0549485b08224caaedb7908fed34c0c140d9db877",
+    "mechanical_abi_evidence": {
+      "brisk_needed": [
+        "libopencv_features2d.so.409",
+        "libopencv_core.so.409"
+      ],
+      "akaze_needed": [
+        "libopencv_imgcodecs.so.409",
+        "libopencv_calib3d.so.409",
+        "libopencv_imgproc.so.409",
+        "libopencv_core.so.409"
+      ]
+    }
+  },
+  "root_cause": {
+    "class": "OFFICIAL_FEATURE_PACKAGES_REQUIRE_OPENCV_4_9_SONAMES",
+    "interpretation": "The unchanged paper snapshot and its official fontan BRISK/AKAZE packages built successfully. Runtime closure failed because those packages are linked to OpenCV 4.9 SONAMEs (.409), while the preregistered r2 environment contains OpenCV 4.10 (.410). This was detected before model inference, A02 conversion, feature generation, or SLAM, so it is an infrastructure ABI failure rather than a scientific result."
+  },
+  "stopping_rule_applied": "R2 is retained as STOP_PROVISIONING and is never repaired in place. Any further infrastructure attempt requires a new, outcome-blind addendum written before its solve and may change only OpenCV 4.10 to the mechanically required OpenCV 4.9 ABI; all scientific identities and official source bytes must remain fixed."
+}

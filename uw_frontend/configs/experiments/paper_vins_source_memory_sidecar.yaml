@@ -1,0 +1,24 @@
+extends: loftr_extreme_only_frontend.yaml
+
+hybrid:
+  # Keep sidecar provenance after recovered/learned points enter the KLT state.
+  # Without this, a recovered old-id point becomes indistinguishable from normal
+  # KLT on the next frame, so VINS-safe source selection cannot keep limiting it.
+  enable_source_provenance_memory: true
+  source_provenance_recovered_hold_frames: 18
+  source_provenance_learned_hold_frames: 12
+  source_provenance_quality_scale_recovered: 0.80
+  source_provenance_quality_scale_learned: 0.88
+
+  learned_init_requires_klt_confirmation: true
+  source_aware_loftr_requires_confirmation: true
+  learned_confirmation_min_frames: 3
+  source_aware_loftr_min_confirmation_frames: 4
+
+measurement_selection:
+  enabled: false
+
+backend_quality:
+  mode: source_aware
+  floor: 0.65
+  alpha: 0.85

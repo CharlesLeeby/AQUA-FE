@@ -1,0 +1,13 @@
+{
+  "batch_d_upper_bound_bytes": 16777216,
+  "batch_window_id": "ntnu:fjord_6:0001",
+  "governance_free_bytes": 3477016576,
+  "governance_minimum_free_bytes": 536870912,
+  "governance_pass": true,
+  "output_free_bytes": 8429694976,
+  "output_minimum_free_bytes": 3221225472,
+  "output_pass": true,
+  "output_root": "logs/ntnu_vins",
+  "remaining_batch_job_count": 3,
+  "remaining_batch_run_bytes": 67108864
+}

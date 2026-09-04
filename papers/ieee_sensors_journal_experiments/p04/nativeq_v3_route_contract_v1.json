@@ -1,0 +1,137 @@
+{
+  "arm_contract": {
+    "backend_quality": "vins_safe_floor0p80_alpha0p65",
+    "conditional_before_trajectory_outcome": [
+      "D_legacy_exact_lineage_drop_v3"
+    ],
+    "dose_contract": "SAME_MAXIMUM_BUDGET_NOT_EQUAL_REALIZED_COUNT",
+    "maximum_external_feature_budget": 350,
+    "required_every_window": [
+      "B0_native_vins_origin_v1",
+      "B1_klt_nativeq_v3",
+      "P_legacy_nativeq_xfeat_seedchain_v3",
+      "M_xfeat_pairwise_nativeq_v1"
+    ],
+    "retired_no_slots": [
+      "C_legacy_independent_classical_v3",
+      "B2_all_eligible"
+    ]
+  },
+  "claim_boundary": {
+    "allowed": "A gated learned-seeded persistent frontend is evaluated against strong KLT and modern XFeat baselines under a frozen native-q consumer.",
+    "forbidden": [
+      "learned measurements are uniformly superior to classical features",
+      "detector source has a common-carrier causal effect under frozen v3",
+      "D_legacy removes the complete learned frontend",
+      "development A03 or NTNU results are held-out confirmation"
+    ]
+  },
+  "contract_hash": "b8d673057432b9b9f34f0d41d0a254375ac9d9d930b9ef5d2ee4efb077c5bfeb",
+  "d_legacy_applicability": {
+    "active_action": "derive D by deleting every observation of every learned-born P ID",
+    "active_rule": "accepted_learned_born_lineage_count > 0",
+    "audit_failure": "BLOCK_D_AND_MARK_H3_INELIGIBLE_CONTRACT_FAILURE",
+    "interpretation": "Direct backend exposure effect on the learned-conditioned carrier; not removal of the complete learned frontend.",
+    "required_audit": "PASS_EXACT_WHOLE_LINEAGE_DROP",
+    "resolution_time": "after frozen P export and before reading any trajectory, APE, or RPE",
+    "zero_action": "NOT_APPLICABLE"
+  },
+  "development_diagnostics": {
+    "a03_actual_v3": "ZERO_ACTION_KLT_FALLBACK",
+    "classical_results": "RETAIN_MANDATORY_WITHOUT_CAUSAL_LANGUAGE",
+    "confirmatory_denominator": false,
+    "ntnu_exact_drop": "PASS_EXACT_WHOLE_LINEAGE_DROP"
+  },
+  "entrypoints": {
+    "M": {
+      "path": "scripts/run_p05_modern_xfeat_baseline_guarded_v2.sh",
+      "sha256": "6af0f33684a717fa8403cf668b03e5f3040592f11e1ccb2e6173cc86742945df",
+      "size_bytes": 4659
+    },
+    "P_legacy": {
+      "path": "scripts/run_isj_nativeq_contract_guarded_v4.sh",
+      "sha256": "f4bffa30037261c0896bb4fd4f14929bc4445f854ca409ac82b6240ac4706373",
+      "size_bytes": 2217
+    }
+  },
+  "evidence": [
+    {
+      "path": "papers/ieee_sensors_journal_experiments/method_lock_nativeq_legacy_candidate_v3.json",
+      "sha256": "c2a54da0975984a0cdbf2f4d7653f9e9e941a37632eafcaba3f184d205f37048",
+      "size_bytes": 23508
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/method_lock_nativeq_legacy_candidate_v4.json",
+      "sha256": "76e4f59289d5c3634290988728ad267ba91e8f7443b5d4160887d4486e8c2ab9",
+      "size_bytes": 11944
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p04/v3_control_identifiability_v1.json",
+      "sha256": "84992a57b7d86a1cde0a4dcdd5afe552143f11369ac359576f61f296aab61fc8",
+      "size_bytes": 5983
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p04/implementation_decision_v3.md",
+      "sha256": "fa7a31ea40986a4b8a4088840aa899560b627a5d36235c43a791eaf850282379",
+      "size_bytes": 4357
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p04/ntnu_fjord1_s83_d30_whole_lineage_exact_drop_audit_v1.json",
+      "sha256": "4b120cf06bcef9b2f8baddf510d169ea631b6ed02cbad3a526b7ae4f8acc8b1e",
+      "size_bytes": 5461
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p04/a03_5000_5900_actual_v3_attempt01b_export_audit_v1.json",
+      "sha256": "76240c19a3f5c9ff6fc8799fd1acf454ee55364429d381afd3e41ee30ad87507",
+      "size_bytes": 3326
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p05/backend_consumer_contract_xfeat_v1.json",
+      "sha256": "7cc27811379148db92937e563ba97f0c8aec7ebcfc49834f9707a4306858ab61",
+      "size_bytes": 8792
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p05/ntnu_fjord1_s83_d10_xfeat_bag_attestation_v1.json",
+      "sha256": "34b293603e54a620c0e0f4fd9c3f8990cd02ba7c58b007632840308f5ac9da6b",
+      "size_bytes": 3223
+    },
+    {
+      "path": "scripts/audit_whole_lineage_exact_drop_v1.py",
+      "sha256": "bf6ccbf47d3b6b1e4fdad8b9e8b49d17f9545b312ce64970b61ed6c56cdf71b4",
+      "size_bytes": 27756
+    },
+    {
+      "path": "scripts/audit_p04_actual_v3_export_v1.py",
+      "sha256": "6653aa864fe4a386ce0336d8a9d022bed44aa939b128b7577cbe1e3ea40d2c1d",
+      "size_bytes": 12002
+    },
+    {
+      "path": "scripts/check_p05_xfeat_backend_contract_v1.py",
+      "sha256": "fa19cbfb5e94803ef8bbc470f2d6a1eb0ea0108fe1805891eaeed5aa9bc35e00",
+      "size_bytes": 23546
+    },
+    {
+      "path": "scripts/attest_p05_xfeat_feature_bag_v1.py",
+      "sha256": "c43099995255dc7b5a7882eac5003d9051f59dcd96ca516bdd318f979d2d986a",
+      "size_bytes": 10390
+    }
+  ],
+  "forbidden_outcomes_accessed": [],
+  "hypothesis_disposition": {
+    "H2_CONTROL_CONTRACT": "NOT_APPLICABLE_CARRIER_FEEDBACK",
+    "H2_paper_result": "INCONCLUSIVE_NOT_TESTED_UNDER_FROZEN_V3",
+    "H3_DROP_CONTRACT": "CONDITIONAL_DIRECT_BACKEND_EXPOSURE_EFFECT"
+  },
+  "next_stage": "P06_GUARDED_FINAL_SELECTION_THEN_FINAL_METHOD_LOCK",
+  "outcome_boundary": "P04_FRONTEND_CONTRACT_ONLY_NO_VINS_APE_RPE_TRAJECTORY",
+  "p05_backend_contract_hash": "4e31a9a29e8ee2198535de6b0bce01550b17077434e8e01ed68057822d4eace4",
+  "schema_version": "isj-p04-nativeq-v3-route-contract-v1",
+  "scientific_method": {
+    "candidate_lock_hash": "19b0e4754341d52d6c52e8b3da7409bf22d228ca4a775ae6efe92c072ce71f63",
+    "execution_guard": "isj-nativeq-legacy-candidate-v4-guarded-execution",
+    "execution_guard_lock_hash": "4e25503ddc92163ae8572274439a26b0aec189757aa56cdcea3ecfc5f53a0125",
+    "identity_change": "NONE",
+    "profile": "isj-nativeq-legacy-candidate-v3"
+  },
+  "status": "READY_FOR_P06_FINAL_METHOD_FREEZE"
+}

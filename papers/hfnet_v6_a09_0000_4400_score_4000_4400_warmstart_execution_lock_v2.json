@@ -1,0 +1,107 @@
+{
+  "authority_chain": {
+    "attempt_preparation_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_attempt_preparation_freeze_v1.json",
+      "sha256": "055168bb20b86a6f6eebc452f03eada37e888212067f9fe027264e721a5aea06",
+      "size_bytes": 5313
+    },
+    "execution_lock_candidate_v2": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_execution_lock_candidate_v2.json",
+      "sha256": "58c9a1af1e18e5abc27fd7fa8779281e2aa4250da5fcaa41b89c28358e722b4f",
+      "size_bytes": 9180
+    },
+    "invalidated_execution_lock_v1": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_execution_lock_v1.json",
+      "sha256": "82f644548d26ddf18ae9165cd6ffdd35bcc3f8df1eddb511e4c1b498e2165b18",
+      "size_bytes": 6923
+    },
+    "lock_v1_invalidation": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_execution_lock_v1_invalidation_v1.json",
+      "sha256": "d65a89b37ce324ec153db4df015904c50ffd53604bbc7aae10dcf00370642ea4",
+      "size_bytes": 2654,
+      "status": "INVALIDATED_STALE_READY_SNAPSHOT_UNCONSUMED_NO_LAUNCH"
+    },
+    "runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_v1.py",
+      "sha256": "21981cc560458fd7d47d1d5b8d752a3ad208f499475e0721dd9f758b008a9093",
+      "size_bytes": 69666
+    }
+  },
+  "claim_and_consumption_contract": {
+    "authority_consumed_on_exact_supervisor_invocation": true,
+    "claim_must_be_o_excl_before_only_hfnet_popen": true,
+    "claim_path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/process_start_claim.json",
+    "maximum_hfnet_elf_starts": 1,
+    "maximum_supervisor_invocations": 1,
+    "preclaim_failure_freezes_this_v2_authority": true,
+    "retry_permitted": false,
+    "runner_internal_full_check_immediately_before_claim": true
+  },
+  "claims": {
+    "accuracy_comparison_authorized": false,
+    "execution_authorized": true,
+    "hfnet_started_at_lock_time": false,
+    "process_claim_created_at_lock_time": false,
+    "scientific_comparison_produced": false,
+    "trajectory_produced_at_lock_time": false,
+    "v1_lock_must_never_be_invoked": true
+  },
+  "created_at_utc": "2026-08-25T12:57:39Z",
+  "fresh_ready_evidence": {
+    "forbidden_attempt_artifacts_absent": [
+      "process_start_claim.json",
+      "run_result.json",
+      "headless.stdout.log",
+      "headless.stderr.log",
+      "result/trajectory_score_4000_4400.txt"
+    ],
+    "immediate_snapshot": {
+      "compute_applications": [],
+      "conflicting_processes": [],
+      "gpu_free_mib": 3284,
+      "gpu_total_mib": 4096,
+      "gpu_used_mib": 616,
+      "observed_at_local": "2026-08-25T20:57:39+08:00"
+    },
+    "runner_check": {
+      "checked_at_utc": "2026-08-25T12:57:08+00:00",
+      "compute_applications": [],
+      "conflicting_executables": [],
+      "errors": [],
+      "free_mib": 3204,
+      "minimum_free_mib": 3072,
+      "ready": true,
+      "return_code": 0,
+      "schema_version": "aqua-fe-hfnet-v6-a09-0000-4400-score-4000-4400-warmstart-check-v1"
+    },
+    "stable_quiet_interval_omitted_by_explicit_user_authority": true,
+    "user_scope": "The user explicitly authorized direct execution when the no-competing-compute rule is only a local conservative requirement; the actual frozen runner resource gate nevertheless passed with an empty compute-app list."
+  },
+  "launch_contract": {
+    "authorized_invocation_count": 1,
+    "exact_supervisor_command": "PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 /home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_v1.py run --authorization-token HFNET_V6_A09_0000_4400_SCORE_4000_4400_WARMSTART_ATTEMPT_001_START_EXACTLY_ONCE",
+    "start_new_session": true,
+    "timeout_seconds": 600,
+    "token": "HFNET_V6_A09_0000_4400_SCORE_4000_4400_WARMSTART_ATTEMPT_001_START_EXACTLY_ONCE"
+  },
+  "prohibited_actions": [
+    "invoke invalidated execution_lock_v1",
+    "a second supervisor invocation, HFNet start, or retry",
+    "mutate the prepared attempt, canonical input, runner, binary, libraries, model, or cache seed",
+    "treat a failure as zero accuracy",
+    "claim APE, RPE, winner, ranking, significance, held-out generalization, or paper superiority"
+  ],
+  "schema_version": "aqua-fe-hfnet-v6-a09-warmstart-execution-lock-v2",
+  "scientific_boundary": {
+    "development_result_conditioned": true,
+    "failure_accuracy_state": "NA_NOT_ZERO",
+    "role": "one development-only HFNet natural-history runability rescue on the prior KLT-positive A09 4000..4400 window"
+  },
+  "status": "AUTHORIZED_EXACTLY_ONE_HFNET_ELF_START_ATTEMPT_001_NO_RETRY_V2",
+  "terminal_contract": {
+    "crop_only_after_all_runability_gates_pass": true,
+    "result_and_crop_publication": "O_EXCL_ATOMIC",
+    "score_gate": "401/401 contiguous poses, 3999-to-4000 continuity, score keyframe, pre-score initialization, no score reset/reinit, official save, nonzero parseable final atlas, and unchanged authority",
+    "terminal_result_required_after_claim_even_on_exception": true
+  }
+}

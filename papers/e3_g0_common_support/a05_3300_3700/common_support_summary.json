@@ -1,0 +1,151 @@
+{
+  "arms": {
+    "drop": {
+      "ape_max_m": 1.0045551534781907,
+      "ape_median_m": 0.5329865029601397,
+      "ape_rmse_m": 0.5748111623205718,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 190,
+        "raw_count": 190,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 190
+      },
+      "bracket_gap_max_s": 0.10307979583740234,
+      "bracket_gap_p50_s": 0.10076606273651123,
+      "bracket_gap_p95_s": 0.1026410460472107,
+      "legacy_max_reference_reuse": 10,
+      "legacy_pair_count": 190,
+      "legacy_timestamp_error_max_s": 0.4519202709197998,
+      "legacy_timestamp_error_p95_s": 0.450274670124054,
+      "legacy_unique_assignment_error_max_s": 0.052572011947631836,
+      "legacy_unique_assignment_error_p95_s": 0.05138289928436279,
+      "legacy_unique_assignment_pair_count": 20,
+      "legacy_unique_reference_used": 20,
+      "matched_count": 18,
+      "rejection_histogram": {
+        "INTERPOLATED": 18,
+        "OUT_OF_RANGE": 2
+      },
+      "rpe_max_m": 0.13377866765342075,
+      "rpe_median_m": 0.1221512930586197,
+      "rpe_pairs": 17,
+      "rpe_rmse_m": 0.11169777948976667,
+      "valid_grid_count": 18
+    },
+    "full": {
+      "ape_max_m": 0.578524543020274,
+      "ape_median_m": 0.31968955924463915,
+      "ape_rmse_m": 0.33184197260401954,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 190,
+        "raw_count": 190,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 190
+      },
+      "bracket_gap_max_s": 0.10307979583740234,
+      "bracket_gap_p50_s": 0.10076606273651123,
+      "bracket_gap_p95_s": 0.1026410460472107,
+      "legacy_max_reference_reuse": 10,
+      "legacy_pair_count": 190,
+      "legacy_timestamp_error_max_s": 0.4519202709197998,
+      "legacy_timestamp_error_p95_s": 0.450274670124054,
+      "legacy_unique_assignment_error_max_s": 0.052572011947631836,
+      "legacy_unique_assignment_error_p95_s": 0.05138289928436279,
+      "legacy_unique_assignment_pair_count": 20,
+      "legacy_unique_reference_used": 20,
+      "matched_count": 18,
+      "rejection_histogram": {
+        "INTERPOLATED": 18,
+        "OUT_OF_RANGE": 2
+      },
+      "rpe_max_m": 0.09622107821902567,
+      "rpe_median_m": 0.06532038362958753,
+      "rpe_pairs": 17,
+      "rpe_rmse_m": 0.06499689956018417,
+      "valid_grid_count": 18
+    },
+    "klt": {
+      "ape_max_m": 0.6022940586534916,
+      "ape_median_m": 0.33246842513480435,
+      "ape_rmse_m": 0.3456042857303969,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 190,
+        "raw_count": 190,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 190
+      },
+      "bracket_gap_max_s": 0.10307979583740234,
+      "bracket_gap_p50_s": 0.10076606273651123,
+      "bracket_gap_p95_s": 0.1026410460472107,
+      "legacy_max_reference_reuse": 10,
+      "legacy_pair_count": 190,
+      "legacy_timestamp_error_max_s": 0.4519202709197998,
+      "legacy_timestamp_error_p95_s": 0.450274670124054,
+      "legacy_unique_assignment_error_max_s": 0.052572011947631836,
+      "legacy_unique_assignment_error_p95_s": 0.05138289928436279,
+      "legacy_unique_assignment_pair_count": 20,
+      "legacy_unique_reference_used": 20,
+      "matched_count": 18,
+      "rejection_histogram": {
+        "INTERPOLATED": 18,
+        "OUT_OF_RANGE": 2
+      },
+      "rpe_max_m": 0.10155346757262927,
+      "rpe_median_m": 0.0711174997107648,
+      "rpe_pairs": 17,
+      "rpe_rmse_m": 0.06757300723003368,
+      "valid_grid_count": 18
+    }
+  },
+  "protocol": {
+    "arm_time_offsets_s": {
+      "drop": 0.0,
+      "full": 0.0,
+      "klt": 0.0
+    },
+    "body_to_camera_applied": true,
+    "contrast_name": "a05_3300_3700",
+    "evaluation_rate_hz": 1.0,
+    "max_estimate_gap_s": 0.25,
+    "max_reference_gap_s": 2.5,
+    "nominal_estimate_rate_hz": 10.0,
+    "nominal_reference_rate_hz": 1.0,
+    "reference": "/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo05_3300_3700.bag:/aqualoc/colmap_gt",
+    "reference_time_offset_s": 0.0,
+    "rpe_delta_s": 1.0,
+    "rpe_semantics": "aligned_global_frame_positional_delta",
+    "window_end_s": 1455214363.5368462,
+    "window_start_s": 1455214343.5394516
+  },
+  "reference": {
+    "audit": {
+      "duplicate_count": 0,
+      "finite_count": 21,
+      "raw_count": 21,
+      "rejected_nonfinite_count": 0,
+      "unique_count": 21
+    },
+    "bracket_gap_max_s": 1.0014533996582031,
+    "bracket_gap_p50_s": 0.999822735786438,
+    "bracket_gap_p95_s": 1.0008941769599915,
+    "rejection_histogram": {
+      "EXACT": 1,
+      "INTERPOLATED": 19
+    },
+    "valid_grid_count": 20
+  },
+  "support": {
+    "ape_valid": false,
+    "common_coverage": 0.9,
+    "common_span_s": 17.0,
+    "grid_count": 20,
+    "matched_count": 18,
+    "rpe_pairs": 17,
+    "rpe_valid": true,
+    "segment_count": 1,
+    "window_duration_s": 19.997394561767578
+  }
+}

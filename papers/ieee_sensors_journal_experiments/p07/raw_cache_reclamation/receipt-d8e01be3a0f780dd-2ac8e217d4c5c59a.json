@@ -1,0 +1,88 @@
+{
+  "command_log_counts": {
+    "gt": 181,
+    "images": 901,
+    "imu": 9099
+  },
+  "command_logs": [
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_043_isj_p07_aqualoc_harbor_h03_0001_p_attempt01/command.log",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_044_isj_p07_aqualoc_harbor_h03_0001_m_attempt01/command.log",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_045_isj_p07_aqualoc_harbor_h03_0001_b1_attempt01/command.log"
+  ],
+  "deletion": {
+    "pre_delete_exists": true,
+    "pre_delete_sha256": "d8e01be3a0f780dd4c0e094449445fe8c1fc45914d3037f923f58dd0a84ce799",
+    "pre_delete_size_bytes": 183030135
+  },
+  "evidence_paths": [
+    "datasets/full_downloads/aqualoc/Harbor_sites_sequences/harbor_sequence_03_raw_data.tar.gz",
+    "logs/aqualoc_real_vins/external_klt_every2_isj_p07_aqualoc_harbor_h03_0001_b1_attempt01",
+    "logs/aqualoc_real_vins/external_klt_every2_isj_p07_aqualoc_harbor_h03_0001_b1_attempt01/features.bag",
+    "logs/aqualoc_real_vins/external_klt_every2_isj_p07_aqualoc_harbor_h03_0001_b1_attempt01/features.bag.quality-contract.json",
+    "logs/aqualoc_real_vins/external_klt_every2_isj_p07_aqualoc_harbor_h03_0001_b1_attempt01/frontend_metrics.csv",
+    "logs/aqualoc_real_vins/external_klt_every2_isj_p07_aqualoc_harbor_h03_0001_p_attempt01_klt_safe_fallback",
+    "logs/aqualoc_real_vins/external_klt_every2_isj_p07_aqualoc_harbor_h03_0001_p_attempt01_klt_safe_fallback/arbitration_summary.txt",
+    "logs/aqualoc_real_vins/external_klt_every2_isj_p07_aqualoc_harbor_h03_0001_p_attempt01_klt_safe_fallback/features.bag",
+    "logs/aqualoc_real_vins/external_klt_every2_isj_p07_aqualoc_harbor_h03_0001_p_attempt01_klt_safe_fallback/features.bag.quality-contract.json",
+    "logs/aqualoc_real_vins/external_klt_every2_isj_p07_aqualoc_harbor_h03_0001_p_attempt01_klt_safe_fallback/frontend_metrics.csv",
+    "logs/aqualoc_real_vins/external_xfeat_every2_isj_p07_aqualoc_harbor_h03_0001_m_attempt01",
+    "logs/aqualoc_real_vins/external_xfeat_every2_isj_p07_aqualoc_harbor_h03_0001_m_attempt01/features.bag",
+    "logs/aqualoc_real_vins/external_xfeat_every2_isj_p07_aqualoc_harbor_h03_0001_m_attempt01/features.bag.p05-xfeat-contract.json",
+    "logs/aqualoc_real_vins/external_xfeat_every2_isj_p07_aqualoc_harbor_h03_0001_m_attempt01/frontend_metrics.csv",
+    "logs/backend_contract_decisions/b1/b1_guard_20260807T123016Z_815567_decision.json",
+    "logs/backend_contract_decisions/nativeq_guard_20260807T121459Z_810148_decision.json",
+    "logs/backend_contract_decisions/p05/p05_xfeat_guard_20260807T122409Z_814507_decision.json",
+    "papers/ieee_sensors_journal_experiments/arm_applicability.csv",
+    "papers/ieee_sensors_journal_experiments/data_eligibility_manifest.csv",
+    "papers/ieee_sensors_journal_experiments/dataset_checksum_manifest.txt",
+    "papers/ieee_sensors_journal_experiments/dataset_manifest_v4.csv",
+    "papers/ieee_sensors_journal_experiments/p07/d_resolutions/aqualoc_harbor_h03_0001_not_applicable_v2.json",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_043_isj_p07_aqualoc_harbor_h03_0001_p_attempt01/audit_v4.json",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_043_isj_p07_aqualoc_harbor_h03_0001_p_attempt01/command.log",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_043_isj_p07_aqualoc_harbor_h03_0001_p_attempt01/command.txt",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_043_isj_p07_aqualoc_harbor_h03_0001_p_attempt01/input_hash_manifest.sha256",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_043_isj_p07_aqualoc_harbor_h03_0001_p_attempt01/output_hash_manifest.sha256",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_044_isj_p07_aqualoc_harbor_h03_0001_m_attempt01/audit_v4.json",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_044_isj_p07_aqualoc_harbor_h03_0001_m_attempt01/command.log",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_044_isj_p07_aqualoc_harbor_h03_0001_m_attempt01/command.txt",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_044_isj_p07_aqualoc_harbor_h03_0001_m_attempt01/input_hash_manifest.sha256",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_044_isj_p07_aqualoc_harbor_h03_0001_m_attempt01/output_hash_manifest.sha256",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_045_isj_p07_aqualoc_harbor_h03_0001_b1_attempt01/audit_v4.json",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_045_isj_p07_aqualoc_harbor_h03_0001_b1_attempt01/command.log",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_045_isj_p07_aqualoc_harbor_h03_0001_b1_attempt01/command.txt",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_045_isj_p07_aqualoc_harbor_h03_0001_b1_attempt01/input_hash_manifest.sha256",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_045_isj_p07_aqualoc_harbor_h03_0001_b1_attempt01/output_hash_manifest.sha256",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_export_queue_v1.csv",
+    "papers/ieee_sensors_journal_experiments/p07/frontend_run_allocation_v1.csv",
+    "papers/ieee_sensors_journal_experiments/run_registry.csv"
+  ],
+  "held_out_trajectory_outcome_read": false,
+  "mode": "EXECUTE",
+  "outcome_boundary": "P07_FRONTEND_ONLY_NO_TRAJECTORY_OUTCOME",
+  "queues": [
+    43,
+    44,
+    45
+  ],
+  "raw_bag_line_count": 4,
+  "raw_bag_line_counts_by_queue": {
+    "43": 2,
+    "44": 1,
+    "45": 1
+  },
+  "raw_cache_path": "datasets/aqualoc/rosbags/harbor03_900_1800.bag",
+  "raw_cache_sha256": "d8e01be3a0f780dd4c0e094449445fe8c1fc45914d3037f923f58dd0a84ce799",
+  "raw_cache_size_bytes": 183030135,
+  "receipt_id": "receipt-d8e01be3a0f780dd-2ac8e217d4c5c59a",
+  "recorded_at": "2026-08-07T12:39:05+00:00",
+  "run_ids": [
+    "isj-nativeq-v3_P07_aqualoc_harbor-H03_900-1800_P_f0_b00_20260806T084500Z",
+    "isj-nativeq-v3_P07_aqualoc_harbor-H03_900-1800_M_f0_b00_20260806T084500Z",
+    "isj-nativeq-v3_P07_aqualoc_harbor-H03_900-1800_B1_f0_b00_20260806T084500Z"
+  ],
+  "schema_version": "isj-p07-raw-cache-reclamation-v1",
+  "source_archive_path": "datasets/full_downloads/aqualoc/Harbor_sites_sequences/harbor_sequence_03_raw_data.tar.gz",
+  "source_archive_sha256": "6a4062a61498a108ade031ecff1cdf0818390212ff84882e922cc162ee5e54f1",
+  "status": "AUTHORIZED_BEFORE_UNLINK",
+  "window_id": "aqualoc_harbor:H03:0001"
+}

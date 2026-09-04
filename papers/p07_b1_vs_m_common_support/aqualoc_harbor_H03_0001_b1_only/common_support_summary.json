@@ -1,0 +1,83 @@
+{
+  "arms": {
+    "B1": {
+      "ape_max_m": 0.3189172899713473,
+      "ape_median_m": 0.13300981346542415,
+      "ape_rmse_m": 0.1475902536148671,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 440,
+        "raw_count": 440,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 440
+      },
+      "bracket_gap_max_s": 0.1029217280447483,
+      "bracket_gap_p50_s": 0.10038272000383586,
+      "bracket_gap_p95_s": 0.10161605122266337,
+      "legacy_max_reference_reuse": 3,
+      "legacy_pair_count": 440,
+      "legacy_timestamp_error_max_s": 0.10247015091590583,
+      "legacy_timestamp_error_p95_s": 0.10124183128937148,
+      "legacy_unique_assignment_error_max_s": 0.05180745502002537,
+      "legacy_unique_assignment_error_p95_s": 0.0502393406117335,
+      "legacy_unique_assignment_pair_count": 177,
+      "legacy_unique_reference_used": 177,
+      "matched_count": 87,
+      "rejection_histogram": {
+        "INTERPOLATED": 87,
+        "OUT_OF_RANGE": 4
+      },
+      "rpe_max_m": 0.040538364849415365,
+      "rpe_median_m": 0.014311611940306133,
+      "rpe_pairs": 85,
+      "rpe_rmse_m": 0.017248708332985627,
+      "valid_grid_count": 87
+    }
+  },
+  "protocol": {
+    "arm_time_offsets_s": {
+      "B1": 0.0
+    },
+    "body_to_camera_applied": true,
+    "contrast_name": "P07_NORMAL_B1_ONLY_M_EMPTY",
+    "evaluation_rate_hz": 2.0,
+    "max_estimate_gap_s": 0.25,
+    "max_reference_gap_s": 0.625,
+    "nominal_estimate_rate_hz": 10.0,
+    "nominal_reference_rate_hz": 4.0,
+    "reference": "logs/aqualoc_real_vins/external_klt_every2_isj_p07_aqualoc_harbor_h03_0001_b1_attempt01/features.bag:/aqualoc/colmap_gt",
+    "reference_time_offset_s": 0.0,
+    "rpe_delta_s": 1.0,
+    "rpe_semantics": "aligned_global_frame_positional_delta",
+    "window_end_s": 1523966922.643979,
+    "window_start_s": 1523966877.6250236
+  },
+  "reference": {
+    "audit": {
+      "duplicate_count": 0,
+      "finite_count": 181,
+      "raw_count": 181,
+      "rejected_nonfinite_count": 0,
+      "unique_count": 181
+    },
+    "bracket_gap_max_s": 0.25206518603954464,
+    "bracket_gap_p50_s": 0.2499743519583717,
+    "bracket_gap_p95_s": 0.2514676889986731,
+    "rejection_histogram": {
+      "EXACT": 1,
+      "INTERPOLATED": 90
+    },
+    "valid_grid_count": 91
+  },
+  "support": {
+    "ape_valid": true,
+    "common_coverage": 0.9560439560439561,
+    "common_span_s": 43.0,
+    "grid_count": 91,
+    "matched_count": 87,
+    "rpe_pairs": 85,
+    "rpe_valid": true,
+    "segment_count": 1,
+    "window_duration_s": 45.01895563292783
+  }
+}

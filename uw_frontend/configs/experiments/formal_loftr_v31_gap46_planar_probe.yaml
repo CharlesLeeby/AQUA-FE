@@ -1,0 +1,9 @@
+extends: formal_loftr_v31_gap46_probe.yaml
+
+hybrid:
+  # A06 is a near-planar low-texture segment. The rejected second LoFTR burst
+  # improves F/H inlier ratios and keeps homography residual nearly unchanged,
+  # but increases median epipolar residual. Probe a homography-priority
+  # acceptance for this planar rescue mode.
+  semidense_acceptance_max_epipolar_error_ratio: 1.75
+  semidense_acceptance_max_epipolar_error_abs_increase: 0.08

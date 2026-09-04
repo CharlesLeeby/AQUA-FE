@@ -1,0 +1,14 @@
+{
+  "governance": {
+    "free_bytes": 1407201280,
+    "minimum_free_bytes": 536870912,
+    "pass": true,
+    "path": "papers/ieee_sensors_journal_experiments/p07"
+  },
+  "raw": {
+    "free_bytes": 3893309440,
+    "minimum_free_bytes": 3758096384,
+    "pass": true,
+    "path": "datasets/aqualoc/rosbags"
+  }
+}

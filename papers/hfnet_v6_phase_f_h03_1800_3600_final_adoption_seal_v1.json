@@ -1,0 +1,1379 @@
+{
+  "artifact_pins": {
+    "base_config": {
+      "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_h03_1800_3600_phase_f_v1.yaml",
+      "sha256": "3ed0e32354049edfaf7c42edaeed3baf7a25e994ec29fab3135b5edef053f5ab",
+      "size_bytes": 2257
+    },
+    "cam0_csv": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_phase_f_fresh_underwater_v1/aqualoc_harbor_h03_1800_3600/mav0/cam0/data.csv",
+      "sha256": "02ddfd4c66ce1d05956a16790140f29abb43c47222ae5ea1faf47b66205bca6f",
+      "size_bytes": 79269
+    },
+    "cam0_times": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_phase_f_fresh_underwater_v1/aqualoc_harbor_h03_1800_3600/cam0_times.txt",
+      "sha256": "5732e74d12a720cbf7aa3b68cbf5ab189e3493bec7954271017bde7d54f5d92e",
+      "size_bytes": 36020
+    },
+    "dependency_inventory": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_phase_f_h03_1800_3600_dependency_inventory_v1.json",
+      "sha256": "e36307b1217ba26b29620ef898be5c505534b0920eeeb5bd4d8b225d36cb9dc4",
+      "size_bytes": 56660
+    },
+    "execution_lock": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_phase_f_h03_1800_3600_execution_lock_v1.json",
+      "sha256": "a1d3ea0e9ccb266252cb550dd6090ac3a4359d863402327f6e09683d4f1844e7",
+      "size_bytes": 8410
+    },
+    "headless_source": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/harnesses/hfnet_slam_mono_inertial_euroc_headless_v3.cc",
+      "sha256": "303947840bdc5377656554560c6785b3218a52e034862a63d5d6da0036b81d90",
+      "size_bytes": 1112
+    },
+    "imu0_csv": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_phase_f_fresh_underwater_v1/aqualoc_harbor_h03_1800_3600/mav0/imu0/data.csv",
+      "sha256": "45edd79a4073f646813cc53d710ab5fd6a26a4b3acb927dfa18292dc6c377193",
+      "size_bytes": 2058198
+    },
+    "input_auditor": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/audit_hfnet_v6_phase_f_h03_1800_3600_input_v1.py",
+      "sha256": "674d8ee097216125b900410d589d97d01442a66d2fa3f02ae196e5ff86f0c170",
+      "size_bytes": 18347
+    },
+    "input_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_phase_f_fresh_underwater_v1/aqualoc_harbor_h03_1800_3600/materialization_manifest.json",
+      "sha256": "07dd7840466c098d8a20a8a63c3a98b8de5a87f000847a23ff7e16ef6c7887e4",
+      "size_bytes": 1200881
+    },
+    "materializer": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/materialize_hfnet_v6_phase_f_h03_1800_3600_v1.py",
+      "sha256": "9146602be29e6faee2d13c91e25b01d2bc4081c11bbf419787128822275e584d",
+      "size_bytes": 38774
+    },
+    "materializer_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_materialize_hfnet_v6_phase_f_h03_1800_3600_v1.py",
+      "sha256": "02e5af45ee05b7d192d30a7461c57de4a2c8e4a0a90238961e7bae6a2c45ea86",
+      "size_bytes": 11666
+    },
+    "official_elf": {
+      "path": "/home/ma/AQUA-FE_WS/build/published_baselines/hfnet_slam_headless_entry_v3/mono_inertial_euroc_headless_v3",
+      "sha256": "4d17eecc74ec8f4bcbe4381d579d2bb48160cf63f6dc948f7857d92e681affeb",
+      "size_bytes": 118280
+    },
+    "official_entry": {
+      "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Examples/Monocular-Inertial/mono_inertial_euroc.cc",
+      "sha256": "fa3effb0c2b99bc4dd83abda443180cf2f017f61710e02fa6b3f9278cc774d39",
+      "size_bytes": 10201
+    },
+    "official_library": {
+      "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/lib/libHFNet_SLAM.so",
+      "sha256": "a56dfd1b48dee4af5be4e55b076d32eac2cf8fb463da8ab943b690377f193717",
+      "size_bytes": 4807712
+    },
+    "passed_stack_lock": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_passed_stack_lock_v1.json",
+      "sha256": "cb826526a28f28e77f546d4647e16fd19426494e9a15ab01108301136cbfadad",
+      "size_bytes": 8111
+    },
+    "preparation_audit": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_phase_f_h03_1800_3600_preparation_audit_v1.json",
+      "sha256": "5f989732ca936c1a75f5227576eaf152ff4515b8ff0ca757024583224a19d775",
+      "size_bytes": 3379
+    },
+    "prepared_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/prepared_manifest.json",
+      "sha256": "6bda3e0fbe56cfcc9a3159b05e0ca92678c9bac9e0626b89128148dfe75b324c",
+      "size_bytes": 76482
+    },
+    "run_local_cache_post": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/run_local_model/HFNet-RT/HF-Net.cache",
+      "sha256": "fae084532407d1a96f2b9ae58ea4c498da3a39c703476a14f79ba0eaa17fc8cf",
+      "size_bytes": 1671903
+    },
+    "run_local_onnx": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/run_local_model/HFNet-RT/HF-Net.onnx",
+      "sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5",
+      "size_bytes": 132238602
+    },
+    "run_result": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/run_result.json",
+      "sha256": "8466740be1cd39b4debef50efc272a43de40970cb167f1c3b799d16a9c69071c",
+      "size_bytes": 153787
+    },
+    "runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_phase_f_h03_1800_3600_v1.py",
+      "sha256": "36b570d223b4718aed658d4333466ef2788fcc8ea14ee1db50cc06ae5b0424a7",
+      "size_bytes": 60508
+    },
+    "runner_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_hfnet_v6_phase_f_h03_1800_3600_v1.py",
+      "sha256": "7413d15b5d2519c20b3e503070fccce9b2bafb3ae07bd9ae9cb8a50dfbb40836",
+      "size_bytes": 9595
+    },
+    "runtime_config": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/runtime_config_model_path_only.yaml",
+      "sha256": "6d767c951c995070f393bd9fb2e933944165474335a7f931e8061fb96f8dcf22",
+      "size_bytes": 2335
+    },
+    "selector": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_phase_f_h03_1800_3600_selector_freeze_v1.json",
+      "sha256": "ab7557db88d884e565d71a31a562e3e88c70eba6d8e643f22ca5b2bdd2d18269",
+      "size_bytes": 12536
+    },
+    "shared_cache": {
+      "path": "/home/ma/SLAM/HFNet-SLAM-runtime-model-a02-r1/HFNet-RT/HF-Net.cache",
+      "sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7",
+      "size_bytes": 853319
+    },
+    "shared_onnx": {
+      "path": "/home/ma/SLAM/HFNet-SLAM-runtime-model-a02-r1/HFNet-RT/HF-Net.onnx",
+      "sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5",
+      "size_bytes": 132238602
+    },
+    "start_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/process_start_claim.json",
+      "sha256": "84fa76fc94e96fbdc555dbd34536970cf17ba7821d88d09d507e6db2d20415ca",
+      "size_bytes": 2917
+    },
+    "stderr": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/headless.stderr.log",
+      "sha256": "e59062bfc86ad6127ae7d594ebad212ca88baa5c9d6cfe19a6a322ae6dbaf4b7",
+      "size_bytes": 5604
+    },
+    "stdout": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/headless.stdout.log",
+      "sha256": "ec9cc423c831dfa30719e52c9fce672f71b006c9cd43e09bf790638f12e48d01",
+      "size_bytes": 7606
+    },
+    "trajectory": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/result/trajectory.txt",
+      "sha256": "de9a614d77d3813c3b20e6cf4b4474962cf2330ad83fc685e366ffe2510e851e",
+      "size_bytes": 106938
+    },
+    "trajectory_keyframe": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/result/trajectory_keyframe.txt",
+      "sha256": "435a0876376b8f00d21006f548291e53b210e526201111f798b1459240401d91",
+      "size_bytes": 8595
+    }
+  },
+  "claims": {
+    "detector_started_by_sealing": false,
+    "evaluator_started_by_sealing": false,
+    "existing_artifact_modified": false,
+    "hfnet_started_by_sealing": false,
+    "vins_started_by_sealing": false
+  },
+  "created_at_utc": "2026-08-16T17:52:20+00:00",
+  "crossbind": {
+    "dependency_closure": {
+      "count": 211,
+      "inventory": {
+        "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_phase_f_h03_1800_3600_dependency_inventory_v1.json",
+        "sha256": "e36307b1217ba26b29620ef898be5c505534b0920eeeb5bd4d8b225d36cb9dc4",
+        "size_bytes": 56660
+      },
+      "records_sha256": "9be9cb1459ce2b925a0cbeb0850a012b486a5f52da5f7f8597913f8b57f52cb5",
+      "total_bytes": 1399072400
+    },
+    "input_full_tree_post": {
+      "file_count": 1805,
+      "record_algorithm": "sorted_utf8_relative_path_NUL_size_NUL_sha256_NUL_crc32_newline",
+      "root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_phase_f_fresh_underwater_v1/aqualoc_harbor_h03_1800_3600",
+      "total_bytes": 331333378,
+      "tree_crc32": "f2c100c1",
+      "tree_sha256": "b3980d27873df053226d7459e738c3c08d9b9d0e76658410306ce6f369b2b5b0"
+    },
+    "input_full_tree_pre": {
+      "file_count": 1805,
+      "record_algorithm": "sorted_utf8_relative_path_NUL_size_NUL_sha256_NUL_crc32_newline",
+      "root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_phase_f_fresh_underwater_v1/aqualoc_harbor_h03_1800_3600",
+      "total_bytes": 331333378,
+      "tree_crc32": "f2c100c1",
+      "tree_sha256": "b3980d27873df053226d7459e738c3c08d9b9d0e76658410306ce6f369b2b5b0"
+    },
+    "input_pre_post_exact": true,
+    "passed_stack_lock": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_passed_stack_lock_v1.json",
+      "sha256": "cb826526a28f28e77f546d4647e16fd19426494e9a15ab01108301136cbfadad",
+      "size_bytes": 8111
+    },
+    "prepared_profile_sha256": "b97fadcbfb700b157c488feed2989946367bd86e353c90d51d622f2963422aba",
+    "result_tree": {
+      "exists": true,
+      "file_count": 2,
+      "files": [
+        {
+          "path": "trajectory.txt",
+          "sha256": "de9a614d77d3813c3b20e6cf4b4474962cf2330ad83fc685e366ffe2510e851e",
+          "size_bytes": 106938
+        },
+        {
+          "path": "trajectory_keyframe.txt",
+          "sha256": "435a0876376b8f00d21006f548291e53b210e526201111f798b1459240401d91",
+          "size_bytes": 8595
+        }
+      ],
+      "total_bytes": 115533,
+      "tree_sha256": "bfa7bc59eae54619e5b9256e438744c33bba3ef1378df9a37a197c32c22fff6c"
+    },
+    "run_local_cache_mutated_in_isolation": true,
+    "run_local_post": {
+      "cache": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/run_local_model/HFNet-RT/HF-Net.cache",
+        "sha256": "fae084532407d1a96f2b9ae58ea4c498da3a39c703476a14f79ba0eaa17fc8cf",
+        "size_bytes": 1671903
+      },
+      "onnx": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/run_local_model/HFNet-RT/HF-Net.onnx",
+        "sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5",
+        "size_bytes": 132238602
+      },
+      "runtime_config": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/runtime_config_model_path_only.yaml",
+        "sha256": "6d767c951c995070f393bd9fb2e933944165474335a7f931e8061fb96f8dcf22",
+        "size_bytes": 2335
+      },
+      "shared_cache": {
+        "path": "/home/ma/SLAM/HFNet-SLAM-runtime-model-a02-r1/HFNet-RT/HF-Net.cache",
+        "sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7",
+        "size_bytes": 853319
+      }
+    },
+    "run_local_pre": {
+      "cache": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/run_local_model/HFNet-RT/HF-Net.cache",
+        "sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7",
+        "size_bytes": 853319
+      },
+      "onnx": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/run_local_model/HFNet-RT/HF-Net.onnx",
+        "sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5",
+        "size_bytes": 132238602
+      },
+      "runtime_config": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/runtime_config_model_path_only.yaml",
+        "sha256": "6d767c951c995070f393bd9fb2e933944165474335a7f931e8061fb96f8dcf22",
+        "size_bytes": 2335
+      },
+      "shared_cache": {
+        "path": "/home/ma/SLAM/HFNet-SLAM-runtime-model-a02-r1/HFNet-RT/HF-Net.cache",
+        "sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7",
+        "size_bytes": 853319
+      }
+    },
+    "selector": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_phase_f_h03_1800_3600_selector_freeze_v1.json",
+      "sha256": "ab7557db88d884e565d71a31a562e3e88c70eba6d8e643f22ca5b2bdd2d18269",
+      "size_bytes": 12536
+    }
+  },
+  "execution": {
+    "duration_seconds": 313.4322999130236,
+    "ended_at_utc": "2026-08-16T16:57:08+00:00",
+    "inference_basis": "official entry returned after its sequential 1801-image loop",
+    "inferred_images_consumed": 1801,
+    "pid": 518085,
+    "popen_invocations": 1,
+    "process_started": true,
+    "raw_returncode": 0,
+    "retry_performed": false,
+    "retry_permitted": false,
+    "started_at_utc": "2026-08-16T16:51:55+00:00",
+    "supervisor_error": null,
+    "synchronously_reaped": true,
+    "termination_signals": [],
+    "timed_out": false,
+    "timeout_seconds": 900
+  },
+  "gates": {
+    "execution": true,
+    "exploratory_underwater_usability": true,
+    "full_pre_post_profile_exact": true,
+    "keyframe_score_support": true,
+    "run_local_onnx_and_config_exact": true,
+    "shared_cache_exact": true,
+    "trajectory_score_continuity": true
+  },
+  "ntfs_mode_limitation": {
+    "attempt_mount": {
+      "filesystem_type": "fuseblk",
+      "mountpoint": "/mnt/data",
+      "options": "rw,relatime,user_id=0,group_id=0,default_permissions,allow_other,blksize=4096",
+      "source": "/dev/sda2"
+    },
+    "chmod_0444_not_represented_by_fuseblk": true,
+    "correction": "The NTFS run_result is terminal O_EXCL content but not OS-level immutable; this ext4 0444 seal is its immutable adoption record.",
+    "run_result_created_O_EXCL_and_fsynced": true,
+    "run_result_observed_mode_octal": "0755",
+    "run_result_observed_nlink": 1,
+    "run_result_os_level_immutable": false
+  },
+  "schema_version": "aqua-fe-hfnet-v6-phase-f-h03-final-adoption-seal-v1",
+  "scientific_boundary": {
+    "adopted_finding": "The frozen external HFNet-SLAM stack produced valid continuous poses for every frame in closed H03 score window [900,1800] after fragile late preroll initialization.",
+    "exploratory_underwater_usability_only": true,
+    "formal_accuracy_evaluated": false,
+    "formal_paper_claim_authorized": false,
+    "ground_truth_evaluator_started": false,
+    "other_learning_system_compared": false,
+    "superiority_claimed": false
+  },
+  "seal_contract": {
+    "creation": "O_EXCL + fsync(file) + fchmod(0444) + fsync(parent)",
+    "parent_mount": {
+      "filesystem_type": "ext4",
+      "mountpoint": "/",
+      "options": "rw,relatime,errors=remount-ro",
+      "source": "/dev/nvme0n1p8"
+    },
+    "required_mode_octal": "0444",
+    "required_nlink": 1
+  },
+  "seal_path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_phase_f_h03_1800_3600_final_adoption_seal_v1.json",
+  "self_hash": {
+    "algorithm": "sha256_of_canonical_json_with_self_hash.value_replaced_by_64_ascii_zeroes",
+    "value": "83d7b8a6389c846552f126ef17fbaa734ab432d6da68e500c03dd562db1d7d62"
+  },
+  "status": "FINAL_ADOPTED_EXPLORATORY_UNDERWATER_USABILITY_ONLY",
+  "terminal_policy": {
+    "attempt_002_authorized": false,
+    "maximum_elf_starts": 1,
+    "observed_popen_invocations": 1,
+    "retry_performed": false,
+    "retry_permitted_after_pass_or_fail": false,
+    "synchronously_reaped": true
+  },
+  "trajectory_support": {
+    "keyframes": {
+      "all_quaternions_within_tolerance": true,
+      "association_max_abs_error_ns": 128,
+      "errors": [],
+      "errors_truncated": false,
+      "exists": true,
+      "identity": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/result/trajectory_keyframe.txt",
+        "sha256": "435a0876376b8f00d21006f548291e53b210e526201111f798b1459240401d91",
+        "size_bytes": 8595
+      },
+      "kind": "keyframes",
+      "overall": {
+        "contiguous_run_count": 75,
+        "count": 75,
+        "coverage_fraction": 0.0416435313714603,
+        "first_index": 866,
+        "gap_count": 74,
+        "gaps": [
+          {
+            "after": 866,
+            "before": 897,
+            "missing_count": 30
+          },
+          {
+            "after": 897,
+            "before": 921,
+            "missing_count": 23
+          },
+          {
+            "after": 921,
+            "before": 938,
+            "missing_count": 16
+          },
+          {
+            "after": 938,
+            "before": 948,
+            "missing_count": 9
+          },
+          {
+            "after": 948,
+            "before": 958,
+            "missing_count": 9
+          },
+          {
+            "after": 958,
+            "before": 967,
+            "missing_count": 8
+          },
+          {
+            "after": 967,
+            "before": 981,
+            "missing_count": 13
+          },
+          {
+            "after": 981,
+            "before": 989,
+            "missing_count": 7
+          },
+          {
+            "after": 989,
+            "before": 991,
+            "missing_count": 1
+          },
+          {
+            "after": 991,
+            "before": 995,
+            "missing_count": 3
+          },
+          {
+            "after": 995,
+            "before": 1038,
+            "missing_count": 42
+          },
+          {
+            "after": 1038,
+            "before": 1064,
+            "missing_count": 25
+          },
+          {
+            "after": 1064,
+            "before": 1071,
+            "missing_count": 6
+          },
+          {
+            "after": 1071,
+            "before": 1077,
+            "missing_count": 5
+          },
+          {
+            "after": 1077,
+            "before": 1093,
+            "missing_count": 15
+          },
+          {
+            "after": 1093,
+            "before": 1121,
+            "missing_count": 27
+          },
+          {
+            "after": 1121,
+            "before": 1157,
+            "missing_count": 35
+          },
+          {
+            "after": 1157,
+            "before": 1165,
+            "missing_count": 7
+          },
+          {
+            "after": 1165,
+            "before": 1206,
+            "missing_count": 40
+          },
+          {
+            "after": 1206,
+            "before": 1216,
+            "missing_count": 9
+          },
+          {
+            "after": 1216,
+            "before": 1224,
+            "missing_count": 7
+          },
+          {
+            "after": 1224,
+            "before": 1232,
+            "missing_count": 7
+          },
+          {
+            "after": 1232,
+            "before": 1267,
+            "missing_count": 34
+          },
+          {
+            "after": 1267,
+            "before": 1274,
+            "missing_count": 6
+          },
+          {
+            "after": 1274,
+            "before": 1283,
+            "missing_count": 8
+          },
+          {
+            "after": 1283,
+            "before": 1341,
+            "missing_count": 57
+          },
+          {
+            "after": 1341,
+            "before": 1360,
+            "missing_count": 18
+          },
+          {
+            "after": 1360,
+            "before": 1367,
+            "missing_count": 6
+          },
+          {
+            "after": 1367,
+            "before": 1376,
+            "missing_count": 8
+          },
+          {
+            "after": 1376,
+            "before": 1382,
+            "missing_count": 5
+          },
+          {
+            "after": 1382,
+            "before": 1388,
+            "missing_count": 5
+          },
+          {
+            "after": 1388,
+            "before": 1396,
+            "missing_count": 7
+          },
+          {
+            "after": 1396,
+            "before": 1399,
+            "missing_count": 2
+          },
+          {
+            "after": 1399,
+            "before": 1402,
+            "missing_count": 2
+          },
+          {
+            "after": 1402,
+            "before": 1408,
+            "missing_count": 5
+          },
+          {
+            "after": 1408,
+            "before": 1421,
+            "missing_count": 12
+          },
+          {
+            "after": 1421,
+            "before": 1427,
+            "missing_count": 5
+          },
+          {
+            "after": 1427,
+            "before": 1433,
+            "missing_count": 5
+          },
+          {
+            "after": 1433,
+            "before": 1440,
+            "missing_count": 6
+          },
+          {
+            "after": 1440,
+            "before": 1461,
+            "missing_count": 20
+          },
+          {
+            "after": 1461,
+            "before": 1501,
+            "missing_count": 39
+          },
+          {
+            "after": 1501,
+            "before": 1506,
+            "missing_count": 4
+          },
+          {
+            "after": 1506,
+            "before": 1515,
+            "missing_count": 8
+          },
+          {
+            "after": 1515,
+            "before": 1533,
+            "missing_count": 17
+          },
+          {
+            "after": 1533,
+            "before": 1540,
+            "missing_count": 6
+          },
+          {
+            "after": 1540,
+            "before": 1549,
+            "missing_count": 8
+          },
+          {
+            "after": 1549,
+            "before": 1558,
+            "missing_count": 8
+          },
+          {
+            "after": 1558,
+            "before": 1579,
+            "missing_count": 20
+          },
+          {
+            "after": 1579,
+            "before": 1583,
+            "missing_count": 3
+          },
+          {
+            "after": 1583,
+            "before": 1590,
+            "missing_count": 6
+          },
+          {
+            "after": 1590,
+            "before": 1599,
+            "missing_count": 8
+          },
+          {
+            "after": 1599,
+            "before": 1654,
+            "missing_count": 54
+          },
+          {
+            "after": 1654,
+            "before": 1679,
+            "missing_count": 24
+          },
+          {
+            "after": 1679,
+            "before": 1682,
+            "missing_count": 2
+          },
+          {
+            "after": 1682,
+            "before": 1689,
+            "missing_count": 6
+          },
+          {
+            "after": 1689,
+            "before": 1698,
+            "missing_count": 8
+          },
+          {
+            "after": 1698,
+            "before": 1705,
+            "missing_count": 6
+          },
+          {
+            "after": 1705,
+            "before": 1715,
+            "missing_count": 9
+          },
+          {
+            "after": 1715,
+            "before": 1724,
+            "missing_count": 8
+          },
+          {
+            "after": 1724,
+            "before": 1734,
+            "missing_count": 9
+          },
+          {
+            "after": 1734,
+            "before": 1743,
+            "missing_count": 8
+          },
+          {
+            "after": 1743,
+            "before": 1746,
+            "missing_count": 2
+          },
+          {
+            "after": 1746,
+            "before": 1753,
+            "missing_count": 6
+          },
+          {
+            "after": 1753,
+            "before": 1762,
+            "missing_count": 8
+          },
+          {
+            "after": 1762,
+            "before": 1771,
+            "missing_count": 8
+          },
+          {
+            "after": 1771,
+            "before": 1774,
+            "missing_count": 2
+          },
+          {
+            "after": 1774,
+            "before": 1777,
+            "missing_count": 2
+          },
+          {
+            "after": 1777,
+            "before": 1780,
+            "missing_count": 2
+          },
+          {
+            "after": 1780,
+            "before": 1783,
+            "missing_count": 2
+          },
+          {
+            "after": 1783,
+            "before": 1786,
+            "missing_count": 2
+          },
+          {
+            "after": 1786,
+            "before": 1789,
+            "missing_count": 2
+          },
+          {
+            "after": 1789,
+            "before": 1792,
+            "missing_count": 2
+          },
+          {
+            "after": 1792,
+            "before": 1795,
+            "missing_count": 2
+          },
+          {
+            "after": 1795,
+            "before": 1798,
+            "missing_count": 2
+          }
+        ],
+        "gaps_truncated": false,
+        "last_index": 1798,
+        "longest_contiguous_run": 1
+      },
+      "pose_count": 75,
+      "preroll": {
+        "contiguous_run_count": 2,
+        "count": 2,
+        "coverage_fraction": 0.0022222222222222222,
+        "first_index": 866,
+        "gap_count": 1,
+        "gaps": [
+          {
+            "after": 866,
+            "before": 897,
+            "missing_count": 30
+          }
+        ],
+        "gaps_truncated": false,
+        "last_index": 897,
+        "longest_contiguous_run": 1
+      },
+      "score": {
+        "contiguous_run_count": 73,
+        "count": 73,
+        "coverage_fraction": 0.08102108768035517,
+        "first_index": 921,
+        "gap_count": 72,
+        "gaps": [
+          {
+            "after": 921,
+            "before": 938,
+            "missing_count": 16
+          },
+          {
+            "after": 938,
+            "before": 948,
+            "missing_count": 9
+          },
+          {
+            "after": 948,
+            "before": 958,
+            "missing_count": 9
+          },
+          {
+            "after": 958,
+            "before": 967,
+            "missing_count": 8
+          },
+          {
+            "after": 967,
+            "before": 981,
+            "missing_count": 13
+          },
+          {
+            "after": 981,
+            "before": 989,
+            "missing_count": 7
+          },
+          {
+            "after": 989,
+            "before": 991,
+            "missing_count": 1
+          },
+          {
+            "after": 991,
+            "before": 995,
+            "missing_count": 3
+          },
+          {
+            "after": 995,
+            "before": 1038,
+            "missing_count": 42
+          },
+          {
+            "after": 1038,
+            "before": 1064,
+            "missing_count": 25
+          },
+          {
+            "after": 1064,
+            "before": 1071,
+            "missing_count": 6
+          },
+          {
+            "after": 1071,
+            "before": 1077,
+            "missing_count": 5
+          },
+          {
+            "after": 1077,
+            "before": 1093,
+            "missing_count": 15
+          },
+          {
+            "after": 1093,
+            "before": 1121,
+            "missing_count": 27
+          },
+          {
+            "after": 1121,
+            "before": 1157,
+            "missing_count": 35
+          },
+          {
+            "after": 1157,
+            "before": 1165,
+            "missing_count": 7
+          },
+          {
+            "after": 1165,
+            "before": 1206,
+            "missing_count": 40
+          },
+          {
+            "after": 1206,
+            "before": 1216,
+            "missing_count": 9
+          },
+          {
+            "after": 1216,
+            "before": 1224,
+            "missing_count": 7
+          },
+          {
+            "after": 1224,
+            "before": 1232,
+            "missing_count": 7
+          },
+          {
+            "after": 1232,
+            "before": 1267,
+            "missing_count": 34
+          },
+          {
+            "after": 1267,
+            "before": 1274,
+            "missing_count": 6
+          },
+          {
+            "after": 1274,
+            "before": 1283,
+            "missing_count": 8
+          },
+          {
+            "after": 1283,
+            "before": 1341,
+            "missing_count": 57
+          },
+          {
+            "after": 1341,
+            "before": 1360,
+            "missing_count": 18
+          },
+          {
+            "after": 1360,
+            "before": 1367,
+            "missing_count": 6
+          },
+          {
+            "after": 1367,
+            "before": 1376,
+            "missing_count": 8
+          },
+          {
+            "after": 1376,
+            "before": 1382,
+            "missing_count": 5
+          },
+          {
+            "after": 1382,
+            "before": 1388,
+            "missing_count": 5
+          },
+          {
+            "after": 1388,
+            "before": 1396,
+            "missing_count": 7
+          },
+          {
+            "after": 1396,
+            "before": 1399,
+            "missing_count": 2
+          },
+          {
+            "after": 1399,
+            "before": 1402,
+            "missing_count": 2
+          },
+          {
+            "after": 1402,
+            "before": 1408,
+            "missing_count": 5
+          },
+          {
+            "after": 1408,
+            "before": 1421,
+            "missing_count": 12
+          },
+          {
+            "after": 1421,
+            "before": 1427,
+            "missing_count": 5
+          },
+          {
+            "after": 1427,
+            "before": 1433,
+            "missing_count": 5
+          },
+          {
+            "after": 1433,
+            "before": 1440,
+            "missing_count": 6
+          },
+          {
+            "after": 1440,
+            "before": 1461,
+            "missing_count": 20
+          },
+          {
+            "after": 1461,
+            "before": 1501,
+            "missing_count": 39
+          },
+          {
+            "after": 1501,
+            "before": 1506,
+            "missing_count": 4
+          },
+          {
+            "after": 1506,
+            "before": 1515,
+            "missing_count": 8
+          },
+          {
+            "after": 1515,
+            "before": 1533,
+            "missing_count": 17
+          },
+          {
+            "after": 1533,
+            "before": 1540,
+            "missing_count": 6
+          },
+          {
+            "after": 1540,
+            "before": 1549,
+            "missing_count": 8
+          },
+          {
+            "after": 1549,
+            "before": 1558,
+            "missing_count": 8
+          },
+          {
+            "after": 1558,
+            "before": 1579,
+            "missing_count": 20
+          },
+          {
+            "after": 1579,
+            "before": 1583,
+            "missing_count": 3
+          },
+          {
+            "after": 1583,
+            "before": 1590,
+            "missing_count": 6
+          },
+          {
+            "after": 1590,
+            "before": 1599,
+            "missing_count": 8
+          },
+          {
+            "after": 1599,
+            "before": 1654,
+            "missing_count": 54
+          },
+          {
+            "after": 1654,
+            "before": 1679,
+            "missing_count": 24
+          },
+          {
+            "after": 1679,
+            "before": 1682,
+            "missing_count": 2
+          },
+          {
+            "after": 1682,
+            "before": 1689,
+            "missing_count": 6
+          },
+          {
+            "after": 1689,
+            "before": 1698,
+            "missing_count": 8
+          },
+          {
+            "after": 1698,
+            "before": 1705,
+            "missing_count": 6
+          },
+          {
+            "after": 1705,
+            "before": 1715,
+            "missing_count": 9
+          },
+          {
+            "after": 1715,
+            "before": 1724,
+            "missing_count": 8
+          },
+          {
+            "after": 1724,
+            "before": 1734,
+            "missing_count": 9
+          },
+          {
+            "after": 1734,
+            "before": 1743,
+            "missing_count": 8
+          },
+          {
+            "after": 1743,
+            "before": 1746,
+            "missing_count": 2
+          },
+          {
+            "after": 1746,
+            "before": 1753,
+            "missing_count": 6
+          },
+          {
+            "after": 1753,
+            "before": 1762,
+            "missing_count": 8
+          },
+          {
+            "after": 1762,
+            "before": 1771,
+            "missing_count": 8
+          },
+          {
+            "after": 1771,
+            "before": 1774,
+            "missing_count": 2
+          },
+          {
+            "after": 1774,
+            "before": 1777,
+            "missing_count": 2
+          },
+          {
+            "after": 1777,
+            "before": 1780,
+            "missing_count": 2
+          },
+          {
+            "after": 1780,
+            "before": 1783,
+            "missing_count": 2
+          },
+          {
+            "after": 1783,
+            "before": 1786,
+            "missing_count": 2
+          },
+          {
+            "after": 1786,
+            "before": 1789,
+            "missing_count": 2
+          },
+          {
+            "after": 1789,
+            "before": 1792,
+            "missing_count": 2
+          },
+          {
+            "after": 1792,
+            "before": 1795,
+            "missing_count": 2
+          },
+          {
+            "after": 1795,
+            "before": 1798,
+            "missing_count": 2
+          }
+        ],
+        "gaps_truncated": false,
+        "last_index": 1798,
+        "longest_contiguous_run": 1
+      },
+      "strictly_increasing_timestamps": true,
+      "unique_strict_camera_associations": true,
+      "valid": true
+    },
+    "trajectory": {
+      "all_quaternions_within_tolerance": true,
+      "association_max_abs_error_ns": 128,
+      "errors": [],
+      "errors_truncated": false,
+      "exists": true,
+      "identity": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001/result/trajectory.txt",
+        "sha256": "de9a614d77d3813c3b20e6cf4b4474962cf2330ad83fc685e366ffe2510e851e",
+        "size_bytes": 106938
+      },
+      "kind": "frame_trajectory",
+      "overall": {
+        "contiguous_run_count": 1,
+        "count": 926,
+        "coverage_fraction": 0.5141588006662965,
+        "first_index": 875,
+        "gap_count": 0,
+        "gaps": [],
+        "gaps_truncated": false,
+        "last_index": 1800,
+        "longest_contiguous_run": 926
+      },
+      "pose_count": 926,
+      "preroll": {
+        "contiguous_run_count": 1,
+        "count": 25,
+        "coverage_fraction": 0.027777777777777776,
+        "first_index": 875,
+        "gap_count": 0,
+        "gaps": [],
+        "gaps_truncated": false,
+        "last_index": 899,
+        "longest_contiguous_run": 25
+      },
+      "score": {
+        "contiguous_run_count": 1,
+        "count": 901,
+        "coverage_fraction": 1.0,
+        "first_index": 900,
+        "gap_count": 0,
+        "gaps": [],
+        "gaps_truncated": false,
+        "last_index": 1800,
+        "longest_contiguous_run": 901
+      },
+      "strictly_increasing_timestamps": true,
+      "unique_strict_camera_associations": true,
+      "valid": true
+    }
+  },
+  "warnings": {
+    "stderr": {
+      "line_count": 47,
+      "patterns": {
+        "cuda": {
+          "count": 0,
+          "examples": [],
+          "examples_truncated": false
+        },
+        "error": {
+          "count": 0,
+          "examples": [],
+          "examples_truncated": false
+        },
+        "failed": {
+          "count": 0,
+          "examples": [],
+          "examples_truncated": false
+        },
+        "lost": {
+          "count": 0,
+          "examples": [],
+          "examples_truncated": false
+        },
+        "not_enough_acceleration": {
+          "count": 0,
+          "examples": [],
+          "examples_truncated": false
+        },
+        "not_initialized": {
+          "count": 0,
+          "examples": [],
+          "examples_truncated": false
+        },
+        "reset": {
+          "count": 0,
+          "examples": [],
+          "examples_truncated": false
+        },
+        "segfault": {
+          "count": 0,
+          "examples": [],
+          "examples_truncated": false
+        },
+        "tensorrt": {
+          "count": 12,
+          "examples": [
+            "WARNING: onnx2trt_utils.cpp:377: Your ONNX model has been generated with INT64 weights, while TensorRT does not natively support INT64. Attempting to cast down to INT32.",
+            "WARNING: TensorRT was linked against cuDNN 8.6.0 but loaded cuDNN 8.4.1",
+            "WARNING: TensorRT encountered issues when converting weights between types and that could affect accuracy.",
+            "WARNING: TensorRT was linked against cuDNN 8.6.0 but loaded cuDNN 8.4.1",
+            "WARNING: TensorRT encountered issues when converting weights between types and that could affect accuracy.",
+            "WARNING: TensorRT was linked against cuDNN 8.6.0 but loaded cuDNN 8.4.1",
+            "WARNING: TensorRT was linked against cuDNN 8.6.0 but loaded cuDNN 8.4.1",
+            "WARNING: TensorRT encountered issues when converting weights between types and that could affect accuracy.",
+            "WARNING: TensorRT was linked against cuDNN 8.6.0 but loaded cuDNN 8.4.1",
+            "WARNING: TensorRT was linked against cuDNN 8.6.0 but loaded cuDNN 8.4.1"
+          ],
+          "examples_truncated": true
+        },
+        "terminate": {
+          "count": 0,
+          "examples": [],
+          "examples_truncated": false
+        },
+        "warning": {
+          "count": 28,
+          "examples": [
+            "WARNING: onnx2trt_utils.cpp:377: Your ONNX model has been generated with INT64 weights, while TensorRT does not natively support INT64. Attempting to cast down to INT32.",
+            "WARNING: TensorRT was linked against cuDNN 8.6.0 but loaded cuDNN 8.4.1",
+            "WARNING: TensorRT encountered issues when converting weights between types and that could affect accuracy.",
+            "WARNING: If this is not the desired behavior, please modify the weights or retrain with regularization to adjust the magnitude of the weights.",
+            "WARNING: Check verbose logs for the list of affected weights.",
+            "WARNING: - 51 weights are affected by this issue: Detected subnormal FP16 values.",
+            "WARNING: - 31 weights are affected by this issue: Detected values less than smallest positive FP16 subnormal value and converted them to the FP16 minimum subnormalized value.",
+            "WARNING: TensorRT was linked against cuDNN 8.6.0 but loaded cuDNN 8.4.1",
+            "WARNING: TensorRT encountered issues when converting weights between types and that could affect accuracy.",
+            "WARNING: If this is not the desired behavior, please modify the weights or retrain with regularization to adjust the magnitude of the weights."
+          ],
+          "examples_truncated": true
+        }
+      }
+    },
+    "stdout": {
+      "line_count": 200,
+      "patterns": {
+        "cuda": {
+          "count": 0,
+          "examples": [],
+          "examples_truncated": false
+        },
+        "error": {
+          "count": 0,
+          "examples": [],
+          "examples_truncated": false
+        },
+        "failed": {
+          "count": 0,
+          "examples": [],
+          "examples_truncated": false
+        },
+        "lost": {
+          "count": 7,
+          "examples": [
+            "106 Frames set to lost",
+            "282 Frames set to lost",
+            "305 Frames set to lost",
+            "437 Frames set to lost",
+            "577 Frames set to lost",
+            "725 Frames set to lost",
+            "792 Frames set to lost"
+          ],
+          "examples_truncated": false
+        },
+        "not_enough_acceleration": {
+          "count": 0,
+          "examples": [],
+          "examples_truncated": false
+        },
+        "not_initialized": {
+          "count": 0,
+          "examples": [],
+          "examples_truncated": false
+        },
+        "reset": {
+          "count": 84,
+          "examples": [
+            "Not enough motion for initializing. Reseting...",
+            "TRACK: Reset map because local mapper set the bad imu flag ",
+            "LM: Reseting current map in Local Mapping...",
+            "LM: End reseting Local Mapping...",
+            "LM: Reset free the mutex",
+            "SYSTEM-> Reseting active map in monocular case",
+            "LM: Active map reset recieved",
+            "LM: Active map reset, waiting...",
+            "LM: Reseting current map in Local Mapping...",
+            "LM: End reseting Local Mapping..."
+          ],
+          "examples_truncated": true
+        },
+        "segfault": {
+          "count": 0,
+          "examples": [],
+          "examples_truncated": false
+        },
+        "tensorrt": {
+          "count": 4,
+          "examples": [
+            "Successfully loaded HFNet TensorRT model. Mode: ImageToLocalAndGlobal Shape: [1, 512, 640, 1]",
+            "Successfully loaded HFNet TensorRT model. Mode: ImageToLocal Shape: [1, 427, 533, 1]",
+            "Successfully loaded HFNet TensorRT model. Mode: ImageToLocal Shape: [1, 356, 444, 1]",
+            "Successfully loaded HFNet TensorRT model. Mode: ImageToLocal Shape: [1, 296, 370, 1]"
+          ],
+          "examples_truncated": false
+        },
+        "terminate": {
+          "count": 0,
+          "examples": [],
+          "examples_truncated": false
+        },
+        "warning": {
+          "count": 0,
+          "examples": [],
+          "examples_truncated": false
+        }
+      }
+    }
+  },
+  "window": {
+    "preroll_relative_indices_inclusive": [
+      0,
+      899
+    ],
+    "score_closed_span_ns": 45018056836,
+    "score_closed_span_seconds": 45.018056836,
+    "score_frame_count": 901,
+    "score_relative_indices_closed": [
+      900,
+      1800
+    ],
+    "score_source_frame_indices_closed": [
+      2700,
+      3600
+    ],
+    "score_timestamp_ns_closed": [
+      1523966967662354150,
+      1523967012680410986
+    ],
+    "source_frame_indices_inclusive": [
+      1800,
+      3600
+    ]
+  }
+}

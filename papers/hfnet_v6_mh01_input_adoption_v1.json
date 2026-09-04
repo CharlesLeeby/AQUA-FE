@@ -1,0 +1,157 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-mh01-input-adoption-v1",
+  "created_at": "2026-08-16T21:44:34+08:00",
+  "updated_at": "2026-08-16T21:55:26+08:00",
+  "revision_note": "Clarified that the reproducible tree digest follows exact inventory record order; no input bytes or record order changed.",
+  "status": "ADOPTED_BEFORE_ANY_HFNET_V6_PROCESS_START",
+  "parent_freeze": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_two_stage_runability_freeze_v1.json",
+    "sha256": "46d599746696ce492bb7029db82778f1bf0d59b803939ec61f54db8a847dae30",
+    "size_bytes": 4621
+  },
+  "late_binding_disclosure": {
+    "materializer_was_created_after_parent_freeze": true,
+    "download_is_not_claimed_to_have_used_a_pre_frozen_implementation": true,
+    "hfnet_v6_process_start_count_before_this_adoption": 0,
+    "scientific_result_observed": false,
+    "reason_for_adoption": "Bind and independently validate the already downloaded official input before any HFNet execution."
+  },
+  "materialization": {
+    "script": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/materialize_euroc_mh01_official_v1.py",
+      "sha256": "41252c6db4df818ad311c841ff33c1565bd21a5ce1c29f47e5c22caf863bcaa7",
+      "size_bytes": 6661
+    },
+    "known_reuse_boundary": {
+      "this_invocation_completed_with_archive_and_manifest": true,
+      "script_is_not_authorized_for_reuse_without_fixing_multi_file_no_clobber_publication": true
+    },
+    "source": {
+      "url": "https://www.research-collection.ethz.ch/server/api/core/bitstreams/7b2419c1-62b5-4714-b7f8-485e5fe3e5fe/content",
+      "outer_size_bytes": 12683729426,
+      "expected_outer_http_etag": "363f5c2502b469cdd97ef85997714806",
+      "member": "machine_hall/MH_01_easy/MH_01_easy.zip",
+      "compression": "raw_DEFLATE_method_8",
+      "compressed_byte_range": [
+        8572438037,
+        10143569891
+      ],
+      "compressed_size_bytes": 1571131855,
+      "inflated_size_bytes": 1571292346,
+      "inner_crc32": "a1c54dd7"
+    },
+    "download_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/downloads/MH_01_easy_download_manifest_v1.json",
+      "sha256": "3cbf9f91c286fee760eb620cb6ee97f6461e5df5a7f1700a6c17514a0ea71d4b",
+      "size_bytes": 726
+    },
+    "inner_archive": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/downloads/MH_01_easy.zip",
+      "sha256": "5f4ecbc563e7bf04950efab76fc3b14e126d4c91a1dd1134c33124fe18a4bfc6",
+      "size_bytes": 1571292346,
+      "all_7384_zip_entries_crc_valid": true,
+      "zip_entry_count": 7384,
+      "zip_entry_names_unique": true,
+      "unsafe_or_traversing_entry_count": 0,
+      "symlink_entry_count": 0
+    }
+  },
+  "selected_lossless_extraction": {
+    "root": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy",
+    "included_prefixes": [
+      "mav0/cam0/",
+      "mav0/imu0/",
+      "mav0/state_groundtruth_estimate0/"
+    ],
+    "excluded_sensor_data": [
+      "mav0/cam1/"
+    ],
+    "tree_digest_algorithm": "sha256_of_inventory_record_order_relpath_NUL_decimal_size_NUL_lowercase_hex_sha256_newline",
+    "tree_sha256": "e6033bcf32b182eafad64c68cc634dbce896b5e33caef99bee6840d3c1590a08",
+    "file_count": 3689,
+    "total_bytes": 1344612193,
+    "no_symlinks": true,
+    "exact_file_inventory": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy_input_inventory_v1.json",
+      "sha256": "a6009f56146fc675131f44fd2d355092b37035958e6d1e73b87ce21130427ff6",
+      "size_bytes": 664378,
+      "contains_ordered_path_size_sha256_records": 3689
+    },
+    "metadata_records": {
+      "cam0_data_csv": {
+        "sha256": "62db628a8e6358f43df81e66ddb4597ab40b19a10f3d6cd80cc04d590b5adb12",
+        "size_bytes": 165716
+      },
+      "cam0_sensor_yaml": {
+        "sha256": "191748edddda5d1368188f5b0a3c4bed6c48842c178ef9d83c50cba17d66e819",
+        "size_bytes": 683
+      },
+      "imu0_data_csv": {
+        "sha256": "226470999dc8ba758c838982fd7eb2bc9f3f2b489e85a38d0ecf8b9d40785a5b",
+        "size_bytes": 5210832
+      },
+      "imu0_sensor_yaml": {
+        "sha256": "91e6c408416f549f87e7405830b83849cca10521f3d3fc8bb3de862c2bc882d0",
+        "size_bytes": 695
+      },
+      "groundtruth_data_csv": {
+        "sha256": "aae2d7c5684724c8afe364d2fd8499a6ed77a9169adf03736531f67d8e7b2117",
+        "size_bytes": 6225269
+      },
+      "groundtruth_sensor_yaml": {
+        "sha256": "e02cacbad1b654908f1fad9f8997672a2928ec348840225919259f73f1084a95",
+        "size_bytes": 489
+      }
+    }
+  },
+  "input_audit": {
+    "official_timestamp_list_matches_cam0_csv_exactly": true,
+    "camera_png_names_match_timestamp_grid_exactly": true,
+    "camera_count": 3682,
+    "camera_span_seconds": 184.049999872,
+    "camera_timestamps_strictly_increasing": true,
+    "imu_count": 36820,
+    "imu_span_seconds": 184.095000064,
+    "imu_timestamps_strictly_increasing": true,
+    "imu_brackets_all_camera_timestamps": true,
+    "groundtruth_count": 36382,
+    "groundtruth_span_seconds": 181.904999936,
+    "groundtruth_timestamps_strictly_increasing": true,
+    "camera_timestamps_inside_groundtruth_interval": 3638,
+    "groundtruth_camera_coverage_fraction": 0.9880499728408474
+  },
+  "continuation": {
+    "phase_d_hfnet_preflight_and_single_attempt_may_continue": true,
+    "phase_f_fresh_underwater_execution_authorized": false,
+    "algorithm_or_threshold_change_authorized": false,
+    "additional_mandatory_runner_gates": {
+      "process_start_count_exact": 1,
+      "full_input_loop_completed_over_frozen_timestamp_count": 3682,
+      "trajectory_and_keyframe_rows_finite_fields_exact": 8,
+      "trajectory_and_keyframe_timestamps_strictly_increasing": true,
+      "trajectory_and_keyframe_quaternion_norm_tolerance": 0.001,
+      "unique_camera_grid_association_max_error_ns": 256,
+      "official_stack_pre_post_identity_required": true,
+      "onnx_pre_post_identity_required": true,
+      "derived_config_pre_post_identity_required": true,
+      "shared_cache_pre_post_identity_required": true,
+      "run_local_cache_change_allowed": true,
+      "shared_cache_writeback_allowed": false
+    }
+  },
+  "headless_semantic_boundary_records": {
+    "build_manifest": {
+      "sha256": "dc01d34652afbeb9dfd8b64e96b7d3ecdd8a09522796b73207a05e295ca4f8e9",
+      "size_bytes": 1748
+    },
+    "headless_source": {
+      "sha256": "303947840bdc5377656554560c6785b3218a52e034862a63d5d6da0036b81d90",
+      "size_bytes": 1112
+    },
+    "official_entry_source": {
+      "sha256": "fa3effb0c2b99bc4dd83abda443180cf2f017f61710e02fa6b3f9278cc774d39",
+      "size_bytes": 10201
+    },
+    "claimed_delta": "viewer_disabled_only"
+  }
+}

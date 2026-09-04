@@ -1,0 +1,9 @@
+extends: low_texture_xfeat_temporal_gftt_shadow_frontend.yaml
+
+# Candidate v3: union shadow replacements with the historical free-region
+# GFTT proposal pool before the existing pending-grid quota.  This preserves
+# the v2 no-gap replacement behavior without sacrificing spatial discovery.
+# The merged bank still uses the same max_pending, per-cell quota, FB/NCC,
+# distance, geometry, and max-confirmed parameters.
+hybrid:
+  enable_temporal_gftt_dual_pool_replenishment: true

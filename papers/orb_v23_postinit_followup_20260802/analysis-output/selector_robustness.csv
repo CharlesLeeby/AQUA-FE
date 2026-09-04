@@ -1,0 +1,5 @@
+window_id,selector,accepted_observations,map_point_lineages,assisted_matches,assisted_outliers,pre_kf_purged,trajectory_label,independent_window_promoted
+NTNU_mclab2_s110_d10,n3_d14_min8_frozen,108,3,45,16,8/8,action_positive_metric_mixed,true
+NTNU_mclab2_s110_d10,n6_d20_frozen,98,1,41,13,7/7,action_positive_metric_mixed,false
+NTNU_mclab1_s60_d15,n3_d14_min8_frozen,39,3,7,2,1/1,repeatwise_strict,true
+NTNU_mclab1_s60_d15,n6_d20_frozen,68,4,6,1,1/1,action_positive_metric_mixed,false

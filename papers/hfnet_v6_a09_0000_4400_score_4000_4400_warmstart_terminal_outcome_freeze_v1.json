@@ -1,0 +1,152 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a09-warmstart-terminal-outcome-freeze-v1",
+  "status": "SEALED_TERMINAL_PASS_NO_RETRY",
+  "created_at_utc": "2026-08-25T13:16:30Z",
+  "scientific_role": "DEVELOPMENT_ONLY_EXTERNAL_LEARNED_WHOLE_SYSTEM_RUNABILITY_ON_PRIOR_KLT_POSITIVE_WINDOW",
+  "authorization": {
+    "user_waiver_scope": "omit the project-local conservative 60-second stable-quiet observation and proceed directly if it was only our own restriction",
+    "waiver_did_not_cover": [
+      "exactly-once process-start claim",
+      "no-retry terminal policy",
+      "input and runtime identity checks",
+      "result adjudication",
+      "scientific claim boundaries"
+    ],
+    "observed_start_state": "the frozen runner's instantaneous preflight also passed: no GPU compute application and sufficient GPU memory",
+    "exact_command": "PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 /home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_v1.py run --authorization-token HFNET_V6_A09_0000_4400_SCORE_4000_4400_WARMSTART_ATTEMPT_001_START_EXACTLY_ONCE"
+  },
+  "execution_lock": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_execution_lock_v2.json",
+    "size_bytes": 5203,
+    "sha256": "7200df40e0e28eec0a50f2e46efd45d3076c94ea31258105b870904e793f4217"
+  },
+  "terminal_run_result": {
+    "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/run_result.json",
+    "size_bytes": 23846,
+    "sha256": "a0b03e41ac96c8e07d63325fdfc67d5292fc0c6c4b2debb3c6a40817a1d62fa7",
+    "schema_version": "aqua-fe-hfnet-v6-a09-0000-4400-score-4000-4400-warmstart-result-v1",
+    "producer_status": "PASS_DEVELOPMENT_RUNABILITY_RESCUE",
+    "failure_codes": [],
+    "errors": []
+  },
+  "execution": {
+    "official_hfnet_elf_popen_invocations": 1,
+    "raw_returncode": 0,
+    "pid": 1408629,
+    "started_at_utc": "2026-08-25T13:03:09+00:00",
+    "ended_at_utc": "2026-08-25T13:09:17+00:00",
+    "duration_seconds": 367.64442413899815,
+    "timed_out": false,
+    "termination": null,
+    "child_reaped": true,
+    "retry_performed": false,
+    "retry_permitted": false,
+    "watchdog_triggered": false,
+    "post_audit_process_residue": false
+  },
+  "selection": {
+    "sequence": "AQUALOC archaeology_sequence_9",
+    "development_result_conditioned_selection": true,
+    "feed_source_frame_indices_inclusive": [0, 4400],
+    "feed_camera_count": 4401,
+    "score_source_frame_indices_inclusive": [4000, 4400],
+    "score_camera_count": 401,
+    "history": "warm start at natural sequence frame 0; no reset at score frame 4000",
+    "initialization_and_preroll_excluded_from_score": true,
+    "held_out_confirmatory_claim_permitted": false
+  },
+  "score_adjudication": {
+    "passed": true,
+    "pose_count": 401,
+    "expected_pose_count": 401,
+    "first_source_frame_index": 4000,
+    "last_source_frame_index": 4400,
+    "exact_contiguous_coverage": true,
+    "score_keyframe_count": 33,
+    "preroll_to_score_boundary_continuous": true,
+    "full_trajectory_pose_count": 1154,
+    "full_keyframe_count": 62,
+    "final_atlas_map_count": 1,
+    "final_atlas_nonempty": true,
+    "trajectory_save_completed": true
+  },
+  "history_events": {
+    "init_frame_ids": [0, 124, 351, 492, 694, 757, 867, 933, 961, 1105, 1268, 1606, 1771, 1882, 1944, 2097, 2199, 2358, 2506, 2557, 2625, 2699, 2853, 2905, 3175, 3240],
+    "init_count": 26,
+    "reset_count": 25,
+    "last_reset": {
+      "init_frame_id": 3175,
+      "next_first_frame_id": 3187
+    },
+    "final_init_frame_id": 3240,
+    "score_window_init_count": 0,
+    "score_window_reset_count": 0,
+    "all_resets_before_score_window": true,
+    "reset_parse_complete": true,
+    "ambiguous_or_unresolved_reset_events": []
+  },
+  "artifacts": {
+    "score_trajectory_crop": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/result/trajectory_score_4000_4400.txt",
+      "size_bytes": 44912,
+      "sha256": "4037e48ad1cdeace41ec8fbd4470debad275237934ccf0b734a670089bfec935"
+    },
+    "full_trajectory": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/result/trajectory.txt",
+      "size_bytes": 130393,
+      "sha256": "a90bbac6b3ec2c5fc660c6fea666a9bd0c13652e727743d64cc37faf0933097f"
+    },
+    "keyframes": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/result/trajectory_keyframe.txt",
+      "size_bytes": 7140,
+      "sha256": "2966adde9aec14f17d8ec988dc8f8861c1bc601fdd9d192c0db26334cab9762c"
+    },
+    "process_start_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/process_start_claim.json",
+      "size_bytes": 7651,
+      "sha256": "b562372a732b0d08e2c413ea681ab802d1944d0041ce796605a0047661901647"
+    },
+    "stdout": {
+      "size_bytes": 18340,
+      "sha256": "cf81bb05505500fe8440cfa074cd87dbf38902f44a194cbe98bbf84367e61464"
+    },
+    "stderr": {
+      "size_bytes": 5990,
+      "sha256": "95e7ebe995234a4f65cc6b85759ded90e9343bf64111c22af7e0dec37e4598fc"
+    },
+    "isolated_post_run_tensorrt_cache": {
+      "size_bytes": 853319,
+      "sha256": "3ecdb89c1f4f7023315487775fe55d1b8a93818c9c48cdac6b648e4566b2b295",
+      "mutated_from_isolated_shared_seed_copy_as_expected": true,
+      "shared_seed_unchanged": true
+    }
+  },
+  "independent_audit": {
+    "decision": "GO",
+    "artifact_identities_recomputed": true,
+    "score_mapping_reconstructed_from_raw_timestamps": true,
+    "history_events_reparsed_from_stdout": true,
+    "second_hfnet_execution_evidence_observed": false,
+    "audit_scope_note": "artifacts prove exactly one HFNet ELF start inside the frozen supervisor; they cannot exclude a later supervisor invocation that was rejected before process start"
+  },
+  "runtime_caveats": [
+    "TensorRT reported linkage against cuDNN 8.6 while cuDNN 8.4.1 was loaded",
+    "TensorRT reported FP16 subnormal-value warnings",
+    "no OOM, CUDA fatal error, crash, or abnormal termination was observed"
+  ],
+  "claim_boundary": {
+    "development_only": true,
+    "runability_supported": true,
+    "accuracy_evaluated": false,
+    "ape_or_rpe_authorized": false,
+    "fair_head_to_head": false,
+    "ranking_or_superiority_authorized": false,
+    "significance_testing_authorized": false,
+    "formal_paper_claim_authorized": false
+  },
+  "terminal_policy": {
+    "attempt_namespace_reusable": false,
+    "retry_authorized": false,
+    "post_hoc_gate_relaxation_authorized": false
+  }
+}

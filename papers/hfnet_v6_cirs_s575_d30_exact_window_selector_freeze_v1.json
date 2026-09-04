@@ -1,0 +1,49 @@
+{
+  "claims": {
+    "accuracy_measured": false,
+    "confirmatory_or_held_out": false,
+    "hfnet_started": false,
+    "scientific_comparison_produced": false,
+    "trajectory_produced": false
+  },
+  "knowledge_boundary": {
+    "development_result_conditioned_selection": true,
+    "historical_role": "learned_plus_klt_vs_pure_klt_main_positive",
+    "independent_ground_truth_available": false,
+    "reference_role": "official CIRS odometry trajectory proxy; non-independent"
+  },
+  "schema_version": "aqua-fe-hfnet-v6-cirs-s575-d30-exact-window-selector-freeze-v1",
+  "selection": {
+    "camera_count": 150,
+    "camera_header_ns_inclusive": [
+      1372687783674637079,
+      1372687813476711988
+    ],
+    "camera_source_indices_inclusive_zero_based": [
+      2874,
+      3023
+    ],
+    "cold_start": true,
+    "dataset_family": "CIRS_Cala_Viuda",
+    "duration_seconds": 30.0,
+    "feed_camera_source_indices_inclusive": [
+      2874,
+      3023
+    ],
+    "feed_history": "none_before_source_frame_2874",
+    "score_camera_source_indices_inclusive": [
+      2874,
+      3023
+    ],
+    "sequence_start_seconds": 1372687208.617629,
+    "start_offset_seconds": 575.0,
+    "timestamp_selection_semantics": "sequence_start+offset <= camera_header < sequence_start+offset+duration",
+    "window_id": "cirs_s575_d30"
+  },
+  "source": {
+    "canonical_raw_segment_bag": "/mnt/data/AQUA-FE_WS/logs/cirs_caves_vins/external_klt_every1_jul14frozen3way_cirs_s575_d30_klt/raw_segment.bag",
+    "raw_segment_bag_sha256": "8370b0b842142bd9b5fc24cec4dc3d8cba8f37e6859bf868abe6bcf427f7a5a0",
+    "raw_segment_bag_size_bytes": 17017751,
+    "same_bytes_as_historical_full_and_klt_arms": true
+  }
+}

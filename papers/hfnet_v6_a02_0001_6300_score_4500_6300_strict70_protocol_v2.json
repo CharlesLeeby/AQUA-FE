@@ -1,0 +1,131 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a02-0001-6300-strict70-protocol-v2",
+  "status": "FROZEN_STRICT70_DEVELOPMENT_PROTOCOL",
+  "created_at_utc": "2026-08-22T13:31:51Z",
+  "scientific_role": "EXTERNAL_LEARNED_SLAM_DEVELOPMENT_EXPLORATORY_ONLY",
+  "sequence": "AQUALOC archaeology_sequence_02",
+  "input": {
+    "source_camera_indices_inclusive": [
+      1,
+      6300
+    ],
+    "camera_count": 6300,
+    "source_camera_zero_trimmed": true,
+    "trim_reason": "source camera 0 has no strictly earlier shifted-IMU sample required by the official reader",
+    "synthetic_imu_samples_added": false,
+    "preroll_source_camera_indices_inclusive": [
+      1,
+      4499
+    ],
+    "preroll_local_camera_indices_inclusive": [
+      0,
+      4498
+    ],
+    "score_source_camera_indices_inclusive": [
+      4500,
+      6300
+    ],
+    "score_local_camera_indices_inclusive": [
+      4499,
+      6299
+    ],
+    "score_camera_count": 1801
+  },
+  "primary_producer_gate": {
+    "coverage_fraction_threshold": 0.7,
+    "longest_contiguous_fraction_threshold": 0.7,
+    "integer_threshold_rule": "ceil(0.70 * 1801)",
+    "minimum_score_poses": 1261,
+    "minimum_contiguous_score_poses": 1261,
+    "minimum_score_keyframes": 1,
+    "minimum_last_local_camera_index": 4499,
+    "raw_returncode_zero": true,
+    "timed_out": false,
+    "synchronously_reaped": true,
+    "full_frozen_profile_pre_post_exact": true,
+    "run_local_onnx_and_runtime_config_exact": true,
+    "shared_cache_exact": true,
+    "pass_semantics": "producer PASS is permitted only when every execution, immutability, trajectory-validity, score-support, and keyframe-support gate passes"
+  },
+  "comparison_boundary": {
+    "external_hfnet_feed_history_source_indices_inclusive": [
+      1,
+      6300
+    ],
+    "external_hfnet_score_source_indices_inclusive": [
+      4500,
+      6300
+    ],
+    "existing_adopted_evidence_family": "B1_CONSTQ_V2_3_VS_XFEATBIRTH_RAWLK_V2_4_POST_INCIDENT_V2_5",
+    "existing_adopted_b1_constq_xfeatbirth_feed_history_source_indices_inclusive": [
+      4500,
+      6300
+    ],
+    "existing_adopted_b1_constq_xfeatbirth_score_source_indices_inclusive": [
+      5400,
+      6300
+    ],
+    "exact_score_window_match": false,
+    "feed_history_match": false,
+    "possible_common_score_support_source_intersection_inclusive": [
+      5400,
+      6300
+    ],
+    "possible_common_score_support_is_sufficient_for_fair_accuracy_comparison": false,
+    "accuracy_head_to_head_status": "BLOCKED_HISTORY_MISMATCH",
+    "fair_direct_accuracy_comparison_permitted": false,
+    "unblock_requirement": "rerun every compared arm with the same frozen feed/history and score support",
+    "non_equivalent_context_reporting_permitted": true,
+    "forbidden_claim": "the external HFNet producer and existing adopted B1-ConstQ/XFeatBirth evidence use an identical score window",
+    "additional_forbidden_claim": "score-support intersection alone removes the feed/history mismatch"
+  },
+  "existing_adopted_evidence_pins": {
+    "b1_constq_vio": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/vins_output/vio.csv",
+      "size_bytes": 93578,
+      "sha256": "59c505704e9e82c050abe2c3e2edb83517b7044828beb694780646ff7a2bea92"
+    },
+    "xfeatbirth_rawlk_vio": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_vins_post_incident_v2_4_r1/vins_output/vio.csv",
+      "size_bytes": 91884,
+      "sha256": "d6d8742753e96d7fa6243b469337c2bebaa28aac1ba9f47bcaa43971e8e88b00"
+    },
+    "common_support_summary": {
+      "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/b1_constq_vs_xfeatbirth_adopted_v2_5_r1/common_support_summary.json",
+      "size_bytes": 3738,
+      "sha256": "4641d2498fed5be8188f25d153fa11b76289de18afd7c8aeedea5106f1567d65",
+      "window_start_s": 1542829061.6926866,
+      "window_end_s": 1542829106.6875105,
+      "b1_constq_ape_rmse_m": 0.22134522294426967,
+      "xfeatbirth_rawlk_ape_rmse_m": 0.1549902959667037
+    },
+    "evaluator_process_receipt": {
+      "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/b1_constq_vs_xfeatbirth_adopted_v2_5_r1/evaluator_process_receipt_v2_5.json",
+      "size_bytes": 1702,
+      "sha256": "5637e2ad33e3bfaf00ffff9b8f18d7a5a609f826f60eaa824cf9f92f49618778"
+    }
+  },
+  "reference_boundary": {
+    "reference_kind": "image-derived COLMAP proxy",
+    "independent_ground_truth": false,
+    "accuracy_evaluated_by_producer": false,
+    "superiority_claimed_by_producer": false
+  },
+  "execution_policy": {
+    "fresh_namespace_required": true,
+    "exactly_one_elf_start_maximum": true,
+    "retry_permitted": false,
+    "experiment_and_window_selection_is_development_result_informed": true,
+    "legacy_failures_and_existing_results_were_visible": true,
+    "strict70_threshold_correction_is_pre_v2_result_outcome_blind": true,
+    "strict70_threshold_frozen_before_v2_elf_start": true,
+    "old_v1_prepared_namespace_reused": false,
+    "old_v1_prepared_namespace_status": "ABANDONED_PREPARED_ONLY_BEFORE_LOCK_OR_START"
+  },
+  "preservation_boundary": {
+    "old_v1_attempt_must_remain_read_only": true,
+    "old_v1_execution_lock_must_remain_absent": true,
+    "p07_backfill_forbidden": true,
+    "legacy_a02_result_rewrite_forbidden": true
+  }
+}

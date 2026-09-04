@@ -1,0 +1,19 @@
+schema_version,protocol_version,dataset_family,data_domain,sequence,gross_windows,history_excluded_windows,reference_failed_windows,history_reference_overlap_windows,corrected_available_windows,corrected_max_per_sequence_cap,p02_registered_available_windows,p02_registered_max_per_sequence_cap,capacity_decision,outcome_boundary
+isj-p06-reference-capacity-v2,isj-window-selection-v2,aqualoc_archaeology,AQUALOC archaeology,A01,19,10,0,0,9,4,9,4,CAPACITY_CANDIDATE_REFERENCE_VALIDATED,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME
+isj-p06-reference-capacity-v2,isj-window-selection-v2,aqualoc_archaeology,AQUALOC archaeology,A02,9,6,0,0,3,3,3,3,CAPACITY_CANDIDATE_REFERENCE_VALIDATED,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME
+isj-p06-reference-capacity-v2,isj-window-selection-v2,aqualoc_archaeology,AQUALOC archaeology,A03,7,5,0,0,2,2,2,2,CAPACITY_CANDIDATE_REFERENCE_VALIDATED,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME
+isj-p06-reference-capacity-v2,isj-window-selection-v2,aqualoc_archaeology,AQUALOC archaeology,A04,14,6,1,1,8,4,8,4,CAPACITY_CANDIDATE_REFERENCE_VALIDATED,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME
+isj-p06-reference-capacity-v2,isj-window-selection-v2,aqualoc_archaeology,AQUALOC archaeology,A07,12,9,0,0,3,3,3,3,CAPACITY_CANDIDATE_REFERENCE_VALIDATED,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME
+isj-p06-reference-capacity-v2,isj-window-selection-v2,aqualoc_archaeology,AQUALOC archaeology,A08,10,8,3,3,2,2,2,2,CAPACITY_CANDIDATE_REFERENCE_VALIDATED,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME
+isj-p06-reference-capacity-v2,isj-window-selection-v2,aqualoc_archaeology,AQUALOC archaeology,A09,7,5,1,1,2,2,2,2,CAPACITY_CANDIDATE_REFERENCE_VALIDATED,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME
+isj-p06-reference-capacity-v2,isj-window-selection-v2,aqualoc_archaeology,AQUALOC archaeology,A10,15,9,0,0,6,4,6,4,CAPACITY_CANDIDATE_REFERENCE_VALIDATED,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME
+isj-p06-reference-capacity-v2,isj-window-selection-v2,aqualoc_harbor,AQUALOC harbor,H01,5,4,0,0,1,1,1,1,CAPACITY_CANDIDATE_REFERENCE_VALIDATED,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME
+isj-p06-reference-capacity-v2,isj-window-selection-v2,aqualoc_harbor,AQUALOC harbor,H02,9,4,0,0,5,4,5,4,CAPACITY_CANDIDATE_REFERENCE_VALIDATED,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME
+isj-p06-reference-capacity-v2,isj-window-selection-v2,aqualoc_harbor,AQUALOC harbor,H03,5,0,0,0,5,4,5,4,CAPACITY_CANDIDATE_REFERENCE_VALIDATED,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME
+isj-p06-reference-capacity-v2,isj-window-selection-v2,aqualoc_harbor,AQUALOC harbor,H04,4,3,0,0,1,1,1,1,CAPACITY_CANDIDATE_REFERENCE_VALIDATED,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME
+isj-p06-reference-capacity-v2,isj-window-selection-v2,aqualoc_harbor,AQUALOC harbor,H05,3,2,0,0,1,1,1,1,CAPACITY_CANDIDATE_REFERENCE_VALIDATED,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME
+isj-p06-reference-capacity-v2,isj-window-selection-v2,aqualoc_harbor,AQUALOC harbor,H06,2,0,0,0,2,2,2,2,CAPACITY_CANDIDATE_REFERENCE_VALIDATED,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME
+isj-p06-reference-capacity-v2,isj-window-selection-v2,ntnu,NTNU underwater VI,fjord_6,14,1,1,1,13,4,13,4,CAPACITY_CANDIDATE_REFERENCE_VALIDATED,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME
+isj-p06-reference-capacity-v2,isj-window-selection-v2,afrl,AFRL stereo VI,cave_gennie,15,4,15,4,0,0,11,4,EXCLUDE_SEQUENCE_REFERENCE_INELIGIBLE,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME
+isj-p06-reference-capacity-v2,isj-window-selection-v2,afrl,AFRL stereo VI,bus_outside,12,5,2,1,6,4,7,4,CAPACITY_CANDIDATE_REFERENCE_VALIDATED,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME
+isj-p06-reference-capacity-v2,isj-window-selection-v2,afrl,AFRL stereo VI,cemetery,9,1,0,0,8,4,8,4,CAPACITY_CANDIDATE_REFERENCE_VALIDATED,KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME

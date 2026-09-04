@@ -1,0 +1,12 @@
+extends: formal_loftr_mirror_contribution_v33_frontend.yaml
+
+hybrid:
+  # C3 calibration profile: keep the paper-facing mirror sidecar export gates,
+  # but give LoFTR a larger confirmed candidate pool before the export gate
+  # chooses a tiny VINS-visible subset. This separates proposal diversity from
+  # backend injection risk.
+  learned_confirmation_max_confirmed: 48
+  promotion_loftr_max_confirmed: 36
+  semidense_fallback_max_new: 60
+  semidense_fallback_sidecar_max_extra: 60
+  semidense_fallback_max_fraction: 0.18

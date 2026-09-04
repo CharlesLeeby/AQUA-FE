@@ -1,0 +1,5 @@
+window_id,status,return_code,matched_count,common_span_s,common_coverage,rpe_pairs
+a06_s000_d045,PASS,0,40,39.0,0.8888888888888888,39
+a06_s045_d045,PASS,0,42,41.0,0.9545454545454546,41
+afrl_fl_s180_d045,PASS,0,43,42.0,0.9555555555555556,42
+h07_s000_d050,PASS,0,48,47.0,0.9411764705882353,47

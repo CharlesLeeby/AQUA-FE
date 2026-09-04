@@ -1,0 +1,1 @@
+AQUAFE_DRY_RUN=1 RUN_VINS=0 FORCE_EXPORT=1 TAG=isj_p07_aqualoc_harbor_h03_0001_b1_attempt01 bash scripts/run_isj_b1_klt_nativeq_guarded_v1.sh aqualoc_harbor H03 900 1800 2

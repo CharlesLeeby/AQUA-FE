@@ -1,0 +1,12 @@
+{
+  "freeze_hash": "d283b482f820c4ace70a5b362907132cbfd674bb5276604dd8846541b5703c4d",
+  "freeze_path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_freeze_v3.json",
+  "no_retry": true,
+  "probe_intent_path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_launch_intent_v3.json",
+  "probe_launch_intent_hash": "d40c786601e0eeae72b5091e8834babd7116acb12d06e6c0cbcfb71bf08f9440",
+  "process_start_count": 1,
+  "schema_version": "aqua-fe-matched-birth-r4-vins-g0-runtime-probe-success-closeout-v3",
+  "status": "COMMITTED_RUNTIME_PROBE_AND_FREEZE_SUCCESS_NO_RETRY",
+  "success_hash": "a0e9bc24008e4b75aa8541d8053342f87d2da4bb3b51160e38c4aa13b1019f8a",
+  "success_path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_success_closeout_v3.json"
+}

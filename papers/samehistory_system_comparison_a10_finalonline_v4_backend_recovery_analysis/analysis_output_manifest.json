@@ -1,0 +1,29 @@
+{
+  "evaluator_enabled": true,
+  "files": {
+    "samehistory_system_a10_v4_analysis_bundle.json": {
+      "sha256": "b02f933fb4b473493a8503f292138ac62c202ab827215a4be28c7e498d1b699e",
+      "size_bytes": 78604
+    },
+    "samehistory_system_a10_v4_analysis_report.md": {
+      "sha256": "26c487b83a9d61563a9abac8be9669d7acda4989b4d40f6f07e2a9762f051e84",
+      "size_bytes": 2127
+    },
+    "samehistory_system_a10_v4_rows.csv": {
+      "sha256": "39725ee4f6c561a3f003888aff1333bf92a37319c07cc77bc0e016cced1bdde1",
+      "size_bytes": 1013
+    }
+  },
+  "logical_output_dir": "/home/ma/AQUA-FE_WS/papers/samehistory_system_comparison_a10_finalonline_v4_backend_recovery_analysis",
+  "producer_analyzer": {
+    "ctime_ns": 1787583514746959199,
+    "device": 66312,
+    "inode": 6053753,
+    "mtime_ns": 1787583514746959199,
+    "path": "/home/ma/AQUA-FE_WS/scripts/analyze_samehistory_system_a10_finalonline_v4_backend_recovery.py",
+    "sha256": "9bfc2dfab4a283b10d0230a7b840fc1bd977e1d4d678c32e3d669383f7270a33",
+    "size_bytes": 105520
+  },
+  "schema_version": "aqua-fe-a10-v4-analysis-output-manifest-v1",
+  "status": "COMPLETE_ATOMIC_ANALYSIS_OUTPUT"
+}

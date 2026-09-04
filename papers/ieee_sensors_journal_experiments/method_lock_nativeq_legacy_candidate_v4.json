@@ -1,0 +1,271 @@
+{
+  "artifacts": [
+    {
+      "path": "papers/ieee_sensors_journal_experiments/method_lock_nativeq_legacy_candidate_v3.json",
+      "role": "guarded_v4_artifact",
+      "sha256": "c2a54da0975984a0cdbf2f4d7653f9e9e941a37632eafcaba3f184d205f37048",
+      "size_bytes": 23508
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/backend_quality_contract_v1.json",
+      "role": "guarded_v4_artifact",
+      "sha256": "14abab7ca7ad0f48af8856372b3cf97470d405c1e20081cdb4247f3c87b64957",
+      "size_bytes": 4893
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/2026-08-05--round3-ntnu-quality-partition-correction-v2.md",
+      "role": "guarded_v4_artifact",
+      "sha256": "04010cb245e3a58972f104325bbe07ca9bb4d455ebce6112309f57904b9fc3bb",
+      "size_bytes": 7793
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/ntnu_q_partition_20260805/analysis-output/analysis-report.md",
+      "role": "guarded_v4_artifact",
+      "sha256": "f0eb06ab56a21543e359d5f86a849e1508f24ef4ef71afabdf90714041b91423",
+      "size_bytes": 5086
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/ntnu_q_partition_20260805/analysis-output/stats-appendix.md",
+      "role": "guarded_v4_artifact",
+      "sha256": "eab23fc76efcb4350f28522db25a8f3b15debd9a3a9715ae853b0323283e18dd",
+      "size_bytes": 2714
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/ntnu_q_partition_20260805/analysis-output/figure-catalog.md",
+      "role": "guarded_v4_artifact",
+      "sha256": "ffa963681b90d2dd36f1588e67970b4ba05d5a085a5888786c301bed9f8b39a9",
+      "size_bytes": 2169
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/ntnu_q_partition_20260805/analysis-output/factorial-summary.csv",
+      "role": "guarded_v4_artifact",
+      "sha256": "b262700517b5ae244371e9357127d5c394def93948b96f821a5f7800b899818e",
+      "size_bytes": 996
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/ntnu_q_partition_20260805/analysis-output/replay-metrics.csv",
+      "role": "guarded_v4_artifact",
+      "sha256": "3aa5faa974c92fb2e0e5ab4b3d04643badc53aae59bce3d659653d91ceb38a11",
+      "size_bytes": 1029
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/ntnu_q_partition_20260805/analysis-output/replay-input-manifest.csv",
+      "role": "guarded_v4_artifact",
+      "sha256": "9bd7d79a86eea041da696e66d5f97c3e8067499b1c8b697485e93fcbf0ec819c",
+      "size_bytes": 11710
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/ntnu_q_partition_20260805/analysis-output/lineage-audit.json",
+      "role": "guarded_v4_artifact",
+      "sha256": "499251a8fcaac9d62cfb0e23026fdabb22ab0fde044433f1859eebf82fc39d61",
+      "size_bytes": 1168
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/ntnu_q_partition_20260805/analysis-output/bag-audit-summary.csv",
+      "role": "guarded_v4_artifact",
+      "sha256": "b27bfc80863feaf8bdc356a1648d85816a8f7d308dca220380ae0df6da1dfdd2",
+      "size_bytes": 943
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/ntnu_q_partition_20260805/analysis-output/analysis-artifact-manifest.sha256",
+      "role": "guarded_v4_artifact",
+      "sha256": "392a9776b09acd39aa376fd0f677c3f5bdf315af2ad6a0e8d6dbe3777a73c1b4",
+      "size_bytes": 1221
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/ntnu_q_partition_20260805/analysis-output/input-manifest.sha256",
+      "role": "guarded_v4_artifact",
+      "sha256": "1c85f71cdb0d9027b10b446d9a439b15828df1a47139ab9b9ceb3a2bb4f4c8b8",
+      "size_bytes": 13917
+    },
+    {
+      "path": "scripts/build_nativeq_backend_contract.py",
+      "role": "guarded_v4_artifact",
+      "sha256": "0c5bbdf3fd1f0948a94df346d29dc8b26ee66666c51287b933db5e7e79a0decc",
+      "size_bytes": 8544
+    },
+    {
+      "path": "scripts/check_nativeq_backend_contract.py",
+      "role": "guarded_v4_artifact",
+      "sha256": "37c61326e38d17e2a950fff66c9bd062bed8eab015385da36474c3bb558d3f4f",
+      "size_bytes": 11394
+    },
+    {
+      "path": "scripts/attest_nativeq_feature_bag.py",
+      "role": "guarded_v4_artifact",
+      "sha256": "ff4fcd9a9d97178c5a54935a4c6efe766a183af2546e30f33b55f831c4f2608e",
+      "size_bytes": 5250
+    },
+    {
+      "path": "scripts/run_isj_nativeq_contract_guarded_v4.sh",
+      "role": "guarded_v4_artifact",
+      "sha256": "f4bffa30037261c0896bb4fd4f14929bc4445f854ca409ac82b6240ac4706373",
+      "size_bytes": 2217
+    },
+    {
+      "path": "scripts/run_isj_classical_contract_fallback_v4.sh",
+      "role": "guarded_v4_artifact",
+      "sha256": "e29f5ba06a742ca272af378c9be72e5e53609010f74ce79a34fcaf27cccc7485",
+      "size_bytes": 5782
+    },
+    {
+      "path": "scripts/build_nativeq_legacy_method_lock_v4.py",
+      "role": "guarded_v4_artifact",
+      "sha256": "70bb29fb38cb125652a13297e38ab3a7ab9562582efe552667d2123d598192b0",
+      "size_bytes": 8794
+    },
+    {
+      "path": "scripts/build_ntnu_q_partition_analysis.py",
+      "role": "guarded_v4_artifact",
+      "sha256": "b4ffabef5dc51812679def6fec013c640c0f199bad6670a65dcdc5516ab8d3bf",
+      "size_bytes": 36441
+    },
+    {
+      "path": "scripts/rewrite_quality_partition.py",
+      "role": "guarded_v4_artifact",
+      "sha256": "72d18afda7aa6cf8914ccd6c11841a01d17e8d23a756888198ae733c92e952c0",
+      "size_bytes": 7373
+    },
+    {
+      "path": "scripts/audit_quality_partition.py",
+      "role": "guarded_v4_artifact",
+      "sha256": "9ba78f3fa3ae9ea87109bed10b58233afef85d003f5ae996404eabee0f765c0b",
+      "size_bytes": 7963
+    },
+    {
+      "path": "scripts/tests/test_nativeq_backend_contract_guard.py",
+      "role": "guarded_v4_artifact",
+      "sha256": "5a4230e62d9d648d3068a6a296e9bf95b8a81127d59b8c3321d0ab0ee0ce8ed0",
+      "size_bytes": 7929
+    },
+    {
+      "path": "scripts/tests/test_nativeq_method_lock_v4.py",
+      "role": "guarded_v4_artifact",
+      "sha256": "8175e082adfb73d0b84a7b17ce82877a58b71e3442736fb2d741161f1ede460f",
+      "size_bytes": 749
+    },
+    {
+      "path": "scripts/tests/test_ntnu_q_partition_analysis.py",
+      "role": "guarded_v4_artifact",
+      "sha256": "a9196f94e8c5a639c1aa1249365ffcc82ac16fc61daa6d7fc39a52dec8579bdd",
+      "size_bytes": 1745
+    },
+    {
+      "path": "scripts/tests/test_quality_partition.py",
+      "role": "guarded_v4_artifact",
+      "sha256": "fad4c4a4f99d28a2e87b3e43c9ca5fd7b394b3f0f09aff30f78a13a9c9d5525f",
+      "size_bytes": 4049
+    }
+  ],
+  "backend_quality_consumer_contract": {
+    "consumer_id": "vins-fusion-origin-external-pointcloud-nativeq-v1",
+    "contract_hash": "39eaea6d26e6f5a881ef2b17b898cbda75c7aba8087ce447fe897e2fe0bdfce0",
+    "path": "papers/ieee_sensors_journal_experiments/backend_quality_contract_v1.json",
+    "role": "frozen_backend_consumer_contract",
+    "sha256": "14abab7ca7ad0f48af8856372b3cf97470d405c1e20081cdb4247f3c87b64957",
+    "size_bytes": 4893
+  },
+  "blockers": [
+    "Held-out multi-sequence proposed/KLT/modern-baseline matrix is pending",
+    "Online independent C_legacy formal attribution remains pending",
+    "This v4 guard does not promote NTNU development evidence into confirmation"
+  ],
+  "candidate_lock_hash": "4e25503ddc92163ae8572274439a26b0aec189757aa56cdcea3ecfc5f53a0125",
+  "development_counterexample_resolution": {
+    "allowed_interpretation": "classical birth/propagation quality x VINS consumer interaction under fixed learned-active geometry",
+    "classical_q1_xfeat_native_rpe_median_m": 10.318417502716205,
+    "common_poses": 285,
+    "common_rpe_pairs": 275,
+    "gftt_birth_q1_rpe_max_m": 33.39471961075973,
+    "gftt_birth_q1_rpe_median_m": 0.12740790773785912,
+    "global_q1_identical_vio_sha256": "86cf4eb0997b1d4e2bc2d766676ba154a7981bc340106a776686df63ff636ffe",
+    "learned_superiority_claim": "FORBIDDEN_PENDING_HELD_OUT_MATRIX",
+    "matched_max_cnt": 350,
+    "native_rpe_median_m": 0.04894295154630014,
+    "scientific_units": 1,
+    "source1_q1_rpe_median_m": 0.06633626508120992,
+    "technical_replays_per_arm": 3
+  },
+  "execution_entrypoint": "scripts/run_isj_nativeq_contract_guarded_v4.sh",
+  "external_development_evidence": [
+    {
+      "path": "/mnt/data/AQUA-FE_WS/validation_20260805/ntnu_s83_d30_q_partition_factorial/g0_all_replays_max350/common_support_summary.json",
+      "role": "development_only_external_evidence",
+      "sha256": "cf0e8d9be6b9ec8af0cd17581729e239945b6f221493defd778251e988a88be8",
+      "size_bytes": 19768
+    },
+    {
+      "path": "/mnt/data/AQUA-FE_WS/validation_20260805/ntnu_s83_d30_q_partition_factorial/g0_all_replays_max350/evo_crosscheck.json",
+      "role": "development_only_external_evidence",
+      "sha256": "115dd2f57472a5af8f389b5d20610d892a6414e4b02fb41983c7eca82da9e191",
+      "size_bytes": 7135
+    },
+    {
+      "path": "/mnt/data/AQUA-FE_WS/validation_20260805/ntnu_s83_d30_q_partition_factorial/learned_baseq1_xfeatnative_audit.json",
+      "role": "development_only_external_evidence",
+      "sha256": "0feab30718c8beb301b6dc766e21f69d13a063f46f95bc1ce64bd30f2e8860a4",
+      "size_bytes": 844
+    },
+    {
+      "path": "/mnt/data/AQUA-FE_WS/validation_20260805/ntnu_s83_d30_q_partition_factorial/learned_kltnative_gfttq1_xfeatnative_audit.json",
+      "role": "development_only_external_evidence",
+      "sha256": "ffc98beebb7ecab08dbbed09907408d44be40fcc5471b74c8cc5c9d6ea1f51a9",
+      "size_bytes": 849
+    },
+    {
+      "path": "/mnt/data/AQUA-FE_WS/validation_20260805/ntnu_s83_d30_q_partition_factorial/learned_kltq1_gfttnative_xfeatnative_audit.json",
+      "role": "development_only_external_evidence",
+      "sha256": "91c159bd52cc54c5d90d61bcaa2e42a50b772344a1961b3ca4ba9d802b021702",
+      "size_bytes": 849
+    },
+    {
+      "path": "/mnt/data/AQUA-FE_WS/validation_20260805/nativeq_backend_guard/pass_decision.json",
+      "role": "development_only_external_evidence",
+      "sha256": "58876a9cb0739112038315aab1df55037d95749693b4bd1eac715ee3c792aaa5",
+      "size_bytes": 616
+    },
+    {
+      "path": "/mnt/data/AQUA-FE_WS/validation_20260805/nativeq_backend_guard/pass_reused_bag_decision.json",
+      "role": "development_only_external_evidence",
+      "sha256": "8d837e2fc618e455dc1742f1d5628316b236b6f926685da802bb657a2053fc76",
+      "size_bytes": 845
+    },
+    {
+      "path": "/mnt/data/AQUA-FE_WS/validation_20260805/nativeq_backend_guard/ntnu_nativeq_feature_bag_attestation.json",
+      "role": "development_only_external_evidence",
+      "sha256": "6637b20693d8680171cce696ea8d2084ea7df0e64117637c82f9738fbbed8777",
+      "size_bytes": 1336
+    }
+  ],
+  "guard_policy": {
+    "allow_action": "ALLOW_LEARNED",
+    "backend_binary_and_semantic_source_hashes_required": true,
+    "fallback_counts_as_proposed_result": false,
+    "fallback_is_fresh_independent_klt_export": true,
+    "fallback_result_label": "KLT_BACKEND_CONTRACT_FALLBACK",
+    "learned_exact_drop_as_fallback_forbidden": true,
+    "mismatch_action": "FALLBACK_CLASSICAL",
+    "reused_bag_requires_hash_bound_attestation": true,
+    "runtime_mapping_must_equal": {
+      "all_source_scales": 1.0,
+      "alpha": 0.65,
+      "constant_quality": false,
+      "floor": 0.8,
+      "mode": "vins_safe",
+      "raw_quality": false
+    }
+  },
+  "protocol_version": "isj-nativeq-legacy-candidate-v4-guarded-execution",
+  "route": "MULTI_SEQUENCE_CANDIDATE",
+  "schema_version": "isj-method-lock-nativeq-legacy-candidate-v4",
+  "scientific_method_identity": "UNCHANGED_FROM_V3",
+  "status": "GUARDED_EXECUTION_CANDIDATE",
+  "supersedes_for_execution": {
+    "candidate_lock_hash": "19b0e4754341d52d6c52e8b3da7409bf22d228ca4a775ae6efe92c072ce71f63",
+    "disposition": "preserved_unchanged; scientific frontend identity retained",
+    "path": "papers/ieee_sensors_journal_experiments/method_lock_nativeq_legacy_candidate_v3.json",
+    "role": "base_scientific_method_lock",
+    "sha256": "c2a54da0975984a0cdbf2f4d7653f9e9e941a37632eafcaba3f184d205f37048",
+    "size_bytes": 23508
+  }
+}

@@ -1,0 +1,1 @@
+AQUAFE_DRY_RUN=1 RUN_VINS=0 FORCE_EXPORT=1 TAG=isj_p07_aqualoc_archaeology_a10_0013_b1_attempt01 bash scripts/run_isj_b1_klt_nativeq_guarded_v1.sh aqualoc_archaeology A10 11700 12600 2

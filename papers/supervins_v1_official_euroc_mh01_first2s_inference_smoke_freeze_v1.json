@@ -1,0 +1,197 @@
+{
+  "schema_version": "aqua-fe-published-supervins-v1-official-euroc-mh01-first2s-inference-smoke-freeze-v1",
+  "created_at": "2026-08-16T22:54:00+08:00",
+  "status": "FROZEN_BEFORE_STAGE_3_MASTER_NODE_OR_PUBLISHER_START",
+  "scientific_role": "DEVELOPMENT_ONLY_OFFICIAL_DATA_INFERENCE_RUNABILITY_SMOKE",
+  "method_label": "SuperVINS 1.0 + disclosed runtime-artifact repair",
+  "objective": "Using the unchanged stage-2-passed stack, publish the exact frozen first two seconds of official EuRoC MH_01_easy cam0+imu0 once and verify that at least two images enter the extractor and at least one adjacent pair enters the matcher.",
+  "sequence_boundary": {
+    "input": "official EuRoC MH_01_easy first 2.000 seconds",
+    "supervins_readme_recommends": "V2_01_easy.bag",
+    "input_is_readme_recommended_sequence": false,
+    "reason_for_alternative": "No local V2_01_easy bag or extracted V2_01 image+IMU dataset was found in the scoped roots; the already adopted official MH_01_easy extraction is used only for development runtime qualification.",
+    "formal_baseline_or_sequence_quality_claim_authorized": false
+  },
+  "claim_boundary": {
+    "accuracy_claim_authorized": false,
+    "ape_rpe_authorized": false,
+    "formal_baseline_authorized": false,
+    "feature_extractor_inference_authorized": true,
+    "matcher_inference_authorized": true,
+    "full_vio_or_trajectory_run_authorized": false,
+    "groundtruth_consumption_authorized": false,
+    "rosbag_creation_or_replay_authorized": false,
+    "trajectory_artifact_change_authorized": false,
+    "underwater_claim_authorized": false
+  },
+  "adopted_stage_2": {
+    "pass_seal": {
+      "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_ortsession_smoke_attempt_002_pass_seal_v1.json",
+      "sha256": "fef7f133c2d515d29566c4d44aed4e3a4595c57d37acbd244a2d20345968755f",
+      "size_bytes": 4816
+    },
+    "run_result": {
+      "path": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_ortsession_smoke_20260816_r2/attempt_002/run_result.json",
+      "sha256": "a86cf96999810849de4673900af18f036dbc654e1449f3b0d0b8ec302f32b0dd",
+      "size_bytes": 16338
+    },
+    "stack_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_ortsession_construction_smoke_freeze_v1.json",
+      "sha256": "8095a9eeb702b9671a58678cd22059c98638ec8962ef2ad18e7e81b5c165004d",
+      "size_bytes": 8690,
+      "direct_runtime_and_governance_pin_count": 19
+    },
+    "stage_2_runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_published_supervins_v1_ortsession_smoke_attempt_002.py",
+      "sha256": "56e84b717bd0ecf0c5fbb69a7d5430b166e90b53a9431aac884b830e489797bd",
+      "size_bytes": 33252
+    }
+  },
+  "input": {
+    "manifest": {
+      "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_first2s_input_manifest_v1.json",
+      "sha256": "a8ec6e7e878ec28e018b78fc1cd891acfa5a05825264d3b58d8b4630fa51a398",
+      "size_bytes": 6866
+    },
+    "publisher": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/publish_supervins_euroc_mh01_first2s_v1.py",
+      "sha256": "973b096ad56aa52ff521634a77ad65f2c41f0bec5d87d733c53edcc4691e3106",
+      "size_bytes": 11938
+    },
+    "selection": {
+      "start_timestamp_ns": 1403636579763555584,
+      "end_timestamp_ns": 1403636581763555584,
+      "camera_count": 41,
+      "imu_count": 401,
+      "event_count": 442,
+      "topics": [
+        "/imu0",
+        "/cam0/image_raw"
+      ],
+      "wall_rate": 1.0,
+      "equal_timestamp_order": "IMU_BEFORE_CAM0"
+    }
+  },
+  "publisher_runtime_pins": {
+    "/usr/bin/python3": {
+      "sha256": "298a9e830ed52f36c299427565485d717d1ce0179c0597cc16560513eb780b06",
+      "size_bytes": 5490456
+    },
+    "/usr/lib/python3/dist-packages/cv2.cpython-38-x86_64-linux-gnu.so": {
+      "sha256": "00f302d1efe76049187e2e2c7a05262e883394f82316490e2f28adb807ac1833",
+      "size_bytes": 6970496
+    },
+    "/home/ma/.local/lib/python3.8/site-packages/numpy/core/_multiarray_umath.cpython-38-x86_64-linux-gnu.so": {
+      "sha256": "190fed599b26cf689e22f198faf97d632f1d19b8aa75fdf5ca7fb96d37d97e37",
+      "size_bytes": 6311424
+    },
+    "/opt/ros/noetic/lib/python3/dist-packages/rospy/__init__.py": {
+      "sha256": "9e5c4e111abae5c45266c74c2ed83ff045d00b29d4c514d31c09b250460c9159",
+      "size_bytes": 4636
+    },
+    "/opt/ros/noetic/lib/python3/dist-packages/sensor_msgs/msg/_Image.py": {
+      "sha256": "ea36643a165267e46fb5b5c227143d541d833b4f493c4077c77a799b8e41db2d",
+      "size_bytes": 10705
+    },
+    "/opt/ros/noetic/lib/python3/dist-packages/sensor_msgs/msg/_Imu.py": {
+      "sha256": "da6283c0d88361f53d81f15e2ccd0ea55d32331f5e671d2d93bbe31690ae6386",
+      "size_bytes": 13030
+    },
+    "/opt/ros/noetic/lib/python3/dist-packages/std_msgs/msg/_Header.py": {
+      "sha256": "a4171605d65979479a395892ca44d22d5bc6fac3ef184c9c8fe177ea914487e3",
+      "size_bytes": 5706
+    }
+  },
+  "fresh_namespace": {
+    "pre_state": "ABSENT",
+    "evidence_root": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_20260816_r1",
+    "attempt": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_20260816_r1/attempt_001",
+    "start_claims": [
+      "roscore_start_claim.json",
+      "node_start_claim.json",
+      "publisher_start_claim.json"
+    ],
+    "reuse_after_any_outcome": false
+  },
+  "one_shot_authority": {
+    "authorization_token": "SUPERVINS_STAGE3_MH01_FIRST2S_ATTEMPT_001_START_ONCE",
+    "maximum_roscore_starts": 1,
+    "maximum_node_starts": 1,
+    "maximum_publisher_starts": 1,
+    "retry_authorized": false,
+    "master_ready_timeout_seconds": 12,
+    "node_session_ready_timeout_seconds": 15,
+    "publisher_connection_timeout_seconds": 12,
+    "inference_gate_timeout_seconds": 90,
+    "termination": "publisher then node then roscore; TERM, 3-second grace, KILL if needed, synchronous reap"
+  },
+  "ros": {
+    "master_uri": "http://127.0.0.1:11553",
+    "master_command": [
+      "/opt/ros/noetic/bin/roscore",
+      "-p",
+      "11553"
+    ],
+    "node_command": [
+      "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/devel/lib/supervins/supervins_node",
+      "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/config/euroc/euroc_mono_imu_config.yaml"
+    ],
+    "publisher_command": [
+      "/usr/bin/python3",
+      "-B",
+      "/home/ma/AQUA-FE_WS/scripts/publish_supervins_euroc_mh01_first2s_v1.py",
+      "--action",
+      "run",
+      "--authorization-token",
+      "SUPERVINS_STAGE3_MH01_FIRST2S_PUBLISH_ONCE"
+    ],
+    "allowed_input_publisher_node": "/aqua_fe_euroc_mh01_first2s_publisher",
+    "other_input_publishers_allowed": []
+  },
+  "exact_supervins_runtime_selection": {
+    "config": {
+      "path": "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/config/euroc/euroc_mono_imu_config.yaml",
+      "sha256": "8c2ce030a4a585e483686f9b1c19b652b20e60e13bdf6127d9a2f8cfaa6be62c",
+      "size_bytes": 3233
+    },
+    "extractor_model": {
+      "path": "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/weights_dpl/superpoint.onnx",
+      "sha256": "234d12c9f523292efb34e0ca513b011050b0c052700da9c01787b9356a1138d2",
+      "size_bytes": 5272808
+    },
+    "matcher_model": {
+      "path": "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/weights_dpl/superpoint_lightglue_fused_cpu.onnx",
+      "sha256": "4f44f440bc08f71afc2ba619d33154d395284001c1387b14a3b58a3224f9490e",
+      "size_bytes": 45634561
+    }
+  },
+  "trajectory_artifact_pre_pins": {
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/vio_output/vio.csv": {
+      "sha256": "1644403a60c4bb6f672e41aa903cb3cf0ec54a5154ebe9d5e98f9817ea12ac6d",
+      "size_bytes": 116990
+    },
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/vio_output/vio_loop.csv": {
+      "sha256": "b484a9f72b3acb105eaf558cf0b7c1cfc244164ea05e7f569ecabf4a50bd6b78",
+      "size_bytes": 29233
+    },
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/vio_output/vio_output.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    }
+  },
+  "success_contract": {
+    "session_ready_marker_minimum": 1,
+    "publisher_terminal_status": "PUBLISH_COMPLETE",
+    "published_camera_count_exact": 41,
+    "published_imu_count_exact": 401,
+    "published_event_count_exact": 442,
+    "extract_feature_time_count_minimum": 2,
+    "matches_size_count_minimum": 1,
+    "input_publisher_identity_exact": true,
+    "all_three_processes_reaped": true,
+    "all_pre_pins_unchanged_post": true,
+    "trajectory_artifacts_unchanged": true,
+    "pass_status": "PASS_DEVELOPMENT_OFFICIAL_MH01_FIRST2S_EXTRACTOR_MATCHER_INFERENCE"
+  },
+  "postcondition": "A pass proves only extractor and matcher inference runability on the frozen first two seconds of official MH_01_easy. It is not the README V2_01 sequence, a complete VIO run, a trajectory result, an accuracy result, an underwater result, or a comparison with AQUA-FE."
+}

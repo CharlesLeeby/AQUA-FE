@@ -1,0 +1,43 @@
+{
+  "evidence_id": "ER-20260802-orb-v23-postinit-followup-01",
+  "generated": "2026-08-02",
+  "analysis_unit": "unique fixed image window",
+  "repeat_policy": "four repeats are deterministic replication checks",
+  "runtime_contract": {
+    "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+    "library_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+    "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+    "quality_threshold": 0.9,
+    "projection_gate_px": 4,
+    "hamming_gate": 100,
+    "pre_kf_purge": "full only, enforced",
+    "cpu": 2,
+    "aslr": "off",
+    "audit_capacity": 131072,
+    "rpe_delta_frames": 1,
+    "max_time_diff_s": 0.06
+  },
+  "source_sha256": {
+    "logs/orb_v23_postinit_search_20260802_final.md": "b119690272ee94fb2d3ebb96e86d272d1c57a0307a2a2c46b15e6cfdce93aefe",
+    "logs/orb_v23_mclab1_action_search_20260802.md": "0aa550051f0dcebd9a066a2327a4823727fd0df0b1b13aadbd0e008b05baa738",
+    "logs/orb_v23_mclab2_action_search_20260802.md": "581915061900bb96554c1ce216459dfd251e68e9b75c2f68edbbab9b1ae13b30",
+    "logs/history_scan_candidates_20260801.md": "fea2ee54ca1ddae9937e4f0a513778b0cbd13d03fe6e3269098542e2f624df6b",
+    "logs/orbslam3_seeded_validation/a10_2400_2800_lineage_pre_kf_outlier_purge_v23_20260730.md": "not_rehashed_in_this_bundle"
+  },
+  "formal_csv_sha256": {
+    "mclab1/evaluation_reconstructed.csv": "ba3af429d274beb74345179ec716ee971a10d130c58cba80115d6b53d5f6c983",
+    "mclab1/evaluation_online.csv": "2dbdc41888e1aa02586b59f4d4f96b39a520633a78cba2e677921364f3e5abe2",
+    "mclab2_n3/evaluation_reconstructed.csv": "46f88f17a023e7752ab915b32a14fec9a811c631bece91fb3cca5c4c5e355d4e",
+    "mclab2_n3/evaluation_online.csv": "ad3ce7f4ac25542b43d397f442577e2a8fdf64d3316f96b0ca4795689bf2d910",
+    "mclab2_n6/evaluation_reconstructed.csv": "2c2085f311c835006afbbe84b78c20c7f9844a97ca31df6710f656835334f779",
+    "mclab2_n6/evaluation_online.csv": "43cadff20f6ce111c339a740260b2892412fff13bf96d4abc2b01e55b56ab534"
+  },
+  "formal_roots": {
+    "mclab1_n3": "/mnt/data/AQUA-FE_WS/orbslam3_validation/ntnu_mclab1_s60_d15/formal_n3_d14_min8_frozen_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09",
+    "mclab2_n3": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/postinit_candidate_search_20260801/ntnu_mclab2_variants/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09",
+    "mclab2_n6": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/postinit_candidate_search_20260801/ntnu_mclab2_s110_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09",
+    "aqualoc_search": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/postinit_action_search_20260731"
+  },
+  "alignment_caveat": "mclab2 seed_export_stats.json records a maximum feature-to-image timestamp difference of 49,999,500 ns; selected ORB cam0 times are exact, and the caveat is retained rather than hidden.",
+  "audit_note": "A10 is a project-promoted strict/stable positive under the primary-control label. A stricter repeatwise all-control audit including full_unbounded counts it as 3/4, so this bundle reports both labels rather than silently changing the historical denominator."
+}

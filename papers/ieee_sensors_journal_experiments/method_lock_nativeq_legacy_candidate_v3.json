@@ -1,0 +1,616 @@
+{
+  "arms": {
+    "B0_native_vins_origin_v1": {
+      "quality_contract": "native_vins",
+      "role": "native_vins_reference",
+      "status": "RUNNABLE"
+    },
+    "B1_klt_nativeq_v3": {
+      "quality_contract": "vins_safe_floor0p80_alpha0p65",
+      "role": "primary_classical_external_feature_baseline",
+      "status": "RUNNABLE"
+    },
+    "C_legacy_independent_classical_v3": {
+      "development_retrospective_controls_are_not_online_causal_controls": true,
+      "role": "conditional_independent_classical_proposer_attribution",
+      "status": "RESERVED_CONDITIONAL_ON_PROPOSED_ACTIVE"
+    },
+    "D_legacy_exact_lineage_drop_v3": {
+      "role": "conditional_whole_lineage_drop",
+      "status": "RESERVED_CONDITIONAL_ON_PROPOSED_ACTIVE"
+    },
+    "M_xfeat_pairwise_nativeq_v1": {
+      "entrypoint": "scripts/run_p05_modern_xfeat_baseline.sh",
+      "quality_contract": "vins_safe_floor0p80_alpha0p65",
+      "role": "controlled_same_backend_modern_learned_baseline",
+      "status": "P05_PASS"
+    },
+    "P_legacy_nativeq_xfeat_seedchain_v3": {
+      "quality_contract": "vins_safe_floor0p80_alpha0p65",
+      "role": "proposed_gated_persistent_measurement_frontend",
+      "status": "DEVELOPMENT_LOCK_CANDIDATE"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "external_tools/accelerated_features/LICENSE",
+      "role": "source_or_config",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "size_bytes": 11357,
+      "status": "PRESENT"
+    },
+    {
+      "path": "external_tools/accelerated_features/README.md",
+      "role": "source_or_config",
+      "sha256": "9f05c442c4ef0ced48deefb51307f65e8d14f72b14fb3fd65e8f75bfd3e321a5",
+      "size_bytes": 16588,
+      "status": "PRESENT"
+    },
+    {
+      "path": "external_tools/accelerated_features/modules/xfeat.py",
+      "role": "source_or_config",
+      "sha256": "385ccd31d095b0d4176b04e982088b85321b11ade4324f83b097ee6524f2a6e7",
+      "size_bytes": 13472,
+      "status": "PRESENT"
+    },
+    {
+      "path": "external_tools/accelerated_features/weights/xfeat.pt",
+      "role": "source_or_config",
+      "sha256": "0f5187fd7bedd26c7fe6acc9685444493a165a35ecc087b33c2db3627f3ea10b",
+      "size_bytes": 6247949,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/2026-08-04--learned-specificity--r03--ntnu-quality-contract.md",
+      "role": "source_or_config",
+      "sha256": "893329e97f5464bdf34cce861076b761afe83026589de1c260880aabebc215cd",
+      "size_bytes": 10702,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/data_eligibility_manifest.csv",
+      "role": "source_or_config",
+      "sha256": "510c276c33217706eef11ea53e58de4b37318828f8a6dc793dea9262f0a0a0f5",
+      "size_bytes": 46310,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/environment_manifest.txt",
+      "role": "source_or_config",
+      "sha256": "c0b5e1795c08e951dbbfc11f08fb5aa05df72ccc40436f2316a447345c75ae1a",
+      "size_bytes": 3617,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/evaluator_protocol_v1.md",
+      "role": "source_or_config",
+      "sha256": "d3ae583ca799ef423054a5b9ece8b53e0000a8d3bbb1ea8c50121f7a60a40816",
+      "size_bytes": 7036,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/failure_taxonomy_v1.yaml",
+      "role": "source_or_config",
+      "sha256": "0a465876e43a6a28a24ad76d06abbdd762b5833ee45eeb5a540b4e7b7066c252",
+      "size_bytes": 1775,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/history_exclusion_manifest.csv",
+      "role": "source_or_config",
+      "sha256": "9f08516f20718ef1f0ca3c8cbe2753f74859b4f2c437cee5db666b611318cd61",
+      "size_bytes": 935458,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/learned_specificity_20260803/analysis-output/analysis-report.md",
+      "role": "source_or_config",
+      "sha256": "37386cdc127d3bcac851f8fd23773ac16d94d4a8db9827a584e58549daa53204",
+      "size_bytes": 11879,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/learned_specificity_20260803/analysis-output/figure-catalog.md",
+      "role": "source_or_config",
+      "sha256": "e0155e2f779f6561248c5613b9d9771e54c135158545953c4b619c3be3afc69b",
+      "size_bytes": 4528,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/learned_specificity_20260803/analysis-output/ntnu-prefix-summary.csv",
+      "role": "source_or_config",
+      "sha256": "90fb78cd68af2951f9f5a0ae9a0a072abd8a9810f0850be4ff457a739b7a3f93",
+      "size_bytes": 3871,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/learned_specificity_20260803/analysis-output/ntnu-replay-summary.csv",
+      "role": "source_or_config",
+      "sha256": "8dd7c1c4b8823c10571c0194ba2fe25e766344dbe8c21a21879efa73ce3e791c",
+      "size_bytes": 14254,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/learned_specificity_20260803/analysis-output/stats-appendix.md",
+      "role": "source_or_config",
+      "sha256": "1fd7d413ac22e5d047d8837536c5cc17963c49558c4a81d0a7326a2c03d848b1",
+      "size_bytes": 5658,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/learned_specificity_20260803/round3_ntnu_sha256_manifest.txt",
+      "role": "source_or_config",
+      "sha256": "178071c2ef0f48bee226ff8e59f1c174010655012b81260a5746864d9cf69216",
+      "size_bytes": 3597,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p02/p02_freeze_hashes.sha256",
+      "role": "source_or_config",
+      "sha256": "d0c8e5660f21855e70ca9fb0ec080889b851d959ca512e7ef8dd5a1646c4d6f4",
+      "size_bytes": 1878,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p05/fairness_audit.csv",
+      "role": "source_or_config",
+      "sha256": "f5f74406e9d549a2e8f0682d2e4c16a25da3564361160675d59c0d14829ea095",
+      "size_bytes": 4293,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p05/fairness_audit.json",
+      "role": "source_or_config",
+      "sha256": "fb614df9b410768af3d948045197b95c6322a84bfd3ff643961f7ff5c43ea04a",
+      "size_bytes": 8382,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p05/learned_baseline_fairness.md",
+      "role": "source_or_config",
+      "sha256": "ad0e1d4a32fc2f76af39c893fe2fb2f4269128b14fec4ffd52e1307eaabb70b8",
+      "size_bytes": 5617,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p06/b1_screening_code_hashes_v2.sha256",
+      "role": "source_or_config",
+      "sha256": "4b9bc6c4fc24bd3abe0f8ab6464dbf373d05c4f19348e0575d721810b7f31959",
+      "size_bytes": 1889,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p06/development_calibration_v2.json",
+      "role": "source_or_config",
+      "sha256": "570d31d4f8eceac02ad8312cf6343a7d4137ec4cb26fba5c1702bd5cebbca646",
+      "size_bytes": 12656,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p06/development_equivalence/aqualoc_a06_2210_2460/equivalence_audit.json",
+      "role": "source_or_config",
+      "sha256": "e404739e96f0c7e1c4ea6d023e02aa46590026a80649370b8f99638aa857db30",
+      "size_bytes": 1534,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p06/development_equivalence/aqualoc_a06_2210_2460/frame_equivalence_audit.csv",
+      "role": "source_or_config",
+      "sha256": "42124c6857bdb94c652e813f3a6b759421cdc2acacd9715297331dc6aded7cc6",
+      "size_bytes": 42172,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p06/development_score_audit_v2.csv",
+      "role": "source_or_config",
+      "sha256": "418b3040b9780e569e39e30e98be700affe7116925711c69ed68e0a32f43709c",
+      "size_bytes": 4853,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p06/window_selection_v2_calibration_report.md",
+      "role": "source_or_config",
+      "sha256": "ca992200a1f6da54bcea2bf39e6016cac74e8f8d3dc11e036930b0cbc2f75b4e",
+      "size_bytes": 2767,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/window_selection_protocol.md",
+      "role": "source_or_config",
+      "sha256": "4a0c11818f7573bb11ea28feb8b9d3cff0e9eb2f94586d945295455817767e1f",
+      "size_bytes": 8470,
+      "status": "PRESENT"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/window_selection_protocol_v2.md",
+      "role": "source_or_config",
+      "sha256": "c2055f9220d98940a25ffb8bc935e7d334f70769c5f8fa9ee92272b368d8b282",
+      "size_bytes": 9661,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/audit_p05_modern_xfeat.py",
+      "role": "source_or_config",
+      "sha256": "2c33ed3e8c16361d2f7e29660bf428938c44feabcff3ad1ea6c82854dbde1e7d",
+      "size_bytes": 14797,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/audit_p06_screening_equivalence.py",
+      "role": "source_or_config",
+      "sha256": "0688afedc4dfe6d6ae3100a3ef573aae2be000c53a33ee952f33552ada46c053",
+      "size_bytes": 7016,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/build_nativeq_legacy_method_lock_v3.py",
+      "role": "source_or_config",
+      "sha256": "ff61ede5d900af62ba179f74bb9131bd16b120326bcf70dba461f91e22feecfa",
+      "size_bytes": 17448,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/build_p06_window_selection_v2.py",
+      "role": "source_or_config",
+      "sha256": "29d1d07c4177e6dc4a289ad9428ca4fdaa41b2a4217b1e58e2d5904fa8148f68",
+      "size_bytes": 8098,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/evaluate_vins_common_support.py",
+      "role": "source_or_config",
+      "sha256": "21685f522c484d6cf333595a27b9566c1acd921e2fc0e060381e5749a6c0a8e1",
+      "size_bytes": 27265,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/learned_seedchain_env.sh",
+      "role": "source_or_config",
+      "sha256": "f4407a4dfe808f6d9f5c7b23ad1ad66cd06d58e87257fb9d6b355153c71a2df3",
+      "size_bytes": 13503,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/p02_window_selection.py",
+      "role": "source_or_config",
+      "sha256": "252dcd56be0f41b86934f18b6915f1bdc1d03cfcd240800ca860cc615395af59",
+      "size_bytes": 11592,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/p06_window_selection_v2.py",
+      "role": "source_or_config",
+      "sha256": "c50f7e93855e21214ac46a50e38a23e35224826a71cc56f0ed95178874c77c2b",
+      "size_bytes": 2798,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/run_afrl_cave_vins_eval.sh",
+      "role": "source_or_config",
+      "sha256": "16966ce2663cf4dff5eb1bdc36c8c975a912dd3089da8dae9ae376799bd547da",
+      "size_bytes": 59481,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/run_aqualoc_archaeo_vins_eval.sh",
+      "role": "source_or_config",
+      "sha256": "4ed3612d7a105ac0f1dab69a44f982381808d21cd93f25984dadb390b431cdfe",
+      "size_bytes": 52310,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/run_aqualoc_real_vins_eval.sh",
+      "role": "source_or_config",
+      "sha256": "400d3287b3d0f168b89a05643587d19c353086c5821b94b4e738487025dd3e5a",
+      "size_bytes": 51054,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/run_isj_nativeq_legacy_candidate.sh",
+      "role": "source_or_config",
+      "sha256": "495074b495da085af459eec6655cbe58ab57de8afe02246102268f1c8558cc9e",
+      "size_bytes": 4759,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/run_learned_seedchain_eval.sh",
+      "role": "source_or_config",
+      "sha256": "8b2db28e5a5c1cc4dfd8ce365d44bdc618e6ec2c4a70db4ea2549b73a965b106",
+      "size_bytes": 4061,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/run_ntnu_vins_eval.sh",
+      "role": "source_or_config",
+      "sha256": "9f9c6f36b947185666d438309098a592c3675b93bf0ee1d5bc84357bae8ba422",
+      "size_bytes": 50834,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/run_p05_modern_xfeat_baseline.sh",
+      "role": "source_or_config",
+      "sha256": "adb5330dd4ab47bcf0d530edd6d8c6bb95d0eb25195f70e83b6e283d255bf81c",
+      "size_bytes": 6597,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/run_p06_development_calibration_v2.sh",
+      "role": "source_or_config",
+      "sha256": "b5568b4aaa3163402fba47c2cce2a2f71b911b18cb05eabf45d1035a3c6c8d47",
+      "size_bytes": 2227,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/run_p06_development_equivalence.sh",
+      "role": "source_or_config",
+      "sha256": "5b3663eca25b075332c83b5cf7caa15b4f383abcde33e5344c8eaa8e03531541",
+      "size_bytes": 1689,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/run_xfeat_seedchain_arbitrated_eval.sh",
+      "role": "source_or_config",
+      "sha256": "82bd47f019a423fc3e8f92bf533c06556dd1eb9b2d20c49ba8ff09e435744fb0",
+      "size_bytes": 91687,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/summarize_g0_common_support.py",
+      "role": "source_or_config",
+      "sha256": "c61cdb985551d947f68987c3fc8bef90b330293e8a4f251a1e53454d6806b188",
+      "size_bytes": 10212,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/tests/test_p05_nativeq_contract.py",
+      "role": "source_or_config",
+      "sha256": "15a749be1c01343e507ecee357dd2d6a98220e19f6c8ba983bcd193a1088d30a",
+      "size_bytes": 2470,
+      "status": "PRESENT"
+    },
+    {
+      "path": "scripts/tests/test_p06_window_screening_contract.py",
+      "role": "source_or_config",
+      "sha256": "86e99e83e93a37fb0f479333de0c35fff94ec33106f70877d2acb3029d8fa7bd",
+      "size_bytes": 4939,
+      "status": "PRESENT"
+    },
+    {
+      "path": "uw_frontend/configs/backend_strict_frontend.yaml",
+      "role": "source_or_config",
+      "sha256": "908351d3d9547b98f917ffd059efdc7b279ee7f9199887688cda48e178a4855a",
+      "size_bytes": 9082,
+      "status": "PRESENT"
+    },
+    {
+      "path": "uw_frontend/configs/experiments/isj_p05_xfeat_pairwise_nativeq.yaml",
+      "role": "source_or_config",
+      "sha256": "118f14bedf0995b1f64e4099ab2eddf653297bc1b55170bc61556e8bcde71d20",
+      "size_bytes": 578,
+      "status": "PRESENT"
+    },
+    {
+      "path": "uw_frontend/configs/experiments/loftr_extreme_only_frontend.yaml",
+      "role": "source_or_config",
+      "sha256": "d5927fb412de869cfe9dd6275dfb81a566fc33e4149160bafc0e8fa933b27eed",
+      "size_bytes": 2121,
+      "status": "PRESENT"
+    },
+    {
+      "path": "uw_frontend/configs/experiments/low_texture_active_xfeat_sidecar.yaml",
+      "role": "source_or_config",
+      "sha256": "2a61f1c57a77df4ed6bf2d85c080c7e6bd754a2ff47171e526e0643a3d617a25",
+      "size_bytes": 1478,
+      "status": "PRESENT"
+    },
+    {
+      "path": "uw_frontend/configs/experiments/low_texture_xfeat_seedchain_frontend.yaml",
+      "role": "source_or_config",
+      "sha256": "6f89d861cc002dfaf0eaf5f1294b0dbcfab9fe268c5dc0d09082f79811000bf3",
+      "size_bytes": 1493,
+      "status": "PRESENT"
+    },
+    {
+      "path": "uw_frontend/configs/experiments/paper_vins_safe_learned_sidecar.yaml",
+      "role": "source_or_config",
+      "sha256": "4500894ee15f4515881de6322e5780ce7f2381b2a1ce7fba4bd3d958e11264ce",
+      "size_bytes": 1964,
+      "status": "PRESENT"
+    },
+    {
+      "path": "uw_frontend/configs/experiments/three_layer_source_aware_frontend.yaml",
+      "role": "source_or_config",
+      "sha256": "236e5173611731ffefd3acdd3b9f69429633dac16ae66429690d609fab0dd5d7",
+      "size_bytes": 5453,
+      "status": "PRESENT"
+    },
+    {
+      "path": "uw_frontend/configs/klt_frontend.yaml",
+      "role": "source_or_config",
+      "sha256": "73fd335a18ed77c821d8bc19b653f26b544acfa90fbb75a53d65d285888fd653",
+      "size_bytes": 2878,
+      "status": "PRESENT"
+    },
+    {
+      "path": "uw_frontend/evaluation/run_frontend_eval.py",
+      "role": "source_or_config",
+      "sha256": "c299038feb926e37bada04d0f150e57d45bed2f4d91bad8fb6a0c4ab2b22e6d2",
+      "size_bytes": 33121,
+      "status": "PRESENT"
+    },
+    {
+      "path": "uw_frontend/matchers/xfeat_adapter.py",
+      "role": "source_or_config",
+      "sha256": "c59914f67bf2e7a53c9faf3ba901b6de8dfc114497a02756891032ac1d91a592",
+      "size_bytes": 3236,
+      "status": "PRESENT"
+    },
+    {
+      "path": "uw_frontend/ros/export_vins_features.py",
+      "role": "source_or_config",
+      "sha256": "7ed31890e3a55a528430e912df885830176b3c3432c420860a39d714bceae7cf",
+      "size_bytes": 435551,
+      "status": "PRESENT"
+    },
+    {
+      "path": "uw_frontend/tracking/hybrid_tracker.py",
+      "role": "source_or_config",
+      "sha256": "7772772f1baf0966a4b1096ac1cd3122d71edbe18031756de409443e7c5ea2ae",
+      "size_bytes": 220766,
+      "status": "PRESENT"
+    },
+    {
+      "path": "uw_frontend/tracking/klt_tracker.py",
+      "role": "source_or_config",
+      "sha256": "e60957bc0b45a11ef24824fa95ef9093dbbd7ba5998bc82bb91641c831f1fb5b",
+      "size_bytes": 12306,
+      "status": "PRESENT"
+    },
+    {
+      "path": "uw_frontend/tracking/pairwise_matcher_tracker.py",
+      "role": "source_or_config",
+      "sha256": "2eda020b3b539fa6b55148aaf28d9dcacc39fe94f16fe6b9db5ffa7e9d7426ba",
+      "size_bytes": 6360,
+      "status": "PRESENT"
+    }
+  ],
+  "blockers": [
+    "P06 outcome-blind full-sequence screening and final manifest are pending"
+  ],
+  "candidate_lock_hash": "19b0e4754341d52d6c52e8b3da7409bf22d228ca4a775ae6efe92c072ce71f63",
+  "development_evidence": [
+    {
+      "path": "logs/ntnu_vins/external_hybrid_xfeat_every2_validation_20260804_ntnu_fjord1_s83_d30_xfeat_historical_profile_nativeq/features.bag",
+      "role": "development_evidence",
+      "sha256": "6a0d38686f823c273dea3fc23495de5f10e3c6b52ad4c43f84f287585434102f",
+      "size_bytes": 9121697,
+      "status": "PRESENT"
+    },
+    {
+      "path": "logs/ntnu_vins/external_klt_every2_validation_20260804_ntnu_fjord1_s83_d30_klt_nativeq/features.bag",
+      "role": "development_evidence",
+      "sha256": "51fc54e1fae5476a3525610865606433d5ae182a142c333c360c892d70c48ff5",
+      "size_bytes": 9135137,
+      "status": "PRESENT"
+    },
+    {
+      "path": "/mnt/data/AQUA-FE_WS/validation_20260804/ntnu_fjord1_s83_d30_common_support_nativeq_constq_xfeatq1_all/common_support_summary.json",
+      "role": "development_evidence",
+      "sha256": "11ca3675d851b9fd19178c9e83e4c5ff58e1bf4fb055202c62a6971677d07044",
+      "size_bytes": 34493,
+      "status": "PRESENT"
+    },
+    {
+      "path": "/mnt/data/AQUA-FE_WS/validation_20260804/ntnu_s83_d30_contract/nativeq_reconstruction_audit.json",
+      "role": "development_evidence",
+      "sha256": "ede5fb25d7f15eee5edb0b739d0c0f8c598beeec4cb9cf1bac7279cb8e3ad07e",
+      "size_bytes": 1370,
+      "status": "PRESENT"
+    },
+    {
+      "path": "/mnt/data/AQUA-FE_WS/validation_20260804/ntnu_fjord1_s83_d30_nativeq_retrospective_gftt_same_id.bag",
+      "role": "development_evidence",
+      "sha256": "05476264c6df1919f89dc9f9aece34d4e08acd1b78e6260d4ec2b9642bd957d9",
+      "size_bytes": 9121697,
+      "status": "PRESENT"
+    },
+    {
+      "path": "/mnt/data/AQUA-FE_WS/validation_20260804/ntnu_fjord1_s83_d30_nativeq_exact_drop.bag",
+      "role": "development_evidence",
+      "sha256": "1ff7dd3e153c32dc5f8f746a6f50a678c3456790962ac35bb2f8bbe4bbb096d4",
+      "size_bytes": 9121185,
+      "status": "PRESENT"
+    },
+    {
+      "path": "/mnt/data/AQUA-FE_WS/validation_20260804/ntnu_fjord1_s83_d30_nativeq_xfeat_q1.bag",
+      "role": "development_evidence",
+      "sha256": "bc01d208ee56a3b76b417c5a86ff11e0d55fdc84e26465abf3af292def4cb860",
+      "size_bytes": 9121697,
+      "status": "PRESENT"
+    }
+  ],
+  "generated_at_utc": "2026-08-04T10:46:11+00:00",
+  "method_identity": {
+    "admission": "LK/KLT_probation_then_frozen_microburst_or_safe_fallback",
+    "development_only_identity_event": "NTNU_fjord1_s83_d30",
+    "entrypoint": "scripts/run_isj_nativeq_legacy_candidate.sh",
+    "name": "AQUA-FE native-q learned-seeded legacy candidate",
+    "profile": "isj-nativeq-xfeat-seedchain-legacy-v3",
+    "proposal": "official_XFeat_sparse_matches",
+    "qg_selector": "NOT_APPLICABLE_RETIRED",
+    "selector": "frozen_lineage_early_seed_scan_arbitration"
+  },
+  "missing_artifacts": [],
+  "p05_status": "PASS",
+  "p06_window_selection_calibration_status": "PASS",
+  "protocol_version": "isj-nativeq-legacy-candidate-v3",
+  "route": "MULTI_SEQUENCE_CANDIDATE",
+  "schema_version": "isj-method-lock-nativeq-legacy-candidate-v3",
+  "shared_contract": {
+    "backend_quality_alpha": 0.65,
+    "backend_quality_floor": 0.8,
+    "backend_quality_mode": "vins_safe",
+    "dose_matching": "same_maximum_budget_not_equal_realized_count",
+    "global_constant_q_main_matrix": false,
+    "maximum_feature_budget": 350,
+    "preprocess": "adaptive_clahe",
+    "primary_metric": "G0_common_support_1s_translation_RPE_RMSE",
+    "replay": "serial_single_thread_three_replays",
+    "replay_reducer": "median_of_at_least_2_of_3; any_of_3_hard_and_solver_risk",
+    "sampling": {
+      "afrl": {
+        "every_n": 2,
+        "frame_offset": 0
+      },
+      "aqualoc_archaeology": {
+        "every_n": 2,
+        "frame_offset": 1
+      },
+      "aqualoc_harbor": {
+        "every_n": 2,
+        "frame_offset": 1
+      },
+      "ntnu": {
+        "every_n": 2,
+        "frame_offset": 1
+      }
+    },
+    "scientific_unit": "sequence_not_replay",
+    "window_selection_protocol": "isj-window-selection-v2",
+    "window_selection_thresholds": {
+      "tau_low": 0.17,
+      "tau_normal": 0.1
+    }
+  },
+  "status": "READY_FOR_P06_SCREENING",
+  "supersedes_for_headline_only": {
+    "disposition": "retained_unchanged_as_failed_qg_development_candidate",
+    "path": "papers/ieee_sensors_journal_experiments/method_lock_candidate.json",
+    "sha256": "16ff1d8c30540c48619d6ec5d952562e7f8256835491b75c519bf62d375561b1"
+  },
+  "supersedes_nativeq_candidate": {
+    "disposition": "retained_unchanged; superseded because the ROS exporter hash changed during outcome-blind P06 metric contract repair",
+    "path": "papers/ieee_sensors_journal_experiments/method_lock_nativeq_legacy_candidate_v2.json",
+    "sha256": "627c3546c6072bc26b06f2cdd7b758be2322ea865ffe58d4c5a07a118cb9030b"
+  },
+  "vins_binary": {
+    "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/vins/vins_node",
+    "role": "vins_binary",
+    "sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+    "size_bytes": 13104360,
+    "status": "PRESENT"
+  },
+  "vins_source": {
+    "file_count": 294,
+    "git_commit": "6c3eda28f4614ae3d7c4c1c1668ebe553efffa08",
+    "root": "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master",
+    "status": "PRESENT",
+    "tree_sha256": "8994950ba4b881dd857cf2d42f2b7bc08d2265e262886b4a2ca69b90afb37dba"
+  },
+  "xfeat_upstream": {
+    "git_commit": "e92685f57f8318b18725c5c8c0bd28c7fe188d9a",
+    "license": "Apache-2.0",
+    "local_worktree_note": "tracked content matches recorded hashes; repository mode bits differ locally",
+    "repository": "https://github.com/verlab/accelerated_features.git"
+  }
+}

@@ -1,0 +1,10 @@
+extends: mimir_loftr_klt_sidecar_frontend.yaml
+
+hybrid:
+  # A confirmed LoFTR seed is inserted into the hybrid KLT state with a fresh,
+  # monotonic internal id. Keep that learned-born provenance for as long as the
+  # LK carrier remains alive. The former 20-raw-frame hold expired after about
+  # 0.87 s on MIMIR and made a surviving learned lineage look classical.
+  # Entries are still removed when the KLT id disappears, so this does not
+  # reconnect a lost/revived feature or extrapolate observations.
+  source_provenance_learned_hold_frames: 600

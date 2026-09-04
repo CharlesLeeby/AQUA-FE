@@ -1,0 +1,71 @@
+{
+  "schema_version": "aqua-fe-hfnet-supervins-mh01-common-support-test-receipt-v1",
+  "created_at": "2026-08-21T02:31:41+08:00",
+  "status": "PASS_SYNTHETIC_AND_TIMESTAMP_ONLY_PRESTART_TESTS",
+  "exact_command": [
+    "/usr/bin/python3.8",
+    "-B",
+    "-m",
+    "unittest",
+    "-q",
+    "scripts.tests.test_evaluate_hfnet_supervins_v1_official_euroc_mh01_common_support_v1"
+  ],
+  "working_directory": "/home/ma/AQUA-FE_WS",
+  "return_code": 0,
+  "stdout_exact": "",
+  "stderr_exact": "----------------------------------------------------------------------\nRan 65 tests in 1.104s\n\nOK\n",
+  "test_count": 65,
+  "unittest_reported_runtime_seconds": 1.104,
+  "controller_observed_wall_time_seconds": 1.3,
+  "identities": {
+    "freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_supervins_v1_official_euroc_mh01_common_support_descriptive_freeze_v1.json",
+      "sha256": "63712f50e2ad21e802066930fd751394249abeb33f76104b33cbbb3c48d8056a",
+      "size_bytes": 22291,
+      "mode": "0444",
+      "nlink": 1
+    },
+    "runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_hfnet_supervins_v1_official_euroc_mh01_common_support_v1.py",
+      "sha256": "f42ad63159e4cfc292540fc0b137eb211aa15569de765e8d478b6eb67d4ed9a2",
+      "size_bytes": 87654,
+      "mode": "0444",
+      "nlink": 1
+    },
+    "tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_evaluate_hfnet_supervins_v1_official_euroc_mh01_common_support_v1.py",
+      "sha256": "a4d977347a9633884bfb48ed5abb813beb56c7067b68b7dfe5c0cdb0b61e94ac",
+      "size_bytes": 39542,
+      "mode": "0444",
+      "nlink": 1
+    }
+  },
+  "coverage": [
+    "exact HFNet and SuperVINS Decimal/string timestamp parsing and float-trap negative",
+    "official timestamp-only 3682/36382/2737/1810 structure and exact 945..3659 common support",
+    "1358 exact GT joins, 1348 exact-one-second pairs, endpoints and off-by-one negative",
+    "SuperVINS >1000 ns/wrong-camera and missing-exact-GT negatives",
+    "body-frame identity and GT quaternion wxyz-to-xyzw parsing",
+    "independent proper fixed-scale SE3, core crosscheck, reflected and rank-degenerate negatives",
+    "proper positive-scale Sim3 diagnostic and cannot-replace-primary flags",
+    "finite metrics and NaN JSON rejection",
+    "cross-system metric-contrast schema and wording rejection",
+    "held-descriptor ordinary replacement, post-open symlink-to-original-inode, pre-open symlink, and general pin/identity symlink negatives",
+    "actual exact-common wiring with independent transforms, exact-support/full-support negative, direct body positions, isolated source/target/covariance rank gates, and Sim3 reflection correction",
+    "equal metric aspect, shared plotting domain, zero-lower axes, and horizontal-gridline coordinates",
+    "O_EXCL/mode/nlink, manifest tree/self-hash tamper, extra-file rejection, early-signal, root-parent-fsync-after-mkdir, post-claim ordinary exception, partial-bundle terminal closeout, and authority identity-change gates"
+  ],
+  "scientific_boundary": {
+    "real_trajectory_positions_parsed": false,
+    "real_alignment_computed": false,
+    "real_ape_or_rpe_computed": false,
+    "synthetic_positions_and_errors_only": true,
+    "official_timestamps_parsed": true,
+    "ros_model_publisher_or_trajectory_generation_started": false,
+    "subprocess_scientific_run_started": false,
+    "authority_created": false,
+    "evidence_root_created": false
+  },
+  "self_hash_algorithm": "SHA-256 over compact canonical JSON (sort_keys=true,separators comma/colon,allow_nan=false) with self_hash set to null",
+  "self_hash": "1ff658464c146ff54323a76d3ec6ae7db4e4341c0a8cf8648cbb102cf02e8068"
+}

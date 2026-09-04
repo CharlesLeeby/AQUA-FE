@@ -1,0 +1,14 @@
+extends: backend_strict_frontend.yaml
+
+measurement_selection:
+  # Optional backend-output ablation: keep the backend-strict residual-first
+  # selector, then refill geometrically valid tracks from sparse grid cells.
+  # The refill is post-validated against the backend-strict baseline before it
+  # is accepted, so geometry remains the primary objective.
+  coverage_refill_enabled: true
+  coverage_refill_target_grid_coverage: 0.62
+  coverage_refill_max_extra_fraction: 0.35
+  coverage_refill_max_per_cell: 8
+  coverage_refill_target_cell_count: 2
+  coverage_refill_weight: 0.75
+  coverage_refill_max_trials: 5

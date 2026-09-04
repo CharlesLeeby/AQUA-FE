@@ -1,0 +1,356 @@
+{
+  "allowed_arms": [
+    "M_xfeat_pairwise_nativeq_v1",
+    "P_legacy_nativeq_xfeat_seedchain_v3"
+  ],
+  "allowed_queue_indices": [
+    2,
+    3
+  ],
+  "artifacts": [
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_export_queue_v1.csv",
+      "sha256": "8ced85066e7cd5aa8e7a0fc7d5f42ce07e99e97a36703b9404b8aab9f2103457",
+      "size_bytes": 36841
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_queue_lock_v1.json",
+      "sha256": "92300f09d0c29c7e5db6e24e36bedaf518722c0b5a36e720e33f79065be517e1",
+      "size_bytes": 2645
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_run_allocation_v1.csv",
+      "sha256": "05b706010ce5fc1d5032bf680dc286d2b69fc98c190a25fdf4e1ceee84df84ec",
+      "size_bytes": 40388
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/preoutcome_analysis_lock_v1.json",
+      "sha256": "207f2654fe0dd660205298c63a389ea894461b8224c596cd5537b28cfc2d0835",
+      "size_bytes": 9042
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/execution_adapter_lock_v1.json",
+      "sha256": "92bf8b67caca2186c9665b0b78488363b9f28ee5eb404f0e7c86a0a7c325bff2",
+      "size_bytes": 5998
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/method_lock.json",
+      "sha256": "eae7a0fc6e94766a119be6abe5763fbfba8f64d9663f45f2f48ee591cf62a3cf",
+      "size_bytes": 9634
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/protocol_v1_nativeq_v3.md",
+      "sha256": "4466cff65d9df2be4dab97350041c2c79f687e624e6b658fb734a70459222bda",
+      "size_bytes": 2978
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/d_applicability_queue_v1.csv",
+      "sha256": "5b177636673db2a3198638a5bdca42d8e53de024b91081ac206f939f367ce45c",
+      "size_bytes": 8914
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/dataset_checksum_manifest.txt",
+      "sha256": "8b4715d0e55414bade394935472a2ef6a88132492c96b58edfbe2d6961f1a2e7",
+      "size_bytes": 6924
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p05/backend_consumer_contract_xfeat_v1.json",
+      "sha256": "7cc27811379148db92937e563ba97f0c8aec7ebcfc49834f9707a4306858ab61",
+      "size_bytes": 8792
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/backend_quality_contract_v1.json",
+      "sha256": "14abab7ca7ad0f48af8856372b3cf97470d405c1e20081cdb4247f3c87b64957",
+      "size_bytes": 4893
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/b1_auditor_correction_lock_v2.json",
+      "sha256": "31ef16563f73088e872ecce0e6baf502c171e9b6ad7a489d92ac84744c2d54ee",
+      "size_bytes": 3699
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_001_isj_p07_aqualoc_archaeology_a02_0005_b1_attempt01/audit_v2.json",
+      "sha256": "569a59d09788ddbfd31953be348437f7b1379e4592f788a90b1e4b9400e4760d",
+      "size_bytes": 3330
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_001_isj_p07_aqualoc_archaeology_a02_0005_b1_attempt01/audit_correction_closeout_v2.json",
+      "sha256": "88a1f2ed4e6fd01127b080e87c15defc5ba0760af814d9d5493c4a024cefa587",
+      "size_bytes": 1664
+    },
+    {
+      "path": "logs/aqualoc_archaeo_vins/external_klt_every2_isj_p07_aqualoc_archaeology_a02_0005_b1_attempt01/features.bag",
+      "sha256": "7b9cbc6b4fcfa2640a12f0f42aa99d4610b1ab43fed39027f06a6fa2928ec9f9",
+      "size_bytes": 13728676
+    },
+    {
+      "path": "scripts/run_p07_mp_frontend_export_job_v2.py",
+      "sha256": "191c7b44a511b358c7e1a5b13418db14f0ed6a069af6074e164652d82b8da7a0",
+      "size_bytes": 25107
+    },
+    {
+      "path": "scripts/audit_p07_mp_frontend_export_v2.py",
+      "sha256": "071c0f6627afc9111bf4bb3efabddad4bf02e48d2305a60381056e7f52b0c7dc",
+      "size_bytes": 28967
+    },
+    {
+      "path": "scripts/build_p07_mp_smoke_execution_lock_v2.py",
+      "sha256": "332543ce5ba2e6b941e48c4b366b0a5a10d0e4c32171a599b4ec7c5999042f1e",
+      "size_bytes": 14538
+    },
+    {
+      "path": "scripts/tests/test_p07_mp_frontend_export_v2.py",
+      "sha256": "e90362ef5877d256e803763561b886bf1a5e2e0cbb38028073a4582102d5fae4",
+      "size_bytes": 5404
+    },
+    {
+      "path": "scripts/tests/test_p07_mp_smoke_execution_lock_v2.py",
+      "sha256": "3388bbec9463376aae3fffde2ecaefdc478b4f5ee3f4b891bc0765ac5f5362e2",
+      "size_bytes": 2297
+    },
+    {
+      "path": "scripts/run_p05_modern_xfeat_baseline_guarded_v2.sh",
+      "sha256": "6af0f33684a717fa8403cf668b03e5f3040592f11e1ccb2e6173cc86742945df",
+      "size_bytes": 4659
+    },
+    {
+      "path": "scripts/run_p05_modern_xfeat_baseline.sh",
+      "sha256": "adb5330dd4ab47bcf0d530edd6d8c6bb95d0eb25195f70e83b6e283d255bf81c",
+      "size_bytes": 6597
+    },
+    {
+      "path": "scripts/check_p05_xfeat_backend_contract_v1.py",
+      "sha256": "fa19cbfb5e94803ef8bbc470f2d6a1eb0ea0108fe1805891eaeed5aa9bc35e00",
+      "size_bytes": 23546
+    },
+    {
+      "path": "scripts/attest_p05_xfeat_feature_bag_v1.py",
+      "sha256": "c43099995255dc7b5a7882eac5003d9051f59dcd96ca516bdd318f979d2d986a",
+      "size_bytes": 10390
+    },
+    {
+      "path": "scripts/run_isj_nativeq_contract_guarded_v4.sh",
+      "sha256": "f4bffa30037261c0896bb4fd4f14929bc4445f854ca409ac82b6240ac4706373",
+      "size_bytes": 2217
+    },
+    {
+      "path": "scripts/run_isj_nativeq_legacy_candidate.sh",
+      "sha256": "495074b495da085af459eec6655cbe58ab57de8afe02246102268f1c8558cc9e",
+      "size_bytes": 4759
+    },
+    {
+      "path": "scripts/run_xfeat_seedchain_arbitrated_eval.sh",
+      "sha256": "82bd47f019a423fc3e8f92bf533c06556dd1eb9b2d20c49ba8ff09e435744fb0",
+      "size_bytes": 91687
+    },
+    {
+      "path": "scripts/check_nativeq_backend_contract.py",
+      "sha256": "37c61326e38d17e2a950fff66c9bd062bed8eab015385da36474c3bb558d3f4f",
+      "size_bytes": 11394
+    },
+    {
+      "path": "scripts/attest_nativeq_feature_bag.py",
+      "sha256": "ff4fcd9a9d97178c5a54935a4c6efe766a183af2546e30f33b55f831c4f2608e",
+      "size_bytes": 5250
+    },
+    {
+      "path": "scripts/run_aqualoc_archaeo_vins_eval.sh",
+      "sha256": "4ed3612d7a105ac0f1dab69a44f982381808d21cd93f25984dadb390b431cdfe",
+      "size_bytes": 52310
+    },
+    {
+      "path": "uw_frontend/ros/export_vins_features.py",
+      "sha256": "7ed31890e3a55a528430e912df885830176b3c3432c420860a39d714bceae7cf",
+      "size_bytes": 435551
+    },
+    {
+      "path": "uw_frontend/configs/experiments/isj_p05_xfeat_pairwise_nativeq.yaml",
+      "sha256": "118f14bedf0995b1f64e4099ab2eddf653297bc1b55170bc61556e8bcde71d20",
+      "size_bytes": 578
+    },
+    {
+      "path": "uw_frontend/configs/experiments/low_texture_xfeat_seedchain_frontend.yaml",
+      "sha256": "6f89d861cc002dfaf0eaf5f1294b0dbcfab9fe268c5dc0d09082f79811000bf3",
+      "size_bytes": 1493
+    }
+  ],
+  "capacity_gate": {
+    "base_minimum_output_free_bytes": 3221225472,
+    "cached_raw_bag_bytes": 222477260,
+    "estimated_new_m_p_and_d_run_bytes": 56029188,
+    "estimated_required_output_free_bytes": 3221225472,
+    "margin_multiplier": 1.2,
+    "minimum_governance_free_bytes": 536870912,
+    "observed_b1_run_bytes": 14007297,
+    "observed_governance_free_bytes": 6663950336,
+    "observed_output_free_bytes": 12088651776,
+    "raw_bag_cached": true,
+    "recompute_before_each_job": true,
+    "separate_reserve_bytes": 2147483648,
+    "uncached_raw_bytes": 0
+  },
+  "dependencies": {
+    "b1_feature_bag": "logs/aqualoc_archaeo_vins/external_klt_every2_isj_p07_aqualoc_archaeology_a02_0005_b1_attempt01/features.bag",
+    "b1_feature_bag_sha256": "7b9cbc6b4fcfa2640a12f0f42aa99d4610b1ab43fed39027f06a6fa2928ec9f9",
+    "b1_parent_run_id": "isj-nativeq-v3_P07_aqualoc_archaeology-A02_4500-5400_B1_f0_b00_20260806T084500Z",
+    "b1_preserved_failed_event_id": "isj-nativeq-v3_P07_aqualoc_archaeology-A02_4500-5400_B1_f0_b00_20260806T084500Z_e02",
+    "b1_required_latest_event_id": "isj-nativeq-v3_P07_aqualoc_archaeology-A02_4500-5400_B1_f0_b00_20260806T084500Z_e03",
+    "b1_required_latest_status": "COMPLETED",
+    "queue_3_completion_gates_d_slot": 4,
+    "queue_3_requires_queue_2_completed": true
+  },
+  "execution_lock_hash": "2a62a8621fe5f5944da8379978163a3def290fa60c131d94bef5bde20b78c637",
+  "execution_order": [
+    2,
+    3
+  ],
+  "external_artifacts": [
+    {
+      "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/vins/vins_node",
+      "sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+      "size_bytes": 13104360
+    }
+  ],
+  "forbidden_workspace": "/home/ma/SLAM/VINS-Fusion_3-15-WS",
+  "frozen_at": "2026-08-06T20:49:43+08:00",
+  "guard_policy": {
+    "outer_contract_fallback_counts_as_arm": false,
+    "run_guard_only_preflight_before_each_export": true,
+    "sanitized_inherited_environment_keys": [
+      "AQUAFE_BACKEND_QUALITY_CONTRACT",
+      "AQUAFE_CONTRACT_CHECKER",
+      "AQUAFE_DECISION_DIR",
+      "AQUAFE_FALLBACK_RUNNER",
+      "AQUAFE_GUARD_ONLY",
+      "AQUAFE_P05_BACKEND_CONTRACT",
+      "AQUAFE_P05_CONTRACT_CHECKER",
+      "AQUAFE_P05_DECISION_DIR",
+      "AQUAFE_P05_FALLBACK_RUNNER",
+      "AQUAFE_P05_GUARD_ONLY",
+      "AQUAFE_P05_ON_MISMATCH",
+      "AQUAFE_P05_RUNNER",
+      "AQUAFE_P05_TEST_HOOKS",
+      "AQUAFE_PROPOSED_RUNNER",
+      "EXPORT_FEATURES",
+      "FEATURE_BAG",
+      "FEATURE_BAG_OVERRIDE",
+      "FORCE_EXPORT",
+      "FORCE_RAW",
+      "MODE",
+      "P05_QUALITY_CONTRACT_ATTESTATION",
+      "QUALITY_CONTRACT_ATTESTATION",
+      "RAW_BAG",
+      "ROOT",
+      "RUN_DIR",
+      "RUN_VINS",
+      "TAG",
+      "TAG_BASE"
+    ]
+  },
+  "held_out_frontend_outcome_read": true,
+  "held_out_trajectory_outcome_read": false,
+  "lineage_contract": {
+    "birth_rule": "first ID occurrence has is_learned=1 or learned source_code",
+    "count_unit": "DISTINCT_LEARNED_BORN_FEATURE_ID",
+    "invalid_parent_action": "UNRESOLVABLE_PARENT_FAILURE_AND_D_BLOCKED",
+    "late_marker_policy": "FAIL_CLOSED",
+    "positive_count_action": "DERIVE_D_AND_REQUIRE_PASS_EXACT_WHOLE_LINEAGE_DROP",
+    "source_codes": [
+      10,
+      20,
+      30
+    ],
+    "zero_count_action": "REQUIRE_P_AND_B1_FEATURE_BAGS_BYTE_IDENTICAL_THEN_NOT_APPLICABLE"
+  },
+  "method_lock_hash": "1d032e4d43b2a647626b40cef906144dcceab523126bfee3b345b05b4efb578d",
+  "mutable_stream_prefix_snapshots": [
+    {
+      "binding": "PREEXECUTION_APPEND_ONLY_PREFIX_SNAPSHOT",
+      "latest_required_event_id": "isj-nativeq-v3_P07_aqualoc_archaeology-A02_4500-5400_B1_f0_b00_20260806T084500Z_e03",
+      "path": "papers/ieee_sensors_journal_experiments/run_registry.csv",
+      "sha256": "454f0406e3528097708e4e336f06ba273a30b88c96d1c3a627bad1263f402efe",
+      "size_bytes": 59911
+    },
+    {
+      "binding": "PREEXECUTION_APPEND_ONLY_PREFIX_SNAPSHOT",
+      "path": "papers/ieee_sensors_journal_experiments/arm_applicability.csv",
+      "sha256": "b106ad71981ca8d264d18f822c671f3dd1edf1eb19ba9e69b650fdabd568aae3",
+      "size_bytes": 7993
+    }
+  ],
+  "next_action": "EXECUTE_QUEUE_INDEX_2_THEN_3_THEN_RESOLVE_D_SLOT_4",
+  "no_clobber": {
+    "attempt_directory_must_not_exist": true,
+    "capacity_checked_before_attempt_directory_creation": true,
+    "p_tag_family_must_not_exist": true,
+    "replacement_requires_new_run_id_and_attempt02_or_later_tag": true,
+    "target_collision_count": 0
+  },
+  "outcome_boundary": "A02_M_P_FRONTEND_EXPORT_ONLY_NO_VINS_APE_RPE_TRAJECTORY",
+  "protocol_version": "isj-nativeq-v3-confirmatory-protocol-v1",
+  "queue_items": [
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "attestation_suffix": ".p05-xfeat-contract.json",
+      "command": "RUN_VINS=0 FORCE_EXPORT=1 TAG=isj_p07_aqualoc_archaeology_a02_0005_m_attempt01 bash scripts/run_p05_modern_xfeat_baseline_guarded_v2.sh aqualoc_archaeology 2 4500 5400 2",
+      "command_sha256": "220c562dae36831d6cedd8272d7ad61c1dcb58928acdee0be453272780a5c1cc",
+      "expected_feature_bag": "logs/aqualoc_archaeo_vins/external_xfeat_every2_isj_p07_aqualoc_archaeology_a02_0005_m_attempt01/features.bag",
+      "expected_feature_frames": 450,
+      "expected_imu_messages": 9091,
+      "expected_raw_images": 901,
+      "expected_reference_messages": 46,
+      "expected_run_root": "logs/aqualoc_archaeo_vins",
+      "feature_bag_resolution": "EXACT_PATH",
+      "guard": {
+        "action": "ALLOW_M_XFEAT",
+        "contract_hash": "4e31a9a29e8ee2198535de6b0bce01550b17077434e8e01ed68057822d4eace4",
+        "counts_as_result_field": "counts_as_modern_baseline=true",
+        "schema_version": "aqua-fe-p05-xfeat-backend-guard-decision-v1"
+      },
+      "queue_index": 2,
+      "run_id": "isj-nativeq-v3_P07_aqualoc_archaeology-A02_4500-5400_M_f0_b00_20260806T084500Z",
+      "tag": "isj_p07_aqualoc_archaeology_a02_0005_m_attempt01",
+      "window_id": "aqualoc_archaeology:A02:0005"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "attestation_suffix": ".quality-contract.json",
+      "command": "RUN_VINS=0 FORCE_EXPORT=1 TAG_BASE=isj_p07_aqualoc_archaeology_a02_0005_p_attempt01 bash scripts/run_isj_nativeq_contract_guarded_v4.sh aqualoc_archaeo 2 4500 5400 hybrid_xfeat 2",
+      "command_sha256": "130dd140bd3c56ae59cb89beb315e7d74ba29544c09a937624801ff9ea03c034",
+      "expected_feature_bag": "",
+      "expected_feature_frames": 450,
+      "expected_imu_messages": 9091,
+      "expected_raw_images": 901,
+      "expected_reference_messages": 46,
+      "expected_run_root": "logs/aqualoc_archaeo_vins",
+      "feature_bag_resolution": "READ_FINAL_RUN_FROM_ARBITRATION_SUMMARY_UNDER_TAG_BASE",
+      "guard": {
+        "action": "ALLOW_LEARNED",
+        "contract_hash": "39eaea6d26e6f5a881ef2b17b898cbda75c7aba8087ce447fe897e2fe0bdfce0",
+        "counts_as_result_field": "counts_as_proposed_result=true",
+        "schema_version": "aqua-fe-nativeq-backend-guard-decision-v1"
+      },
+      "queue_index": 3,
+      "run_id": "isj-nativeq-v3_P07_aqualoc_archaeology-A02_4500-5400_P_f0_b00_20260806T084500Z",
+      "tag": "isj_p07_aqualoc_archaeology_a02_0005_p_attempt01",
+      "window_id": "aqualoc_archaeology:A02:0005"
+    }
+  ],
+  "queue_lock_hash": "23095fffe3474d3c85fd809c94b0bf4cd0094aa8bbc083b65dd1a4cc950144eb",
+  "required_terminal_evidence": [
+    "exact guard-only preflight PASS and exact in-command nonfallback guard PASS",
+    "450 feature frames with 13-channel schema and 350 cap",
+    "9091 copied IMU and 46 copied reference messages",
+    "arm-specific contract-bound bag attestation",
+    "frontend metrics and feature bag frame/observation equality",
+    "P final bag resolved from exactly one self-consistent arbitration summary",
+    "distinct learned-born lineage audit with late-marker fail-closed rule",
+    "zero-action P byte identity to B1 or positive lineage count",
+    "absence of VINS, trajectory, APE, and RPE artifacts",
+    "input/output hashes and contiguous append-only registry chain"
+  ],
+  "schema_version": "isj-p07-mp-smoke-execution-lock-v2",
+  "status": "FROZEN_READY_FOR_A02_M_P_EXPORT",
+  "vins_workspace": "/home/ma/SLAM/VINS-Fusion-origin",
+  "window_id": "aqualoc_archaeology:A02:0005"
+}

@@ -1,0 +1,86 @@
+{
+  "branch_isolation": {
+    "changed_scope": [
+      "DL-VINS learned pairwise camera normalization wiring",
+      "DL-VINS learned pairwise geometry metrics"
+    ],
+    "klt_factory_branch_ast_sha256": "5979d927d0315b678daf6e83894242a97bd5abb1890b323858a15657234ef810",
+    "klt_factory_old_equals_current": true,
+    "scientific_boundary": "This proves source-path compatibility for B1 KLT export only; it is not a trajectory result or a learned-method claim.",
+    "vins_pointcloud_payload_function_ast_sha256": "268d3b2beaf8f77b3aa69fd9651425c36119625bcd04c9286ef5c2e748037f5f",
+    "vins_pointcloud_payload_old_equals_current": true
+  },
+  "contract_pass": true,
+  "patches_forward_order": [
+    {
+      "diff_sha256": "c9267362c615ddbf370ccdebd0fa39ab77efa02d7e2a8e043c6ad82b45bc7f18",
+      "diff_size_bytes": 2025,
+      "hunks": [
+        "-2406,3 +2406,9",
+        "-2416,3 +2422,2",
+        "-4534,3 +4539,9",
+        "-4551,5 +4562,13",
+        "-4743,5 +4762,10"
+      ],
+      "jsonl_line": 4556,
+      "scope": "pairwise learned-method camera/normalizer wiring; KLT branch unchanged",
+      "timestamp": "2026-08-09T17:22:27.719Z"
+    },
+    {
+      "diff_sha256": "068bb64e614cf13bdabd4087f5dbaca2116f82a3fafbe136f79dc9b424d120fe",
+      "diff_size_bytes": 296,
+      "hunks": [
+        "-10291,2 +10291,9"
+      ],
+      "jsonl_line": 4561,
+      "scope": "pairwise camera focal-mean helper",
+      "timestamp": "2026-08-09T17:22:33.703Z"
+    },
+    {
+      "diff_sha256": "a2786bef7590bc9df62d17247016a17dfa9fbf7fe5dd17da4c3483f8e8731391",
+      "diff_size_bytes": 1756,
+      "hunks": [
+        "-2507,2 +2507,7",
+        "-3808,2 +3813,27"
+      ],
+      "jsonl_line": 4566,
+      "scope": "pairwise geometry metrics columns only",
+      "timestamp": "2026-08-09T17:22:44.550Z"
+    },
+    {
+      "diff_sha256": "c3d0da7b00629639b9a80c417cfa1204e5ac881df39562f1a572a6f0bd4f7cae",
+      "diff_size_bytes": 2425,
+      "hunks": [
+        "-3813,27 +3813,3",
+        "-10328,2 +10304,32"
+      ],
+      "jsonl_line": 4591,
+      "scope": "metrics-only helper refactor",
+      "timestamp": "2026-08-09T17:25:34.108Z"
+    }
+  ],
+  "reconstruction": {
+    "current": {
+      "path": "/home/ma/AQUA-FE_WS/uw_frontend/ros/export_vins_features.py",
+      "sha256": "567ccc74989d7fb4ddcb38ac558fecea33033139a0b0db98e61124c6bac5a00d",
+      "size_bytes": 437542
+    },
+    "reconstructed_old": {
+      "sha256": "7ed31890e3a55a528430e912df885830176b3c3432c420860a39d714bceae7cf",
+      "size_bytes": 435551
+    }
+  },
+  "reverse_order_jsonl_lines": [
+    4591,
+    4566,
+    4561,
+    4556
+  ],
+  "schema_version": "aqua-fe-b1-klt-exporter-transition-proof-v2",
+  "source_session": {
+    "path": "/home/ma/.codex/sessions/2026/08/08/rollout-2026-08-08T15-46-02-019fe056-07d7-79b3-bcbb-cc543d382467.jsonl",
+    "privacy_boundary": "only four patch_apply_end records were extracted",
+    "sha256": "2ea5f5ceb61477f2fa0557b85c3955fce872b070f31a5c281a521b3504afcedc"
+  },
+  "status": "PASS"
+}

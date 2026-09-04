@@ -1,0 +1,152 @@
+{
+  "arms": {
+    "drop": {
+      "ape_max_m": 35.266400164690886,
+      "ape_median_m": 12.761390874092328,
+      "ape_rmse_m": 14.749931226562724,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 140,
+        "raw_count": 140,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 140
+      },
+      "bracket_gap_max_s": 0.10000061988830566,
+      "bracket_gap_p50_s": 0.09999895095825195,
+      "bracket_gap_p95_s": 0.09999918937683105,
+      "legacy_max_reference_reuse": 1,
+      "legacy_pair_count": 140,
+      "legacy_timestamp_error_max_s": 0.01564478874206543,
+      "legacy_timestamp_error_p95_s": 0.006988835334777832,
+      "legacy_unique_assignment_error_max_s": 0.01564478874206543,
+      "legacy_unique_assignment_error_p95_s": 0.006988835334777832,
+      "legacy_unique_assignment_pair_count": 140,
+      "legacy_unique_reference_used": 140,
+      "matched_count": 139,
+      "rejection_histogram": {
+        "INTERPOLATED": 139,
+        "OUT_OF_RANGE": 3763
+      },
+      "rpe_max_m": 7.74992494566235,
+      "rpe_median_m": 3.109733999423257,
+      "rpe_pairs": 129,
+      "rpe_rmse_m": 4.407443127871363,
+      "valid_grid_count": 139
+    },
+    "full": {
+      "ape_max_m": 1.0631324214392703,
+      "ape_median_m": 0.33622797096541923,
+      "ape_rmse_m": 0.43727461512130367,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 140,
+        "raw_count": 140,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 140
+      },
+      "bracket_gap_max_s": 0.10000061988830566,
+      "bracket_gap_p50_s": 0.09999895095825195,
+      "bracket_gap_p95_s": 0.09999918937683105,
+      "legacy_max_reference_reuse": 1,
+      "legacy_pair_count": 140,
+      "legacy_timestamp_error_max_s": 0.01564478874206543,
+      "legacy_timestamp_error_p95_s": 0.006988835334777832,
+      "legacy_unique_assignment_error_max_s": 0.01564478874206543,
+      "legacy_unique_assignment_error_p95_s": 0.006988835334777832,
+      "legacy_unique_assignment_pair_count": 140,
+      "legacy_unique_reference_used": 140,
+      "matched_count": 139,
+      "rejection_histogram": {
+        "INTERPOLATED": 139,
+        "OUT_OF_RANGE": 3763
+      },
+      "rpe_max_m": 0.2837359044985658,
+      "rpe_median_m": 0.10605449953497434,
+      "rpe_pairs": 129,
+      "rpe_rmse_m": 0.1495004240790723,
+      "valid_grid_count": 139
+    },
+    "klt": {
+      "ape_max_m": 1.3431813742679297,
+      "ape_median_m": 0.35015942388589877,
+      "ape_rmse_m": 0.4958862239376205,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 140,
+        "raw_count": 140,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 140
+      },
+      "bracket_gap_max_s": 0.10000061988830566,
+      "bracket_gap_p50_s": 0.09999895095825195,
+      "bracket_gap_p95_s": 0.09999918937683105,
+      "legacy_max_reference_reuse": 1,
+      "legacy_pair_count": 140,
+      "legacy_timestamp_error_max_s": 0.01564478874206543,
+      "legacy_timestamp_error_p95_s": 0.006988835334777832,
+      "legacy_unique_assignment_error_max_s": 0.01564478874206543,
+      "legacy_unique_assignment_error_p95_s": 0.006988835334777832,
+      "legacy_unique_assignment_pair_count": 140,
+      "legacy_unique_reference_used": 140,
+      "matched_count": 139,
+      "rejection_histogram": {
+        "INTERPOLATED": 139,
+        "OUT_OF_RANGE": 3763
+      },
+      "rpe_max_m": 0.4606152218567114,
+      "rpe_median_m": 0.11893091387392438,
+      "rpe_pairs": 129,
+      "rpe_rmse_m": 0.19425934248847557,
+      "valid_grid_count": 139
+    }
+  },
+  "protocol": {
+    "arm_time_offsets_s": {
+      "drop": 0.0,
+      "full": 0.0,
+      "klt": 0.0
+    },
+    "body_to_camera_applied": true,
+    "contrast_name": "mclab1_s60_d15",
+    "evaluation_rate_hz": 10.0,
+    "max_estimate_gap_s": 0.25,
+    "max_reference_gap_s": 0.05,
+    "nominal_estimate_rate_hz": 10.0,
+    "nominal_reference_rate_hz": 50.0,
+    "reference": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/ntnu_hf/subset-mclab/mclab_1/mclab_1_baseline.tum",
+    "reference_time_offset_s": 0.0,
+    "rpe_delta_s": 1.0,
+    "rpe_semantics": "aligned_global_frame_positional_delta",
+    "window_end_s": 1725639866.721381,
+    "window_start_s": 1725639476.534496
+  },
+  "reference": {
+    "audit": {
+      "duplicate_count": 0,
+      "finite_count": 21248,
+      "raw_count": 21248,
+      "rejected_nonfinite_count": 0,
+      "unique_count": 21248
+    },
+    "bracket_gap_max_s": 0.14299988746643066,
+    "bracket_gap_p50_s": 0.019999980926513672,
+    "bracket_gap_p95_s": 0.023999929428100586,
+    "rejection_histogram": {
+      "EXACT": 1,
+      "GAP_EXCEEDED": 73,
+      "INTERPOLATED": 3828
+    },
+    "valid_grid_count": 3829
+  },
+  "support": {
+    "ape_valid": false,
+    "common_coverage": 0.035622757560225524,
+    "common_span_s": 13.800000190734863,
+    "grid_count": 3902,
+    "matched_count": 139,
+    "rpe_pairs": 129,
+    "rpe_valid": true,
+    "segment_count": 1,
+    "window_duration_s": 390.1868848800659
+  }
+}

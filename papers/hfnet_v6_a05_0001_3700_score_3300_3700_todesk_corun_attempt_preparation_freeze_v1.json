@@ -1,0 +1,111 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a05-0001-3700-score-3300-3700-todesk-corun-attempt-preparation-freeze-v1",
+  "status": "FROZEN_PREPARED_NOT_STARTED_RESOURCE_GATE_CURRENTLY_CLOSED",
+  "created_at_local": "2026-08-28T01:11:32+08:00",
+  "attempt": {
+    "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/corun/old_frozen_positive_windows/a05_0001_3700_score_3300_3700_todesk_corun_development_only/attempt_001",
+    "prepared_manifest": {
+      "size_bytes": 12784,
+      "sha256": "098769025f743b722e62679a3bc516c10169e64297ed26c6cd143474ee84fec2",
+      "schema_version": "aqua-fe-hfnet-v6-a05-0001-3700-score-3300-3700-todesk-corun-development-only-prepared-v1",
+      "status": "PREPARED_NOT_STARTED"
+    },
+    "prepared_at_utc": "2026-08-27T17:10:44+00:00",
+    "process_start_claim_exists": false,
+    "run_result_exists": false,
+    "stdout_exists": false,
+    "stderr_exists": false,
+    "result_directory_empty": true
+  },
+  "prepared_payload": {
+    "runtime_config": {
+      "size_bytes": 2163,
+      "sha256": "4bbe918988f09aafcc70e334dc235f5b548631dfde8b2ae23b3a6bb3b2eccc61"
+    },
+    "camera_times": {
+      "size_bytes": 74000,
+      "sha256": "93c64e829cc26ff56c9dbff1b5b194c47bebf0a8b35b737bfe79dbb9d64f2468"
+    },
+    "attempt_local_onnx": {
+      "size_bytes": 132238602,
+      "sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5"
+    },
+    "attempt_local_cache_seed": {
+      "size_bytes": 853319,
+      "sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7"
+    }
+  },
+  "launch_contract": {
+    "argv": [
+      "/home/ma/AQUA-FE_WS/build/published_baselines/hfnet_slam_headless_entry_v3/mono_inertial_euroc_headless_v3",
+      "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/corun/old_frozen_positive_windows/a05_0001_3700_score_3300_3700_todesk_corun_development_only/attempt_001/runtime_config_model_path_only.yaml",
+      "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/corun/old_frozen_positive_windows/a05_0001_3700_score_3300_3700_todesk_corun_development_only/attempt_001/result/",
+      "/mnt/data/AQUA-FE_WS/datasets/hfnet_old_frozen_positive_windows_v1/a05_0001_3700_score_3300_3700_warmstart",
+      "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/corun/old_frozen_positive_windows/a05_0001_3700_score_3300_3700_todesk_corun_development_only/attempt_001/cam0_times_source_0001_3700_local_0000_3699.txt"
+    ],
+    "timeout_seconds": 600,
+    "minimum_prestart_free_gpu_mib": 3072,
+    "authorization_token": "HFNET_V6_A05_0001_3700_SCORE_3300_3700_TODESK_CORUN_DEVELOPMENT_ONLY_ATTEMPT_001_START_EXACTLY_ONCE",
+    "maximum_hfnet_popen_invocations": 1,
+    "retry_permitted": false
+  },
+  "authority_chain": {
+    "corun_overlay": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a05_0001_3700_score_3300_3700_todesk_corun_development_only_v1.py",
+      "size_bytes": 21293,
+      "sha256": "d6c2a685c334247e0169118f88640af950c968fc4246bfd34d3f02d7c6b385f5"
+    },
+    "corun_overlay_tests": {
+      "size_bytes": 11348,
+      "sha256": "b0a67850f2c744a4ed745dbf0b4a0ccf7d273a9305c7257bb58cd50389cbd691"
+    },
+    "corun_overlay_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a05_0001_3700_score_3300_3700_todesk_corun_overlay_freeze_v1.json",
+      "size_bytes": 4692,
+      "sha256": "25111ecaa275ea7881f93762a3a3a6bafb4dbc6539c350205ba1a897b7e4c8f1"
+    },
+    "formal_a05_runner_freeze": {
+      "size_bytes": 5006,
+      "sha256": "ae8d65c0991a47df960e29141d0074e5213477f17e2da0d04f3e94601c76ce5e"
+    },
+    "a05_input_freeze": {
+      "size_bytes": 6825,
+      "sha256": "69d2fd32985241eb299d7d027136c98c07ce04d4b974d7740acc527725849176"
+    }
+  },
+  "resource_check_at_freeze": {
+    "checked_at_utc": "2026-08-27T17:11:12+00:00",
+    "ready": false,
+    "free_gpu_mib": 1953,
+    "minimum_free_gpu_mib": 3072,
+    "blocking_conditions": [
+      "GPU_FREE_MEMORY_BELOW_FORMAL_A09_SUCCESS_FLOOR",
+      "FORBIDDEN_HFNET_OR_ORB_OR_LEARNED_PROCESS_PRESENT"
+    ],
+    "observed_external_context": "An already-running MIMIR learned-frontend batch owned by another active workflow; it is not killed or modified.",
+    "todesk_itself_is_not_a_blocker": true
+  },
+  "claims": {
+    "attempt_prepared": true,
+    "process_start_claim_created": false,
+    "hfnet_started": false,
+    "trajectory_produced": false,
+    "runability_passed": false,
+    "accuracy_evaluated": false,
+    "runtime_or_realtime_claim_supported": false,
+    "ranking_or_superiority_supported": false
+  },
+  "next_stage_boundary": {
+    "required_before_execution": [
+      "the competing learned process is absent",
+      "the instantaneous resource check passes with at least 3072 MiB free",
+      "all prepared artifacts and authority files retain their frozen identities",
+      "a fresh execution lock pins the passing check and exact one-shot command"
+    ],
+    "forbidden": [
+      "modifying or re-preparing this attempt",
+      "creating a process-start claim while the resource gate is closed",
+      "starting more than one HFNet child or retrying after a claim"
+    ]
+  }
+}

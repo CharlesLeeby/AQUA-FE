@@ -1,0 +1,80 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a02-v1-prepared-abandoned-gate-correction-v1",
+  "status": "V1_PREPARED_ONLY_ABANDONED_BEFORE_LOCK_OR_START",
+  "created_at_utc": "2026-08-22T13:31:51Z",
+  "absence_checked_at_utc": "2026-08-22T13:29:34Z",
+  "reason": "v1 encoded absolute score-support minima of 20 poses and 20 contiguous poses; those values are only about 1.11 percent of the 1801-camera score window and cannot adjudicate the frozen 70 percent primary gate",
+  "gate_correction": {
+    "v1_minimum_score_poses": 20,
+    "v1_minimum_contiguous_score_poses": 20,
+    "score_camera_count": 1801,
+    "required_fraction": 0.7,
+    "corrected_integer_threshold": 1261,
+    "calculation": "ceil(0.70 * 1801) = 1261",
+    "successor_protocol": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_score_4500_6300_strict70_protocol_v2.json"
+  },
+  "abandoned_controller": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a02_0001_6300_score_4500_6300_v1.py",
+    "size_bytes": 17260,
+    "sha256": "0a3969a8471078ceb5724d14f7f33af0486741035bce49786618ad8114b4a258"
+  },
+  "abandoned_controller_test": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_hfnet_v6_a02_0001_6300_score_4500_6300_v1.py",
+    "size_bytes": 6603,
+    "sha256": "1af804a7417561edc4b53d3a6fe7138fc0d9ef58d9247e6cc9d8f29dcc12d4b2"
+  },
+  "abandoned_dependency_inventory": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_dependency_inventory_v1.json",
+    "size_bytes": 56662,
+    "sha256": "0aa7f526e4a89a671785429b7764bc489ea88b983e2611e9cf6dc341792b853a"
+  },
+  "abandoned_attempt": {
+    "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300/attempt_001",
+    "prepared_manifest": {
+      "size_bytes": 81038,
+      "sha256": "2110454b1f19bfe39a4beed530358c75ca588d500720a2e6a0c913923b91e69c"
+    },
+    "runtime_config_model_path_only": {
+      "size_bytes": 2128,
+      "sha256": "8c589863df5fd2a2064415ac1184924f83f6884ebf61aaa7447546f9d05f912f"
+    },
+    "run_local_onnx": {
+      "size_bytes": 132238602,
+      "sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5"
+    },
+    "run_local_cache": {
+      "size_bytes": 853319,
+      "sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7"
+    }
+  },
+  "terminal_absence_observations": {
+    "execution_lock": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_score_4500_6300_execution_lock_v1.json",
+      "exists": false
+    },
+    "process_start_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300/attempt_001/process_start_claim.json",
+      "exists": false
+    },
+    "run_result": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300/attempt_001/run_result.json",
+      "exists": false
+    },
+    "result_directory": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300/attempt_001/result",
+      "exists": false
+    }
+  },
+  "execution_claims": {
+    "hfnet_elf_started": false,
+    "popen_invocations": 0,
+    "trajectory_observed": false,
+    "retry_authorized": false
+  },
+  "preservation": {
+    "delete_old_artifacts": false,
+    "overwrite_old_artifacts": false,
+    "reuse_old_attempt_for_successor": false,
+    "successor_requires_new_additive_namespace": true
+  }
+}

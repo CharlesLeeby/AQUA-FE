@@ -1,0 +1,13 @@
+$ evo_rpe tum papers/frontend_same_backend_noharm_fix_v2/common_support/a06_s000_d045/evo_crosscheck/reference_segment_000.tum papers/frontend_same_backend_noharm_fix_v2/common_support/a06_s000_d045/evo_crosscheck/klt_r2_fixed_se3_segment_000.tum -r trans_part -d 1 -u f --all_pairs --pairs_from_reference
+RPE w.r.t. translation part (m)
+for delta = 1 (frames) using all pairs
+(not aligned)
+
+       max	0.891138
+      mean	0.255188
+    median	0.170632
+       min	0.005974
+      rmse	0.350611
+       sse	4.794199
+       std	0.240432
+

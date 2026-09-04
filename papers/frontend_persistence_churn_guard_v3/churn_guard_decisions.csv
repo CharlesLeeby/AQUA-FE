@@ -1,0 +1,5 @@
+window,latched_decision,selected_feature_index,gftt_births,denominator,gftt_birth_reserve_ratio,threshold,expected_source,byte_identical_expected
+a06_s000_d045,CLOSE_TO_KLT,1,5,350,0.014285714285714285,0.1,klt,True
+a09_6000_6800,ARM_V1,2,96,350,0.2742857142857143,0.1,v1,True
+a06_s045_d045,ARM_V1,2,76,350,0.21714285714285714,0.1,v1,True
+h07_s000_d050,NO_ELIGIBLE_EVENT,-1,0,0,nan,0.1,klt,True

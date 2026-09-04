@@ -1,0 +1,1 @@
+RUN_VINS=0 FORCE_EXPORT=1 TAG_BASE=isj_p07_afrl_bus_outside_0001_p_attempt01 bash scripts/run_isj_nativeq_contract_guarded_v4.sh afrl_dataset bus_outside 45 45 hybrid_xfeat 2

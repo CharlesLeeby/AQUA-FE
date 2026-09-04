@@ -1,0 +1,70 @@
+{
+  "carry_forward_key_identities": {
+    "b1_guard_decision": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/backend_contract_decisions/b1/litcmp_a02_4500_6300_preroll_b1_native_r1/b1_current_exporter_v3_decision.json",
+      "sha256": "888599654870d3d54a3561ef877445571d545db5988d8bc46dabe6d9dfef3ed2",
+      "size_bytes": 2968
+    },
+    "b1_native_feature_bag": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_native_r1/features.bag",
+      "sha256": "dbe85f68c91e523f56c7f7488accd216a6b56ffc3949eb9e6a09745fa2e5d6cb",
+      "size_bytes": 27396366
+    },
+    "canonical_window_bag": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_6300.bag",
+      "sha256": "eebd45439e76c461e58a2a1d6321f3fcb82dbcf57ea4093929548c9620e63a83",
+      "size_bytes": 449056538
+    },
+    "canonical_window_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_6300.bag.manifest.json",
+      "sha256": "41667ae9fd00dc6baf261cb2c519642b0ff9c2123ba154421780bc41bcf4de8e",
+      "size_bytes": 4502
+    },
+    "old_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_post_stop_long_window_comparison_freeze_v1.json",
+      "sha256": "dfcae748385766f5585e1799603f737abe9223cb30d1a9bcc43fe84476abf9be",
+      "size_bytes": 63541
+    },
+    "old_verifier": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/verify_a02_long_three_arm_eval_inputs_v1.py",
+      "sha256": "d5316e505d6d4337e3743a38c300d963fbede9702c037eaccd501813a0683cef",
+      "size_bytes": 166821
+    },
+    "shared_exporter": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/export_aqualoc_a02_shared_4500_6300_v1.py",
+      "sha256": "c3c79bef0e96a54dca7fe559e4f5a4d4646ad4e4e73828a13ca5aa603e5e361f",
+      "size_bytes": 36414
+    },
+    "shared_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_shared_baselines_v1/a02_4500_6300_shared_r1/conversion_manifest.json",
+      "sha256": "f2931e451e9542a3801209e88fd47519b881d6713ac829c9871a1f9366bc9d93",
+      "size_bytes": 682952
+    }
+  },
+  "failure_observation": {
+    "command_index_in_v1": 9,
+    "command_sha256_utf8": "e475dedf092071ac6bd03b3527dae76ccbaa03c9ba652c5b1a5e64765853ebbc",
+    "exact_command": "test ! -e /tmp/aqua-fe-a02-long-eval-empty-pycache-v1 && /usr/bin/env -i HOME=/home/ma USER=ma LOGNAME=ma SHELL=/bin/bash PATH=/home/ma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 LC_ALL=C.UTF-8 PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPYCACHEPREFIX=/tmp/aqua-fe-a02-long-eval-empty-pycache-v1 PYTHONPATH=/home/ma/AQUA-FE_WS:/home/ma/.local/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages /usr/bin/python3.8 -B scripts/verify_a02_long_three_arm_eval_inputs_v1.py --action check-b1-decision || exit 42",
+    "observed_combined_or_stderr_lines": [
+      "VERIFICATION_BLOCKED:SHARED_MANIFEST_SOURCE_CHAIN_NOT_CANONICAL_OBJECT"
+    ],
+    "observed_return_code": 42,
+    "persistent_raw_stream_artifact": false
+  },
+  "root_agent_confirmation": {
+    "captured_from_orchestrator_transcript": true,
+    "confirmation_scope": "exact old command[9], process return code, and the single observed VERIFICATION_BLOCKED line",
+    "confirmed": true,
+    "persistent_stdout_or_stderr_file_was_created": false
+  },
+  "schema_version": "aqua-fe-a02-long-command9-infrastructure-false-negative-incident-v1",
+  "status": "CONFIRMED_INFRASTRUCTURE_FALSE_NEGATIVE_V1_PROTOCOL_TERMINATED_RC42",
+  "v1_protocol_boundary": {
+    "command_9_terminated_v1_protocol": true,
+    "commands_0_through_8_consumed_once": true,
+    "commands_0_through_8_must_not_be_reexecuted": true,
+    "continuation_is_not_v1_resume": true,
+    "downstream_v1_commands_executed": false,
+    "old_stop_and_rc42_are_preserved": true
+  }
+}

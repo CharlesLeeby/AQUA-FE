@@ -1,0 +1,14 @@
+extends: ../paper_full_quality_hybrid_frontend.yaml
+
+hybrid:
+  # Experimental only.
+  #
+  # This gate detects identity churn: feature count and grid coverage can look
+  # healthy while most tracks are newborn every frame. Initial tests on
+  # AQUALOC-H07 1740-1820 improve continuity/dropout but slightly worsen
+  # epipolar residual, so it is not enabled in the default paper config.
+  learned_init_on_track_churn: true
+  learned_init_churn_min_dropout_ratio: 0.60
+  learned_init_churn_max_median_age: 2.0
+  enable_geometry_safe_recovery: true
+

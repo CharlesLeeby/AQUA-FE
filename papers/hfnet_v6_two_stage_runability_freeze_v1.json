@@ -1,0 +1,107 @@
+{
+  "schema_version": "aqua-fe-published-hfnet-two-stage-runability-freeze-v1",
+  "created_at": "2026-08-16T20:37:59+08:00",
+  "status": "FROZEN_BEFORE_HFNET_PROCESS_START",
+  "authorization": {
+    "source": "explicit_user_instruction_2026-08-16_start_execution",
+    "development_runability_execution_authorized": true,
+    "formal_scientific_adoption_authorized": false,
+    "a02_namespace_reuse_authorized": false
+  },
+  "claim_boundary": {
+    "phase_d_is_official_dataset_runability_only": true,
+    "phase_d_metrics_are_not_underwater_scientific_results": true,
+    "phase_f_is_post_result_exploratory_usability_only": true,
+    "cross_dataset_superiority_claimed": false,
+    "published_system_superiority_claimed": false
+  },
+  "system": {
+    "name": "HFNet-SLAM",
+    "official_commit": "c354c72588a97bb6f6a9c7c8317530795956ec80",
+    "official_tree": "6619814aed4cd0e4baa2501341a48f753f8ba196",
+    "official_source_modification_allowed": false,
+    "headless_entry": {
+      "path": "/home/ma/AQUA-FE_WS/build/published_baselines/hfnet_slam_headless_entry_v3/mono_inertial_euroc_headless_v3",
+      "sha256": "4d17eecc74ec8f4bcbe4381d579d2bb48160cf63f6dc948f7857d92e681affeb",
+      "size_bytes": 118280,
+      "only_semantic_delta": "viewer_disabled"
+    },
+    "official_library": {
+      "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/lib/libHFNet_SLAM.so",
+      "sha256": "a56dfd1b48dee4af5be4e55b076d32eac2cf8fb463da8ab943b690377f193717",
+      "size_bytes": 4807712
+    },
+    "model": {
+      "onnx_sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5",
+      "onnx_size_bytes": 132238602,
+      "cache_seed_sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7",
+      "cache_seed_size_bytes": 853319,
+      "run_local_cache_required": true
+    }
+  },
+  "phase_d": {
+    "role": "official_euroc_mh01_development_runability",
+    "namespace": "/home/ma/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001",
+    "input": {
+      "dataset": "EuRoC_MH_01_easy",
+      "official_item_uuid": "bcaf173e-5dac-484b-bc37-faf97a594f1f",
+      "official_bundle_uuid": "063c4c7c-e88a-4d83-bb3a-eec4da733511",
+      "official_bitstream_uuid": "7b2419c1-62b5-4714-b7f8-485e5fe3e5fe",
+      "outer_filename": "machine_hall.zip",
+      "outer_size_bytes": 12683729426,
+      "outer_md5_etag": "363f5c2502b469cdd97ef85997714806",
+      "member": "machine_hall/MH_01_easy/MH_01_easy.zip",
+      "member_size_bytes": 1571292346,
+      "member_crc32": "a1c54dd7",
+      "selection": "HFNet_SLAM_README_named_sequence_before_execution"
+    },
+    "official_config": {
+      "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Examples/Monocular-Inertial/EuRoC.yaml",
+      "sha256": "9bbf682649b32ab2292979c7bf63b9fe12787948e74811838259aa723ab8ed01",
+      "size_bytes": 2613,
+      "allowed_runtime_change": "Extractor.modelPath_absolute_run_local_rebind_only"
+    },
+    "timestamps": {
+      "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Examples/Monocular-Inertial/EuRoC_TimeStamps/MH01.txt",
+      "sha256": "9354db11b423f7169eda7a3048d9594ee14572c6017e1439dee7861261b065fb",
+      "size_bytes": 73640,
+      "image_count": 3682
+    },
+    "allowed_repairs": [
+      "official_dataset_layout_materialization",
+      "isolated_runtime_library_paths",
+      "viewer_disable_only",
+      "run_local_model_and_cache_paths",
+      "runner_supervision_and_evidence_capture"
+    ],
+    "forbidden_changes": [
+      "weights_or_network",
+      "feature_thresholds_or_counts",
+      "initializer_or_tracker",
+      "matching_or_estimation",
+      "backend_or_loop_closing",
+      "camera_or_imu_calibration",
+      "sequence_extension_or_result_conditioned_selection"
+    ],
+    "pass_gate": {
+      "return_code": 0,
+      "timed_out": false,
+      "input_images_consumed": 3682,
+      "trajectory_rows_min": 2578,
+      "trajectory_span_seconds_min": 120,
+      "trajectory_reaches_last_input_fraction_min": 0.9,
+      "keyframes_min": 20,
+      "late_keyframe_required": true
+    },
+    "stop_policy": "first_pass_locks_stack; failures_may_only_receive_allowed_nonalgorithmic_repairs_in_fresh_attempt_namespaces"
+  },
+  "phase_f": {
+    "role": "fresh_underwater_usability_after_phase_d_pass_only",
+    "namespace_root": "/home/ma/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater",
+    "selector": "deterministic_raw_gt_imu_metadata_only_before_any_hfnet_output",
+    "a02_forbidden": true,
+    "maximum_hfnet_process_starts": 1,
+    "retry_or_window_extension": false,
+    "status": "NOT_SELECTED_NOT_AUTHORIZED_UNTIL_PHASE_D_PASS"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "batch_d_upper_bound_bytes": 20971520,
+  "batch_window_id": "aqualoc_harbor:H04:0003",
+  "governance_free_bytes": 1432518656,
+  "governance_minimum_free_bytes": 536870912,
+  "governance_pass": true,
+  "output_free_bytes": 4044079104,
+  "output_minimum_free_bytes": 3221225472,
+  "output_pass": true,
+  "output_root": "logs/aqualoc_real_vins",
+  "remaining_batch_job_count": 1,
+  "remaining_batch_run_bytes": 20971520
+}

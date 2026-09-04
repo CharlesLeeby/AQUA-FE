@@ -1,0 +1,176 @@
+{
+  "artifact_pins": {
+    "adapter_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_evaluate_hfnet_v6_phase_f_h03_1800_3600_gt_proxy_v1.py",
+      "sha256": "a59f716ba79f25f52f0ac0c553ebd1d2907b92c147fe1533867520b9f6e51354",
+      "size_bytes": 4629
+    },
+    "artifact_manifest": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_phase_f_h03_1800_3600_gt_proxy_eval_v1/artifact_manifest.json",
+      "sha256": "7093cf62d7b63fc43a14272217f070f9be5bc53b9ba056de3774bdf77017e229",
+      "size_bytes": 2758
+    },
+    "evaluation_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_phase_f_h03_1800_3600_gt_proxy_eval_freeze_v1.json",
+      "sha256": "45522b1714f82590bd83b442ba9812577bc103ece3f9a045c0e040110a8a9412",
+      "size_bytes": 6889
+    },
+    "evaluation_result": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_phase_f_h03_1800_3600_gt_proxy_eval_v1/evaluation_result.json",
+      "sha256": "fa2a6d7283ddca4f3e2f2f42e372319ab487f6eea50f889c7ee77d50e02408fe",
+      "size_bytes": 11449
+    },
+    "evaluator_script": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_hfnet_v6_phase_f_h03_1800_3600_gt_proxy_v1.py",
+      "sha256": "40922d938c5bfe8b068bd696026c21a21642ba71752c01811c40ffb35cd9e66d",
+      "size_bytes": 46261
+    },
+    "grid_metrics": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_phase_f_h03_1800_3600_gt_proxy_eval_v1/grid_metrics.csv",
+      "sha256": "ffa1d824a24f89e73699a6723ad830acf3857cbb3721e94ebd50fb6aa5a3ad3e",
+      "size_bytes": 31202
+    },
+    "legacy_vins_loader_source": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support.py",
+      "sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110",
+      "size_bytes": 27933
+    },
+    "trajectory_eval_core": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/trajectory_eval_core.py",
+      "sha256": "aa9ac4da81df7298d1f1c369548ca98a57235916004337cad66f4cf331560635",
+      "size_bytes": 27945
+    }
+  },
+  "claim_boundary": {
+    "changes_existing_bundle": false,
+    "changes_existing_freeze": false,
+    "changes_scientific_numbers": false,
+    "independent_ground_truth_claim": false,
+    "inferential_statistics": false,
+    "new_scientific_evaluation": false,
+    "raises_claim_strength": false,
+    "receipt_role": "ADDITIVE_RUNTIME_AND_SEGMENT_SEMANTICS_AUDIT_ONLY"
+  },
+  "created_at_utc": "2026-08-16T19:40:27Z",
+  "filesystem": {
+    "findmnt_fstype": "ext4",
+    "findmnt_source": "/dev/nvme0n1p8",
+    "findmnt_target": "/",
+    "required_mode": "0444",
+    "required_nlink": 1,
+    "symlink_forbidden": true
+  },
+  "independent_audit_crossbind": {
+    "artifact_available": false,
+    "authorization_explanation": "Parent /root explicitly confirmed that the independent read-only audit conclusion was not written to an artifact and authorized text-only crossbinding without inventing a path or hash.",
+    "finding_provenance": "UNSEALED_EXTERNAL_REVIEWER_FINDING_SUPPLIED_BY_PARENT_ROOT",
+    "finding_text": "Independent final audit found P0=0 and P1=0. Two P2 documentation gaps were: the adapter test log/runtime versions were not sealed, and max_segment_gap_s=0.75 differed textually from the Harbor reference interpolation limit 0.625 although behavior is equivalent on the 2 Hz grid.",
+    "p0_count": 0,
+    "p1_count": 0,
+    "p2_count": 2,
+    "path_or_hash_claimed": false
+  },
+  "mechanical_segment_gap_proof": {
+    "actual_grid": {
+      "common_valid_count": 91,
+      "grid_count": 91,
+      "valid_consecutive_gap_set_ns": [
+        500000000
+      ]
+    },
+    "algorithm": "Pinned trajectory_eval_core.segment_ids starts a new segment on an index discontinuity or when the consecutive valid timestamp delta is strictly greater than max_segment_gap_s; strict_delta_pairs then requires equal segment labels.",
+    "equivalent": true,
+    "proof_scope": "SEGMENT_LABELS_AND_EXACT_1S_SUPPORT_PAIR_INDICES_ONLY; NO_POSE_ALIGNMENT_OR_ERROR_METRIC_RECOMPUTATION",
+    "threshold_0.625": {
+      "labels_sha256_compact_json": "13e47d08f32447ff9ae1107dfb006b8e10702e910fc2d974df683bbf8b679087",
+      "rpe_support_pair_count": 89,
+      "rpe_support_pairs_sha256_compact_json": "a73d6edf792cc226416a85554ccc6d0fd1d2dd699185b8bffdbbb2c32025ecf1",
+      "segment_count": 1
+    },
+    "threshold_0.75": {
+      "labels_sha256_compact_json": "13e47d08f32447ff9ae1107dfb006b8e10702e910fc2d974df683bbf8b679087",
+      "rpe_support_pair_count": 89,
+      "rpe_support_pairs_sha256_compact_json": "a73d6edf792cc226416a85554ccc6d0fd1d2dd699185b8bffdbbb2c32025ecf1",
+      "segment_count": 1
+    },
+    "truth_table": {
+      "gap_0.5_s_splits_at_0.625": false,
+      "gap_0.5_s_splits_at_0.75": false,
+      "gap_1.0_s_splits_at_0.625": true,
+      "gap_1.0_s_splits_at_0.75": true,
+      "synthetic_stamps_s": [
+        0.0,
+        0.5,
+        1.5
+      ],
+      "synthetic_threshold_0.625_labels": [
+        0,
+        0,
+        1
+      ],
+      "synthetic_threshold_0.75_labels": [
+        0,
+        0,
+        1
+      ]
+    }
+  },
+  "p2_closure": {
+    "segment_gap_textual_difference_behaviorally_closed_for_this_2hz_mask": true,
+    "test_log_and_runtime_versions_closed": true
+  },
+  "result_crossbind": {
+    "artifact_manifest_status": "SEALED_DESCRIPTIVE_PROXY_EVALUATION_BUNDLE",
+    "evaluation_result_status": "PASS_DESCRIPTIVE_PROXY_EVALUATION",
+    "scientific_result_recomputed": false,
+    "scientific_result_values_copied_into_receipt": false
+  },
+  "runtime": {
+    "numpy": {
+      "module": {
+        "path": "/home/ma/.local/lib/python3.8/site-packages/numpy/__init__.py",
+        "sha256": "edd18feff93348beb02f392959e80b9fda1875a842d7f9760847f32386fdfd48",
+        "size_bytes": 16174
+      },
+      "version": "1.24.4"
+    },
+    "opencv_python": {
+      "module": {
+        "path": "/usr/lib/python3/dist-packages/cv2.cpython-38-x86_64-linux-gnu.so",
+        "sha256": "00f302d1efe76049187e2e2c7a05262e883394f82316490e2f28adb807ac1833",
+        "size_bytes": 6970496
+      },
+      "version": "4.2.0"
+    },
+    "platform": {
+      "machine": "x86_64",
+      "release": "5.15.0-139-generic",
+      "system": "Linux"
+    },
+    "python": {
+      "executable": {
+        "path": "/usr/bin/python3.8",
+        "sha256": "298a9e830ed52f36c299427565485d717d1ce0179c0597cc16560513eb780b06",
+        "size_bytes": 5490456
+      },
+      "implementation": "CPython",
+      "version": "3.8.10",
+      "version_full": "3.8.10 (default, Mar 18 2025, 20:04:55) \n[GCC 9.4.0]"
+    }
+  },
+  "schema_version": "aqua-fe-hfnet-v6-phase-f-h03-gt-proxy-eval-p2-audit-receipt-v1",
+  "self_hash": {
+    "algorithm": "sha256_canonical_json_with_value_zeroed",
+    "value": "49e2103bcfe45ba80fd5476a5b69a3a8a1ab08da6d866ac27cf058392987f35d"
+  },
+  "status": "PASS_ADDITIVE_P2_AUDIT_RECEIPT",
+  "test_rerun": {
+    "combined_stdout_after_stderr_redirect": "test_closed_score_endpoint_is_not_forced_onto_uniform_grid (__main__.HfnetH03ProxyAdapterTests) ... ok\ntest_decimal_epoch_timestamp_association_is_exact (__main__.HfnetH03ProxyAdapterTests) ... ok\ntest_world_t_body_times_body_t_camera_rotates_lever_arm (__main__.HfnetH03ProxyAdapterTests) ... ok\ntest_wrong_inverse_and_legacy_wxyz_loader_are_negative_controls (__main__.HfnetH03ProxyAdapterTests) ... ok\ntest_xyzw_to_wxyz_component_adapter_and_exact_roundtrip (__main__.HfnetH03ProxyAdapterTests) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.027s\n\nOK\n",
+    "exact_command": "env PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0 PYTHONPATH=/home/ma/AQUA-FE_WS /usr/bin/python3.8 -B scripts/tests/test_evaluate_hfnet_v6_phase_f_h03_1800_3600_gt_proxy_v1.py -v 2>&1",
+    "rc": 0,
+    "result": "PASS_5_OF_5",
+    "scientific_metrics_computed": false,
+    "test_count": 5,
+    "working_directory": "/home/ma/AQUA-FE_WS"
+  }
+}

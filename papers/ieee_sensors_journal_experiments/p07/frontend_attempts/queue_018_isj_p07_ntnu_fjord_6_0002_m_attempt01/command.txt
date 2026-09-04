@@ -1,0 +1,1 @@
+RUN_VINS=0 FORCE_EXPORT=1 TAG=isj_p07_ntnu_fjord_6_0002_m_attempt01 bash scripts/run_p05_modern_xfeat_baseline_guarded_v2.sh ntnu fjord_6 90 45 2

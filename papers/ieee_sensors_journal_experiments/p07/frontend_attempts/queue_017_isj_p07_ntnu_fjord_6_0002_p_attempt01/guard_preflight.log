@@ -1,0 +1,2 @@
+NATIVEQ_BACKEND_GUARD action=ALLOW_LEARNED reasons=0 decision=/home/ma/AQUA-FE_WS/logs/backend_contract_decisions/nativeq_guard_20260806T204630Z_677009_decision.json
+native-q backend contract PASS; decision=/home/ma/AQUA-FE_WS/logs/backend_contract_decisions/nativeq_guard_20260806T204630Z_677009_decision.json

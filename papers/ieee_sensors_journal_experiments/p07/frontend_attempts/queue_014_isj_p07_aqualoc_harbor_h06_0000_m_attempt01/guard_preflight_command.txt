@@ -1,0 +1,1 @@
+AQUAFE_P05_GUARD_ONLY=1 RUN_VINS=0 FORCE_EXPORT=1 TAG=isj_p07_aqualoc_harbor_h06_0000_m_attempt01 bash scripts/run_p05_modern_xfeat_baseline_guarded_v2.sh aqualoc_harbor H06 0 900 2

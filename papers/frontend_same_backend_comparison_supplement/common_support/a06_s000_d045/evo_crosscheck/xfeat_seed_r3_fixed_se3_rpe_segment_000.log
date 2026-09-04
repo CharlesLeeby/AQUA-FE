@@ -1,0 +1,13 @@
+$ evo_rpe tum /home/ma/AQUA-FE_WS/papers/frontend_same_backend_comparison_supplement/common_support/a06_s000_d045/evo_crosscheck/reference_segment_000.tum /home/ma/AQUA-FE_WS/papers/frontend_same_backend_comparison_supplement/common_support/a06_s000_d045/evo_crosscheck/xfeat_seed_r3_fixed_se3_segment_000.tum -r trans_part -d 1 -u f --all_pairs --pairs_from_reference
+RPE w.r.t. translation part (m)
+for delta = 1 (frames) using all pairs
+(not aligned)
+
+       max	0.809839
+      mean	0.240831
+    median	0.257965
+       min	0.007712
+      rmse	0.319344
+       sse	3.977231
+       std	0.209716
+

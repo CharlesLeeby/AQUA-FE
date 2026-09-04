@@ -1,0 +1,2 @@
+family,run_dir,feature_id,lineage_observations,seed_observations,first_frame,confirmation_frame,last_frame,post_confirmation_observations,median_nearest_classical_px,median_motion_ratio_to_classical,passes_same_rule,causal_selected,feature_frames,metrics_exported_source_total
+afrl_cave_s150_d20,/mnt/data/AQUA-FE_WS/logs/afrl_cave_v31/external_hybrid_xfeat_every2_jul18_causal_more_afrl_cave_s150_d20_probe_oldcontract_densecap,920,6,6,5,9,10,2,81.53501724381998,0.013070995144328917,1,1,194,28

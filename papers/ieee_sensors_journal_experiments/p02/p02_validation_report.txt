@@ -1,0 +1,1 @@
+P02_BUNDLE_OK history_rows=822 eligibility_rows=33 primary_sequences=28 reference_rows=33 checksum_rows=73 checksum_pass=73 capacity_slots=53 capacity_sequences=18 capacity_domains=4 primary_low=3 primary_normal=1 ledger_events=8

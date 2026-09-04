@@ -1,0 +1,76 @@
+{
+  "candidate_relative_path": "datasets/full_downloads/ntnu_hf/subset-fjord/fjord_2/.parts",
+  "canonical_contract": {
+    "canonical_relative_path": "datasets/full_downloads/ntnu_hf/subset-fjord/fjord_2/fjord_2.bag",
+    "canonical_symlink": {
+      "link_lstat": {
+        "allocated_bytes": 512,
+        "dev": 2050,
+        "gid": 1000,
+        "inode": 64430,
+        "mode": 41471,
+        "mtime_ns": 1778945341480235300,
+        "nlink": 1,
+        "size_bytes": 90,
+        "uid": 1000
+      },
+      "link_text": "/media/ma/Data/AQUA-FE_WS/datasets/full_downloads/ntnu_hf/subset-fjord/fjord_2/fjord_2.bag",
+      "resolved_target": "/media/ma/Data/AQUA-FE_WS/datasets/full_downloads/ntnu_hf/subset-fjord/fjord_2/fjord_2.bag",
+      "target_lstat": {
+        "allocated_bytes": 23396134912,
+        "dev": 2049,
+        "gid": 1000,
+        "inode": 92723,
+        "mode": 33279,
+        "mtime_ns": 1778700639829455600,
+        "nlink": 1,
+        "size_bytes": 23396131412,
+        "uid": 1000
+      },
+      "workspace_path": "/home/ma/AQUA-FE_WS/datasets/full_downloads/ntnu_hf/subset-fjord/fjord_2/fjord_2.bag"
+    },
+    "checksum_authority": "papers/ieee_sensors_journal_experiments/p02/input_reference_checksums.csv",
+    "content_sha256_recomputed_for_reclaim": false,
+    "datasets_mount": {
+      "link_lstat": {
+        "allocated_bytes": 0,
+        "dev": 66312,
+        "gid": 1000,
+        "inode": 6058447,
+        "mode": 41471,
+        "mtime_ns": 1778656657656407206,
+        "nlink": 1,
+        "size_bytes": 29,
+        "uid": 1000
+      },
+      "link_text": "/mnt/data/AQUA-FE_WS/datasets",
+      "resolved_target": "/mnt/data/AQUA-FE_WS/datasets",
+      "target_lstat": {
+        "allocated_bytes": 4096,
+        "dev": 2050,
+        "gid": 1000,
+        "inode": 7513,
+        "mode": 16877,
+        "mtime_ns": 1778687464029194000,
+        "nlink": 1,
+        "size_bytes": 4096,
+        "uid": 1000
+      },
+      "workspace_path": "/home/ma/AQUA-FE_WS/datasets"
+    },
+    "expected_size_bytes": 23396131412,
+    "official_sha256": "c02cd7aad63d3234a53d9410ff77780700454851990f40244be722a883ecab49"
+  },
+  "crash_policy": "intent_without_PASS_receipt blocks automatic retry",
+  "created_at_utc": "2026-08-07T20:51:24+00:00",
+  "expected_allocated_tree_bytes": 23396237312,
+  "expected_logical_bytes": 23396131412,
+  "expected_part_count": 349,
+  "intent_hash": "234437b151306ebd96da7d836e34b7b2c027c04603d4094f7f6c08c99ca4c2d1",
+  "inventory_hash": "4ad5d639ecd81b3625c0d8a7e83bf3c8c0486e424b17d0266e484bdc015ea1ae",
+  "lock_hash": "be3b8e3334cb68c0320a383f65ff9ee40ad8cd58ed13f4e63ee0f044a22be09b",
+  "ordering": "fsync intent before first unlink; fsync directories before PASS receipt",
+  "outcome_boundary": "CAPACITY_RECOVERY_ONLY_NO_TRAJECTORY_OR_ACCURACY_EVIDENCE",
+  "schema": "isj-p07-fjord2-parts-reclaim-intent-v1",
+  "status": "AUTHORIZED_BEFORE_UNLINK"
+}

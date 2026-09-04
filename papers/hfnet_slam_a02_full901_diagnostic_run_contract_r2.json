@@ -1,0 +1,199 @@
+{
+  "baseline": {
+    "implementation": "author_official_HFNet_SLAM",
+    "official_repository": "https://github.com/LiuLimingCode/HFNet_SLAM.git",
+    "paper_doi": "10.3390/s23042113",
+    "source_commit": "c354c72588a97bb6f6a9c7c8317530795956ec80",
+    "source_tree": "6619814aed4cd0e4baa2501341a48f753f8ba196"
+  },
+  "command_argv": [
+    "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Examples/Monocular-Inertial/mono_inertial_euroc",
+    "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_a02_0005.yaml",
+    "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v2/post_stop_full901/runs/aqualoc_a02_0005_full901_diag_r2/",
+    "/mnt/data/AQUA-FE_WS/logs/hfnet_slam_adapter/aqualoc_a02_0005_full901_euroc_diag_r2",
+    "/mnt/data/AQUA-FE_WS/logs/hfnet_slam_adapter/aqualoc_a02_0005_full901_euroc_diag_r2/cam0_times.txt"
+  ],
+  "execution_policy": {
+    "accuracy_dependent_retry": false,
+    "algorithm_or_official_source_modification": false,
+    "config_or_threshold_modification": false,
+    "empty_map_save_sigsegv_policy": "retain raw child signal; classify as a secondary exit bug; never promote an empty trajectory to success",
+    "maximum_official_process_starts": 1,
+    "supervision_boundary": "unchanged official executable as child process",
+    "timeout_seconds": 1800,
+    "tuning_after_freeze": false
+  },
+  "frozen_profile": {
+    "baseline": {
+      "implementation": "author_official_HFNet_SLAM",
+      "official_repository": "https://github.com/LiuLimingCode/HFNet_SLAM.git",
+      "paper_doi": "10.3390/s23042113",
+      "source_commit": "c354c72588a97bb6f6a9c7c8317530795956ec80",
+      "source_tree": "6619814aed4cd0e4baa2501341a48f753f8ba196"
+    },
+    "command_argv": [
+      "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Examples/Monocular-Inertial/mono_inertial_euroc",
+      "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_a02_0005.yaml",
+      "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v2/post_stop_full901/runs/aqualoc_a02_0005_full901_diag_r2/",
+      "/mnt/data/AQUA-FE_WS/logs/hfnet_slam_adapter/aqualoc_a02_0005_full901_euroc_diag_r2",
+      "/mnt/data/AQUA-FE_WS/logs/hfnet_slam_adapter/aqualoc_a02_0005_full901_euroc_diag_r2/cam0_times.txt"
+    ],
+    "exporter": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/export_aqualoc_to_hfnet_euroc_full_v2.py",
+      "sha256": "b13f56b69fd88799d4885c044c75bd41aa4331e688c22edaa2301c523ef42013",
+      "size_bytes": 14829
+    },
+    "identities": {
+      "binary": {
+        "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Examples/Monocular-Inertial/mono_inertial_euroc",
+        "sha256": "4029c6ba8ecdc76c98f2c190c1a1151493ed2553da087c1a4f077fc036e143a3",
+        "size_bytes": 122352
+      },
+      "config": {
+        "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_a02_0005.yaml",
+        "sha256": "7e6482653e55b2fcf86a9e5418fd87747677a88eb9c06443d505cda311b80569",
+        "size_bytes": 1807
+      },
+      "model_cache": {
+        "path": "/home/ma/SLAM/HFNet-SLAM-runtime-model-a02-r1/HFNet-RT/HF-Net.cache",
+        "sha256": "a687454ce7dd12cdf73dab66a8e295ee21eb4827f8f7b1f9ca96e7ceef8342bc",
+        "size_bytes": 853319
+      },
+      "onnx_model": {
+        "path": "/home/ma/SLAM/HFNet-SLAM-runtime-model-a02-r1/HFNet-RT/HF-Net.onnx",
+        "sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5",
+        "size_bytes": 132238602
+      },
+      "prefix_contract": {
+        "path": "/home/ma/AQUA-FE_WS/papers/hfnet_slam_a02_prefix200_run_contract_r1.json",
+        "sha256": "5c23bd2d519a76912c69d88cc7b8117b3532f2c70238b7ca59314eae4b4b0639",
+        "size_bytes": 2194
+      },
+      "prefix_result": {
+        "path": "/home/ma/AQUA-FE_WS/papers/hfnet_slam_a02_prefix200_result_r1.json",
+        "sha256": "9e42c9e1f9b2848b45ff90d1a1bc581ba42752a91dcf07a0ac5bdecfa8d3a4c4",
+        "size_bytes": 3421
+      }
+    },
+    "input": {
+      "adapter_version": "aqualoc-hfnet-euroc-full-v2",
+      "artifact_scope": "A02_CAMERA_INDICES_0_900_FULL_POST_STOP_DIAGNOSTIC",
+      "camera_count": 901,
+      "camera_ns_inclusive": [
+        1542829016700435392,
+        1542829061692686528
+      ],
+      "file_count_including_manifest": 904,
+      "imu_count": 8994,
+      "imu_output_ns_inclusive": [
+        1542829016699006112,
+        1542829061695400672
+      ],
+      "manifest": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/hfnet_slam_adapter/aqualoc_a02_0005_full901_euroc_diag_r2/conversion_manifest.json",
+        "sha256": "71a7b061c77b81441a290a1e50ab5998858975b678e5ded0031ad04d1e18a3ec",
+        "size_bytes": 337048
+      },
+      "payload_tree_sha256_excluding_manifest": "2c816b504c97466fa271c05d93ca17cbc7469f7d9238105b00b593d4c994001f",
+      "root": "/mnt/data/AQUA-FE_WS/logs/hfnet_slam_adapter/aqualoc_a02_0005_full901_euroc_diag_r2",
+      "scientific_role": "POST_STOP_DIAGNOSTIC_NOT_REPLACEMENT_FOR_PREFIX_R1_STOP"
+    },
+    "official_source": {
+      "commit": "c354c72588a97bb6f6a9c7c8317530795956ec80",
+      "files": {
+        "Examples/Monocular-Inertial/mono_inertial_euroc.cc": {
+          "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Examples/Monocular-Inertial/mono_inertial_euroc.cc",
+          "sha256": "fa3effb0c2b99bc4dd83abda443180cf2f017f61710e02fa6b3f9278cc774d39",
+          "size_bytes": 10201
+        },
+        "src/LocalMapping.cc": {
+          "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/src/LocalMapping.cc",
+          "sha256": "57a1947409b69cc8095e5541ee92c61255ec75d75953ce303e7f2a8e564cae70",
+          "size_bytes": 60747
+        },
+        "src/System.cc": {
+          "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/src/System.cc",
+          "sha256": "4621d33384b904b68c1041bc5a1acd28eac07fc75481f89733ceeb3470215cc6",
+          "size_bytes": 48911
+        },
+        "src/Tracking.cc": {
+          "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/src/Tracking.cc",
+          "sha256": "e2cadda4cf9391129b097107ea1d35224a09d6ccf3b13eb87024120730a0b7e2",
+          "size_bytes": 124370
+        }
+      },
+      "origin": "https://github.com/LiuLimingCode/HFNet_SLAM.git",
+      "root": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1",
+      "tracked_worktree_clean": true,
+      "tree": "6619814aed4cd0e4baa2501341a48f753f8ba196"
+    },
+    "prefix_runtime_continuity": {
+      "cache_after_prefix_sha256": "a687454ce7dd12cdf73dab66a8e295ee21eb4827f8f7b1f9ca96e7ceef8342bc",
+      "cache_before_prefix_sha256": "40f8e09f6c47bbb389bf2437d882dc12e464a04d3dfae9594cf1d4607688ee5e",
+      "classification": "TensorRT_runtime_timing_cache_not_model_weights_or_thresholds",
+      "config_unchanged_from_prefix": true,
+      "extractor_parameters": {
+        "nFeatures": 675,
+        "nLevels": 4,
+        "scaleFactor": 1.2,
+        "threshold": 0.01,
+        "type": "HFNetRT"
+      },
+      "onnx_unchanged_from_prefix": true,
+      "source": "sealed_prefix_r1_official_run_cache_after"
+    },
+    "profile_schema": "aqua-fe-hfnet-a02-full901-post-stop-profile-r2",
+    "runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_slam_a02_full901_diagnostic_v2.py",
+      "sha256": "165589aae498225d825b7a2e43586607475704fdbf98cba484a16346ffb245c4",
+      "size_bytes": 52355
+    },
+    "scientific_role": "POST_STOP_DIAGNOSTIC_NOT_REPLACEMENT_FOR_PREFIX_R1_STOP"
+  },
+  "frozen_profile_sha256": "2705ef9b930809e285121ef1416f40f8d200f43181129da631f0b9ee77264959",
+  "legacy_prefix_r1": {
+    "decision": "STOP",
+    "preserved": true,
+    "replacement_by_this_track": false,
+    "run_contract": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_slam_a02_prefix200_run_contract_r1.json",
+      "sha256": "5c23bd2d519a76912c69d88cc7b8117b3532f2c70238b7ca59314eae4b4b0639",
+      "size_bytes": 2194
+    },
+    "run_result": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_slam_a02_prefix200_result_r1.json",
+      "sha256": "9e42c9e1f9b2848b45ff90d1a1bc581ba42752a91dcf07a0ac5bdecfa8d3a4c4",
+      "size_bytes": 3421
+    }
+  },
+  "output": {
+    "contract_json": "/home/ma/AQUA-FE_WS/papers/hfnet_slam_a02_full901_diagnostic_run_contract_r2.json",
+    "evidence_directory": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v2/post_stop_full901/drivers/aqualoc_a02_0005_full901_diag_r2",
+    "official_result_directory": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v2/post_stop_full901/runs/aqualoc_a02_0005_full901_diag_r2"
+  },
+  "prefix_runtime_continuity": {
+    "cache_after_prefix_sha256": "a687454ce7dd12cdf73dab66a8e295ee21eb4827f8f7b1f9ca96e7ceef8342bc",
+    "cache_before_prefix_sha256": "40f8e09f6c47bbb389bf2437d882dc12e464a04d3dfae9594cf1d4607688ee5e",
+    "classification": "TensorRT_runtime_timing_cache_not_model_weights_or_thresholds",
+    "config_unchanged_from_prefix": true,
+    "extractor_parameters": {
+      "nFeatures": 675,
+      "nLevels": 4,
+      "scaleFactor": 1.2,
+      "threshold": 0.01,
+      "type": "HFNetRT"
+    },
+    "onnx_unchanged_from_prefix": true,
+    "source": "sealed_prefix_r1_official_run_cache_after"
+  },
+  "schema_version": "aqua-fe-hfnet-a02-full901-post-stop-diagnostic-contract-r2",
+  "scientific_gate": {
+    "finite_eight_field_poses_only": true,
+    "keyframe_trajectory_nonempty": true,
+    "minimum_pose_count": 30,
+    "minimum_timestamp_span_seconds": 3.0,
+    "official_child_return_code_zero": true,
+    "strictly_increasing_timestamps": true
+  },
+  "scientific_role": "POST_STOP_DIAGNOSTIC_NOT_REPLACEMENT_FOR_PREFIX_R1_STOP"
+}

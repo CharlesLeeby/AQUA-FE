@@ -1,0 +1,583 @@
+{
+  "input_count": 101,
+  "inputs": {
+    "a02_7600_8000:adjudication": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/a02_7600_8000.runability_adjudication.json",
+      "sha256": "24dbd26b2cbee1bb48d9f6f98f8c648c7e7610494de592b7f3be8dd06ec1db8a",
+      "size_bytes": 32119
+    },
+    "a02_7600_8000:case_spec": {
+      "path": "/mnt/data/AQUA-FE_WS/locks/.hfnet_v6_samehistory_positive_roster_execution_lock_v2.bundle-a1df6b5e08cc9230/cases/a02_7600_8000.json",
+      "sha256": "c9b2ff749a71968baf75b27ea35a3160d8a594838b9501760f2a89b98d5deba9",
+      "size_bytes": 2378
+    },
+    "a02_7600_8000:permanent_case_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/a02_7600_8000.process_start_claim.json",
+      "sha256": "3ad8f8cdd30e820a91c5d4b067dc930e031273884217c4d383f2bb60f625130d",
+      "size_bytes": 3266
+    },
+    "a02_7600_8000:permanent_case_reservation": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/a02_7600_8000.start_once",
+      "sha256": "4bf8c21285e22df50dc455738c7c9edf0ca3de2f2f410d44a91a180b2e4a4dc5",
+      "size_bytes": 304
+    },
+    "a02_7600_8000:prestart": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/a02_7600_8000.prestart.json",
+      "sha256": "6114c24e557fe726d98eabf3b53f1b10970fb5a88852bb9298ef13f419b1dff0",
+      "size_bytes": 17406
+    },
+    "a02_7600_8000:run_result": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/a02_7600_8000/attempt_001/run_result.json",
+      "sha256": "42d0e6b8a2462f29ddc13161121297af00b2e8200e188a2b0956309066573703",
+      "size_bytes": 6270
+    },
+    "a02_7600_8000:stderr": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/a02_7600_8000/attempt_001/headless.stderr.log",
+      "sha256": "fa6cef0c34e09ac05c8fc397c90790208d8e33ea30aebd0bde00bf6c0363dea8",
+      "size_bytes": 5894
+    },
+    "a02_7600_8000:stdout": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/a02_7600_8000/attempt_001/headless.stdout.log",
+      "sha256": "b829f097d275ca06b74f02728a2576773f441e68f97fbfa016b32c2d51015ccf",
+      "size_bytes": 2769
+    },
+    "a02_7600_8000:watchdog": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_zero_kf_save_hang_watchdog_v1/a02_7600_8000.json",
+      "sha256": "f82e1984c6fe832f8950d623982392b2837ad02e1d6ce107bc4f71eb436e8fd7",
+      "size_bytes": 6750
+    },
+    "a05_3300_3700:case_spec": {
+      "path": "/mnt/data/AQUA-FE_WS/locks/.hfnet_v6_samehistory_positive_roster_execution_lock_v2.bundle-a1df6b5e08cc9230/cases/a05_3300_3700.json",
+      "sha256": "58df2483c324a8cfa42660421e1c1ac7cb574136385482a89a80c50ec7070978",
+      "size_bytes": 2373
+    },
+    "a05_3300_3700:permanent_case_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/a05_3300_3700.process_start_claim.json",
+      "sha256": "754ea40ee10aa154d9c329e0eac6a46d59099e823dd2c733ed359a3d066c9230",
+      "size_bytes": 3266
+    },
+    "a05_3300_3700:permanent_case_reservation": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/a05_3300_3700.start_once",
+      "sha256": "62c1c2401f65c87efb83b77e29edaff12a641e52814e96639814fbfb0866c0cb",
+      "size_bytes": 304
+    },
+    "a05_3300_3700:run_result": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/a05_3300_3700/attempt_001/run_result.json",
+      "sha256": "16de64e13e07b7e8bcf38afddd04348b2d82ce73c5d50e2d2b704f57ee0d1ebe",
+      "size_bytes": 6926
+    },
+    "a05_3300_3700:stderr": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/a05_3300_3700/attempt_001/headless.stderr.log",
+      "sha256": "8829d5558b7b882b91cff0ddeb9eb78425f60b946a1015c39c5e091e4ec55cf3",
+      "size_bytes": 5894
+    },
+    "a05_3300_3700:stdout": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/a05_3300_3700/attempt_001/headless.stdout.log",
+      "sha256": "56710e1c5f3f577ffe800334aba3453d1f0e38b6e90566841e00b4b92341e109",
+      "size_bytes": 4614
+    },
+    "a07_10800_11200:adjudication": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/a07_10800_11200.runability_adjudication.json",
+      "sha256": "479078d8ebaab24e2aa25cc81f5dba9860376ff3953d699a98397bc78e2ea1e0",
+      "size_bytes": 32219
+    },
+    "a07_10800_11200:case_spec": {
+      "path": "/mnt/data/AQUA-FE_WS/locks/.hfnet_v6_samehistory_positive_roster_execution_lock_v2.bundle-a1df6b5e08cc9230/cases/a07_10800_11200.json",
+      "sha256": "510183112c4199a1bb49512b9c80a57c1d1586a05ef7f0768ca24ee494ba8832",
+      "size_bytes": 2383
+    },
+    "a07_10800_11200:permanent_case_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/a07_10800_11200.process_start_claim.json",
+      "sha256": "631998e2d54602f8013619d475d42416ddb5df4f9e23b165d8ccd86549400ef2",
+      "size_bytes": 3284
+    },
+    "a07_10800_11200:permanent_case_reservation": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/a07_10800_11200.start_once",
+      "sha256": "f82c8ba57c7d9db38f3503ade895cfe70bf2d8ecf8ef46e3e08a0e189b353520",
+      "size_bytes": 308
+    },
+    "a07_10800_11200:prestart": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/a07_10800_11200.prestart.json",
+      "sha256": "a4522c1e9ffd002ceccd2a2f56206296e397763e658062a66993a47fb1fa029c",
+      "size_bytes": 17450
+    },
+    "a07_10800_11200:run_result": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/a07_10800_11200/attempt_001/run_result.json",
+      "sha256": "47f434bf9f63115e23b83b3024dc5c1fc6af52792a65c8f56c63ce6fb95281ed",
+      "size_bytes": 6288
+    },
+    "a07_10800_11200:stderr": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/a07_10800_11200/attempt_001/headless.stderr.log",
+      "sha256": "bbf7b7f03174646ceef424ce8afdaef706a5b663f3a1920dcd11a5f6266225b4",
+      "size_bytes": 5918
+    },
+    "a07_10800_11200:stdout": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/a07_10800_11200/attempt_001/headless.stdout.log",
+      "sha256": "aff061e33d07e7a785c539bc00ee364180ef000a493bede470c7a7ced37d37e9",
+      "size_bytes": 2779
+    },
+    "a07_10800_11200:watchdog": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_zero_kf_save_hang_watchdog_v1/a07_10800_11200.json",
+      "sha256": "85f7e53620af4745943bd74952baea0cb0310dc8ab444a0ee6a33b2ae25f7364",
+      "size_bytes": 6774
+    },
+    "a08_4500_4660:adjudication": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/a08_4500_4660.runability_adjudication.json",
+      "sha256": "a9b50591ff9452eab5740ebcd3ef2f7a63724608f96f1722fccf65734abea195",
+      "size_bytes": 32625
+    },
+    "a08_4500_4660:case_spec": {
+      "path": "/mnt/data/AQUA-FE_WS/locks/.hfnet_v6_samehistory_positive_roster_execution_lock_v2.bundle-a1df6b5e08cc9230/cases/a08_4500_4660.json",
+      "sha256": "09eebaca96dd1c801b62ce95f9547c87832900c07d700fc0ca53e6469a28255d",
+      "size_bytes": 2372
+    },
+    "a08_4500_4660:permanent_case_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/a08_4500_4660.process_start_claim.json",
+      "sha256": "5c762f18d4d972f196f2436853ff02ce37bafb17201e89ff446efe8a8080ed4a",
+      "size_bytes": 3266
+    },
+    "a08_4500_4660:permanent_case_reservation": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/a08_4500_4660.start_once",
+      "sha256": "9b75bcfdc962eee5e067d86c1b29c7515c7f50da84aece59dd445b23f3c9f462",
+      "size_bytes": 304
+    },
+    "a08_4500_4660:prestart": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/a08_4500_4660.prestart.json",
+      "sha256": "b1c1c91be3339b4ccd7f03f770c4893da3fd0037ef39063820279be248ab1030",
+      "size_bytes": 17406
+    },
+    "a08_4500_4660:run_result": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/a08_4500_4660/attempt_001/run_result.json",
+      "sha256": "befc5f9f7b4db5f54f5f0eb87311cad84245bde5c7c8c59792a1c74d90888d7f",
+      "size_bytes": 6507
+    },
+    "a08_4500_4660:stderr": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/a08_4500_4660/attempt_001/headless.stderr.log",
+      "sha256": "753103aa0126037eaa63fb7a2c19290ae71fb0f1b24d6a494e8b7e9c718d4f3a",
+      "size_bytes": 5894
+    },
+    "a08_4500_4660:stdout": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/a08_4500_4660/attempt_001/headless.stdout.log",
+      "sha256": "08184c21f66c201c6617e6337a7086808e8be7a8db1e2ac9d71eac685a6a10a0",
+      "size_bytes": 3380
+    },
+    "a08_4500_4660:watchdog": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_zero_kf_save_hang_watchdog_v1/a08_4500_4660.json",
+      "sha256": "09e0a65bca589208bd079102360e676dde7a05b0a193326d941f2cf55afb11ab",
+      "size_bytes": 6750
+    },
+    "a09_6000_6200:adjudication": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/a09_6000_6200.runability_adjudication.json",
+      "sha256": "0c3c507687a965eedfe2651a82b73944c4756f4b679bb287f012a40115e7de85",
+      "size_bytes": 34237
+    },
+    "a09_6000_6200:case_spec": {
+      "path": "/mnt/data/AQUA-FE_WS/locks/.hfnet_v6_samehistory_positive_roster_execution_lock_v2.bundle-a1df6b5e08cc9230/cases/a09_6000_6200.json",
+      "sha256": "ceba50aed3c5bc966584b6e40fdda7b4ce0c5cf2e8e72f4289f16f60f79d8928",
+      "size_bytes": 2373
+    },
+    "a09_6000_6200:permanent_case_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/a09_6000_6200.process_start_claim.json",
+      "sha256": "b5826bf1e85c7851d0e94c6965738fe3182ce84048574b73b947da2c036c783f",
+      "size_bytes": 3266
+    },
+    "a09_6000_6200:permanent_case_reservation": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/a09_6000_6200.start_once",
+      "sha256": "7a6f1e852122a3d0e54306e76c813067368908b1b58cc3a21b64298cacf99ca6",
+      "size_bytes": 304
+    },
+    "a09_6000_6200:prestart": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/a09_6000_6200.prestart.json",
+      "sha256": "7e4bf15eea8d5797327840ba766c5882fb25887c83c67db66a2b6a1716bcafb5",
+      "size_bytes": 17406
+    },
+    "a09_6000_6200:run_result": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/a09_6000_6200/attempt_001/run_result.json",
+      "sha256": "460e8d860990eb1b5f6dbf2cb1afcf1b9beb4e66e9a46382e3160336853cc021",
+      "size_bytes": 7285
+    },
+    "a09_6000_6200:stderr": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/a09_6000_6200/attempt_001/headless.stderr.log",
+      "sha256": "a7f5475ba585950b4dd80c9d6daf75da4bc3f90ada9df487763e3e5fe0fdbea2",
+      "size_bytes": 5894
+    },
+    "a09_6000_6200:stdout": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/a09_6000_6200/attempt_001/headless.stdout.log",
+      "sha256": "eb09a5aeb7112ee71d99344bc4f4c5c309a6f15bf8f014df716af1a9bcfa1af8",
+      "size_bytes": 3298
+    },
+    "a09_6000_6200:watchdog": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_zero_kf_save_hang_watchdog_v1/a09_6000_6200.json",
+      "sha256": "8d10eec9b4cfb18d625ce85339d95944602d53c40040e09482ee4cda37a493bb",
+      "size_bytes": 6331
+    },
+    "analysis:publication_style": {
+      "path": "/home/ma/.codex/skills/scientific-toolkit/references/scientific-skills/scientific-visualization/assets/publication.mplstyle",
+      "sha256": "38244036fb563bdf50b6b15ac927ae62afa3a8f6acf03ec5c9b317adad9c5a14",
+      "size_bytes": 1474
+    },
+    "analysis_builder": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/build_hfnet_v6_samehistory_positive_roster_v2_analysis.py",
+      "sha256": "827b36a5bc93a0564c642c01e034a275caa8611a30b5213cf904d33d614943c2",
+      "size_bytes": 43644
+    },
+    "authority:accuracy_controller_v2": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_samehistory_positive_roster_accuracy_v2.py",
+      "sha256": "4a644e542285da483ed502183dcd822dc69a01f2f04ce1a5305efbf0db78e822",
+      "size_bytes": 54289
+    },
+    "authority:accuracy_supersession_v2": {
+      "path": "/mnt/data/AQUA-FE_WS/locks/hfnet_v6_samehistory_positive_accuracy_supersession_v2.json",
+      "sha256": "d3d32367803fa5f2849fb1361c48d1872418f2a683b32ca6e5f12ea37ccbde73",
+      "size_bytes": 27455
+    },
+    "authority:cache_adjudicator_v1": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/adjudicate_hfnet_v6_samehistory_positive_roster_cache_contract_v1.py",
+      "sha256": "4ac16863c9ed068351d065724fc3ed4208ee3a7f3cff9d7b35434d5c3d2f3a54",
+      "size_bytes": 65899
+    },
+    "authority:roster_pointer": {
+      "path": "/mnt/data/AQUA-FE_WS/locks/hfnet_v6_samehistory_positive_roster_execution_lock_v2.json",
+      "sha256": "f9b44e9c126e68d151368c84a562aef5f9b06e1200b6f5dd1b6fe55d33430df1",
+      "size_bytes": 5296
+    },
+    "authority:runner_v2": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_samehistory_positive_roster_v2.py",
+      "sha256": "ec1afff8b1f7a8fdac0e7d395648bd4aa4b47b107bd3c2871a034eb49ba83bbb",
+      "size_bytes": 7639
+    },
+    "authority:zero_kf_watchdog_v1": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_samehistory_positive_roster_zero_kf_watchdog_v1.py",
+      "sha256": "a85c6620fb16bb3c2525e654342aa22ab816684030d41bc598ead752fc399b71",
+      "size_bytes": 35087
+    },
+    "cirs_s575_d30:adjudication": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/cirs_s575_d30.runability_adjudication.json",
+      "sha256": "7e603caedaa1e5a14376c8bddb26c9642c8e3e9dfa54701f96d80fabd366daa8",
+      "size_bytes": 2200
+    },
+    "cirs_s575_d30:case_spec": {
+      "path": "/mnt/data/AQUA-FE_WS/locks/.hfnet_v6_samehistory_positive_roster_execution_lock_v2.bundle-a1df6b5e08cc9230/cases/cirs_s575_d30.json",
+      "sha256": "931b4d06b766679b4ca610274c4de03a837f9f26597bfd31e24fa7e0d8b92dc6",
+      "size_bytes": 2341
+    },
+    "cirs_s575_d30:permanent_case_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/cirs_s575_d30.process_start_claim.json",
+      "sha256": "92c8bab68296601cb03646b78ae56c3fbfe015d83b9997899bb2b5756688fe66",
+      "size_bytes": 3246
+    },
+    "cirs_s575_d30:permanent_case_reservation": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/cirs_s575_d30.start_once",
+      "sha256": "c3f8d9a1bf16e4d425681afa92f692af3eac3030d646892d784184f5d226bd2e",
+      "size_bytes": 304
+    },
+    "cirs_s575_d30:prestart": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/cirs_s575_d30.prestart.json",
+      "sha256": "009ac06028515d46a487b166be50dd8a4468feec055e65c5712fc6a965878231",
+      "size_bytes": 17322
+    },
+    "cirs_s575_d30:run_result": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/cirs_s575_d30/attempt_001/run_result.json",
+      "sha256": "0c0cb368a3b11de6357e3db38a59d0218f3b887b4f6426c42538988dd91c2192",
+      "size_bytes": 18978
+    },
+    "cirs_s575_d30:stderr": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/cirs_s575_d30/attempt_001/headless.stderr.log",
+      "sha256": "b140583c772079929adb753aaf4180e7ee0f989d667496c80951412cc74b0eae",
+      "size_bytes": 215
+    },
+    "cirs_s575_d30:stdout": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/cirs_s575_d30/attempt_001/headless.stdout.log",
+      "sha256": "8729db1962b2b9daa7e8af2274a606b43dae3be689b01e4609690e182870c382",
+      "size_bytes": 1034
+    },
+    "cirs_s575_d30:watchdog": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_zero_kf_save_hang_watchdog_v1/cirs_s575_d30.json",
+      "sha256": "dc6cb02d270c9ab8dc541d2849a25de09dc3ae6b1a13f89b9837ca4be00bb012",
+      "size_bytes": 5180
+    },
+    "cirs_s900_d30:adjudication": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/cirs_s900_d30.runability_adjudication.json",
+      "sha256": "80888ffab4997fdf9a75bc572ea83dce7fc13e5bd80e72d712287521ce0b83e7",
+      "size_bytes": 2200
+    },
+    "cirs_s900_d30:case_spec": {
+      "path": "/mnt/data/AQUA-FE_WS/locks/.hfnet_v6_samehistory_positive_roster_execution_lock_v2.bundle-a1df6b5e08cc9230/cases/cirs_s900_d30.json",
+      "sha256": "5a927649a2faff44ff82bfa4013832def3c52135dadd3ede90bd3ff8a825e6b5",
+      "size_bytes": 2341
+    },
+    "cirs_s900_d30:permanent_case_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/cirs_s900_d30.process_start_claim.json",
+      "sha256": "c6f2651b5d16b3e29169eb68761b90343b8596fee0d5747931d6e022685ad9f3",
+      "size_bytes": 3246
+    },
+    "cirs_s900_d30:permanent_case_reservation": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/cirs_s900_d30.start_once",
+      "sha256": "d6f69d6e548bec4d602ced0347125eea75cc89d6eab2d5b0817ec7fb88c1fee0",
+      "size_bytes": 304
+    },
+    "cirs_s900_d30:prestart": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/cirs_s900_d30.prestart.json",
+      "sha256": "c7ea81c67c7a41afdcef2d5a147fbb0668bff9614d81f6f5c288cdc0bdb9ff12",
+      "size_bytes": 17322
+    },
+    "cirs_s900_d30:run_result": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/cirs_s900_d30/attempt_001/run_result.json",
+      "sha256": "12fdbce66244e7d1139497c21100ceac5eef18f016fc3441edb57fed673fcefd",
+      "size_bytes": 18978
+    },
+    "cirs_s900_d30:stderr": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/cirs_s900_d30/attempt_001/headless.stderr.log",
+      "sha256": "b140583c772079929adb753aaf4180e7ee0f989d667496c80951412cc74b0eae",
+      "size_bytes": 215
+    },
+    "cirs_s900_d30:stdout": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/cirs_s900_d30/attempt_001/headless.stdout.log",
+      "sha256": "54aac0a4e9e08e6c938093953fd9b108eee5b629a56cf553f92847e63763da3c",
+      "size_bytes": 1034
+    },
+    "cirs_s900_d30:watchdog": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_zero_kf_save_hang_watchdog_v1/cirs_s900_d30.json",
+      "sha256": "9708be67d561c8536e5356a15c061024ed2a1ac9df37e62ceeb3204229200328",
+      "size_bytes": 5180
+    },
+    "fjord1_s83_d10:adjudication": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/fjord1_s83_d10.runability_adjudication.json",
+      "sha256": "76fac42364a7b0103be2c36d5723381e1c3aa1f980965b1cc4030ec945056f36",
+      "size_bytes": 2192
+    },
+    "fjord1_s83_d10:case_spec": {
+      "path": "/mnt/data/AQUA-FE_WS/locks/.hfnet_v6_samehistory_positive_roster_execution_lock_v2.bundle-a1df6b5e08cc9230/cases/fjord1_s83_d10.json",
+      "sha256": "1ed785204479a6144105c05e06f16b1751431458f95e608926b025aa2378db97",
+      "size_bytes": 2392
+    },
+    "fjord1_s83_d10:permanent_case_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/fjord1_s83_d10.process_start_claim.json",
+      "sha256": "25ad5666cefc0ed4f1522e597dddc9e6709a552ec48940b57cbc37558fe531fd",
+      "size_bytes": 3305
+    },
+    "fjord1_s83_d10:permanent_case_reservation": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/fjord1_s83_d10.start_once",
+      "sha256": "10c1dfa82f01778bcc70d632a86394c29b53ff9315369430b0e0df5be7cbbafb",
+      "size_bytes": 306
+    },
+    "fjord1_s83_d10:prestart": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/fjord1_s83_d10.prestart.json",
+      "sha256": "749e58e8b6376d10f73969bcf5e81100f24a1dd1b923478f2b1e071790bb50a8",
+      "size_bytes": 17503
+    },
+    "fjord1_s83_d10:run_result": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/fjord1_s83_d10/attempt_001/run_result.json",
+      "sha256": "969268ba1c6d13fc1e83f05c27d79f374329758699ae2a4db3b448925ae1befd",
+      "size_bytes": 6280
+    },
+    "fjord1_s83_d10:stderr": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/fjord1_s83_d10/attempt_001/headless.stderr.log",
+      "sha256": "786df60aea7f3b8c666204ce4bf25261057480260b8eb82e12e2ade709d8c42f",
+      "size_bytes": 6084
+    },
+    "fjord1_s83_d10:stdout": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/fjord1_s83_d10/attempt_001/headless.stdout.log",
+      "sha256": "de9e50cb33b1bc33d428c9beee7f8172f9176c1043e09e9be16edb2dbb3da41c",
+      "size_bytes": 2736
+    },
+    "fjord1_s83_d10:watchdog": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_zero_kf_save_hang_watchdog_v1/fjord1_s83_d10.json",
+      "sha256": "1411a47961a061f8cce3c4b9c79556103ee55a637642a31ec3256b76e922985f",
+      "size_bytes": 6644
+    },
+    "mclab1_s60_d15:accuracy_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_accuracy_analysis_v2/_claims/mclab1_s60_d15.start_once",
+      "sha256": "e2824677a658c356f919cc071a4d41fea71e95600feb892a679273c02693fc95",
+      "size_bytes": 1465
+    },
+    "mclab1_s60_d15:accuracy_evo_crosscheck": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_accuracy_analysis_v2/mclab1_s60_d15/attempt_001/evo_crosscheck.json",
+      "sha256": "3c74f1f6646c6002c45b82bb9d29e9a30847e3f20294aec5e698df113ee2bbf5",
+      "size_bytes": 2087
+    },
+    "mclab1_s60_d15:accuracy_execution_lock": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_accuracy_execution_locks_v2/mclab1_s60_d15.json",
+      "sha256": "8d7020662adc8b8db53a0fdaae218bde136a760f5e5eedac7c7edbab9634f6dc",
+      "size_bytes": 20501
+    },
+    "mclab1_s60_d15:accuracy_result": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_accuracy_analysis_v2/mclab1_s60_d15/attempt_001/accuracy_result.json",
+      "sha256": "b205ad27b5227eb983adb5beca7d9d7d6b6e636dd80178933319b22224d16294",
+      "size_bytes": 66561
+    },
+    "mclab1_s60_d15:accuracy_terminal": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_accuracy_analysis_v2/mclab1_s60_d15/terminal_receipt.json",
+      "sha256": "e61bdc784136138b43d850bcc35f8f54f392ee0e94b89f425b2d5c1dd6eb7b31",
+      "size_bytes": 1756
+    },
+    "mclab1_s60_d15:accuracy_timestamp_bridge": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_accuracy_execution_locks_v2/mclab1_s60_d15.hfnet_timestamp_bridge_receipt.json",
+      "sha256": "cbcd6ef86f001e69663ea1352af1a24a560e4fc4c9c1f70f0a92a6aa56bd819f",
+      "size_bytes": 66280
+    },
+    "mclab1_s60_d15:adjudication": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/mclab1_s60_d15.runability_adjudication.json",
+      "sha256": "2155ed3cf04b2039ecbf9c275b5cfffd8526245cfff29e89232d1770f7f3b553",
+      "size_bytes": 34027
+    },
+    "mclab1_s60_d15:case_spec": {
+      "path": "/mnt/data/AQUA-FE_WS/locks/.hfnet_v6_samehistory_positive_roster_execution_lock_v2.bundle-a1df6b5e08cc9230/cases/mclab1_s60_d15.json",
+      "sha256": "4e0c13e6ac4530c85f55b54891e7a4483f72eab4db43ae8eb1122614f50f3234",
+      "size_bytes": 2393
+    },
+    "mclab1_s60_d15:permanent_case_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/mclab1_s60_d15.process_start_claim.json",
+      "sha256": "a3f84b1a9d10afc095503a60f9ed7e6754a856c4bec92eb3359a1cef376815b8",
+      "size_bytes": 3305
+    },
+    "mclab1_s60_d15:permanent_case_reservation": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/mclab1_s60_d15.start_once",
+      "sha256": "1d7474c9f5c48d3c7640bc489d1df95c65dcee28b86c255daa9a78c60a1a9e9d",
+      "size_bytes": 306
+    },
+    "mclab1_s60_d15:prestart": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/mclab1_s60_d15.prestart.json",
+      "sha256": "cbad0967a63ceafd452d0986da530aad733881c7a14089d3857cd5f59fa664b1",
+      "size_bytes": 17505
+    },
+    "mclab1_s60_d15:run_result": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/mclab1_s60_d15/attempt_001/run_result.json",
+      "sha256": "ac3cf2d750f1a743f6e06e6db004d4d919c4ee255602fef1c3258351f00df937",
+      "size_bytes": 7178
+    },
+    "mclab1_s60_d15:stderr": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/mclab1_s60_d15/attempt_001/headless.stderr.log",
+      "sha256": "44cc3c2e906507bec94d483af6d7a708af04eaf6919c4c70e78bda6558f3a4a1",
+      "size_bytes": 6084
+    },
+    "mclab1_s60_d15:stdout": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/mclab1_s60_d15/attempt_001/headless.stdout.log",
+      "sha256": "a9b03157138b81c138a24555655d2fb342cd89ada04f5be83c8a4cb7cb24cef6",
+      "size_bytes": 3288
+    },
+    "mclab1_s60_d15:watchdog": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_zero_kf_save_hang_watchdog_v1/mclab1_s60_d15.json",
+      "sha256": "ef10550ea25e0f8caf9a6c14dc1c58a8c29adab8c7c8680dd5118739e6b4ddd7",
+      "size_bytes": 6375
+    },
+    "mclab2_s110_d10:adjudication": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/mclab2_s110_d10.runability_adjudication.json",
+      "sha256": "28a6dfb11b808ff6374350b1003723ca1f6c483af86e28a8e74581d08f2639a2",
+      "size_bytes": 35212
+    },
+    "mclab2_s110_d10:case_spec": {
+      "path": "/mnt/data/AQUA-FE_WS/locks/.hfnet_v6_samehistory_positive_roster_execution_lock_v2.bundle-a1df6b5e08cc9230/cases/mclab2_s110_d10.json",
+      "sha256": "bd09d744882d97df351d2fc7da7f030960a2f49af257aa792a8c9b377a0a7385",
+      "size_bytes": 2402
+    },
+    "mclab2_s110_d10:permanent_case_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/mclab2_s110_d10.process_start_claim.json",
+      "sha256": "b6a38552e3917303527f5427d9a88cbedae52d273839904c696047f8366fb776",
+      "size_bytes": 3314
+    },
+    "mclab2_s110_d10:permanent_case_reservation": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_case_claims/mclab2_s110_d10.start_once",
+      "sha256": "cbfca1c9605edb0210724ec4594944e6a704d14c7ccc04ada8a6c379066780b8",
+      "size_bytes": 308
+    },
+    "mclab2_s110_d10:prestart": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_cache_contract_adjudication_v1/mclab2_s110_d10.prestart.json",
+      "sha256": "42af352b6ee90d116a029d5b79c521b0575d65a106ed1d64e5b342c9d72c03bb",
+      "size_bytes": 17525
+    },
+    "mclab2_s110_d10:run_result": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/mclab2_s110_d10/attempt_001/run_result.json",
+      "sha256": "52c4a264640c1766600e86e25646013f4262eaa874af2d09635469a9f1590b3e",
+      "size_bytes": 7674
+    },
+    "mclab2_s110_d10:stderr": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/mclab2_s110_d10/attempt_001/headless.stderr.log",
+      "sha256": "2c79f843672bc937c0aa8c6b2d1d85a964188a566b674d7050b1ca9e7b9f7961",
+      "size_bytes": 6096
+    },
+    "mclab2_s110_d10:stdout": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/mclab2_s110_d10/attempt_001/headless.stdout.log",
+      "sha256": "abacb2aa4eeddd945dba6fe1d049d013b2483f4dc7f1b289b1649bea8d0eba5f",
+      "size_bytes": 4354
+    },
+    "mclab2_s110_d10:watchdog": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/samehistory_old_positive_roster_v2/_zero_kf_save_hang_watchdog_v1/mclab2_s110_d10.json",
+      "sha256": "01d1cf78c28f9b46b014d63de8903695c1a8d5b9bdf2c7dcf983b5ea06323118",
+      "size_bytes": 6387
+    }
+  },
+  "outputs": {
+    "analysis-bundle.json": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_samehistory_positive_roster_v2_analysis/analysis-output/analysis-bundle.json",
+      "sha256": "20baebbd016ce875a349a8aa5ca9efe84ff3128ee0bdcd7ff7ce24cad6c06656",
+      "size_bytes": 14477
+    },
+    "analysis-report.md": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_samehistory_positive_roster_v2_analysis/analysis-output/analysis-report.md",
+      "sha256": "c4fb8d7cb37bf76aba3f0c5e89d467923933970b54c0054b441487598fae34d9",
+      "size_bytes": 6495
+    },
+    "figure-01-runability-coverage.pdf": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_samehistory_positive_roster_v2_analysis/analysis-output/figures/figure-01-runability-coverage.pdf",
+      "sha256": "a7e577ec29d5c143895e356555798eed94766a7f16b8f4c4d42282db7b2418b2",
+      "size_bytes": 43279
+    },
+    "figure-01-runability-coverage.png": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_samehistory_positive_roster_v2_analysis/analysis-output/figures/figure-01-runability-coverage.png",
+      "sha256": "02efdd05d4c8c61863c413a8b487145a6a0134f729b445a818569d1de298da20",
+      "size_bytes": 388393
+    },
+    "figure-01-runability-coverage.svg": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_samehistory_positive_roster_v2_analysis/analysis-output/figures/figure-01-runability-coverage.svg",
+      "sha256": "5261524de85c86af18a29cb647910081137085e470d00d8ba180cdde3fbd91cd",
+      "size_bytes": 200629
+    },
+    "figure-02-mclab1-common-support-errors.pdf": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_samehistory_positive_roster_v2_analysis/analysis-output/figures/figure-02-mclab1-common-support-errors.pdf",
+      "sha256": "c8e141d4ed9e00df15ea43a9ef61fb802b7c9882156b006412ab38536ddc44b8",
+      "size_bytes": 46023
+    },
+    "figure-02-mclab1-common-support-errors.png": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_samehistory_positive_roster_v2_analysis/analysis-output/figures/figure-02-mclab1-common-support-errors.png",
+      "sha256": "4de0665b1dc70a2b261b980dc30cf2c276abe276d07b8326e31e0be432d8161b",
+      "size_bytes": 384527
+    },
+    "figure-02-mclab1-common-support-errors.svg": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_samehistory_positive_roster_v2_analysis/analysis-output/figures/figure-02-mclab1-common-support-errors.svg",
+      "sha256": "e1f48e7a965843b4dacb97adcf1906ab93c9527f68a4f91b4139efd523187001",
+      "size_bytes": 205522
+    },
+    "figure-catalog.md": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_samehistory_positive_roster_v2_analysis/analysis-output/figure-catalog.md",
+      "sha256": "9ca4cac3f863493877bee4afb5d9cec9a2c0beb903649355912333fcab226d42",
+      "size_bytes": 2708
+    },
+    "mclab1-common-support-metrics.csv": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_samehistory_positive_roster_v2_analysis/analysis-output/mclab1-common-support-metrics.csv",
+      "sha256": "fbcdb03fdc839d7a9afa894e64d64276b89248613c6c62f785ece84791badbba",
+      "size_bytes": 574
+    },
+    "roster-summary.csv": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_samehistory_positive_roster_v2_analysis/analysis-output/roster-summary.csv",
+      "sha256": "bcadcf95453ee683d18e5f582d33047c233b8d638bd479da8bb0efad8bf3e100",
+      "size_bytes": 2430
+    },
+    "stats-appendix.md": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_samehistory_positive_roster_v2_analysis/analysis-output/stats-appendix.md",
+      "sha256": "50399fcfd055dc280c8c5e812ddf33ccecb993b2f75cffe8b53cfd4672ca0cca",
+      "size_bytes": 3091
+    }
+  },
+  "reproducibility": {
+    "builder": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/build_hfnet_v6_samehistory_positive_roster_v2_analysis.py",
+      "sha256": "827b36a5bc93a0564c642c01e034a275caa8611a30b5213cf904d33d614943c2",
+      "size_bytes": 43644
+    },
+    "failed_cases_imputed": false,
+    "inferential_statistics_performed": false
+  },
+  "schema_version": "aqua-fe-hfnet-v6-samehistory-positive-roster-analysis-source-manifest-v1",
+  "status": "PASS_ALL_DECLARED_SOURCES_AND_OUTPUTS_SNAPSHOTTED"
+}

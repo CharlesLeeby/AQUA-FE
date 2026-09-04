@@ -1,0 +1,69 @@
+{
+  "schema_version": "aqua-fe-supervins-mh01-gt-visualization-correction-test-receipt-v1",
+  "created_at": "2026-08-21T01:24:19+08:00",
+  "status": "PASS_SYNTHETIC_AND_SEALED_INPUT_VISUALIZATION_CONTRACT_TESTS",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "-q",
+    "scripts.tests.test_render_supervins_v1_official_euroc_mh01_gt_visualization_correction_v1"
+  ],
+  "working_directory": "/home/ma/AQUA-FE_WS",
+  "started_at": "2026-08-21T01:24:06.919265+08:00",
+  "completed_at": "2026-08-21T01:24:07.089724+08:00",
+  "wall_elapsed_ns": 170415818,
+  "return_code": 0,
+  "stdout_utf8": "",
+  "stderr_utf8": "----------------------------------------------------------------------\nRan 11 tests in 0.094s\n\nOK\n",
+  "reported_test_count": 11,
+  "reported_result": "OK",
+  "runtime": {
+    "python_command_path": "/usr/bin/python3",
+    "resolved_python": "/usr/bin/python3.8",
+    "python_version": "3.8.10",
+    "python_identity_following_symlink": {
+      "sha256": "298a9e830ed52f36c299427565485d717d1ce0179c0597cc16560513eb780b06",
+      "size_bytes": 5490456
+    }
+  },
+  "tested_files": {
+    "renderer": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/render_supervins_v1_official_euroc_mh01_gt_visualization_correction_v1.py",
+      "sha256": "d08ec602079ac578cfc353be838bbd83b9c153514eda13b901924acd102f8d89",
+      "size_bytes": 34119,
+      "mode": "0444",
+      "nlink": 1
+    },
+    "tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_render_supervins_v1_official_euroc_mh01_gt_visualization_correction_v1.py",
+      "sha256": "49dd9306c3eac1329dd012e6c706bf10c8b94774cdc6c590f5f3d20813ae11ea",
+      "size_bytes": 5749,
+      "mode": "0444",
+      "nlink": 1
+    }
+  },
+  "coverage": {
+    "sealed_input_pins": true,
+    "sealed_csv_row_counts_and_schema": true,
+    "equal_metres_per_pixel_positive_and_negative_contracts": true,
+    "zero_lower_time_and_error_axis_contract": true,
+    "negative_error_rejection": true,
+    "fresh_additive_namespace": true,
+    "exclusive_immutable_writer": true,
+    "canonical_tree_digest": true,
+    "canonical_self_hash_and_tamper_detection": true,
+    "no_numpy_scipy_matplotlib_pandas_or_alignment_import": true
+  },
+  "scientific_boundary": {
+    "sealed_csv_coordinates_and_existing_error_columns_read_for_contract_tests": true,
+    "pose_alignment_recomputed": false,
+    "ape_or_rpe_recomputed": false,
+    "sealed_attempt_modified": false,
+    "correction_evidence_root_created": false,
+    "ros_or_model_started": false
+  },
+  "receipt_self_hash_algorithm": "SHA-256 over compact canonical JSON of this object with receipt_self_hash_sha256 omitted",
+  "receipt_self_hash_sha256": "e415e65fe90bc0cb415583ac7b93772e8f821b5c9aa2701a76a4a33e77d52a42"
+}

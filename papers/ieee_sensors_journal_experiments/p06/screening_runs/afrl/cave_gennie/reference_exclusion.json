@@ -1,0 +1,40 @@
+{
+  "attempt_id": "attempt02",
+  "dataset_family": "afrl",
+  "decision": "EXCLUDE_SEQUENCE_FROM_REFERENCE_BEARING_FINAL_SELECTION",
+  "generated_at": "2026-08-05T00:12:37+08:00",
+  "gross_fixed_windows": 15,
+  "learned_outcome_read": false,
+  "outcome_boundary": "KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME",
+  "partial_feature_bag": {
+    "disposition": "deleted_after_recorded_hash",
+    "message_count": 1224,
+    "sha256": "579d6f70860c842a64f00d0ff9d59a9864a956d60e5e3878982d92539aaa6b15",
+    "size_bytes": 27762223
+  },
+  "partial_metrics": {
+    "first_frame_index": 0,
+    "frame_index_contiguous": true,
+    "last_frame_index": 1223,
+    "path": "papers/ieee_sensors_journal_experiments/p06/screening_runs/afrl/cave_gennie/attempt02/partial_metrics.csv",
+    "row_count": 1224,
+    "sha256": "9e38075c2c10c05e9de293dea1371122acba6a3952c0fd0fc97b55a8cb3b4dac",
+    "size_bytes": 735720
+  },
+  "protocol_version": "isj-window-selection-v2",
+  "reference_support_contract": "G0_REFERENCE_ONLY_POSES_GE30_COVERAGE_GE0P70_SPAN_GE10S",
+  "reference_support_fail_windows": 15,
+  "reference_support_pass_windows": 0,
+  "reference_support_sha256": "9a81acea50be6890d29cd533a1566e4e3b783393961e640f8e99131bdd069a0b",
+  "runner_audit": {
+    "path": "papers/ieee_sensors_journal_experiments/p06/screening_runs/afrl/cave_gennie/attempt02/screening_run.json",
+    "returncode": 254,
+    "sha256": "67ba5683899b35e363b3892a50e511599e59a7d302f7dc22206acc1426b4d7e5",
+    "status": "FAILED_AFTER_INTENTIONAL_SIGINT"
+  },
+  "schema_version": "isj-p06-reference-sequence-exclusion-v1",
+  "scientific_screening_result_produced": false,
+  "sequence": "cave_gennie",
+  "status": "STOPPED_REFERENCE_INELIGIBLE",
+  "trajectory_outcome_read": false
+}

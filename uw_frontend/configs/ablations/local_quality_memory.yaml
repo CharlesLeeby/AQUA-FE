@@ -1,0 +1,9 @@
+extends: local_quality_only.yaml
+
+hybrid:
+  enable_learned_track_memory: true
+  learned_track_memory_size: 3
+  learned_track_memory_max_frame_gap: 5
+  learned_track_memory_max_points: 450
+  learned_track_memory_max_recovered: 60
+  learned_track_memory_min_recovery_gap: 2

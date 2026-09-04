@@ -1,0 +1,10 @@
+extends: formal_loftr_v31_repro_frontend.yaml
+
+hybrid:
+  # Jun26 probe: the current geometry scheduler labels the validated A06
+  # low-texture window as planar_near_wall rather than extreme_textureless.
+  # Keep the v31 timing/export contract and only restore LoFTR admission for
+  # that mode.
+  source_aware_loftr_modes:
+    - planar_near_wall
+    - extreme_textureless

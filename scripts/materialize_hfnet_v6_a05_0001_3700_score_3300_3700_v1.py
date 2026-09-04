@@ -1,0 +1,368 @@
+#!/usr/bin/env python3
+"""Materialize the frozen A05 natural-history HFNet input, and nothing else.
+
+The feed contains canonical AQUALOC archaeology source cameras 1..3700.
+Camera 0 is excluded because the frozen shifted IMU stream has no predecessor
+for it.  Cameras 1..3299 are history only and 3300..3700 are the sole score
+window.  Publication is atomic and no-clobber; this module starts no process.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+from pathlib import Path
+import sys
+from typing import Any, Dict, Mapping, Optional, Sequence
+
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from scripts import materialize_hfnet_v6_a06_0000_2460_exact_window_v1 as adapter
+
+
+ROOT = Path(__file__).resolve().parents[1]
+SCHEMA_VERSION = (
+    "aqua-fe-hfnet-v6-a05-0001-3700-score-3300-3700-"
+    "input-materialization-v1"
+)
+SELECTOR_SCHEMA = (
+    "aqua-fe-hfnet-v6-a05-0001-3700-score-3300-3700-"
+    "selector-freeze-v1"
+)
+
+A06_ADAPTER_PATH = (
+    ROOT / "scripts/materialize_hfnet_v6_a06_0000_2460_exact_window_v1.py"
+)
+A06_ADAPTER_SIZE = 16_321
+A06_ADAPTER_SHA256 = (
+    "2ac7025c70a7aac48783b0ee37e9586aae43c00927a1183304a88ad05f796264"
+)
+
+DEFAULT_SELECTOR_FREEZE = (
+    ROOT
+    / "papers/hfnet_v6_a05_0001_3700_score_3300_3700_"
+    "selector_freeze_v1.json"
+)
+SELECTOR_FREEZE_SIZE = 4_558
+SELECTOR_FREEZE_SHA256 = (
+    "5533e33720239188c27191ff9eb6bb1aab523b6092240343452f99131512e7f7"
+)
+
+DEFAULT_SOURCE_ARCHIVE = Path(
+    "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/"
+    "Archaeological_site_sequences/archaeo_sequence_5_raw_data.tar.gz"
+)
+DEFAULT_OUTPUT_ROOT = Path(
+    "/mnt/data/AQUA-FE_WS/datasets/hfnet_old_frozen_positive_windows_v1/"
+    "a05_0001_3700_score_3300_3700_warmstart"
+)
+
+core = adapter.core
+FilePin = core.FilePin
+MaterializationContract = core.MaterializationContract
+ContractError = core.ContractError
+
+
+PRODUCTION_CONTRACT = MaterializationContract(
+    source_archive=DEFAULT_SOURCE_ARCHIVE,
+    source_pin=FilePin(
+        size_bytes=866_604_152,
+        sha256=(
+            "49fc60a27a2da30ab3e3a883badafd43b579406a1fad10de632e175ad18be52c"
+        ),
+    ),
+    source_gzip_crc32="94fd6d95",
+    source_gzip_isize=879_257_600,
+    image_csv_member="raw_data/img_sequence_5.csv",
+    image_csv_pin=FilePin(
+        size_bytes=143_414,
+        sha256=(
+            "a63ad0fd91cb268038e4dc9a6e478166d7b0c2f9bace636926e59ac1ed8a8980"
+        ),
+        crc32="79fa2f29",
+    ),
+    imu_csv_member="raw_data/imu_sequence_5.csv",
+    imu_csv_pin=FilePin(
+        size_bytes=4_451_826,
+        sha256=(
+            "ff069b4df9d6fa4953c0f86fa85d32e767441d21904c19c20c2dc2bc4e8c2c01"
+        ),
+        crc32="ee1052d8",
+    ),
+    image_member_prefix="raw_data/images_sequence_5/",
+    source_camera_count=3_983,
+    source_imu_count=39_796,
+    camera_start_index=1,
+    camera_end_index=3_700,
+    camera_first_ns=1_455_214_178_615_853_120,
+    camera_last_ns=1_455_214_363_536_846_272,
+    width=968,
+    height=608,
+    png_bit_depth=8,
+    png_color_type=0,
+    imu_shift_ns=53_694_112,
+    imu_first_index=7,
+    imu_last_index=36_964,
+    imu_first_raw_ns=1_455_214_178_561_121_600,
+    imu_last_raw_ns=1_455_214_363_483_388_320,
+    imu_first_output_ns=1_455_214_178_614_815_712,
+    imu_second_output_ns=1_455_214_178_620_066_592,
+    imu_penultimate_output_ns=1_455_214_363_534_102_112,
+    imu_last_output_ns=1_455_214_363_537_082_432,
+    expected_image_total_bytes=None,
+    expected_source_image_inventory_sha256=None,
+    expected_source_image_inventory_crc32=None,
+    expected_renamed_image_inventory_sha256=None,
+    expected_renamed_image_inventory_crc32=None,
+    times_pin=FilePin(
+        size_bytes=74_000,
+        sha256=(
+            "93c64e829cc26ff56c9dbff1b5b194c47bebf0a8b35b737bfe79dbb9d64f2468"
+        ),
+        crc32="8f0834c5",
+    ),
+    camera_csv_pin=FilePin(
+        size_bytes=162_825,
+        sha256=(
+            "0c15a52a9b9d5699a06288fb317de16626e68b0c6b56912fd893e5767a99f959"
+        ),
+        crc32="aabb0577",
+    ),
+    imu_output_pin=FilePin(
+        size_bytes=4_134_559,
+        sha256=(
+            "0f7e80e1d3137e38bf6ef52a0c4b09282e9c11275583461dbfcfe5fb4454bb21"
+        ),
+        crc32="c7a7a89c",
+    ),
+    # These inventory identities are derived and recorded by this preparation.
+    # They are pinned by the one-shot runner before HFNet is authorized.
+    expected_payload_sha256=None,
+    expected_payload_crc32=None,
+)
+
+
+def _require_a06_adapter_pin() -> Dict[str, Any]:
+    observed = core.identity_file(
+        A06_ADAPTER_PATH, str(A06_ADAPTER_PATH.resolve())
+    )
+    if (
+        observed["size_bytes"] != A06_ADAPTER_SIZE
+        or observed["sha256"] != A06_ADAPTER_SHA256
+    ):
+        raise ContractError("REUSED_A06_ADAPTER_IDENTITY_MISMATCH")
+    return observed
+
+
+def validate_selector(path: Path) -> Dict[str, Any]:
+    if path.is_symlink() or not path.is_file():
+        raise ContractError("SELECTOR_FREEZE_MISSING_OR_NOT_REGULAR")
+    observed = core.identity_file(path, str(path.resolve()))
+    if observed["size_bytes"] != SELECTOR_FREEZE_SIZE:
+        raise ContractError("SELECTOR_FREEZE_SIZE_MISMATCH")
+    if observed["sha256"] != SELECTOR_FREEZE_SHA256:
+        raise ContractError("SELECTOR_FREEZE_SHA256_MISMATCH")
+    value = json.loads(path.read_text(encoding="utf-8"))
+    if value.get("schema_version") != SELECTOR_SCHEMA:
+        raise ContractError("SELECTOR_SCHEMA_MISMATCH")
+    if value.get("status") != (
+        "FROZEN_BEFORE_A05_MATERIALIZATION_AND_HFNET_PROCESS_START"
+    ):
+        raise ContractError("SELECTOR_STATUS_MISMATCH")
+    selection = value.get("selection", {})
+    required = {
+        "sequence_id": "A05",
+        "camera_indices_inclusive_for_feed": [1, 3700],
+        "camera_count_for_feed": 3700,
+        "score_camera_indices_inclusive": [3300, 3700],
+        "score_camera_count": 401,
+        "warm_start": True,
+        "cold_start": False,
+        "synthetic_or_extrapolated_imu_permitted": False,
+    }
+    for key, expected in required.items():
+        if selection.get(key) != expected:
+            raise ContractError(f"SELECTOR_SELECTION_MISMATCH:{key}")
+    boundary = value.get("knowledge_boundary", {})
+    if boundary.get("window_is_outcome_selected") is not True:
+        raise ContractError("SELECTOR_DEVELOPMENT_EXPOSURE_MISSING")
+    if boundary.get("accuracy_requires_new_history_matched_controls_and_common_support") is not True:
+        raise ContractError("SELECTOR_ACCURACY_BOUNDARY_MISSING")
+    if any(claim is not False for claim in value.get("claims", {}).values()):
+        raise ContractError("SELECTOR_FORBIDDEN_CLAIM")
+    return observed
+
+
+_base_prepare_metadata = adapter.prepare_metadata
+_base_build_manifest = adapter.build_manifest
+
+
+def prepare_metadata(
+    selector_freeze: Path,
+    source_archive: Path,
+    contract: MaterializationContract,
+) -> Dict[str, Any]:
+    metadata = _base_prepare_metadata(selector_freeze, source_archive, contract)
+    metadata["reused_a06_adapter"] = _require_a06_adapter_pin()
+    return metadata
+
+
+def build_manifest(
+    metadata: Mapping[str, Any],
+    image_rows: Sequence[Mapping[str, Any]],
+    payload_identity: Mapping[str, Any],
+    source_image_identity: Mapping[str, Any],
+    renamed_image_identity: Mapping[str, Any],
+    output_root: Path,
+    contract: MaterializationContract,
+) -> Dict[str, Any]:
+    value = _base_build_manifest(
+        metadata,
+        image_rows,
+        payload_identity,
+        source_image_identity,
+        renamed_image_identity,
+        output_root,
+        contract,
+    )
+    value["reused_a06_adapter"] = metadata["reused_a06_adapter"]
+    value["selection"] = {
+        "dataset_family": "aqualoc_archaeology",
+        "sequence_id": "A05",
+        "camera_indices_inclusive": [1, 3700],
+        "camera_count": 3700,
+        "camera_header_ns_inclusive": [
+            contract.camera_first_ns,
+            contract.camera_last_ns,
+        ],
+        "camera_zero_trimmed_for_missing_shifted_imu_predecessor": True,
+        "first_legal_camera_source_index": 1,
+        "preroll_source_camera_indices_inclusive": [1, 3299],
+        "preroll_relative_indices_inclusive": [0, 3298],
+        "score_source_camera_indices_inclusive": [3300, 3700],
+        "score_relative_indices_inclusive": [3299, 3699],
+        "score_camera_count": 401,
+        "warm_start": True,
+        "cold_start": False,
+        "development_result_conditioned_selection": True,
+        "imu_source_indices_inclusive_zero_based": [
+            contract.imu_first_index,
+            contract.imu_last_index,
+        ],
+        "imu_count": contract.imu_count,
+        "imu_shift_ns": contract.imu_shift_ns,
+        "synthetic_imu_samples_added": False,
+    }
+    value["reporting_boundary"] = (
+        "development-only A05 natural-history input preparation; historical "
+        "cold-crop learned/KLT metrics are provenance only; no HFNet process, "
+        "trajectory, accuracy, or ranking"
+    )
+    return value
+
+
+def preflight_result(
+    selector_freeze: Path,
+    source_archive: Path,
+    output_root: Path,
+    contract: MaterializationContract = PRODUCTION_CONTRACT,
+) -> Dict[str, Any]:
+    if output_root.exists() or output_root.is_symlink():
+        raise ContractError(f"NO_CLOBBER_OUTPUT_EXISTS:{output_root}")
+    metadata = prepare_metadata(selector_freeze, source_archive, contract)
+    return {
+        "schema_version": SCHEMA_VERSION,
+        "status": "PREFLIGHT_READY_PREPARATION_ONLY",
+        "selector_freeze": metadata["selector"],
+        "reused_a06_adapter": metadata["reused_a06_adapter"],
+        "source": metadata["source"],
+        "output_root": str(output_root.resolve(strict=False)),
+        "camera_source_indices_inclusive": [1, 3700],
+        "camera_count": 3700,
+        "score_source_camera_indices_inclusive": [3300, 3700],
+        "score_relative_indices_inclusive": [3299, 3699],
+        "score_camera_count": 401,
+        "imu_count": contract.imu_count,
+        "generated_identities": metadata["generated_identities"],
+        "imu_bracket": metadata["imu_bracket"],
+        "claims": {
+            "output_created": False,
+            "hfnet_started": False,
+            "trajectory_produced": False,
+            "accuracy_evaluated": False,
+        },
+    }
+
+
+# The reused functions retain adapter-module globals. Bind every changed value
+# explicitly before exposing the materializer.
+for _name, _value in {
+    "SCHEMA_VERSION": SCHEMA_VERSION,
+    "SELECTOR_SCHEMA": SELECTOR_SCHEMA,
+    "DEFAULT_SELECTOR_FREEZE": DEFAULT_SELECTOR_FREEZE,
+    "SELECTOR_FREEZE_SIZE": SELECTOR_FREEZE_SIZE,
+    "SELECTOR_FREEZE_SHA256": SELECTOR_FREEZE_SHA256,
+    "DEFAULT_SOURCE_ARCHIVE": DEFAULT_SOURCE_ARCHIVE,
+    "DEFAULT_OUTPUT_ROOT": DEFAULT_OUTPUT_ROOT,
+    "PRODUCTION_CONTRACT": PRODUCTION_CONTRACT,
+    "validate_selector": validate_selector,
+    "prepare_metadata": prepare_metadata,
+    "build_manifest": build_manifest,
+    "preflight_result": preflight_result,
+}.items():
+    setattr(adapter, _name, _value)
+
+materialize = adapter.materialize
+
+
+def parser() -> argparse.ArgumentParser:
+    value = argparse.ArgumentParser(description=__doc__)
+    value.add_argument(
+        "--action", choices=("preflight", "materialize"), default="preflight"
+    )
+    value.add_argument(
+        "--selector-freeze", type=Path, default=DEFAULT_SELECTOR_FREEZE
+    )
+    value.add_argument(
+        "--source-archive", type=Path, default=DEFAULT_SOURCE_ARCHIVE
+    )
+    value.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
+    return value
+
+
+def main(argv: Optional[Sequence[str]] = None) -> int:
+    args = parser().parse_args(argv)
+    try:
+        if args.action == "materialize":
+            result = materialize(
+                args.selector_freeze,
+                args.source_archive,
+                args.output_root,
+                PRODUCTION_CONTRACT,
+            )
+        else:
+            result = preflight_result(
+                args.selector_freeze,
+                args.source_archive,
+                args.output_root,
+                PRODUCTION_CONTRACT,
+            )
+        return_code = 0
+    except Exception as error:
+        result = {
+            "schema_version": SCHEMA_VERSION,
+            "status": "INTEGRITY_ERROR",
+            "errors": [f"{type(error).__name__}:{error}"],
+            "claims": {
+                "hfnet_started": False,
+                "trajectory_produced": False,
+                "accuracy_evaluated": False,
+            },
+        }
+        return_code = 2
+    sys.stdout.buffer.write(core.canonical_json(result))
+    return return_code
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

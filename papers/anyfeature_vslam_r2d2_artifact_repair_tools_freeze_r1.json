@@ -1,0 +1,124 @@
+{
+  "schema": "aqua-fe-anyfeature-vslam-r2d2-artifact-repair-tools-freeze-v1",
+  "status": "READY_FOR_INDEPENDENT_REVIEW_NOT_RUN",
+  "frozen_at": "2026-08-12T01:46:58+08:00",
+  "scope": {
+    "baseline": "AnyFeature-VSLAM r2d2_128",
+    "sequence": "AquaLoc A02 one-image ingestion smoke",
+    "repair_class": "project-side representation-only release-artifact repair",
+    "official_source_or_tree_modified": false,
+    "official_process_started_for_artifact_repaired_smoke": false,
+    "formal_slam_started_by_prefix_diagnostic": false,
+    "full_701_frame_inference_authorized": false
+  },
+  "sole_repair": {
+    "official_settings": {
+      "path": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/settings/r2d2_128_settings.yaml",
+      "sha256": "375ae1bdcfe92068a665f16b9943b09fb0c830be471f675ddb85289442526878",
+      "size_bytes": 207,
+      "scalar": "FeatureMatcher.matchingTh: 0.38f"
+    },
+    "project_settings": {
+      "path": "configs/published_baselines/anyfeature_vslam_r2d2_128_artifact_repaired_r1.yaml",
+      "sha256": "6c7cb75c4209d00198bc552472f4ff5bb36510df6490c4a4b17eea04bd0db753",
+      "size_bytes": 206,
+      "scalar": "FeatureMatcher.matchingTh: 0.38"
+    },
+    "exact_transformation": "delete only the trailing f byte on line 11",
+    "numeric_value_changed": false,
+    "algorithm_parameter_changed": false,
+    "required_result_label": "author-official AnyFeature-VSLAM code/binary/model/vocabulary with a project-side representation-only artifact-repaired settings copy"
+  },
+  "runner_lock": {
+    "base_v1": {
+      "path": "scripts/run_anyfeature_vslam_official_v1.py",
+      "sha256": "0c60fa8126dbc9dfb309b995c15bb324eea29899b07145afc69c10324538707f"
+    },
+    "base_v2": {
+      "path": "scripts/run_anyfeature_vslam_official_v2.py",
+      "sha256": "93f0342903e4e5ab9e2a3618ca77d08a7598ff19d67af42f0719a63b42dc5db3"
+    },
+    "artifact_repaired_v3": {
+      "path": "scripts/run_anyfeature_vslam_artifact_repaired_v3.py",
+      "sha256": "2094ca9d827bdb3248f96107edb91f4747472e7953295e4fb57f85f0675d50b9",
+      "size_bytes": 35700,
+      "profiles": [
+        "r2d2-smoke-artifact-repaired-r1"
+      ],
+      "full_profile_exposed": false
+    },
+    "artifact_repaired_v3_tests": {
+      "path": "scripts/tests/test_run_anyfeature_vslam_artifact_repaired_v3.py",
+      "sha256": "705b959b52641bf2c7433aad899c0922dae74535ec6c4160fe517e691811c04a",
+      "size_bytes": 13014
+    },
+    "test_execution": {
+      "command": "python3 -m unittest scripts.tests.test_run_anyfeature_vslam_official_v1 scripts.tests.test_run_anyfeature_vslam_official_v2 scripts.tests.test_run_anyfeature_vslam_artifact_repaired_v3",
+      "passed": 24,
+      "failed": 0,
+      "result": "OK"
+    }
+  },
+  "preflight": {
+    "path": "/mnt/data/AQUA-FE_WS/published_anyfeature_vslam_v1/adapter_reports/a02_r2d2_artifact_repaired_smoke_preflight_v3_r1.json",
+    "sha256": "095214b6643bf1a721fcdde34f465fb99f7d132f6a52a24b180e450068f20ee1",
+    "size_bytes": 4189,
+    "status": "PREFLIGHT_READY",
+    "official_process_started": false,
+    "opencv_filestorage_probe": "PASS_OPEN_CV_4_9_EXACT_TYPES_AND_VALUES"
+  },
+  "formal_output": {
+    "new_path": "/mnt/data/AQUA-FE_WS/published_anyfeature_vslam_v1/model_smokes/a02_frame000_artifact_repaired_r1",
+    "old_path": "/mnt/data/AQUA-FE_WS/published_anyfeature_vslam_v1/model_smokes/a02_frame000_r1",
+    "paths_are_distinct": true,
+    "observed_new_path_absent_at_freeze": true,
+    "absence_is_not_a_permanent_test_assertion": true,
+    "no_clobber_is_enforced_at_runtime": true
+  },
+  "prefix_viability_audit": {
+    "diagnostic_source": {
+      "path": "scripts/diagnostics/anyfeature_r2d2_init_audit_v1.cpp",
+      "sha256": "b857891b5a7387322af5bb0bd2ec0c87d774eb535e9375f0fbca7d67fce7d37f",
+      "size_bytes": 13557
+    },
+    "diagnostic_binary": {
+      "path": "papers/anyfeature_r2d2_init_audit_prefix200_r1/anyfeature_r2d2_init_audit_v1",
+      "sha256": "6b386a9c50e8636fa06c03ced76dc26240338a071e4e7eb26ecce2a1209c4f85"
+    },
+    "complete_csv": {
+      "path": "papers/anyfeature_r2d2_init_audit_prefix200_r1/exact_state_machine_r2.csv",
+      "sha256": "97cc1bbbcc9941e5cdb68e2d3f55a78c2ee5d2a9c0b17a2a1bb23c4b0c85b743",
+      "size_bytes": 58221,
+      "data_rows": 200
+    },
+    "summary": {
+      "path": "papers/anyfeature_r2d2_init_audit_prefix200_r1/summary.json",
+      "sha256": "be7082d6a39db094e86925d42037db22fa69250e66f71c28712c1a538bb0b903",
+      "size_bytes": 4504
+    },
+    "geometry_attempts": 199,
+    "attempts_with_at_least_100_matches": 199,
+    "official_initializer_successes_in_sealed_realization": 0,
+    "selected_homography": 55,
+    "selected_fundamental": 144,
+    "selected_model_reconstruction_successes": 0,
+    "cross_process_rng_limitation": "RANSAC sets are seeded from random_device; counterfactual counts are bound to the sealed diagnostic realization, while same-realization checks reuse the exact official mvSets.",
+    "full_701_frame_inference_recommended": false
+  },
+  "addendum": {
+    "path": "papers/anyfeature_vslam_r2d2_artifact_repair_addendum_r1.md",
+    "sha256": "77d2c7ae74c1ce88ad9a80fdfc42b03aa36d80623fcfb8a87504557ded5d2e5a",
+    "size_bytes": 9512
+  },
+  "independent_review": {
+    "status": "PENDING",
+    "go_received": false
+  },
+  "one_way_next_action": {
+    "before_go": "do not start the official binary",
+    "after_go": "run exactly one v3 one-image artifact-repaired official smoke at the new no-clobber path",
+    "accepted_closure": "clean exit or strictly recognized post-loop RC134 teardown after complete artifacts and no reader/initialization blocker",
+    "on_any_other_result": "stop without retry",
+    "full_inference_after_smoke": "not authorized by either outcome"
+  }
+}

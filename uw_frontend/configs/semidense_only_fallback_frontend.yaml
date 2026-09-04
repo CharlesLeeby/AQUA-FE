@@ -1,0 +1,11 @@
+extends: semidense_learned_fallback_frontend.yaml
+
+hybrid:
+  # Isolate the semi-dense fallback contribution. The primary learned matcher
+  # passed by --method is constructed but not allowed to initialize/recover
+  # tracks; only --semidense-fallback-method contributes learned points.
+  enable_learned_initialization: false
+  enable_learned_recovery: false
+
+measurement_selection:
+  enabled: false

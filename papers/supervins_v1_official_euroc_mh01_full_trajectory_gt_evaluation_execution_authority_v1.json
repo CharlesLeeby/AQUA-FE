@@ -1,0 +1,42 @@
+{
+  "authorization_token_sha256": "0adea3dcd41360cd9e6d7eff4380a648dc09e5f970a62b39cf8585fc4c6b5c69",
+  "claim_boundary": {
+    "cross_system_comparison_authorized": false,
+    "model_or_ros_rerun_authorized": false,
+    "pure_gt_computation_only": true,
+    "statistical_inference_authorized": false,
+    "superiority_claim_authorized": false
+  },
+  "controller_command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/ma/AQUA-FE_WS/scripts/evaluate_published_supervins_v1_official_euroc_mh01_full_trajectory_gt_v1.py",
+    "--action",
+    "run",
+    "--authorization-token",
+    "SUPERVINS_STAGE5_MH01_GT_EVALUATION_ATTEMPT_001_START_ONCE"
+  ],
+  "created_at": "2026-08-21T01:10:27+08:00",
+  "fresh_evidence_root": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_gt_evaluation_20260821_r1",
+  "lock": {
+    "sha256": "0573d5be1d58f91ab0e0640cea666cc446164b64066ff024ed7ef6b69da2c7ac",
+    "size_bytes": 9912
+  },
+  "maximum_evaluator_starts": 1,
+  "protocol": {
+    "sha256": "0413dc9f5c17036de8cf765cdb13d84c4ef873db3997247f03e75d860b4298c6",
+    "size_bytes": 19442
+  },
+  "retry_authorized": false,
+  "root_confirmation": true,
+  "runner": {
+    "sha256": "1d94fe884c4221199d32fabb2066c5dbb8fdaf0fbf59e926eb1123d9a9ae68c3",
+    "size_bytes": 86702
+  },
+  "schema_version": "aqua-fe-supervins-mh01-full-trajectory-gt-evaluation-root-authority-v1",
+  "status": "AUTHORIZED_EXACTLY_ONE_PURE_GT_EVALUATION_ATTEMPT_001_START",
+  "tests": {
+    "sha256": "13df8f776de69f85eb85e1580cfe221e45aaee70928b64087ba91d42b5b56514",
+    "size_bytes": 21140
+  }
+}

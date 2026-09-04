@@ -1,0 +1,44 @@
+{
+  "conflicts": [],
+  "errors": [
+    "PRESTART_CHECK_NOT_GO:CONFLICTING_PROCESS_PRESENT"
+  ],
+  "execution": {
+    "hfnet_elf_started": false,
+    "one_shot_elf_budget_consumed": false,
+    "popen_invocations": 0,
+    "process_started": false,
+    "retry_performed": false
+  },
+  "gpu_resource_gate": {
+    "compute_applications": [],
+    "errors": [],
+    "memory": {
+      "free_mib": 3397,
+      "total_mib": 4096,
+      "used_mib": 503
+    },
+    "minimum_free_mib": 3072,
+    "ready": true
+  },
+  "namespace": {
+    "attempt": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h07_0001_1720/attempt_001",
+    "run_result_exists": false,
+    "start_claim_exists": false
+  },
+  "observed_at_utc": "2026-08-22T13:18:48.235283+00:00",
+  "policy": "wait for unrelated in-scope conflict to exit naturally; do not kill or bypass; rerun prestart check before the sole ELF start",
+  "schema_version": "aqua-fe-hfnet-v6-h07-0001-1720-prestart-blocked-observation-v1",
+  "status": "BLOCKED_BEFORE_POPEN_RESOURCE_CONFLICT",
+  "synchronization_boundary": {
+    "camera0_has_shifted_imu_predecessor": false,
+    "camera0_timestamp_ns": 1523387546122930336,
+    "earliest_shifted_imu_timestamp_ns": 1523387546153594095,
+    "feed_first_frame_reader_bracket_valid": true,
+    "feed_first_source_frame": 1,
+    "official_entry_first_imu_risk": "with frame zero, first_imu-- reaches -1 and later access is out of bounds",
+    "post_result_window_change": false,
+    "source_frame_zero_excluded_before_result": true,
+    "synthetic_or_extrapolated_imu_used": false
+  }
+}

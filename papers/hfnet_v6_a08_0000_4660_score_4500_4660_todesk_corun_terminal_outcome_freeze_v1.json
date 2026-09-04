@@ -1,0 +1,151 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a08-0000-4660-score-4500-4660-todesk-corun-terminal-outcome-freeze-v1",
+  "status": "SEALED_TERMINAL_PASS_NO_RETRY",
+  "created_at_local": "2026-08-28T02:12:52+08:00",
+  "scientific_role": "TODESK_CORUN_DEVELOPMENT_ONLY_HFNET_NATURAL_HISTORY_RUNABILITY_ON_JULY14_A08_OLD_FROZEN_POSITIVE_WINDOW",
+  "attempt": {
+    "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/corun/old_frozen_positive_windows/a08_0000_4660_score_4500_4660_todesk_corun_development_only/attempt_001",
+    "terminal_result": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/corun/old_frozen_positive_windows/a08_0000_4660_score_4500_4660_todesk_corun_development_only/attempt_001/run_result.json",
+      "size_bytes": 31376,
+      "sha256": "5a6bfc1144b0b87d04b6cbef4918c42f0efdde04d49432b60b9d3b82c75863e1",
+      "schema_version": "aqua-fe-hfnet-v6-a08-0000-4660-score-4500-4660-todesk-corun-development-only-result-v1",
+      "status": "PASS_DEVELOPMENT_RUNABILITY"
+    },
+    "process_start_claim": {
+      "size_bytes": 10985,
+      "sha256": "6c16fc4c6917a359c5262cea9bebfa10cbde1596ee4af60652c6add64b903159",
+      "claimed_at_utc": "2026-08-27T18:06:50+00:00"
+    },
+    "prepared_manifest": {
+      "size_bytes": 14197,
+      "sha256": "6dd2f5eae62e3f80fbb7fba96d08b12e09e6d4ee7cdd94ba9df8f84a5918d8c2"
+    }
+  },
+  "execution": {
+    "supervisor_invocations": 1,
+    "official_hfnet_elf_popen_invocations": 1,
+    "child_pid": 2211370,
+    "started_at_utc": "2026-08-27T18:06:51+00:00",
+    "ended_at_utc": "2026-08-27T18:12:01+00:00",
+    "duration_seconds_for_audit_only": 310.83199828199577,
+    "raw_returncode": 0,
+    "timed_out": false,
+    "supervisor_error": null,
+    "retry_performed": false,
+    "retry_permitted": false,
+    "child_reaped_before_post_audit": true,
+    "watchdog_triggered": false,
+    "runtime_or_realtime_claim_permitted": false
+  },
+  "integrity": {
+    "selected_input_unchanged": true,
+    "local_onnx_unchanged": true,
+    "runtime_authority_unchanged": true,
+    "runtime_authority_drift_keys": [],
+    "local_cache_contract_valid": true,
+    "local_cache_mutated_only_in_attempt_local_copy": true,
+    "all_post_audits_complete": true,
+    "terminal_json_published_o_excl": true,
+    "attempt_consumed": true
+  },
+  "score_adjudication": {
+    "passed": true,
+    "failure_codes": [],
+    "feed_source_indices_inclusive": [0, 4660],
+    "feed_local_indices_inclusive": [0, 4660],
+    "feed_camera_count": 4661,
+    "score_source_indices_inclusive": [4500, 4660],
+    "score_local_indices_inclusive": [4500, 4660],
+    "score_camera_count": 161,
+    "score_pose_count": 161,
+    "exact_161_of_161_contiguous": true,
+    "preroll_to_score_boundary_continuous": true,
+    "score_keyframe_count": 20,
+    "initialized_before_score": true,
+    "score_window_init_frame_ids": [],
+    "score_window_reset_events": [],
+    "unresolved_reset_events": [],
+    "reset_parse_complete": true,
+    "final_atlas_nonempty": true,
+    "final_atlas_map_count": 1,
+    "final_atlas_keyframe_count": 134,
+    "official_trajectory_save_completed": true
+  },
+  "pre_score_history_disclosure": {
+    "init_frame_id_count": 19,
+    "pre_score_reset_event_count": 18,
+    "last_init_frame_id": 2473,
+    "all_observed_init_and_reset_events_before_score_frame_4500": true,
+    "interpretation": "Pre-score recovery is permitted history; no reset or reinitialization occurred inside the frozen score window."
+  },
+  "trajectory_artifacts": {
+    "full_trajectory": {
+      "size_bytes": 245860,
+      "sha256": "ee1c860011890ebaeb07eba1fb064868bff0239a761356d1ead7b9d96e2a67ce",
+      "pose_count": 2180,
+      "valid": true
+    },
+    "keyframe_trajectory": {
+      "size_bytes": 15545,
+      "sha256": "5384f98794aef1a5962042bc0e405c593d0c555de136ba11274dbbed9a366777",
+      "pose_count": 134,
+      "valid": true
+    },
+    "score_trajectory": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/corun/old_frozen_positive_windows/a08_0000_4660_score_4500_4660_todesk_corun_development_only/attempt_001/result/trajectory_score_source_4500_4660.txt",
+      "size_bytes": 18220,
+      "sha256": "0912c0132a940ac10fa60d3da62262a83c8145877ddca63d4ad459b5fc23f783",
+      "pose_count": 161,
+      "valid": true
+    },
+    "stdout": {
+      "size_bytes": 14572,
+      "sha256": "e8cc500ca12dac52d9486af637177893badd264c4a71fbe17d88ce4b4cfc928d"
+    },
+    "stderr": {
+      "size_bytes": 6434,
+      "sha256": "88b6e1cedf5f67b7c576006f173f2210888545822f7b53773db78aa67bd81f42"
+    }
+  },
+  "authority_chain": {
+    "input_freeze": {
+      "size_bytes": 7178,
+      "sha256": "9122f89b486cefbb637542ef31068c116d09cba38fc92a72308997cd6582ae51"
+    },
+    "formal_runner_freeze": {
+      "size_bytes": 4701,
+      "sha256": "a2ea3a171c33a08d6ea2a68dd3d1681df01164e3897b9b5b46d681f7733f0b88"
+    },
+    "corun_overlay_freeze": {
+      "size_bytes": 5265,
+      "sha256": "8d918093c0374452d924c55ad945cad500565d71d17bc07d95b6a14435e8b0e7"
+    },
+    "attempt_preparation_freeze": {
+      "size_bytes": 5672,
+      "sha256": "ac7bba01d57a5f69286edbc1e354d02d3bc03c78c97a693322074c160b21c853"
+    },
+    "execution_lock": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a08_0000_4660_score_4500_4660_todesk_corun_execution_lock_v1.json",
+      "size_bytes": 5382,
+      "sha256": "5becbd7d13b1ef48b4a9a93e2f9dd62a2c74ac0bd0070b659a5b4935958e73b8"
+    }
+  },
+  "claim_boundary": {
+    "runability_supported_on_frozen_score_window": true,
+    "accuracy_state": "NA_NOT_EVALUATED",
+    "accuracy_gate_open": false,
+    "fair_head_to_head": false,
+    "runtime_or_realtime_claim_supported": false,
+    "system_ranking_supported": false,
+    "superiority_supported": false,
+    "confirmatory_evidence": false,
+    "reason": "HFNet used natural source history 0..4499 while the historical learned-plus-KLT and pure-KLT positive-window trajectories cold-started at source 4500; no history-matched common-support comparator exists."
+  },
+  "terminal_contract": {
+    "no_retry": true,
+    "no_second_supervisor_invocation": true,
+    "no_post_hoc_gate_relaxation": true,
+    "next_permitted_action": "Build A09's independent one-shot runner from its separately frozen input; do not rerun A08 or compute A08 accuracy without a separately frozen history-matched evaluator."
+  }
+}

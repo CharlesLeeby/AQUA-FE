@@ -1,0 +1,117 @@
+{
+  "analysis_artifact_hashes": [
+    {
+      "expected_sha256": "eae7a0fc6e94766a119be6abe5763fbfba8f64d9663f45f2f48ee591cf62a3cf",
+      "observed_sha256": "eae7a0fc6e94766a119be6abe5763fbfba8f64d9663f45f2f48ee591cf62a3cf",
+      "pass": true,
+      "path": "papers/ieee_sensors_journal_experiments/method_lock.json"
+    },
+    {
+      "expected_sha256": "4466cff65d9df2be4dab97350041c2c79f687e624e6b658fb734a70459222bda",
+      "observed_sha256": "4466cff65d9df2be4dab97350041c2c79f687e624e6b658fb734a70459222bda",
+      "pass": true,
+      "path": "papers/ieee_sensors_journal_experiments/protocol_v1_nativeq_v3.md"
+    },
+    {
+      "expected_sha256": "aae68a271e2b9b258a3f91ba18a79eea1f37ab2dc373221be93cac814a493a00",
+      "observed_sha256": "aae68a271e2b9b258a3f91ba18a79eea1f37ab2dc373221be93cac814a493a00",
+      "pass": true,
+      "path": "papers/ieee_sensors_journal_experiments/dataset_manifest_v4.csv"
+    },
+    {
+      "expected_sha256": "1afc17e256274d86725b146728cca51fd59df1a630e23c2c109a1cec2137c9f4",
+      "observed_sha256": "1afc17e256274d86725b146728cca51fd59df1a630e23c2c109a1cec2137c9f4",
+      "pass": true,
+      "path": "papers/ieee_sensors_journal_experiments/arm_order.csv"
+    },
+    {
+      "expected_sha256": "d3ae583ca799ef423054a5b9ece8b53e0000a8d3bbb1ea8c50121f7a60a40816",
+      "observed_sha256": "d3ae583ca799ef423054a5b9ece8b53e0000a8d3bbb1ea8c50121f7a60a40816",
+      "pass": true,
+      "path": "papers/ieee_sensors_journal_experiments/evaluator_protocol_v1.md"
+    },
+    {
+      "expected_sha256": "0a465876e43a6a28a24ad76d06abbdd762b5833ee45eeb5a540b4e7b7066c252",
+      "observed_sha256": "0a465876e43a6a28a24ad76d06abbdd762b5833ee45eeb5a540b4e7b7066c252",
+      "pass": true,
+      "path": "papers/ieee_sensors_journal_experiments/failure_taxonomy_v1.yaml"
+    },
+    {
+      "expected_sha256": "8ced85066e7cd5aa8e7a0fc7d5f42ce07e99e97a36703b9404b8aab9f2103457",
+      "observed_sha256": "8ced85066e7cd5aa8e7a0fc7d5f42ce07e99e97a36703b9404b8aab9f2103457",
+      "pass": true,
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_export_queue_v1.csv"
+    },
+    {
+      "expected_sha256": "5b177636673db2a3198638a5bdca42d8e53de024b91081ac206f939f367ce45c",
+      "observed_sha256": "5b177636673db2a3198638a5bdca42d8e53de024b91081ac206f939f367ce45c",
+      "pass": true,
+      "path": "papers/ieee_sensors_journal_experiments/p07/d_applicability_queue_v1.csv"
+    },
+    {
+      "expected_sha256": "92300f09d0c29c7e5db6e24e36bedaf518722c0b5a36e720e33f79065be517e1",
+      "observed_sha256": "92300f09d0c29c7e5db6e24e36bedaf518722c0b5a36e720e33f79065be517e1",
+      "pass": true,
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_queue_lock_v1.json"
+    },
+    {
+      "expected_sha256": "e76b4f8508f3ee1d7d380bdf2330f73b0f1aa2da2148ba624a68ee11f07f2332",
+      "observed_sha256": "e76b4f8508f3ee1d7d380bdf2330f73b0f1aa2da2148ba624a68ee11f07f2332",
+      "pass": true,
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_queue_validation_v1.json"
+    },
+    {
+      "expected_sha256": "02253550667b322da433adb20b44ed69200bd0f8f2c7179c2c3fa038bb2414b1",
+      "observed_sha256": "02253550667b322da433adb20b44ed69200bd0f8f2c7179c2c3fa038bb2414b1",
+      "pass": true,
+      "path": "scripts/build_p07_preoutcome_governance_v1.py"
+    },
+    {
+      "expected_sha256": "7ef0321f2a02632c9f45f3808b8506cbe16dad2f19033eddbbc9eecd59791e2b",
+      "observed_sha256": "7ef0321f2a02632c9f45f3808b8506cbe16dad2f19033eddbbc9eecd59791e2b",
+      "pass": true,
+      "path": "papers/ieee_sensors_journal_experiments/p07/split_role_audit_v1.csv"
+    },
+    {
+      "expected_sha256": "362cacf918885b9b3093635311c8c2d8c95e5892e8d1f08f829925e1e5e9cedf",
+      "observed_sha256": "362cacf918885b9b3093635311c8c2d8c95e5892e8d1f08f829925e1e5e9cedf",
+      "pass": true,
+      "path": "papers/ieee_sensors_journal_experiments/p07/split_role_audit_v1.json"
+    },
+    {
+      "expected_sha256": "05b706010ce5fc1d5032bf680dc286d2b69fc98c190a25fdf4e1ceee84df84ec",
+      "observed_sha256": "05b706010ce5fc1d5032bf680dc286d2b69fc98c190a25fdf4e1ceee84df84ec",
+      "pass": true,
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_run_allocation_v1.csv"
+    }
+  ],
+  "deterministic_rebuild": {
+    "frontend_run_allocation_v1.csv": true,
+    "preoutcome_analysis_lock_v1.json": true,
+    "split_role_audit_v1.csv": true,
+    "split_role_audit_v1.json": true
+  },
+  "held_out_frontend_outcome_read": false,
+  "held_out_trajectory_outcome_read": false,
+  "issues": [],
+  "outcome_boundary": "FROZEN_BEFORE_P07_FRONTEND_OR_TRAJECTORY_OUTCOME",
+  "schema_version": "isj-p07-preoutcome-governance-validation-v1",
+  "semantic_checks": {
+    "H2_not_applicable": true,
+    "allocation_command_hash_exact": true,
+    "allocation_queue_index_exact": true,
+    "allocation_run_ids_unique": true,
+    "allocations_60": true,
+    "analysis_method_hash_exact": true,
+    "analysis_primary_is_RPE": true,
+    "base_replay_count_240": true,
+    "external_held_out_count_0": true,
+    "history_overlap_zero": true,
+    "max_replay_count_300": true,
+    "queue_dry_run_60_pass": true,
+    "selected_windows_20": true,
+    "sequence_unseen_low_count_0": true,
+    "sequence_unseen_window_count_1": true
+  },
+  "status": "PASS"
+}

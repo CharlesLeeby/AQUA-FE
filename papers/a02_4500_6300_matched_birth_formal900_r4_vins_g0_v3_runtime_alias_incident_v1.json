@@ -1,0 +1,684 @@
+{
+  "builder_execution_contract": {
+    "active_same_uid_namespace_adversary_out_of_scope": true,
+    "authorized_write_once_argv": [
+      "/usr/bin/python3.8",
+      "-I",
+      "-B",
+      "-c",
+      "import ctypes,errno,hashlib,os,re,stat,sys\np=sys.argv[1]\nh=sys.argv[2]\na=sys.argv[3:]\nif len(sys.argv)!=11 or a[0]!='--action' or a[1]!='write-once' or a[2]!='--successor-governor-sha256' or re.fullmatch(r'[0-9a-f]{64}',a[3]) is None or a[4]!='--successor-governor-size-bytes' or re.fullmatch(r'[1-9][0-9]*',a[5]) is None or a[6]!='--v3-job-hash' or re.fullmatch(r'[0-9a-f]{64}',a[7]) is None or not os.path.isabs(p) or os.path.normpath(p)!=p or os.path.realpath(p)!=p:\n raise RuntimeError('incident builder carrier arguments differ')\nf=os.open(p,os.O_RDONLY|os.O_CLOEXEC|getattr(os,'O_NOFOLLOW',0))\ntry:\n before=os.fstat(f)\n if not stat.S_ISREG(before.st_mode) or before.st_nlink!=1:\n  raise RuntimeError('incident builder source is not direct regular')\n chunks=[]\n offset=0\n while offset<before.st_size:\n  chunk=os.pread(f,min(1048576,before.st_size-offset),offset)\n  if not chunk:\n   raise RuntimeError('incident builder source short read')\n  chunks.append(chunk)\n  offset+=len(chunk)\n data=b''.join(chunks)\n after=os.fstat(f)\n named=os.lstat(p)\n key=lambda x:(x.st_dev,x.st_ino,x.st_mode,x.st_nlink,x.st_uid,x.st_gid,x.st_size,x.st_mtime_ns,x.st_ctime_ns)\n if key(before)!=key(after) or key(before)!=key(named) or hashlib.sha256(data).hexdigest()!=h:\n  raise RuntimeError('incident builder source identity/hash differs')\n code=compile(data,p,'exec',dont_inherit=True)\n binding={'fd':f,'source_bytes':data,'stat_identity':key(before),'sha256':h,'code':code,'carrier_source':sys.argv[0]}\n namespace=globals()\n namespace.update({'__name__':'__main__','__file__':p,'__package__':None,'__spec__':None,'__loader__':None,'__cached__':None,'_AQUAFE_INCIDENT_CARRIER_BINDING':binding})\n sys.argv=[p,*a]\n outcome=None\n try:\n  exec(code,namespace,namespace)\n except SystemExit as caught:\n  outcome=caught\nfinally:\n os.close(f)\nif outcome is not None:\n code_value=outcome.code\n if code_value is None:\n  code_value=0\n if type(code_value) is not int or code_value==0:\n  raise RuntimeError('incident builder caught SystemExit is not clean success')\n raise outcome\nif namespace.get('_AQUAFE_INCIDENT_CLEAN_SUCCESS')!={'action':'write-once','exit_code':0}:\n raise RuntimeError('incident builder clean completion sentinel differs')\ncommit=namespace.get('_AQUAFE_INCIDENT_FINAL_COMMIT')\nif not isinstance(commit,dict) or set(commit)!={'path','pending_path','content','sha256','mode','required_records','required_absent','required_sibling_namespaces'}:\n raise RuntimeError('incident builder final commit differs')\npath=commit['path']\npending_path=commit['pending_path']\ncontent=commit['content']\nif not isinstance(path,str) or not os.path.isabs(path) or os.path.normpath(path)!=path or os.path.realpath(os.path.dirname(path))!=os.path.dirname(path) or pending_path!=os.path.join(os.path.dirname(path),'.'+os.path.basename(path)+'.pending_v1') or not isinstance(content,bytes) or commit['sha256']!=hashlib.sha256(content).hexdigest() or commit['mode']!=0o444:\n raise RuntimeError('incident builder final commit identity differs')\nrecords=commit['required_records']\nif not isinstance(records,list) or not records:\n raise RuntimeError('incident builder final authority is empty')\nheld=[]\ndef hold_parent(parent):\n if not isinstance(parent,str) or not os.path.isabs(parent) or os.path.normpath(parent)!=parent:\n  raise RuntimeError('incident builder held parent path differs')\n flags=os.O_RDONLY|os.O_DIRECTORY|os.O_CLOEXEC|getattr(os,'O_NOFOLLOW',0)\n current=os.open('/',flags)\n held.append(current)\n root_stat=os.fstat(current)\n chain=[('',(root_stat.st_dev,root_stat.st_ino))]\n for part in [item for item in parent.split('/') if item]:\n  child=os.open(part,flags,dir_fd=current)\n  held.append(child)\n  info=os.fstat(child)\n  if not stat.S_ISDIR(info.st_mode):\n   raise RuntimeError('incident builder held parent is not a directory')\n  chain.append((part,(info.st_dev,info.st_ino)))\n  current=child\n return current,chain\ndef validate_chain(chain):\n flags=os.O_RDONLY|os.O_DIRECTORY|os.O_CLOEXEC|getattr(os,'O_NOFOLLOW',0)\n current=os.open('/',flags)\n try:\n  root_stat=os.fstat(current)\n  if (root_stat.st_dev,root_stat.st_ino)!=chain[0][1]:\n   raise RuntimeError('incident builder filesystem root drifted')\n  for part,identity in chain[1:]:\n   child=os.open(part,flags,dir_fd=current)\n   os.close(current)\n   current=child\n   info=os.fstat(current)\n   if (info.st_dev,info.st_ino)!=identity:\n    raise RuntimeError('incident builder held ancestor is unreachable')\n finally:\n  os.close(current)\nrecord_holds=[]\nfor record in records:\n if not isinstance(record,dict) or set(record)!={'path','size_bytes','sha256','device_id','inode','uid','mode_octal','nlink'}:\n  raise RuntimeError('incident builder final authority record differs')\n rp=record['path']\n if not isinstance(rp,str) or not os.path.isabs(rp) or os.path.normpath(rp)!=rp:\n  raise RuntimeError('incident builder final authority path differs')\n parent_fd,chain=hold_parent(os.path.dirname(rp))\n name=os.path.basename(rp)\n rf=os.open(name,os.O_RDONLY|os.O_CLOEXEC|getattr(os,'O_NOFOLLOW',0),dir_fd=parent_fd)\n held.append(rf)\n rs=os.fstat(rf)\n chunks=[]\n offset=0\n while offset<rs.st_size:\n  chunk=os.pread(rf,min(1048576,rs.st_size-offset),offset)\n  if not chunk:\n   raise RuntimeError('incident builder final authority short read')\n  chunks.append(chunk)\n  offset+=len(chunk)\n data=b''.join(chunks)\n named=os.stat(name,dir_fd=parent_fd,follow_symlinks=False)\n if key(rs)!=key(named) or not stat.S_ISREG(rs.st_mode) or rs.st_nlink!=1 or rs.st_size!=record['size_bytes'] or hashlib.sha256(data).hexdigest()!=record['sha256'] or rs.st_dev!=record['device_id'] or rs.st_ino!=record['inode'] or rs.st_uid!=record['uid'] or format(stat.S_IMODE(rs.st_mode),'04o')!=record['mode_octal'] or rs.st_nlink!=record['nlink']:\n  raise RuntimeError('incident builder final authority identity differs')\n record_holds.append((parent_fd,chain,name,rf,key(rs),data))\nabsent=commit['required_absent']\nif not isinstance(absent,list) or not absent:\n raise RuntimeError('incident builder final absence authority differs')\nabsence_holds=[]\nfor item in absent:\n if not isinstance(item,str) or not os.path.isabs(item) or os.path.normpath(item)!=item:\n  raise RuntimeError('incident builder final absence path differs')\n parent_fd,chain=hold_parent(os.path.dirname(item))\n name=os.path.basename(item)\n try:\n  os.stat(name,dir_fd=parent_fd,follow_symlinks=False)\n except FileNotFoundError:\n  pass\n else:\n  raise RuntimeError('incident builder final absence authority differs')\n absence_holds.append((item,parent_fd,chain,name))\nif path not in absent or pending_path not in absent:\n raise RuntimeError('incident builder output/pending absence differs')\nsibling_contracts=commit['required_sibling_namespaces']\nif not isinstance(sibling_contracts,list) or len(sibling_contracts)!=3:\n raise RuntimeError('incident builder sibling namespace contract differs')\nsibling_holds=[]\nfor index,item in enumerate(sibling_contracts):\n if not isinstance(item,dict) or set(item)!={'parent','basename','allowed_names'}:\n  raise RuntimeError('incident builder sibling namespace shape differs')\n sibling_parent=item['parent']\n basename=item['basename']\n allowed=item['allowed_names']\n expected_basename=('formal900_r4_xfeatbirth_vs_gfttbirth_r1' if index==0 else ('formal900_r4_xfeatbirth_vs_gfttbirth_r2' if index==1 else 'formal900_r4_xfeatbirth_vs_gfttbirth_r3'))\n expected_hash=('c51e1b38696ca936' if index==0 else ('48f29b21b4e9d314' if index==1 else a[7][:16]))\n expected_prefix='.'+expected_basename+'.'+expected_hash\n expected_names=sorted([expected_prefix+'.staging',expected_prefix+'.publication_intent_v1.json',expected_prefix+'.publication_closeout_v1.json'])\n if basename!=expected_basename or allowed!=expected_names or not isinstance(sibling_parent,str) or not os.path.isabs(sibling_parent) or os.path.normpath(sibling_parent)!=sibling_parent:\n  raise RuntimeError('incident builder sibling namespace authority differs')\n sibling_fd,sibling_chain=hold_parent(sibling_parent)\n sibling_holds.append((sibling_fd,sibling_chain,basename,set(allowed)))\ndef validate_siblings():\n for sibling_fd,sibling_chain,basename,allowed in sibling_holds:\n  validate_chain(sibling_chain)\n  observed={entry.name for entry in os.scandir(sibling_fd) if entry.name.startswith('.'+basename+'.') and (entry.name.endswith('.staging') or entry.name.endswith('.publication_intent_v1.json') or entry.name.endswith('.publication_closeout_v1.json'))}\n  if observed-allowed:\n   raise RuntimeError('incident builder unexpected publication sibling')\nvalidate_siblings()\nparent=os.path.dirname(path)\nname=os.path.basename(path)\nd,output_chain=hold_parent(parent)\npending_name=os.path.basename(pending_path)\nleaf=os.open('.',os.O_RDWR|os.O_CLOEXEC|getattr(os,'O_TMPFILE',0),0o600,dir_fd=d)\nheld.append(leaf)\noffset=0\nwhile offset<len(content):\n wrote=os.write(leaf,content[offset:])\n if wrote<=0:\n  raise RuntimeError('incident builder final commit short write')\n offset+=wrote\nos.fsync(leaf)\nos.fchmod(leaf,0o444)\nos.fsync(leaf)\n# Link the exact held anonymous inode under a hidden, preregistered name and\n# fsync that durable directory entry before the final atomic rename.\nlibc=ctypes.CDLL(None,use_errno=True)\nlinkat=getattr(libc,'linkat',None)\nrenameat2=getattr(libc,'renameat2',None)\nif linkat is None or renameat2 is None:\n raise RuntimeError('incident builder strict link/rename primitives unavailable')\nlinkat.argtypes=[ctypes.c_int,ctypes.c_char_p,ctypes.c_int,ctypes.c_char_p,ctypes.c_int]\nlinkat.restype=ctypes.c_int\nrenameat2.argtypes=[ctypes.c_int,ctypes.c_char_p,ctypes.c_int,ctypes.c_char_p,ctypes.c_uint]\nrenameat2.restype=ctypes.c_int\nif linkat(leaf,b'',d,os.fsencode(pending_name),0x1000)!=0:\n first_errno=ctypes.get_errno()\n proc_source=os.fsencode('/proc/self/fd/'+str(leaf))\n if linkat(-100,proc_source,d,os.fsencode(pending_name),0x400)!=0:\n  raise RuntimeError('incident builder hidden inode link failed errno='+str(first_errno)+'/'+str(ctypes.get_errno()))\nos.fsync(d)\n# Revalidate every retained authority and ancestor at the linearization edge.\nfor parent_fd,chain,record_name,rf,token,data in record_holds:\n validate_chain(chain)\n current=os.fstat(rf)\n reachable=os.stat(record_name,dir_fd=parent_fd,follow_symlinks=False)\n if key(current)!=token or key(reachable)!=token or os.pread(rf,len(data)+1,0)!=data:\n  raise RuntimeError('incident builder final retained authority drifted')\nfor item,parent_fd,chain,absent_name in absence_holds:\n validate_chain(chain)\n if item in {path,pending_path}:\n  continue\n try:\n  os.stat(absent_name,dir_fd=parent_fd,follow_symlinks=False)\n except FileNotFoundError:\n  pass\n else:\n  raise RuntimeError('incident builder final retained absence drifted')\nvalidate_chain(output_chain)\nls=os.fstat(leaf)\nnamed=os.stat(pending_name,dir_fd=d,follow_symlinks=False)\nif key(ls)!=key(named) or not stat.S_ISREG(ls.st_mode) or ls.st_nlink!=1 or stat.S_IMODE(ls.st_mode)!=0o444 or os.pread(leaf,len(content)+1,0)!=content:\n raise RuntimeError('incident builder precommit publication differs')\nvalidate_siblings()\n# The no-replace rename is the commit linearization point.  The exact held\n# inode is already complete, 0444, file-fsynced, hidden-linked and dir-fsynced;\n# no fallible Python operation follows a successful rename.\nif renameat2(d,os.fsencode(pending_name),d,os.fsencode(name),1)!=0:\n code=ctypes.get_errno()\n if code in {errno.EEXIST,errno.ENOTEMPTY}:\n  raise RuntimeError('incident builder canonical namespace already consumed')\n raise RuntimeError('incident builder final atomic rename failed errno='+str(code))\nos._exit(0)\n",
+      "/home/ma/AQUA-FE_WS/scripts/build_a02_matched_birth_r4_vins_g0_runtime_alias_incident_v1.py",
+      "91ad304e3c7107b467889cefc773360a190a03a4b5ef7ae73c2a585ea8c70896",
+      "--action",
+      "write-once",
+      "--successor-governor-sha256",
+      "2b7706f4343ad1472d8cda803a11647ce31fdf09b581afc3f12f4636c320b6d2",
+      "--successor-governor-size-bytes",
+      "343093",
+      "--v3-job-hash",
+      "855798b90d1b4d8c79e04c49cd348ef10d391ca32f419963d92601e162c8ecd6"
+    ],
+    "builder_process_is_publication_control_plane_only": true,
+    "commit_linearization": "O_TMPFILE_HIDDEN_LINK_FSYNC_RENAMEAT2_NOREPLACE",
+    "environment": {
+      "HOME": "/home/ma",
+      "LANG": "C.UTF-8",
+      "LC_ALL": "C.UTF-8",
+      "LOGNAME": "ma",
+      "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONHASHSEED": "0",
+      "PYTHONNOUSERSITE": "1",
+      "SHELL": "/bin/bash",
+      "USER": "ma"
+    },
+    "publication": "O_TMPFILE_HELD_INODE_0444_FILE_FSYNC_HIDDEN_LINK_DIR_FSYNC_RENAMEAT2_NOREPLACE",
+    "required_absent_at_commit": [
+      "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_g0_v3_runtime_alias_incident_v1.json",
+      "/home/ma/AQUA-FE_WS/papers/.a02_4500_6300_matched_birth_formal900_r4_vins_g0_v3_runtime_alias_incident_v1.json.pending_v1",
+      "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_freeze_v1.json",
+      "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_failure_receipt_v1.json",
+      "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r1",
+      "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_seal_v1.json",
+      "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r1.c51e1b38696ca936.staging",
+      "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r1.c51e1b38696ca936.publication_intent_v1.json",
+      "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r1.c51e1b38696ca936.publication_closeout_v1.json",
+      "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_failure_receipt_v2.json",
+      "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r2",
+      "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_seal_v2.json",
+      "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.publication_closeout_v1.json",
+      "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_freeze_v3.json",
+      "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_launch_intent_v3.json",
+      "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_failure_receipt_v3.json",
+      "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_success_closeout_v3.json",
+      "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r3",
+      "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_seal_v3.json",
+      "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r3.855798b90d1b4d8c.staging",
+      "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r3.855798b90d1b4d8c.publication_intent_v1.json",
+      "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r3.855798b90d1b4d8c.publication_closeout_v1.json"
+    ],
+    "required_absent_at_commit_count": 22,
+    "scientific_evaluator_detector_vins_process_start_count": 0,
+    "working_directory": "/home/ma/AQUA-FE_WS"
+  },
+  "builder_identity": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/build_a02_matched_birth_r4_vins_g0_runtime_alias_incident_v1.py",
+    "sha256": "91ad304e3c7107b467889cefc773360a190a03a4b5ef7ae73c2a585ea8c70896",
+    "size_bytes": 111097
+  },
+  "claim_boundary": {
+    "scientific_outcome_claimed": false,
+    "v2_evaluator_rc0_receipts_claimed": true,
+    "v2_publication_or_post_pass_claimed": false,
+    "v2_runtime_receipts_byte_identical_claimed": false,
+    "v2_science_outputs_role_byte_identity_claimed": true,
+    "v3_is_additive_post_incident_exploratory": true
+  },
+  "human_record": {
+    "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_g0_v3_runtime_alias_incident_v1.md",
+    "sha256": "70420b0d28b3f6de887ff594d7262f85bf7b27c342d6a2cb82564cfdd8913204",
+    "size_bytes": 8619
+  },
+  "incident_class": "V2_RUN_RUNTIME_MODULE_LEXICAL_ALIAS_AND_PROBE_ONLY_OPTIONAL_ELF_FALSE_NEGATIVE",
+  "incident_hash": "43232052f3af10814e1b06e5c77e36a1705f809f10ba469e9eb6f2adc7fa87bc",
+  "mechanical_runtime_alias_diagnosis": {
+    "authority": {
+      "legacy_child_bootstrap": {
+        "path": "/home/ma/AQUA-FE_WS/scripts/formal_g0_child_bootstrap_v1.py",
+        "sha256": "331d687f6249a3b7a87898237c542948beb456f8942f59531fa6f63875faeeb5",
+        "size_bytes": 80068
+      },
+      "successor_child_bootstrap": {
+        "path": "/home/ma/AQUA-FE_WS/scripts/formal_g0_child_bootstrap_v2.py",
+        "sha256": "3073b474c4ba2f2b1323ae6fc2f4b8068c69b633367d14c723e9ebb8ec81cab1",
+        "size_bytes": 88835
+      },
+      "v2_governor": {
+        "path": "/home/ma/AQUA-FE_WS/scripts/govern_matched_birth_r4_vins_g0_v2.py",
+        "sha256": "8c738362a7aee9adacd22c182a330a16df7c08ce253b36b2643e6451718c0fb9",
+        "size_bytes": 296051
+      }
+    },
+    "classification": "MECHANICALLY_CHECKED_RUNTIME_CLOSURE_POLICY_FALSE_NEGATIVE",
+    "cryptodome_example": {
+      "actual_lexical_path": "/usr/lib/python3/dist-packages/Cryptodome/__init__.py",
+      "actual_realpath": "/usr/lib/python3/dist-packages/Cryptodome/__init__.py",
+      "device_id": 66312,
+      "expected_lexical_path": "/lib/python3/dist-packages/Cryptodome/__init__.py",
+      "expected_realpath": "/usr/lib/python3/dist-packages/Cryptodome/__init__.py",
+      "inode": 1051682,
+      "module_name": "Cryptodome",
+      "sha256": "20a3a80330f01736e2f67dd72da47b2d0d7df6abb06b537101ac009e57bd4e42",
+      "size_bytes": 182
+    },
+    "facts": [
+      "both_roles_evaluator_called_rc0_error_null",
+      "three_science_outputs_byte_identical_by_name",
+      "runtime_receipts_not_byte_identical_due_to_role_and_output_identity",
+      "v2_destination_closeout_post_absent",
+      "no_v2_pass_claim"
+    ],
+    "probe_only_optional_elf": {
+      "admission_type": "EXACT_PROBE_ONLY_OPTIONAL_PERSISTENT_ELF",
+      "file_identity": {
+        "lexical_path": "/usr/lib/x86_64-linux-gnu/libtbbmalloc.so.2",
+        "resolved_path": "/usr/lib/x86_64-linux-gnu/libtbbmalloc.so.2",
+        "sha256": "14147fcfadccacb4ddf94738143a3fa999a065a303dda898da8ab057cfb483b4",
+        "size_bytes": 132976,
+        "stat": {
+          "ctime_ns": 1740666764578004477,
+          "device": 66312,
+          "gid": 0,
+          "inode": 169139,
+          "link_count": 1,
+          "mode": 420,
+          "mtime_ns": 1581039179000000000,
+          "uid": 0
+        },
+        "symlink": null
+      },
+      "native_loaded_elf_closure": {
+        "actual_role_record_counts": {
+          "primary": 0,
+          "verification": 0
+        },
+        "expected_record": {
+          "file": {
+            "lexical_path": "/usr/lib/x86_64-linux-gnu/libtbbmalloc.so.2",
+            "resolved_path": "/usr/lib/x86_64-linux-gnu/libtbbmalloc.so.2",
+            "sha256": "14147fcfadccacb4ddf94738143a3fa999a065a303dda898da8ab057cfb483b4",
+            "size_bytes": 132976,
+            "stat": {
+              "ctime_ns": 1740666764578004477,
+              "device": 66312,
+              "gid": 0,
+              "inode": 169139,
+              "link_count": 1,
+              "mode": 420,
+              "mtime_ns": 1581039179000000000,
+              "uid": 0
+            },
+            "symlink": null
+          },
+          "mapping_kind": "PERSISTENT_ELF"
+        },
+        "expected_record_count": 1,
+        "whole_persistent_elf_record_omitted_by_each_role": true
+      },
+      "no_general_expected_runtime_subset_relaxation": true,
+      "persistent_proc_maps": {
+        "actual_role_counts": {
+          "primary": {
+            "file_records": 0,
+            "rows": 0
+          },
+          "verification": {
+            "file_records": 0,
+            "rows": 0
+          }
+        },
+        "entire_file_and_all_rows_omitted_by_each_role": true,
+        "expected_file_record": {
+          "lexical_path": "/usr/lib/x86_64-linux-gnu/libtbbmalloc.so.2",
+          "resolved_path": "/usr/lib/x86_64-linux-gnu/libtbbmalloc.so.2",
+          "sha256": "14147fcfadccacb4ddf94738143a3fa999a065a303dda898da8ab057cfb483b4",
+          "size_bytes": 132976,
+          "stat": {
+            "ctime_ns": 1740666764578004477,
+            "device": 66312,
+            "gid": 0,
+            "inode": 169139,
+            "link_count": 1,
+            "mode": 420,
+            "mtime_ns": 1581039179000000000,
+            "uid": 0
+          },
+          "symlink": null
+        },
+        "expected_file_record_count": 1,
+        "expected_row_count": 5,
+        "expected_rows": [
+          {
+            "device": "103:08",
+            "file_sha256": "14147fcfadccacb4ddf94738143a3fa999a065a303dda898da8ab057cfb483b4",
+            "file_size_bytes": 132976,
+            "inode": 169139,
+            "lexical_path": "/usr/lib/x86_64-linux-gnu/libtbbmalloc.so.2",
+            "offset_hex": "00000000",
+            "permissions": "r--p"
+          },
+          {
+            "device": "103:08",
+            "file_sha256": "14147fcfadccacb4ddf94738143a3fa999a065a303dda898da8ab057cfb483b4",
+            "file_size_bytes": 132976,
+            "inode": 169139,
+            "lexical_path": "/usr/lib/x86_64-linux-gnu/libtbbmalloc.so.2",
+            "offset_hex": "00006000",
+            "permissions": "r-xp"
+          },
+          {
+            "device": "103:08",
+            "file_sha256": "14147fcfadccacb4ddf94738143a3fa999a065a303dda898da8ab057cfb483b4",
+            "file_size_bytes": 132976,
+            "inode": 169139,
+            "lexical_path": "/usr/lib/x86_64-linux-gnu/libtbbmalloc.so.2",
+            "offset_hex": "00017000",
+            "permissions": "r--p"
+          },
+          {
+            "device": "103:08",
+            "file_sha256": "14147fcfadccacb4ddf94738143a3fa999a065a303dda898da8ab057cfb483b4",
+            "file_size_bytes": 132976,
+            "inode": 169139,
+            "lexical_path": "/usr/lib/x86_64-linux-gnu/libtbbmalloc.so.2",
+            "offset_hex": "0001d000",
+            "permissions": "r--p"
+          },
+          {
+            "device": "103:08",
+            "file_sha256": "14147fcfadccacb4ddf94738143a3fa999a065a303dda898da8ab057cfb483b4",
+            "file_size_bytes": 132976,
+            "inode": 169139,
+            "lexical_path": "/usr/lib/x86_64-linux-gnu/libtbbmalloc.so.2",
+            "offset_hex": "0001e000",
+            "permissions": "rw-p"
+          }
+        ]
+      }
+    },
+    "repair_boundary": "GOVERNANCE_VALIDATION_ONLY_NO_SCIENTIFIC_COMPUTATION_CHANGE",
+    "runtime_closure_comparison": {
+      "policy_source": {
+        "hardlink_without_realpath_alias_is_not_an_alias": true,
+        "path": "/home/ma/AQUA-FE_WS/scripts/formal_g0_child_bootstrap_v2.py",
+        "realpath_alias_requires_same_live_device_inode": true,
+        "sha256": "3073b474c4ba2f2b1323ae6fc2f4b8068c69b633367d14c723e9ebb8ec81cab1",
+        "size_bytes": 88835,
+        "workload_only_additions_not_used_by_this_incident": true
+      },
+      "role_to_role_actual_closure": {
+        "native_loaded_elf_closure_exact_tree_equal": true,
+        "persistent_modules_exact_tree_equal": true,
+        "persistent_proc_maps_exact_tree_equal": true,
+        "successor_runtime_semantic_identity_equal": true
+      },
+      "roles": {
+        "primary": {
+          "native_loaded_elf_closure": {
+            "actual_extra_count": 0,
+            "actual_row_count": 329,
+            "missing_required_count": 0,
+            "persistent_realpath_alias_match_count": 0,
+            "probe_only_optional_omission_count": 1,
+            "probe_row_count": 330,
+            "raw_exact_required_match_count": 329,
+            "typed_mismatch_count": 0,
+            "typed_required_match_count": 329,
+            "typed_required_row_count": 329
+          },
+          "persistent_modules": {
+            "actual_extra_count": 0,
+            "actual_row_count": 490,
+            "combined_persistent_and_sealed_change_row_count": 0,
+            "missing_required_count": 0,
+            "persistent_realpath_alias_row_count": 373,
+            "probe_required_row_count": 490,
+            "raw_exact_row_count": 110,
+            "raw_mismatch_row_count": 380,
+            "sealed_source_role_locator_row_count": 7,
+            "typed_mismatch_count": 0,
+            "typed_policy_match_count": 490
+          },
+          "persistent_proc_maps": {
+            "files": {
+              "actual_extra_count": 0,
+              "actual_row_count": 331,
+              "missing_required_count": 0,
+              "persistent_realpath_alias_match_count": 0,
+              "probe_only_optional_omission_count": 1,
+              "probe_row_count": 332,
+              "raw_exact_required_match_count": 331,
+              "typed_mismatch_count": 0,
+              "typed_required_match_count": 331,
+              "typed_required_row_count": 331
+            },
+            "rows": {
+              "actual_extra_count": 0,
+              "actual_row_count": 1697,
+              "missing_required_count": 0,
+              "persistent_realpath_alias_match_count": 0,
+              "probe_only_optional_omission_count": 5,
+              "probe_row_count": 1702,
+              "raw_exact_required_match_count": 1697,
+              "typed_required_match_count": 1697,
+              "typed_required_row_count": 1697
+            },
+            "sealed_rows": {
+              "actual_extra_count": 0,
+              "actual_row_count": 5,
+              "missing_required_count": 0,
+              "probe_row_count": 5,
+              "typed_required_match_count": 5
+            }
+          }
+        },
+        "verification": {
+          "native_loaded_elf_closure": {
+            "actual_extra_count": 0,
+            "actual_row_count": 329,
+            "missing_required_count": 0,
+            "persistent_realpath_alias_match_count": 0,
+            "probe_only_optional_omission_count": 1,
+            "probe_row_count": 330,
+            "raw_exact_required_match_count": 329,
+            "typed_mismatch_count": 0,
+            "typed_required_match_count": 329,
+            "typed_required_row_count": 329
+          },
+          "persistent_modules": {
+            "actual_extra_count": 0,
+            "actual_row_count": 490,
+            "combined_persistent_and_sealed_change_row_count": 0,
+            "missing_required_count": 0,
+            "persistent_realpath_alias_row_count": 373,
+            "probe_required_row_count": 490,
+            "raw_exact_row_count": 110,
+            "raw_mismatch_row_count": 380,
+            "sealed_source_role_locator_row_count": 7,
+            "typed_mismatch_count": 0,
+            "typed_policy_match_count": 490
+          },
+          "persistent_proc_maps": {
+            "files": {
+              "actual_extra_count": 0,
+              "actual_row_count": 331,
+              "missing_required_count": 0,
+              "persistent_realpath_alias_match_count": 0,
+              "probe_only_optional_omission_count": 1,
+              "probe_row_count": 332,
+              "raw_exact_required_match_count": 331,
+              "typed_mismatch_count": 0,
+              "typed_required_match_count": 331,
+              "typed_required_row_count": 331
+            },
+            "rows": {
+              "actual_extra_count": 0,
+              "actual_row_count": 1697,
+              "missing_required_count": 0,
+              "persistent_realpath_alias_match_count": 0,
+              "probe_only_optional_omission_count": 5,
+              "probe_row_count": 1702,
+              "raw_exact_required_match_count": 1697,
+              "typed_required_match_count": 1697,
+              "typed_required_row_count": 1697
+            },
+            "sealed_rows": {
+              "actual_extra_count": 0,
+              "actual_row_count": 5,
+              "missing_required_count": 0,
+              "probe_row_count": 5,
+              "typed_required_match_count": 5
+            }
+          }
+        }
+      },
+      "schema_version": "aqua-fe-runtime-closure-probe-actual-typed-comparison-v1"
+    }
+  },
+  "outcome_firewall": {
+    "arm_relative_result_available_to_builder": false,
+    "result_conditioned_successor_selection": false,
+    "science_metric_values_read_or_recorded": false,
+    "science_outputs_read_as_opaque_bytes": true,
+    "trajectory_values_read_or_recorded": false
+  },
+  "retained_v2_evidence": {
+    "freeze": {
+      "file": {
+        "device_id": 66312,
+        "inode": 6074534,
+        "mode_octal": "0600",
+        "nlink": 1,
+        "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_freeze_v2.json",
+        "sha256": "0bd647c70544776e128cf43184b49effc3d5d20b2c15a05729103a8b8378c2f8",
+        "size_bytes": 2357600,
+        "uid": 1000
+      },
+      "self_hash": "4fff2f905802d0f5ee7642fb828c43e552e12e8c031e54ad418a5302d0250496"
+    },
+    "governor": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/govern_matched_birth_r4_vins_g0_v2.py",
+      "sha256": "8c738362a7aee9adacd22c182a330a16df7c08ce253b36b2643e6451718c0fb9",
+      "size_bytes": 296051
+    },
+    "prior_incident": {
+      "file": {
+        "device_id": 66312,
+        "inode": 6032205,
+        "mode_octal": "0444",
+        "nlink": 1,
+        "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_g0_v2_adoption_incident_v1.json",
+        "sha256": "2e3bb54156a99efb79aa59e6f2f8c85f4fbc07f46fc1c326073e1fd71c38f2df",
+        "size_bytes": 23926,
+        "uid": 1000
+      },
+      "self_hash": "791ce7d3736570806d74128485f6f211e9e8f3859ca4b88c9b38f7235eb1050e"
+    },
+    "publication": {
+      "closeout_absent": true,
+      "destination_absent": true,
+      "intent": {
+        "device_id": 66312,
+        "inode": 6165375,
+        "mode_octal": "0644",
+        "nlink": 1,
+        "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.publication_intent_v1.json",
+        "sha256": "621100edd33c0f8980038b19660faa8810441175869851a6f59cd3a8f6fec5f1",
+        "size_bytes": 1751,
+        "uid": 1000
+      },
+      "job_hash": "48f29b21b4e9d31409a15fcf93458bc1309fb8a5b5d674c1d90d349f8ab862b2",
+      "post_absent": true,
+      "staging": {
+        "device_id": 66312,
+        "gid": 1000,
+        "inode": 6165367,
+        "mode_octal": "0700",
+        "uid": 1000
+      }
+    },
+    "roles": {
+      "primary": {
+        "evaluator_called": true,
+        "evaluator_error": null,
+        "evaluator_rc": 0,
+        "launch_intent": {
+          "device_id": 66312,
+          "inode": 6165378,
+          "mode_octal": "0644",
+          "nlink": 1,
+          "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.staging/primary_launch_intent.json",
+          "sha256": "d1b5d087962de8b909fd9f06c459f568daad2044eb405b9bd953ccac652dd195",
+          "size_bytes": 9966,
+          "uid": 1000
+        },
+        "runtime_receipt": {
+          "device_id": 66312,
+          "inode": 6165382,
+          "mode_octal": "0600",
+          "nlink": 1,
+          "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.staging/primary/runtime_receipt.json",
+          "sha256": "e714f919d86e82229cca9fa2dbea6698cea69cd8a3cbc26eebd954b5ef5d042e",
+          "size_bytes": 2109886,
+          "uid": 1000
+        }
+      },
+      "verification": {
+        "evaluator_called": true,
+        "evaluator_error": null,
+        "evaluator_rc": 0,
+        "launch_intent": {
+          "device_id": 66312,
+          "inode": 6165384,
+          "mode_octal": "0644",
+          "nlink": 1,
+          "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.staging/verification_launch_intent.json",
+          "sha256": "5a5a54aa7b743d62bb95ababc88e11fcd03401ed7b3ed151b85587a2473782ae",
+          "size_bytes": 10011,
+          "uid": 1000
+        },
+        "runtime_receipt": {
+          "device_id": 66312,
+          "inode": 6165388,
+          "mode_octal": "0600",
+          "nlink": 1,
+          "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.staging/verification/runtime_receipt.json",
+          "sha256": "11256d1c808561d4fc4bd533f3706dad48451bf72f591e6479b988cf660e78c4",
+          "size_bytes": 2109896,
+          "uid": 1000
+        }
+      }
+    },
+    "runtime_probe": {
+      "failure_receipt_absent": true,
+      "launch_intent": {
+        "device_id": 66312,
+        "inode": 6074532,
+        "mode_octal": "0644",
+        "nlink": 1,
+        "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_launch_intent_v2.json",
+        "sha256": "21e6a9aa5ec10a5602277f92c5ce6b256b0c62b6b575cf51cb4a3a3f8fa9113f",
+        "size_bytes": 3626,
+        "uid": 1000
+      },
+      "success_closeout": {
+        "device_id": 66312,
+        "inode": 6074539,
+        "mode_octal": "0444",
+        "nlink": 1,
+        "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_success_closeout_v2.json",
+        "sha256": "fb3dee0a08b2968fb403de5da3999d1db2315a7056e60296316e26edc2c4ebbc",
+        "size_bytes": 858,
+        "uid": 1000
+      }
+    },
+    "science_output_pair_identity": {
+      "common_grid_audit.csv": {
+        "byte_identical": true,
+        "primary": {
+          "device_id": 66312,
+          "inode": 6165380,
+          "mode_octal": "0664",
+          "nlink": 1,
+          "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.staging/primary/common_grid_audit.csv",
+          "sha256": "88cc1664c651585f51728af66543c2a6a82772a70b3aceeca2460793ae23f2fc",
+          "size_bytes": 2802,
+          "uid": 1000
+        },
+        "verification": {
+          "device_id": 66312,
+          "inode": 6165386,
+          "mode_octal": "0664",
+          "nlink": 1,
+          "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.staging/verification/common_grid_audit.csv",
+          "sha256": "88cc1664c651585f51728af66543c2a6a82772a70b3aceeca2460793ae23f2fc",
+          "size_bytes": 2802,
+          "uid": 1000
+        }
+      },
+      "common_support_metrics.csv": {
+        "byte_identical": true,
+        "primary": {
+          "device_id": 66312,
+          "inode": 6165381,
+          "mode_octal": "0664",
+          "nlink": 1,
+          "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.staging/primary/common_support_metrics.csv",
+          "sha256": "a0be6693826227d6a07935dc7413b4f3799419a9551a14f0552c9671916a702c",
+          "size_bytes": 996,
+          "uid": 1000
+        },
+        "verification": {
+          "device_id": 66312,
+          "inode": 6165387,
+          "mode_octal": "0664",
+          "nlink": 1,
+          "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.staging/verification/common_support_metrics.csv",
+          "sha256": "a0be6693826227d6a07935dc7413b4f3799419a9551a14f0552c9671916a702c",
+          "size_bytes": 996,
+          "uid": 1000
+        }
+      },
+      "common_support_summary.json": {
+        "byte_identical": true,
+        "primary": {
+          "device_id": 66312,
+          "inode": 6165379,
+          "mode_octal": "0664",
+          "nlink": 1,
+          "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.staging/primary/common_support_summary.json",
+          "sha256": "64f50d509045c6fb1b09ce350a4b4303400e914f5c60e76fec96a0f22efdb6c4",
+          "size_bytes": 3760,
+          "uid": 1000
+        },
+        "verification": {
+          "device_id": 66312,
+          "inode": 6165385,
+          "mode_octal": "0664",
+          "nlink": 1,
+          "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.staging/verification/common_support_summary.json",
+          "sha256": "64f50d509045c6fb1b09ce350a4b4303400e914f5c60e76fec96a0f22efdb6c4",
+          "size_bytes": 3760,
+          "uid": 1000
+        }
+      }
+    },
+    "transitive_consumed_v1_evidence": {
+      "intent_semantics": {
+        "attempt_count": 1,
+        "authorized_process_start_count": 1,
+        "no_retry_after_pending_evidence": true,
+        "status": "DURABLE_RUNTIME_PROBE_LAUNCH_PENDING_NO_RETRY"
+      },
+      "old_namespace_mutation_completion_or_retry_authorized": false,
+      "probe_launch_intent_hash": "8db122e79ede30eeb3cdb30a3e01d999bd91b3e34979dbf0eaa650ee2692785f",
+      "required_absences": [
+        "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_freeze_v1.json",
+        "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_failure_receipt_v1.json",
+        "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r1",
+        "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_seal_v1.json",
+        "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r1.c51e1b38696ca936.staging",
+        "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r1.c51e1b38696ca936.publication_intent_v1.json",
+        "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r1.c51e1b38696ca936.publication_closeout_v1.json"
+      ],
+      "runtime_probe_launch_intent": {
+        "device_id": 66312,
+        "inode": 6074562,
+        "mode_octal": "0644",
+        "nlink": 1,
+        "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_launch_intent_v1.json",
+        "sha256": "d433ce9e5be085efc8854d60b2e34279c9f8e5dc3953e400e89751b53fdcba0a",
+        "size_bytes": 3626,
+        "uid": 1000
+      }
+    }
+  },
+  "schema_version": "aqua-fe-matched-birth-r4-vins-g0-runtime-alias-incident-adoption-v1",
+  "scientific_role": "POST_INCIDENT_INFRASTRUCTURE_RECOVERY_NO_OUTCOME_SELECTION",
+  "status": "ADOPTED_CONSUMED_V2_RUNTIME_ALIAS_FAILURE_FOR_ONE_REPAIRED_V3_NAMESPACE",
+  "successor_authorization": {
+    "authorized_action_sequence": [
+      "write-freeze",
+      "check-start",
+      "run",
+      "seal-post",
+      "check-post"
+    ],
+    "authorized_successor_evaluation_namespace_count": 1,
+    "detector_or_feature_export_rerun_authorized": false,
+    "exact_namespace": {
+      "freeze": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_freeze_v3.json",
+      "incident": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_g0_v3_runtime_alias_incident_v1.json",
+      "post": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_seal_v3.json",
+      "probe_failure": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_failure_receipt_v3.json",
+      "probe_intent": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_launch_intent_v3.json",
+      "probe_success": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_success_closeout_v3.json",
+      "publication_closeout": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r3.855798b90d1b4d8c.publication_closeout_v1.json",
+      "publication_intent": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r3.855798b90d1b4d8c.publication_intent_v1.json",
+      "result": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r3",
+      "staging": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r3.855798b90d1b4d8c.staging"
+    },
+    "old_v1_or_v2_namespace_retry_mutation_or_completion_authorized": false,
+    "repair_policy": {
+      "probe_only_optional_elf": "EXACT_PROBE_ONLY_OPTIONAL_LIBTBBMALLOC_RECORD_ONLY;NO_GENERAL_EXPECTED_RUNTIME_SUBSET_RELAXATION",
+      "runtime_closure_lexical_alias": "PROBE_EXPECTED_ACTUAL_REALPATH_ALIAS_NORMALIZATION_ONLY_FOR_PERSISTENT_MODULES_PERSISTENT_PROC_MAPS_FILES_AND_ROWS_AND_NATIVE_LOADED_ELF_CLOSURE;SAME_FILE_IDENTITY_REQUIRED;ROLE_TO_ROLE_AND_ALL_SCIENTIFIC_SEMANTICS_UNCHANGED"
+    },
+    "scientific_or_evaluation_contract_change_authorized": false,
+    "sole_governor": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/govern_matched_birth_r4_vins_g0_v3.py",
+      "sha256": "2b7706f4343ad1472d8cda803a11647ce31fdf09b581afc3f12f4636c320b6d2",
+      "size_bytes": 343093
+    },
+    "successor_namespace_contract": {
+      "closeout": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r3.855798b90d1b4d8c.publication_closeout_v1.json",
+      "destination": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r3",
+      "freeze": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_freeze_v3.json",
+      "intent": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r3.855798b90d1b4d8c.publication_intent_v1.json",
+      "job_hash": "855798b90d1b4d8c79e04c49cd348ef10d391ca32f419963d92601e162c8ecd6",
+      "job_id": "matched_birth_r4_vins_g0_v3",
+      "post": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_seal_v3.json",
+      "probe_failure": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_failure_receipt_v3.json",
+      "probe_intent": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_launch_intent_v3.json",
+      "probe_success": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_success_closeout_v3.json",
+      "schema_version": "aqua-fe-matched-birth-r4-vins-g0-v3-runtime-alias-incident-namespace-contract-v1",
+      "staging": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r3.855798b90d1b4d8c.staging",
+      "successor_governor": {
+        "path": "scripts/govern_matched_birth_r4_vins_g0_v3.py",
+        "sha256": "2b7706f4343ad1472d8cda803a11647ce31fdf09b581afc3f12f4636c320b6d2",
+        "size_bytes": 343093
+      }
+    },
+    "v3_job_hash": "855798b90d1b4d8c79e04c49cd348ef10d391ca32f419963d92601e162c8ecd6",
+    "vins_rerun_authorized": false
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "camera": {
+    "all_output_png_bytes_identical_to_canonical_source_members": true,
+    "all_png_chunk_crc_valid": true,
+    "all_png_idat_decoded": true,
+    "chunk_count_histogram": {
+      "22": 10,
+      "23": 269,
+      "24": 552,
+      "25": 475,
+      "26": 396,
+      "27": 76,
+      "28": 23
+    },
+    "count": 1801,
+    "header_ns_inclusive": [
+      1523966922643979137,
+      1523967012680410986
+    ],
+    "inventory_identity": {
+      "crc32": "8a0dd9e5",
+      "sha256": "bb1cf0238839c5899f4907845c3aac1c9e659ff0b1c1d65b6cfbad015238614a"
+    },
+    "schema": "640x512 8-bit grayscale non-interlaced PNG",
+    "source_gzip_stream_fully_consumed_and_crc_checked": true,
+    "source_members_compared": 1801,
+    "total_png_bytes": 327959010
+  },
+  "claims": {
+    "detector_started": false,
+    "evaluator_started": false,
+    "hfnet_started": false,
+    "runner_created": false,
+    "scientific_comparison_produced": false,
+    "start_claim_created": false,
+    "trajectory_produced": false,
+    "vins_started": false
+  },
+  "config": {
+    "crc32": "09b051d9",
+    "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_h03_1800_3600_phase_f_v1.yaml",
+    "sha256": "3ed0e32354049edfaf7c42edaeed3baf7a25e994ec29fab3135b5edef053f5ab",
+    "size_bytes": 2257
+  },
+  "file_count_including_manifest": 1805,
+  "generated_files": [
+    {
+      "crc32": "8f95d70e",
+      "path": "cam0_times.txt",
+      "sha256": "5732e74d12a720cbf7aa3b68cbf5ab189e3493bec7954271017bde7d54f5d92e",
+      "size_bytes": 36020
+    },
+    {
+      "crc32": "420d7c09",
+      "path": "mav0/cam0/data.csv",
+      "sha256": "02ddfd4c66ce1d05956a16790140f29abb43c47222ae5ea1faf47b66205bca6f",
+      "size_bytes": 79269
+    },
+    {
+      "crc32": "a3016b12",
+      "path": "mav0/imu0/data.csv",
+      "sha256": "45edd79a4073f646813cc53d710ab5fd6a26a4b3acb927dfa18292dc6c377193",
+      "size_bytes": 2058198
+    }
+  ],
+  "imu": {
+    "count": 17999,
+    "endpoints_ns": [
+      1523966922642896766,
+      1523966922647928935,
+      1523967012677636392,
+      1523967012682667184
+    ],
+    "final_newline": false,
+    "reader_bracket_valid": true,
+    "strictly_monotonic": true
+  },
+  "input_root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_phase_f_fresh_underwater_v1/aqualoc_harbor_h03_1800_3600",
+  "manifest": {
+    "crc32": "73d91814",
+    "path": "materialization_manifest.json",
+    "sha256": "07dd7840466c098d8a20a8a63c3a98b8de5a87f000847a23ff7e16ef6c7887e4",
+    "size_bytes": 1200881
+  },
+  "payload_file_count_excluding_manifest": 1804,
+  "payload_identity_excluding_manifest": {
+    "crc32": "69365ded",
+    "sha256": "afdfec7e12f9e80b3008f7e82ecbb25f9b16ff0716b9b0c4878a3af06b2061b4"
+  },
+  "schema_version": "aqua-fe-hfnet-v6-phase-f-h03-independent-input-audit-v1",
+  "selector_freeze": {
+    "crc32": "b6182424",
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_phase_f_h03_1800_3600_selector_freeze_v1.json",
+    "sha256": "ab7557db88d884e565d71a31a562e3e88c70eba6d8e643f22ca5b2bdd2d18269",
+    "size_bytes": 12536
+  },
+  "source": {
+    "crc32": "6ab934bd",
+    "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Harbor_sites_sequences/harbor_sequence_03_raw_data.tar.gz",
+    "sha256": "6a4062a61498a108ade031ecff1cdf0818390212ff84882e922cc162ee5e54f1",
+    "size_bytes": 905738013
+  },
+  "status": "PASS_PREPARATION_ONLY_INDEPENDENT_AUDIT"
+}

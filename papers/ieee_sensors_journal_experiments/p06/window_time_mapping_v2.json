@@ -1,0 +1,28 @@
+{
+  "excluded_sequence_count": 1,
+  "excluded_sequences": [
+    "afrl/cave_gennie"
+  ],
+  "fail_count": 1,
+  "interfaces": [
+    "AQUALOC_FRAME_INTERVAL_HALF_OPEN",
+    "ROS_BAG_START_OFFSET_AND_DURATION"
+  ],
+  "learned_outcome_read": false,
+  "outcome_boundary": "KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME",
+  "output": {
+    "path": "papers/ieee_sensors_journal_experiments/p06/window_time_mapping_v2.csv",
+    "sha256": "515986b4349cf31d1508fa2753d6a1c7666533f4a45c7e14a01156043f74b261",
+    "size_bytes": 35838
+  },
+  "pass_count": 155,
+  "protocol_version": "isj-window-selection-v2",
+  "reference_eligible_sequence_count": 17,
+  "row_count": 156,
+  "schema_version": "isj-p06-window-time-mapping-summary-v2",
+  "source_builder": {
+    "path": "scripts/build_p06_window_time_mapping_v2.py",
+    "sha256": "5a99ed58db42ab22a01d39bbcfca52ca9a79ae67e8925c2a548a6a5290bbe384"
+  },
+  "trajectory_outcome_read": false
+}

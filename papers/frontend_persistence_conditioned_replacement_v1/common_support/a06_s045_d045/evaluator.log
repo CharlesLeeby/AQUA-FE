@@ -1,0 +1,1 @@
+{"output": "/home/ma/AQUA-FE_WS/papers/frontend_persistence_conditioned_replacement_v1/common_support/a06_s045_d045", "support": {"ape_valid": true, "common_coverage": 0.9545454545454546, "common_span_s": 41.0, "grid_count": 44, "matched_count": 42, "rpe_pairs": 41, "rpe_valid": true, "segment_count": 1, "window_duration_s": 43.99146127700806}}

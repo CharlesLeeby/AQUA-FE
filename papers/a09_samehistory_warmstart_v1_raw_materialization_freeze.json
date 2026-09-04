@@ -1,0 +1,57 @@
+{
+  "artifact_chain": {
+    "canonical_bag": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/raw/archaeo09_0000_4400.bag",
+      "sha256": "a4a24bd0c2451f4996d39f635e55fd99730698bf704c4e7dc81729070d0dca97",
+      "size_bytes": 1187038470
+    },
+    "canonicalization_addendum": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/raw/raw_materialization_canonicalization_addendum_v1.json",
+      "sha256": "86e82d58dbd85f39907144aa1098352b97282c143fef5259cacd2974c4ca0956",
+      "size_bytes": 2717
+    },
+    "original_receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/raw/raw_materialization_receipt_v1.json",
+      "sha256": "b6f0ec00f04d5c62514b96b3ce591bc561221227ea05163793fc68d8c4d3cf91",
+      "size_bytes": 7199
+    },
+    "protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a09_samehistory_warmstart_v1_raw_materialization_protocol.md",
+      "sha256": "9f4fa071bd91886cfe09ad3517350774276cd68a568a7a822af67bea26c057dd",
+      "size_bytes": 4737
+    },
+    "runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/materialize_a09_samehistory_warmstart_v1_raw.py",
+      "sha256": "9a858c52760616eaf73d5497e77a5c1c12b75466e39040d19bd845810aaa7693",
+      "size_bytes": 15806
+    }
+  },
+  "audit": {
+    "bag_compression": "bz2",
+    "camera_payload_shape_and_encoding_validated_for_all_messages": true,
+    "counts": {
+      "camera": 4401,
+      "gt": 213,
+      "imu": 44025,
+      "total": 48639
+    },
+    "gt_rows_bound_to_frozen_source_camera_indices": 213,
+    "independent_read_only_audit": "PASS_RAW_MATERIALIZATION_ONLY",
+    "score_camera_first_ns": 1542888946038630384,
+    "score_camera_last_ns": 1542888966034698672
+  },
+  "claim_boundary": {
+    "exactly_once_execution_claim_permitted": false,
+    "formal_paper_accuracy_evidence_permitted": false,
+    "frontend_or_slam_executed": false,
+    "raw_materialization_only": true,
+    "trajectory_or_accuracy_result_available": false
+  },
+  "path_semantics": {
+    "downstream_authority": "canonicalization_addendum + canonical_bag identity",
+    "original_command_and_stdout_staging_path_preserved": true,
+    "original_receipt_output_path_is_not_resolvable_after_atomic_commit": true
+  },
+  "schema_version": "aqua-fe-a09-samehistory-warmstart-raw-materialization-freeze-v1",
+  "status": "FROZEN_PASS_RAW_MATERIALIZATION_ONLY"
+}

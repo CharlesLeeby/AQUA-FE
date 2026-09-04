@@ -1,0 +1,12 @@
+$ evo_ape tum papers/ieee_sensors_journal_experiments/g0/ntnu_fjord4_s0_d30_probe/evo_crosscheck/reference_common.tum papers/ieee_sensors_journal_experiments/g0/ntnu_fjord4_s0_d30_probe/evo_crosscheck/protected_common_aligned.tum -a -r trans_part
+APE w.r.t. translation part (m)
+(with SE(3) Umeyama alignment)
+
+       max	1254.217800
+      mean	335.182501
+    median	273.970747
+       min	57.339647
+      rmse	411.564950
+       sse	41499498.471194
+       std	238.827132
+

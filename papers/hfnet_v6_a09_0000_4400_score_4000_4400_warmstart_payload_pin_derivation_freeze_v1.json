@@ -1,0 +1,319 @@
+{
+  "authority_boundary": {
+    "materialization_authority_created": false,
+    "note": "This artifact freezes identities obtained by a read-only derivation. It supplies the previously unknown target pins but does not modify the selector/protocol, publish an HFNet input, prepare an attempt, or authorize any write or launch.",
+    "permitted_use": "independent review and later additive materializer-contract implementation only",
+    "process_launch_authority_created": false
+  },
+  "claims": {
+    "accuracy_measured": false,
+    "canonical_hfnet_input_materialized": false,
+    "detector_started": false,
+    "evaluator_started": false,
+    "execution_authorized": false,
+    "gpu_workload_started": false,
+    "hfnet_started": false,
+    "launch_authority_created": false,
+    "materialization_authority_created": false,
+    "ros_started": false,
+    "scientific_comparison_produced": false,
+    "slam_started": false,
+    "trajectory_produced": false,
+    "vins_started": false
+  },
+  "cold_subset_exact_reproduction": {
+    "comparison": {
+      "all_frozen_pins_reproduced_exactly": true,
+      "mismatch_count": 0,
+      "mismatches": [],
+      "role": "positive control for the read-only derivation path"
+    },
+    "generated_files": {
+      "cam0_times.txt": {
+        "crc32": "e2460a7e",
+        "sha256": "f73f70dd4b5fe145665140dd38a0427229295661d215ce26958953867aa4fce9",
+        "size_bytes": 8020
+      },
+      "mav0/cam0/data.csv": {
+        "crc32": "0dec02c8",
+        "sha256": "0bb8e8e82ed0ab120c3266cce559f7b46de469c447f4c87b7cbca88115a32784",
+        "size_bytes": 17669
+      },
+      "mav0/imu0/data.csv": {
+        "crc32": "b9975f9f",
+        "sha256": "b762654638307b994923c7ebc822e411cf5723853f0e430c6a43a535c5491c53",
+        "size_bytes": 447436
+      }
+    },
+    "imu": {
+      "raw_indices_inclusive_zero_based_excluding_header": [
+        39967,
+        43964
+      ],
+      "selected_count": 3998,
+      "shifted_boundary_ns_first_second_penultimate_last": [
+        1542888946036728464,
+        1542888946039581808,
+        1542888966032163568,
+        1542888966037387088
+      ]
+    },
+    "payload_excluding_manifest": {
+      "algorithm": "sorted UTF-8 path\\0size\\0sha256\\0crc32\\n",
+      "crc32": "38ef5e97",
+      "file_count": 404,
+      "sha256": "552c3865562d8135037135971e4a24d7776492d608e2bd42b957de74e94f6c08",
+      "total_size_bytes": 92923372
+    },
+    "reference_artifacts": {
+      "independent_audit_receipt": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_positive_windows_v1/a09_4000_4400_coldstart.audit.json",
+        "sha256": "bfa635a6d96142a87f2ccc4160df18916c0f97fda78e130a64b8395698b65f30",
+        "size_bytes": 291253
+      },
+      "materialization_manifest": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_positive_windows_v1/a09_4000_4400_coldstart/materialization_manifest.json",
+        "sha256": "c572d90d3c5f9be00902cd4eb804e0afc90252002bdd212a9a6ee63a1c2f696d",
+        "size_bytes": 269990
+      },
+      "materializer_contract": {
+        "path": "/home/ma/AQUA-FE_WS/scripts/materialize_hfnet_positive_a09_4000_4400_coldstart_v1.py",
+        "sha256": "002711916b5892fb093bb2ee49e507b59fcb4a90f21106ae2ff17c9288a30376",
+        "size_bytes": 37453
+      }
+    },
+    "selected_camera": {
+      "count": 401,
+      "first_timestamp_ns": 1542888946038630384,
+      "indices_inclusive": [
+        4000,
+        4400
+      ],
+      "last_timestamp_ns": 1542888966034698672
+    },
+    "selected_pngs": {
+      "file_count": 401,
+      "renamed_output_inventory": {
+        "crc32": "49442874",
+        "sha256": "a8a5b0411018e0b3bac1c57a2023afbee80ee59e73cf0876636879c35180564e"
+      },
+      "source_member_inventory": {
+        "crc32": "751aa11b",
+        "sha256": "2d9b9cfa043b69cab1b02fa236e7f5fa5f7af80450df226462b22c661f3656ce"
+      },
+      "total_size_bytes": 92450247
+    }
+  },
+  "derivation": {
+    "canonical_output_state": {
+      "attempt_namespace_absent_after": true,
+      "audit_receipt_absent_after": true,
+      "canonical_input_root_absent_after": true,
+      "canonical_output_file_count_written": 0,
+      "planned_attempt_namespace": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart",
+      "planned_audit_receipt": "/mnt/data/AQUA-FE_WS/datasets/hfnet_positive_windows_v1/a09_0000_4400_score_4000_4400_warmstart.audit.json",
+      "planned_input_root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_positive_windows_v1/a09_0000_4400_score_4000_4400_warmstart"
+    },
+    "core_identity": {
+      "crc32": "bb29291e",
+      "path": "/home/ma/AQUA-FE_WS/scripts/materialize_hfnet_v6_phase_f_h03_1800_3600_v1.py",
+      "sha256": "9146602be29e6faee2d13c91e25b01d2bc4081c11bbf419787128822275e584d",
+      "size_bytes": 38774
+    },
+    "durations_seconds": {
+      "gzip_physical_eof_test": 8.7,
+      "main_read_only_derivation": 49.165867
+    },
+    "file_identity_algorithm": {
+      "crc32": "zlib.crc32 over exact bytes, unsigned and lower-case eight-hex encoding",
+      "sha256": "SHA-256 over exact bytes",
+      "size": "exact byte length"
+    },
+    "functions_reused_read_only": [
+      "validate_source_archive",
+      "read_pinned_member",
+      "parse_camera_rows",
+      "parse_imu_rows",
+      "camera_times_bytes",
+      "camera_csv_bytes",
+      "imu_csv_bytes",
+      "validate_imu_bracket",
+      "validate_png",
+      "identity_bytes",
+      "aggregate_identities"
+    ],
+    "inventory_algorithm": "sort rows lexically by path, then hash/CRC the concatenation of UTF-8 path\\0size\\0sha256\\0crc32\\n records",
+    "no_write_functions_invoked": true,
+    "png_validation": {
+      "all_selected_members_regular_nonlink": true,
+      "all_selected_png_chunk_crcs_valid": true,
+      "all_selected_png_idat_streams_decompressed": true,
+      "all_selected_pngs_exactly_968x608_gray8": true,
+      "all_selected_pngs_have_valid_scanline_filters": true,
+      "selected_png_count": 4401
+    },
+    "source_archive_scan": {
+      "gzip_physical_eof_check": {
+        "command_semantics": "gzip -t on the pinned archive",
+        "return_code": 0,
+        "status": "PASS"
+      },
+      "tar_logical_eof_reached": true,
+      "tar_member_count_to_logical_eof": 6998,
+      "tar_mode": "r|gz"
+    },
+    "write_or_launch_functions_not_invoked": [
+      "atomic_directory",
+      "write_exclusive_bytes",
+      "materialize",
+      "Popen",
+      "HFNet-SLAM",
+      "ROS",
+      "VINS-Fusion"
+    ]
+  },
+  "frozen_design_inputs": {
+    "protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_runability_rescue_protocol_v1.md",
+      "sha256": "090e3458e7a281dd694c6d31582e729ec93a3a2927521cc7783e338e66f6fb12",
+      "size_bytes": 10944
+    },
+    "selector": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_selector_freeze_v1.json",
+      "sha256": "bfec892d6f58f751c12302e93dfbdcd1132d326dad2506066d4fe8e2e87fd51c",
+      "size_bytes": 5743
+    }
+  },
+  "schema_version": "aqua-fe-hfnet-v6-a09-warmstart-payload-pin-read-only-derivation-freeze-v1",
+  "selection_and_sync": {
+    "camera": {
+      "feed_count": 4401,
+      "feed_indices_inclusive": [
+        0,
+        4400
+      ],
+      "feed_timestamp_ns_inclusive": [
+        1542888746071008208,
+        1542888966034698672
+      ],
+      "prefix_last_index": 3999,
+      "prefix_last_timestamp_ns": 1542888945988866768,
+      "score_count": 401,
+      "score_indices_inclusive": [
+        4000,
+        4400
+      ],
+      "score_timestamp_ns_inclusive": [
+        1542888946038630384,
+        1542888966034698672
+      ],
+      "strictly_increasing": true
+    },
+    "imu": {
+      "first_camera_bracket_output_ns": [
+        1542888746068186256,
+        1542888746071008208,
+        1542888746073476784
+      ],
+      "last_camera_bracket_output_ns": [
+        1542888966032163568,
+        1542888966034698672,
+        1542888966037387088
+      ],
+      "output_shift_ns": 53694112,
+      "raw_boundary_ns_first_second_penultimate_last": [
+        1542888746014492144,
+        1542888746019782672,
+        1542888965978469456,
+        1542888965983692976
+      ],
+      "raw_indices_inclusive_zero_based_excluding_header": [
+        5,
+        43964
+      ],
+      "selected_count": 43960,
+      "shifted_boundary_ns_first_second_penultimate_last": [
+        1542888746068186256,
+        1542888746073476784,
+        1542888966032163568,
+        1542888966037387088
+      ],
+      "strict_camera_endpoint_brackets": true,
+      "strictly_increasing": true,
+      "synthetic_interpolated_or_extrapolated_rows_used": false
+    }
+  },
+  "source_pins": {
+    "archive": {
+      "gzip_footer_crc32": "b2f3021d",
+      "gzip_footer_isize_mod_2_32": 1742161920,
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_9_raw_data.tar.gz",
+      "sha256": "4d20237571928067cfe4dbb813224cfd2277270c424a6ef97ef50d2933da2901",
+      "size_bytes": 1722658380
+    },
+    "camera_csv_member": {
+      "crc32": "6ab5e1f7",
+      "path": "raw_data/img_sequence_9.csv",
+      "sha256": "29dc7cc3e67df003081070c6191107c8d8d6b5183fc62df965bd0fe5b685d03a",
+      "size_bytes": 251738,
+      "source_row_count": 6992
+    },
+    "image_member_prefix": "raw_data/images_sequence_9/",
+    "imu_csv_member": {
+      "crc32": "cc6033a9",
+      "path": "raw_data/imu_sequence_9.csv",
+      "sha256": "9334097f6311c5fcfe15dae581b18f479dbe9377f78da0b2ba08f4e5a36c83b3",
+      "size_bytes": 7806649,
+      "source_row_count": 69861
+    }
+  },
+  "status": "PASS_READ_ONLY_DERIVATION_NO_CANONICAL_OUTPUT_WRITTEN",
+  "target_payload_pins": {
+    "generated_files": {
+      "cam0_times.txt": {
+        "crc32": "6aff1e64",
+        "serialization": "one selected decimal camera timestamp plus ASCII newline per row",
+        "sha256": "c8b9bb58e1692ae570cfc855e2069bda734110c2866004093c8eefa4293f16a8",
+        "size_bytes": 88020
+      },
+      "mav0/cam0/data.csv": {
+        "crc32": "b6616fa8",
+        "serialization": "#timestamp [ns],filename header; then timestamp,timestamp.png rows; ASCII newline after every line",
+        "sha256": "bec600ec64aefbff6679bb482059b6c581934083c2476af052cf9d51f4973a42",
+        "size_bytes": 193669
+      },
+      "mav0/imu0/data.csv": {
+        "crc32": "ff36467b",
+        "serialization": "frozen IMU header followed by original measurement strings with timestamp shifted +53694112 ns; no terminal newline",
+        "sha256": "2281ea603ae9d47d21914423212b930e99d4066edd3bcdccd5758b911d0cd4d8",
+        "size_bytes": 4911770
+      }
+    },
+    "payload_excluding_manifest": {
+      "algorithm": "sorted UTF-8 path\\0size\\0sha256\\0crc32\\n",
+      "crc32": "79183172",
+      "file_count": 4404,
+      "file_count_breakdown": {
+        "generated_files": 3,
+        "selected_png_files": 4401
+      },
+      "sha256": "845bc56b0de8df58f0dedde3d22e7a6019ba3b02fa4edc7b6ceec395fdee5f52",
+      "total_size_bytes": 1131077451
+    },
+    "selected_canonical_pngs": {
+      "canonical_member_bytes_preserved": true,
+      "file_count": 4401,
+      "renamed_output_inventory": {
+        "algorithm": "sorted UTF-8 path\\0size\\0sha256\\0crc32\\n over mav0/cam0/data/<camera_timestamp_ns>.png paths",
+        "crc32": "9526b009",
+        "sha256": "d065372862769e802a3236d297f14cdd8e8ec25fd6607beb3c25c6c6d10f594f"
+      },
+      "source_member_inventory": {
+        "algorithm": "sorted UTF-8 path\\0size\\0sha256\\0crc32\\n over raw_data/images_sequence_9/frameNNNNNN.png member paths",
+        "crc32": "415c8b51",
+        "sha256": "b8f0a21731558e1694c09c23c05ce259fbd1dba83b3bf55bfebea88448a5d148"
+      },
+      "total_size_bytes": 1125883992
+    }
+  }
+}

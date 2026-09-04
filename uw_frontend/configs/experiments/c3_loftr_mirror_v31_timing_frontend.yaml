@@ -1,0 +1,15 @@
+extends: formal_loftr_mirror_contribution_v33_frontend.yaml
+
+hybrid:
+  # C3 diagnostic profile: keep the formal mirror-sidecar export path, but
+  # reproduce the A06 v31 LoFTR proposal timing that previously yielded a
+  # stable positive result. This is intentionally a probe config, not the
+  # default paper profile.
+  semidense_fallback_start_frame: 10
+  semidense_fallback_min_frame_gap: 46
+  semidense_fallback_cooldown_on_attempt: true
+  semidense_fallback_max_new: 40
+  semidense_fallback_sidecar_max_extra: 40
+  semidense_fallback_max_fraction: 0.12
+  learned_confirmation_max_confirmed: 26
+  promotion_loftr_max_confirmed: 26

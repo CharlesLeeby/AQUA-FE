@@ -1,0 +1,70 @@
+{
+  "schema_version": "aqua-fe-samehistory-system-comparison-execution-lock-v1",
+  "status": "FROZEN_WAITING_FOR_EXTERNAL_PROCESS_QUIESCENCE",
+  "created_at_local": "2026-08-23T14:58:00+08:00",
+  "policy": {
+    "arm_order": [
+      "a06_vanilla_origin",
+      "a06_external_klt",
+      "a06_aquafe_proposed_safe",
+      "h07_vanilla_origin",
+      "h07_external_klt",
+      "h07_aquafe_proposed_safe"
+    ],
+    "one_launch_per_arm": true,
+    "result_informed_retry": false,
+    "serial_ros_vins_only": true,
+    "vins_multiple_thread": 1,
+    "wait_for_vins_subscribers": true,
+    "large_artifact_root": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1",
+    "forbidden_workspace": "/home/ma/SLAM/VINS-Fusion_3-15-WS"
+  },
+  "identities": {
+    "protocol_sha256": "7a4ffa58dbb64eb2ce51be9497c49fbd66db49ca740972e110f96609eb9837b1",
+    "profile_wrapper_sha256": "266e3c6f0c57eaae0555e1918298d450d9452794569de83de83700f8bae87130",
+    "archaeology_runner_sha256": "c3bdb181fb4a0f9ef457f9dd0f7cffd4b1a79c8ed8dc2e529d62f02c9f98a1cc",
+    "harbor_runner_sha256": "a8cf19217dcdd358e73a6ec1293319868142d301a63db9f2a67208f01d7a6e48",
+    "v33_config_sha256": "e50669deb51da948999aafa004ff6c5c7d355445847ef1db4252bad829bb15f4",
+    "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+    "hfnet_a06_input_manifest_sha256": "8e10e8e729ce5a1c4665bd92472c6a6efbff5ab2a1ba6d49e2d689f64e511b0b",
+    "hfnet_h07_input_manifest_sha256": "2c2f733f65c7ed464cedc75400e83a6b46da4a6fb348bb317e85fbe8d40dcb04"
+  },
+  "arms": {
+    "a06_vanilla_origin": {
+      "port": 11861,
+      "raw_bag": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/raw/archaeo06_0000_2460.bag",
+      "tag": "systemfair_v1_a06_feed0000_2460_score2210_2460_vanilla_origin",
+      "command": "env RAW_BAG=<raw_bag> TAG=<tag> PORT=11861 WAIT_FOR_VINS_SUBSCRIBERS=1 VINS_MULTIPLE_THREAD=1 bash scripts/run_aqualoc_archaeo_vins_eval.sh origin 6 0 2460 klt 1"
+    },
+    "a06_external_klt": {
+      "port": 11862,
+      "raw_bag": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/raw/archaeo06_0000_2460.bag",
+      "tag": "systemfair_v1_a06_feed0000_2460_score2210_2460_external_klt",
+      "command": "env RAW_BAG=<raw_bag> TAG=<tag> PORT=11862 WAIT_FOR_VINS_SUBSCRIBERS=1 VINS_MULTIPLE_THREAD=1 RUN_VINS=1 bash scripts/run_paper_sidecar_profiles.sh aqualoc_archaeo_loftr_mirror_klt 6 0 2460"
+    },
+    "a06_aquafe_proposed_safe": {
+      "port": 11863,
+      "raw_bag": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/raw/archaeo06_0000_2460.bag",
+      "tag": "systemfair_v1_a06_feed0000_2460_score2210_2460_aquafe_proposed_safe",
+      "command": "env RAW_BAG=<raw_bag> TAG=<tag> PORT=11863 WAIT_FOR_VINS_SUBSCRIBERS=1 VINS_MULTIPLE_THREAD=1 RUN_VINS=1 bash scripts/run_paper_sidecar_profiles.sh aqualoc_archaeo_loftr_mirror_proposed 6 0 2460"
+    },
+    "h07_vanilla_origin": {
+      "port": 11871,
+      "raw_bag": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/raw/harbor07_0001_1720.bag",
+      "tag": "systemfair_v1_h07_feed0001_1720_score1660_1720_vanilla_origin",
+      "command": "env RAW_BAG=<raw_bag> TAG=<tag> PORT=11871 WAIT_FOR_VINS_SUBSCRIBERS=1 VINS_MULTIPLE_THREAD=1 bash scripts/run_aqualoc_real_vins_eval.sh origin 1 1720 klt 1"
+    },
+    "h07_external_klt": {
+      "port": 11872,
+      "raw_bag": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/raw/harbor07_0001_1720.bag",
+      "tag": "systemfair_v1_h07_feed0001_1720_score1660_1720_external_klt",
+      "command": "env RAW_BAG=<raw_bag> TAG=<tag> PORT=11872 WAIT_FOR_VINS_SUBSCRIBERS=1 VINS_MULTIPLE_THREAD=1 RUN_VINS=1 bash scripts/run_paper_sidecar_profiles.sh h07_loftr_mirror_klt 1 1720"
+    },
+    "h07_aquafe_proposed_safe": {
+      "port": 11873,
+      "raw_bag": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/raw/harbor07_0001_1720.bag",
+      "tag": "systemfair_v1_h07_feed0001_1720_score1660_1720_aquafe_proposed_safe",
+      "command": "env RAW_BAG=<raw_bag> TAG=<tag> PORT=11873 WAIT_FOR_VINS_SUBSCRIBERS=1 VINS_MULTIPLE_THREAD=1 RUN_VINS=1 bash scripts/run_paper_sidecar_profiles.sh h07_loftr_mirror_proposed 1 1720"
+    }
+  }
+}

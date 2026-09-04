@@ -1,0 +1,43 @@
+extends: three_layer_source_aware_frontend.yaml
+
+hybrid:
+  # VINS-safe closed-loop profile. The three-layer frontend remains active, but
+  # KLT/GFTT is kept as the backend-visible backbone and learned/semi-dense
+  # points are admitted only as mature sidecar tracks.
+  preserve_klt_replenish: true
+  enable_learned_recovery: false
+  learned_before_lk_on_degradation: false
+
+  learned_confirmation_min_frames: 3
+  learned_confirmation_max_confirmed: 24
+  learned_confirmation_reserve_capacity: 0
+  learned_sidecar_max_extra: 24
+  max_learned_initialized: 36
+  max_learned_init_fraction: 0.10
+
+  promotion_lightglue_max_confirmed: 20
+  promotion_lightglue_min_quality: 0.12
+  promotion_lightglue_max_fb_error: 0.95
+  promotion_lightglue_min_ncc: 0.55
+
+  promotion_xfeat_max_confirmed: 2
+  promotion_xfeat_min_quality: 0.18
+  promotion_xfeat_max_fb_error: 0.85
+  promotion_xfeat_min_ncc: 0.58
+
+  # LoFTR is retained as a planar/extreme-low-texture sparse refill, but it is
+  # too pairwise to be a normal VINS landmark source.
+  source_aware_loftr_modes:
+    - planar_near_wall
+    - extreme_textureless
+  source_aware_loftr_min_confirmation_frames: 4
+  semidense_fallback_sidecar_max_extra: 18
+  semidense_fallback_max_new: 36
+  semidense_fallback_max_fraction: 0.08
+  promotion_loftr_min_quality: 0.24
+  promotion_loftr_max_fb_error: 0.80
+  promotion_loftr_min_ncc: 0.60
+  promotion_loftr_min_h_inlier_ratio: 0.85
+
+measurement_selection:
+  enabled: false

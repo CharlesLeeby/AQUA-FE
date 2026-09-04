@@ -1,0 +1,25 @@
+{
+  "after_registry_sha256": "aed0a758efb4e02d8484d8ba22bbb7a58cfb25f598c77222d5ad3a2e66fd5381",
+  "allocation_sha256": "9312938b07db3736bdb94be15e83e3f3de9a7b0db4193e0f47715f71eba406ac",
+  "backend_queue_lock_hash": "a4a9fd20541be949ab78e584e1e5ccd4346c049dba79962112f6d1e8e7b8533e",
+  "before_registry_sha256": "70ad21aa6eeb45d578f0c1dd31c5cd8bbfc37549281982e542d5dd65f0a06ee3",
+  "held_out_trajectory_outcome_read": false,
+  "outcome_boundary": "BACKEND_QUEUE_FROZEN_BEFORE_P07_TRAJECTORY_OUTCOME",
+  "recorded_at": "2026-08-08T11:54:00+08:00",
+  "registration_intent": {
+    "path": "papers/ieee_sensors_journal_experiments/p07/backend_registration_intent_v1.json",
+    "registration_intent_hash": "90def3e5d5b797c16b1bb07396f7a86af0036c693589f815707e7e42b0c001f0",
+    "sha256": "0caf6e8d406c039b56889979c9280667757ef572267b93bbdf7ba90f72a406ff",
+    "size_bytes": 2249
+  },
+  "registration_report_hash": "2f52f0e2e09d166e3aa72717dc7b33344138e11740c80768d03d9fe1a57ce13f",
+  "registry_rows_appended_this_invocation": 240,
+  "registry_rows_reconciled_existing": 0,
+  "schema_version": "isj-p07-backend-registration-v1",
+  "status": "PASS",
+  "validation": {
+    "intended_backend_runs": 240,
+    "pass": true,
+    "unique_untouched_planned_e00": 240
+  }
+}

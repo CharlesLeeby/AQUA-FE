@@ -1,0 +1,108 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a05-0001-3700-score-3300-3700-selector-freeze-v1",
+  "status": "FROZEN_BEFORE_A05_MATERIALIZATION_AND_HFNET_PROCESS_START",
+  "date_local": "2026-08-28",
+  "selection": {
+    "dataset_family": "aqualoc_archaeology",
+    "sequence_id": "A05",
+    "camera_indices_inclusive_for_feed": [
+      1,
+      3700
+    ],
+    "camera_count_for_feed": 3700,
+    "camera_zero_excluded": true,
+    "camera_zero_exclusion_reason": "After the frozen +53694112 ns IMU-to-camera clock shift, source camera 0 has no shifted IMU predecessor; source camera 1 is the first legal feed frame.",
+    "preroll_camera_indices_inclusive": [
+      1,
+      3299
+    ],
+    "score_camera_indices_inclusive": [
+      3300,
+      3700
+    ],
+    "score_camera_count": 401,
+    "score_history_policy": "Feed frames 1..3700 continuously without estimator reset and score only source frames 3300..3700.",
+    "warm_start": true,
+    "cold_start": false,
+    "synthetic_or_extrapolated_imu_permitted": false
+  },
+  "positive_roster_provenance": {
+    "definition": "A prior learned-plus-KLT full arm had lower APE than the pure-KLT arm on the same historical short window.",
+    "method_family": "FROZEN_XFEAT_HYBRID_OLD_ARBITRATION_20260714",
+    "classification": "main_positive_clean_no_recorded_solver_failure",
+    "historical_short_window": [
+      3300,
+      3700
+    ],
+    "historical_replay": {
+      "full_ape_rmse_m": 0.358972,
+      "full_rpe_rmse_m": 0.091049,
+      "klt_ape_rmse_m": 0.373168,
+      "klt_rpe_rmse_m": 0.093447,
+      "full_vs_klt_ape_improvement_percent": 3.804,
+      "full_solver_failures": 0,
+      "klt_solver_failures": 0
+    },
+    "development_result_conditioned_selection": true,
+    "confirmatory_or_held_out": false
+  },
+  "frozen_evidence": {
+    "positive_regression_report": {
+      "path": "/home/ma/AQUA-FE_WS/papers/frozen_frontend_eval_20260714/positive_regression_report_20260717.md",
+      "size_bytes": 4433,
+      "sha256": "4ddb11404c64f44537b9d142f97a4d13d744b0db3f18e1f8b857787503024ade"
+    },
+    "positive_regression_summary": {
+      "path": "/home/ma/AQUA-FE_WS/papers/frozen_frontend_eval_20260714/positive_regression_summary_20260717.csv",
+      "size_bytes": 1475,
+      "sha256": "1d46a0bdac7f1d6d1354107dfa03acae64a7c7b6a524d3165be18c509af3246f"
+    },
+    "positive_regression_hash_audit": {
+      "path": "/home/ma/AQUA-FE_WS/papers/frozen_frontend_eval_20260714/positive_regression_hash_audit_20260717.csv",
+      "size_bytes": 9081,
+      "sha256": "ad6684d023d61860f3790a73430021794891a074d3bd1016604b7cbcffa038a3"
+    },
+    "historical_short_raw_bag": {
+      "path": "/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo05_3300_3700.bag",
+      "size_bytes": 89870094,
+      "sha256": "8439787a17687a2567cd3c64639889d932d1f94165cab6e059798daadaabc64a"
+    },
+    "historical_learned_plus_klt_feature_bag": {
+      "path": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_jul14frozen3way_a05_3300_3700_degraded_early_dense_visible_motion_count/features.bag",
+      "size_bytes": 6107455,
+      "sha256": "7047ec08638d043d619f8c18262d26a5171f2fe678845ab148aaf3d598d81d69"
+    },
+    "historical_pure_klt_feature_bag": {
+      "path": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_jul14frozen3way_a05_3300_3700_klt/features.bag",
+      "size_bytes": 6136127,
+      "sha256": "f9d75b9f496ca90a6ca529cfcaf1d7087076f4fcb1bfe6c4b057ff0c772bacbc"
+    }
+  },
+  "canonical_source": {
+    "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_5_raw_data.tar.gz",
+    "size_bytes": 866604152,
+    "sha256": "49fc60a27a2da30ab3e3a883badafd43b579406a1fad10de632e175ad18be52c",
+    "gzip_crc32": "94fd6d95",
+    "gzip_isize": 879257600,
+    "source_camera_count": 3983,
+    "source_imu_count": 39796
+  },
+  "knowledge_boundary": {
+    "window_is_outcome_selected": true,
+    "hfnet_accuracy_not_seen_at_freeze": true,
+    "hfnet_runability_not_seen_at_freeze": true,
+    "historical_full_and_klt_are_cold_crop_context_only": true,
+    "natural_history_hfnet_must_not_be_ranked_against_cold_crop_metrics": true,
+    "accuracy_requires_new_history_matched_controls_and_common_support": true
+  },
+  "claims": {
+    "input_materialized": false,
+    "hfnet_started": false,
+    "hfnet_runability_passed": false,
+    "trajectory_produced": false,
+    "accuracy_evaluated": false,
+    "system_ranking_supported": false,
+    "superiority_supported": false,
+    "confirmatory_evidence": false
+  }
+}

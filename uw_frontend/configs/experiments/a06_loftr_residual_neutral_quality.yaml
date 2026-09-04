@@ -1,0 +1,26 @@
+extends: ../paper_full_quality_hybrid_frontend.yaml
+
+hybrid:
+  # A06 LoFTR residual-neutral probe.
+  # Prefer locally higher-quality, more LK-confirmable LoFTR births while
+  # preserving the current sparse planar trigger.
+  semidense_fallback_max_new: 60
+  semidense_fallback_sidecar_max_extra: 60
+  semidense_fallback_max_fraction: 0.18
+  learned_init_max_per_cell: 3
+  semidense_acceptance_min_grid_gain: 0.010
+  semidense_acceptance_min_new_cell_ratio: 0.20
+  semidense_acceptance_max_f_inlier_drop: 0.030
+  semidense_acceptance_max_h_inlier_drop: 0.030
+  semidense_acceptance_max_epipolar_error_ratio: 1.08
+  semidense_acceptance_max_homography_error_ratio: 1.12
+  semidense_candidate_min_quality: 0.14
+  semidense_candidate_min_ncc: 0.48
+  semidense_candidate_max_fb_error: 1.00
+  semidense_candidate_max_epipolar_error: 1.60
+  semidense_candidate_max_homography_error: 3.00
+  promotion_loftr_min_quality: 0.20
+  promotion_loftr_max_fb_error: 1.00
+  promotion_loftr_min_ncc: 0.48
+  loftr_max_epipolar_error: 1.60
+  loftr_max_homography_error: 3.00

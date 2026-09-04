@@ -1,0 +1,9 @@
+{
+  "governance_free_bytes": 5684707328,
+  "governance_minimum_free_bytes": 536870912,
+  "governance_pass": true,
+  "output_free_bytes": 10284576768,
+  "output_minimum_free_bytes": 3221225472,
+  "output_pass": true,
+  "output_root": "logs/aqualoc_archaeo_vins"
+}

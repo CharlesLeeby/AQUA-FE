@@ -1,0 +1,1 @@
+RUN_VINS=0 FORCE_EXPORT=1 TAG_BASE=isj_p07_aqualoc_harbor_h05_0002_p_attempt01 bash scripts/run_isj_nativeq_contract_guarded_v4.sh aqualoc_real H05 1800 2700 hybrid_xfeat 2

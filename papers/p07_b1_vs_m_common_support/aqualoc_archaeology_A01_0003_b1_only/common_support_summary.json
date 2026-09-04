@@ -1,0 +1,83 @@
+{
+  "arms": {
+    "B1": {
+      "ape_max_m": 0.8768773819761435,
+      "ape_median_m": 0.411813987523322,
+      "ape_rmse_m": 0.4354244321508708,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 423,
+        "raw_count": 423,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 423
+      },
+      "bracket_gap_max_s": 0.10281343990936875,
+      "bracket_gap_p50_s": 0.10019968007691205,
+      "bracket_gap_p95_s": 0.10229258243343793,
+      "legacy_max_reference_reuse": 10,
+      "legacy_pair_count": 423,
+      "legacy_timestamp_error_max_s": 0.45262451202142984,
+      "legacy_timestamp_error_p95_s": 0.4506914720404893,
+      "legacy_unique_assignment_error_max_s": 0.7507651200285181,
+      "legacy_unique_assignment_error_p95_s": 0.050559014384634796,
+      "legacy_unique_assignment_pair_count": 44,
+      "legacy_unique_reference_used": 43,
+      "matched_count": 42,
+      "rejection_histogram": {
+        "INTERPOLATED": 42,
+        "OUT_OF_RANGE": 3
+      },
+      "rpe_max_m": 0.08463456458223759,
+      "rpe_median_m": 0.04631715343976067,
+      "rpe_pairs": 41,
+      "rpe_rmse_m": 0.05319533714334176,
+      "valid_grid_count": 42
+    }
+  },
+  "protocol": {
+    "arm_time_offsets_s": {
+      "B1": 0.0
+    },
+    "body_to_camera_applied": true,
+    "contrast_name": "P07_B1_ONLY_M_EMPTY",
+    "evaluation_rate_hz": 1.0,
+    "max_estimate_gap_s": 0.25,
+    "max_reference_gap_s": 2.5,
+    "nominal_estimate_rate_hz": 10.0,
+    "nominal_reference_rate_hz": 1.0,
+    "reference": "logs/aqualoc_archaeo_vins/external_klt_every2_isj_p07_aqualoc_archaeology_a01_0003_b1_attempt01/features.bag:/aqualoc/colmap_gt",
+    "reference_time_offset_s": 0.0,
+    "rpe_delta_s": 1.0,
+    "rpe_semantics": "aligned_global_frame_positional_delta",
+    "window_end_s": 1542827971.8195121,
+    "window_start_s": 1542827926.8270183
+  },
+  "reference": {
+    "audit": {
+      "duplicate_count": 0,
+      "finite_count": 46,
+      "raw_count": 46,
+      "rejected_nonfinite_count": 0,
+      "unique_count": 46
+    },
+    "bracket_gap_max_s": 1.001152063952759,
+    "bracket_gap_p50_s": 1.0000148159451783,
+    "bracket_gap_p95_s": 1.000934688001871,
+    "rejection_histogram": {
+      "EXACT": 1,
+      "INTERPOLATED": 44
+    },
+    "valid_grid_count": 45
+  },
+  "support": {
+    "ape_valid": true,
+    "common_coverage": 0.9333333333333333,
+    "common_span_s": 41.0,
+    "grid_count": 45,
+    "matched_count": 42,
+    "rpe_pairs": 41,
+    "rpe_valid": true,
+    "segment_count": 1,
+    "window_duration_s": 44.99249398405664
+  }
+}

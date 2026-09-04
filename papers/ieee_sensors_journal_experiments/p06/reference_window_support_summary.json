@@ -1,0 +1,122 @@
+{
+  "fail_count": 71,
+  "learned_outcome_read": false,
+  "outcome_boundary": "KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME",
+  "pass_count": 100,
+  "protocol_version": "isj-window-selection-v2",
+  "schema_version": "isj-p06-reference-window-support-summary-v1",
+  "sequence_counts": {
+    "afrl/bus_outside": {
+      "fail": 6,
+      "pass": 6,
+      "total": 12
+    },
+    "afrl/cave_gennie": {
+      "fail": 15,
+      "pass": 0,
+      "total": 15
+    },
+    "afrl/cemetery": {
+      "fail": 4,
+      "pass": 5,
+      "total": 9
+    },
+    "aqualoc_archaeology/A01": {
+      "fail": 1,
+      "pass": 18,
+      "total": 19
+    },
+    "aqualoc_archaeology/A02": {
+      "fail": 1,
+      "pass": 8,
+      "total": 9
+    },
+    "aqualoc_archaeology/A03": {
+      "fail": 1,
+      "pass": 6,
+      "total": 7
+    },
+    "aqualoc_archaeology/A04": {
+      "fail": 8,
+      "pass": 6,
+      "total": 14
+    },
+    "aqualoc_archaeology/A07": {
+      "fail": 5,
+      "pass": 7,
+      "total": 12
+    },
+    "aqualoc_archaeology/A08": {
+      "fail": 4,
+      "pass": 6,
+      "total": 10
+    },
+    "aqualoc_archaeology/A09": {
+      "fail": 5,
+      "pass": 2,
+      "total": 7
+    },
+    "aqualoc_archaeology/A10": {
+      "fail": 7,
+      "pass": 8,
+      "total": 15
+    },
+    "aqualoc_harbor/H01": {
+      "fail": 0,
+      "pass": 5,
+      "total": 5
+    },
+    "aqualoc_harbor/H02": {
+      "fail": 2,
+      "pass": 7,
+      "total": 9
+    },
+    "aqualoc_harbor/H03": {
+      "fail": 0,
+      "pass": 5,
+      "total": 5
+    },
+    "aqualoc_harbor/H04": {
+      "fail": 1,
+      "pass": 3,
+      "total": 4
+    },
+    "aqualoc_harbor/H05": {
+      "fail": 0,
+      "pass": 3,
+      "total": 3
+    },
+    "aqualoc_harbor/H06": {
+      "fail": 0,
+      "pass": 2,
+      "total": 2
+    },
+    "ntnu/fjord_6": {
+      "fail": 11,
+      "pass": 3,
+      "total": 14
+    }
+  },
+  "sequence_origins": {
+    "afrl/bus_outside": 1494876479.7215545,
+    "afrl/cave_gennie": 1532199344.5634074,
+    "afrl/cemetery": 1535224862.0919013,
+    "aqualoc_archaeology/A01": 0.0,
+    "aqualoc_archaeology/A02": 0.0,
+    "aqualoc_archaeology/A03": 0.0,
+    "aqualoc_archaeology/A04": 0.0,
+    "aqualoc_archaeology/A07": 0.0,
+    "aqualoc_archaeology/A08": 0.0,
+    "aqualoc_archaeology/A09": 0.0,
+    "aqualoc_archaeology/A10": 0.0,
+    "aqualoc_harbor/H01": 0.0,
+    "aqualoc_harbor/H02": 0.0,
+    "aqualoc_harbor/H03": 0.0,
+    "aqualoc_harbor/H04": 0.0,
+    "aqualoc_harbor/H05": 0.0,
+    "aqualoc_harbor/H06": 0.0,
+    "ntnu/fjord_6": 1700603707.8582888
+  },
+  "trajectory_outcome_read": false,
+  "window_count": 171
+}

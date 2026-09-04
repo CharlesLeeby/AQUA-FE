@@ -1,0 +1,156 @@
+{
+  "schema_version": "aqua-fe-published-supervins-v1-ortsession-construction-smoke-attempt-002-freeze-v1",
+  "created_at": "2026-08-16T22:34:00+08:00",
+  "status": "FROZEN_BEFORE_ATTEMPT_002_MASTER_OR_NODE_START",
+  "scientific_role": "DEVELOPMENT_RUNTIME_QUALIFICATION_ONLY",
+  "relationship": {
+    "mode": "ADDITIVE_NEW_ATTEMPT_AND_FRESH_NAMESPACE",
+    "attempt_001_modified": false,
+    "attempt_001_retried": false,
+    "attempt_001_formal_status_remains": "FAIL_DEVELOPMENT_ORTSESSION_CONSTRUCTION_NO_RETRY",
+    "attempt_002_change_class": "OBSERVATION_AND_EMPTY_ROS_INFRASTRUCTURE_ONLY",
+    "supervins_binary_source_models_config_or_runtime_changed": false
+  },
+  "objective": "Start an isolated empty ROS master, confirm that no input publishers exist, start the exact pinned SuperVINS node once with stdout and stderr attached to pseudo-terminals, persist the required post-session warning marker, and terminate/reap all processes without ROS input or model inference.",
+  "claim_boundary": {
+    "accuracy_claim_authorized": false,
+    "ape_rpe_authorized": false,
+    "formal_baseline_authorized": false,
+    "model_inference_authorized": false,
+    "ort_session_construction_authorized": true,
+    "ros_core_infrastructure_authorized": true,
+    "ros_data_consumption_authorized": false,
+    "ros_data_message_publication_authorized": false,
+    "ros_input_publisher_authorized": false,
+    "supervins_empty_output_advertisement_authorized": true,
+    "trajectory_run_authorized": false
+  },
+  "attempt_001_adoption": {
+    "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_ortsession_smoke_attempt_001_failure_adoption_v1.json",
+    "sha256": "ec1c89406454f777ab548aac1dd2393c0774c5e22085da4edf51d2a20e3d3fc7",
+    "size_bytes": 3590
+  },
+  "adopted_stack_freeze": {
+    "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_ortsession_construction_smoke_freeze_v1.json",
+    "sha256": "8095a9eeb702b9671a58678cd22059c98638ec8962ef2ad18e7e81b5c165004d",
+    "size_bytes": 8690,
+    "direct_runtime_and_governance_pin_count": 19
+  },
+  "attempt_001_controller_pins": {
+    "/home/ma/AQUA-FE_WS/papers/supervins_v1_ortsession_construction_smoke_execution_lock_v1.json": {
+      "sha256": "dc8402376c7bcc3c69a88d3180f2900d6a97f37c768e1d8c3b281435c627863f",
+      "size_bytes": 2056
+    },
+    "/home/ma/AQUA-FE_WS/scripts/run_published_supervins_v1_ortsession_smoke_v1.py": {
+      "sha256": "969131329f3a50c30ac0d305bc9f5717d9c9f5234cfa0d688eb433699d67e6c8",
+      "size_bytes": 30027
+    },
+    "/home/ma/AQUA-FE_WS/scripts/tests/test_run_published_supervins_v1_ortsession_smoke_v1.py": {
+      "sha256": "93ab786ddd1603dac165de25235898da0bc1a2ad1ed653d91315dada7c0fc033",
+      "size_bytes": 4002
+    },
+    "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_ortsession_smoke_20260816_r1/attempt_001/node_start_claim.json": {
+      "sha256": "8a71a10d60d0aa5adcec0b22aa2f02c774fa6d7aeff0a8b7ed3094e2af0d732f",
+      "size_bytes": 727
+    },
+    "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_ortsession_smoke_20260816_r1/attempt_001/node.stderr.log": {
+      "sha256": "d3ac2c7baac4a84f0ec4cf1ff46026679fbf5567bc5c3b58cfab2a32a9eee340",
+      "size_bytes": 121
+    },
+    "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_ortsession_smoke_20260816_r1/attempt_001/run_result.json": {
+      "sha256": "1ee7765b0fc1acf4f3d52d20a562c1dc564da708c54afce3fe0ba8d8289ca69a",
+      "size_bytes": 10191
+    }
+  },
+  "fresh_namespace": {
+    "pre_state": "ABSENT",
+    "evidence_root": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_ortsession_smoke_20260816_r2",
+    "attempt": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_ortsession_smoke_20260816_r2/attempt_002",
+    "roscore_start_claim": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_ortsession_smoke_20260816_r2/attempt_002/roscore_start_claim.json",
+    "node_start_claim": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_ortsession_smoke_20260816_r2/attempt_002/node_start_claim.json",
+    "reuse_after_any_outcome": false
+  },
+  "one_shot_authority": {
+    "authorization_token": "SUPERVINS_V1_ORTSESSION_SMOKE_ATTEMPT_002_START_ONCE",
+    "maximum_roscore_starts": 1,
+    "maximum_supervins_node_starts": 1,
+    "roscore_ready_timeout_seconds": 12,
+    "node_marker_timeout_seconds": 45,
+    "claim_creation": "os.open(O_WRONLY|O_CREAT|O_EXCL, 0o444) before each corresponding Popen",
+    "termination_sequence": [
+      "SIGTERM_PROCESS_GROUP",
+      "WAIT_UP_TO_3_SECONDS",
+      "SIGKILL_PROCESS_GROUP_IF_NEEDED",
+      "SYNCHRONOUS_WAIT_REAP"
+    ]
+  },
+  "isolated_ros_master": {
+    "uri": "http://127.0.0.1:11552",
+    "port_must_be_unbound_pre_and_post": true,
+    "command": [
+      "/opt/ros/noetic/bin/roscore",
+      "-p",
+      "11552"
+    ],
+    "core_nodes_allowed_before_supervins": [
+      "/rosout"
+    ],
+    "external_input_publishers_allowed": [],
+    "input_topics_that_must_have_no_publishers": [
+      "/imu0",
+      "/cam0/image_raw",
+      "/cam1/image_raw",
+      "/feature_tracker/feature",
+      "/vins_restart",
+      "/vins_imu_switch",
+      "/vins_cam_switch"
+    ]
+  },
+  "ros_infrastructure_pins": {
+    "/opt/ros/noetic/bin/roscore": {
+      "sha256": "82b5a3d3899caca90233a9a31b99cf524786e41e1917ff050d7f7bd211d5ce05",
+      "size_bytes": 3950
+    },
+    "/opt/ros/noetic/bin/rosmaster": {
+      "sha256": "25f563280acca9905df2361bce8f4103f65864758fc6c5b55cb40c3e877b3719",
+      "size_bytes": 1668
+    },
+    "/opt/ros/noetic/bin/roslaunch": {
+      "sha256": "94b8b69ea6e96de56a9fb5513477b5549aacc7d1c608ad3c97522edbaf0640e5",
+      "size_bytes": 1658
+    },
+    "/opt/ros/noetic/lib/rosout/rosout": {
+      "sha256": "23179b7bf3c24209b7bda61834987781bed2ce8ba47fff810b861c7a1463c32d",
+      "size_bytes": 117088
+    }
+  },
+  "pinned_node_command": [
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/devel/lib/supervins/supervins_node",
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/config/euroc/euroc_mono_imu_config.yaml"
+  ],
+  "capture_contract": {
+    "stdout_transport": "DEDICATED_PSEUDO_TERMINAL",
+    "stderr_transport": "DEDICATED_PSEUDO_TERMINAL",
+    "node_argv_changed_by_capture": false,
+    "node_binary_changed_by_capture": false,
+    "pty_bytes_persisted_to": [
+      "node.stdout.log",
+      "node.stderr.log"
+    ]
+  },
+  "success_contract": {
+    "required_marker": "waiting for image and imu...",
+    "required_marker_count_minimum": 1,
+    "forbidden_inference_markers": [
+      "extract feature time",
+      "matches.size()"
+    ],
+    "required_master_ready_before_node": true,
+    "required_input_publishers_before_and_at_marker": [],
+    "required_node_start_count": 1,
+    "required_node_and_roscore_reaped": true,
+    "required_post_processes": [],
+    "pass_status": "PASS_DEVELOPMENT_ORTSESSION_CONSTRUCTION_ONLY_ATTEMPT_002"
+  },
+  "postcondition": "A pass proves only that the unchanged pinned repaired stack constructs its two configured OrtSession objects and reaches the empty-ROS wait point. It does not prove Run(), feature extraction, matching, tracking, initialization, trajectory accuracy, underwater transfer, or superiority. No inference stage is automatically authorized."
+}

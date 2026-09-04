@@ -1,0 +1,35 @@
+extends: formal_three_layer_vins_frontend.yaml
+
+hybrid:
+  # Experiment profile for windows where the LoFTR extreme-texture gate has
+  # already been shown to fire. It keeps the formal VINS-safe architecture but
+  # restores a small semidense sidecar budget so LoFTR can actually reach the
+  # confirmation/export gates.
+  semidense_fallback_sidecar_max_extra: 60
+  semidense_fallback_max_new: 60
+  semidense_fallback_max_fraction: 0.18
+  semidense_fallback_reserve_gftt_features: 20
+  source_aware_loftr_min_confirmation_frames: 3
+  learned_confirmation_max_confirmed: 36
+  # LoFTR often produces a useful sparse subset in near-planar, low-texture
+  # windows even when the full semidense proposal batch would perturb F/H
+  # statistics. Keep only a tiny residual-stable subset and require the normal
+  # multi-frame LK/NCC confirmation before export.
+  semidense_acceptance_subset_on_geometry_fail: true
+  semidense_acceptance_subset_max_count: 6
+  semidense_acceptance_subset_min_count: 3
+  semidense_acceptance_subset_max_per_cell: 1
+  semidense_fallback_min_frame_gap: 3
+  # Keep LoFTR proposals out of VINS initialization. Early confirmed LoFTR
+  # bursts can look locally valid but destabilize VINS scale/triangulation, and
+  # they also consume the semidense cooldown before the useful post-init window.
+  semidense_fallback_start_frame: 20
+  enable_source_provenance_memory: false
+
+backend_quality:
+  mode: vins_safe
+  floor: null
+  alpha: 0.65
+
+measurement_selection:
+  enabled: false

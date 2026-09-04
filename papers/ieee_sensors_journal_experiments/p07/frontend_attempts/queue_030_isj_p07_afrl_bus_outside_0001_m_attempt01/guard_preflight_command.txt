@@ -1,0 +1,1 @@
+AQUAFE_P05_GUARD_ONLY=1 RUN_VINS=0 FORCE_EXPORT=1 TAG=isj_p07_afrl_bus_outside_0001_m_attempt01 bash scripts/run_p05_modern_xfeat_baseline_guarded_v2.sh afrl bus_outside 45 45 2

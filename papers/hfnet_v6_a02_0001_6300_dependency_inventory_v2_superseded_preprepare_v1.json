@@ -1,0 +1,33 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a02-dependency-v2-superseded-preprepare-v1",
+  "status": "SUPERSEDED_BEFORE_PREPARE_LOCK_OR_START",
+  "created_at_utc": "2026-08-22T13:45:17Z",
+  "reason": "the runner profile paired a 5400..6300 adopted score label with formal900_r4 trajectory paths whose sealed evaluator scores 4500..6300; the evidence family was corrected before any strict70 attempt namespace or execution lock existed",
+  "superseded_dependency_inventory": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_dependency_inventory_v2.json",
+    "size_bytes": 56671,
+    "sha256": "1f116b4e595a42c7b89843cc07ffed79524b033868af6384aa0d4312013a2808"
+  },
+  "runner_at_superseded_snapshot": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a02_0001_6300_score_4500_6300_strict70_v2.py",
+    "size_bytes": 36887,
+    "sha256": "60e9406f5a83f236334d37608f9ef34ac7b2097d4caaf6bf077c747b39fcbc32"
+  },
+  "absence_observations": {
+    "strict70_attempt_namespace_exists": false,
+    "strict70_execution_lock_exists": false,
+    "strict70_process_start_claim_exists": false,
+    "strict70_run_result_exists": false
+  },
+  "execution_claims": {
+    "hfnet_elf_started": false,
+    "popen_invocations": 0,
+    "trajectory_observed": false,
+    "retry_authorized": false
+  },
+  "preservation": {
+    "overwrite_superseded_inventory": false,
+    "delete_superseded_inventory": false,
+    "successor_dependency_inventory": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_dependency_inventory_v2_1.json"
+  }
+}

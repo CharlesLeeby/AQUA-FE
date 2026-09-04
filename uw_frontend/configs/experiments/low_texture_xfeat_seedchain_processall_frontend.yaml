@@ -1,0 +1,10 @@
+extends: low_texture_xfeat_seedchain_frontend.yaml
+
+# Paired control for temporal GFTT-admission experiments.  The frontend is
+# updated on every image even when every-n publishing skips that image, but
+# classical GFTT births retain the historical immediate public-ID behavior.
+frontend_runtime:
+  process_skipped_frames: true
+
+hybrid:
+  enable_temporal_gftt_admission: false

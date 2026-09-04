@@ -1,0 +1,16 @@
+%YAML:1.0
+---
+model_type: PINHOLE
+camera_name: afrl_p06_cam0
+image_width: 1600
+image_height: 1200
+distortion_parameters:
+   k1: -0.17473019446863114
+   k2: 0.10643290428040156
+   p1: 0.0052107778789078612
+   p2: -0.00028664918860079295
+projection_parameters:
+   fx: 1156.5188534683703
+   fy: 1156.5772666173266
+   cx: 763.20833164633711
+   cy: 617.27798538493346

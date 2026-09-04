@@ -1,0 +1,170 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a02-0001-6300-strict70-terminal-adjudication-v2",
+  "status": "SEALED_TERMINAL_NEGATIVE_USABILITY_NO_RETRY",
+  "created_at_utc": "2026-08-22T14:05:16Z",
+  "scientific_role": "EXTERNAL_LEARNED_SLAM_DEVELOPMENT_EXPLORATORY_ONLY",
+  "terminal_run_result": {
+    "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300_strict70/attempt_001/run_result.json",
+    "size_bytes": 142224,
+    "sha256": "068318369813c13c9edbf9e901e94d186cd37b0e510e8905cc0fc5c4a034ec73",
+    "schema_version": "aqua-fe-hfnet-v6-a02-0001-6300-strict70-run-result-v2",
+    "producer_status": "FAIL_EXPLORATORY_UNDERWATER_USABILITY",
+    "producer_return_code": 1,
+    "producer_errors": [
+      "FRAME_TRAJECTORY_STRICT70_USABILITY_GATE_FAILED"
+    ]
+  },
+  "execution": {
+    "official_elf_raw_returncode": 0,
+    "popen_invocations": 1,
+    "process_started": true,
+    "pid": 83691,
+    "started_at_utc": "2026-08-22T13:56:39+00:00",
+    "ended_at_utc": "2026-08-22T14:03:03+00:00",
+    "duration_seconds": 383.67699149799955,
+    "timed_out": false,
+    "synchronously_reaped": true,
+    "termination_signals": [],
+    "inferred_images_consumed": 6300,
+    "inference_basis": "official entry returned after its sequential 6300-image loop over source cameras 1..6300",
+    "retry_performed": false,
+    "retry_permitted": false
+  },
+  "strict70_adjudication": {
+    "score_source_camera_indices_inclusive": [
+      4500,
+      6300
+    ],
+    "score_local_camera_indices_inclusive": [
+      4499,
+      6299
+    ],
+    "score_camera_count": 1801,
+    "minimum_score_poses": 1261,
+    "minimum_score_coverage_fraction": 0.7,
+    "minimum_contiguous_score_poses": 1261,
+    "minimum_longest_contiguous_fraction": 0.7,
+    "observed_score_poses": 13,
+    "observed_score_coverage_fraction": 0.007218212104386452,
+    "observed_longest_contiguous_score_poses": 13,
+    "observed_longest_contiguous_fraction": 0.007218212104386452,
+    "observed_local_indices_inclusive": [
+      6287,
+      6299
+    ],
+    "trajectory_valid": true,
+    "strictly_increasing_camera_associations": true,
+    "maximum_camera_association_error_ns": 128,
+    "pass": false
+  },
+  "independent_trajectory_recheck": {
+    "frame_trajectory_local_indices": [
+      6287,
+      6288,
+      6289,
+      6290,
+      6291,
+      6292,
+      6293,
+      6294,
+      6295,
+      6296,
+      6297,
+      6298,
+      6299
+    ],
+    "frame_trajectory_count": 13,
+    "keyframe_local_indices": [
+      6278,
+      6287,
+      6292,
+      6297
+    ],
+    "keyframe_count": 4,
+    "producer_counts_match_independent_recheck": true
+  },
+  "other_gates": {
+    "execution": true,
+    "keyframe_score_support": true,
+    "full_pre_post_profile_exact": true,
+    "run_local_onnx_and_runtime_config_exact": true,
+    "shared_cache_exact": true,
+    "post_audit_errors": [],
+    "only_failed_gate": "FRAME_TRAJECTORY_STRICT70_USABILITY_GATE"
+  },
+  "result_artifacts": {
+    "process_start_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300_strict70/attempt_001/process_start_claim.json",
+      "size_bytes": 3151,
+      "sha256": "d8fc5a122c8d58d92ff823ce55c7f89ba4915bb7612f8e13243b402ced3297d6"
+    },
+    "trajectory": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300_strict70/attempt_001/result/trajectory.txt",
+      "size_bytes": 1453,
+      "sha256": "429f80147cdb7c58585ae92d8e63834e8d5514763e2571beb3d1e51c3be9e415"
+    },
+    "keyframes": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300_strict70/attempt_001/result/trajectory_keyframe.txt",
+      "size_bytes": 464,
+      "sha256": "2f2d6c7d75df2fff55d1f67c1319aa0403e703179340733a4176e97a363ab98c"
+    },
+    "stdout": {
+      "size_bytes": 19365,
+      "sha256": "9f17387ca1d76a2f14473a70efcca23b197d2ef2e5934fee750df47043a1e51c"
+    },
+    "stderr": {
+      "size_bytes": 6278,
+      "sha256": "53c067e209666d2f51d381180962d628ea83b43ebb48aaa6c20aa1ec6a7497f1"
+    },
+    "result_tree_sha256": "6f107b761cebb1ee4061f9cbbb846a705c87c0b91e5b15201eb9f266d93110a1"
+  },
+  "runtime_diagnostics": {
+    "stdout_line_count": 550,
+    "stderr_line_count": 51,
+    "frames_set_to_lost_event_count": 26,
+    "stdout_reset_pattern_line_count": 303,
+    "segmentation_fault_observed": false,
+    "abnormal_termination_observed": false,
+    "interpretation": "repeated active-map resets and late reinitialization are consistent with the terminal 13-pose score support; this is diagnostic context, not a separately randomized causal test"
+  },
+  "immutability_and_sealing": {
+    "execution_lock": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_score_4500_6300_strict70_execution_lock_v2.json",
+      "size_bytes": 16572,
+      "sha256": "cd923513c1b3f1632dcd7044d5949e3ad40bcb5d219251b50fa534db4c3c8214",
+      "mode": "0444"
+    },
+    "ready_receipt": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_score_4500_6300_strict70_ready_unstarted_v2.json",
+      "size_bytes": 5845,
+      "sha256": "73a637eb596cf59a1c3b215e41a826204fb5a9faf321b93ac29bdd0be7608440"
+    },
+    "run_result_write_contract": "O_EXCL_then_fsync_then_chmod_0444",
+    "run_result_observed_mount_mode": "0755",
+    "mount_mode_note": "the /mnt/data filesystem presents fixed executable permission bits for regular files; terminal content identity is pinned and no rewrite is authorized",
+    "terminal_after_started_attempt": true,
+    "retry_after_terminal_negative_result": false
+  },
+  "scientific_interpretation": {
+    "external_learned_system_actually_executed": true,
+    "system_usable_on_frozen_a02_strict70_protocol": false,
+    "accuracy_evaluated": false,
+    "numeric_accuracy_loss_recorded": false,
+    "superiority_claimed": false,
+    "formal_paper_claim_authorized": false,
+    "comparison_status": "BLOCKED_SYSTEM_UNUSABLE_AND_HISTORY_MISMATCH",
+    "possible_common_score_support_source_indices_inclusive": [
+      5400,
+      6300
+    ],
+    "possible_common_score_support_removes_history_mismatch": false,
+    "permitted_statement": "the pinned official HFNet-SLAM build completed the full 6300-camera A02 feed but failed the frozen strict70 trajectory-support usability gate",
+    "forbidden_statement": "AQUA-FE has lower APE than HFNet on an equivalent A02 system-level protocol"
+  },
+  "terminal_policy": {
+    "attempt_namespace_reusable": false,
+    "retry_authorized": false,
+    "result_conditioned_extension_authorized": false,
+    "post_hoc_gate_relaxation_authorized": false
+  }
+}

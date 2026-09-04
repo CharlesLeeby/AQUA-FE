@@ -1,0 +1,8 @@
+test_float_stats (scripts.tests.test_summarize_anyfeature_orb_init_audit_v1.SummaryHelpersTest) ... ok
+test_identity_hashes_bytes (scripts.tests.test_summarize_anyfeature_orb_init_audit_v1.SummaryHelpersTest) ... ok
+test_integer_stats (scripts.tests.test_summarize_anyfeature_orb_init_audit_v1.SummaryHelpersTest) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK

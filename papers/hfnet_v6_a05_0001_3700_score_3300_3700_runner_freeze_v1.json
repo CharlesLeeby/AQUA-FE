@@ -1,0 +1,129 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a05-0001-3700-score-3300-3700-runner-freeze-v1",
+  "status": "FROZEN_PROCESS_FREE_TESTS_PASS_ATTEMPT_NOT_PREPARED_HFNET_NOT_STARTED",
+  "created_at_local": "2026-08-28T01:00:42+08:00",
+  "scientific_role": "DEVELOPMENT_ONLY_HFNET_NATURAL_HISTORY_RUNABILITY_ON_JULY14_OLD_FROZEN_POSITIVE_WINDOW",
+  "controller": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a05_0001_3700_score_3300_3700_warmstart_v1.py",
+    "size_bytes": 69153,
+    "sha256": "240e4f219c1ef86f9ebb78077ec14ede3cb09002773f00f26747745ad10eab3d"
+  },
+  "controller_tests": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_hfnet_v6_a05_0001_3700_score_3300_3700_warmstart_v1.py",
+    "size_bytes": 18210,
+    "sha256": "ca6c7e2940477b77e8d3431fddd42b793a271231b008e070b1f7b8fb36c5db8b"
+  },
+  "input_freeze": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a05_0001_3700_score_3300_3700_input_freeze_v1.json",
+    "size_bytes": 6825,
+    "sha256": "69d2fd32985241eb299d7d027136c98c07ce04d4b974d7740acc527725849176",
+    "status": "FROZEN_PASS_PREPARATION_ONLY_HFNET_NOT_STARTED"
+  },
+  "frozen_contract": {
+    "feed_source_indices_inclusive": [
+      1,
+      3700
+    ],
+    "feed_local_indices_inclusive": [
+      0,
+      3699
+    ],
+    "score_source_indices_inclusive": [
+      3300,
+      3700
+    ],
+    "score_local_indices_inclusive": [
+      3299,
+      3699
+    ],
+    "score_camera_count": 401,
+    "timeout_seconds": 600,
+    "attempt_namespace": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/old_frozen_positive_windows/a05_0001_3700_score_3300_3700_warmstart/attempt_001",
+    "authorization_token": "HFNET_V6_A05_0001_3700_SCORE_3300_3700_WARMSTART_ATTEMPT_001_START_EXACTLY_ONCE",
+    "prepare_and_run_separated": true,
+    "process_start_claim_o_excl": true,
+    "maximum_hfnet_popen_invocations": 1,
+    "retry_permitted": false,
+    "post_claim_exception_terminal_seal_required": true,
+    "runability_requires_exact_score_pose_count": 401,
+    "runability_requires_score_keyframe": true,
+    "initialization_required_before_score_source_frame": 3300,
+    "score_window_reinitialization_or_reset_permitted": false
+  },
+  "pinned_input": {
+    "materialization_manifest": {
+      "size_bytes": 2432099,
+      "sha256": "36246dac276f5c737ba40db4e690b377e42d200d34f76b0b3c81a7ca46275315"
+    },
+    "independent_audit_receipt": {
+      "size_bytes": 5822,
+      "sha256": "f9124014a823992b069d22decae0f29023ce97e9e179edbe9ca0917b5734a53b"
+    },
+    "payload_excluding_manifest": {
+      "file_count": 3703,
+      "sha256": "9ed254e70b0cc830a705adac99f02988fa475946b83310485059e64f4d7b8d66",
+      "crc32": "854c1f78"
+    }
+  },
+  "pinned_authority_chain": {
+    "selector_freeze": {
+      "size_bytes": 4558,
+      "sha256": "5533e33720239188c27191ff9eb6bb1aab523b6092240343452f99131512e7f7"
+    },
+    "runability_protocol": {
+      "size_bytes": 5042,
+      "sha256": "5929fe1761dc6ae55aa51e19456763ed62f31c232ac91e46da3731eb774f606f"
+    },
+    "materializer": {
+      "size_bytes": 12729,
+      "sha256": "ed9a9483216b9f4331cd70ec427c9215b7b0a2af222d5c18c3dbeffa39a69b3c"
+    },
+    "materializer_tests": {
+      "size_bytes": 6781,
+      "sha256": "5cebff021c535596997a69f97aaa190303326c6afa5236e0e18efad6651a51ee"
+    },
+    "independent_auditor": {
+      "size_bytes": 46363,
+      "sha256": "eefa9799b2066d199821c07e034f6db5147108e09b4dc83e0a5277154f0e33eb"
+    },
+    "independent_auditor_tests": {
+      "size_bytes": 4529,
+      "sha256": "428e9fda8548def33f77a8b3b3b289422fc5cf4a3047c7aa57140e49427ec3d6"
+    },
+    "inherited_hardened_a09_supervisor": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a09_4000_4400_coldstart_v1.py",
+      "size_bytes": 14721,
+      "sha256": "d44e2a92d4aae3592678444ce65ffdf0e90ee92bfc554879348fb3a73a32e9a3"
+    }
+  },
+  "verification": {
+    "python_compile_exit_code": 0,
+    "process_free_unit_test_count": 19,
+    "process_free_unit_test_failures": 0,
+    "real_input_authority_validation_exit_code": 0,
+    "real_input_authority_validation_status": "PASS_PREPARATION_ONLY",
+    "hfnet_process_invocations": 0,
+    "attempt_namespace_exists": false
+  },
+  "claims": {
+    "runner_implemented_and_frozen": true,
+    "attempt_prepared": false,
+    "hfnet_started": false,
+    "trajectory_produced": false,
+    "runability_passed": false,
+    "accuracy_evaluated": false,
+    "runtime_claim_supported": false,
+    "system_ranking_supported": false,
+    "superiority_supported": false,
+    "confirmatory_evidence": false
+  },
+  "next_stage_boundary": {
+    "permitted": "freeze and test an additive user-waived co-run resource overlay if needed, then prepare a fresh attempt and issue one exact execution lock",
+    "prohibited": [
+      "editing this frozen controller or its inputs",
+      "starting HFNet without a reviewed execution profile and exact lock",
+      "retry after any process-start claim",
+      "runtime, accuracy, ranking, superiority, significance, or paper claims"
+    ]
+  }
+}

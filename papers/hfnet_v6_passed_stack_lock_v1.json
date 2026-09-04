@@ -1,0 +1,197 @@
+{
+  "schema_version": "aqua-fe-published-hfnet-v6-passed-stack-lock-v1",
+  "created_at": "2026-08-16T22:18:22+08:00",
+  "status": "PHASE_D_OFFICIAL_MH01_RUNABILITY_PASS_STACK_LOCKED",
+  "scope": {
+    "role": "PHASE_D_OFFICIAL_EUROC_MH01_DEVELOPMENT_RUNABILITY_ONLY",
+    "official_dataset_runability_only": true,
+    "underwater_scientific_result": false,
+    "formal_scientific_adoption": false,
+    "cross_dataset_or_published_system_superiority_claimed": false
+  },
+  "parents": {
+    "freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_two_stage_runability_freeze_v1.json",
+      "sha256": "46d599746696ce492bb7029db82778f1bf0d59b803939ec61f54db8a847dae30",
+      "size_bytes": 4621
+    },
+    "input_adoption": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_mh01_input_adoption_v1.json",
+      "sha256": "cd45e7c39f322bc60d840ae18816584fce024d8220e89ef0698915af51c4437d",
+      "size_bytes": 6622
+    },
+    "prestart_incident": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_attempt_001_prestart_incident_v1.json",
+      "sha256": "cdc691643bec2b1c849d8e12a237411f8c19a4041d772a52ca4e0b694941a6ac",
+      "size_bytes": 3211
+    },
+    "execution_lock": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_attempt_001_execution_lock_v1.json",
+      "sha256": "ee3144b4f8f53a4f0ec1a17faa8fec963b338fac610126605fe404a7a2692594",
+      "size_bytes": 1529
+    },
+    "runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_two_stage_runability_v1.py",
+      "sha256": "87a6cb36af30f52fdd398763c0d6258d1197f01df29d9e9d387503cb41508f97",
+      "size_bytes": 75055
+    }
+  },
+  "attempt": {
+    "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001",
+    "exact_file_set": [
+      "headless.stderr.log",
+      "headless.stdout.log",
+      "prepared_manifest.json",
+      "process_start_claim.json",
+      "result/trajectory.txt",
+      "result/trajectory_keyframe.txt",
+      "run_local_model/HFNet-RT/HF-Net.cache",
+      "run_local_model/HFNet-RT/HF-Net.onnx",
+      "run_result.json",
+      "runtime_config_model_path_only.yaml"
+    ],
+    "records": {
+      "prepared_manifest": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001/prepared_manifest.json",
+        "sha256": "c0932a6f97794920681343b8a0fefdd015cf045e5e9494e21c0dbefb96204b85",
+        "size_bytes": 124158,
+        "mode": "0755"
+      },
+      "derived_config": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001/runtime_config_model_path_only.yaml",
+        "sha256": "0ba113fe440ed4bd5d4205457e0667e2c8ce987a327978e02b0c19f424870aec",
+        "size_bytes": 2675,
+        "mode": "0755"
+      },
+      "process_start_claim": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001/process_start_claim.json",
+        "sha256": "b62351589ec29e71579c5cbf6ece7153fc01980d0bab9e1831ad32db5b864ce0",
+        "size_bytes": 2432,
+        "mode": "0755"
+      },
+      "run_result": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001/run_result.json",
+        "sha256": "69256e1f5cff68c2f736d39182b1d50b4acecbae755736a48feaf3de8e7c4b05",
+        "size_bytes": 13052,
+        "mode": "0755"
+      },
+      "stdout": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001/headless.stdout.log",
+        "sha256": "e5ce2484ca4d2e8ce02987a933cc21b9e07c0a8a17ad4ce8f4128b87b0bd9043",
+        "size_bytes": 11138,
+        "mode": "0755"
+      },
+      "stderr": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001/headless.stderr.log",
+        "sha256": "cbd0cd9f9c064c6c91454220809298a1501dff7187e8aeaa9e30365af1da4670",
+        "size_bytes": 5496,
+        "mode": "0755"
+      },
+      "trajectory": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001/result/trajectory.txt",
+        "sha256": "d08cd9b919a13172c3e134370a4d3cde9ddf53529c5a7021e97fd0bf4d980d27",
+        "size_bytes": 310283,
+        "mode": "0755"
+      },
+      "keyframes": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001/result/trajectory_keyframe.txt",
+        "sha256": "bdb9cf3225d8368667c2d8911a95af05c06859065b7af8395748a6990cfa891f",
+        "size_bytes": 36005,
+        "mode": "0755"
+      },
+      "run_local_onnx": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001/run_local_model/HFNet-RT/HF-Net.onnx",
+        "sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5",
+        "size_bytes": 132238602,
+        "mode": "0755"
+      },
+      "run_local_cache_post": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001/run_local_model/HFNet-RT/HF-Net.cache",
+        "sha256": "62f6b9d5c42ecab52d37d51b2a748a296eadf40a5614f6f64f5e322aac0b59af",
+        "size_bytes": 1671903,
+        "mode": "0755"
+      }
+    }
+  },
+  "execution": {
+    "process_start_count": 1,
+    "retry_performed": false,
+    "return_code": 0,
+    "timed_out": false,
+    "timeout_seconds": 900,
+    "duration_seconds": 422.10944844300684,
+    "started_at_utc": "2026-08-16T14:07:17+00:00",
+    "ended_at_utc": "2026-08-16T14:14:20+00:00"
+  },
+  "pre_post": {
+    "profile_pre_sha256": "9030e692fcfa3fe881c9af82ae41dae7adeec9c849fa310e188c8157cbebaa18",
+    "profile_post_sha256": "9030e692fcfa3fe881c9af82ae41dae7adeec9c849fa310e188c8157cbebaa18",
+    "official_stack_exact": true,
+    "input_adoption_exact": true,
+    "derived_config_exact": true,
+    "run_local_onnx_exact": true,
+    "shared_cache_exact": true,
+    "shared_cache": {
+      "sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7",
+      "size_bytes": 853319
+    },
+    "run_local_cache_pre": {
+      "sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7",
+      "size_bytes": 853319
+    },
+    "run_local_cache_post": {
+      "sha256": "62f6b9d5c42ecab52d37d51b2a748a296eadf40a5614f6f64f5e322aac0b59af",
+      "size_bytes": 1671903
+    },
+    "post_audit_errors": []
+  },
+  "gates": {
+    "all_pass": true,
+    "input_images_consumed": 3682,
+    "input_images_consumed_basis": "official_entry_normal_return_after_sequential_3682_image_loop",
+    "trajectory": {
+      "pose_count": 2737,
+      "span_seconds": 136.8,
+      "associated_first_camera_index": 945,
+      "associated_last_camera_index": 3681,
+      "reaches_last_input_fraction": 1.0,
+      "association_max_abs_error_ns": 0,
+      "finite_valid_pose_rows": true,
+      "strictly_increasing_timestamps": true,
+      "all_rows_uniquely_associated_to_camera": true
+    },
+    "keyframes": {
+      "pose_count": 314,
+      "span_seconds": 136.850000128,
+      "associated_first_camera_index": 941,
+      "associated_last_camera_index": 3678,
+      "reaches_last_input_fraction": 0.9991850040749797,
+      "association_max_abs_error_ns": 0,
+      "finite_valid_pose_rows": true,
+      "strictly_increasing_timestamps": true,
+      "all_rows_uniquely_associated_to_camera": true,
+      "late_keyframe": true
+    }
+  },
+  "runtime_warnings": {
+    "stderr_nonempty": true,
+    "warning_line_count": 31,
+    "error_or_fatal_line_count": 0,
+    "cudnn_linked_loaded_version_mismatch": true,
+    "fp16_weight_conversion_warning": true,
+    "stdout_fail_to_track_local_map_count": 7,
+    "stdout_insufficient_motion_reset_count": 8,
+    "stdout_imu_initialized_count": 2,
+    "disposition": "NONFATAL_RUNABILITY_WARNINGS_RETAINED_NOT_CLEARED_FOR_ACCURACY_CLAIMS"
+  },
+  "continuation": {
+    "phase_d_passed_stack_locked": true,
+    "attempt_001_reexecution_authorized": false,
+    "additional_phase_d_process_start_authorized": false,
+    "attempt_002_namespace_authorized": false,
+    "algorithm_or_threshold_change_authorized": false,
+    "phase_f_execution_authorized": false,
+    "phase_f_requires_separate_freeze_and_fresh_namespace": true,
+    "this_lock_does_not_select_an_underwater_window": true
+  }
+}

@@ -1,0 +1,104 @@
+extends: loftr_raw_degradation_gate_frontend.yaml
+
+hybrid:
+  # H04-specific research probe.
+  #
+  # H04 2000-2360 is not a low-grid-coverage failure: KLT fills the grid, but
+  # most tracks are newborn and the VINS trajectory collapses. This profile
+  # treats persistent identity churn as a valid LoFTR takeover trigger while
+  # keeping the proposal budget and geometry checks bounded.
+  enable_three_layer_source_aware: true
+  learned_init_on_track_churn: true
+  learned_init_churn_min_dropout_ratio: 0.55
+  learned_init_churn_max_median_age: 2.0
+  learned_init_rolling_churn: true
+  learned_init_rolling_churn_window: 3
+  learned_init_rolling_churn_min_bad_frames: 2
+  learned_init_rolling_churn_min_grid_coverage: 0.88
+  learned_init_rolling_churn_max_long_track_ratio: 0.30
+
+  source_aware_loftr_modes:
+    - identity_churn
+
+  # Coverage can be high during churn, so do not let coverage alone reject the
+  # sparse-homography shortcut. The KLT-degeneracy gate below still has to see
+  # multiple bad continuity signals before LoFTR is admitted.
+  loftr_sparse_max_grid_coverage: 1.01
+  loftr_sparse_min_median_track_age: 1.0
+  loftr_sparse_min_h_inlier_ratio: 0.80
+  loftr_sparse_min_planar_score: 0.60
+  loftr_sparse_max_homography_error: 5.0
+
+  enable_klt_degeneracy_loftr_gate: true
+  klt_degeneracy_loftr_max_track_count: 0
+  klt_degeneracy_loftr_max_mature_track_count: 120
+  klt_degeneracy_loftr_mature_track_min_age: 3
+  klt_degeneracy_loftr_max_grid_coverage: 0.20
+  klt_degeneracy_loftr_min_dropout_ratio: 0.45
+  klt_degeneracy_loftr_max_median_track_age: 2.0
+  klt_degeneracy_loftr_max_long_track_ratio: 0.30
+  klt_degeneracy_loftr_max_frontend_state: 0.80
+  klt_degeneracy_loftr_min_bad_signals: 2
+  klt_degeneracy_loftr_history_size: 3
+  klt_degeneracy_loftr_min_bad_history_ratio: 0.34
+  klt_degeneracy_loftr_allow_degraded_texture: true
+  klt_degeneracy_loftr_reserve_budget: 12
+
+  # LoFTR is allowed to alter the track history in this probe, but not to flood
+  # the backend. This is intentionally more active than the paper-safe sidecar.
+  loftr_requires_planar_severe: true
+  loftr_requires_klt_degeneracy: true
+  semidense_fallback_requires_degradation: true
+  semidense_fallback_min_grid_coverage: 1.01
+  semidense_fallback_start_frame: 8
+  semidense_fallback_min_degradation: 0.00
+  semidense_fallback_min_flat_region_ratio: 0.00
+  semidense_fallback_min_grid_texture_score: 1.01
+  semidense_fallback_min_frame_gap: 4
+  semidense_fallback_max_new: 48
+  semidense_fallback_sidecar_max_extra: 48
+  semidense_fallback_max_fraction: 0.16
+  semidense_fallback_reserve_gftt_features: 30
+  semidense_fallback_cooldown_on_attempt: true
+  semidense_use_mature_support: false
+
+  semidense_acceptance_enable: true
+  semidense_acceptance_min_new_tracks: 3
+  semidense_acceptance_min_grid_gain: 0.000
+  semidense_acceptance_min_new_cell_ratio: 0.00
+  semidense_acceptance_max_f_inlier_drop: 0.05
+  semidense_acceptance_max_h_inlier_drop: 0.05
+  semidense_acceptance_max_epipolar_error_ratio: 1.20
+  semidense_acceptance_max_homography_error_ratio: 1.20
+  semidense_acceptance_subset_on_geometry_fail: true
+  semidense_acceptance_subset_max_count: 8
+  semidense_acceptance_subset_min_count: 3
+  semidense_acceptance_subset_max_per_cell: 1
+
+  semidense_candidate_min_quality: 0.10
+  semidense_candidate_min_ncc: 0.35
+  semidense_candidate_max_fb_error: 1.40
+  semidense_candidate_max_epipolar_error: 2.50
+  semidense_candidate_max_homography_error: 5.00
+
+  source_aware_loftr_requires_confirmation: true
+  source_aware_loftr_min_confirmation_frames: 2
+  source_aware_loftr_min_grid_gain: 0.000
+  source_aware_loftr_min_new_cell_ratio: 0.00
+  source_aware_loftr_max_epipolar_error: 2.50
+  source_aware_loftr_max_homography_error: 5.00
+  source_aware_loftr_min_h_inlier_ratio: 0.70
+  source_aware_loftr_geometry_filter_mode: all
+
+  learned_confirmation_max_pending: 600
+  learned_confirmation_max_confirmed: 80
+  learned_confirmation_preserve_new_pending: true
+  promotion_loftr_min_quality: 0.10
+  promotion_loftr_max_fb_error: 1.40
+  promotion_loftr_min_ncc: 0.35
+  promotion_loftr_max_grid_texture_score: 1.01
+  promotion_loftr_min_flat_region_ratio: 0.00
+  promotion_loftr_min_h_inlier_ratio: 0.70
+
+measurement_selection:
+  enabled: false

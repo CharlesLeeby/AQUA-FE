@@ -1,0 +1,13 @@
+window,arm,provenance,fixed_se3_ape_rmse_median_m,fixed_se3_rpe_rmse_median_m,interpretation
+a09_6000_6800,klt,frozen_same_backend,1234.1315792872176,150.0564940756865,scale-diverged baseline
+a09_6000_6800,historical_v3,frozen_same_backend,0.7148936232242529,0.07081541873007002,old shared-tracker positive
+a09_6000_6800,persistence_replace_v1,new_same_backend,0.732646324669052,0.07350139320592254,WIN versus KLT
+a06_s045_d045,klt,frozen_same_backend,0.25771463408599476,0.031055992115549422,baseline
+a06_s045_d045,historical_v3,frozen_same_backend,0.20648331871430678,0.024420155234299735,old replacement positive
+a06_s045_d045,persistence_replace_v1,new_same_backend,0.21276905128254417,0.02498581669617741,WIN versus KLT
+a06_s000_d045,klt,frozen_same_backend,2.6427389543053867,0.33859072809666557,baseline
+a06_s000_d045,historical_v3,frozen_same_backend,2.848403916327577,0.32222805375282554,old APE harm and RPE slight help
+a06_s000_d045,persistence_replace_v1,new_same_backend,130.6512519968869,15.802498355347804,REGRESSION with two of three scale-diverged replays
+h07_s000_d050,klt,frozen_same_backend,1.2296692243162102,0.21984797092151956,baseline
+h07_s000_d050,historical_v3,frozen_same_backend,1.3346982067197466,0.25010674336110894,old late-replacement harm
+h07_s000_d050,persistence_replace_v1,exact KLT input reuse,1.2296692243162102,0.21984797092151956,NO_HARM_INPUT

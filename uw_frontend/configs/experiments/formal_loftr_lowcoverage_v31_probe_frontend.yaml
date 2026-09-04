@@ -1,0 +1,47 @@
+extends: formal_loftr_v31_idsafe_memory_frontend.yaml
+
+hybrid:
+  # Probe profile for H04/FR-style failures where the scene is classified as
+  # low-coverage/severe-low-texture, but the older "extreme texture" scalar
+  # thresholds suppress LoFTR before it can propose any candidates.
+  #
+  # This does not relax the export-side contract: LoFTR still has to survive
+  # LK/NCC/FB confirmation, F/E/H residual checks, and the formal sidecar
+  # observation budget before it can enter VINS.
+  source_aware_loftr_modes:
+    - low_coverage_recovery
+    - low_texture
+    - planar_near_wall
+    - extreme_textureless
+  loftr_extreme_max_grid_texture_score: 1.01
+  loftr_extreme_min_flat_region_ratio: 0.00
+  loftr_extreme_min_degradation: 0.00
+
+  # Let repeated low-coverage frames collect enough proposals for multi-frame
+  # confirmation, but keep LoFTR as a sidecar rather than a replacement.
+  semidense_fallback_min_frame_gap: 8
+  semidense_fallback_cooldown_on_attempt: true
+  semidense_fallback_max_new: 40
+  semidense_fallback_sidecar_max_extra: 40
+  semidense_fallback_max_fraction: 0.12
+
+  # Match the previously useful strict H04 LoFTR candidate filter before the
+  # later acceptance/export gates decide whether the sidecar is trustworthy.
+  semidense_candidate_min_quality: 0.12
+  semidense_candidate_min_ncc: 0.40
+  semidense_candidate_max_fb_error: 1.20
+  semidense_use_mature_support: true
+  semidense_mature_support_min_age: 3
+  source_aware_loftr_min_confirmation_frames: 2
+  promotion_loftr_min_quality: 0.12
+  promotion_loftr_min_ncc: 0.40
+  promotion_loftr_max_fb_error: 1.20
+  promotion_loftr_quality_scale: 0.45
+  promotion_loftr_max_confirmed: 6
+
+  # Keep proposal acceptance residual-safe. A small subset is allowed only
+  # when the full batch fails geometry but a per-cell subset remains stable.
+  semidense_acceptance_subset_on_geometry_fail: true
+  semidense_acceptance_subset_max_count: 6
+  semidense_acceptance_subset_min_count: 3
+  semidense_acceptance_subset_max_per_cell: 1

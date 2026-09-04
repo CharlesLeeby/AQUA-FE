@@ -1,0 +1,154 @@
+{
+  "added_windows": 3,
+  "date": "2026-08-06",
+  "schema_version": 3,
+  "snapshot_entries": 1728,
+  "snapshot_entries_verified": 1728,
+  "snapshot_manifests": 60,
+  "snapshot_manifests_verified": 60,
+  "updated_counts": {
+    "action_positive": 15,
+    "all_control_strict": 2,
+    "operational_low_grid": 8,
+    "project_strict": 5,
+    "sparse_base_klt": 0,
+    "strict_operational_low_grid": 3
+  },
+  "windows": {
+    "A02_5600_6000": {
+      "action_positive": true,
+      "all_control_strict": false,
+      "formal_runs": 20,
+      "formal_runs_ok": 20,
+      "frontend_frames": 200,
+      "full_vs_bridge_off_improvements": 0,
+      "full_vs_native_improvements": 4,
+      "full_vs_unbounded_improvements": 1,
+      "level": "project_strict_bridge_off_and_unbounded_caveat",
+      "low_grid_frames_le_0p80": 133,
+      "operational_low_grid": true,
+      "project_strict": true,
+      "repeat4_order_swapped": true,
+      "role_counter_signatures": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_keyframe_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_online_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_reconstructed_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "snapshot_entries": 576,
+      "sparse_base_klt": false
+    },
+    "A08_0_400": {
+      "action_positive": true,
+      "all_control_strict": false,
+      "formal_runs": 20,
+      "formal_runs_ok": 20,
+      "frontend_frames": 200,
+      "full_vs_bridge_off_improvements": 3,
+      "full_vs_native_improvements": 0,
+      "full_vs_unbounded_improvements": 3,
+      "level": "action_positive_metric_mixed_native_negative_noharm",
+      "low_grid_frames_le_0p80": 22,
+      "operational_low_grid": false,
+      "project_strict": false,
+      "repeat4_order_swapped": true,
+      "role_counter_signatures": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_keyframe_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_online_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_reconstructed_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "snapshot_entries": 576,
+      "sparse_base_klt": false
+    },
+    "AFRL_Cemetery_FR_25_45": {
+      "action_positive": true,
+      "all_control_strict": false,
+      "formal_runs": 20,
+      "formal_runs_ok": 20,
+      "frontend_frames": 192,
+      "full_vs_bridge_off_improvements": 3,
+      "full_vs_native_improvements": 0,
+      "full_vs_unbounded_improvements": 3,
+      "level": "action_positive_metric_mixed_native_negative_noharm",
+      "low_grid_frames_le_0p80": 192,
+      "operational_low_grid": true,
+      "project_strict": false,
+      "repeat4_order_swapped": true,
+      "role_counter_signatures": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_keyframe_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_online_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_reconstructed_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "snapshot_entries": 576,
+      "sparse_base_klt": false
+    }
+  }
+}

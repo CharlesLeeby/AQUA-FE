@@ -1,0 +1,8 @@
+extends: local_quality_only.yaml
+
+hybrid:
+  enable_adaptive_geometry_model_selection: true
+  adaptive_geometry_planar_mode: homography
+  adaptive_geometry_normal_mode: fundamental
+  adaptive_geometry_degraded_mode: adaptive_strict
+  adaptive_geometry_severe_mode: homography

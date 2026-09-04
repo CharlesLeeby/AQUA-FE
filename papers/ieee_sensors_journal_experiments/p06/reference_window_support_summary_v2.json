@@ -1,0 +1,122 @@
+{
+  "fail_count": 23,
+  "learned_outcome_read": false,
+  "outcome_boundary": "KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME",
+  "pass_count": 148,
+  "protocol_version": "isj-window-selection-v2",
+  "schema_version": "isj-p06-reference-window-support-summary-v2",
+  "sequence_counts": {
+    "afrl/bus_outside": {
+      "decision": "RETAIN_SUPPORTED_WINDOWS",
+      "fail": 2,
+      "pass": 10,
+      "total": 12
+    },
+    "afrl/cave_gennie": {
+      "decision": "EXCLUDE_SEQUENCE_FROM_REFERENCE_BEARING_FINAL_SELECTION",
+      "fail": 15,
+      "pass": 0,
+      "total": 15
+    },
+    "afrl/cemetery": {
+      "decision": "RETAIN_SUPPORTED_WINDOWS",
+      "fail": 0,
+      "pass": 9,
+      "total": 9
+    },
+    "aqualoc_archaeology/A01": {
+      "decision": "RETAIN_SUPPORTED_WINDOWS",
+      "fail": 0,
+      "pass": 19,
+      "total": 19
+    },
+    "aqualoc_archaeology/A02": {
+      "decision": "RETAIN_SUPPORTED_WINDOWS",
+      "fail": 0,
+      "pass": 9,
+      "total": 9
+    },
+    "aqualoc_archaeology/A03": {
+      "decision": "RETAIN_SUPPORTED_WINDOWS",
+      "fail": 0,
+      "pass": 7,
+      "total": 7
+    },
+    "aqualoc_archaeology/A04": {
+      "decision": "RETAIN_SUPPORTED_WINDOWS",
+      "fail": 1,
+      "pass": 13,
+      "total": 14
+    },
+    "aqualoc_archaeology/A07": {
+      "decision": "RETAIN_SUPPORTED_WINDOWS",
+      "fail": 0,
+      "pass": 12,
+      "total": 12
+    },
+    "aqualoc_archaeology/A08": {
+      "decision": "RETAIN_SUPPORTED_WINDOWS",
+      "fail": 3,
+      "pass": 7,
+      "total": 10
+    },
+    "aqualoc_archaeology/A09": {
+      "decision": "RETAIN_SUPPORTED_WINDOWS",
+      "fail": 1,
+      "pass": 6,
+      "total": 7
+    },
+    "aqualoc_archaeology/A10": {
+      "decision": "RETAIN_SUPPORTED_WINDOWS",
+      "fail": 0,
+      "pass": 15,
+      "total": 15
+    },
+    "aqualoc_harbor/H01": {
+      "decision": "RETAIN_SUPPORTED_WINDOWS",
+      "fail": 0,
+      "pass": 5,
+      "total": 5
+    },
+    "aqualoc_harbor/H02": {
+      "decision": "RETAIN_SUPPORTED_WINDOWS",
+      "fail": 0,
+      "pass": 9,
+      "total": 9
+    },
+    "aqualoc_harbor/H03": {
+      "decision": "RETAIN_SUPPORTED_WINDOWS",
+      "fail": 0,
+      "pass": 5,
+      "total": 5
+    },
+    "aqualoc_harbor/H04": {
+      "decision": "RETAIN_SUPPORTED_WINDOWS",
+      "fail": 0,
+      "pass": 4,
+      "total": 4
+    },
+    "aqualoc_harbor/H05": {
+      "decision": "RETAIN_SUPPORTED_WINDOWS",
+      "fail": 0,
+      "pass": 3,
+      "total": 3
+    },
+    "aqualoc_harbor/H06": {
+      "decision": "RETAIN_SUPPORTED_WINDOWS",
+      "fail": 0,
+      "pass": 2,
+      "total": 2
+    },
+    "ntnu/fjord_6": {
+      "decision": "RETAIN_SUPPORTED_WINDOWS",
+      "fail": 1,
+      "pass": 13,
+      "total": 14
+    }
+  },
+  "supersedes_interpretation_only": "papers/ieee_sensors_journal_experiments/p06/reference_window_support_summary.json",
+  "trajectory_outcome_read": false,
+  "validity_contract": "G0_REFERENCE_ONLY_POSES_GE30_COVERAGE_GE0P70_SPAN_GE10S",
+  "window_count": 171
+}

@@ -1,0 +1,33 @@
+{
+  "bytes_freed": 228522141,
+  "closeout_hash": "9e18c359f1bb64e0949651f75565d8e28ef4ac666510701406a21e5d1f394da2",
+  "outcome_boundary": "FRONTEND_EXPORT_ONLY_NO_VINS_APE_RPE_TRAJECTORY",
+  "raw_cache_absent_after_unlink": true,
+  "raw_cache_path": "datasets/aqualoc/rosbags/archaeo04_1800_2700.bag",
+  "raw_cache_sha256": "efb7abf4037372e1bd09a218b352ded7396c72832686f22a5aaa1768cfe17699",
+  "receipt": {
+    "path": "papers/ieee_sensors_journal_experiments/p07/raw_cache_reclamation/receipt-efb7abf4037372e1-9e93b732d374518e.json",
+    "sha256": "872d272165d98f258f65d1978d6c2d3e37cc6902c12406a4e93bddc0d27a0520",
+    "size_bytes": 6812
+  },
+  "reclamation_result": {
+    "bytes_freed": 228522141,
+    "event_id": "p07-raw-cache-reclaim-20260807T193031.094060Z-48228-e496469e"
+  },
+  "recorded_at": "2026-08-08T03:30:31+08:00",
+  "recovery_lock": {
+    "path": "papers/ieee_sensors_journal_experiments/p07/frontend_replacements/queue_055_a04_layout_attempt02_lock_v1.json",
+    "replacement_lock_hash": "6b24939fa78a2ff29538dc9707c78a41dee4d81330217b4c15ab5972b39803a0",
+    "sha256": "b17a99853ac9e2519be017bfbc82cc465b67f8798b2899a38aded6ea146b5c54"
+  },
+  "replacement_closeout": {
+    "closeout_hash": "08f5984db92da490c9d735752c07d1ff5c7c6b4bb35a7129d23144812d036e56",
+    "path": "papers/ieee_sensors_journal_experiments/p07/frontend_replacements/queue_055_a04_layout_attempt02_closeout_v1.json",
+    "sha256": "59f1dc3c56ce67b4d7ae350c39080b3258b38cd5f58ab74c936391db00e821ca"
+  },
+  "replacement_run_id": "isj-nativeq-v3_P07_aqualoc_archaeology-A04_1800-2700_P_f0_b00_20260806T084500Z_layout_attempt02",
+  "schema_version": "isj-p07-a04-replacement-raw-reclaim-closeout-v1",
+  "status": "PASS",
+  "trajectory_outcome_read": false,
+  "window_id": "aqualoc_archaeology:A04:0002"
+}

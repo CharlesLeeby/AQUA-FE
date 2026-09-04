@@ -1,0 +1,38 @@
+IEEE Sensors Journal final native-q environment
+==================================================
+
+Schema: isj-environment-nativeq-v5-final-v1
+Status: FROZEN_FOR_P07_CONFIRMATORY_EXECUTION
+Scientific identity: native-q v3 unchanged
+Candidate route lock: fe3a91c3c54c3c2ef20de697ca8f04f2b835454bf8e49c4d8179153a16ff0014
+P backend contract: 39eaea6d26e6f5a881ef2b17b898cbda75c7aba8087ce447fe897e2fe0bdfce0
+M backend contract: 4e31a9a29e8ee2198535de6b0bce01550b17077434e8e01ed68057822d4eace4
+
+Backend
+-------
+Workspace: /home/ma/SLAM/VINS-Fusion-origin
+Historical workspace forbidden: /home/ma/SLAM/VINS-Fusion_3-15-WS
+Replay concurrency: one VINS/roscore/rosbag instance
+VINS multiple_thread: 0
+Algorithmic replays per window-arm: 3 serial
+Scientific unit: sequence, not replay
+
+Frontend
+--------
+Preprocess: adaptive_clahe
+External feature cap: 350
+Backend quality: vins_safe, floor 0.80, alpha 0.65
+AQUALOC/NTNU sampling: every_n=2, frame_offset=1
+AFRL sampling: every_n=2, frame_offset=0
+P entrypoint: scripts/run_isj_nativeq_contract_guarded_v4.sh
+M entrypoint: scripts/run_p05_modern_xfeat_baseline_guarded_v2.sh
+D audit: scripts/audit_whole_lineage_exact_drop_v1.py
+
+Selection
+---------
+Screening used KLT/image quality only.
+Final selection protocol: isj-window-selection-v4-full-reference
+Required arms: B0, B1, P_legacy, M
+Conditional arm: D_legacy after P activity and exact-drop audit
+Retired with no slots: C_legacy, B2
+H2_CONTROL_CONTRACT: NOT_APPLICABLE_CARRIER_FEEDBACK

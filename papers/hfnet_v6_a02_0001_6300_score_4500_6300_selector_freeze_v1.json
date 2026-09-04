@@ -1,0 +1,75 @@
+{
+  "claims": {
+    "accuracy_measured": false,
+    "aqua_fe_superiority_claimed": false,
+    "confirmatory_result_claimed": false,
+    "hfnet_started": false,
+    "trajectory_produced": false
+  },
+  "knowledge_boundary": {
+    "development_result_conditioned_selection": true,
+    "existing_aqua_fe_and_xfeat_results_visible_before_selection": true,
+    "external_system": "author-official HFNet-SLAM learned whole system",
+    "legacy_a02_hfnet_runs_are_read_only": true,
+    "legacy_cold_start_4500_6300_result": "RC0 but 22 frame poses over 1.051619328 s; unusable",
+    "legacy_result_informed_4500_7200_result": "RC0 but 44 frame poses over 2.149449728 s; unusable",
+    "p07_artifacts_are_read_only_and_must_not_be_backfilled": true,
+    "reference_is_same-image_colmap_pressure-scale_proxy_not_independent_ground_truth": true,
+    "scientific_role": "new additive development/exploratory full-history usability window"
+  },
+  "protocol": {
+    "attempt_namespace": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300/attempt_001",
+    "maximum_hfnet_elf_starts": 1,
+    "no_algorithm_or_threshold_retuning": true,
+    "no_atlas_resume": true,
+    "no_retry": true,
+    "score_only_after_full_history_feed": true,
+    "shared_cache_writeback_forbidden": true
+  },
+  "schema_version": "aqua-fe-hfnet-v6-a02-full-history-selector-freeze-v1",
+  "selection": {
+    "camera_count_for_feed": 6300,
+    "camera_indices_inclusive_for_feed": [
+      1,
+      6300
+    ],
+    "camera_zero_trim_reason": "No shifted-IMU predecessor exists for source camera 0; source camera 1 is the minimal frame with a strict predecessor/successor IMU bracket. No synthetic IMU is permitted.",
+    "dataset_family": "AQUALOC archaeological site",
+    "nominal_feed_duration_seconds": 314.900090272,
+    "nominal_preroll_duration_seconds": 224.913015072,
+    "nominal_score_duration_seconds": 89.9870752,
+    "preroll_camera_indices_inclusive": [
+      1,
+      4499
+    ],
+    "score_camera_count": 1801,
+    "score_camera_indices_inclusive": [
+      4500,
+      6300
+    ],
+    "score_reference_proxy_pose_count": 91,
+    "sequence_id": "A02"
+  },
+  "source_pins": {
+    "calibration": {
+      "camera_yaml_sha256": "e8ce9ad65d82ae563c676689444abd210f81c362586473c5752ee5f9bf2c32e2",
+      "imu_camera_yaml_sha256": "e3aad241432b6619395564224fc39cb64931f17ac9446129c47a1ddf6c7a3ebc",
+      "imu_noises_yaml_sha256": "9e7dccbce41a69115155d555b85b0b24af301c4841804a9995151fdfb4101454",
+      "timeshift_cam_imu_s": -0.053694112369382575
+    },
+    "reference_proxy": {
+      "path": "datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_groundtruth_files/new_archaeo_colmap_traj_sequence_02.txt",
+      "sha256": "1122b753372545966026df10f1899e751cdaa3359a6938be251cd8e22b6e4379",
+      "size_bytes": 64318
+    },
+    "source_archive": {
+      "member_count": 8993,
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_2_raw_data.tar.gz",
+      "sha256": "8f6203e0b46068a9d237f03e469acecb5f51eedbd6b7c1dc7c1f980ea6ea6d69",
+      "size_bytes": 2195786266,
+      "source_camera_count": 8987,
+      "source_imu_count": 89795
+    }
+  },
+  "status": "FROZEN_PREPARATION_ONLY_NO_PROCESS_START"
+}

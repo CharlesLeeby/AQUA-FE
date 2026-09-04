@@ -1,0 +1,38 @@
+extends: learned_only_sidecar_frontend.yaml
+
+hybrid:
+  # Compare semi-dense learned fillers under the same KLT-preserving policy.
+  # Use with --semidense-fallback-method xfeat_star or loftr.
+  enable_semidense_fallback_initialization: true
+  semidense_fallback_requires_degradation: true
+  semidense_fallback_min_grid_coverage: 0.90
+  semidense_fallback_min_coverage_score: 0.00
+  semidense_fallback_max_new: 80
+  semidense_fallback_sidecar_max_extra: 80
+  semidense_fallback_max_fraction: 0.25
+  semidense_fallback_reserve_gftt_features: 0
+  semidense_fallback_min_degradation: 0.42
+  semidense_fallback_min_flat_region_ratio: 0.65
+  semidense_fallback_min_grid_texture_score: 0.35
+  semidense_fallback_min_frame_gap: 2
+  semidense_acceptance_enable: true
+  semidense_acceptance_min_new_tracks: 3
+  semidense_acceptance_min_grid_gain: 0.005
+  semidense_acceptance_min_new_cell_ratio: 0.15
+  semidense_candidate_min_quality: 0.08
+  semidense_candidate_min_ncc: 0.35
+  semidense_candidate_max_fb_error: 1.50
+  semidense_candidate_max_epipolar_error: 2.50
+  semidense_candidate_max_homography_error: 4.00
+  semidense_candidate_allow_low_occupancy_cell: true
+  semidense_acceptance_max_f_inlier_drop: 0.08
+  semidense_acceptance_max_h_inlier_drop: 0.08
+  semidense_acceptance_max_epipolar_error_ratio: 1.25
+  semidense_acceptance_max_homography_error_ratio: 1.25
+  loftr_requires_planar_severe: true
+  loftr_planar_min_h_inlier_ratio: 0.65
+  loftr_max_epipolar_error: 2.5
+  loftr_max_homography_error: 4.0
+
+measurement_selection:
+  enabled: false

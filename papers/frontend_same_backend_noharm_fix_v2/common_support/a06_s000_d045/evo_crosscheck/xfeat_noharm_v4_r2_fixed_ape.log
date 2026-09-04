@@ -1,0 +1,12 @@
+$ evo_ape tum papers/frontend_same_backend_noharm_fix_v2/common_support/a06_s000_d045/evo_crosscheck/reference_common.tum papers/frontend_same_backend_noharm_fix_v2/common_support/a06_s000_d045/evo_crosscheck/xfeat_noharm_v4_r2_raw_common.tum -a -r trans_part
+APE w.r.t. translation part (m)
+(with SE(3) Umeyama alignment)
+
+       max	6.600610
+      mean	2.079992
+    median	1.553059
+       min	0.287982
+      rmse	2.543347
+       sse	258.744608
+       std	1.463642
+

@@ -1,0 +1,70 @@
+%YAML:1.0
+
+# Dataset-only adaptation of the already passed official HFNet-SLAM
+# Monocular-Inertial stack for AQUALOC Harbor H07 source frames 0001..1720.
+# Source frames 1660..1720 are the exact development score window shared with
+# existing AQUA-FE evidence.  Frame 0000 is excluded before execution because,
+# after the calibrated camera/IMU shift, no IMU sample precedes it; the official
+# EuRoC entry would decrement first_imu from zero to -1.  No synthetic or
+# extrapolated IMU sample is permitted.
+#
+# Only the Harbor dataset calibration/dimensions differ from the official
+# EuRoC settings.  Learned model, cache seed, extractor parameters, tracker,
+# initializer, optimizer, and loop closing remain unchanged.
+# IMU timestamps are shifted into the camera clock by the frozen materializer:
+# output_ns = raw_ns + 40380655.
+
+File.version: "1.0"
+
+Camera.type: "KannalaBrandt8"
+
+Camera1.fx: 413.32595366566017
+Camera1.fy: 413.70198739483686
+Camera1.cx: 305.9507483284928
+Camera1.cy: 259.4439948946375
+
+Camera1.k1: -0.06125568297136998
+Camera1.k2: -0.003796743395135256
+Camera1.k3: 0.027326634771204592
+Camera1.k4: -0.030296403142887066
+
+Camera.width: 640
+Camera.height: 512
+Camera.fps: 20
+Camera.RGB: 1
+
+# Camera to body/IMU transform: canonical Harbor T_imu_cam.
+IMU.T_b_c1: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [-0.99978035,  0.0169654,   0.01230552, -0.01719238,
+           0.01210101, -0.01210461,  0.99985351,  0.14944769,
+           0.01711187,  0.9997828,   0.01189665, -0.01915984,
+           0.0,         0.0,          0.0,         1.0]
+
+IMU.NoiseGyro: 0.001
+IMU.NoiseAcc: 0.02
+IMU.GyroWalk: 0.00005
+IMU.AccWalk: 0.001
+IMU.Frequency: 200.0
+
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -3.5
+Viewer.ViewpointF: 500.0
+
+Extractor.type: "HFNetRT"
+Extractor.modelPath: "/home/ma/SLAM/HFNet-SLAM-runtime-model-a02-r1/HFNet-RT/"
+Extractor.scaleFactor: 1.2
+Extractor.nLevels: 4
+Extractor.nFeatures: 675
+Extractor.threshold: 0.01
+
+loopClosing: 1

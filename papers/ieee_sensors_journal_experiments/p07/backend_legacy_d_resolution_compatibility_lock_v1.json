@@ -1,0 +1,79 @@
+{
+  "artifacts": [
+    {
+      "path": "scripts/build_p07_backend_legacy_d_compatibility_lock_v1.py",
+      "sha256": "66ba5dbdf212816438e6f1db73f8b76b992799fdd3d74ae1d5efccb9cb96f46f",
+      "size_bytes": 25145
+    },
+    {
+      "path": "scripts/p07_backend_formal_io_v1.py",
+      "sha256": "d0b072eb6470135e5b0c214e9db0e9906758b8340862140515e87e9848ad5983",
+      "size_bytes": 20563
+    },
+    {
+      "path": "scripts/p07_backend_frontend_provenance_v1.py",
+      "sha256": "63c36843ee9fe8c3a5aacc2a70ea90f38546547547dc097388da18b7273ff584",
+      "size_bytes": 20950
+    },
+    {
+      "path": "scripts/tests/test_p07_backend_legacy_d_compatibility_lock_v1.py",
+      "sha256": "d1fa5ca6072083fb89c8587da41bf45ce89ed8091f2ae4ad7694a4b218c24f97",
+      "size_bytes": 11103
+    }
+  ],
+  "authorization": "BACKEND_QUEUE_MAY_BIND_LEGACY_D_TERMINALS_ONLY_AFTER_THIS_LOCK",
+  "compatibility_lock_hash": "4d17f21e321426c8901d7319e8684eb8f17544f43f8590c8308d422fec475456",
+  "frozen_at": "2026-08-08T11:53:00+08:00",
+  "held_out_trajectory_outcome_read": false,
+  "legacy_windows": [
+    "aqualoc_archaeology:A01:0018",
+    "aqualoc_archaeology:A02:0005"
+  ],
+  "outcome_boundary": "FRONTEND_EXPORT_ONLY_NO_VINS_APE_RPE_TRAJECTORY",
+  "schema_version": "isj-p07-backend-legacy-d-resolution-compatibility-lock-v1",
+  "sidecars": [
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/backend_a01_0018_legacy_d_sidecar_v1.json",
+      "sha256": "07491a383b50c3fc9516390d057df08bb7aa42a4a34849cfe646ae3b8c44cb2a",
+      "sidecar_hash": "11e94b7286c277956da5471aa697d922e5d0c4c37ee83bbebb0b7eba7b70c297",
+      "size_bytes": 3028,
+      "window_id": "aqualoc_archaeology:A01:0018"
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/backend_a02_0005_legacy_d_sidecar_v1.json",
+      "sha256": "deef79fc7ce283723ef9ce01efd7001c651098672ba160d81f8193bc8b4dc7b8",
+      "sidecar_hash": "97cef7988e4acdc32a74c6e030eeb7aa0e190db8ef6d2577cc517e62244b42f2",
+      "size_bytes": 3026,
+      "window_id": "aqualoc_archaeology:A02:0005"
+    }
+  ],
+  "source_evidence": [
+    {
+      "legacy_resolution_lock": {
+        "path": "papers/ieee_sensors_journal_experiments/p07/a01_d_resolution_lock_v1.json",
+        "sha256": "c7ced71c05292ef858d8b5e8de9f8ee9d2e4612018e8ea3d3502845785f0a180",
+        "size_bytes": 9676
+      },
+      "terminal_resolution": {
+        "path": "papers/ieee_sensors_journal_experiments/p07/d_resolutions/a01_0018_not_applicable_v1.json",
+        "sha256": "c4e4cabb8d2404e104105dfd4d64d66a9aee0dabb69d2006197fc4a146f3c916",
+        "size_bytes": 1981
+      },
+      "window_id": "aqualoc_archaeology:A01:0018"
+    },
+    {
+      "legacy_resolution_lock": {
+        "path": "papers/ieee_sensors_journal_experiments/p07/a02_d_resolution_lock_v1.json",
+        "sha256": "2ab5bf2c87200dcc8e9c58a15dac79b8f3d7c46a3684694cd062d1c4fb457fa7",
+        "size_bytes": 6349
+      },
+      "terminal_resolution": {
+        "path": "papers/ieee_sensors_journal_experiments/p07/d_resolutions/a02_0005_not_applicable_v1.json",
+        "sha256": "9bfcaf470877478a2c8067ca1b5581854dcfc9762bbc931e1056286a561972dc",
+        "size_bytes": 2318
+      },
+      "window_id": "aqualoc_archaeology:A02:0005"
+    }
+  ],
+  "status": "FROZEN_READY_FOR_BACKEND_QUEUE_INPUT"
+}

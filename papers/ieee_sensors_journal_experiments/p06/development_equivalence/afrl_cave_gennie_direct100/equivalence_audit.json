@@ -1,0 +1,16 @@
+{
+  "direct_rows": 100,
+  "issue_count": 0,
+  "issues": [],
+  "metric_max_abs_diff": {
+    "degradation_score": 0.0,
+    "dropout_ratio": 0.0,
+    "flat_region_ratio": 0.0,
+    "grid_coverage": 0.0
+  },
+  "old_rows_used": 100,
+  "paired_rows": 100,
+  "schema_version": "isj-p06-afrl-direct-equivalence-v1",
+  "status": "PASS",
+  "timestamp_tolerance_s": 1e-09
+}

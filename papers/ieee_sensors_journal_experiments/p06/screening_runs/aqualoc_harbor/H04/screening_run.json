@@ -1,0 +1,56 @@
+{
+  "code": [
+    {
+      "path": "uw_frontend/configs/klt_frontend.yaml",
+      "sha256": "73fd335a18ed77c821d8bc19b653f26b544acfa90fbb75a53d65d285888fd653",
+      "size_bytes": 2878
+    },
+    {
+      "path": "uw_frontend/evaluation/run_frontend_eval.py",
+      "sha256": "c299038feb926e37bada04d0f150e57d45bed2f4d91bad8fb6a0c4ab2b22e6d2",
+      "size_bytes": 33121
+    },
+    {
+      "path": "uw_frontend/tracking/klt_tracker.py",
+      "sha256": "e60957bc0b45a11ef24824fa95ef9093dbbd7ba5998bc82bb91641c831f1fb5b",
+      "size_bytes": 12306
+    },
+    {
+      "path": "uw_frontend/quality/image_quality.py",
+      "sha256": "e0b4a885cb8ecd2909b8abefc0fbc17098c9596df44091d5a3398df56583b89e",
+      "size_bytes": 13301
+    },
+    {
+      "path": "scripts/run_p06_aqualoc_screening.py",
+      "sha256": "115880d27d16b5f217d9c50de62ecc1c11ce785afbc456688780e0f7043f08c5",
+      "size_bytes": 9225
+    },
+    {
+      "path": "scripts/p06_window_selection_v2.py",
+      "sha256": "c50f7e93855e21214ac46a50e38a23e35224826a71cc56f0ed95178874c77c2b",
+      "size_bytes": 2798
+    }
+  ],
+  "command": "python3 -m uw_frontend.evaluation.run_frontend_eval --input /home/ma/AQUA-FE_WS/datasets/full_downloads/aqualoc/Harbor_sites_sequences/harbor_sequence_04_raw_data.tar.gz --image-prefix harbor_images_sequence_04 --output-csv /home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/p06/screening_runs/aqualoc_harbor/H04/metrics.csv --method klt --config /home/ma/AQUA-FE_WS/uw_frontend/configs/klt_frontend.yaml --preprocess adaptive_clahe --every-n 1 --start-index 0",
+  "contract_pass": true,
+  "dataset_family": "aqualoc_harbor",
+  "first_frame_index": "0",
+  "generated_at_utc": "2026-08-04T15:25:56+00:00",
+  "issues": [],
+  "last_frame_index": "4124",
+  "metrics_path": "papers/ieee_sensors_journal_experiments/p06/screening_runs/aqualoc_harbor/H04/metrics.csv",
+  "metrics_sha256": "6d73c5f63b34443926397eebdba4d37db19f639ff726b3c46781ef1028c4d449",
+  "outcome_boundary": "KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME",
+  "protocol_version": "isj-window-selection-v2",
+  "raw_input": {
+    "path": "datasets/full_downloads/aqualoc/Harbor_sites_sequences/harbor_sequence_04_raw_data.tar.gz",
+    "registered_sha256": "f6eb115e94ea208a9722fa0d4fe9f7e53b8079be6aea0bc25a38469567f20034",
+    "size_bytes": 610079354
+  },
+  "row_count": 4125,
+  "run_dir": "papers/ieee_sensors_journal_experiments/p06/screening_runs/aqualoc_harbor/H04",
+  "schema_version": "isj-p06-screening-run-v1",
+  "sequence": "H04",
+  "split_role": "SEQUENCE_HELD_OUT_WINDOW_CANDIDATE",
+  "status": "PASS"
+}

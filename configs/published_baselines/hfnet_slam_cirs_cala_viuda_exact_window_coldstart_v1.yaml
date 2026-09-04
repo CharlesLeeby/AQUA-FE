@@ -1,0 +1,78 @@
+%YAML:1.0
+
+# HFNet-SLAM CIRS Cala Viuda mono-inertial settings for the frozen
+# s575/d30 and s900/d30 exact-window cold-start inputs.
+#
+# Camera calibration authority:
+#   sparus_camera.bag:/camera/camera_info is constant over both windows.
+#   The input rasters are the dataset's undistorted 384x288 images, therefore
+#   K/P is retained and distortion is zero in this settings file.
+#
+# Extrinsic authority and convention:
+#   CIRS dataset paper, DOI 10.1177/0278364917732838, Sec. 2.3/Table 2,
+#   states sensor offsets relative to the DVL body and gives the MTi and camera
+#   offsets used by the recorded TF streams.  The recorded parents `sparus`
+#   and `sparus2` are consequently treated as the same published body frame.
+#   T_imu_cam = inv(T_body_imu) * T_body_cam.  The preparation and independent
+#   audit code recompute this from the recorded full-precision quaternions and
+#   verify determinant, orthogonality, translation, and this matrix.
+#
+# IMU stochastic parameters below are inherited assumptions from the existing
+# CIRS VINS protocol.  They are ASSUMED_NOT_DATASET_CALIBRATED and must not be
+# described as a dataset calibration or a sensor datasheet measurement.
+
+File.version: "1.0"
+
+Camera.type: "PinHole"
+
+Camera1.fx: 405.6384738851233
+Camera1.fy: 405.5883353782040
+Camera1.cx: 189.9054317917407
+Camera1.cy: 139.9149578253755
+
+Camera1.k1: 0.0
+Camera1.k2: 0.0
+Camera1.p1: 0.0
+Camera1.p2: 0.0
+
+Camera.width: 384
+Camera.height: 288
+Camera.fps: 5.0
+Camera.RGB: 0
+
+# Transformation from camera to body/IMU: T_imu_cam.
+IMU.T_b_c1: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [-1.0,  0.0,  0.0,  0.0,
+           0.0,  1.0,  0.0, -0.16,
+           0.0,  0.0, -1.0, -0.14,
+           0.0,  0.0,  0.0,  1.0]
+
+# ASSUMED_NOT_DATASET_CALIBRATED: inherited from the frozen CIRS VINS setup.
+IMU.NoiseGyro: 0.004
+IMU.NoiseAcc: 0.08
+IMU.GyroWalk: 0.0004
+IMU.AccWalk: 0.004
+IMU.Frequency: 10.0
+
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -3.5
+Viewer.ViewpointF: 500.0
+
+Extractor.type: "HFNetRT"
+Extractor.modelPath: "/home/ma/SLAM/HFNet-SLAM-runtime-model-a02-r1/HFNet-RT/"
+Extractor.scaleFactor: 1.2
+Extractor.nLevels: 4
+Extractor.nFeatures: 675
+Extractor.threshold: 0.01
+
+loopClosing: 1

@@ -1,0 +1,88 @@
+extends: loftr_raw_degradation_gate_frontend.yaml
+
+hybrid:
+  # Active H04 takeover probe.
+  #
+  # This keeps the loose/rawgate proposal strength that previously rescued H04,
+  # but adds two guardrails: no LoFTR during the first few feature frames, and
+  # LoFTR admission only when the frame is classified as identity churn or the
+  # KLT continuity gate is persistently degenerate.
+  enable_three_layer_source_aware: true
+  learned_init_on_track_churn: true
+  learned_init_churn_min_dropout_ratio: 0.55
+  learned_init_churn_max_median_age: 2.0
+  learned_init_rolling_churn: true
+  learned_init_rolling_churn_window: 3
+  learned_init_rolling_churn_min_bad_frames: 2
+  learned_init_rolling_churn_min_grid_coverage: 0.88
+  learned_init_rolling_churn_max_long_track_ratio: 0.30
+
+  source_aware_loftr_modes:
+    - identity_churn
+
+  enable_klt_degeneracy_loftr_gate: true
+  klt_degeneracy_loftr_max_track_count: 0
+  klt_degeneracy_loftr_max_mature_track_count: 120
+  klt_degeneracy_loftr_mature_track_min_age: 3
+  klt_degeneracy_loftr_max_grid_coverage: 0.20
+  klt_degeneracy_loftr_min_dropout_ratio: 0.45
+  klt_degeneracy_loftr_max_median_track_age: 2.0
+  klt_degeneracy_loftr_max_long_track_ratio: 0.30
+  klt_degeneracy_loftr_max_frontend_state: 0.80
+  klt_degeneracy_loftr_min_bad_signals: 2
+  klt_degeneracy_loftr_history_size: 3
+  klt_degeneracy_loftr_min_bad_history_ratio: 0.34
+  klt_degeneracy_loftr_allow_degraded_texture: true
+
+  # Match the known H04-positive loose proposal path, with a short warmup to
+  # avoid the H05 frame-1 false positive.
+  loftr_requires_planar_severe: false
+  loftr_requires_klt_degeneracy: false
+  semidense_fallback_requires_degradation: false
+  semidense_fallback_start_frame: 8
+  semidense_fallback_min_grid_coverage: 0.86
+  semidense_fallback_min_frame_gap: 3
+  semidense_fallback_max_new: 50
+  semidense_fallback_sidecar_max_extra: 50
+  semidense_fallback_max_fraction: 0.16
+  semidense_fallback_reserve_gftt_features: 0
+  semidense_fallback_min_degradation: 0.00
+  semidense_fallback_min_flat_region_ratio: 0.00
+  semidense_fallback_min_grid_texture_score: 1.01
+  semidense_fallback_cooldown_on_attempt: false
+
+  semidense_acceptance_enable: true
+  semidense_acceptance_min_new_tracks: 3
+  # H04 already has high nominal grid coverage; the failure is identity churn,
+  # not empty cells. For this takeover branch, require residual neutrality but
+  # do not require grid/new-cell gain.
+  semidense_acceptance_min_grid_gain: 0.000
+  semidense_acceptance_min_new_cell_ratio: 0.00
+  semidense_acceptance_max_f_inlier_drop: 0.04
+  semidense_acceptance_max_h_inlier_drop: 0.04
+  semidense_acceptance_max_epipolar_error_ratio: 1.15
+  semidense_acceptance_max_homography_error_ratio: 1.15
+  semidense_candidate_min_quality: 0.12
+  semidense_candidate_min_ncc: 0.40
+  semidense_candidate_max_fb_error: 1.20
+
+  # Preserve LoFTR lineage after LK carries the points forward; otherwise H04
+  # looks like a classical-track run even when the useful tracks were LoFTR-born.
+  enable_source_provenance_memory: true
+  source_provenance_learned_hold_frames: 24
+
+  source_aware_loftr_requires_confirmation: false
+  source_aware_loftr_min_grid_gain: 0.000
+  source_aware_loftr_min_new_cell_ratio: 0.00
+  source_aware_loftr_min_new_cells: 0
+  learned_confirmation_max_pending: 600
+  learned_confirmation_max_confirmed: 120
+  promotion_loftr_min_quality: 0.12
+  promotion_loftr_max_fb_error: 1.20
+  promotion_loftr_min_ncc: 0.40
+  promotion_loftr_max_grid_texture_score: 1.01
+  promotion_loftr_min_flat_region_ratio: 0.00
+  promotion_loftr_min_h_inlier_ratio: 0.70
+
+measurement_selection:
+  enabled: false

@@ -1,0 +1,13 @@
+order,window_id,run_slug,family,sequence,window_index,start_s,end_s,start_arg,end_or_duration_arg,arg_semantics,every_n,frame_offset,frozen_score,stratum,input_frame_count,proxy_grid_count,proxy_supported_count,selection_status
+1,afrl:bus_outside:0004,afrl_bus_s180_d045,afrl,bus_outside,4,180.0,225.0,180,45,start_seconds_plus_duration,2,0,0.17167181221413497,challenge_gt_0p10,564,226,226,PRE_REGISTERED
+2,afrl:cemetery:0003,afrl_cemetery_s135_d045,afrl,cemetery,3,135.0,180.0,135,45,start_seconds_plus_duration,2,0,0.1435674772183712,challenge_gt_0p10,713,226,226,PRE_REGISTERED
+3,aqualoc_archaeology:A01:0002,a01_1800_2700,aqualoc_archaeology,A01,2,90.0,135.0,1800,2700,frame_index_half_open,2,1,0.1595495560798474,challenge_gt_0p10,900,46,46,PRE_REGISTERED
+4,aqualoc_archaeology:A02:0000,a02_0_900,aqualoc_archaeology,A02,0,0.0,45.0,0,900,frame_index_half_open,2,1,0.12853985600371245,challenge_gt_0p10,900,46,46,PRE_REGISTERED_AFTER_LATE_HISTORY_FALLBACK
+5,aqualoc_archaeology:A03:0000,a03_0_900,aqualoc_archaeology,A03,0,0.0,45.0,0,900,frame_index_half_open,2,1,0.13449267374386265,challenge_gt_0p10,900,46,46,PRE_REGISTERED
+6,aqualoc_archaeology:A04:0006,a04_5400_6300,aqualoc_archaeology,A04,6,270.0,315.0,5400,6300,frame_index_half_open,2,1,0.09096967473837586,noharm_le_0p10,900,46,46,PRE_REGISTERED
+7,aqualoc_archaeology:A07:0007,a07_6300_7200,aqualoc_archaeology,A07,7,315.0,360.0,6300,7200,frame_index_half_open,2,1,0.09057940011035744,noharm_le_0p10,900,46,46,PRE_REGISTERED
+8,aqualoc_archaeology:A08:0003,a08_2700_3600,aqualoc_archaeology,A08,3,135.0,180.0,2700,3600,frame_index_half_open,2,1,0.07492778891780415,noharm_le_0p10,900,46,46,PRE_REGISTERED
+9,aqualoc_archaeology:A10:0012,a10_10800_11700,aqualoc_archaeology,A10,12,540.0,585.0,10800,11700,frame_index_half_open,2,1,0.12236291472767497,challenge_gt_0p10,900,46,46,PRE_REGISTERED
+10,aqualoc_harbor:H02:0004,h02_3600_4500,aqualoc_harbor,H02,4,180.0,225.0,3600,4500,frame_index_half_open,2,1,0.08778246660597425,noharm_le_0p10,900,91,91,PRE_REGISTERED
+11,aqualoc_harbor:H03:0004,h03_3600_4500,aqualoc_harbor,H03,4,180.0,225.0,3600,4500,frame_index_half_open,2,1,0.035450193794387456,noharm_le_0p10,900,91,91,PRE_REGISTERED
+12,aqualoc_harbor:H06:0001,h06_900_1800,aqualoc_harbor,H06,1,45.0,90.0,900,1800,frame_index_half_open,2,1,0.06877384694417318,noharm_le_0p10,900,91,91,PRE_REGISTERED

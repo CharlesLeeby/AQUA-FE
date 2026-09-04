@@ -1,0 +1,12 @@
+$ evo_ape tum /home/ma/AQUA-FE_WS/papers/litcmp_a02_0005_common_support/b1_constq_vs_xfeatbirth_rawlkcarrier_v1_r1/evo_crosscheck/reference_common.tum /home/ma/AQUA-FE_WS/papers/litcmp_a02_0005_common_support/b1_constq_vs_xfeatbirth_rawlkcarrier_v1_r1/evo_crosscheck/B1_CONSTQ_common_aligned.tum -a -r trans_part
+APE w.r.t. translation part (m)
+(with SE(3) Umeyama alignment)
+
+       max	0.646001
+      mean	0.345386
+    median	0.377191
+       min	0.065265
+      rmse	0.374031
+       sse	5.875761
+       std	0.143553
+

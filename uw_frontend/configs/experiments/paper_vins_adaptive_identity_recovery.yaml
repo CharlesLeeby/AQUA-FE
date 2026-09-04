@@ -1,0 +1,33 @@
+extends: loftr_extreme_only_frontend.yaml
+
+hybrid:
+  # Reject isolated old-ID recovery events, but keep classical recovery during
+  # persistent low-coverage/dropout episodes where it preserves VIO continuity.
+  enable_classical_identity_safe_gate: true
+  classical_identity_safe_history_size: 5
+  classical_identity_safe_min_recent_triggers: 2
+  classical_identity_safe_warmup_frames: 12
+  classical_identity_safe_max_grid_coverage: 0.70
+  classical_identity_safe_min_dropout_ratio: 1.00
+  classical_identity_safe_max_frontend_state: 0.00
+  classical_identity_safe_max_track_health: 0.00
+  classical_identity_safe_large_batch: 10000
+  classical_identity_safe_min_grid_gain: 999.0
+  classical_identity_safe_max_fraction: 1.0
+
+  # Do not downweight admitted LK/ORB recovery after it has rejoined the KLT
+  # backbone. Keep learned/semi-dense sidecar provenance so newly confirmed
+  # pairwise points do not immediately masquerade as mature KLT observations.
+  enable_source_provenance_memory: true
+  source_provenance_recovered_hold_frames: 0
+  source_provenance_learned_hold_frames: 8
+  source_provenance_quality_scale_recovered: 1.0
+  source_provenance_quality_scale_learned: 0.92
+
+measurement_selection:
+  enabled: false
+
+backend_quality:
+  mode: source_aware
+  floor: 0.80
+  alpha: 0.85

@@ -1,0 +1,24 @@
+{
+  "backend_execution_lock_hash": "67bd4a2f96d6e93fcb94319cec3dea807a5a93c92aba3166a202df32ab74dee5",
+  "closeout_path_absolute": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.publication_closeout_v1.json",
+  "destination_absolute": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r2",
+  "evaluation_disposition": "EVALUATE_NUMERIC",
+  "evaluation_lock_hash": "f0485ff55f6700f1b201da9e3b9cc1859686b559b58ca4a05792838b18a4bcde",
+  "g0_execution_authority_hash": "4fff2f905802d0f5ee7642fb828c43e552e12e8c031e54ad418a5302d0250496",
+  "intent_path_absolute": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.publication_intent_v1.json",
+  "job_hash": "48f29b21b4e9d31409a15fcf93458bc1309fb8a5b5d674c1d90d349f8ab862b2",
+  "job_id": "matched_birth_r4_vins_g0_v2",
+  "outcome_boundary": "G0_RETAINED_PUBLICATION_FOR_POST_RESULT_EXPLORATORY_EVALUATION;NO_CLAIM_OF_PRE_OUTCOME_BLINDNESS",
+  "plan_hash": "279871fb53f64816ccd3bc177ff629a62f80e1547a906e9077d3e100824062bd",
+  "publication_intent_hash": "7715275e8355e445ea0d7e61ecdbb622b4b06433b3bd43d10127207247ef461b",
+  "publication_policy": {
+    "atomic_rename_noreplace_required": true,
+    "destination_must_not_exist": true,
+    "incomplete_staging_preserved": true,
+    "intent_preserved": true,
+    "manifest_and_receipt_required": true
+  },
+  "schema_version": "isj-p07-g0-publication-intent-v1",
+  "staging_absolute": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.staging",
+  "status": "PLANNED_NO_CLOBBER_PUBLICATION"
+}

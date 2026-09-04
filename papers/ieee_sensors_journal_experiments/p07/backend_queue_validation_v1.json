@@ -1,0 +1,21 @@
+{
+  "artifacts": {
+    "allocation_sha256": "9312938b07db3736bdb94be15e83e3f3de9a7b0db4193e0f47715f71eba406ac",
+    "queue_lock_sha256": "479ea50333a70d6682c0afcc9cabc1c7a0c97404c817b4e19643fdc69f78580f",
+    "queue_sha256": "2f6c71393e0b88de04ea750b99e7cb6c88e08e0906e1f55a2401b8ccdd554e11"
+  },
+  "backend_queue_lock_hash": "a4a9fd20541be949ab78e584e1e5ccd4346c049dba79962112f6d1e8e7b8533e",
+  "backend_replay_jobs": 240,
+  "conditional_d_jobs": 0,
+  "deterministic_live_rebuild": {
+    "allocation_byte_identical": true,
+    "queue_byte_identical": true,
+    "queue_lock_semantic_identical": true
+  },
+  "held_out_trajectory_outcome_read": false,
+  "issues": [],
+  "live_rebuild_requested": true,
+  "outcome_boundary": "BACKEND_QUEUE_FROZEN_BEFORE_P07_TRAJECTORY_OUTCOME",
+  "schema_version": "isj-p07-backend-queue-validation-v1",
+  "status": "PASS"
+}

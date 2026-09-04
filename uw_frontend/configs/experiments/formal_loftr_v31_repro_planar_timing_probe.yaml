@@ -1,0 +1,10 @@
+extends: formal_loftr_v31_repro_planar_modes_probe.yaml
+
+hybrid:
+  # Jun26 probe: recover the old A06 v31 proposal timing after the geometry
+  # scheduler started labelling the window as planar_near_wall.
+  semidense_fallback_start_frame: 10
+  semidense_fallback_min_frame_gap: 46
+  semidense_fallback_cooldown_on_attempt: true
+  learned_confirmation_max_confirmed: 26
+  promotion_loftr_max_confirmed: 26

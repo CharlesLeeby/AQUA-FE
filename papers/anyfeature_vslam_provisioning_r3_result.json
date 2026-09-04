@@ -1,0 +1,80 @@
+{
+  "schema_version": "aqua-fe-published-anyfeature-provisioning-result-v1",
+  "recorded_at": "2026-08-11T19:06:19+08:00",
+  "status": "READY_FOR_ADAPTER_AND_MODEL_CLOSURE",
+  "scientific_execution_started": false,
+  "model_inference_started": false,
+  "a02_data_export_started": false,
+  "trajectory_generated": false,
+  "authorization": {
+    "addendum": "papers/anyfeature_vslam_provisioning_addendum_r3.md",
+    "addendum_sha256": "f66c4ce3dfb177f96e026517475534492fbea0efaa4db3166c87bae8ee5db28a",
+    "retained_r2_result_sha256": "b1bf61acd4f08e1a2f8a05063bc59d0ecafdef976acf52865542c909255e2f43",
+    "main_preregistration_sha256_at_r3_freeze": "0d6c5d59651371821e0993985b59db1e299c56fdead5ae14938c79fc26bbc37b"
+  },
+  "official_system": {
+    "name": "AnyFeature-VSLAM",
+    "commit": "6aa014b724f7a61bcbff2f8f28f20836986a43dc",
+    "tree": "36b264e1da05c6fe9cd987965e9a75ba96930b63",
+    "dbow2_submodule_commit": "f4d585b45237836dbde757c0c8ec8b098ad1164a",
+    "origin": "https://github.com/alejandrofontan/AnyFeature-VSLAM.git",
+    "source_modified": false,
+    "tracked_worktree_clean": true,
+    "staged_diff_empty": true,
+    "temporary_vocabulary_link_removed": true
+  },
+  "environment": {
+    "solve_plan_sha256": "fb1b8ea5708992d1384779024baacc9cfed375e76a61955ef5760600509856a0",
+    "explicit_lock_sha256": "12656125f716a449af782fbbde07e49d8a20139e529e3d55c0a6c436c1236d0b",
+    "installed_package_inventory_sha256": "e184010d964537a5b118beeba6b7d02b03113419a7f5bc6157a91d624e8741cb",
+    "identity_check_sha256": "fbbdc0f0ada766dd5286fb5e9eb8dd0a555926a73afe346b2e78ace0a72be514",
+    "package_count": 314,
+    "plan_and_installed_set_exact": true,
+    "missing_packages": 0,
+    "extra_packages": 0,
+    "resolved_python": "3.10.20",
+    "resolved_opencv": "4.9.0",
+    "resolved_eigen": "3.4.0",
+    "resolved_cmake": "3.29.6",
+    "official_brisk": "2024.04.05",
+    "official_akaze": "2024.06.06"
+  },
+  "installation": {
+    "initial_transaction_note": "The first installation command was terminated by the orchestration timeout after package download at 'Transaction starting'; zero conda-meta package records existed and no environment package was linked.",
+    "initial_transaction_log_sha256": "0fa7f5df0959f5013be0f6cf6611f3baf521b6af2ab596d32c2ae9e535a60ebf",
+    "resumed_from_same_solve_plan_via_explicit_lock": true,
+    "explicit_install_rc": 0,
+    "explicit_install_log_sha256": "1fce5a9cfc32b932c5363e20f6af29dfa4f1418d3d8548f6a2d5a12c2fa91c88"
+  },
+  "build": {
+    "upstream_build_script_rc": 0,
+    "upstream_build_log_sha256": "000c51363318c5e0884ec000e6b188e1b58873ca479babb1078df1ca616d4e51",
+    "independent_dbow2_build_rc": 0,
+    "independent_dbow2_log_sha256": "8c35b1682f73592d30612d7b0fabdb384fcfff35cb5a076cb48b85b1368aa794",
+    "independent_anyfeature_build_rc": 0,
+    "independent_anyfeature_log_sha256": "8c35b1682f73592d30612d7b0fabdb384fcfff35cb5a076cb48b85b1368aa794",
+    "mono_binary": {
+      "size_bytes": 54952,
+      "sha256": "9adb623fc8d83ce35297be7a7d810d269cd65273bd0f4fb1bddebbec0b8bdd59"
+    },
+    "core_library": {
+      "size_bytes": 2284232,
+      "sha256": "eea4a5a6c5dccb5825a8e6a1a3249c6b808881a22c7fe301d0a2a90efaa99954"
+    },
+    "dbow2_library": {
+      "size_bytes": 157152,
+      "sha256": "7215c8425e3620834ef24ea17f26fd0635b15d9d85b0093b00220e553a40c8c5"
+    }
+  },
+  "runtime_link_gate": {
+    "passed": true,
+    "not_found_count": 0,
+    "ldd_evidence_sha256": "f84ca2ad1b298f3ed94deff054899461d35bc786ff5c58a0b2ff3c3453db8afe",
+    "readelf_evidence_sha256": "a2e2c12d3f5cd1d3454c18e2e9af5ef63fd2dae9a0532291bb83c4828c2d4870",
+    "official_brisk_library_sha256": "4829d4e0b4641503106f4b0e03f2b4ce6071f1f0bc3f3e1e891f285f31d2756d",
+    "official_akaze_library_sha256": "37538d116902f70df451e2b0549485b08224caaedb7908fed34c0c140d9db877",
+    "opencv_409_dependencies_resolved_inside_isolated_environment": true,
+    "system_opencv_fallback_used": false
+  },
+  "interpretation": "The final infrastructure-only ABI correction succeeded without changing official source or scientific settings. This result authorizes only the separately audited A02 adapter and R2D2 model/interface closure. It is not a SLAM success, trajectory result, or accuracy result."
+}

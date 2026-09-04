@@ -1,0 +1,4 @@
+B1_KLT_NATIVEQ_GUARD action=ALLOW_B1_KLT_NATIVEQ reasons=0 decision=/home/ma/AQUA-FE_WS/logs/backend_contract_decisions/b1/b1_guard_20260806T234630Z_738954_decision.json
+arm=B1_klt_nativeq_v3
+contract_decision=/home/ma/AQUA-FE_WS/logs/backend_contract_decisions/b1/b1_guard_20260806T234630Z_738954_decision.json
+command=bash /home/ma/AQUA-FE_WS/scripts/run_aqualoc_archaeo_vins_eval.sh external 10 11700 12600 klt 2 

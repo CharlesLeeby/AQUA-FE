@@ -1,0 +1,153 @@
+{
+  "auditor": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/audit_whole_lineage_exact_drop_v1.py",
+    "sha256": "bf6ccbf47d3b6b1e4fdad8b9e8b49d17f9545b312ce64970b61ed6c56cdf71b4"
+  },
+  "checks": {
+    "drop_feature_payload_equals_filtered_proposed_payload_byte_for_byte": true,
+    "feature_header_and_record_timestamps_exact": true,
+    "learned_births_and_all_lineage_continuations_absent_from_drop": true,
+    "message_count_order_topic_type_md5_record_timestamp_exact": true,
+    "non_dropped_observation_order_fields_channels_exact": true,
+    "nonfeature_serialized_bytes_exact": true,
+    "producer_stats_contract_exact": true
+  },
+  "contract_pass": true,
+  "decision": "PASS_EXACT_WHOLE_LINEAGE_DROP",
+  "digests": {
+    "actual_drop_feature_sequence_sha256": "6b48b8907757ace419d6a047a7c999ba1c70856b70aac04e4cb4985c3d9a585f",
+    "common_nonfeature_sequence_sha256": "28b72f232ca0ad04df881aea2a31add3dfad2d016a5537c022fa071de9cadb98",
+    "expected_drop_feature_sequence_sha256": "6b48b8907757ace419d6a047a7c999ba1c70856b70aac04e4cb4985c3d9a585f",
+    "expected_equals_actual_drop_feature_sequence": true,
+    "message_topology_sha256": "35132265e6ed00041c2f2fa1448aa2ae5e2192c8547851d44fcc97882fcb2e7a",
+    "proposed_feature_sequence_sha256": "36d85ea995a9f2ecd3834e1559fae905081dd2509ca4a5f8b7e941a62cc50ba4"
+  },
+  "forbidden_outcomes_accessed": [],
+  "inputs": {
+    "drop_bag": "/mnt/data/AQUA-FE_WS/validation_20260804/ntnu_fjord1_s83_d30_nativeq_exact_drop.bag",
+    "drop_bag_sha256": "1ff7dd3e153c32dc5f8f746a6f50a678c3456790962ac35bb2f8bbe4bbb096d4",
+    "feature_topic": "/feature_tracker/feature",
+    "proposed_bag": "logs/ntnu_vins/external_hybrid_xfeat_every2_validation_20260804_ntnu_fjord1_s83_d30_xfeat_historical_profile_nativeq/features.bag",
+    "proposed_bag_sha256": "6a0d38686f823c273dea3fc23495de5f10e3c6b52ad4c43f84f287585434102f"
+  },
+  "learned_birth_contract": {
+    "birth_rule": "first ID occurrence must carry is_learned=1 or learned source_code",
+    "continuation_rule": "drop every later observation with a learned-born ID regardless of source",
+    "is_learned_threshold": 0.5,
+    "late_marker_policy": "FAIL_CLOSED",
+    "source_codes": [
+      10,
+      20,
+      30
+    ]
+  },
+  "learned_lineages": [
+    {
+      "birth_feature_frame": 2,
+      "birth_header_stamp": {
+        "nsecs": 877421348,
+        "secs": 1700604859
+      },
+      "birth_observation_index": 279,
+      "birth_record_stamp": {
+        "nsecs": 934008448,
+        "secs": 1700604859
+      },
+      "feature_frames": 3,
+      "feature_id": 662,
+      "klt_source_code_1_continuation_observations": 0,
+      "last_feature_frame": 4,
+      "learned_marked_observations": 3,
+      "source_code_histogram": {
+        "20": 3
+      },
+      "total_observations": 3,
+      "unmarked_continuation_observations": 0
+    },
+    {
+      "birth_feature_frame": 2,
+      "birth_header_stamp": {
+        "nsecs": 877421348,
+        "secs": 1700604859
+      },
+      "birth_observation_index": 280,
+      "birth_record_stamp": {
+        "nsecs": 934008448,
+        "secs": 1700604859
+      },
+      "feature_frames": 3,
+      "feature_id": 663,
+      "klt_source_code_1_continuation_observations": 0,
+      "last_feature_frame": 4,
+      "learned_marked_observations": 3,
+      "source_code_histogram": {
+        "20": 3
+      },
+      "total_observations": 3,
+      "unmarked_continuation_observations": 0
+    },
+    {
+      "birth_feature_frame": 2,
+      "birth_header_stamp": {
+        "nsecs": 877421348,
+        "secs": 1700604859
+      },
+      "birth_observation_index": 281,
+      "birth_record_stamp": {
+        "nsecs": 934008448,
+        "secs": 1700604859
+      },
+      "feature_frames": 2,
+      "feature_id": 664,
+      "klt_source_code_1_continuation_observations": 0,
+      "last_feature_frame": 3,
+      "learned_marked_observations": 2,
+      "source_code_histogram": {
+        "20": 2
+      },
+      "total_observations": 2,
+      "unmarked_continuation_observations": 0
+    }
+  ],
+  "outcome_boundary": "FRONTEND_BAG_ONLY_NO_VINS_APE_RPE_TRAJECTORY",
+  "producer_stats": {
+    "contract_pass": true,
+    "path": "/mnt/data/AQUA-FE_WS/validation_20260804/ntnu_fjord1_s83_d30_nativeq_exact_drop_stats.csv",
+    "sha256": "0d899e5c79b819f0178376193e61550b4e40d630879e596507f2dbfc8eba8a08",
+    "validated_counts": {
+      "dropped_observations": 8,
+      "feature_frames": 300,
+      "frames_with_drops": 3,
+      "kept_learned_observations": 0,
+      "kept_observations": 104782,
+      "learned_track_ids": 3
+    },
+    "validated_exact_drop_controls": {
+      "drop_learned": "0",
+      "drop_learned_track_lineage": "1",
+      "drop_source_code": "",
+      "keep_learned_ids": "",
+      "keep_learned_selected_indices": "",
+      "keep_learned_track_lineage_ids": "",
+      "learned_id_min": "0",
+      "learned_max_observations": "0",
+      "learned_max_per_frame": "0",
+      "learned_min_total_observations": "0"
+    }
+  },
+  "schema_version": "aqua-fe-whole-lineage-exact-drop-audit-v1",
+  "summary": {
+    "drop_observations": 104782,
+    "dropped_observations": 8,
+    "feature_frames": 300,
+    "frames_with_drops": 3,
+    "klt_source_code_1_continuation_observations": 0,
+    "learned_birth_observations": 3,
+    "learned_lineages": 3,
+    "learned_marked_observations": 8,
+    "nonfeature_messages": 6000,
+    "proposed_observations": 104790,
+    "total_messages": 6300,
+    "unmarked_continuation_observations": 0
+  }
+}

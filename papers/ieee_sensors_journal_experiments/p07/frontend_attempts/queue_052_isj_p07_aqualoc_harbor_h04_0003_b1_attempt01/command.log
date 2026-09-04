@@ -1,0 +1,11 @@
+B1_KLT_NATIVEQ_GUARD action=ALLOW_B1_KLT_NATIVEQ reasons=0 decision=/home/ma/AQUA-FE_WS/logs/backend_contract_decisions/b1/b1_guard_20260807T163213Z_946252_decision.json
+wrote /home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/harbor04_2700_3600.bag
+images=901 imu=9099 gt=181
+span_s=45.020
+wrote 450 feature frames to /home/ma/AQUA-FE_WS/logs/aqualoc_real_vins/external_klt_every2_isj_p07_aqualoc_harbor_h04_0003_b1_attempt01/features.bag
+feature span: 44.919s
+backend quality: mode=vins_safe floor=0.800 alpha=0.650
+RUN_VINS=0, skipping VINS for /home/ma/AQUA-FE_WS/logs/aqualoc_real_vins/external_klt_every2_isj_p07_aqualoc_harbor_h04_0003_b1_attempt01
+run_dir=/home/ma/AQUA-FE_WS/logs/aqualoc_real_vins/external_klt_every2_isj_p07_aqualoc_harbor_h04_0003_b1_attempt01
+raw_bag=/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/harbor04_2700_3600.bag
+play_bag=/home/ma/AQUA-FE_WS/logs/aqualoc_real_vins/external_klt_every2_isj_p07_aqualoc_harbor_h04_0003_b1_attempt01/features.bag

@@ -1,0 +1,19 @@
+extends: ../paper_full_quality_hybrid_frontend.yaml
+
+hybrid:
+  # A06 LoFTR residual-neutral probe.
+  # Keep the sparse planar trigger, but require LoFTR batches to be nearly
+  # geometry-neutral relative to the current KLT track set.
+  semidense_acceptance_min_grid_gain: 0.010
+  semidense_acceptance_min_new_cell_ratio: 0.20
+  semidense_acceptance_max_f_inlier_drop: 0.020
+  semidense_acceptance_max_h_inlier_drop: 0.020
+  semidense_acceptance_max_epipolar_error_ratio: 1.02
+  semidense_acceptance_max_homography_error_ratio: 1.08
+  semidense_candidate_min_quality: 0.10
+  semidense_candidate_min_ncc: 0.40
+  semidense_candidate_max_fb_error: 1.20
+  semidense_candidate_max_epipolar_error: 1.50
+  semidense_candidate_max_homography_error: 3.00
+  loftr_max_epipolar_error: 1.50
+  loftr_max_homography_error: 3.00

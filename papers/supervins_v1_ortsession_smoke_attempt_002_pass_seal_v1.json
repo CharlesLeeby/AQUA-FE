@@ -1,0 +1,109 @@
+{
+  "schema_version": "aqua-fe-published-supervins-v1-ortsession-smoke-attempt-002-pass-seal-v1",
+  "created_at": "2026-08-16T22:43:00+08:00",
+  "status": "SEALED_PASS_DEVELOPMENT_ORTSESSION_CONSTRUCTION_ONLY",
+  "method_label": "SuperVINS 1.0 + disclosed runtime-artifact repair",
+  "formal_result": {
+    "status": "PASS_DEVELOPMENT_ORTSESSION_CONSTRUCTION_ONLY_ATTEMPT_002",
+    "marker": "waiting for image and imu...",
+    "marker_count": 1,
+    "marker_elapsed_seconds": 0.9366052569966996,
+    "roscore_start_count": 1,
+    "node_start_count": 1,
+    "retry_authorized": false
+  },
+  "controller_identities": {
+    "/home/ma/AQUA-FE_WS/papers/supervins_v1_ortsession_construction_smoke_attempt_002_freeze_v1.json": {
+      "sha256": "0a819f35f552af7ace7185d4c4a405a6072dacfa56a625d5b7e1e00bf9c81f86",
+      "size_bytes": 7209
+    },
+    "/home/ma/AQUA-FE_WS/papers/supervins_v1_ortsession_construction_smoke_attempt_002_execution_lock_v1.json": {
+      "sha256": "21d373f86680a71a2ae82b718109c73aae4815a69578f4b82732dbaf2d5aa8e1",
+      "size_bytes": 2562
+    },
+    "/home/ma/AQUA-FE_WS/scripts/run_published_supervins_v1_ortsession_smoke_attempt_002.py": {
+      "sha256": "56e84b717bd0ecf0c5fbb69a7d5430b166e90b53a9431aac884b830e489797bd",
+      "size_bytes": 33252
+    },
+    "/home/ma/AQUA-FE_WS/scripts/tests/test_run_published_supervins_v1_ortsession_smoke_attempt_002.py": {
+      "sha256": "e2845cdf7e4030491c490450e2459c068c04c9303c7950959192da011e06efb5",
+      "size_bytes": 4361
+    },
+    "/home/ma/AQUA-FE_WS/papers/supervins_v1_ortsession_smoke_attempt_001_failure_adoption_v1.json": {
+      "sha256": "ec1c89406454f777ab548aac1dd2393c0774c5e22085da4edf51d2a20e3d3fc7",
+      "size_bytes": 3590
+    }
+  },
+  "attempt_artifacts": {
+    "preflight_result.json": {
+      "sha256": "8a6d30a4deb805ca3d6213c1b9c23fa7f8c723d21519d786c0ce429d7040906c",
+      "size_bytes": 13998
+    },
+    "roscore_start_claim.json": {
+      "sha256": "129d4e34a5ebc612c22efeb35a1e6704f4f51833e1a894e8ad47129218a7ca7c",
+      "size_bytes": 572
+    },
+    "roscore_process_started.json": {
+      "sha256": "fa3a244ac58d59c59ba755a8c519c5272cff93fb2797e1ecce9ec671eaa84aff",
+      "size_bytes": 158
+    },
+    "node_start_claim.json": {
+      "sha256": "c755e773826600cdd303f7d17e00f09f766198313cec3a39ce3fadf948d56fe5",
+      "size_bytes": 754
+    },
+    "node_process_started.json": {
+      "sha256": "84a02c9d73a6ad7ff2f4fa5cfa25cf2fb6f66f2567ac785e3ce92097b5d51611",
+      "size_bytes": 340
+    },
+    "node.stdout.log": {
+      "sha256": "47dde5d3182caf3d139ccbcd835a50182272c98b72656dda1dd2914d10cc23af",
+      "size_bytes": 818
+    },
+    "node.stderr.log": {
+      "sha256": "f2ff0539956dedd7a6611c6d756db495131fddbe151f123cad8d76fed718ee6a",
+      "size_bytes": 1125
+    },
+    "roscore.stdout.log": {
+      "sha256": "da4b826880eefe9835cc5b960031f3075d141f2bab07b06b48516d3f23848345",
+      "size_bytes": 957
+    },
+    "roscore.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    "run_result.json": {
+      "sha256": "a86cf96999810849de4673900af18f036dbc654e1449f3b0d0b8ec302f32b0dd",
+      "size_bytes": 16338
+    }
+  },
+  "runtime_witness": {
+    "two_onnxruntime_session_assignment_warning_groups_observed": true,
+    "required_post_session_marker_persisted": true,
+    "forbidden_inference_markers_found": [],
+    "input_publishers_before_node": {},
+    "input_publishers_at_marker": {},
+    "dataset_or_bag_fd_targets": [],
+    "changed_pins_after_run": [],
+    "node_reaped": true,
+    "roscore_reaped": true,
+    "post_supervins_processes": [],
+    "post_attempt_002_master_processes": [],
+    "post_master_port_11552_bound": false
+  },
+  "causal_interpretation": "The exact pinned source constructs the SuperPoint extractor OrtSession and then the configured LightGlue matcher OrtSession inside estimator.setParameter(), and emits the persisted waiting marker only after both initialization calls return. The two ONNX Runtime provider-assignment warning groups in stderr are consistent with the two configured sessions. No Run() marker appeared.",
+  "claim_boundary": {
+    "proves_compile_and_link": true,
+    "proves_two_configured_ortsession_constructors_return": true,
+    "proves_model_inference": false,
+    "proves_feature_extraction_or_matching": false,
+    "proves_tracking_or_vio_initialization": false,
+    "proves_trajectory_accuracy": false,
+    "proves_underwater_transfer": false,
+    "proves_superiority_over_aqua_fe_or_other_methods": false,
+    "formal_baseline_row_authorized": false
+  },
+  "next_stage": {
+    "automatically_authorized": false,
+    "required_if_selected": "Fresh additive, official-data, minimal two-frame inference smoke with new namespace and exact no-trajectory boundary."
+  }
+}

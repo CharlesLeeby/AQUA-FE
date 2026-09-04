@@ -1,0 +1,34 @@
+{
+  "schema_version": "aqua-fe-frontend-runtime-weight-lock-supplement-v1",
+  "locked_at": "2026-08-31T14:50:11+08:00",
+  "status": "LOCKED_BEFORE_SUPPLEMENTAL_FORMAL_EXECUTION",
+  "weights": [
+    {
+      "arm": "splg",
+      "path": "/home/ma/.cache/torch/hub/checkpoints/superpoint_v1.pth",
+      "sha256": "52b6708629640ca883673b5d5c097c4ddad37d8048b33f09c8ca0d69db12c40e",
+      "size_bytes": 5206086
+    },
+    {
+      "arm": "splg",
+      "path": "/home/ma/.cache/torch/hub/checkpoints/superpoint_lightglue_v0-1_arxiv.pth",
+      "sha256": "6ff7040d0a497fc6639337946d7538dae07428c18f77a067a0b5a960e7cc551a",
+      "size_bytes": 47500279
+    },
+    {
+      "arm": "xfeat_seed",
+      "path": "/home/ma/AQUA-FE_WS/external_tools/accelerated_features/weights/xfeat.pt",
+      "sha256": "0f5187fd7bedd26c7fe6acc9685444493a165a35ecc087b33c2db3627f3ea10b",
+      "size_bytes": 6247949
+    }
+  ],
+  "implementations": {
+    "exporter": "68453b035037d04087dbad3e512c602b4ef6967b2a8cf6d14e34a14750f2312d",
+    "frontend_config": "6f89d861cc002dfaf0eaf5f1294b0dbcfab9fe268c5dc0d09082f79811000bf3",
+    "lightglue_adapter": "9e44331a4208670575b12dc4a7f2c06d884ea77b3277d42aa1977128954b943a",
+    "lightglue": "dcb75b9cad1985c5e7a537c512d4318d47fbcc99df75b39a513de60e027c039f",
+    "superpoint": "23e8a26137b44f37e9a319313822c5b38d9c55796e756202eb46d64f1979d2b0",
+    "xfeat_adapter": "8090ad7246b7acba62183577d108f62b41c87fe04f52c66f5d897315481e91ee",
+    "xfeat": "385ccd31d095b0d4176b04e982088b85321b11ade4324f83b097ee6524f2a6e7"
+  }
+}

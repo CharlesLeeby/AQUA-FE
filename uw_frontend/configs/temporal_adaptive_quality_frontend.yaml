@@ -1,0 +1,26 @@
+extends: continuity_optimized_frontend.yaml
+
+hybrid:
+  # Experimental paper-candidate variant:
+  # 1. per-cell underwater quality map changes q_i locally;
+  # 2. learned matches can re-associate recently lost IDs across several frames;
+  # 3. geometry validation switches between F/H/adaptive models by degradation mode.
+  enable_local_quality_map: true
+  local_quality_rows: 4
+  local_quality_cols: 6
+  local_quality_weight: 0.45
+  local_quality_min_learned_score: 0.08
+  local_quality_min_birth_score: 0.06
+
+  enable_learned_track_memory: true
+  learned_track_memory_size: 3
+  learned_track_memory_max_frame_gap: 5
+  learned_track_memory_max_points: 450
+  learned_track_memory_max_recovered: 60
+  learned_track_memory_min_recovery_gap: 2
+
+  enable_adaptive_geometry_model_selection: true
+  adaptive_geometry_planar_mode: homography
+  adaptive_geometry_normal_mode: fundamental
+  adaptive_geometry_degraded_mode: adaptive_strict
+  adaptive_geometry_severe_mode: homography

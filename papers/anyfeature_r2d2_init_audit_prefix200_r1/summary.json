@@ -1,0 +1,91 @@
+{
+  "schema": "aqua-fe-anyfeature-r2d2-prefix-init-audit-v1",
+  "status": "PASS_DIAGNOSTIC_WITH_NEGATIVE_FULL_INFERENCE_GATE",
+  "scope": {
+    "sequence": "/mnt/data/AQUA-FE_WS/anyfeature_adapter/aqualoc_a02_0005_prefix200_r1",
+    "frame_count": 200,
+    "feature": "r2d2_128",
+    "feature_budget": 4000,
+    "official_binary_started": false,
+    "formal_slam_started": false,
+    "input_modified": false,
+    "official_source_or_library_modified": false
+  },
+  "identities": {
+    "diagnostic_source": {
+      "path": "scripts/diagnostics/anyfeature_r2d2_init_audit_v1.cpp",
+      "sha256": "b857891b5a7387322af5bb0bd2ec0c87d774eb535e9375f0fbca7d67fce7d37f"
+    },
+    "diagnostic_binary": {
+      "path": "papers/anyfeature_r2d2_init_audit_prefix200_r1/anyfeature_r2d2_init_audit_v1",
+      "sha256": "6b386a9c50e8636fa06c03ced76dc26240338a071e4e7eb26ecce2a1209c4f85",
+      "size_bytes": 70376
+    },
+    "project_repaired_settings": {
+      "path": "configs/published_baselines/anyfeature_vslam_r2d2_128_artifact_repaired_r1.yaml",
+      "sha256": "6c7cb75c4209d00198bc552472f4ff5bb36510df6490c4a4b17eea04bd0db753"
+    },
+    "official_core_library": {
+      "path": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/lib/libAnyFeature-VSLAM.so",
+      "sha256": "eea4a5a6c5dccb5825a8e6a1a3249c6b808881a22c7fe301d0a2a90efaa99954"
+    },
+    "complete_csv": {
+      "path": "papers/anyfeature_r2d2_init_audit_prefix200_r1/exact_state_machine_r2.csv",
+      "sha256": "97cc1bbbcc9941e5cdb68e2d3f55a78c2ee5d2a9c0b17a2a1bb23c4b0c85b743",
+      "data_rows": 200
+    },
+    "runtime_return_code": {
+      "path": "papers/anyfeature_r2d2_init_audit_prefix200_r1/runtime_r2/return_code.txt",
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "value": 0
+    }
+  },
+  "official_state_machine": {
+    "set_reference": 1,
+    "geometry_attempts": 199,
+    "matches_at_least_100": 199,
+    "matches_below_100": 0,
+    "matches_min_median_max": [874, 1551, 3034],
+    "keypoints_min_median_max": [4000, 4000, 4000],
+    "initializer_successes": 0,
+    "rh_min_median_max": [
+      0.25332915782928467,
+      0.350273072719574,
+      0.46559590101242065
+    ],
+    "selected_fundamental": 144,
+    "selected_homography": 55,
+    "selected_model_reconstruction_successes": 0
+  },
+  "same_ransac_set_counterfactuals": {
+    "note": "Initialize generated mvSets once; the diagnostic re-used the same stored mvSets, H, F and inlier logic for the reported reconstruction counterfactuals.",
+    "homography_exact_successes": 0,
+    "homography_relaxed_parallax0_mintri0_successes": 0,
+    "fundamental_exact_successes": 4,
+    "fundamental_relaxed_parallax0_mintri0_successes": 7,
+    "fundamental_exact_successes_when_fundamental_was_selected": 0,
+    "fundamental_exact_successes_when_homography_was_selected": 4,
+    "homography_gate_counts": {
+      "svd_ok": 199,
+      "ambiguity_ok": 0,
+      "parallax_ok": 195,
+      "min_good_ok": 199,
+      "fraction_ok": 199
+    }
+  },
+  "interpretation": {
+    "reader_or_feature_shortage": false,
+    "failure_layer": "official monocular geometry model selection and reconstruction",
+    "why_no_initialization": "All 199 attempts had ample matches. H never reconstructed, including relaxed parallax/triangulation gates; the H ambiguity gate failed 199/199. The four exact F reconstructions all occurred when RH > 0.4 made the official state machine choose H, while the 144 F-selected attempts had zero exact F reconstruction.",
+    "full_701_frame_inference_recommended": false,
+    "recommendation": "Do not spend approximately two additional CPU hours materializing frames 200-900 for this unchanged A02 state machine. Run only the already prepared one-image artifact-repaired ingestion smoke; choose a results-blind, parallax-suitable window before any new full learned-baseline inference."
+  },
+  "attempt_accounting": {
+    "compile_attempt_1": "RC1 before compilation because the DBoW2 include root was omitted; preserved",
+    "compile_attempt_2": "RC1 before compilation because the include root still lacked /include; preserved",
+    "compile_attempt_3": "RC0 with the exact frozen-library ABI flags, including -march=native",
+    "runtime_attempt_1": "external command timeout at about one second before any CSV row was flushed; invalid diagnostic, preserved as an empty file",
+    "runtime_attempt_2": "unique complete diagnostic, RC0, 200 rows, used for every result above",
+    "rerun_for_result_selection": false
+  }
+}

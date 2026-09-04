@@ -1,0 +1,41 @@
+extends: low_texture_active_xfeat_sidecar.yaml
+
+hybrid:
+  # CIRS cave windows often have high nominal grid coverage but severe
+  # identity churn. This probe tests XFeat as a churn-sidecar source, separate
+  # from the LoFTR extreme-textureless support path.
+  enable_three_layer_source_aware: true
+  learned_init_on_track_churn: true
+  learned_init_churn_min_dropout_ratio: 0.55
+  learned_init_churn_max_median_age: 2.0
+  learned_init_rolling_churn: true
+  learned_init_rolling_churn_window: 3
+  learned_init_rolling_churn_min_bad_frames: 2
+  learned_init_rolling_churn_min_grid_coverage: 0.88
+  learned_init_rolling_churn_max_long_track_ratio: 0.30
+
+  source_aware_xfeat_modes:
+    - identity_churn
+    - low_texture
+    - low_coverage_recovery
+
+  # The failure mode is not empty cells: coverage can be near 1.0 while track
+  # identity is unstable. Let the source gate admit XFeat in that case.
+  promotion_xfeat_min_grid_coverage: 1.01
+  promotion_xfeat_max_confirmed: 12
+  promotion_xfeat_min_quality: 0.10
+  promotion_xfeat_max_fb_error: 1.20
+  promotion_xfeat_min_ncc: 0.42
+
+  learned_init_requires_klt_confirmation: true
+  learned_confirmation_min_frames: 2
+  learned_confirmation_preserve_new_pending: true
+  learned_confirmation_geometry_safe: true
+  learned_confirmation_max_pending: 500
+  learned_confirmation_max_confirmed: 80
+
+  enable_source_provenance_memory: true
+  source_provenance_learned_hold_frames: 24
+
+measurement_selection:
+  enabled: false

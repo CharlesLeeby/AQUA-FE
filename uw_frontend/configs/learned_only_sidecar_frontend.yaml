@@ -1,0 +1,36 @@
+extends: klt_preserving_learned_frontend.yaml
+
+hybrid:
+  # Diagnostic config for isolating learned contribution.
+  # KLT/GFTT remains the exported backbone, while ORB/LK classical recovery is
+  # disabled so improvements can be attributed to learned candidates/fallbacks.
+  enable_classical_recovery: false
+  enable_lk_recovery: false
+  enable_learned_recovery: false
+  preserve_klt_replenish: true
+  learned_sidecar_max_extra: 80
+  max_learned_initialized: 80
+  max_learned_init_fraction: 0.25
+  learned_confirmation_min_frames: 2
+  learned_confirmation_max_confirmed: 60
+  learned_confirmation_reserve_capacity: 0
+  learned_init_requires_degradation: true
+  learned_init_min_degradation: 0.42
+  learned_init_min_flat_region_ratio: 0.68
+  learned_init_min_grid_coverage: 0.92
+  learned_init_critical_grid_coverage: 0.84
+  enable_learned_init_acceptance_gate: true
+  learned_init_acceptance_weak_max_new: 24
+  learned_init_acceptance_weak_max_fraction: 0.07
+  learned_init_acceptance_weak_min_grid_gain: 0.01
+  learned_init_acceptance_weak_min_new_cell_ratio: 0.15
+  promotion_lightglue_min_quality: 0.08
+  promotion_lightglue_max_fb_error: 1.25
+  promotion_lightglue_min_ncc: 0.45
+  promotion_xfeat_min_quality: 0.12
+  promotion_xfeat_max_fb_error: 1.10
+  promotion_xfeat_min_ncc: 0.48
+  promotion_xfeat_min_grid_coverage: 0.92
+
+measurement_selection:
+  enabled: false

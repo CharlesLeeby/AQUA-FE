@@ -1,0 +1,4 @@
+wrote 7337 feature frames to /mnt/data/AQUA-FE_WS/p06_screening_work/afrl/bus_outside/attempt02/features.bag
+feature span: 584.882s
+backend quality: mode=default floor=none alpha=0.650
+P06_AFRL_DIRECT_PASS rows=7337

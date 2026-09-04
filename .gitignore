@@ -1,0 +1,97 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Editors and OS metadata
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Build products
+/build/
+/CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.so
+*.o
+*.a
+
+# Workspace-local agent/session state
+/.agents/
+/.claude/
+/.codex
+/session_*.md
+/intent-fixture
+/staging-fixture/
+/.tmp*/
+
+# External storage links and downloaded dependencies
+/datasets
+/logs
+/external_tools
+
+# Run-scale artifacts, backups, and manually curated local media
+/artifacts/
+/experiments/
+/source_backups/
+/tmp/
+/guard_proofs_v4/
+/正反例窗口整理/
+
+# Root-level temporary experiment materializations
+/.cirs_*/
+/.crossdataset_*/
+/.online_positive_search_*/
+/.orbslam3_seeded_*/
+/.orbslam3_validation_*/
+
+# Dataset/model/runtime payloads should be referenced by manifests, not Git
+*.bag
+*.db3
+*.mcap
+*.avi
+*.mp4
+*.mov
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Large reproducible per-frame governance intermediates. Keep their protocols,
+# hashes, receipts, summaries, and compact result tables under papers/.
+/papers/**/master_stream.jsonl
+/papers/**/shadow_rankings_detail.csv
+/papers/**/calibration_rows.csv
+/papers/**/normalized_stream*.jsonl
+/papers/**/replay_bundle*.json
+/papers/ieee_sensors_journal_experiments/p06/screening_runs/**/metrics.csv
+/papers/ieee_sensors_journal_experiments/p03/tank_short_test_images/
+
+# Locally compiled diagnostic executables; their source and build logs remain.
+/papers/**/anyfeature_r2d2_init_audit_v1
+
+# Incomplete/staging outputs preserved locally but not published
+/papers/**/*.tmp
+/papers/**/.staging/
+/papers/**/.staging/**
+/papers/**/.formal*.staging/
+/papers/**/.formal*.staging/**

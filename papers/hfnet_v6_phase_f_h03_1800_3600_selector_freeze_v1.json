@@ -1,0 +1,253 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-phase-f-underwater-selector-freeze-v1",
+  "created_at": "2026-08-16T22:46:15+08:00",
+  "status": "SELECTOR_AND_INPUT_CONTRACT_FROZEN_BEFORE_PHASE_F_MATERIALIZATION",
+  "authorization": {
+    "source": "explicit_user_instruction_2026-08-16_start_execution_then_phase_f_preparation_only",
+    "preparation_only": true,
+    "hfnet_process_start_authorized_by_this_file": false,
+    "runner_or_start_claim_creation_authorized_by_this_file": false,
+    "formal_scientific_adoption_authorized": false
+  },
+  "knowledge_boundary": {
+    "selector_inputs": "raw_gt_imu_and_calibration_metadata_only",
+    "hfnet_phase_f_output_existed_at_selection": false,
+    "hfnet_attempt_001_trajectory_or_log_content_used": false,
+    "development_result_conditioned_selection": false,
+    "a02_allowed": false,
+    "retry_or_window_extension_allowed": false,
+    "maximum_future_hfnet_process_starts": 1
+  },
+  "upstream_freezes": {
+    "two_stage_protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_two_stage_runability_freeze_v1.json",
+      "size_bytes": 4621,
+      "sha256": "46d599746696ce492bb7029db82778f1bf0d59b803939ec61f54db8a847dae30"
+    },
+    "passed_stack_lock_identity_only": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_passed_stack_lock_v1.json",
+      "size_bytes": 8111,
+      "sha256": "cb826526a28f28e77f546d4647e16fd19426494e9a15ab01108301136cbfadad",
+      "content_used_by_selector": false
+    }
+  },
+  "selector_metadata_inputs": [
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/reference_audit.csv",
+      "size_bytes": 41208,
+      "sha256": "3f4ba3963542e8b8b735ca315b7b6883b9c3ec6d6fe310584fbddc9d56f53a20"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/p06/reference_window_support_audit_v2.csv",
+      "size_bytes": 41046,
+      "sha256": "9a81acea50be6890d29cd533a1566e4e3b783393961e640f8e99131bdd069a0b"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/history_exclusion_manifest.csv",
+      "size_bytes": 935458,
+      "sha256": "9f08516f20718ef1f0ca3c8cbe2753f74859b4f2c437cee5db666b611318cd61"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/p07/frontend_run_allocation_v1.csv",
+      "size_bytes": 40388,
+      "sha256": "05b706010ce5fc1d5032bf680dc286d2b69fc98c190a25fdf4e1ceee84df84ec",
+      "read_only_namespace": true
+    }
+  ],
+  "selector_algorithm": {
+    "version": "adjacent-full-reference-45s-pair-min-raw-size-v1",
+    "steps": [
+      "enumerate adjacent pairs of 45-second reference-support tiles",
+      "assign the first tile as preroll and the second tile as score",
+      "require raw archive, GT, IMU, camera calibration, camera-IMU calibration, and IMU noise metadata",
+      "require full reference support for both tiles",
+      "exclude dataset sequence A02",
+      "exclude any history-exclusion overlap using half-open intervals",
+      "exclude any P07 allocation overlap using half-open intervals",
+      "sort survivors by (raw_archive_size_bytes,dataset_family,sequence_id,window_start_s) ascending",
+      "select exactly the first survivor"
+    ],
+    "tie_break_is_result_blind": true
+  },
+  "ranked_survivors_top5": [
+    {"rank": 1, "dataset_family": "aqualoc_harbor", "sequence_id": "H03", "window_s_half_open": [90, 180], "raw_archive_size_bytes": 905738013},
+    {"rank": 2, "dataset_family": "aqualoc_harbor", "sequence_id": "H03", "window_s_half_open": [135, 225], "raw_archive_size_bytes": 905738013},
+    {"rank": 3, "dataset_family": "aqualoc_archaeology", "sequence_id": "A04", "window_s_half_open": [225, 315], "raw_archive_size_bytes": 3283615324},
+    {"rank": 4, "dataset_family": "aqualoc_archaeology", "sequence_id": "A01", "window_s_half_open": [0, 90], "raw_archive_size_bytes": 4341590055},
+    {"rank": 5, "dataset_family": "aqualoc_archaeology", "sequence_id": "A01", "window_s_half_open": [45, 135], "raw_archive_size_bytes": 4341590055}
+  ],
+  "selection": {
+    "dataset_family": "aqualoc_harbor",
+    "sequence_id": "H03",
+    "window_s_half_open": [90, 180],
+    "preroll_s_half_open": [90, 135],
+    "score_s_half_open": [135, 180],
+    "camera_indices_inclusive_for_feed": [1800, 3600],
+    "camera_count": 1801,
+    "preroll_camera_indices_half_open": [1800, 2700],
+    "score_camera_indices_inclusive": [2700, 3600],
+    "camera_header_ns_inclusive": [1523966922643979137, 1523967012680410986],
+    "actual_feed_span_ns": 90036431849,
+    "p07_allocation_on_h03_s_half_open": [45, 90],
+    "p07_allocation_camera_indices_half_open": [900, 1800],
+    "p07_overlap": false,
+    "history_exclusion_overlap_rows": 0,
+    "reference_support": [
+      {"tile_s_half_open": [90, 135], "grid_supported": 91, "grid_expected": 91, "coverage": 1.0, "worst_bracket_gap_s": 0.0, "status": "PASS"},
+      {"tile_s_half_open": [135, 180], "grid_supported": 91, "grid_expected": 91, "coverage": 1.0, "worst_bracket_gap_s": 0.0, "status": "PASS"}
+    ]
+  },
+  "canonical_sources": {
+    "raw_archive": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Harbor_sites_sequences/harbor_sequence_03_raw_data.tar.gz",
+      "size_bytes": 905738013,
+      "sha256": "6a4062a61498a108ade031ecff1cdf0818390212ff84882e922cc162ee5e54f1",
+      "gzip_footer_crc32": "f6d45bb2",
+      "gzip_footer_isize_mod_2_32": 915148800
+    },
+    "image_csv_member": {
+      "member": "raw_data/harbor_img_sequence_03.csv",
+      "size_bytes": 185462,
+      "sha256": "39d7a847cbd80a2cd1ebeeab5d167e0629ea133dc61b6c18488232c13cff6c6c"
+    },
+    "imu_csv_member": {
+      "member": "raw_data/harbor_imu_sequence_03.csv",
+      "size_bytes": 5907091,
+      "sha256": "c883cf2620bb2765b140f1717d12b65b52b8335e8a2fd66edafcffa48d6edac1"
+    },
+    "image_member_prefix": "raw_data/harbor_images_sequence_03/",
+    "ground_truth": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Harbor_sites_sequences/harbor_groundtruth_files/new_harbor_colmap_traj_sequence_03.txt",
+      "size_bytes": 150849,
+      "sha256": "9f8e77b09fb88c067c0b312c1e4ee5fe2f27e4c2a7ee9674f971c803bae05cda",
+      "role": "post-run exploratory reference only; never passed to HFNet",
+      "caveat": "offline COLMAP image-derived reference, not sensor-independent"
+    },
+    "camera_calibration": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Harbor_sites_sequences/harbor_calibration_files/harbor_camera_calib.yaml",
+      "size_bytes": 347,
+      "sha256": "ae329d1599c323e324ff8d375f6aea380b7eead6503a8b46762ca4e06756d6ff"
+    },
+    "camera_imu_calibration": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Harbor_sites_sequences/harbor_calibration_files/harbor_imu_camera_calib.yaml",
+      "size_bytes": 796,
+      "sha256": "4d2a58ab9b66e61ac30ad23937c694a3459a8d0876fc0665961b531667aed973"
+    },
+    "imu_noise_calibration": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Harbor_sites_sequences/harbor_calibration_files/harbor_imu_noises.yaml",
+      "size_bytes": 343,
+      "sha256": "c16e413f06dfe0a889d29b477917acedc6931675e9390c7fd81068b1118204ae"
+    }
+  },
+  "monocular_inertial_input_contract": {
+    "official_reader": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Examples/Monocular-Inertial/mono_inertial_euroc.cc",
+    "sensor": "IMU_MONOCULAR",
+    "camera": {
+      "width": 640,
+      "height": 512,
+      "png_bit_depth": 8,
+      "png_color_type": 0,
+      "fps_metadata": 20.0,
+      "copy_policy": "selected canonical PNG member bytes copied unchanged and renamed to camera timestamp",
+      "selected_png_count": 1801,
+      "selected_png_total_bytes": 327959010
+    },
+    "imu": {
+      "source_header": "#timestamp [ns],w_RS_S_x [rad s^-1],w_RS_S_y [rad s^-1],w_RS_S_z [rad s^-1],a_RS_S_x [m s^-2],a_RS_S_y [m s^-2],a_RS_S_z [m s^-2]",
+      "column_order": ["timestamp_ns", "gyro_x_rad_s", "gyro_y_rad_s", "gyro_z_rad_s", "acc_x_m_s2", "acc_y_m_s2", "acc_z_m_s2"],
+      "axis_transform": "none; source T_i_b is identity",
+      "kalibr_timeshift_cam_imu_s": -0.0403806549886,
+      "output_timestamp_rule": "output_ns=raw_ns-round(timeshift_cam_imu_s*1e9)=raw_ns+40380655",
+      "output_shift_ns": 40380655,
+      "source_data_indices_inclusive_zero_based": [18003, 36001],
+      "output_data_row_count": 17999,
+      "first_raw_ns": 1523966922602516111,
+      "first_output_ns": 1523966922642896766,
+      "second_output_ns": 1523966922647928935,
+      "penultimate_output_ns": 1523967012677636392,
+      "last_raw_ns": 1523967012642286529,
+      "last_output_ns": 1523967012682667184,
+      "strict_reader_bracket_rule": "imu[0] <= cam[0] < imu[1] and imu[-2] <= cam[-1] < imu[-1]",
+      "measurement_token_policy": "validate seven finite comma-separated fields; preserve six measurement tokens byte-for-byte",
+      "final_newline": false
+    }
+  },
+  "expected_materialized_payload": {
+    "root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_phase_f_fresh_underwater_v1/aqualoc_harbor_h03_1800_3600",
+    "files_excluding_manifest": 1804,
+    "image_inventory_identity_algorithm": "sort rows; sha256/crc32 over UTF-8 path\\0size\\0file_sha256\\0file_crc32\\n",
+    "renamed_image_inventory": {
+      "count": 1801,
+      "total_bytes": 327959010,
+      "identity_sha256": "bb1cf0238839c5899f4907845c3aac1c9e659ff0b1c1d65b6cfbad015238614a",
+      "identity_crc32": "8a0dd9e5"
+    },
+    "cam0_times": {
+      "path": "cam0_times.txt",
+      "size_bytes": 36020,
+      "sha256": "5732e74d12a720cbf7aa3b68cbf5ab189e3493bec7954271017bde7d54f5d92e",
+      "crc32": "8f95d70e",
+      "line_count": 1801,
+      "final_newline": true
+    },
+    "cam0_data_csv": {
+      "path": "mav0/cam0/data.csv",
+      "size_bytes": 79269,
+      "sha256": "02ddfd4c66ce1d05956a16790140f29abb43c47222ae5ea1faf47b66205bca6f",
+      "crc32": "420d7c09",
+      "header": "#timestamp [ns],filename",
+      "data_row_count": 1801,
+      "final_newline": true
+    },
+    "imu0_data_csv": {
+      "path": "mav0/imu0/data.csv",
+      "size_bytes": 2058198,
+      "sha256": "45edd79a4073f646813cc53d710ab5fd6a26a4b3acb927dfa18292dc6c377193",
+      "crc32": "a3016b12",
+      "data_row_count": 17999,
+      "final_newline": false
+    },
+    "payload_identity_excluding_manifest": {
+      "sha256": "afdfec7e12f9e80b3008f7e82ecbb25f9b16ff0716b9b0c4878a3af06b2061b4",
+      "crc32": "69365ded"
+    }
+  },
+  "h03_config_contract": {
+    "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_h03_1800_3600_phase_f_v1.yaml",
+    "camera_type": "KannalaBrandt8",
+    "intrinsics_fx_fy_cx_cy": [413.32595366566017, 413.70198739483686, 305.9507483284928, 259.4439948946375],
+    "equidistant_k1_k2_k3_k4": [-0.06125568297136998, -0.003796743395135256, 0.027326634771204592, -0.030296403142887066],
+    "imu_T_b_c1_source": "T_imu_cam",
+    "imu_T_b_c1": [
+      [-0.99978035, 0.0169654, 0.01230552, -0.01719238],
+      [0.01210101, -0.01210461, 0.99985351, 0.14944769],
+      [0.01711187, 0.9997828, 0.01189665, -0.01915984],
+      [0.0, 0.0, 0.0, 1.0]
+    ],
+    "imu_noise_density_and_walk": {"NoiseGyro": 0.001, "NoiseAcc": 0.02, "GyroWalk": 0.00005, "AccWalk": 0.001, "Frequency": 200.0},
+    "extractor_frozen": {"type": "HFNetRT", "scaleFactor": 1.2, "nLevels": 4, "nFeatures": 675, "threshold": 0.01, "loopClosing": 1},
+    "model": {"path": "/home/ma/SLAM/HFNet-SLAM-runtime-model-a02-r1/HFNet-RT/", "onnx_size_bytes": 132238602, "onnx_sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5", "cache_size_bytes": 853319, "cache_sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7"}
+  },
+  "fresh_namespaces": {
+    "input_root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_phase_f_fresh_underwater_v1/aqualoc_harbor_h03_1800_3600",
+    "future_attempt_root": "/home/ma/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h03_1800_3600/attempt_001",
+    "future_attempt_root_absent_at_freeze": true,
+    "p07_namespace_writable": false
+  },
+  "stop_audit": {
+    "phase_f_blocking_stop_found": false,
+    "existing_stop_scope": "P07 backend/governance only",
+    "p07_remains_read_only": true
+  },
+  "claims": {
+    "fresh_input_materialized": false,
+    "runner_created": false,
+    "start_claim_created": false,
+    "hfnet_started": false,
+    "vins_started": false,
+    "detector_started": false,
+    "evaluator_started": false,
+    "trajectory_produced": false,
+    "scientific_comparison_produced": false
+  }
+}

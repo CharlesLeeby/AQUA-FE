@@ -1,0 +1,36 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-attempt-001-execution-lock-v1",
+  "status": "LOCKED_BEFORE_EXACTLY_ONE_HFNET_PROCESS_START",
+  "runner": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_two_stage_runability_v1.py",
+    "sha256": "87a6cb36af30f52fdd398763c0d6258d1197f01df29d9e9d387503cb41508f97",
+    "size_bytes": 75055
+  },
+  "prepared_manifest": {
+    "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001/prepared_manifest.json",
+    "sha256": "c0932a6f97794920681343b8a0fefdd015cf045e5e9494e21c0dbefb96204b85",
+    "size_bytes": 124158
+  },
+  "parent_freeze": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_two_stage_runability_freeze_v1.json",
+    "sha256": "46d599746696ce492bb7029db82778f1bf0d59b803939ec61f54db8a847dae30",
+    "size_bytes": 4621
+  },
+  "final_input_adoption": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_mh01_input_adoption_v1.json",
+    "sha256": "cd45e7c39f322bc60d840ae18816584fce024d8220e89ef0698915af51c4437d",
+    "size_bytes": 6622
+  },
+  "prestart_incident": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_attempt_001_prestart_incident_v1.json",
+    "sha256": "cdc691643bec2b1c849d8e12a237411f8c19a4041d772a52ca4e0b694941a6ac",
+    "size_bytes": 3211
+  },
+  "attempt": {
+    "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001",
+    "exact_start_token": "PHASE_D_MH01_ATTEMPT_001_START_ONCE",
+    "maximum_process_starts": 1,
+    "process_start_claim_absent": true,
+    "run_result_absent": true
+  }
+}

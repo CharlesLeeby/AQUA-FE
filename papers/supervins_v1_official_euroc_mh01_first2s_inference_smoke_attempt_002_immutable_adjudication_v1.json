@@ -1,0 +1,285 @@
+{
+  "schema_version": "aqua-fe-published-supervins-v1-official-euroc-mh01-first2s-inference-smoke-attempt-002-immutable-adjudication-v1",
+  "created_at": "2026-08-17T00:39:19+08:00",
+  "status": "SEALED_FORMAL_FAIL_WITH_RUNTIME_INFERENCE_GATES_RECONSTRUCTED",
+  "scientific_role": "DEVELOPMENT_ONLY_IMMUTABLE_POST_RUN_ADJUDICATION",
+  "formal_result": {
+    "path": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_20260817_r2/attempt_002/run_result.json",
+    "sha256": "e92149913b46ce908301b4281c947af294d912ee4676703d56a7495e9b595fa1",
+    "size_bytes": 29588,
+    "status": "FAIL_STAGE3_OFFICIAL_MH01_FIRST2S_INFERENCE_SMOKE_NO_RETRY",
+    "formal_status_is_modified_or_overridden": false,
+    "only_false_pass_condition": "publisher_identity_witness_exact"
+  },
+  "controller_evidence_capture_defect": {
+    "classification": "POST_PUBLISHER_SUBSCRIPTION_ONLY_PREDICATE_ACCIDENTALLY_REQUIRED_NO_INPUT_PUBLISHERS",
+    "description": "The attempt-002 post-marker settle helper reused input_connection_contract(..., publisher_required=False). That predicate correctly required exact SuperVINS subscriptions before the publisher start, but it also required the input publisher set to remain empty. After the authorized publisher registered, each controller state query therefore waited until the publisher exited, so the in-memory publisher system-state witness stayed null.",
+    "effect_on_runtime": "The defect affected only capture of the in-memory system-state witness. It did not prevent the exact publisher from registering, connecting, publishing all frozen events, or driving extractor and matcher inference.",
+    "attempt_002_retry_or_mutation_authorized": false,
+    "attempt_003_started": false
+  },
+  "controller_and_input_pins": {
+    "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_first2s_inference_smoke_attempt_002_freeze_v1.json": {
+      "sha256": "5215b0652ddd397199844f23e0c49ddcf9af34dfda020357db224125a6505a0c",
+      "size_bytes": 5491
+    },
+    "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_first2s_inference_smoke_attempt_002_execution_lock_v1.json": {
+      "sha256": "c775405a528fe7a38df0a18a1eebdff1ffe6dd6d60232b091fde1bf8f47a27dc",
+      "size_bytes": 3448
+    },
+    "/home/ma/AQUA-FE_WS/scripts/run_published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_attempt_002.py": {
+      "sha256": "6974973109cb1a015bba2fb2c9c8b1405f5c16f5f94ca0e3e71f106e23baf8f1",
+      "size_bytes": 12567
+    },
+    "/home/ma/AQUA-FE_WS/scripts/tests/test_run_published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_attempt_002.py": {
+      "sha256": "a708efa64038cbd7fe832db11d06cb9de696c682c760b18a0300a3be2b11396a",
+      "size_bytes": 5945
+    },
+    "/home/ma/AQUA-FE_WS/scripts/publish_supervins_euroc_mh01_first2s_v1.py": {
+      "sha256": "973b096ad56aa52ff521634a77ad65f2c41f0bec5d87d733c53edcc4691e3106",
+      "size_bytes": 11938
+    },
+    "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_first2s_input_manifest_v1.json": {
+      "sha256": "a8ec6e7e878ec28e018b78fc1cd891acfa5a05825264d3b58d8b4630fa51a398",
+      "size_bytes": 6866
+    },
+    "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_first2s_inference_smoke_attempt_001_failure_adoption_v1.json": {
+      "sha256": "47bf464242d98fea5ca0ade791fa5ebbac29012960ce1a9bcfb849856f347012",
+      "size_bytes": 5292
+    }
+  },
+  "attempt_artifact_root": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_20260817_r2/attempt_002",
+  "attempt_artifact_pins": {
+    "duration.txt": {
+      "sha256": "eac13a714f30d1c45ed0a6a12ed742ba990a19eabdd381b6ac33918113701235",
+      "size_bytes": 215
+    },
+    "node.stderr.log": {
+      "sha256": "3a09eb67d94abff495c2cf90af02c56bd183d12835955834861a786d4fda9229",
+      "size_bytes": 1125
+    },
+    "node.stdout.log": {
+      "sha256": "758870d8d0d2715673db778dd77405105bd2b874e5217d11201f2d0afad20083",
+      "size_bytes": 9349
+    },
+    "node_process_started.json": {
+      "sha256": "64b676a9a966524fda8329b571dae080fb85b52ad2937b6e1c3ddac66fc304a6",
+      "size_bytes": 317
+    },
+    "node_start_claim.json": {
+      "sha256": "831c42011c8259c4320785c9de606d3959cac98e5d0451f55318542aae308004",
+      "size_bytes": 1031
+    },
+    "preflight_result.json": {
+      "sha256": "c54a106c277aedd00afa0b0f7b05433f907020664d3d2ce62bfe923eb9a33b53",
+      "size_bytes": 24963
+    },
+    "publisher.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    "publisher.stdout.log": {
+      "sha256": "e9a57d21b2ddc75a4d436f2c3dcfb02d65f773fab1b091b3c05c0608df506302",
+      "size_bytes": 9631
+    },
+    "publisher_process_started.json": {
+      "sha256": "e5856e1d6351f5dad48a7fdce2e8fba1cc27ac6262fa4ccbf352598280c46ffd",
+      "size_bytes": 277
+    },
+    "publisher_start_claim.json": {
+      "sha256": "01bc2afaa913941ec1cf322e100a83967243410f1b880c1f856272020b1fae77",
+      "size_bytes": 2461
+    },
+    "ros_home/log/87f4f138-9990-11f1-91c7-2313c6152585/master.log": {
+      "sha256": "950ff634528d463d1669d035878d7baf55b27381d6d2eb00a42433a25e46b795",
+      "size_bytes": 8335
+    },
+    "ros_home/log/87f4f138-9990-11f1-91c7-2313c6152585/roslaunch-qiu-515144.log": {
+      "sha256": "54dfd17c3829ef7d287fd8de57169a7f72ad30d158159754677259db022d61a8",
+      "size_bytes": 21319
+    },
+    "ros_home/log/87f4f138-9990-11f1-91c7-2313c6152585/rosout-1-stdout.log": {
+      "sha256": "946f380246f02a512527d4318f9df3f408e46c59de7a3764c82deb58045a36a8",
+      "size_bytes": 266
+    },
+    "ros_home/log/87f4f138-9990-11f1-91c7-2313c6152585/rosout.log": {
+      "sha256": "c639d36456528e2b535efb049db7f53d8642374bb1e8005452ff01ffcd67cef8",
+      "size_bytes": 53109
+    },
+    "ros_home/log/aqua_fe_euroc_mh01_first2s_publisher.log": {
+      "sha256": "c7921d7445b289c9d012f1699ac3635304df65de1701242bb2994da72cd24914",
+      "size_bytes": 1872
+    },
+    "ros_home/roscore-11554.pid": {
+      "sha256": "dc8268d668038274fa6142202437abffc47a606f739eea484dc21445a52fb3b0",
+      "size_bytes": 6
+    },
+    "roscore.stderr.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    "roscore.stdout.log": {
+      "sha256": "a66c0b059cd537f6d89e47454d24a8773ef778859898f69637961447abe535fa",
+      "size_bytes": 984
+    },
+    "roscore_process_started.json": {
+      "sha256": "ab9580e5eeef336670f37f74eeadc081961464a0c95ea08cf8785b8cde0ad6f9",
+      "size_bytes": 135
+    },
+    "roscore_start_claim.json": {
+      "sha256": "e875844bd0fbb4440e31f334cd347aa2dcadeff0638158858912067ba9f2ebc3",
+      "size_bytes": 554
+    },
+    "run_result.json": {
+      "sha256": "e92149913b46ce908301b4281c947af294d912ee4676703d56a7495e9b595fa1",
+      "size_bytes": 29588
+    },
+    "time_consumption/backend_optimization.txt": {
+      "sha256": "ad5b2b345ac39af6d2d0f3c8abd4d4435a85da3a0e2a8043dcfbb495d46b6716",
+      "size_bytes": 109
+    },
+    "time_consumption/feature_extraction_matching.txt": {
+      "sha256": "0a1ad24297f34139e8dd9995b6b19c719713be61500a4f91dc538a25fc406c60",
+      "size_bytes": 225
+    }
+  },
+  "independent_log_reconstruction": {
+    "start_claims": {
+      "roscore": 1,
+      "node": 1,
+      "publisher": 1,
+      "retry_authorized": false
+    },
+    "publisher_claim_precondition": {
+      "input_publishers": {},
+      "input_subscribers": {
+        "/cam0/image_raw": [
+          "/supervins_estimator"
+        ],
+        "/imu0": [
+          "/supervins_estimator"
+        ]
+      },
+      "subscription_poll_count": 2,
+      "subscription_poll_elapsed_seconds": 0.05547825098619796,
+      "exact_subscriptions_observed": true
+    },
+    "ros_master_graph_patterns_each_observed_exactly_once": {
+      "+SUB [/imu0] /supervins_estimator": 1,
+      "+SUB [/cam0/image_raw] /supervins_estimator": 1,
+      "+PUB [/cam0/image_raw] /aqua_fe_euroc_mh01_first2s_publisher": 1,
+      "+PUB [/imu0] /aqua_fe_euroc_mh01_first2s_publisher": 1
+    },
+    "publisher_rospy_patterns_each_observed_exactly_once": {
+      "init_node /aqua_fe_euroc_mh01_first2s_publisher": 1,
+      "/cam0/image_raw adding connection to /supervins_estimator": 1,
+      "/imu0 adding connection to /supervins_estimator": 1
+    },
+    "publisher_stdout": {
+      "camera_published_records": 41,
+      "terminal_status": "PUBLISH_COMPLETE",
+      "camera_count": 41,
+      "imu_count": 401,
+      "event_count": 442,
+      "first_timestamp_ns": 1403636579763555584,
+      "last_timestamp_ns": 1403636581763555584,
+      "source_span_seconds": 2.0,
+      "wall_publish_span_seconds": 2.0001631600025576,
+      "image_connections_at_end": 1,
+      "imu_connections_at_end": 1,
+      "rosbag_used": false,
+      "cam1_published": false,
+      "groundtruth_published": false
+    },
+    "node_stdout_stderr": {
+      "session_marker_count": 1,
+      "extract_feature_time_count": 23,
+      "matches_size_count": 22,
+      "matches_size_values": [
+        986,
+        827,
+        755,
+        730,
+        694,
+        685,
+        663,
+        662,
+        595,
+        574,
+        516,
+        519,
+        491,
+        445,
+        441,
+        499,
+        429,
+        393,
+        421,
+        431,
+        482,
+        496
+      ]
+    }
+  },
+  "final_validation": {
+    "audit_script": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/audit_supervins_v1_official_euroc_mh01_first2s_inference_smoke_attempt_002.py",
+      "sha256": "8626381c74a9c4f97c1c664761d090e8783d0b627e0c18381fbc14d976cd6d70",
+      "size_bytes": 9225,
+      "status": "ADJUDICATION_RECONSTRUCTED_FROM_IMMUTABLE_LOGS",
+      "failures": []
+    },
+    "live_rehash_of_result_post_pin_checks": {
+      "checked_file_count": 56,
+      "changed_or_missing": []
+    },
+    "input_materializer_preflight": {
+      "status": "READY_NO_ROS_STARTED",
+      "camera_count": 41,
+      "imu_count": 401,
+      "event_count": 442,
+      "camera_png_assets_sha256": "318e7091ae2b92fe5e8ca8ba882ba622ac9dd4278a7a8f0a5270eaff3b3182cc",
+      "camera_decoded_mono8_pixels_sha256": "99ddabba251a121a89c302091138ef667f717abf2435f9c34348bec1974d368b",
+      "imu_rows_sha256": "89fc376d40f505f7f4a63b8c22ca9fff744a0b872cef17a4496300d204791e25",
+      "combined_events_sha256": "56595d520f53b928d272dc2c7fe04011d8b5ddd286d334cb9e58ae3ad90e7039"
+    },
+    "trajectory_artifacts": {
+      "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/vio_output/vio.csv": {
+        "sha256": "1644403a60c4bb6f672e41aa903cb3cf0ec54a5154ebe9d5e98f9817ea12ac6d",
+        "size_bytes": 116990
+      },
+      "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/vio_output/vio_loop.csv": {
+        "sha256": "b484a9f72b3acb105eaf558cf0b7c1cfc244164ea05e7f569ecabf4a50bd6b78",
+        "size_bytes": 29233
+      },
+      "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/vio_output/vio_output.txt": {
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_bytes": 0
+      },
+      "changed": []
+    },
+    "residual_processes": [],
+    "port_11553_bound": false,
+    "port_11554_bound": false
+  },
+  "adjudicated_verdict": {
+    "formal_machine_pass_status_awarded": false,
+    "formal_attempt_002_status_remains_fail": true,
+    "exact_publisher_node_to_two_input_topics_reconstructed_from_persistent_ros_master_log": true,
+    "two_live_publisher_to_supervins_connections_confirmed_from_publisher_rospy_log": true,
+    "frozen_input_publication_complete": true,
+    "extractor_inference_gate_materially_observed": true,
+    "matcher_inference_gate_materially_observed": true,
+    "narrow_supported_conclusion": "The pinned unchanged SuperVINS r1 runtime accepted the frozen official EuRoC MH_01_easy first-two-second cam0+imu0 prefix from the exact minimal publisher, and its learned extractor and matcher executed repeatedly. The formal runner result remains FAIL solely because its in-memory publisher-identity witness was not captured, although the exact identity and connections are independently present in immutable ROS logs.",
+    "not_supported": [
+      "README-recommended V2_01 sequence result",
+      "complete VIO or trajectory result",
+      "trajectory accuracy, APE, or RPE",
+      "formal SuperVINS baseline row",
+      "underwater transfer or robustness",
+      "comparison or superiority versus AQUA-FE or any other method"
+    ],
+    "further_model_or_ros_execution_performed_by_adjudication": false,
+    "next_stage_automatically_authorized": false
+  }
+}

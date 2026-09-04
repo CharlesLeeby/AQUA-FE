@@ -1,0 +1,37 @@
+{
+  "actual_process_start_count": 1,
+  "arms": {
+    "B1_CONSTQ": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/vins_output/vio.csv",
+      "sha256": "59c505704e9e82c050abe2c3e2edb83517b7044828beb694780646ff7a2bea92",
+      "size_bytes": 93578
+    },
+    "XFEATBIRTH_RAWLK": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_vins_post_incident_v2_4_r1/vins_output/vio.csv",
+      "sha256": "d6d8742753e96d7fa6243b469337c2bebaa28aac1ba9f47bcaa43971e8e88b00",
+      "size_bytes": 91884
+    }
+  },
+  "attempt_count": 1,
+  "config": {
+    "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_aqualoc_a02_body_T_cam0_v1.yaml",
+    "sha256": "a76c728b31d47c3a87f54c465fb581007ed2da2b7d7d84df81dbde93e9a886c1",
+    "size_bytes": 415
+  },
+  "evaluator": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support.py",
+    "sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110",
+    "size_bytes": 27933
+  },
+  "no_retry": true,
+  "output_dir": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/b1_constq_vs_xfeatbirth_adopted_v2_5_r1",
+  "reference": {
+    "path": "/mnt/data/AQUA-FE_WS/logs/published_shared_baselines_v1/a02_4500_6300_shared_r1/shared/reference_proxy.tum",
+    "sha256": "b1ae03e073ea1c2bcf12891ae0cca0eab462e044e73a1045ad4f11aa8b108d2c",
+    "size_bytes": 7488
+  },
+  "return_code": 0,
+  "return_code_observed_after_process": true,
+  "schema_version": "aqua-fe-a02-two-arm-evaluator-process-receipt-v2-5",
+  "status": "PASS_PROCESS_RC0"
+}

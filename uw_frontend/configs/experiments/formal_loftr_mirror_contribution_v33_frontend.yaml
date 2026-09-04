@@ -1,0 +1,9 @@
+extends: formal_loftr_mirror_sidecar_v32_frontend.yaml
+
+hybrid:
+  # V33 contribution-aware mirror profile:
+  # keep the VINS export path mirrored to the classical KLT/GFTT backbone, but
+  # do not replenish the internal KLT tracker before low-texture scheduling.
+  # This lets the LoFTR gate see real low-coverage/low-track degeneracy and
+  # admit only small confirmed bursts that pass the export geometry checks.
+  preserve_klt_replenish: false

@@ -1,0 +1,148 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-ntnu-historical-positive-exact-window-selector-v1",
+  "status": "FROZEN_AFTER_READ_ONLY_SOURCE_PREFLIGHT_BEFORE_MATERIALIZATION_OR_HFNET_START",
+  "purpose": "prepare three outcome-selected historical NTNU positive windows for an external HFNet-SLAM exact-window cold-start comparison",
+  "selection_semantics": {
+    "bag_time_origin": "exact record timestamp of the first record in the complete source bag, including unselected topics",
+    "camera_selection": "closed bag record-time interval [T0+start_offset_ns,T0+end_offset_ns]",
+    "legacy_compatibility": "matches the historical exporter rule t < start => skip and t > end => stop",
+    "output_camera_timestamp": "original sensor_msgs/Image Header.stamp",
+    "imu_time_transform": "output_ns=raw_imu_header_ns-1765624",
+    "imu_trim_rule": "retain the last shifted real IMU sample <= first camera header through the first shifted real IMU sample > last camera header, inclusive",
+    "synthetic_or_extrapolated_imu_permitted": false,
+    "camera_downsampling": false,
+    "hfnet_native_camera_rate_hz": 20,
+    "cold_start": true,
+    "natural_history": false,
+    "score_window_equals_feed_window": true
+  },
+  "shared_inputs": {
+    "camera_topic": "/alphasense_driver_ros/cam0",
+    "imu_topic": "/alphasense_driver_ros/imu",
+    "camera_schema": {
+      "encoding": "mono8",
+      "frame_id": "cam0_sensor_frame",
+      "height": 540,
+      "is_bigendian": 0,
+      "step": 720,
+      "width": 720
+    },
+    "hfnet_config": {
+      "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_ntnu_cam0_mono_inertial_v1.yaml",
+      "size_bytes": 2228,
+      "sha256": "5b8b8d7ed6c010f25d4cf8d80ca24692b06de4cd17f4d19ae2a0cb9cc91a54dd"
+    },
+    "underwater_intrinsics": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/ntnu_hf/calibrations/cam0_cam1_stereo/intrinsics_water/camchain-stereo-intrinsics-underwater.yaml",
+      "size_bytes": 1125,
+      "sha256": "87aa66f70ab9db3b8ccb2dd57cb064183dd3f406f03d486576c6a92cbbf33bb2"
+    },
+    "camera_imu_extrinsics": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/ntnu_hf/calibrations/cam0_cam1_stereo/extrinsics_air/camchain-imucam-stereo-extrinsics-air.yaml",
+      "size_bytes": 1980,
+      "sha256": "227d57e4dc0d65c3afe6c896ff79d76128ae8056202cbfda37f3b2d0f5b2dfdd"
+    },
+    "imu_noise": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/ntnu_hf/calibrations/cam0_cam1_stereo/extrinsics_air/imu0_alphasense_noise.yaml",
+      "size_bytes": 457,
+      "sha256": "cc9ee4798ac205a654d51984baf13b5efb656f744f491d31696363ba717114ba"
+    }
+  },
+  "windows": {
+    "fjord1_s83_d10": {
+      "sequence_id": "fjord_1",
+      "historical_positive_tier": "main",
+      "source_bag": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/ntnu_hf/subset-fjord/fjord_1/fjord_1.bag",
+        "size_bytes": 12456215809,
+        "official_xet_cas_key": "bcf51658dd6b9d9dc624939ccbd2977bc6014b2b345c67aafb34f27c79eb6545",
+        "local_full_file_sha256": "b0f2a43d049efcc139b7629fc813a14460fb3e3090a1fa6cff3af8135a3aaa6d"
+      },
+      "source_bag_first_record_ns": 1700604776676954432,
+      "offsets_ns_closed": [83000000000, 93000000000],
+      "absolute_record_bounds_ns_closed": [1700604859676954432, 1700604869676954432],
+      "camera": {
+        "count": 200,
+        "record_ns_inclusive": [1700604859684254240, 1700604869633947840],
+        "header_ns_inclusive": [1700604859627423848, 1700604869577315890],
+        "header_minus_record_ns_range": [-58723560, -56227661]
+      },
+      "imu": {
+        "count": 1992,
+        "record_ns_inclusive": [1700604859630639456, 1700604869592257408],
+        "raw_header_ns_inclusive": [1700604859625989248, 1700604869582156390],
+        "shifted_header_ns_inclusive": [1700604859624223624, 1700604869580390766],
+        "reader_brackets_first_and_last_camera": true
+      },
+      "output_root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_ntnu_historical_positive_windows_v1/fjord1_s83_d10_exact_window_coldstart"
+    },
+    "mclab1_s60_d15": {
+      "sequence_id": "mclab_1",
+      "historical_positive_tier": "main",
+      "source_bag": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/ntnu_hf/subset-mclab/mclab_1/mclab_1.bag",
+        "size_bytes": 15428119759,
+        "official_xet_cas_key": "54a85662f6c4f15649fce32a9d7ab3aaeb1216fe2ff79c752c9bc4ef8b95b758",
+        "local_full_file_sha256": "e1471713f56377df6f282d1e720528ad60514e62657b4fecd28ea6ce8483553f"
+      },
+      "source_bag_first_record_ns": 1725639471543919817,
+      "offsets_ns_closed": [60000000000, 75000000000],
+      "absolute_record_bounds_ns_closed": [1725639531543919817, 1725639546543919817],
+      "camera": {
+        "count": 300,
+        "record_ns_inclusive": [1725639531590604129, 1725639546540601801],
+        "header_ns_inclusive": [1725639531533905891, 1725639546483736516],
+        "header_minus_record_ns_range": [-57389378, -55774996]
+      },
+      "imu": {
+        "count": 2992,
+        "record_ns_inclusive": [1725639531539171925, 1725639546494828112],
+        "raw_header_ns_inclusive": [1725639531531939491, 1725639546489899916],
+        "shifted_header_ns_inclusive": [1725639531530173867, 1725639546488134292],
+        "reader_brackets_first_and_last_camera": true
+      },
+      "output_root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_ntnu_historical_positive_windows_v1/mclab1_s60_d15_exact_window_coldstart"
+    },
+    "mclab2_s110_d10": {
+      "sequence_id": "mclab_2",
+      "historical_positive_tier": "secondary",
+      "source_bag": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/ntnu_hf/subset-mclab/mclab_2/mclab_2.bag",
+        "size_bytes": 14964404768,
+        "official_xet_cas_key": "d175fcf3366c41aa3f3d0a1d9501eb4f965f0d6f5f6a2a70e7dc19e4e831314f",
+        "local_full_file_sha256": "c81bddcae78e0cc5bfd773a5364a64d1e89726a6bce34bf4e4d314c85157834f"
+      },
+      "source_bag_first_record_ns": 1725639966129933649,
+      "offsets_ns_closed": [110000000000, 120000000000],
+      "absolute_record_bounds_ns_closed": [1725640076129933649, 1725640086129933649],
+      "camera": {
+        "count": 200,
+        "record_ns_inclusive": [1725640076134446573, 1725640086085136562],
+        "header_ns_inclusive": [1725640076078123169, 1725640086028023053],
+        "header_minus_record_ns_range": [-57304869, -55788805]
+      },
+      "imu": {
+        "count": 1992,
+        "record_ns_inclusive": [1725640076088566196, 1725640086038168310],
+        "raw_header_ns_inclusive": [1725640076075783169, 1725640086032928653],
+        "shifted_header_ns_inclusive": [1725640076074017545, 1725640086031163029],
+        "reader_brackets_first_and_last_camera": true
+      },
+      "output_root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_ntnu_historical_positive_windows_v1/mclab2_s110_d10_exact_window_coldstart"
+    }
+  },
+  "knowledge_boundary": {
+    "windows_were_selected_after_observing_aqua_fe_vs_klt_results": true,
+    "external_hfnet_deployment_is_post_outcome": true,
+    "confirmatory_or_held_out_claim_permitted": false,
+    "natural_history_results_may_not_be_mixed_with_exact_window_cold_start_results": true,
+    "ntnu_reference_is_reaqrovio_pseudo_ground_truth_not_independent_sensor_truth": true
+  },
+  "claims": {
+    "input_materialized": false,
+    "hfnet_started": false,
+    "trajectory_produced": false,
+    "accuracy_measured": false,
+    "system_ranking_produced": false
+  }
+}

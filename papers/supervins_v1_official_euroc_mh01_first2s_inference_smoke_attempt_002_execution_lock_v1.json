@@ -1,0 +1,85 @@
+{
+  "schema_version": "aqua-fe-published-supervins-v1-official-euroc-mh01-first2s-inference-smoke-attempt-002-execution-lock-v1",
+  "created_at": "2026-08-17T00:11:00+08:00",
+  "status": "LOCKED_FOR_EXACTLY_ONE_ATTEMPT_002_MASTER_NODE_PUBLISHER_START",
+  "authorization_token": "SUPERVINS_STAGE3_MH01_FIRST2S_ATTEMPT_002_START_ONCE",
+  "master_uri": "http://127.0.0.1:11554",
+  "master_command": [
+    "/opt/ros/noetic/bin/roscore",
+    "-p",
+    "11554"
+  ],
+  "node_command": [
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/devel/lib/supervins/supervins_node",
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/config/euroc/euroc_mono_imu_config.yaml"
+  ],
+  "publisher_command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/ma/AQUA-FE_WS/scripts/publish_supervins_euroc_mh01_first2s_v1.py",
+    "--action",
+    "run",
+    "--authorization-token",
+    "SUPERVINS_STAGE3_MH01_FIRST2S_PUBLISH_ONCE"
+  ],
+  "maximum_roscore_starts": 1,
+  "maximum_node_starts": 1,
+  "maximum_publisher_starts": 1,
+  "retry_authorized": false,
+  "post_marker_subscription_poll_timeout_seconds": 12,
+  "only_runtime_delta_from_attempt_001": "Read-only getSystemState polling after the marker until /supervins_estimator is the exact subscriber on /imu0 and /cam0/image_raw; no publisher claim or start before that condition.",
+  "protocol": {
+    "sha256": "5215b0652ddd397199844f23e0c49ddcf9af34dfda020357db224125a6505a0c",
+    "size_bytes": 5491
+  },
+  "runner": {
+    "sha256": "6974973109cb1a015bba2fb2c9c8b1405f5c16f5f94ca0e3e71f106e23baf8f1",
+    "size_bytes": 12567
+  },
+  "tests": {
+    "sha256": "a708efa64038cbd7fe832db11d06cb9de696c682c760b18a0300a3be2b11396a",
+    "size_bytes": 5945
+  },
+  "publisher": {
+    "sha256": "973b096ad56aa52ff521634a77ad65f2c41f0bec5d87d733c53edcc4691e3106",
+    "size_bytes": 11938
+  },
+  "input_manifest": {
+    "sha256": "a8ec6e7e878ec28e018b78fc1cd891acfa5a05825264d3b58d8b4630fa51a398",
+    "size_bytes": 6866
+  },
+  "attempt_001_failure_adoption": {
+    "sha256": "47bf464242d98fea5ca0ade791fa5ebbac29012960ce1a9bcfb849856f347012",
+    "size_bytes": 5292
+  },
+  "pinned_file_count": 53,
+  "pinned_files_canonical_sha256": "31148ead19d8e141b8e81c0fbc0fe16de5f512df715381a7aa8a87c490557dc1",
+  "fresh_evidence_root": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_20260817_r2",
+  "fresh_attempt": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_20260817_r2/attempt_002",
+  "start_claims_required_absent_before_run": [
+    "roscore_start_claim.json",
+    "node_start_claim.json",
+    "publisher_start_claim.json"
+  ],
+  "unchanged_success_gate": {
+    "session_ready_marker_minimum": 1,
+    "publisher_terminal_status": "PUBLISH_COMPLETE",
+    "camera_count_exact": 41,
+    "imu_count_exact": 401,
+    "event_count_exact": 442,
+    "extract_feature_time_occurrences_minimum": 2,
+    "matches_size_occurrences_minimum": 1,
+    "input_publisher_identity_exact": "/aqua_fe_euroc_mh01_first2s_publisher",
+    "all_processes_reaped": true,
+    "all_frozen_pins_and_trajectory_artifacts_unchanged": true
+  },
+  "forbidden": [
+    "attempt_001 mutation or retry",
+    "rosbag, cam1, or ground-truth publication",
+    "trajectory interpretation",
+    "APE or RPE",
+    "formal baseline or underwater conclusion",
+    "automatic next stage"
+  ],
+  "next_stage_automatically_authorized": false
+}

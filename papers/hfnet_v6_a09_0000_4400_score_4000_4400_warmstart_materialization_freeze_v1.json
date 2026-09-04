@@ -1,0 +1,169 @@
+{
+  "authority_consumption": {
+    "authorized_invocation_count": 1,
+    "consumed_invocation_count": 1,
+    "materialization_authority": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_materialization_authority_v1.json",
+      "sha256": "d812b82a483e7b2b6ea73fa8b6b8e776e9e3cec8be0beb85c0ce20f419a49aee",
+      "size_bytes": 6894
+    },
+    "no_retry_remains_authorized": true,
+    "status": "CONSUMED_BY_THE_SOLE_AUTHORIZED_INVOCATION"
+  },
+  "canonical_artifacts": {
+    "independent_audit_receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_positive_windows_v1/a09_0000_4400_score_4000_4400_warmstart.audit.json",
+      "schema_version": "aqua-fe-hfnet-positive-a09-0000-4400-score-4000-4400-warmstart-independent-audit-v1",
+      "sha256": "1e36452d2613e2b8a387f6e56e1f6ea8ef0acdb4d774f6de994981777a2ff2b4",
+      "size_bytes": 3071159,
+      "status": "PASS_MATERIALIZED_AND_INDEPENDENTLY_AUDITED_PREPARATION_ONLY"
+    },
+    "materialization_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_positive_windows_v1/a09_0000_4400_score_4000_4400_warmstart/materialization_manifest.json",
+      "schema_version": "aqua-fe-hfnet-positive-a09-0000-4400-score-4000-4400-warmstart-materialization-v1",
+      "sha256": "fb54d28425a0eeea3ec7dec42ff2f433cac0a6303da96a0be1265b841fb36c8d",
+      "size_bytes": 2895623,
+      "status": "PASS_PREPARATION_ONLY"
+    }
+  },
+  "claims": {
+    "accuracy_measured": false,
+    "attempt_prepared": false,
+    "detector_started": false,
+    "evaluator_started": false,
+    "execution_authorized": false,
+    "gpu_workload_started": false,
+    "hfnet_started": false,
+    "process_launch_authorized": false,
+    "ros_started": false,
+    "runner_created": false,
+    "scientific_comparison_produced": false,
+    "slam_started": false,
+    "trajectory_produced": false,
+    "vins_started": false
+  },
+  "execution_observation": {
+    "command_matched_authority_exactly": true,
+    "elapsed_seconds": 105.7,
+    "exit_code": 0,
+    "observed_at_or_after": "2026-08-25T01:30:19+08:00",
+    "status": "PASS_SINGLE_AUTHORIZED_MATERIALIZE_AND_AUDIT"
+  },
+  "frozen_content": {
+    "camera": {
+      "all_output_png_bytes_identical_to_canonical_source_members": true,
+      "all_png_chunk_crc_valid": true,
+      "all_png_idat_decoded": true,
+      "count": 4401,
+      "feed_indices_inclusive": [
+        0,
+        4400
+      ],
+      "feed_timestamp_ns_inclusive": [
+        1542888746071008208,
+        1542888966034698672
+      ],
+      "renamed_inventory_crc32": "9526b009",
+      "renamed_inventory_sha256": "d065372862769e802a3236d297f14cdd8e8ec25fd6607beb3c25c6c6d10f594f",
+      "total_png_bytes": 1125883992
+    },
+    "generated_files": {
+      "cam0_times.txt": {
+        "crc32": "6aff1e64",
+        "sha256": "c8b9bb58e1692ae570cfc855e2069bda734110c2866004093c8eefa4293f16a8",
+        "size_bytes": 88020
+      },
+      "mav0/cam0/data.csv": {
+        "crc32": "b6616fa8",
+        "sha256": "bec600ec64aefbff6679bb482059b6c581934083c2476af052cf9d51f4973a42",
+        "size_bytes": 193669
+      },
+      "mav0/imu0/data.csv": {
+        "crc32": "ff36467b",
+        "sha256": "2281ea603ae9d47d21914423212b930e99d4066edd3bcdccd5758b911d0cd4d8",
+        "size_bytes": 4911770
+      }
+    },
+    "imu": {
+      "count": 43960,
+      "output_boundary_ns_first_second_penultimate_last": [
+        1542888746068186256,
+        1542888746073476784,
+        1542888966032163568,
+        1542888966037387088
+      ],
+      "reader_bracket_valid": true,
+      "strictly_monotonic": true,
+      "synthetic_or_extrapolated_rows_used": false
+    },
+    "payload_excluding_manifest": {
+      "crc32": "79183172",
+      "file_count": 4404,
+      "sha256": "845bc56b0de8df58f0dedde3d22e7a6019ba3b02fa4edc7b6ceec395fdee5f52",
+      "total_size_bytes": 1131077451
+    },
+    "score_boundary": {
+      "initialization_and_preroll_excluded_from_score": true,
+      "prefix_last_camera_timestamp_ns": 1542888945988866768,
+      "preroll_camera_count": 4000,
+      "preroll_camera_indices_half_open": [
+        0,
+        4000
+      ],
+      "score_camera_count": 401,
+      "score_camera_indices_inclusive": [
+        4000,
+        4400
+      ],
+      "score_camera_timestamp_ns_inclusive": [
+        1542888946038630384,
+        1542888966034698672
+      ]
+    },
+    "tree_closure": {
+      "directory_count_including_root": 5,
+      "exact_file_and_directory_closure_passed": true,
+      "file_count_including_manifest": 4405,
+      "manifest_committed_exclusive_last": true,
+      "non_regular_non_directory_count": 0,
+      "symlink_count": 0,
+      "target_reserved_by_no_clobber_mkdirat": true
+    }
+  },
+  "immutable_provenance": {
+    "materializer": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/materialize_hfnet_positive_a09_0000_4400_score_4000_4400_warmstart_v1.py",
+      "sha256": "fd7a53b245a47c74139c5839e7e1e661d338023d6876f0faed88237493152831",
+      "size_bytes": 56301
+    },
+    "payload_pin_derivation_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_payload_pin_derivation_freeze_v1.json",
+      "sha256": "e4c64167c70e326237e7835a8b41140ed1c9a8a55eb9b9490b72f73b3de0e857",
+      "size_bytes": 11763
+    },
+    "runability_protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_runability_rescue_protocol_v1.md",
+      "sha256": "090e3458e7a281dd694c6d31582e729ec93a3a2927521cc7783e338e66f6fb12",
+      "size_bytes": 10944
+    },
+    "selector_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_selector_freeze_v1.json",
+      "sha256": "bfec892d6f58f751c12302e93dfbdcd1132d326dad2506066d4fe8e2e87fd51c",
+      "size_bytes": 5743
+    }
+  },
+  "next_stage_boundary": {
+    "not_permitted": [
+      "attempt preparation before a reviewed A09-specific runner and process-free tests exist",
+      "creating a start claim or invoking a child process",
+      "starting HFNet, ROS, VINS-Fusion, a detector, an evaluator, or GPU work",
+      "retrying or replacing this materialization",
+      "editing the canonical input, manifest, receipt, or prior evidence",
+      "trajectory cropping, APE, RPE, ranking, significance, or paper claims"
+    ],
+    "permitted_now": "additive A09-specific runner implementation, process-free tests, and read-only review only",
+    "runner_and_later_execution_lock_must_pin_this_freeze": true
+  },
+  "schema_version": "aqua-fe-hfnet-v6-a09-warmstart-materialization-freeze-v1",
+  "status": "FROZEN_PASS_PREPARATION_ONLY_RUNNER_IMPLEMENTATION_PERMITTED"
+}

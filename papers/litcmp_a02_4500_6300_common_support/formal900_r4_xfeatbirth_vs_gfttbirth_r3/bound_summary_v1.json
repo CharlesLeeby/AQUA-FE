@@ -1,0 +1,793 @@
+{
+  "bound_summary_hash": "3cfc5f82af1eff32c78dea026a8315467729d1456ff0c67e2e3240c6436967e9",
+  "comparison": {
+    "all_other_summary_leaves_exact": true,
+    "artifact_records": {
+      "primary": {
+        "common_grid_audit.csv": {
+          "sha256": "88cc1664c651585f51728af66543c2a6a82772a70b3aceeca2460793ae23f2fc",
+          "size_bytes": 2802
+        },
+        "common_support_metrics.csv": {
+          "sha256": "a0be6693826227d6a07935dc7413b4f3799419a9551a14f0552c9671916a702c",
+          "size_bytes": 996
+        },
+        "common_support_summary.json": {
+          "sha256": "4b4f6f9ea2d90e30bc6e9ba2c4a5087f814e369826a5c23bf9c3d96d43cb8cc1",
+          "size_bytes": 3760
+        },
+        "runtime_receipt.json": {
+          "sha256": "b821b7f0d88256b8264b5fd87d33b5f96459a57b43fef32603cbbd9e09350bc9",
+          "size_bytes": 2109896
+        }
+      },
+      "verification": {
+        "common_grid_audit.csv": {
+          "sha256": "88cc1664c651585f51728af66543c2a6a82772a70b3aceeca2460793ae23f2fc",
+          "size_bytes": 2802
+        },
+        "common_support_metrics.csv": {
+          "sha256": "a0be6693826227d6a07935dc7413b4f3799419a9551a14f0552c9671916a702c",
+          "size_bytes": 996
+        },
+        "common_support_summary.json": {
+          "sha256": "4b4f6f9ea2d90e30bc6e9ba2c4a5087f814e369826a5c23bf9c3d96d43cb8cc1",
+          "size_bytes": 3760
+        },
+        "runtime_receipt.json": {
+          "sha256": "7834bf617e52f6f1e3e6756b5deb9bb756378f6a5c193ab61528fe20654b6d05",
+          "size_bytes": 2109906
+        }
+      }
+    },
+    "grid_csv_bytes_exact": true,
+    "grid_csv_json_semantics_exact": true,
+    "metrics_csv_bytes_exact": true,
+    "metrics_csv_json_semantics_exact": true,
+    "normalized_summary_sha256": "c15a705b9fcd0e0ef06865392e7fc546cf9908670415b31989cbf3838bb93da7",
+    "runtime_semantic_closure_exact": true,
+    "summary_protocol_support_strict": true,
+    "typed_normalization": "protocol.reference ${procfd}:/aqualoc/colmap_gt -> /home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_6300.bag:/aqualoc/colmap_gt"
+  },
+  "freeze": {
+    "path": "papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_freeze_v3.json",
+    "sha256": "9256c648d462968f5b35f6fa6c94dc409b25a8162f3ee4832dfa24f3611c4bd7",
+    "size_bytes": 2357610
+  },
+  "freeze_hash": "d283b482f820c4ace70a5b362907132cbfd674bb5276604dd8846541b5703c4d",
+  "normalized_summary": {
+    "arms": {
+      "GFTTBIRTH_RAWLK": {
+        "ape_max_m": 2.433710810023551,
+        "ape_median_m": 0.5630787772086008,
+        "ape_rmse_m": 1.0426930765948286,
+        "audit": {
+          "duplicate_count": 0,
+          "finite_count": 854,
+          "raw_count": 854,
+          "rejected_nonfinite_count": 0,
+          "unique_count": 854
+        },
+        "bracket_gap_max_s": 0.10345855995547026,
+        "bracket_gap_p50_s": 0.10001484805252403,
+        "bracket_gap_p95_s": 0.10168893442023545,
+        "legacy_max_reference_reuse": 10,
+        "legacy_pair_count": 854,
+        "legacy_timestamp_error_max_s": 0.4534190079430118,
+        "legacy_timestamp_error_p95_s": 0.45068994556204417,
+        "legacy_unique_assignment_error_max_s": 0.6497444800334051,
+        "legacy_unique_assignment_error_p95_s": 0.05048241917975247,
+        "legacy_unique_assignment_pair_count": 87,
+        "legacy_unique_reference_used": 86,
+        "matched_count": 84,
+        "rejection_histogram": {
+          "INTERPOLATED": 85,
+          "OUT_OF_RANGE": 5
+        },
+        "rpe_max_m": 0.8813442232961177,
+        "rpe_median_m": 0.09218042377954574,
+        "rpe_pairs": 83,
+        "rpe_rmse_m": 0.22902664680271478,
+        "valid_grid_count": 85
+      },
+      "XFEATBIRTH_RAWLK": {
+        "ape_max_m": 1.312976152026489,
+        "ape_median_m": 0.6751966453952849,
+        "ape_rmse_m": 0.7413695191864242,
+        "audit": {
+          "duplicate_count": 0,
+          "finite_count": 845,
+          "raw_count": 845,
+          "rejected_nonfinite_count": 0,
+          "unique_count": 845
+        },
+        "bracket_gap_max_s": 0.10345855995547026,
+        "bracket_gap_p50_s": 0.10002099204575643,
+        "bracket_gap_p95_s": 0.10170286082429811,
+        "legacy_max_reference_reuse": 10,
+        "legacy_pair_count": 845,
+        "legacy_timestamp_error_max_s": 0.4534190079430118,
+        "legacy_timestamp_error_p95_s": 0.4506900607608259,
+        "legacy_unique_assignment_error_max_s": 0.5504080960527062,
+        "legacy_unique_assignment_error_p95_s": 0.05048459197860211,
+        "legacy_unique_assignment_pair_count": 86,
+        "legacy_unique_reference_used": 85,
+        "matched_count": 84,
+        "rejection_histogram": {
+          "INTERPOLATED": 84,
+          "OUT_OF_RANGE": 6
+        },
+        "rpe_max_m": 0.10732670334867485,
+        "rpe_median_m": 0.03245161485441199,
+        "rpe_pairs": 83,
+        "rpe_rmse_m": 0.042378701545324755,
+        "valid_grid_count": 84
+      }
+    },
+    "protocol": {
+      "arm_time_offsets_s": {
+        "GFTTBIRTH_RAWLK": 0.0,
+        "XFEATBIRTH_RAWLK": 0.0
+      },
+      "body_to_camera_applied": true,
+      "contrast_name": "A02_4500_6300_MATCHED_BIRTH_FORMAL900_R4_XFEAT_VS_GFTT_FULL_REFERENCE",
+      "evaluation_rate_hz": 1.0,
+      "max_estimate_gap_s": 0.25,
+      "max_reference_gap_s": 2.5,
+      "nominal_estimate_rate_hz": 10.0,
+      "nominal_reference_rate_hz": 1.0,
+      "reference": "/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_6300.bag:/aqualoc/colmap_gt",
+      "reference_time_offset_s": 0.0,
+      "rpe_delta_s": 1.0,
+      "rpe_semantics": "aligned_global_frame_positional_delta",
+      "window_end_s": 1542829106.6875105,
+      "window_start_s": 1542829016.7004354
+    },
+    "reference": {
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 91,
+        "raw_count": 91,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 91
+      },
+      "bracket_gap_max_s": 1.0031635200139135,
+      "bracket_gap_p50_s": 0.9999331679427996,
+      "bracket_gap_p95_s": 1.0024749519943725,
+      "rejection_histogram": {
+        "EXACT": 1,
+        "INTERPOLATED": 89
+      },
+      "valid_grid_count": 90
+    },
+    "support": {
+      "ape_valid": true,
+      "common_coverage": 0.9333333333333333,
+      "common_span_s": 83.0,
+      "grid_count": 90,
+      "matched_count": 84,
+      "rpe_pairs": 83,
+      "rpe_valid": true,
+      "segment_count": 1,
+      "window_duration_s": 89.98707520007156
+    }
+  },
+  "outcome_boundary": {
+    "confirmatory": false,
+    "cross_window_generalization": false,
+    "outcome_blind": false,
+    "reference_is_image_derived_colmap_not_independent_ground_truth": true,
+    "runner_local_ape_results_visible_before_freeze": true,
+    "statistical_significance": false,
+    "whole_slam_superiority": false
+  },
+  "publication_intent_hash": "277a31d3de462adb559f49be2ab6b003779c269775d10b3f317f0988e8429547",
+  "role_order": [
+    "primary",
+    "verification"
+  ],
+  "role_processes": [
+    {
+      "actual_environment_sha256": "5c9f1ba9fa02c918411f782127385e6fada388bc31cb4ea7caae3763650900e7",
+      "actual_procfd_aliases": {
+        "${EPOCH_WRAPPER_PROCFD}": "/proc/self/fd/2676",
+        "${EVALUATOR_BASE_PROCFD}": "/proc/self/fd/2677",
+        "${ROLE_OUTPUT_DIRFD}": "/proc/self/fd/2681",
+        "${TRAJECTORY_CORE_PROCFD}": "/proc/self/fd/2678",
+        "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_aqualoc_a02_body_T_cam0_v1.yaml": "/proc/self/fd/2672",
+        "/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_6300.bag": "/proc/self/fd/2671",
+        "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_matchedbirth_formal900_r4_gftt_vins_r1/vins_output/vio.csv": "/proc/self/fd/2673",
+        "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_matchedbirth_formal900_r4_xfeat_vins_r1/vins_output/vio.csv": "/proc/self/fd/2674",
+        "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r3/primary": "/proc/self/fd/2681",
+        "/home/ma/AQUA-FE_WS/scripts/formal_g0_child_bootstrap_v2.py": "/proc/self/fd/2675",
+        "/usr/bin/python3.8": "/proc/self/fd/2680"
+      },
+      "actual_procfd_argv": [
+        "/proc/self/fd/2680",
+        "-I",
+        "-B",
+        "/proc/self/fd/2675",
+        "--reference-bag",
+        "/proc/self/fd/2671",
+        "--reference-topic",
+        "/aqualoc/colmap_gt",
+        "--arm",
+        "GFTTBIRTH_RAWLK=/proc/self/fd/2673",
+        "--arm-config",
+        "GFTTBIRTH_RAWLK=/proc/self/fd/2672",
+        "--arm",
+        "XFEATBIRTH_RAWLK=/proc/self/fd/2674",
+        "--arm-config",
+        "XFEATBIRTH_RAWLK=/proc/self/fd/2672",
+        "--nominal-reference-rate-hz",
+        "1",
+        "--nominal-estimate-rate-hz",
+        "10",
+        "--evaluation-rate-hz",
+        "1",
+        "--max-reference-gap-s",
+        "2.5",
+        "--max-estimate-gap-s",
+        "0.25",
+        "--window-start-s",
+        "1542829016.700435392",
+        "--window-end-s",
+        "1542829106.687510592",
+        "--rpe-delta-s",
+        "1",
+        "--min-ape-poses",
+        "30",
+        "--min-ape-span-s",
+        "10",
+        "--min-common-coverage",
+        "0.70",
+        "--min-rpe-pairs",
+        "10",
+        "--contrast-name",
+        "A02_4500_6300_MATCHED_BIRTH_FORMAL900_R4_XFEAT_VS_GFTT_FULL_REFERENCE",
+        "--output-dir",
+        "/proc/self/fd/2681"
+      ],
+      "actual_procfd_binding_records": {
+        "${EPOCH_WRAPPER_PROCFD}": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2676",
+          "record": {
+            "path": "scripts/evaluate_vins_common_support_epoch_v2.py",
+            "sha256": "3c455299b23157cc749b474b9460ca4a408b3bee516e9d1bf2109f253cf89f91",
+            "size_bytes": 5447
+          }
+        },
+        "${EVALUATOR_BASE_PROCFD}": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2677",
+          "record": {
+            "path": "scripts/evaluate_vins_common_support.py",
+            "sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110",
+            "size_bytes": 27933
+          }
+        },
+        "${ROLE_OUTPUT_DIRFD}": {
+          "canonical_path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r3/primary",
+          "kind": "RETAINED_ROLE_OUTPUT_DIRECTORY",
+          "locator": "/proc/self/fd/2681",
+          "role": "primary"
+        },
+        "${TRAJECTORY_CORE_PROCFD}": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2678",
+          "record": {
+            "path": "scripts/trajectory_eval_core.py",
+            "sha256": "aa9ac4da81df7298d1f1c369548ca98a57235916004337cad66f4cf331560635",
+            "size_bytes": 27945
+          }
+        },
+        "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_aqualoc_a02_body_T_cam0_v1.yaml": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2672",
+          "record": {
+            "path": "configs/published_baselines/hfnet_aqualoc_a02_body_T_cam0_v1.yaml",
+            "sha256": "a76c728b31d47c3a87f54c465fb581007ed2da2b7d7d84df81dbde93e9a886c1",
+            "size_bytes": 415
+          }
+        },
+        "/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_6300.bag": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2671",
+          "record": {
+            "path": "datasets/aqualoc/rosbags/archaeo02_4500_6300.bag",
+            "sha256": "eebd45439e76c461e58a2a1d6321f3fcb82dbcf57ea4093929548c9620e63a83",
+            "size_bytes": 449056538
+          }
+        },
+        "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_matchedbirth_formal900_r4_gftt_vins_r1/vins_output/vio.csv": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2673",
+          "record": {
+            "path": "logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_matchedbirth_formal900_r4_gftt_vins_r1/vins_output/vio.csv",
+            "sha256": "7a9bb96b0e9a1cc42f1bad0395d3bff5cc0fe33e723a7be571ed2c314c211d74",
+            "size_bytes": 89819
+          }
+        },
+        "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_matchedbirth_formal900_r4_xfeat_vins_r1/vins_output/vio.csv": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2674",
+          "record": {
+            "path": "logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_matchedbirth_formal900_r4_xfeat_vins_r1/vins_output/vio.csv",
+            "sha256": "2fe7106f112480af71b13a5c17fe8ff521cc76566a656308c3b172e2c08fdca9",
+            "size_bytes": 89021
+          }
+        },
+        "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r3/primary": {
+          "canonical_path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r3/primary",
+          "kind": "RETAINED_ROLE_OUTPUT_DIRECTORY",
+          "locator": "/proc/self/fd/2681",
+          "role": "primary"
+        },
+        "/home/ma/AQUA-FE_WS/scripts/formal_g0_child_bootstrap_v2.py": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2675",
+          "record": {
+            "path": "scripts/formal_g0_child_bootstrap_v2.py",
+            "sha256": "3073b474c4ba2f2b1323ae6fc2f4b8068c69b633367d14c723e9ebb8ec81cab1",
+            "size_bytes": 88835
+          }
+        },
+        "/usr/bin/python3.8": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2680",
+          "record": {
+            "path": "/usr/bin/python3.8",
+            "sha256": "298a9e830ed52f36c299427565485d717d1ce0179c0597cc16560513eb780b06",
+            "size_bytes": 5490456
+          }
+        }
+      },
+      "attempt_count": 1,
+      "authorized_canonical_argv": [
+        "/usr/bin/python3.8",
+        "-I",
+        "-B",
+        "/home/ma/AQUA-FE_WS/scripts/formal_g0_child_bootstrap_v2.py",
+        "--reference-bag",
+        "/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_6300.bag",
+        "--reference-topic",
+        "/aqualoc/colmap_gt",
+        "--arm",
+        "GFTTBIRTH_RAWLK=/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_matchedbirth_formal900_r4_gftt_vins_r1/vins_output/vio.csv",
+        "--arm-config",
+        "GFTTBIRTH_RAWLK=/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_aqualoc_a02_body_T_cam0_v1.yaml",
+        "--arm",
+        "XFEATBIRTH_RAWLK=/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_matchedbirth_formal900_r4_xfeat_vins_r1/vins_output/vio.csv",
+        "--arm-config",
+        "XFEATBIRTH_RAWLK=/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_aqualoc_a02_body_T_cam0_v1.yaml",
+        "--nominal-reference-rate-hz",
+        "1",
+        "--nominal-estimate-rate-hz",
+        "10",
+        "--evaluation-rate-hz",
+        "1",
+        "--max-reference-gap-s",
+        "2.5",
+        "--max-estimate-gap-s",
+        "0.25",
+        "--window-start-s",
+        "1542829016.700435392",
+        "--window-end-s",
+        "1542829106.687510592",
+        "--rpe-delta-s",
+        "1",
+        "--min-ape-poses",
+        "30",
+        "--min-ape-span-s",
+        "10",
+        "--min-common-coverage",
+        "0.70",
+        "--min-rpe-pairs",
+        "10",
+        "--contrast-name",
+        "A02_4500_6300_MATCHED_BIRTH_FORMAL900_R4_XFEAT_VS_GFTT_FULL_REFERENCE",
+        "--output-dir",
+        "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r3/primary"
+      ],
+      "authorized_environment_template": {
+        "AQUAFE_FORMAL_G0_BASE_FD": "${EVALUATOR_BASE_PROCFD}",
+        "AQUAFE_FORMAL_G0_CORE_FD": "${TRAJECTORY_CORE_PROCFD}",
+        "AQUAFE_FORMAL_G0_ROLE": "primary",
+        "AQUAFE_FORMAL_G0_ROLE_OUTPUT_FD": "${ROLE_OUTPUT_DIRFD}",
+        "AQUAFE_FORMAL_G0_WRAPPER_FD": "${EPOCH_WRAPPER_PROCFD}",
+        "AQUAFE_P07_SEALED_EVALUATOR_BASE": "${EVALUATOR_BASE_PROCFD}",
+        "AQUAFE_P07_SEALED_EVALUATOR_CORE": "${TRAJECTORY_CORE_PROCFD}",
+        "HOME": "/home/ma",
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "LOGNAME": "ma",
+        "MKL_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONHASHSEED": "0",
+        "PYTHONNOUSERSITE": "1",
+        "SHELL": "/bin/bash",
+        "USER": "ma"
+      },
+      "child_reaped": true,
+      "classification": "EXITED_RC0",
+      "cleanup_errors": [],
+      "freeze_hash": "d283b482f820c4ace70a5b362907132cbfd674bb5276604dd8846541b5703c4d",
+      "launch_intent_hash": "c614cca6cc9bef87c7d65cae6fe9e469d33d50f91f6a88ae2052d545aa870104",
+      "no_retry": true,
+      "pass_fd_numbers": [
+        2671,
+        2672,
+        2673,
+        2674,
+        2675,
+        2676,
+        2677,
+        2678,
+        2680,
+        2681
+      ],
+      "pid": 50705,
+      "process_receipt_hash": "877b896759c6a024c79e392e3e7b026647ed27fad8e886b6c108eb9b73f43f61",
+      "process_start_count": 1,
+      "process_started_before_wait": true,
+      "return_code": 0,
+      "role": "primary",
+      "schema_version": "aqua-fe-matched-birth-r4-vins-g0-process-role-v4",
+      "spawn_signal_guard": {
+        "child_reaped_before_restore": true,
+        "cleanup_mode_before_restore": true,
+        "handler_lifecycle": "RESTORED_AFTER_CHILD_REAP",
+        "handlers_active_after_child_reap": false,
+        "handlers_installed_before_popen": true,
+        "handlers_restored": true,
+        "install_transition_mask_applied": true,
+        "pid_captured_while_handlers_installed": true,
+        "policy": {
+          "api": "signal.signal_handlers_with_masked_install_restore_transitions",
+          "guarded_signals": [
+            "SIGHUP",
+            "SIGINT",
+            "SIGTERM"
+          ],
+          "require_initially_unblocked": true,
+          "required_prior_handlers": {
+            "SIGHUP": "SIG_DFL",
+            "SIGINT": "signal.default_int_handler",
+            "SIGTERM": "SIG_DFL"
+          },
+          "restore_only_after_child_reaped": true,
+          "spawn_mask_must_be_empty": true
+        },
+        "post_restore_target_mask": [],
+        "prior_handlers": {
+          "SIGHUP": "SIG_DFL",
+          "SIGINT": "signal.default_int_handler",
+          "SIGTERM": "SIG_DFL"
+        },
+        "prior_target_mask": [],
+        "received_signals": [],
+        "restore_transition_mask_applied": true,
+        "spawn_target_mask": []
+      },
+      "status": "COMPLETED_RC0",
+      "stderr": {
+        "sha256": "857f79ad98b5d842b860470a6675d7aeaa1d7ad4a7181b1c3966e7e9bd9c3fff",
+        "size_bytes": 88
+      },
+      "stdout": {
+        "sha256": "469c47c4016bcb9acc13b4c2b49d03c8e836972f7f1232555eec0585e7df49b5",
+        "size_bytes": 79
+      },
+      "termination_signal": null,
+      "timed_out": false,
+      "timeout_seconds": 1800,
+      "wait_error": null
+    },
+    {
+      "actual_environment_sha256": "18cc24b65c46df05d0ed53950ffb792965687aede0582746792e43e094eb72ab",
+      "actual_procfd_aliases": {
+        "${EPOCH_WRAPPER_PROCFD}": "/proc/self/fd/2676",
+        "${EVALUATOR_BASE_PROCFD}": "/proc/self/fd/2677",
+        "${ROLE_OUTPUT_DIRFD}": "/proc/self/fd/2687",
+        "${TRAJECTORY_CORE_PROCFD}": "/proc/self/fd/2678",
+        "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_aqualoc_a02_body_T_cam0_v1.yaml": "/proc/self/fd/2672",
+        "/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_6300.bag": "/proc/self/fd/2671",
+        "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_matchedbirth_formal900_r4_gftt_vins_r1/vins_output/vio.csv": "/proc/self/fd/2673",
+        "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_matchedbirth_formal900_r4_xfeat_vins_r1/vins_output/vio.csv": "/proc/self/fd/2674",
+        "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r3/verification": "/proc/self/fd/2687",
+        "/home/ma/AQUA-FE_WS/scripts/formal_g0_child_bootstrap_v2.py": "/proc/self/fd/2675",
+        "/usr/bin/python3.8": "/proc/self/fd/2680"
+      },
+      "actual_procfd_argv": [
+        "/proc/self/fd/2680",
+        "-I",
+        "-B",
+        "/proc/self/fd/2675",
+        "--reference-bag",
+        "/proc/self/fd/2671",
+        "--reference-topic",
+        "/aqualoc/colmap_gt",
+        "--arm",
+        "GFTTBIRTH_RAWLK=/proc/self/fd/2673",
+        "--arm-config",
+        "GFTTBIRTH_RAWLK=/proc/self/fd/2672",
+        "--arm",
+        "XFEATBIRTH_RAWLK=/proc/self/fd/2674",
+        "--arm-config",
+        "XFEATBIRTH_RAWLK=/proc/self/fd/2672",
+        "--nominal-reference-rate-hz",
+        "1",
+        "--nominal-estimate-rate-hz",
+        "10",
+        "--evaluation-rate-hz",
+        "1",
+        "--max-reference-gap-s",
+        "2.5",
+        "--max-estimate-gap-s",
+        "0.25",
+        "--window-start-s",
+        "1542829016.700435392",
+        "--window-end-s",
+        "1542829106.687510592",
+        "--rpe-delta-s",
+        "1",
+        "--min-ape-poses",
+        "30",
+        "--min-ape-span-s",
+        "10",
+        "--min-common-coverage",
+        "0.70",
+        "--min-rpe-pairs",
+        "10",
+        "--contrast-name",
+        "A02_4500_6300_MATCHED_BIRTH_FORMAL900_R4_XFEAT_VS_GFTT_FULL_REFERENCE",
+        "--output-dir",
+        "/proc/self/fd/2687"
+      ],
+      "actual_procfd_binding_records": {
+        "${EPOCH_WRAPPER_PROCFD}": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2676",
+          "record": {
+            "path": "scripts/evaluate_vins_common_support_epoch_v2.py",
+            "sha256": "3c455299b23157cc749b474b9460ca4a408b3bee516e9d1bf2109f253cf89f91",
+            "size_bytes": 5447
+          }
+        },
+        "${EVALUATOR_BASE_PROCFD}": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2677",
+          "record": {
+            "path": "scripts/evaluate_vins_common_support.py",
+            "sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110",
+            "size_bytes": 27933
+          }
+        },
+        "${ROLE_OUTPUT_DIRFD}": {
+          "canonical_path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r3/verification",
+          "kind": "RETAINED_ROLE_OUTPUT_DIRECTORY",
+          "locator": "/proc/self/fd/2687",
+          "role": "verification"
+        },
+        "${TRAJECTORY_CORE_PROCFD}": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2678",
+          "record": {
+            "path": "scripts/trajectory_eval_core.py",
+            "sha256": "aa9ac4da81df7298d1f1c369548ca98a57235916004337cad66f4cf331560635",
+            "size_bytes": 27945
+          }
+        },
+        "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_aqualoc_a02_body_T_cam0_v1.yaml": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2672",
+          "record": {
+            "path": "configs/published_baselines/hfnet_aqualoc_a02_body_T_cam0_v1.yaml",
+            "sha256": "a76c728b31d47c3a87f54c465fb581007ed2da2b7d7d84df81dbde93e9a886c1",
+            "size_bytes": 415
+          }
+        },
+        "/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_6300.bag": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2671",
+          "record": {
+            "path": "datasets/aqualoc/rosbags/archaeo02_4500_6300.bag",
+            "sha256": "eebd45439e76c461e58a2a1d6321f3fcb82dbcf57ea4093929548c9620e63a83",
+            "size_bytes": 449056538
+          }
+        },
+        "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_matchedbirth_formal900_r4_gftt_vins_r1/vins_output/vio.csv": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2673",
+          "record": {
+            "path": "logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_matchedbirth_formal900_r4_gftt_vins_r1/vins_output/vio.csv",
+            "sha256": "7a9bb96b0e9a1cc42f1bad0395d3bff5cc0fe33e723a7be571ed2c314c211d74",
+            "size_bytes": 89819
+          }
+        },
+        "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_matchedbirth_formal900_r4_xfeat_vins_r1/vins_output/vio.csv": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2674",
+          "record": {
+            "path": "logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_matchedbirth_formal900_r4_xfeat_vins_r1/vins_output/vio.csv",
+            "sha256": "2fe7106f112480af71b13a5c17fe8ff521cc76566a656308c3b172e2c08fdca9",
+            "size_bytes": 89021
+          }
+        },
+        "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r3/verification": {
+          "canonical_path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r3/verification",
+          "kind": "RETAINED_ROLE_OUTPUT_DIRECTORY",
+          "locator": "/proc/self/fd/2687",
+          "role": "verification"
+        },
+        "/home/ma/AQUA-FE_WS/scripts/formal_g0_child_bootstrap_v2.py": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2675",
+          "record": {
+            "path": "scripts/formal_g0_child_bootstrap_v2.py",
+            "sha256": "3073b474c4ba2f2b1323ae6fc2f4b8068c69b633367d14c723e9ebb8ec81cab1",
+            "size_bytes": 88835
+          }
+        },
+        "/usr/bin/python3.8": {
+          "kind": "SEALED_REGULAR_FILE",
+          "locator": "/proc/self/fd/2680",
+          "record": {
+            "path": "/usr/bin/python3.8",
+            "sha256": "298a9e830ed52f36c299427565485d717d1ce0179c0597cc16560513eb780b06",
+            "size_bytes": 5490456
+          }
+        }
+      },
+      "attempt_count": 1,
+      "authorized_canonical_argv": [
+        "/usr/bin/python3.8",
+        "-I",
+        "-B",
+        "/home/ma/AQUA-FE_WS/scripts/formal_g0_child_bootstrap_v2.py",
+        "--reference-bag",
+        "/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_6300.bag",
+        "--reference-topic",
+        "/aqualoc/colmap_gt",
+        "--arm",
+        "GFTTBIRTH_RAWLK=/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_matchedbirth_formal900_r4_gftt_vins_r1/vins_output/vio.csv",
+        "--arm-config",
+        "GFTTBIRTH_RAWLK=/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_aqualoc_a02_body_T_cam0_v1.yaml",
+        "--arm",
+        "XFEATBIRTH_RAWLK=/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_matchedbirth_formal900_r4_xfeat_vins_r1/vins_output/vio.csv",
+        "--arm-config",
+        "XFEATBIRTH_RAWLK=/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_aqualoc_a02_body_T_cam0_v1.yaml",
+        "--nominal-reference-rate-hz",
+        "1",
+        "--nominal-estimate-rate-hz",
+        "10",
+        "--evaluation-rate-hz",
+        "1",
+        "--max-reference-gap-s",
+        "2.5",
+        "--max-estimate-gap-s",
+        "0.25",
+        "--window-start-s",
+        "1542829016.700435392",
+        "--window-end-s",
+        "1542829106.687510592",
+        "--rpe-delta-s",
+        "1",
+        "--min-ape-poses",
+        "30",
+        "--min-ape-span-s",
+        "10",
+        "--min-common-coverage",
+        "0.70",
+        "--min-rpe-pairs",
+        "10",
+        "--contrast-name",
+        "A02_4500_6300_MATCHED_BIRTH_FORMAL900_R4_XFEAT_VS_GFTT_FULL_REFERENCE",
+        "--output-dir",
+        "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r3/verification"
+      ],
+      "authorized_environment_template": {
+        "AQUAFE_FORMAL_G0_BASE_FD": "${EVALUATOR_BASE_PROCFD}",
+        "AQUAFE_FORMAL_G0_CORE_FD": "${TRAJECTORY_CORE_PROCFD}",
+        "AQUAFE_FORMAL_G0_ROLE": "verification",
+        "AQUAFE_FORMAL_G0_ROLE_OUTPUT_FD": "${ROLE_OUTPUT_DIRFD}",
+        "AQUAFE_FORMAL_G0_WRAPPER_FD": "${EPOCH_WRAPPER_PROCFD}",
+        "AQUAFE_P07_SEALED_EVALUATOR_BASE": "${EVALUATOR_BASE_PROCFD}",
+        "AQUAFE_P07_SEALED_EVALUATOR_CORE": "${TRAJECTORY_CORE_PROCFD}",
+        "HOME": "/home/ma",
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "LOGNAME": "ma",
+        "MKL_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONHASHSEED": "0",
+        "PYTHONNOUSERSITE": "1",
+        "SHELL": "/bin/bash",
+        "USER": "ma"
+      },
+      "child_reaped": true,
+      "classification": "EXITED_RC0",
+      "cleanup_errors": [],
+      "freeze_hash": "d283b482f820c4ace70a5b362907132cbfd674bb5276604dd8846541b5703c4d",
+      "launch_intent_hash": "22f478133532099b5eedb4b3b24d03190e01b6cd6edf627647bf0858676ce313",
+      "no_retry": true,
+      "pass_fd_numbers": [
+        2671,
+        2672,
+        2673,
+        2674,
+        2675,
+        2676,
+        2677,
+        2678,
+        2680,
+        2687
+      ],
+      "pid": 50745,
+      "process_receipt_hash": "79121bf6050645001990cdbb6ea69c8ff4d3dce925481c714b9d2b659bd74823",
+      "process_start_count": 1,
+      "process_started_before_wait": true,
+      "return_code": 0,
+      "role": "verification",
+      "schema_version": "aqua-fe-matched-birth-r4-vins-g0-process-role-v4",
+      "spawn_signal_guard": {
+        "child_reaped_before_restore": true,
+        "cleanup_mode_before_restore": true,
+        "handler_lifecycle": "RESTORED_AFTER_CHILD_REAP",
+        "handlers_active_after_child_reap": false,
+        "handlers_installed_before_popen": true,
+        "handlers_restored": true,
+        "install_transition_mask_applied": true,
+        "pid_captured_while_handlers_installed": true,
+        "policy": {
+          "api": "signal.signal_handlers_with_masked_install_restore_transitions",
+          "guarded_signals": [
+            "SIGHUP",
+            "SIGINT",
+            "SIGTERM"
+          ],
+          "require_initially_unblocked": true,
+          "required_prior_handlers": {
+            "SIGHUP": "SIG_DFL",
+            "SIGINT": "signal.default_int_handler",
+            "SIGTERM": "SIG_DFL"
+          },
+          "restore_only_after_child_reaped": true,
+          "spawn_mask_must_be_empty": true
+        },
+        "post_restore_target_mask": [],
+        "prior_handlers": {
+          "SIGHUP": "SIG_DFL",
+          "SIGINT": "signal.default_int_handler",
+          "SIGTERM": "SIG_DFL"
+        },
+        "prior_target_mask": [],
+        "received_signals": [],
+        "restore_transition_mask_applied": true,
+        "spawn_target_mask": []
+      },
+      "status": "COMPLETED_RC0",
+      "stderr": {
+        "sha256": "857f79ad98b5d842b860470a6675d7aeaa1d7ad4a7181b1c3966e7e9bd9c3fff",
+        "size_bytes": 88
+      },
+      "stdout": {
+        "sha256": "df9e523b9dc860fe63842102afa00ca3eedd9b739fda39f83fe6509660c649f7",
+        "size_bytes": 79
+      },
+      "termination_signal": null,
+      "timed_out": false,
+      "timeout_seconds": 1800,
+      "wait_error": null
+    }
+  ],
+  "schema_version": "aqua-fe-matched-birth-r4-vins-g0-bound-summary-v4",
+  "status": "COMPLETED_PRIMARY_AND_VERIFICATION_RC0"
+}

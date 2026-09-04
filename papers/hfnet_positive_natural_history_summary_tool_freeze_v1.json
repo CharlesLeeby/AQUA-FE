@@ -1,0 +1,59 @@
+{
+  "claim_boundary": {
+    "accuracy_evaluation_authorized": false,
+    "ape_or_rpe_authorized": false,
+    "development_only": true,
+    "formal_paper_comparison_authorized": false,
+    "ranking_or_superiority_authorized": false,
+    "runability_summary_only": true,
+    "significance_testing_authorized": false
+  },
+  "commands": {
+    "publish_after_a09_terminal_only": "PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 /home/ma/AQUA-FE_WS/scripts/summarize_hfnet_positive_natural_history_v1.py publish --output-json /home/ma/AQUA-FE_WS/papers/hfnet_positive_natural_history_summary_v1.json --output-markdown /home/ma/AQUA-FE_WS/papers/hfnet_positive_natural_history_summary_v1.md",
+    "test": "PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 -m unittest scripts.tests.test_summarize_hfnet_positive_natural_history_v1",
+    "validate_preterminal": "PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 /home/ma/AQUA-FE_WS/scripts/summarize_hfnet_positive_natural_history_v1.py validate-preterminal"
+  },
+  "created_at_utc": "2026-08-24T19:06:15Z",
+  "independent_review": {
+    "contradiction_probe_fail_status_with_true_adjudication": "REJECTED_A10_STATUS_ADJUDICATION_DISAGREEMENT",
+    "contradiction_probe_pass_status_with_false_adjudication": "REJECTED_A10_STATUS_ADJUDICATION_DISAGREEMENT",
+    "publish_probe": "RC2_PUBLISH_REFUSED_A09_NOT_TERMINAL_NO_OUTPUTS_CREATED",
+    "review": "GO",
+    "validate_preterminal": "RC0_PRETERMINAL_VALIDATED_NOT_PUBLISHABLE"
+  },
+  "inputs": {
+    "a09_current_state": "PREPARED_NOT_STARTED",
+    "natural_history_terminal_windows": [
+      "A06",
+      "A10"
+    ],
+    "pending_natural_history_window": "A09",
+    "selected_windows_role": "PRIOR_DEVELOPMENT_RESULT_CONDITIONED_KLT_POSITIVE_WINDOWS"
+  },
+  "publication_contract": {
+    "a09_terminal_result_required": true,
+    "cold_start_rows_are_history_sensitivity_diagnostics_only": true,
+    "failure_accuracy_state": "NA_NULL_NOT_ZERO",
+    "output_write_mode": "O_EXCL_NO_OVERWRITE",
+    "prepared_state_must_not_count_as_terminal": true,
+    "publish_refusal_before_a09_terminal": "PUBLISH_REFUSED_A09_NOT_TERMINAL"
+  },
+  "schema_version": "aqua-fe-hfnet-positive-natural-history-summary-tool-freeze-v1",
+  "status": "FROZEN_PROCESS_FREE_SUMMARY_TOOL_PRETERMINAL_GO",
+  "tool": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/summarize_hfnet_positive_natural_history_v1.py",
+    "sha256": "6dd2b6ebd401311fd6b2c5ef91ff497e7a9e47548076b1948ac37dee17c008cb",
+    "size_bytes": 36419
+  },
+  "validation": {
+    "process_execution_surface": "NONE",
+    "test_count": 8,
+    "test_result": "PASS",
+    "top_level_status_and_score_adjudication_passed_bidirectionally_bound": true
+  },
+  "validation_test": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_summarize_hfnet_positive_natural_history_v1.py",
+    "sha256": "0691ed2e9415e7e5302a3120c6acbb1f3b8c482f6b87b48eb744305a30fc9b61",
+    "size_bytes": 11076
+  }
+}

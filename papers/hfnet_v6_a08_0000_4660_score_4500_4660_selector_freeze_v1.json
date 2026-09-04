@@ -1,0 +1,116 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a08-0000-4660-score-4500-4660-selector-freeze-v1",
+  "status": "FROZEN_BEFORE_A08_MATERIALIZATION_AND_HFNET_PROCESS_START",
+  "date_local": "2026-08-28",
+  "selection": {
+    "dataset_family": "aqualoc_archaeology",
+    "sequence_id": "A08",
+    "camera_indices_inclusive_for_feed": [
+      0,
+      4660
+    ],
+    "camera_count_for_feed": 4661,
+    "camera_zero_included": true,
+    "camera_zero_inclusion_reason": "After the frozen +53694112 ns IMU-to-camera clock shift, source camera 0 has both a shifted IMU predecessor and successor and is therefore a legal feed frame.",
+    "preroll_camera_indices_inclusive": [
+      0,
+      4499
+    ],
+    "score_camera_indices_inclusive": [
+      4500,
+      4660
+    ],
+    "score_camera_count": 161,
+    "score_history_policy": "Feed frames 0..4660 continuously without estimator reset and score only source frames 4500..4660.",
+    "warm_start": true,
+    "cold_start": false,
+    "synthetic_or_extrapolated_imu_permitted": false
+  },
+  "positive_roster_provenance": {
+    "definition": "A prior learned-plus-KLT full arm had lower APE than the pure-KLT arm on the same historical short window.",
+    "method_family": "FROZEN_XFEAT_HYBRID_OLD_ARBITRATION_20260714",
+    "classification": "main_positive_five_replay_median_four_of_five_wins",
+    "historical_short_window": [
+      4500,
+      4660
+    ],
+    "historical_replay": {
+      "aggregation": "five-replay median reported 2026-07-17",
+      "full_ape_rmse_m": 0.149850,
+      "full_rpe_rmse_m": 0.115440,
+      "klt_ape_rmse_m": 0.200692,
+      "klt_rpe_rmse_m": 0.147971,
+      "full_vs_klt_ape_improvement_percent": 25.333,
+      "full_vs_klt_rpe_improvement_percent": 16.486,
+      "full_wins_of_five": 4,
+      "full_solver_failures": 0,
+      "klt_solver_failures": 0
+    },
+    "development_result_conditioned_selection": true,
+    "confirmatory_or_held_out": false
+  },
+  "frozen_evidence": {
+    "positive_regression_report": {
+      "path": "/home/ma/AQUA-FE_WS/papers/frozen_frontend_eval_20260714/positive_regression_report_20260717.md",
+      "size_bytes": 4433,
+      "sha256": "4ddb11404c64f44537b9d142f97a4d13d744b0db3f18e1f8b857787503024ade"
+    },
+    "positive_regression_summary": {
+      "path": "/home/ma/AQUA-FE_WS/papers/frozen_frontend_eval_20260714/positive_regression_summary_20260717.csv",
+      "size_bytes": 1475,
+      "sha256": "1d46a0bdac7f1d6d1354107dfa03acae64a7c7b6a524d3165be18c509af3246f"
+    },
+    "positive_regression_hash_audit": {
+      "path": "/home/ma/AQUA-FE_WS/papers/frozen_frontend_eval_20260714/positive_regression_hash_audit_20260717.csv",
+      "size_bytes": 9081,
+      "sha256": "ad6684d023d61860f3790a73430021794891a074d3bd1016604b7cbcffa038a3"
+    },
+    "five_replay_results": {
+      "path": "/home/ma/AQUA-FE_WS/papers/frozen_frontend_eval_20260714/a08_4500_4660_repeat_results_20260717.csv",
+      "size_bytes": 2394,
+      "sha256": "f6a807900e08955748695edc9a5c88a8b640dee240bc72b49d2e7029b223d2eb"
+    },
+    "historical_short_raw_bag": {
+      "path": "/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo08_4500_4660.bag",
+      "size_bytes": 34868410,
+      "sha256": "24d576379d153785d03ed9ea77dfad7190d0f00e3e03ae9dbe3ed863edeb65e9"
+    },
+    "historical_learned_plus_klt_feature_bag": {
+      "path": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_jul14frozen3way_a08_4500_4660_oldcontract_microburst/features.bag",
+      "size_bytes": 2461228,
+      "sha256": "6113359ba6bfa957b42302666b72f87b58bbc8300bb19d621522eb70604943f1"
+    },
+    "historical_pure_klt_feature_bag": {
+      "path": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_jul14frozen3way_a08_4500_4660_klt/features.bag",
+      "size_bytes": 2490860,
+      "sha256": "4a47fb1fdc826aad626617b5e286bf006e4600ca192560f7daec4796482ec5d8"
+    }
+  },
+  "canonical_source": {
+    "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_8_raw_data.tar.gz",
+    "size_bytes": 2316571070,
+    "sha256": "b45e4f6dbf852ff8d7e5c9386e3df2db4daa84d1841f1eafb01a4637d2fe9153",
+    "gzip_crc32": "3ebe1f0c",
+    "gzip_isize": 2343168000,
+    "source_camera_count": 9391,
+    "source_imu_count": 93837
+  },
+  "knowledge_boundary": {
+    "window_is_outcome_selected": true,
+    "hfnet_accuracy_not_seen_at_freeze": true,
+    "hfnet_runability_not_seen_at_freeze": true,
+    "historical_full_and_klt_are_cold_crop_context_only": true,
+    "natural_history_hfnet_must_not_be_ranked_against_cold_crop_metrics": true,
+    "accuracy_requires_new_history_matched_controls_and_common_support": true
+  },
+  "claims": {
+    "input_materialized": false,
+    "hfnet_started": false,
+    "hfnet_runability_passed": false,
+    "trajectory_produced": false,
+    "accuracy_evaluated": false,
+    "system_ranking_supported": false,
+    "superiority_supported": false,
+    "confirmatory_evidence": false
+  }
+}

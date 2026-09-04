@@ -1,0 +1,43 @@
+{
+  "completed_sequence_count": 17,
+  "final_manifest_issues": [],
+  "fully_validated_current_hash_count": 85,
+  "global_issues": [],
+  "learned_outcome_read": false,
+  "outcome_boundary": "KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME",
+  "protocol_version": "isj-window-selection-v2",
+  "provenance_attestation_count": 15,
+  "reference_excluded_sequence_count": 1,
+  "reference_excluded_sequences": [
+    "cave_gennie"
+  ],
+  "required_sequence_count": 18,
+  "schema_version": "isj-p06-screening-closeout-v2",
+  "screening_pass_sequence_count": 16,
+  "sequence_issues": {
+    "A01": [],
+    "A02": [],
+    "A03": [],
+    "A04": [],
+    "A07": [],
+    "A08": [],
+    "A09": [],
+    "A10": [],
+    "H01": [],
+    "H02": [],
+    "H03": [],
+    "H04": [],
+    "H05": [],
+    "H06": [],
+    "bus_outside": [],
+    "cave_gennie": [],
+    "cemetery": [
+      "current_attempt_pointer_missing",
+      "missing_run_artifact"
+    ],
+    "fjord_6": []
+  },
+  "status": "IN_PROGRESS",
+  "terminal_sequence_count": 17,
+  "trajectory_outcome_read": false
+}

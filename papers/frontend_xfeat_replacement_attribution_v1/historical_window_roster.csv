@@ -1,0 +1,11 @@
+candidate,status,reason
+a09_6000_6800,INCLUDED_POSITIVE,formal all-arm common-support PASS; distinct bags; actual max 350
+a06_s045_d045,INCLUDED_POSITIVE,frozen supplement common-support PASS; XFeat lower APE and RPE
+a06_s000_d045,INCLUDED_HARM_OR_MIXED,frozen supplement; APE worse but RPE slightly lower
+h07_s000_d050,INCLUDED_HARM,frozen supplement; APE and RPE worse
+a09_4000_4400,EXCLUDED_FROM_POSITIVE_GROUP,formal runability not all-repeat PASS and learned budget exceeded 350
+a10_2400_2800,EXCLUDED_FROM_POSITIVE_GROUP,XFeat runability FAIL and learned budget exceeded 350
+a10_4800_5200,EXCLUDED_FROM_POSITIVE_GROUP,"only 16 common poses, below frozen 30-pose gate"
+A10_samehistory_v4,EXCLUDED_FROM_POSITIVE_GROUP,formal APE gate closed; KLT execution-integrity failure; winner explicitly forbidden
+a02_4500_6300,EXCLUDED_IDENTICAL_INPUT,KLT=SP+LG=XFeat feature bags byte-identical
+afrl_fl_s180_d045,NEUTRAL_NOT_H_TEST,"near tie; old runner did not activate independent mirror, so no displacement accounting"

@@ -1,0 +1,7 @@
+extends: formal_loftr_v31_repro_frontend.yaml
+
+hybrid:
+  # Probe the old A06 timing pattern: after the first early LoFTR support
+  # burst, wait long enough that the next LoFTR proposal lands near the
+  # historical frame-30 coverage-gain burst instead of firing repeatedly.
+  semidense_fallback_min_frame_gap: 20

@@ -1,0 +1,4 @@
+denominator,window_count,operational_low_texture_or_degraded,sparse_base_klt_low_texture,definition,windows
+all_mechanism_positive,5,2,0,"operational degraded/planar/low-grid; sparse means clearly below 350-feature cap","A02;A08"
+project_strict_label,3,1,0,"project roster label; A10 has 3/4 repeatwise dominance against the unbounded shadow","A02"
+audit_repeatwise_all_control,2,1,0,"full lower than native/drop/unbounded in every repeat and all four reconstructed/online metrics","A02"

@@ -1,0 +1,78 @@
+{
+  "schema_version": "aqua-fe-a10-samehistory-klt-input-adoption-manifest-v1",
+  "adoption_disposition": "SEALED_BYTE_PRESERVING_INPUT_ONLY",
+  "evidence_scope": "PIPELINE_DEBUG_AND_SECONDARY_SENSITIVITY_ONLY",
+  "paper_primary_evidence_permitted": false,
+  "selection_policy": {
+    "candidate_count": 1,
+    "backend_trajectories_available_when_adoption_was_frozen": 0,
+    "result_informed_selection": false,
+    "fallback_to_regeneration_within_v3": false
+  },
+  "source_attempt": {
+    "experiment": "a10_samehistory_system_v2",
+    "item_id": "klt_export",
+    "terminal_process_status": "TERMINAL_PROCESS_RC0",
+    "raw_return_code": 0,
+    "artifact_contract_status": "PASS",
+    "execution_integrity_status": "FAIL",
+    "execution_failure_reason": "POSTFLIGHT_PROCESS_PRESENT",
+    "overall_disposition": "EXECUTION_INTEGRITY_FAILED",
+    "overall_pass": false,
+    "must_not_be_described_as_pass": true
+  },
+  "source_attempt_evidence": {
+    "claim": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v2/frontends/klt_export/process_start_claim.json",
+      "sha256": "b43e72f8adaddf121f0c42cc0c29659ed6e4a244f92e4edfadae16f9f91b874c",
+      "size_bytes": 96004
+    },
+    "receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v2/frontends/klt_export/formal_run_receipt_v2.json",
+      "sha256": "cb6c29ca543986c03e973a41c5d3a9b434c6212be163a23cb8ecdbec1d720770",
+      "size_bytes": 98366
+    },
+    "process_log": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v2/frontends/klt_export/supervisor_process.log",
+      "sha256": "7fbd1934ff9dc23cc8a8e4a791025935748d3155cbdc91bacb167fffec2db0c8",
+      "size_bytes": 827
+    },
+    "execution_lock": {
+      "path": "/home/ma/AQUA-FE_WS/papers/samehistory_system_comparison_a10_finalonline_v2_execution_lock.json",
+      "sha256": "12f5602cc884daddb684002c799b92af94931d919f26e5664b6d05419ec6b67e",
+      "size_bytes": 138892
+    }
+  },
+  "adopted_files": {
+    "features_bag": {
+      "source_path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v2/frontends/klt_export/features.bag",
+      "sha256": "34e7ea87dd5706c58e666341776107570cc3351794b92da541f7eb8ec0d04b1f",
+      "size_bytes": 42576500,
+      "output_name": "features.bag",
+      "expected_output_sha256": "34e7ea87dd5706c58e666341776107570cc3351794b92da541f7eb8ec0d04b1f",
+      "expected_output_size_bytes": 42576500
+    },
+    "frontend_metrics": {
+      "source_path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v2/frontends/klt_export/frontend_metrics.csv",
+      "sha256": "ef86317bdb97b272955fe07de8f090c7e2313e4193028d974ecd7e4853030a99",
+      "size_bytes": 1003812,
+      "output_name": "frontend_metrics.csv",
+      "expected_output_sha256": "ef86317bdb97b272955fe07de8f090c7e2313e4193028d974ecd7e4853030a99",
+      "expected_output_size_bytes": 1003812
+    },
+    "camera_yaml": {
+      "source_path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v2/frontends/klt_export/aqualoc_archaeo10_pinhole.yaml",
+      "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+      "size_bytes": 357,
+      "output_name": "aqualoc_archaeo10_pinhole.yaml",
+      "expected_output_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+      "expected_output_size_bytes": 357
+    }
+  },
+  "forbidden_interpretations": [
+    "v2 execution passed",
+    "v2 is a formal successful attempt",
+    "v3 adoption repairs or reclassifies the v2 receipt",
+    "v3 recovery is primary paper evidence without a later exclusive regeneration"
+  ]
+}

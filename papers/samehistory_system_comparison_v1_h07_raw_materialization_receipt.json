@@ -1,0 +1,51 @@
+{
+  "schema_version": "aqua-fe-samehistory-h07-raw-materialization-receipt-v1",
+  "status": "PASS_INPUT_MATERIALIZATION_ONLY",
+  "started_at_local": "2026-08-23T16:52:44.248442050+08:00",
+  "ended_at_local": "2026-08-23T16:54:07.944645310+08:00",
+  "scientific_system_arm_started": false,
+  "selection": {
+    "sequence": "harbor_sequence_07",
+    "source_indices_inclusive": [1, 1720],
+    "score_source_indices_inclusive": [1660, 1720],
+    "synthetic_or_extrapolated_imu_used": false
+  },
+  "inputs": {
+    "source_archive": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/aqualoc/samples/harbor_sequence_07_raw_data.tar.gz",
+      "size_bytes": 357408690,
+      "sha256": "1ddcd260625ff6d69e1788c37f44cbc6a53495a7240475e46372ed9f2689961e"
+    },
+    "groundtruth_proxy": {
+      "path": "/home/ma/AQUA-FE_WS/datasets/aqualoc/metadata/Harbor_sites_sequences/harbor_groundtruth_files/new_harbor_colmap_traj_sequence_07.txt",
+      "size_bytes": 64881,
+      "sha256": "ed35d0825c3db3d992c783ccfa23963a41687f220de2554496f3ed583ac0a0f4"
+    },
+    "converter": {
+      "path": "/home/ma/AQUA-FE_WS/uw_frontend/datasets/aqualoc_raw_to_rosbag.py",
+      "size_bytes": 8310,
+      "sha256": "b0c4b7ce7f3e29dcb18cb1604190cc8690cae370fc222246c8dfeb4fc79ffbec"
+    },
+    "execution_lock_sha256": "14f4a6beebd4af78900a53ec79c35a13738319a792a8d42214aeb7cd3420d8aa"
+  },
+  "output": {
+    "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/raw/harbor07_0001_1720.bag",
+    "size_bytes": 291410228,
+    "sha256": "028697c3c1d36ccb87c98b3862a03608a148e1f8a9a59b88eb99f0a461c53e41",
+    "rosbag_version": "2.0",
+    "indexed": true,
+    "compression": "bz2",
+    "message_count": 19308,
+    "bag_duration_seconds": 86.293432,
+    "topic_counts": {
+      "/camera/image_raw": 1720,
+      "/rtimulib_node/imu": 17250,
+      "/aqualoc/colmap_gt": 338
+    }
+  },
+  "claims": {
+    "trajectory_produced": false,
+    "accuracy_measured": false,
+    "comparison_produced": false
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "attempt_id": "default",
+  "canonical_run_dir": "papers/ieee_sensors_journal_experiments/p06/screening_runs/afrl/bus_outside",
+  "code": [
+    {
+      "path": "uw_frontend/configs/klt_frontend.yaml",
+      "sha256": "73fd335a18ed77c821d8bc19b653f26b544acfa90fbb75a53d65d285888fd653",
+      "size_bytes": 2878
+    },
+    {
+      "path": "uw_frontend/ros/export_vins_features.py",
+      "sha256": "7ed31890e3a55a528430e912df885830176b3c3432c420860a39d714bceae7cf",
+      "size_bytes": 435551
+    },
+    {
+      "path": "scripts/run_p06_afrl_direct_screening.py",
+      "sha256": "16578ba0d58445d90dc400d6c1da781abf96d6b98d46fedc0640aea83017d922",
+      "size_bytes": 4914
+    },
+    {
+      "path": "scripts/run_p06_ros_screening.py",
+      "sha256": "23bd29b43b410e6a4dc4fd6ce1afd17ecf8bb12b4270f730518c7d7c6b6b7367",
+      "size_bytes": 14251
+    },
+    {
+      "path": "scripts/p06_window_selection_v2.py",
+      "sha256": "c50f7e93855e21214ac46a50e38a23e35224826a71cc56f0ed95178874c77c2b",
+      "size_bytes": 2798
+    }
+  ],
+  "command": "AFRL_ADAPTER=isj-p06-afrl-direct-compressed-v1 BACKEND_QUALITY_MODE=default CAMCHAIN=/home/ma/AQUA-FE_WS/datasets/full_downloads/afrl_hf/camera_imu_parameters/camchain_cave_gennie.yaml CAMERA_KEY=cam0 EXPORT_MAX_FEATURES=350 EXPORT_MIN_AGE=0 FORCE_EXPORT=1 FORMAL_THREE_LAYER_EXPORT=0 FRAME_OFFSET=0 FRONTEND_CONFIG=/home/ma/AQUA-FE_WS/uw_frontend/configs/klt_frontend.yaml MEASUREMENT_SELECTION=0 PREPROCESS=adaptive_clahe PROCESS_SKIPPED_FRAMES=0 RAW_BAG=/home/ma/AQUA-FE_WS/datasets/full_downloads/afrl_hf/ros1_bags/bus_outside.bag ROOT=/home/ma/AQUA-FE_WS RUN_DIR=/mnt/data/AQUA-FE_WS/p06_screening_work/afrl/bus_outside RUN_VINS=0 SEMIDENSE_FALLBACK_METHOD=none SRC_IMAGE_TOPIC=/slave1/image_raw/compressed VINS_SAFE_SOURCE_SELECTION=0 python3 scripts/run_p06_afrl_direct_screening.py --raw-bag /home/ma/AQUA-FE_WS/datasets/full_downloads/afrl_hf/ros1_bags/bus_outside.bag --camchain /home/ma/AQUA-FE_WS/datasets/full_downloads/afrl_hf/camera_imu_parameters/camchain_cave_gennie.yaml --camera-key cam0 --image-topic /slave1/image_raw/compressed --duration 584.88264 --work-dir /mnt/data/AQUA-FE_WS/p06_screening_work/afrl/bus_outside",
+  "dataset_family": "afrl",
+  "generated_at_utc": "2026-08-04T19:07:22+00:00",
+  "metrics_path": "papers/ieee_sensors_journal_experiments/p06/screening_runs/afrl/bus_outside/metrics.csv",
+  "outcome_boundary": "KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME",
+  "process_log_path": "papers/ieee_sensors_journal_experiments/p06/screening_runs/afrl/bus_outside/process.log",
+  "protocol_version": "isj-window-selection-v2",
+  "raw_input": {
+    "path": "datasets/full_downloads/afrl_hf/ros1_bags/bus_outside.bag",
+    "registered_sha256": "96e9bced3dc85700d3e2ba3da187b4a2c70395ba4fbb0df985c387da16c331eb",
+    "size_bytes": 2637643144
+  },
+  "returncode": 241,
+  "run_dir": "papers/ieee_sensors_journal_experiments/p06/screening_runs/afrl/bus_outside",
+  "schema_version": "isj-p06-screening-run-v1",
+  "sequence": "bus_outside",
+  "split_role": "SEQUENCE_HELD_OUT_WINDOW_CANDIDATE",
+  "status": "FAILED",
+  "temporary_artifacts_preserved_after_failure": [
+    "/mnt/data/AQUA-FE_WS/p06_screening_work/afrl/bus_outside/features.bag"
+  ],
+  "work_dir": "/mnt/data/AQUA-FE_WS/p06_screening_work/afrl/bus_outside"
+}

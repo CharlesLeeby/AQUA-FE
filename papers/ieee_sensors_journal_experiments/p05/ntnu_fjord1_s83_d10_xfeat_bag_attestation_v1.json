@@ -1,0 +1,80 @@
+{
+  "attestation_hash": "e03e3354996c553f76278f579c0e090d5b93d016538308af30f65a720a343f0b",
+  "backend_contract": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/p05/backend_consumer_contract_xfeat_v1.json",
+  "backend_contract_hash": "4e31a9a29e8ee2198535de6b0bce01550b17077434e8e01ed68057822d4eace4",
+  "backend_runtime": {
+    "backend_quality_alpha": 0.65,
+    "backend_quality_floor": 0.8,
+    "backend_quality_mode": "vins_safe",
+    "constant_quality_to_backend": false,
+    "raw_quality_to_backend": false,
+    "source_quality_constants": {
+      "learned": null,
+      "loftr": null,
+      "sp_lg": null,
+      "xfeat": null
+    },
+    "source_quality_scales": {
+      "learned": 1.0,
+      "loftr": 1.0,
+      "sp_lg": 1.0,
+      "xfeat": 1.0
+    }
+  },
+  "bag_audit": {
+    "feature_frames": 100,
+    "feature_observations": 25013,
+    "feature_topic": "/feature_tracker/feature",
+    "max_features_per_frame": 278,
+    "min_features_per_frame": 221,
+    "nonfeature_messages": 2002,
+    "quality_max": 0.9004404544830322,
+    "quality_min": 0.8278652429580688,
+    "sigma_max": 1.0990568399429321,
+    "sigma_min": 1.0538346767425537,
+    "source_counts": {
+      "20": 25013
+    },
+    "status": "PASS",
+    "total_messages": 2102,
+    "zero_feature_frames": 0
+  },
+  "baseline_id": "M_xfeat_pairwise_nativeq_v1",
+  "contract_pass": true,
+  "feature_bag": "/mnt/data/AQUA-FE_WS/logs/ntnu_vins/external_xfeat_every2_validation_20260804_p05_m_xfeat_fjord1_s83_d10_export/features.bag",
+  "feature_bag_sha256": "210ad894b16de75b10ce374f129f946d41ae5a04ab1f986442fc4d64be2f13de",
+  "feature_bag_size_bytes": 2417077,
+  "frontend_metrics": "/mnt/data/AQUA-FE_WS/logs/ntnu_vins/external_xfeat_every2_validation_20260804_p05_m_xfeat_fjord1_s83_d10_export/frontend_metrics.csv",
+  "frontend_metrics_sha256": "13e04fef7565327bb3af26fc25189c8705414a578c58019a4c193f05a78715ea",
+  "frontend_metrics_size_bytes": 60175,
+  "frontend_runtime": {
+    "export_features": true,
+    "export_max_features": 350,
+    "force_fresh_export_without_override": true,
+    "formal_three_layer_export": false,
+    "measurement_selection": false,
+    "method": "xfeat",
+    "preprocess": "adaptive_clahe",
+    "process_skipped_frames": true,
+    "semidense_fallback_method": "none",
+    "vins_max_cnt": 350,
+    "vins_multiple_thread": false,
+    "vins_safe_source_selection": false
+  },
+  "producer_identity": {
+    "baseline_runner_sha256": "adb5330dd4ab47bcf0d530edd6d8c6bb95d0eb25195f70e83b6e283d255bf81c",
+    "config_chain_sha256": [
+      "73fd335a18ed77c821d8bc19b653f26b544acfa90fbb75a53d65d285888fd653",
+      "118f14bedf0995b1f64e4099ab2eddf653297bc1b55170bc61556e8bcde71d20"
+    ],
+    "exporter_sha256": "7ed31890e3a55a528430e912df885830176b3c3432c420860a39d714bceae7cf",
+    "implementation_sha256": [
+      "c299038feb926e37bada04d0f150e57d45bed2f4d91bad8fb6a0c4ab2b22e6d2",
+      "c59914f67bf2e7a53c9faf3ba901b6de8dfc114497a02756891032ac1d91a592",
+      "2eda020b3b539fa6b55148aaf28d9dcacc39fe94f16fe6b9db5ffa7e9d7426ba"
+    ],
+    "primary_config_sha256": "118f14bedf0995b1f64e4099ab2eddf653297bc1b55170bc61556e8bcde71d20"
+  },
+  "schema_version": "aqua-fe-p05-xfeat-bag-attestation-v1",
+  "status": "PASS"
+}

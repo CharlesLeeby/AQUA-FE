@@ -1,0 +1,5 @@
+window,group,replacement_event_count_frames,replacement_raw_frame_indices,replacement_selected_frame_indices,replacement_first_sim_time,replacement_last_sim_time,backend_init_finish_sim_time_repeat1,last_replacement_minus_init_finish_s,temporal_relation,interpretation
+a09_6000_6800,positive,3,5;7;9,2;3;4,1542889046.2715657,1542889046.471564,1542889047.4278717,-0.9563076496124268,PRE_INIT_HISTORY,replacement altered the initialization history
+a06_s045_d045,positive,3,5;7;9,2;3;4,1542883357.072893,1542883357.2738614,1542883359.1572356,-1.8833742141723633,PRE_INIT_HISTORY,replacement altered the initialization history
+a06_s000_d045,harm_or_mixed,3,3;5;7,1;2;3,1542883311.9299965,1542883312.1300187,1542883316.4378567,-4.307837963104248,PRE_INIT_HISTORY,replacement altered the initialization history
+h07_s000_d050,harm_or_mixed,6,883;885;887;889;891;893,441;442;443;444;445;446,1523387590.2920544,1523387590.793184,1523387547.4417613,43.35142278671265,POST_INIT_PERTURBATION,replacement perturbed an already initialized trajectory

@@ -1,0 +1,58 @@
+extends: h04_identity_churn_loftr_active_takeover_probe.yaml
+
+hybrid:
+  # UVVID Orientkaj left-mono screening probe.
+  #
+  # The left 640 stream often keeps high KLT grid coverage even when track
+  # identity churn is severe, so this profile tests whether a small active
+  # LoFTR sidecar can produce usable raw candidates before any backend replay.
+  source_aware_loftr_modes:
+    - identity_churn
+    - extreme_textureless
+    - low_texture
+    - low_coverage_recovery
+    - planar_near_wall
+
+  # Keep probe runs light: short warmup, bounded attempts, and small batches.
+  semidense_fallback_start_frame: 5
+  semidense_fallback_min_frame_gap: 5
+  semidense_fallback_max_new: 18
+  semidense_fallback_sidecar_max_extra: 18
+  semidense_fallback_max_fraction: 0.08
+  semidense_fallback_reserve_gftt_features: 0
+
+  # For screening, first establish whether LoFTR can produce candidates at all.
+  semidense_acceptance_min_new_tracks: 1
+  semidense_acceptance_min_new_cells: 0
+  semidense_acceptance_min_grid_gain: 0.000
+  semidense_acceptance_min_new_cell_ratio: 0.00
+  semidense_acceptance_subset_on_geometry_fail: true
+  semidense_acceptance_subset_max_count: 4
+  semidense_acceptance_subset_min_count: 1
+  semidense_acceptance_subset_max_per_cell: 1
+
+  semidense_candidate_min_quality: 0.06
+  semidense_candidate_min_ncc: 0.25
+  semidense_candidate_max_fb_error: 2.00
+  semidense_candidate_max_epipolar_error: 3.50
+  semidense_candidate_max_homography_error: 6.00
+
+  source_aware_loftr_requires_confirmation: false
+  source_aware_loftr_min_grid_gain: 0.000
+  source_aware_loftr_min_new_cell_ratio: 0.00
+  source_aware_loftr_min_new_cells: 0
+  source_aware_loftr_max_epipolar_error: 3.50
+  source_aware_loftr_max_homography_error: 6.00
+  source_aware_loftr_min_h_inlier_ratio: 0.60
+
+  learned_confirmation_max_pending: 300
+  learned_confirmation_max_confirmed: 36
+  promotion_loftr_min_quality: 0.06
+  promotion_loftr_max_fb_error: 2.00
+  promotion_loftr_min_ncc: 0.25
+  promotion_loftr_max_grid_texture_score: 1.01
+  promotion_loftr_min_flat_region_ratio: 0.00
+  promotion_loftr_min_h_inlier_ratio: 0.60
+
+measurement_selection:
+  enabled: false

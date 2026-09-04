@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "classical_control_rows": 6,
+    "e3_arms": 63,
+    "heldout_candidates": 4,
+    "modern_baseline_rows": 25,
+    "normal_noharm_rows": 12,
+    "p07_d_terminal": 7,
+    "p07_frontend_completed": 21,
+    "p07_windows": 20,
+    "persistence_rows": 6,
+    "three_replay_groups": 14
+  },
+  "issues": [],
+  "schema_version": "aqua-fe-tasklist-artifact-validation-v2",
+  "scientific_boundary": "DELIVERABLE_SCHEMA_PASS_DOES_NOT_OVERRIDE_P07_PENDING_STATUS",
+  "status": "PASS"
+}

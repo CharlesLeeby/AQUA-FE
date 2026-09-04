@@ -1,0 +1,152 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a06-exact-window-selector-freeze-v1",
+  "created_at": "2026-08-21T22:03:12+08:00",
+  "status": "DEVELOPMENT_EXPOSED_EXACT_WINDOW_INPUT_CONTRACT_FROZEN_BEFORE_MATERIALIZATION",
+  "authorization": {
+    "source": "explicit_user_instruction_to_run_one_external_learned_system_on_a_previously_used_dataset_window",
+    "preparation_only": true,
+    "hfnet_process_start_authorized_by_this_file": false,
+    "runner_or_start_claim_creation_authorized_by_this_file": false,
+    "evaluation_or_accuracy_claim_authorized_by_this_file": false,
+    "formal_scientific_adoption_authorized": false
+  },
+  "knowledge_boundary": {
+    "selection_is_result_blind": false,
+    "development_result_conditioned_selection": true,
+    "selection_reason": "maximize exact score-window overlap with existing AQUA-FE development evidence; extend only the upstream feed to improve official HFNet-SLAM initialization probability",
+    "existing_aqua_fe_a06_2210_2460_results_known_before_selection": true,
+    "hfnet_a06_0000_2460_output_existed_at_freeze": false,
+    "hfnet_a06_0000_2460_trajectory_or_log_content_used": false,
+    "accuracy_based_tuning_authorized": false,
+    "retry_or_window_extension_allowed": false,
+    "maximum_future_hfnet_process_starts": 1,
+    "minimum_success_condition_for_future_run": "at least one finite official HFNet-SLAM pose timestamp inside source-camera score indices 2210..2460 inclusive",
+    "reporting_scope": "development-only external-system runability and same-score-window trajectory coverage; no superiority claim"
+  },
+  "selection": {
+    "dataset_family": "aqualoc_archaeology",
+    "sequence_id": "A06",
+    "camera_indices_inclusive_for_feed": [0, 2460],
+    "camera_count": 2461,
+    "preroll_camera_indices_half_open": [0, 2210],
+    "preroll_camera_count": 2210,
+    "score_camera_indices_inclusive": [2210, 2460],
+    "score_camera_count": 251,
+    "camera_header_ns_inclusive": [1542883311780022336, 1542883434765650624],
+    "actual_feed_span_ns": 122985628288,
+    "expected_nominal_fps": 20.0,
+    "score_window_exactly_matches_existing_aqua_fe_development_window": true,
+    "feed_extension_changes_score_window": false,
+    "p07_namespace_writable": false
+  },
+  "canonical_sources": {
+    "raw_archive": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_6_raw_data.tar.gz",
+      "size_bytes": 758010849,
+      "sha256": "02795e92984321d61cbf7ee5555cf2b4ee344e2263bb7dcf37ffd94cb2472bd9",
+      "gzip_footer_crc32": "48e175ef",
+      "gzip_footer_isize_mod_2_32": 768358400
+    },
+    "image_csv_member": {
+      "member": "raw_data/img_sequence_6.csv",
+      "size_bytes": 121886,
+      "sha256": "4cb417cc2ad306f921c37edb0ec19c8117fd295d0d0aa099620a303e8d2af134",
+      "crc32": "6f9a4e6e"
+    },
+    "imu_csv_member": {
+      "member": "raw_data/imu_sequence_6.csv",
+      "size_bytes": 3784801,
+      "sha256": "c78de2f43971b00721c95b74f99c4ad6cbad4d131d9ace2c73c0d7a118125ca7",
+      "crc32": "e418b047"
+    },
+    "image_member_prefix": "raw_data/images_sequence_6/",
+    "ground_truth": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_groundtruth_files/new_archaeo_colmap_traj_sequence_06.txt",
+      "size_bytes": 23816,
+      "sha256": "6f99b914d2143ba8a8d46f00d9c6c9ac981405d4491891c080380c0679582fe8",
+      "passed_to_hfnet": false,
+      "role": "possible post-run development reference only",
+      "caveat": "updated offline COLMAP image-derived reference with depth-metadata scale correction; not sensor-independent ground truth"
+    },
+    "camera_calibration": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_calibration_files/archaeo_camera_calib.yaml",
+      "size_bytes": 337,
+      "sha256": "e8ce9ad65d82ae563c676689444abd210f81c362586473c5752ee5f9bf2c32e2"
+    },
+    "camera_imu_calibration": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_calibration_files/archaeo_imu_camera_calib.yaml",
+      "size_bytes": 938,
+      "sha256": "e3aad241432b6619395564224fc39cb64931f17ac9446129c47a1ddf6c7a3ebc"
+    },
+    "imu_noise_calibration": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_calibration_files/archaeo_imu_noises.yaml",
+      "size_bytes": 343,
+      "sha256": "9e7dccbce41a69115155d555b85b0b24af301c4841804a9995151fdfb4101454"
+    }
+  },
+  "monocular_inertial_input_contract": {
+    "official_reader": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Examples/Monocular-Inertial/mono_inertial_euroc.cc",
+    "sensor": "IMU_MONOCULAR",
+    "camera": {
+      "width": 968,
+      "height": 608,
+      "png_bit_depth": 8,
+      "png_color_type": 0,
+      "fps_metadata": 20.0,
+      "copy_policy": "selected canonical PNG member bytes copied unchanged and renamed to camera timestamp",
+      "selected_png_count": 2461,
+      "selected_png_total_bytes": 544207164
+    },
+    "imu": {
+      "axis_transform": "none; source T_i_b is identity",
+      "kalibr_timeshift_cam_imu_s": -0.053694112369382575,
+      "output_timestamp_rule": "output_ns=raw_ns-round(timeshift_cam_imu_s*1e9)=raw_ns+53694112",
+      "output_shift_ns": 53694112,
+      "source_data_indices_inclusive_zero_based": [8, 24588],
+      "output_data_row_count": 24581,
+      "first_raw_ns": 1542883311724266784,
+      "last_raw_ns": 1542883434713537344,
+      "first_output_ns": 1542883311777960896,
+      "second_output_ns": 1542883311783094496,
+      "penultimate_output_ns": 1542883434762137952,
+      "last_output_ns": 1542883434767231456,
+      "strict_reader_bracket_rule": "imu[0] <= cam[0] < imu[1] and imu[-2] <= cam[-1] < imu[-1]",
+      "measurement_token_policy": "validate seven finite comma-separated fields; preserve six measurement tokens byte-for-byte",
+      "final_newline": false
+    }
+  },
+  "expected_materialized_payload": {
+    "root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_a06_exact_window_v1/aqualoc_archaeology_a06_0000_2460",
+    "files_excluding_manifest": 2464,
+    "source_image_inventory": {"identity_sha256": "5db91b0aaece01781f6f65b70f7bca082cb70569176914ab7bc7ed8adb354159", "identity_crc32": "a7f6362d"},
+    "renamed_image_inventory": {"identity_sha256": "1dee6b53ef749584f218316701f40fbddbcf4be3fd17e24cae1f1f3a12073193", "identity_crc32": "03c2d990"},
+    "cam0_times": {"size_bytes": 49220, "sha256": "7b81913749fe5b296aae4280531e6e26cda3349791e7331befdb72eb6de7f861", "crc32": "ab59a657"},
+    "cam0_data_csv": {"size_bytes": 108309, "sha256": "91ccea67a551f15090e6136dd754fa6cae00eeece798b3b025c0c1209928eb23", "crc32": "f5fd3504"},
+    "imu0_data_csv": {"size_bytes": 2749671, "sha256": "2e5d9a78192d86d6de55a46f9c29a1f639536e114702b5f9b0480c070d0a9388", "crc32": "40a84fd6"},
+    "payload_identity_excluding_manifest": {"sha256": "a03a119b98ec4c3a862905692325133310acae6d268cabaf7369262803b36673", "crc32": "489e46af"}
+  },
+  "config_contract": {
+    "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_a06_0000_2460_exact_window_v1.yaml",
+    "policy": "copy A02 archaeological dataset adaptation exactly except comments; future runner may rewrite only Extractor.modelPath to an identity-pinned attempt-local copy",
+    "algorithm_frozen": {"extractor": "HFNetRT", "scaleFactor": 1.2, "nLevels": 4, "nFeatures": 675, "threshold": 0.01, "loopClosing": 1}
+  },
+  "fresh_namespaces": {
+    "input_root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_a06_exact_window_v1/aqualoc_archaeology_a06_0000_2460",
+    "future_attempt_root": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a06_0000_2460/attempt_001",
+    "input_root_absent_at_freeze": true,
+    "future_attempt_root_absent_at_freeze": true,
+    "p07_namespace_writable": false
+  },
+  "claims": {
+    "fresh_input_materialized": false,
+    "runner_created": false,
+    "start_claim_created": false,
+    "hfnet_started": false,
+    "vins_started": false,
+    "detector_started": false,
+    "evaluator_started": false,
+    "trajectory_produced": false,
+    "accuracy_measured": false,
+    "scientific_comparison_produced": false
+  }
+}

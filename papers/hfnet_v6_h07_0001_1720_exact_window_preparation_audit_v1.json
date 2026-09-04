@@ -1,0 +1,139 @@
+{
+  "camera": {
+    "all_output_png_bytes_identical_to_canonical_source_members": true,
+    "all_png_chunk_crc_valid": true,
+    "all_png_idat_decoded": true,
+    "chunk_count_histogram": {
+      "13": 2,
+      "14": 5,
+      "15": 3,
+      "16": 11,
+      "17": 10,
+      "18": 34,
+      "19": 133,
+      "20": 229,
+      "21": 268,
+      "22": 268,
+      "23": 290,
+      "24": 228,
+      "25": 79,
+      "26": 83,
+      "27": 50,
+      "28": 27
+    },
+    "count": 1720,
+    "header_ns_inclusive": [
+      1523387546173556704,
+      1523387632157611840
+    ],
+    "inventory_identity": {
+      "crc32": "3a307924",
+      "sha256": "37ccac59d1a8a51820b2896d576522df403303e0f3191e8e1f87020de8d3d7d1"
+    },
+    "schema": "640x512 8-bit grayscale non-interlaced PNG",
+    "score_relative_indices_inclusive": [
+      1659,
+      1719
+    ],
+    "score_source_indices_inclusive": [
+      1660,
+      1720
+    ],
+    "source_gzip_stream_fully_consumed_and_crc_checked": true,
+    "source_indices_inclusive": [
+      1,
+      1720
+    ],
+    "source_members_compared": 1720,
+    "total_png_bytes": 277514774
+  },
+  "claims": {
+    "accuracy_measured": false,
+    "detector_started": false,
+    "evaluator_started": false,
+    "hfnet_started": false,
+    "runner_created": false,
+    "scientific_comparison_produced": false,
+    "start_claim_created": false,
+    "trajectory_produced": false,
+    "vins_started": false
+  },
+  "config": {
+    "crc32": "35b91e9c",
+    "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_h07_0001_1720_exact_window_v1.yaml",
+    "sha256": "97ff0f0e9e2dab17f87ddcb603265a67d841c509d4ffc225ba3695b54a1444e3",
+    "size_bytes": 2150
+  },
+  "file_count_including_manifest": 1724,
+  "generated_files": [
+    {
+      "crc32": "8bbc4603",
+      "path": "cam0_times.txt",
+      "sha256": "53b9b0590db89cec088a564098cc9445a9b9c8bd06cbbb47ceac6e055a46f3e2",
+      "size_bytes": 34400
+    },
+    {
+      "crc32": "7d81ccc4",
+      "path": "mav0/cam0/data.csv",
+      "sha256": "f2528507e8a44ce9d5d87e3267c2976fd195230cce23c03eae9270cd0dbf9567",
+      "size_bytes": 75705
+    },
+    {
+      "crc32": "f21c7966",
+      "path": "mav0/imu0/data.csv",
+      "sha256": "1aad764865eb6289f8202307b82081cc047a4fb37ff0c1beb34ad60b12db17f7",
+      "size_bytes": 1954013
+    }
+  ],
+  "imu": {
+    "count": 17189,
+    "endpoints_ns": [
+      1523387546172002607,
+      1523387546177088623,
+      1523387632156272303,
+      1523387632161311439
+    ],
+    "final_newline": false,
+    "reader_bracket_valid": true,
+    "strictly_monotonic": true
+  },
+  "input_root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_h07_exact_window_v1/aqualoc_harbor_h07_0001_1720",
+  "manifest": {
+    "crc32": "3922b23b",
+    "path": "materialization_manifest.json",
+    "sha256": "2c2f733f65c7ed464cedc75400e83a6b46da4a6fb348bb317e85fbe8d40dcb04",
+    "size_bytes": 1146667
+  },
+  "official_entry": {
+    "crc32": "f70af37f",
+    "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Examples/Monocular-Inertial/mono_inertial_euroc.cc",
+    "sha256": "fa3effb0c2b99bc4dd83abda443180cf2f017f61710e02fa6b3f9278cc774d39",
+    "size_bytes": 10201
+  },
+  "payload_file_count_excluding_manifest": 1723,
+  "payload_identity_excluding_manifest": {
+    "crc32": "2a4e6ed3",
+    "sha256": "744300ce3ba1c295300af570df767ea731c887fe8110f97c67bef5810c0a2827"
+  },
+  "reporting_boundary": "development-only input preparation; no trajectory, accuracy, or comparison",
+  "schema_version": "aqua-fe-hfnet-v6-h07-0001-1720-independent-input-audit-v1",
+  "selector_freeze": {
+    "crc32": "68fbc99d",
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_h07_0001_1720_exact_window_selector_freeze_v1.json",
+    "sha256": "51430c83aa7b9870e1c1106f453cd527005c8adcd84990b544fecdea84294387",
+    "size_bytes": 6108
+  },
+  "source": {
+    "crc32": "12a41f9d",
+    "path": "/mnt/data/AQUA-FE_WS/datasets/aqualoc/samples/harbor_sequence_07_raw_data.tar.gz",
+    "sha256": "1ddcd260625ff6d69e1788c37f44cbc6a53495a7240475e46372ed9f2689961e",
+    "size_bytes": 357408690
+  },
+  "status": "PASS_PREPARATION_ONLY_INDEPENDENT_AUDIT",
+  "synchronization_boundary": {
+    "feed_first_frame_reader_bracket_valid": true,
+    "reason": "no shifted-IMU predecessor; official entry would decrement first_imu to -1",
+    "source_frame_zero_excluded_before_hfnet_start": true,
+    "synthetic_or_extrapolated_imu_used": false
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "schema_version": "aqua-fe-published-supervins-v1-ortsession-construction-smoke-freeze-v1",
+  "created_at": "2026-08-16T22:18:51+08:00",
+  "status": "FROZEN_BEFORE_ORTSESSION_CONSTRUCTION",
+  "scientific_role": "DEVELOPMENT_RUNTIME_QUALIFICATION_ONLY",
+  "relationship_to_r1": {
+    "mode": "ADDITIVE_SEPARATE_AUTHORITY",
+    "r1_contract_is_modified": false,
+    "r1_evidence_is_modified": false,
+    "r1_authorized_terminal_stage_remains": "COMPILE_AND_PREFLIGHT_CHECKPOINT_BEFORE_SESSION_CONSTRUCTION"
+  },
+  "objective": "Start the pinned repaired SuperVINS node at most once, construct the exact extractor and matcher OrtSession objects selected by the official EuRoC configuration, observe the source-ordered waiting marker, then synchronously terminate and reap without publishing or consuming ROS data.",
+  "claim_boundary": {
+    "accuracy_claim_authorized": false,
+    "ape_rpe_authorized": false,
+    "formal_baseline_authorized": false,
+    "model_inference_authorized": false,
+    "ort_session_construction_authorized": true,
+    "ros_data_consumption_authorized": false,
+    "ros_data_publication_authorized": false,
+    "ros_master_start_authorized": false,
+    "ros_node_start_authorized": true,
+    "trajectory_run_authorized": false
+  },
+  "fresh_namespace": {
+    "pre_state": "ABSENT",
+    "evidence_root": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_ortsession_smoke_20260816_r1",
+    "attempt": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_ortsession_smoke_20260816_r1/attempt_001",
+    "start_claim": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_ortsession_smoke_20260816_r1/attempt_001/node_start_claim.json",
+    "reuse_after_any_outcome": false
+  },
+  "one_shot_authority": {
+    "authorization_token": "SUPERVINS_V1_ORTSESSION_SMOKE_ATTEMPT_001_START_ONCE",
+    "maximum_supervins_node_starts": 1,
+    "start_claim_creation": "os.open(O_WRONLY|O_CREAT|O_EXCL, 0o444) before Popen",
+    "timeout_seconds": 45,
+    "termination_sequence": [
+      "SIGTERM_PROCESS_GROUP",
+      "WAIT_UP_TO_3_SECONDS",
+      "SIGKILL_PROCESS_GROUP_IF_NEEDED",
+      "SYNCHRONOUS_WAIT_REAP"
+    ]
+  },
+  "ros_isolation": {
+    "master_uri": "http://127.0.0.1:11551",
+    "master_port_must_be_unbound_pre_and_post": true,
+    "roscore_started": false,
+    "publishers_started": false,
+    "bags_opened_or_replayed": false,
+    "dataset_paths_opened": false,
+    "node_command_has_no_ros_remap_arguments_because_stock_main_requires_argc_equal_2": true
+  },
+  "success_contract": {
+    "required_marker": "waiting for image and imu...",
+    "causal_basis": "In the pinned supervins_main.cpp, estimator.setParameter() returns before the marker; setParameter initializes the pinned extractor session and then the pinned matcher session.",
+    "required_marker_count_minimum": 1,
+    "required_process_started_count": 1,
+    "required_process_reaped": true,
+    "required_post_run_supervins_processes": [],
+    "forbidden_output_markers": [
+      "extract feature time",
+      "matches.size()",
+      "matches.size =",
+      "track image"
+    ],
+    "pass_status": "PASS_DEVELOPMENT_ORTSESSION_CONSTRUCTION_ONLY"
+  },
+  "pinned_command": [
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/devel/lib/supervins/supervins_node",
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/config/euroc/euroc_mono_imu_config.yaml"
+  ],
+  "pinned_r1_governance": {
+    "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_devrepair_20260816_r1/compile_preflight_receipt.json": {
+      "sha256": "a55a523e16fedfafd6083315b2000f6fa4c84176e062243ebb5f45e8eaea3206",
+      "size_bytes": 11593
+    },
+    "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_devrepair_20260816_r1/development_contract.json": {
+      "sha256": "b535d039ead04697ffc6989a921d970dc19ec07f22862d45a32c1a81a22899af",
+      "size_bytes": 3600
+    },
+    "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_devrepair_20260816_r1/repair.patch": {
+      "sha256": "94379f74e31417f883f499a6a8fd4591e93bf24429c852ff83de1ef20a3c75a0",
+      "size_bytes": 2057
+    },
+    "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_devrepair_20260816_r1/artifact_manifest.sha256": {
+      "sha256": "6665a4da939accdf225550c0cbed98c9714f13de7ab644ffa407c695a4b9805b",
+      "size_bytes": 4937
+    },
+    "/home/ma/AQUA-FE_WS/papers/2026-08-16--supervins-v1-development-runtime-repair-r1.md": {
+      "sha256": "74f8daf4ee254015b263d3039e16c2cb02c53d26ca95e79bc8ea44e133a7d989",
+      "size_bytes": 4604
+    },
+    "/home/ma/AQUA-FE_WS/scripts/preflight_published_supervins_v1_devrepair_r1.py": {
+      "sha256": "40491c147b5f578fd921343a5a4260deaf764b9af399d6035b5950a6c5369b2c",
+      "size_bytes": 27373
+    }
+  },
+  "pinned_runtime_artifacts": {
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/devel/lib/supervins/supervins_node": {
+      "sha256": "5aaec22bb03da92f2b48aaff037646d9cd06ab87fd67c594c6dbb005da5ed2e3",
+      "size_bytes": 13269280
+    },
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/devel/lib/libsupervins_lib.so": {
+      "sha256": "42e84ffb781ed2f15582aa487be1e62a315ed9bb54d9db51176c2f5c1a97db22",
+      "size_bytes": 168386832
+    },
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/config/euroc/euroc_mono_imu_config.yaml": {
+      "sha256": "8c2ce030a4a585e483686f9b1c19b652b20e60e13bdf6127d9a2f8cfaa6be62c",
+      "size_bytes": 3233
+    },
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/weights_dpl/superpoint.onnx": {
+      "sha256": "234d12c9f523292efb34e0ca513b011050b0c052700da9c01787b9356a1138d2",
+      "size_bytes": 5272808
+    },
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/weights_dpl/superpoint_lightglue_fused_cpu.onnx": {
+      "sha256": "4f44f440bc08f71afc2ba619d33154d395284001c1387b14a3b58a3224f9490e",
+      "size_bytes": 45634561
+    },
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/CMakeLists.txt": {
+      "sha256": "372508e93580c8ea6c3465543d909da9530e814e484d286e6ce59445b44c4338",
+      "size_bytes": 2425
+    },
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/src/featureTracker/extractor_matcher_dpl.cpp": {
+      "sha256": "43367b8b72e60a951a3c1a79504b1fc8cd3c9bde72f271a6a86da4efd5ed08f0",
+      "size_bytes": 11386
+    },
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/src/supervins_main.cpp": {
+      "sha256": "cd406eb8e3eaffd1222802442e216fadf956a793ee2385459c9a5ddcb31e4aef",
+      "size_bytes": 13301
+    },
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/src/estimator/estimator.cpp": {
+      "sha256": "9d5dc3d99c7dea9de762cc64d9bbb6c9ed15eeef58c7ef574c85b61322bb7291",
+      "size_bytes": 72108
+    },
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/src/featureTracker/feature_tracker_dpl.cpp": {
+      "sha256": "43e5295be7b7e061e353d37057456d1fce613912758bfd847cf12244a6dc62b5",
+      "size_bytes": 37162
+    },
+    "/home/ma/opt/supervins_v1_devrepair_20260816_r1/onnxruntime-linux-x64-gpu-1.16.3/lib/libonnxruntime.so": {
+      "sha256": "b122d45bc0a2110c183784f383060bd897b8424184b31f646ebce1ca8a5c8956",
+      "size_bytes": 19093792
+    },
+    "/home/ma/opt/supervins_v1_devrepair_20260816_r1/onnxruntime-linux-x64-gpu-1.16.3/lib/libonnxruntime_providers_shared.so": {
+      "sha256": "bb0836da2a05ccd946fcef9258201cb85eecf20b9f230f256ac90b0caaa9c04a",
+      "size_bytes": 14216
+    },
+    "/home/ma/opt/supervins_v1_devrepair_20260816_r1/onnxruntime-linux-x64-gpu-1.16.3/lib/libonnxruntime_providers_cuda.so": {
+      "sha256": "676e0d95d5eb0dd1d602c5d42ba320240a25d9342b9ae1dc9d3e838be01f844b",
+      "size_bytes": 377595800
+    }
+  },
+  "source_identity": {
+    "official_commit": "91e85d72a3828844538715cc4b1cd4b86a2620db",
+    "official_tree": "036391d321d4ea9a914739a454c20976f01f7bd7",
+    "official_checkout_must_be_clean": true,
+    "private_allowlisted_diff_sha256": "94379f74e31417f883f499a6a8fd4591e93bf24429c852ff83de1ef20a3c75a0",
+    "private_changed_paths": [
+      "supervins_estimator/CMakeLists.txt",
+      "supervins_estimator/src/featureTracker/extractor_matcher_dpl.cpp"
+    ]
+  },
+  "postcondition": "A pass proves only that the pinned repaired stack can construct its two configured OrtSession objects and reach the no-data wait point. It does not prove inference, tracking, initialization, trajectory accuracy, underwater transfer, or superiority. Any inference smoke requires a new additive protocol and fresh namespace."
+}

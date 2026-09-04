@@ -1,0 +1,141 @@
+{
+  "claims": {
+    "accuracy_measured": false,
+    "hfnet_started": false,
+    "input_materialized": false,
+    "scientific_comparison_produced": false,
+    "trajectory_produced": false
+  },
+  "knowledge_boundary": {
+    "development_result_conditioned_selection": true,
+    "held_out_confirmatory_claim_permitted": false,
+    "note": "A09 4000..4400 was selected from prior AQUA-FE-versus-KLT development evidence. A natural-history HFNet feed is a secondary development-only runability diagnostic after the known A10 warm-start result; it is neither held out nor an accuracy comparison."
+  },
+  "materialization_gate": {
+    "current_state": "BLOCKED_PENDING_READ_ONLY_TARGET_PAYLOAD_PIN_DERIVATION",
+    "derivation_policy": "Before the first production materialization, stream the pinned canonical archive read-only and deterministically construct the target text payloads without publishing the canonical output. Freeze every resulting size/SHA-256/CRC-32 value into the reviewed materializer contract.",
+    "production_materialization_permitted": false,
+    "prohibited": "Do not materialize the canonical namespace to discover values and then backfill them into the contract.",
+    "required_unknown_target_pins": [
+      "selected_4401_image_total_bytes",
+      "source_image_inventory_sha256_and_crc32",
+      "renamed_image_inventory_sha256_and_crc32",
+      "cam0_times_txt_size_sha256_crc32",
+      "mav0_cam0_data_csv_size_sha256_crc32",
+      "mav0_imu0_data_csv_size_sha256_crc32",
+      "payload_excluding_manifest_sha256_and_crc32"
+    ]
+  },
+  "protocol": {
+    "history_policy": "start the unchanged estimator once at canonical source frame 0, feed frames 0..4400 continuously, and preserve the same map and inertial state across the 3999-to-4000 boundary",
+    "initialization_and_preroll_excluded_from_score": true,
+    "method_native_processing_rate_permitted": true,
+    "score_policy": "score only canonical source camera frames 4000..4400 if every frozen runability gate passes",
+    "synthetic_or_extrapolated_imu_permitted": false
+  },
+  "schema_version": "aqua-fe-hfnet-v6-a09-warmstart-selector-freeze-v1",
+  "selection": {
+    "camera_count_for_feed": 4401,
+    "camera_header_ns_inclusive_for_feed": [
+      1542888746071008208,
+      1542888966034698672
+    ],
+    "camera_indices_inclusive_for_feed": [
+      0,
+      4400
+    ],
+    "dataset_family": "aqualoc_archaeology",
+    "preroll_camera_count": 4000,
+    "preroll_camera_indices_half_open": [
+      0,
+      4000
+    ],
+    "preroll_last_camera_header_ns": 1542888945988866768,
+    "score_camera_count": 401,
+    "score_camera_header_ns_inclusive": [
+      1542888946038630384,
+      1542888966034698672
+    ],
+    "score_camera_indices_inclusive": [
+      4000,
+      4400
+    ],
+    "sequence_id": "A09",
+    "warm_start": true,
+    "window_id": "A09_4000_4400"
+  },
+  "selection_evidence": {
+    "existing_hfnet_coldstart_terminal_result": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_4000_4400_coldstart/attempt_001/run_result.json",
+      "sha256": "e6a0ef87e456dc99552b04b5ae00c016bd83302c8c979c57c2c7a5288b988f05",
+      "size_bytes": 4536,
+      "status": "FAIL_EXPLORATORY_COLDSTART_ZERO_KEYFRAMES"
+    },
+    "prior_project_result": "AQUA-FE active final-online beat KLT in 5/5 development replays on A09 4000..4400 with 30 injected observations.",
+    "short_window_bag": {
+      "path": "/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo09_4000_4400.bag",
+      "sha256": "ddc41e776b12bdf5f22a043a5862eba049d1c1494a2ab500ac2bf7893b5d9c54",
+      "size_bytes": 98167227
+    }
+  },
+  "source_authority": {
+    "archive": {
+      "gzip_footer_crc32": "b2f3021d",
+      "gzip_footer_isize_mod_2_32": 1742161920,
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_9_raw_data.tar.gz",
+      "sha256": "4d20237571928067cfe4dbb813224cfd2277270c424a6ef97ef50d2933da2901",
+      "size_bytes": 1722658380
+    },
+    "camera_csv": {
+      "crc32": "6ab5e1f7",
+      "member": "raw_data/img_sequence_9.csv",
+      "sha256": "29dc7cc3e67df003081070c6191107c8d8d6b5183fc62df965bd0fe5b685d03a",
+      "size_bytes": 251738,
+      "source_camera_count": 6992
+    },
+    "configuration": {
+      "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_a06_0000_2460_exact_window_v1.yaml",
+      "sha256": "37ec8f0f274818b3a8f952a535d9be87dae0f8d0436ce05503381791ace69db6",
+      "size_bytes": 2037
+    },
+    "image_member_prefix": "raw_data/images_sequence_9/",
+    "imu_clock_transform": "output_ns=raw_ns+53694112",
+    "imu_csv": {
+      "crc32": "cc6033a9",
+      "member": "raw_data/imu_sequence_9.csv",
+      "sha256": "9334097f6311c5fcfe15dae581b18f479dbe9377f78da0b2ba08f4e5a36c83b3",
+      "size_bytes": 7806649,
+      "source_imu_count": 69861
+    },
+    "imu_selection": {
+      "first_camera_bracket_output_ns": [
+        1542888746068186256,
+        1542888746071008208,
+        1542888746073476784
+      ],
+      "last_camera_bracket_output_ns": [
+        1542888966032163568,
+        1542888966034698672,
+        1542888966037387088
+      ],
+      "raw_boundary_ns_first_second_penultimate_last": [
+        1542888746014492144,
+        1542888746019782672,
+        1542888965978469456,
+        1542888965983692976
+      ],
+      "raw_indices_inclusive_zero_based_excluding_header": [
+        5,
+        43964
+      ],
+      "selected_imu_count": 43960,
+      "shifted_boundary_ns_first_second_penultimate_last": [
+        1542888746068186256,
+        1542888746073476784,
+        1542888966032163568,
+        1542888966037387088
+      ]
+    }
+  },
+  "status": "FROZEN_DESIGN_ONLY_PRE_MATERIALIZATION_BLOCKED"
+}

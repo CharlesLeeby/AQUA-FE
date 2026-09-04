@@ -1,0 +1,61 @@
+{
+  "schema_version": "aqua-fe-a10-samehistory-raw-audit-v1",
+  "status": "PASS",
+  "created_at_local": "2026-08-24T15:41:00+08:00",
+  "source_range": {
+    "camera_indices_inclusive": [0, 2800],
+    "camera_count": 2801,
+    "camera_header_ns_inclusive": [1542888796062978800, 1542888936039921424]
+  },
+  "score_range": {
+    "camera_indices_inclusive": [2400, 2800],
+    "camera_count": 401,
+    "camera_header_ns_inclusive": [1542888916043622160, 1542888936039921424]
+  },
+  "raw_bag": {
+    "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v1/raw/archaeo10_0000_2800.bag",
+    "size_bytes": 765976943,
+    "sha256": "49864715ec19005daa3492fa043fe87204fb6f8cc802b6b98cba55a8ab4fe87e",
+    "compression": "bz2",
+    "message_count": 31004,
+    "topics": {
+      "/camera/image_raw": {
+        "count": 2801,
+        "first_header_ns": 1542888796062978800,
+        "last_header_ns": 1542888936039921424
+      },
+      "/rtimulib_node/imu": {
+        "count": 28064,
+        "first_header_ns": 1542888795864303760,
+        "last_header_ns": 1542888936288708016
+      },
+      "/aqualoc/colmap_gt": {
+        "count": 139,
+        "first_header_ns": 1542888796062978800,
+        "last_header_ns": 1542888936039921424
+      }
+    }
+  },
+  "source_authority": {
+    "archive": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_10_raw_data.tar.gz",
+      "size_bytes": 3761302356,
+      "sha256": "e8bde74e147236c15fe70d0385c618a75b2fc6e18e6f369dc12e355b49faceee"
+    },
+    "reference": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_groundtruth_files/new_archaeo_colmap_traj_sequence_10.txt",
+      "size_bytes": 99504,
+      "sha256": "29149375d1d052fda4daaca7fa244e0096256b2eda0b7e3131d6204e882a4655"
+    },
+    "converter": {
+      "path": "uw_frontend/datasets/aqualoc_raw_to_rosbag.py",
+      "size_bytes": 8310,
+      "sha256": "b0c4b7ce7f3e29dcb18cb1604190cc8690cae370fc222246c8dfeb4fc79ffbec"
+    }
+  },
+  "interpretation": {
+    "synthetic_or_extrapolated_imu": false,
+    "camera_history_matches_hfnet_selector": true,
+    "imu_api_support_byte_identical_to_hfnet": false
+  }
+}

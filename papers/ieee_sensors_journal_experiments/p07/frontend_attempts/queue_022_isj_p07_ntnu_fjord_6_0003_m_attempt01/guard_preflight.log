@@ -1,0 +1,2 @@
+P05_XFEAT_BACKEND_GUARD action=ALLOW_M_XFEAT reasons=0 decision=/home/ma/AQUA-FE_WS/logs/backend_contract_decisions/p05/p05_xfeat_guard_20260806T215009Z_709967_decision.json
+P05 XFeat backend contract PASS; decision=/home/ma/AQUA-FE_WS/logs/backend_contract_decisions/p05/p05_xfeat_guard_20260806T215009Z_709967_decision.json

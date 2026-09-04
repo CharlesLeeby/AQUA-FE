@@ -1,0 +1,101 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a08-0000-4660-score-4500-4660-runner-freeze-v1",
+  "status": "FROZEN_PROCESS_FREE_TESTS_PASS_ATTEMPT_NOT_PREPARED_HFNET_NOT_STARTED",
+  "created_at_local": "2026-08-28T01:46:52+08:00",
+  "scientific_role": "DEVELOPMENT_ONLY_HFNET_NATURAL_HISTORY_RUNABILITY_ON_JULY14_A08_OLD_FROZEN_POSITIVE_WINDOW",
+  "controller": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a08_0000_4660_score_4500_4660_warmstart_v1.py",
+    "size_bytes": 41151,
+    "sha256": "1f7366ee82374d54760323bc405e1077b5de181419bdee0ee2fcc852cf9e6c65"
+  },
+  "controller_tests": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_hfnet_v6_a08_0000_4660_score_4500_4660_warmstart_v1.py",
+    "size_bytes": 15751,
+    "sha256": "ec3a0d81b8cc0fd8a02fba2ed659457137db13cd46ae2ac2514d66d0a21671b9"
+  },
+  "hardened_supervisor": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a05_0001_3700_score_3300_3700_warmstart_v1.py",
+    "size_bytes": 69153,
+    "sha256": "240e4f219c1ef86f9ebb78077ec14ede3cb09002773f00f26747745ad10eab3d"
+  },
+  "input_authority": {
+    "root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_old_frozen_positive_windows_v1/a08_0000_4660_score_4500_4660_warmstart",
+    "materialization_manifest": {
+      "size_bytes": 3062663,
+      "sha256": "46c174a3c57ca3f4565b4b14198c09842777dfab13f0f8573456590fe6970ac0"
+    },
+    "independent_audit_receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_old_frozen_positive_windows_v1/a08_0000_4660_score_4500_4660_warmstart.independent_audit_v1.json",
+      "size_bytes": 5827,
+      "sha256": "2f128f57cdaf463cf67edd03ceb3b3249916061147d639107afba58a7a3e56c6"
+    },
+    "input_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a08_0000_4660_score_4500_4660_input_freeze_v1.json",
+      "size_bytes": 7178,
+      "sha256": "9122f89b486cefbb637542ef31068c116d09cba38fc92a72308997cd6582ae51"
+    },
+    "payload_file_count_excluding_manifest": 4664,
+    "payload_sha256_excluding_manifest": "96780753aa681e97245e0bbffa6e6fb93c67ee15915861ac54dc1f642c58612b",
+    "payload_crc32_excluding_manifest": "08afdf7a"
+  },
+  "selection_authority": {
+    "selector": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a08_0000_4660_score_4500_4660_selector_freeze_v1.json",
+      "size_bytes": 4960,
+      "sha256": "2cc49bb2311c87338a06f266e8557e5ac68fadad044d57f4b6bea09de7522ed7"
+    },
+    "protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a08_0000_4660_score_4500_4660_runability_protocol_v1.md",
+      "size_bytes": 5118,
+      "sha256": "be2681e3f0a31507d47333357f78567255dee0f526dc5b28e3e3d385b8ce6c49"
+    },
+    "historical_evidence_entries_revalidated": 7
+  },
+  "frozen_contract": {
+    "feed_source_indices_inclusive": [0, 4660],
+    "feed_local_indices_inclusive": [0, 4660],
+    "source_to_local_index_offset": 0,
+    "local_to_source_index_offset": 0,
+    "feed_camera_count": 4661,
+    "preroll_indices_inclusive": [0, 4499],
+    "score_source_indices_inclusive": [4500, 4660],
+    "score_local_indices_inclusive": [4500, 4660],
+    "score_camera_count": 161,
+    "score_requires_exact_contiguous_pose_count": "161/161",
+    "score_requires_keyframe": true,
+    "pre_score_initialization_required": true,
+    "score_window_reset_or_reinitialization_permitted": false,
+    "timeout_seconds": 900,
+    "timeout_role": "child-lifetime safety ceiling only; no runtime or realtime claim",
+    "attempt_namespace": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/old_frozen_positive_windows/a08_0000_4660_score_4500_4660_warmstart/attempt_001",
+    "authorization_token": "HFNET_V6_A08_0000_4660_SCORE_4500_4660_WARMSTART_ATTEMPT_001_START_EXACTLY_ONCE",
+    "maximum_hfnet_popen_invocations": 1,
+    "retry_permitted": false,
+    "process_start_claim_o_excl": true,
+    "terminal_result_o_excl": true,
+    "formal_resource_contract_relaxed_for_todesk_or_unrelated_ros": false,
+    "strict_profile_restored_after_prior_corun_overlay": true
+  },
+  "verification": {
+    "python_compile_exit_code": 0,
+    "process_free_unit_test_count": 11,
+    "process_free_unit_test_failures": 0,
+    "real_input_authority_validation": "PASS_READ_ONLY_INPUT_AUTHORITY",
+    "pending_identity_pins": [],
+    "hfnet_process_invocations": 0,
+    "attempt_namespace_exists": false
+  },
+  "claims": {
+    "runner_implemented_and_frozen": true,
+    "attempt_prepared": false,
+    "process_start_claim_created": false,
+    "hfnet_started": false,
+    "trajectory_produced": false,
+    "runability_passed": false,
+    "accuracy_evaluated": false,
+    "runtime_claim_supported": false,
+    "system_ranking_supported": false,
+    "superiority_supported": false,
+    "confirmatory_evidence": false
+  }
+}

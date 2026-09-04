@@ -1,0 +1,99 @@
+klt:
+  max_features: 350
+  min_distance: 18
+  quality_level: 0.01
+  block_size: 7
+  lk_win_size: 21
+  lk_max_level: 3
+  fb_threshold: 1.0
+  min_ncc: 0.65
+  patch_radius: 5
+  border: 8
+  q_min: 0.05
+
+orb:
+  max_features: 600
+  output_features: 350
+  scale_factor: 1.2
+  n_levels: 8
+  edge_threshold: 15
+  patch_size: 31
+  fast_threshold: 12
+  max_hamming_distance: 72
+  min_ncc: 0.55
+  ncc_patch_radius: 5
+  q_min: 0.05
+
+hybrid:
+  min_tracks_for_recovery: 260
+  min_grid_coverage_for_recovery: 0.80
+  max_median_fb_for_recovery: 0.65
+  orb_features: 900
+  orb_fast_threshold: 10
+  max_hamming_distance: 80
+  lost_association_radius: 10.0
+  min_current_distance: 8.0
+  min_recovery_ncc: 0.50
+  max_recovered: 120
+  enable_lk_recovery: false
+  lk_recovery_win_size: 31
+  lk_recovery_max_level: 4
+  lk_recovery_fb_threshold: 3.0
+  lk_recovery_min_ncc: 0.35
+  max_lk_recovered: 180
+  learned_recovery: none
+  learned_max_recovered: 120
+  learned_min_ncc: 0.45
+  learned_min_confidence: 0.0
+  learned_after_orb: false
+  learned_before_lk_on_degradation: true
+  max_degradation_for_recovery: 0.55
+  max_flat_region_ratio_for_recovery: 0.90
+  max_illumination_nonuniformity_for_recovery: 0.48
+  min_backscatter_score_for_recovery: 0.43
+  min_grid_texture_score_for_recovery: 0.10
+  q_min: 0.05
+
+pairwise:
+  max_features: 350
+  association_radius: 8.0
+  min_ncc: 0.35
+  min_confidence: 0.0
+  q_min: 0.05
+
+xfeat:
+  repo_path: external_tools/accelerated_features
+  top_k: 2048
+  semi_dense: false
+  min_cossim: 0.82
+
+lightglue:
+  repo_path: external_tools/LightGlue
+  max_keypoints: 1024
+  resize: 1024
+  filter_threshold: 0.1
+  depth_confidence: 0.95
+  width_confidence: 0.99
+
+loftr:
+  pretrained: outdoor
+  max_dim: 640
+  min_confidence: 0.2
+  max_matches: 1500
+
+grid:
+  rows: 4
+  cols: 6
+
+scheduler:
+  min_tracks: 80
+  min_grid_coverage: 0.45
+  min_f_inlier_ratio: 0.55
+  min_image_quality: 0.25
+  max_median_fb_error: 0.85
+  max_dropout_ratio: 0.45
+  max_degradation_score: 0.55
+  max_flat_region_ratio: 0.90
+  max_illumination_nonuniformity: 0.48
+  min_backscatter_score: 0.43
+  min_grid_texture_score: 0.10

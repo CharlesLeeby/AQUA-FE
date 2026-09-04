@@ -1,0 +1,355 @@
+{
+  "arms": {
+    "klt_r1": {
+      "ape_max_m": 0.16847278288157258,
+      "ape_median_m": 0.06531830692658668,
+      "ape_rmse_m": 0.07158578689952898,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 426,
+        "raw_count": 426,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 426
+      },
+      "bracket_gap_max_s": 0.10191692796070129,
+      "bracket_gap_p50_s": 0.09997183992527425,
+      "bracket_gap_p95_s": 0.1015345664229244,
+      "legacy_max_reference_reuse": 3,
+      "legacy_pair_count": 426,
+      "legacy_timestamp_error_max_s": 0.10377310146577656,
+      "legacy_timestamp_error_p95_s": 0.10130800804472528,
+      "legacy_unique_assignment_error_max_s": 0.19757695100270212,
+      "legacy_unique_assignment_error_p95_s": 0.05035703394096345,
+      "legacy_unique_assignment_pair_count": 172,
+      "legacy_unique_reference_used": 171,
+      "matched_count": 85,
+      "rejection_histogram": {
+        "INTERPOLATED": 85,
+        "OUT_OF_RANGE": 6
+      },
+      "rpe_max_m": 0.05997407233549021,
+      "rpe_median_m": 0.006426262679877214,
+      "rpe_pairs": 83,
+      "rpe_rmse_m": 0.0116340506961859,
+      "valid_grid_count": 85
+    },
+    "klt_r2": {
+      "ape_max_m": 0.1683566198551314,
+      "ape_median_m": 0.06522580423104096,
+      "ape_rmse_m": 0.07150678570424297,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 426,
+        "raw_count": 426,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 426
+      },
+      "bracket_gap_max_s": 0.10191692796070129,
+      "bracket_gap_p50_s": 0.09997183992527425,
+      "bracket_gap_p95_s": 0.1015345664229244,
+      "legacy_max_reference_reuse": 3,
+      "legacy_pair_count": 426,
+      "legacy_timestamp_error_max_s": 0.10377310146577656,
+      "legacy_timestamp_error_p95_s": 0.10130800804472528,
+      "legacy_unique_assignment_error_max_s": 0.19757695100270212,
+      "legacy_unique_assignment_error_p95_s": 0.05035703394096345,
+      "legacy_unique_assignment_pair_count": 172,
+      "legacy_unique_reference_used": 171,
+      "matched_count": 85,
+      "rejection_histogram": {
+        "INTERPOLATED": 85,
+        "OUT_OF_RANGE": 6
+      },
+      "rpe_max_m": 0.059661274844508276,
+      "rpe_median_m": 0.006490782298954934,
+      "rpe_pairs": 83,
+      "rpe_rmse_m": 0.011593105827312431,
+      "valid_grid_count": 85
+    },
+    "klt_r3": {
+      "ape_max_m": 0.1687230729847842,
+      "ape_median_m": 0.0654101690602236,
+      "ape_rmse_m": 0.07176227445646678,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 426,
+        "raw_count": 426,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 426
+      },
+      "bracket_gap_max_s": 0.10191692796070129,
+      "bracket_gap_p50_s": 0.09997183992527425,
+      "bracket_gap_p95_s": 0.1015345664229244,
+      "legacy_max_reference_reuse": 3,
+      "legacy_pair_count": 426,
+      "legacy_timestamp_error_max_s": 0.10377310146577656,
+      "legacy_timestamp_error_p95_s": 0.10130800804472528,
+      "legacy_unique_assignment_error_max_s": 0.19757695100270212,
+      "legacy_unique_assignment_error_p95_s": 0.05035703394096345,
+      "legacy_unique_assignment_pair_count": 172,
+      "legacy_unique_reference_used": 171,
+      "matched_count": 85,
+      "rejection_histogram": {
+        "INTERPOLATED": 85,
+        "OUT_OF_RANGE": 6
+      },
+      "rpe_max_m": 0.05892156999444971,
+      "rpe_median_m": 0.006518500493777631,
+      "rpe_pairs": 83,
+      "rpe_rmse_m": 0.01153990197533746,
+      "valid_grid_count": 85
+    },
+    "splg_r1": {
+      "ape_max_m": 0.16875437444991595,
+      "ape_median_m": 0.0654598499343421,
+      "ape_rmse_m": 0.07175923957796869,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 426,
+        "raw_count": 426,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 426
+      },
+      "bracket_gap_max_s": 0.10191692796070129,
+      "bracket_gap_p50_s": 0.09997183992527425,
+      "bracket_gap_p95_s": 0.1015345664229244,
+      "legacy_max_reference_reuse": 3,
+      "legacy_pair_count": 426,
+      "legacy_timestamp_error_max_s": 0.10377310146577656,
+      "legacy_timestamp_error_p95_s": 0.10130800804472528,
+      "legacy_unique_assignment_error_max_s": 0.19757695100270212,
+      "legacy_unique_assignment_error_p95_s": 0.05035703394096345,
+      "legacy_unique_assignment_pair_count": 172,
+      "legacy_unique_reference_used": 171,
+      "matched_count": 85,
+      "rejection_histogram": {
+        "INTERPOLATED": 85,
+        "OUT_OF_RANGE": 6
+      },
+      "rpe_max_m": 0.056658149355575185,
+      "rpe_median_m": 0.006524195090973714,
+      "rpe_pairs": 83,
+      "rpe_rmse_m": 0.01137612425187928,
+      "valid_grid_count": 85
+    },
+    "splg_r2": {
+      "ape_max_m": 0.16862410405222988,
+      "ape_median_m": 0.06539155358076788,
+      "ape_rmse_m": 0.07164779937945774,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 426,
+        "raw_count": 426,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 426
+      },
+      "bracket_gap_max_s": 0.10191692796070129,
+      "bracket_gap_p50_s": 0.09997183992527425,
+      "bracket_gap_p95_s": 0.1015345664229244,
+      "legacy_max_reference_reuse": 3,
+      "legacy_pair_count": 426,
+      "legacy_timestamp_error_max_s": 0.10377310146577656,
+      "legacy_timestamp_error_p95_s": 0.10130800804472528,
+      "legacy_unique_assignment_error_max_s": 0.19757695100270212,
+      "legacy_unique_assignment_error_p95_s": 0.05035703394096345,
+      "legacy_unique_assignment_pair_count": 172,
+      "legacy_unique_reference_used": 171,
+      "matched_count": 85,
+      "rejection_histogram": {
+        "INTERPOLATED": 85,
+        "OUT_OF_RANGE": 6
+      },
+      "rpe_max_m": 0.05720434461035897,
+      "rpe_median_m": 0.006443175195129711,
+      "rpe_pairs": 83,
+      "rpe_rmse_m": 0.011400073283943627,
+      "valid_grid_count": 85
+    },
+    "splg_r3": {
+      "ape_max_m": 0.16868143356789814,
+      "ape_median_m": 0.0654187138657885,
+      "ape_rmse_m": 0.07174508800104876,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 426,
+        "raw_count": 426,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 426
+      },
+      "bracket_gap_max_s": 0.10191692796070129,
+      "bracket_gap_p50_s": 0.09997183992527425,
+      "bracket_gap_p95_s": 0.1015345664229244,
+      "legacy_max_reference_reuse": 3,
+      "legacy_pair_count": 426,
+      "legacy_timestamp_error_max_s": 0.10377310146577656,
+      "legacy_timestamp_error_p95_s": 0.10130800804472528,
+      "legacy_unique_assignment_error_max_s": 0.19757695100270212,
+      "legacy_unique_assignment_error_p95_s": 0.05035703394096345,
+      "legacy_unique_assignment_pair_count": 172,
+      "legacy_unique_reference_used": 171,
+      "matched_count": 85,
+      "rejection_histogram": {
+        "INTERPOLATED": 85,
+        "OUT_OF_RANGE": 6
+      },
+      "rpe_max_m": 0.06012533840736423,
+      "rpe_median_m": 0.006474896591881776,
+      "rpe_pairs": 83,
+      "rpe_rmse_m": 0.011652951953175585,
+      "valid_grid_count": 85
+    },
+    "xfeat_seed_r1": {
+      "ape_max_m": 0.16855462976508898,
+      "ape_median_m": 0.06522669760798093,
+      "ape_rmse_m": 0.0715910588392625,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 426,
+        "raw_count": 426,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 426
+      },
+      "bracket_gap_max_s": 0.10191692796070129,
+      "bracket_gap_p50_s": 0.09997183992527425,
+      "bracket_gap_p95_s": 0.1015345664229244,
+      "legacy_max_reference_reuse": 3,
+      "legacy_pair_count": 426,
+      "legacy_timestamp_error_max_s": 0.10377310146577656,
+      "legacy_timestamp_error_p95_s": 0.10130800804472528,
+      "legacy_unique_assignment_error_max_s": 0.19757695100270212,
+      "legacy_unique_assignment_error_p95_s": 0.05035703394096345,
+      "legacy_unique_assignment_pair_count": 172,
+      "legacy_unique_reference_used": 171,
+      "matched_count": 85,
+      "rejection_histogram": {
+        "INTERPOLATED": 85,
+        "OUT_OF_RANGE": 6
+      },
+      "rpe_max_m": 0.05781837551082163,
+      "rpe_median_m": 0.006374556766431496,
+      "rpe_pairs": 83,
+      "rpe_rmse_m": 0.011447356945484228,
+      "valid_grid_count": 85
+    },
+    "xfeat_seed_r2": {
+      "ape_max_m": 0.1686058858129552,
+      "ape_median_m": 0.06537360059816537,
+      "ape_rmse_m": 0.07168964803722411,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 426,
+        "raw_count": 426,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 426
+      },
+      "bracket_gap_max_s": 0.10191692796070129,
+      "bracket_gap_p50_s": 0.09997183992527425,
+      "bracket_gap_p95_s": 0.1015345664229244,
+      "legacy_max_reference_reuse": 3,
+      "legacy_pair_count": 426,
+      "legacy_timestamp_error_max_s": 0.10377310146577656,
+      "legacy_timestamp_error_p95_s": 0.10130800804472528,
+      "legacy_unique_assignment_error_max_s": 0.19757695100270212,
+      "legacy_unique_assignment_error_p95_s": 0.05035703394096345,
+      "legacy_unique_assignment_pair_count": 172,
+      "legacy_unique_reference_used": 171,
+      "matched_count": 85,
+      "rejection_histogram": {
+        "INTERPOLATED": 85,
+        "OUT_OF_RANGE": 6
+      },
+      "rpe_max_m": 0.06037325628638869,
+      "rpe_median_m": 0.006465040601380538,
+      "rpe_pairs": 83,
+      "rpe_rmse_m": 0.011668191371538765,
+      "valid_grid_count": 85
+    },
+    "xfeat_seed_r3": {
+      "ape_max_m": 0.1685997565422589,
+      "ape_median_m": 0.06537919591611806,
+      "ape_rmse_m": 0.07162963532204353,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 426,
+        "raw_count": 426,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 426
+      },
+      "bracket_gap_max_s": 0.10191692796070129,
+      "bracket_gap_p50_s": 0.09997183992527425,
+      "bracket_gap_p95_s": 0.1015345664229244,
+      "legacy_max_reference_reuse": 3,
+      "legacy_pair_count": 426,
+      "legacy_timestamp_error_max_s": 0.10377310146577656,
+      "legacy_timestamp_error_p95_s": 0.10130800804472528,
+      "legacy_unique_assignment_error_max_s": 0.19757695100270212,
+      "legacy_unique_assignment_error_p95_s": 0.05035703394096345,
+      "legacy_unique_assignment_pair_count": 172,
+      "legacy_unique_reference_used": 171,
+      "matched_count": 85,
+      "rejection_histogram": {
+        "INTERPOLATED": 85,
+        "OUT_OF_RANGE": 6
+      },
+      "rpe_max_m": 0.05726451913438998,
+      "rpe_median_m": 0.006438202294063014,
+      "rpe_pairs": 83,
+      "rpe_rmse_m": 0.011402963520439836,
+      "valid_grid_count": 85
+    }
+  },
+  "protocol": {
+    "arm_time_offsets_s": {
+      "klt_r1": 0.0,
+      "klt_r2": 0.0,
+      "klt_r3": 0.0,
+      "splg_r1": 0.0,
+      "splg_r2": 0.0,
+      "splg_r3": 0.0,
+      "xfeat_seed_r1": 0.0,
+      "xfeat_seed_r2": 0.0,
+      "xfeat_seed_r3": 0.0
+    },
+    "body_to_camera_applied": true,
+    "contrast_name": "fsbcs1_h01_0_900_all9",
+    "evaluation_rate_hz": 2.0,
+    "max_estimate_gap_s": 0.25,
+    "max_reference_gap_s": 0.625,
+    "nominal_estimate_rate_hz": 10.0,
+    "nominal_reference_rate_hz": 4.0,
+    "reference": "/home/ma/AQUA-FE_WS/logs/aqualoc_real_vins/external_klt_every2_fsbcs1_h01_0_900_klt_r1/features.bag:/aqualoc/colmap_gt",
+    "reference_time_offset_s": 0.0,
+    "rpe_delta_s": 1.0,
+    "rpe_semantics": "aligned_global_frame_positional_delta",
+    "window_end_s": 1523957652.4731767,
+    "window_start_s": 1523957607.4552135
+  },
+  "reference": {
+    "audit": {
+      "duplicate_count": 0,
+      "finite_count": 181,
+      "raw_count": 181,
+      "rejected_nonfinite_count": 0,
+      "unique_count": 181
+    },
+    "bracket_gap_max_s": 0.25411415100097656,
+    "bracket_gap_p50_s": 0.25016164779663086,
+    "bracket_gap_p95_s": 0.25273144245147705,
+    "rejection_histogram": {
+      "EXACT": 1,
+      "INTERPOLATED": 90
+    },
+    "valid_grid_count": 91
+  },
+  "support": {
+    "ape_valid": true,
+    "common_coverage": 0.9340659340659341,
+    "common_span_s": 42.0,
+    "grid_count": 91,
+    "matched_count": 85,
+    "rpe_pairs": 83,
+    "rpe_valid": true,
+    "segment_count": 1,
+    "window_duration_s": 45.01796317100525
+  }
+}

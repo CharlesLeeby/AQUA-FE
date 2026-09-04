@@ -1,0 +1,43 @@
+extends: backend_strict_frontend.yaml
+
+hybrid:
+  # Three-layer backend-safe frontend:
+  # 1) KLT/GFTT remains the only immediately exported backbone.
+  # 2) Learned matchers generate low-texture candidates only.
+  # 3) Learned candidates must survive one LK step before becoming tracks.
+  enable_learned_recovery: false
+  enable_learned_initialization: true
+  learned_init_requires_klt_confirmation: true
+  learned_confirmation_min_frames: 2
+  learned_confirmation_max_pending: 500
+  learned_confirmation_max_confirmed: 80
+  learned_confirmation_reserve_capacity: 80
+  enable_gftt_confirmation: false
+  learned_init_requires_degradation: true
+  learned_init_min_degradation: 0.42
+  learned_init_min_flat_region_ratio: 0.70
+  learned_init_min_grid_coverage: 0.88
+  learned_init_critical_grid_coverage: 0.76
+  max_learned_initialized: 80
+  max_learned_init_fraction: 0.25
+  reserve_gftt_features: 80
+  learned_init_acceptance_min_quality: 0.08
+  enable_learned_init_acceptance_gate: true
+  promotion_lightglue_min_quality: 0.08
+  promotion_lightglue_max_fb_error: 1.50
+  promotion_lightglue_min_ncc: 0.40
+  promotion_xfeat_min_quality: 0.14
+  promotion_xfeat_max_fb_error: 1.20
+  promotion_xfeat_min_ncc: 0.45
+  promotion_xfeat_min_grid_coverage: 0.76
+  promotion_loftr_min_quality: 0.18
+  promotion_loftr_max_fb_error: 0.90
+  promotion_loftr_min_ncc: 0.55
+  promotion_loftr_max_grid_texture_score: 0.35
+  promotion_loftr_min_flat_region_ratio: 0.70
+  promotion_loftr_min_h_inlier_ratio: 0.72
+  enable_candidate_geometry_filter: true
+  candidate_geometry_apply_to_learned: true
+
+measurement_selection:
+  enabled: false

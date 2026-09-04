@@ -1,0 +1,1684 @@
+{
+  "arms": {
+    "B1_CONSTQ": {
+      "guard_governance": {
+        "backend_contract": {
+          "path": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/backend_quality_contract_b1_current_exporter_v3.json",
+          "sha256": "24995595906c0ea2e121ac91e7acbfd1f9d2e583a7011e6953073e9e1134f177",
+          "size_bytes": 9334
+        },
+        "backend_contract_payload_hash": "7b6b653b51f0d3cc559962d18c4f3fdef7592b501123bb46bd40c822519f84a0",
+        "base_backend_contract": {
+          "path": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/backend_quality_contract_v1.json",
+          "sha256": "14abab7ca7ad0f48af8856372b3cf97470d405c1e20081cdb4247f3c87b64957",
+          "size_bytes": 4893
+        },
+        "decision": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/backend_contract_decisions/b1/litcmp_a02_4500_6300_preroll_b1_native_r1/b1_current_exporter_v3_decision.json",
+          "sha256": "888599654870d3d54a3561ef877445571d545db5988d8bc46dabe6d9dfef3ed2",
+          "size_bytes": 2968
+        },
+        "decision_directory": "/mnt/data/AQUA-FE_WS/logs/backend_contract_decisions/b1/litcmp_a02_4500_6300_preroll_b1_native_r1",
+        "eligibility_manifest": {
+          "path": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/data_eligibility_manifest.csv",
+          "sha256": "510c276c33217706eef11ea53e58de4b37318828f8a6dc793dea9262f0a0a0f5",
+          "size_bytes": 46310
+        },
+        "eligibility_row": {
+          "dataset_family": "aqualoc_archaeology",
+          "eligibility": "ELIGIBLE_WITH_REFERENCE_CAVEAT",
+          "raw_input_path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_2_raw_data.tar.gz",
+          "reference_path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_groundtruth_files/new_archaeo_colmap_traj_sequence_02.txt",
+          "sequence": "A02"
+        },
+        "frontend_exporter": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/ros/export_vins_features.py",
+          "sha256": "567ccc74989d7fb4ddcb38ac558fecea33033139a0b0db98e61124c6bac5a00d",
+          "size_bytes": 437542
+        },
+        "status": "PASS",
+        "transition_proof": {
+          "path": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/b1_klt_exporter_7ed_to_567_transition_proof_v2.json",
+          "sha256": "9a149489e1defa790a9ff7a5ec107a75f9c15a506723fea081315c68eaf1dd2a",
+          "size_bytes": 3000
+        }
+      },
+      "input_lineage": {
+        "audited_contract": {
+          "changed_observations": 315000,
+          "feature_frames": 900,
+          "nonquality_nonfeature_and_order_equality": true,
+          "quality": 1.0,
+          "selected_observations": 315000,
+          "sigma": 1.0,
+          "source_codes": [
+            1,
+            2
+          ],
+          "untouched_observations": 0
+        },
+        "constq_feature_bag": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_r1/features.bag",
+          "sha256": "a91b159c46c51c0d3d7232e86901e86862b4f58fbf9bef58a224f9f8444db523",
+          "size_bytes": 27396366
+        },
+        "native_feature_bag": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_native_r1/features.bag",
+          "sha256": "dbe85f68c91e523f56c7f7488accd216a6b56ffc3949eb9e6a09745fa2e5d6cb",
+          "size_bytes": 27396366
+        },
+        "quality_audit": {
+          "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_constq_quality_partition_audit_v2_3_post_incident.json",
+          "sha256": "f1070aa2d0b5972de4530a7645d7b328b239300e249b6d976f4c4adee3bf339b",
+          "size_bytes": 851
+        },
+        "status": "PASS"
+      },
+      "raw_vins_csv_schema": {
+        "all_numeric_fields_finite": true,
+        "integer_nanosecond_timestamps_strictly_increasing_in_raw_file_order": true,
+        "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/vins_output/vio.csv",
+        "row_count": 888,
+        "sha256": "59c505704e9e82c050abe2c3e2edb83517b7044828beb694780646ff7a2bea92",
+        "size_bytes": 93578,
+        "writer_schema": "11_numeric_fields_plus_terminal_empty_field"
+      },
+      "replay_provenance": {
+        "camera_config": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/aqualoc_archaeo02_pinhole.yaml",
+          "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+          "size_bytes": 357
+        },
+        "environment_manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/vins_env_manifest.txt",
+          "sha256": "2345a6e6b9a96963f0bc5b8501ef4b4179d93b8bffa81dc764f5f06fefe40824",
+          "size_bytes": 2278
+        },
+        "feature_bag": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_r1/features.bag",
+          "sha256": "a91b159c46c51c0d3d7232e86901e86862b4f58fbf9bef58a224f9f8444db523",
+          "size_bytes": 27396366
+        },
+        "normalized_vins_config_sha256": "45eb12852b8eff6b14dbfdb8f366fa64eebf7ca5dbf838d791f011dd84a4d084",
+        "process_rc_receipt": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/process_rc_receipt.json",
+          "sha256": "545219acf1fe53422e27c6b0cf1def9d0f83603e1697922ae41dd6122eb43023",
+          "size_bytes": 867
+        },
+        "replay_manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/replay_manifest.txt",
+          "sha256": "a639237629d44c99bf987cbd0148290750bd2f73e709a10e6b5411519410d208",
+          "size_bytes": 508
+        },
+        "ros_master_port": 11531,
+        "runner_identity": {
+          "path": "/home/ma/AQUA-FE_WS/scripts/run_aqualoc_archaeo_vins_eval.sh",
+          "sha256": "c3bdb181fb4a0f9ef457f9dd0f7cffd4b1a79c8ed8dc2e529d62f02c9f98a1cc",
+          "size_bytes": 53436
+        },
+        "vins_binary_identity": {
+          "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/vins/vins_node",
+          "sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+          "size_bytes": 13104360
+        },
+        "vins_config": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/vins_aqualoc_archaeo_external.yaml",
+          "sha256": "17113798c7c20253ecf921ad4a3e709d9060f407ad0070f23fbb9099ac044210",
+          "size_bytes": 982
+        }
+      },
+      "status": "PASS",
+      "trajectory": {
+        "finite_pose_data": true,
+        "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/vins_output/vio.csv",
+        "pose_convention": "world_T_body",
+        "pose_rows": 888,
+        "raw_row_order_validated_without_sort_filter_or_deduplication": true,
+        "score_pose_rows": 450,
+        "sha256": "59c505704e9e82c050abe2c3e2edb83517b7044828beb694780646ff7a2bea92",
+        "size_bytes": 93578,
+        "strictly_increasing_timestamps": true
+      },
+      "vins_log": {
+        "initialization_marker_byte_offset": 2021,
+        "initialization_success_count": 1,
+        "initialization_success_pattern": "\\binitialization[ \\t]+finish!",
+        "marker_counts_after_initialization": {
+          "external_restart": 0,
+          "failure_detection": 0,
+          "linear_solver_failure": 0,
+          "system_reboot": 0
+        },
+        "marker_counts_total": {
+          "external_restart": 0,
+          "failure_detection": 0,
+          "linear_solver_failure": 0,
+          "system_reboot": 0
+        },
+        "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/vins.log",
+        "post_initialization_linear_solver_failure_count": 0,
+        "post_initialization_restart_marker_count": 0,
+        "pre_initialization_linear_solver_failure_count": 0,
+        "sha256": "454d828f9eec6884c680d079e0664db0e4de2dcacc6bef62ad2ddddb8842281e",
+        "size_bytes": 87615
+      }
+    },
+    "HFNET_WHOLE_SYSTEM": {
+      "reasons": [
+        "HFNET_BRIDGE_OUTPUT_NOT_REGULAR_NONSYMLINK:[Errno 2] No such file or directory: '/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v4/post_stop_a02_long1801_headless/bridges/aqualoc_a02_4500_6300_hfnet_world_T_body_v1.csv'"
+      ],
+      "status": "FAIL"
+    },
+    "XFEATBIRTH_RAWLK": {
+      "reasons": [
+        "XFEAT_INPUT_LINEAGE_NOT_PASS"
+      ],
+      "status": "FAIL"
+    }
+  },
+  "evaluation_arm_config_sha256_by_arm": {
+    "B1_CONSTQ": "a76c728b31d47c3a87f54c465fb581007ed2da2b7d7d84df81dbde93e9a886c1",
+    "HFNET_WHOLE_SYSTEM": "a76c728b31d47c3a87f54c465fb581007ed2da2b7d7d84df81dbde93e9a886c1",
+    "XFEATBIRTH_RAWLK": "a76c728b31d47c3a87f54c465fb581007ed2da2b7d7d84df81dbde93e9a886c1"
+  },
+  "evaluation_contract": {
+    "all_three_legal_trajectories_observed": false,
+    "all_three_legal_trajectories_required_for_ranking": true,
+    "ape_valid_and_rpe_valid_required": true,
+    "arm_scientific_failure_does_not_suppress_other_mandatory_arms": true,
+    "reference_mode": "reference_tum_46_rows",
+    "three_arm_evaluation_eligible": false,
+    "window_ns_inclusive": [
+      1542829061692686528,
+      1542829106687510592
+    ]
+  },
+  "frozen_tools": {
+    "aqualoc_vins_runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_aqualoc_archaeo_vins_eval.sh",
+      "sha256": "c3bdb181fb4a0f9ef457f9dd0f7cffd4b1a79c8ed8dc2e529d62f02c9f98a1cc",
+      "size_bytes": 53436
+    },
+    "b1_backend_quality_contract": {
+      "path": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/backend_quality_contract_b1_current_exporter_v3.json",
+      "sha256": "24995595906c0ea2e121ac91e7acbfd1f9d2e583a7011e6953073e9e1134f177",
+      "size_bytes": 9334
+    },
+    "b1_base_backend_quality_contract": {
+      "path": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/backend_quality_contract_v1.json",
+      "sha256": "14abab7ca7ad0f48af8856372b3cf97470d405c1e20081cdb4247f3c87b64957",
+      "size_bytes": 4893
+    },
+    "b1_contract_checker_v3": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/check_b1_klt_nativeq_current_exporter_contract_v3.py",
+      "sha256": "32130de7016ad326281080825e74a9baab214cce1f98379f603e07b29c87d87e",
+      "size_bytes": 14300
+    },
+    "b1_contract_hash_builder_v3": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/build_b1_klt_nativeq_current_exporter_contract_v3.py",
+      "sha256": "5701538678248de97711756264ff9cf5dfb64ff120cfe90f9b2c6376e354a50a",
+      "size_bytes": 2728
+    },
+    "b1_data_eligibility_manifest": {
+      "path": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/data_eligibility_manifest.csv",
+      "sha256": "510c276c33217706eef11ea53e58de4b37318828f8a6dc793dea9262f0a0a0f5",
+      "size_bytes": 46310
+    },
+    "b1_execution_repair_v4": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_a02_b1_klt_nativeq_current_exporter_guarded_v4.sh",
+      "sha256": "0e2735985cc8041ddeb8b9a8cea4c9264844f3c49c5f7349929e6819eb54167f",
+      "size_bytes": 5234
+    },
+    "b1_execution_repair_v4_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_a02_b1_guarded_execution_repair_v4.py",
+      "sha256": "7d1192518e8ee7dec0d96725bae44efb136729674eb7c82b848c659514dcea55",
+      "size_bytes": 4345
+    },
+    "b1_exporter_transition_proof": {
+      "path": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/b1_klt_exporter_7ed_to_567_transition_proof_v2.json",
+      "sha256": "9a149489e1defa790a9ff7a5ec107a75f9c15a506723fea081315c68eaf1dd2a",
+      "size_bytes": 3000
+    },
+    "b1_exporter_transition_prover": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/prove_b1_klt_exporter_transition_v2.py",
+      "sha256": "5541d9e211490c5eb0d0ec39c57e5233597514e30729a9cff1f285382118f50b",
+      "size_bytes": 12428
+    },
+    "b1_frontend_exporter": {
+      "path": "/home/ma/AQUA-FE_WS/uw_frontend/ros/export_vins_features.py",
+      "sha256": "567ccc74989d7fb4ddcb38ac558fecea33033139a0b0db98e61124c6bac5a00d",
+      "size_bytes": 437542
+    },
+    "b1_guarded_runner_v3": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_a02_b1_klt_nativeq_current_exporter_guarded_v3.sh",
+      "sha256": "1525a5f4ff18e6c562ab75ca17539b5748f0d9617e9c331ca4720672cd651d7e",
+      "size_bytes": 4639
+    },
+    "b1_legacy_contract_checker": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/check_b1_klt_nativeq_contract_v1.py",
+      "sha256": "8dafcb3e40278210e4fb545c5e19e347b69898cd45e5af3ec7736ceb682bad15",
+      "size_bytes": 3480
+    },
+    "b1_legacy_contract_hash_builder": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/build_nativeq_backend_contract.py",
+      "sha256": "0c5bbdf3fd1f0948a94df346d29dc8b26ee66666c51287b933db5e7e79a0decc",
+      "size_bytes": 8544
+    },
+    "b1_legacy_guarded_runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_isj_b1_klt_nativeq_guarded_v1.sh",
+      "sha256": "6c112ebdb916becf615b0772c4474a119bf774a17b4f85391ceb88d46d0505d1",
+      "size_bytes": 5604
+    },
+    "b1_nativeq_checker_core": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/check_nativeq_backend_contract.py",
+      "sha256": "37c61326e38d17e2a950fff66c9bd062bed8eab015385da36474c3bb558d3f4f",
+      "size_bytes": 11394
+    },
+    "b1_runtime_closures": {
+      "python_runtime_file_count": 33,
+      "python_runtime_files": {
+        "uw_frontend/__init__.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/__init__.py",
+          "sha256": "44c8ccc9ab0cd7e8637b0dd005f183fb7b250a539c8b22ea6d26889a394f0934",
+          "size_bytes": 75
+        },
+        "uw_frontend/datasets/__init__.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/datasets/__init__.py",
+          "sha256": "3e51607ce52c41b4cdba7cdc4b09e9cf3aff20c2e90b028971ab950cb8010477",
+          "size_bytes": 60
+        },
+        "uw_frontend/datasets/image_sequence.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/datasets/image_sequence.py",
+          "sha256": "2ba225a52a7caab9e92eb6b06c3ae7ff9a0030b96ea78e6f20f4228e97337384",
+          "size_bytes": 4844
+        },
+        "uw_frontend/evaluation/__init__.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/evaluation/__init__.py",
+          "sha256": "b95c4d2adf475a333bb42261ad54ee79656fe5aaecb351c4ecec31c18f5dea9b",
+          "size_bytes": 50
+        },
+        "uw_frontend/evaluation/frontend_metrics.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/evaluation/frontend_metrics.py",
+          "sha256": "dae3258f04316c387bbbee5b0870132f7bac4fb3261b6069f690f06e07b9baf8",
+          "size_bytes": 17993
+        },
+        "uw_frontend/evaluation/measurement_selection.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/evaluation/measurement_selection.py",
+          "sha256": "83230a42744be60e010ee4870011375fdd432a562843388c7adacd030dc298d3",
+          "size_bytes": 46894
+        },
+        "uw_frontend/evaluation/run_frontend_eval.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/evaluation/run_frontend_eval.py",
+          "sha256": "c299038feb926e37bada04d0f150e57d45bed2f4d91bad8fb6a0c4ab2b22e6d2",
+          "size_bytes": 33121
+        },
+        "uw_frontend/geometry/__init__.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/geometry/__init__.py",
+          "sha256": "f51eef8fcc512e338b3c5fd4f1e77f1dcb19dc09ab68eaab9289c968d56de882",
+          "size_bytes": 39
+        },
+        "uw_frontend/geometry/dl_vins_magsac.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/geometry/dl_vins_magsac.py",
+          "sha256": "d3c70b0c1f83f589380db82172b448ade485c101ed10102744f8a8d32487e128",
+          "size_bytes": 4232
+        },
+        "uw_frontend/geometry/grid.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/geometry/grid.py",
+          "sha256": "c1e6be4bfaee6cc1cac222c2dc5ba8f3e941702c60074f8473f663cf706de6eb",
+          "size_bytes": 1155
+        },
+        "uw_frontend/geometry/mode.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/geometry/mode.py",
+          "sha256": "402b5dc3eaecfb450a889502760cd591d02ff9c0e770edb522d1c777634c7a69",
+          "size_bytes": 5833
+        },
+        "uw_frontend/geometry/validation.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/geometry/validation.py",
+          "sha256": "4e2080bf786bf59b13af87ea7ee56b70b5f03892160ccd0a75aa9968d1781bb2",
+          "size_bytes": 2954
+        },
+        "uw_frontend/matchers/__init__.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/matchers/__init__.py",
+          "sha256": "ad377bf38dfe58a58b8db275c70c1f5b9372ab6329d0591bc88ff5425f949c13",
+          "size_bytes": 82
+        },
+        "uw_frontend/matchers/base.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/matchers/base.py",
+          "sha256": "ad1baae7dc56188ae9d4a117de5efe0ae032a1b2749a4de38474c43d960876fa",
+          "size_bytes": 741
+        },
+        "uw_frontend/matchers/classical_gftt.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/matchers/classical_gftt.py",
+          "sha256": "ec846d33ef8cc6ccb8e69fb30d87214c660807f94e9ca3b19aed6c944316604f",
+          "size_bytes": 3799
+        },
+        "uw_frontend/matchers/lightglue_adapter.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/matchers/lightglue_adapter.py",
+          "sha256": "9e44331a4208670575b12dc4a7f2c06d884ea77b3277d42aa1977128954b943a",
+          "size_bytes": 6384
+        },
+        "uw_frontend/matchers/loftr_adapter.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/matchers/loftr_adapter.py",
+          "sha256": "105cf63af51b6d4f8554a76939f88509d30fd85abc1b804ef18f2fd78edaebc2",
+          "size_bytes": 5600
+        },
+        "uw_frontend/matchers/xfeat_adapter.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/matchers/xfeat_adapter.py",
+          "sha256": "919b6b365548f2439b13eb01a24bd3e476de543dfcfa28b77baa09a7692fe345",
+          "size_bytes": 5558
+        },
+        "uw_frontend/quality/__init__.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/quality/__init__.py",
+          "sha256": "940c342bc9918992c9e53190993d1bff4f04970d3d0a9536d99f069a1b4a85fd",
+          "size_bytes": 42
+        },
+        "uw_frontend/quality/feature_confidence.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/quality/feature_confidence.py",
+          "sha256": "2ba770c1be212ec587c64ae0a35b3abc1dd58458f2e6eda572444859faf82864",
+          "size_bytes": 6691
+        },
+        "uw_frontend/quality/image_quality.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/quality/image_quality.py",
+          "sha256": "e0b4a885cb8ecd2909b8abefc0fbc17098c9596df44091d5a3398df56583b89e",
+          "size_bytes": 13301
+        },
+        "uw_frontend/quality/reliability_features.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/quality/reliability_features.py",
+          "sha256": "f5f3d770af0655e7d68dbec9fdf043d6b772dd7b11b0f43ebc821515978cd8a4",
+          "size_bytes": 4064
+        },
+        "uw_frontend/ros/__init__.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/ros/__init__.py",
+          "sha256": "63e8c6c8109779dde006b8e6067ae7dabb9520342bd069a210615ba1a2c774d1",
+          "size_bytes": 59
+        },
+        "uw_frontend/ros/export_vins_features.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/ros/export_vins_features.py",
+          "sha256": "567ccc74989d7fb4ddcb38ac558fecea33033139a0b0db98e61124c6bac5a00d",
+          "size_bytes": 437542
+        },
+        "uw_frontend/scheduler/__init__.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/scheduler/__init__.py",
+          "sha256": "c7ddade87b1a990451e559aa16a24892309a95cee6f5b976bc7e93e719279a90",
+          "size_bytes": 44
+        },
+        "uw_frontend/scheduler/hybrid_scheduler.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/scheduler/hybrid_scheduler.py",
+          "sha256": "71e8ee6f95b47e6fbbfc8d25c96affea2abca217c91c47f75e0d13750ab3279b",
+          "size_bytes": 6956
+        },
+        "uw_frontend/tracking/__init__.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/tracking/__init__.py",
+          "sha256": "74c60ba0b8a4cceec88519da9c269dce3b796812e900a0cdf10110488c2a696a",
+          "size_bytes": 34
+        },
+        "uw_frontend/tracking/hybrid_tracker.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/tracking/hybrid_tracker.py",
+          "sha256": "7772772f1baf0966a4b1096ac1cd3122d71edbe18031756de409443e7c5ea2ae",
+          "size_bytes": 220766
+        },
+        "uw_frontend/tracking/klt_tracker.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/tracking/klt_tracker.py",
+          "sha256": "e60957bc0b45a11ef24824fa95ef9093dbbd7ba5998bc82bb91641c831f1fb5b",
+          "size_bytes": 12306
+        },
+        "uw_frontend/tracking/matcher_recovery.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/tracking/matcher_recovery.py",
+          "sha256": "3d65f84f0d81a85ec7ce97daa44b9885ed8726f4df4c330b76fa390a9eb46e70",
+          "size_bytes": 30796
+        },
+        "uw_frontend/tracking/orb_tracker.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/tracking/orb_tracker.py",
+          "sha256": "c8490ab98348a6e57b2b250df7faf52cc527206449e9a90778001c84d7e363b2",
+          "size_bytes": 10987
+        },
+        "uw_frontend/tracking/pairwise_matcher_tracker.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/tracking/pairwise_matcher_tracker.py",
+          "sha256": "c2796382afdf79f4ab6c06615390749a6a91e5d8b7cf1f239209ea51e47500c6",
+          "size_bytes": 17147
+        },
+        "uw_frontend/tracking/track_state.py": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/tracking/track_state.py",
+          "sha256": "c6a5f23209f830088a33cf2afd733c3520d7da88e14a0f10c01e8d54ce384802",
+          "size_bytes": 1181
+        }
+      },
+      "schema_version": "aqua-fe-b1-python-local-import-and-yaml-extends-closure-v1",
+      "yaml_extends_file_count": 6,
+      "yaml_extends_files": {
+        "uw_frontend/configs/backend_strict_frontend.yaml": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/configs/backend_strict_frontend.yaml",
+          "sha256": "908351d3d9547b98f917ffd059efdc7b279ee7f9199887688cda48e178a4855a",
+          "size_bytes": 9082
+        },
+        "uw_frontend/configs/experiments/loftr_extreme_only_frontend.yaml": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/configs/experiments/loftr_extreme_only_frontend.yaml",
+          "sha256": "d5927fb412de869cfe9dd6275dfb81a566fc33e4149160bafc0e8fa933b27eed",
+          "size_bytes": 2121
+        },
+        "uw_frontend/configs/experiments/low_texture_active_xfeat_sidecar.yaml": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/configs/experiments/low_texture_active_xfeat_sidecar.yaml",
+          "sha256": "2a61f1c57a77df4ed6bf2d85c080c7e6bd754a2ff47171e526e0643a3d617a25",
+          "size_bytes": 1478
+        },
+        "uw_frontend/configs/experiments/low_texture_xfeat_seedchain_frontend.yaml": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/configs/experiments/low_texture_xfeat_seedchain_frontend.yaml",
+          "sha256": "6f89d861cc002dfaf0eaf5f1294b0dbcfab9fe268c5dc0d09082f79811000bf3",
+          "size_bytes": 1493
+        },
+        "uw_frontend/configs/experiments/paper_vins_safe_learned_sidecar.yaml": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/configs/experiments/paper_vins_safe_learned_sidecar.yaml",
+          "sha256": "4500894ee15f4515881de6322e5780ce7f2381b2a1ce7fba4bd3d958e11264ce",
+          "size_bytes": 1964
+        },
+        "uw_frontend/configs/experiments/three_layer_source_aware_frontend.yaml": {
+          "path": "/home/ma/AQUA-FE_WS/uw_frontend/configs/experiments/three_layer_source_aware_frontend.yaml",
+          "sha256": "236e5173611731ffefd3acdd3b9f69429633dac16ae66429690d609fab0dd5d7",
+          "size_bytes": 5453
+        }
+      }
+    },
+    "b1_v2_common_checker_runtime_dependency": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/check_b1_klt_nativeq_current_exporter_contract_v2.py",
+      "sha256": "aa7f0b53049b99ed9dcbc1c511a709f9cc0e492514ac4662c31ca803672f57b6",
+      "size_bytes": 10738
+    },
+    "b1_v2_contract_builder_indirect_dependency": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/build_b1_klt_nativeq_current_exporter_contract_v2.py",
+      "sha256": "cabda6889b1bd4e82607b541104577aa05c42030b20224d36270876b8477be50",
+      "size_bytes": 8739
+    },
+    "b1_v3_synthetic_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_b1_klt_nativeq_current_exporter_contract_v3.py",
+      "sha256": "c38740e508e687fa176b7f970e8f1c966ffb941c598f2c2cd1c0c0fd052a9af5",
+      "size_bytes": 5193
+    },
+    "canonical_raw_converter": {
+      "path": "/home/ma/AQUA-FE_WS/uw_frontend/datasets/aqualoc_raw_to_rosbag.py",
+      "sha256": "b0c4b7ce7f3e29dcb18cb1604190cc8690cae370fc222246c8dfeb4fc79ffbec",
+      "size_bytes": 8310
+    },
+    "evaluation_config": {
+      "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_aqualoc_a02_body_T_cam0_v1.yaml",
+      "sha256": "a76c728b31d47c3a87f54c465fb581007ed2da2b7d7d84df81dbde93e9a886c1",
+      "size_bytes": 415
+    },
+    "evaluator": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support.py",
+      "sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110",
+      "size_bytes": 27933
+    },
+    "hfnet_bridge": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/bridge_hfnet_world_body_to_vins_csv_v1.py",
+      "sha256": "5b14003204da7724f5a750bd0f6538575517aae7e21202c9b468a2716a84d2a1",
+      "size_bytes": 11210
+    },
+    "hfnet_python_runtime_closure": {
+      "runtime_file_count": 6,
+      "runtime_files": {
+        "scripts/export_aqualoc_a02_shared_4500_6300_v1.py": {
+          "path": "/home/ma/AQUA-FE_WS/scripts/export_aqualoc_a02_shared_4500_6300_v1.py",
+          "sha256": "c3c79bef0e96a54dca7fe559e4f5a4d4646ad4e4e73828a13ca5aa603e5e361f",
+          "size_bytes": 36414
+        },
+        "scripts/export_aqualoc_to_hfnet_euroc_full_v2.py": {
+          "path": "/home/ma/AQUA-FE_WS/scripts/export_aqualoc_to_hfnet_euroc_full_v2.py",
+          "sha256": "b13f56b69fd88799d4885c044c75bd41aa4331e688c22edaa2301c523ef42013",
+          "size_bytes": 14829
+        },
+        "scripts/export_aqualoc_to_hfnet_euroc_v1.py": {
+          "path": "/home/ma/AQUA-FE_WS/scripts/export_aqualoc_to_hfnet_euroc_v1.py",
+          "sha256": "7bc4fcdae60172b00c630ae35fba1515b8969cf1a403a33a2cdbc2847cb1b9b0",
+          "size_bytes": 32173
+        },
+        "scripts/run_hfnet_slam_a02_full901_diagnostic_v2.py": {
+          "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_slam_a02_full901_diagnostic_v2.py",
+          "sha256": "165589aae498225d825b7a2e43586607475704fdbf98cba484a16346ffb245c4",
+          "size_bytes": 52355
+        },
+        "scripts/run_hfnet_slam_a02_full901_headless_v3.py": {
+          "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_slam_a02_full901_headless_v3.py",
+          "sha256": "b5ad8731f7d50ed2dd5eb0e435f95ed2db9e854474c6d559ab6d21bcec4675a2",
+          "size_bytes": 20668
+        },
+        "scripts/run_hfnet_slam_a02_long1801_headless_v4.py": {
+          "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_slam_a02_long1801_headless_v4.py",
+          "sha256": "3cbf73588be58da7cd550b2deba42e0082968924bb9ed756684181720a38f41f",
+          "size_bytes": 42063
+        }
+      },
+      "schema_version": "aqua-fe-hfnet-python-local-import-closure-v1"
+    },
+    "hfnet_v4_synthetic_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_hfnet_slam_a02_long1801_headless_v4.py",
+      "sha256": "7963f86ebb8e7cd80ea699391c7061be11317ad251dfbbf256332afcfd11d397",
+      "size_bytes": 15276
+    },
+    "quality_auditor": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/audit_quality_partition.py",
+      "sha256": "9ba78f3fa3ae9ea87109bed10b58233afef85d003f5ae996404eabee0f765c0b",
+      "size_bytes": 7963
+    },
+    "quality_rewriter": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/agent_qi_calibration_rewrite_bag.py",
+      "sha256": "1cbf679994ad2897cdadd5e94cbf3653822ae980a7c1fabb47c7f2f400157f2d",
+      "size_bytes": 7445
+    },
+    "shared_exporter": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/export_aqualoc_a02_shared_4500_6300_v1.py",
+      "sha256": "c3c79bef0e96a54dca7fe559e4f5a4d4646ad4e4e73828a13ca5aa603e5e361f",
+      "size_bytes": 36414
+    },
+    "static_freeze_gate": {
+      "b1_runtime_closures": {
+        "python_runtime_file_count": 33,
+        "python_runtime_files": {
+          "uw_frontend/__init__.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/__init__.py",
+            "sha256": "44c8ccc9ab0cd7e8637b0dd005f183fb7b250a539c8b22ea6d26889a394f0934",
+            "size_bytes": 75
+          },
+          "uw_frontend/datasets/__init__.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/datasets/__init__.py",
+            "sha256": "3e51607ce52c41b4cdba7cdc4b09e9cf3aff20c2e90b028971ab950cb8010477",
+            "size_bytes": 60
+          },
+          "uw_frontend/datasets/image_sequence.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/datasets/image_sequence.py",
+            "sha256": "2ba225a52a7caab9e92eb6b06c3ae7ff9a0030b96ea78e6f20f4228e97337384",
+            "size_bytes": 4844
+          },
+          "uw_frontend/evaluation/__init__.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/evaluation/__init__.py",
+            "sha256": "b95c4d2adf475a333bb42261ad54ee79656fe5aaecb351c4ecec31c18f5dea9b",
+            "size_bytes": 50
+          },
+          "uw_frontend/evaluation/frontend_metrics.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/evaluation/frontend_metrics.py",
+            "sha256": "dae3258f04316c387bbbee5b0870132f7bac4fb3261b6069f690f06e07b9baf8",
+            "size_bytes": 17993
+          },
+          "uw_frontend/evaluation/measurement_selection.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/evaluation/measurement_selection.py",
+            "sha256": "83230a42744be60e010ee4870011375fdd432a562843388c7adacd030dc298d3",
+            "size_bytes": 46894
+          },
+          "uw_frontend/evaluation/run_frontend_eval.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/evaluation/run_frontend_eval.py",
+            "sha256": "c299038feb926e37bada04d0f150e57d45bed2f4d91bad8fb6a0c4ab2b22e6d2",
+            "size_bytes": 33121
+          },
+          "uw_frontend/geometry/__init__.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/geometry/__init__.py",
+            "sha256": "f51eef8fcc512e338b3c5fd4f1e77f1dcb19dc09ab68eaab9289c968d56de882",
+            "size_bytes": 39
+          },
+          "uw_frontend/geometry/dl_vins_magsac.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/geometry/dl_vins_magsac.py",
+            "sha256": "d3c70b0c1f83f589380db82172b448ade485c101ed10102744f8a8d32487e128",
+            "size_bytes": 4232
+          },
+          "uw_frontend/geometry/grid.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/geometry/grid.py",
+            "sha256": "c1e6be4bfaee6cc1cac222c2dc5ba8f3e941702c60074f8473f663cf706de6eb",
+            "size_bytes": 1155
+          },
+          "uw_frontend/geometry/mode.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/geometry/mode.py",
+            "sha256": "402b5dc3eaecfb450a889502760cd591d02ff9c0e770edb522d1c777634c7a69",
+            "size_bytes": 5833
+          },
+          "uw_frontend/geometry/validation.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/geometry/validation.py",
+            "sha256": "4e2080bf786bf59b13af87ea7ee56b70b5f03892160ccd0a75aa9968d1781bb2",
+            "size_bytes": 2954
+          },
+          "uw_frontend/matchers/__init__.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/matchers/__init__.py",
+            "sha256": "ad377bf38dfe58a58b8db275c70c1f5b9372ab6329d0591bc88ff5425f949c13",
+            "size_bytes": 82
+          },
+          "uw_frontend/matchers/base.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/matchers/base.py",
+            "sha256": "ad1baae7dc56188ae9d4a117de5efe0ae032a1b2749a4de38474c43d960876fa",
+            "size_bytes": 741
+          },
+          "uw_frontend/matchers/classical_gftt.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/matchers/classical_gftt.py",
+            "sha256": "ec846d33ef8cc6ccb8e69fb30d87214c660807f94e9ca3b19aed6c944316604f",
+            "size_bytes": 3799
+          },
+          "uw_frontend/matchers/lightglue_adapter.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/matchers/lightglue_adapter.py",
+            "sha256": "9e44331a4208670575b12dc4a7f2c06d884ea77b3277d42aa1977128954b943a",
+            "size_bytes": 6384
+          },
+          "uw_frontend/matchers/loftr_adapter.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/matchers/loftr_adapter.py",
+            "sha256": "105cf63af51b6d4f8554a76939f88509d30fd85abc1b804ef18f2fd78edaebc2",
+            "size_bytes": 5600
+          },
+          "uw_frontend/matchers/xfeat_adapter.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/matchers/xfeat_adapter.py",
+            "sha256": "919b6b365548f2439b13eb01a24bd3e476de543dfcfa28b77baa09a7692fe345",
+            "size_bytes": 5558
+          },
+          "uw_frontend/quality/__init__.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/quality/__init__.py",
+            "sha256": "940c342bc9918992c9e53190993d1bff4f04970d3d0a9536d99f069a1b4a85fd",
+            "size_bytes": 42
+          },
+          "uw_frontend/quality/feature_confidence.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/quality/feature_confidence.py",
+            "sha256": "2ba770c1be212ec587c64ae0a35b3abc1dd58458f2e6eda572444859faf82864",
+            "size_bytes": 6691
+          },
+          "uw_frontend/quality/image_quality.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/quality/image_quality.py",
+            "sha256": "e0b4a885cb8ecd2909b8abefc0fbc17098c9596df44091d5a3398df56583b89e",
+            "size_bytes": 13301
+          },
+          "uw_frontend/quality/reliability_features.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/quality/reliability_features.py",
+            "sha256": "f5f3d770af0655e7d68dbec9fdf043d6b772dd7b11b0f43ebc821515978cd8a4",
+            "size_bytes": 4064
+          },
+          "uw_frontend/ros/__init__.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/ros/__init__.py",
+            "sha256": "63e8c6c8109779dde006b8e6067ae7dabb9520342bd069a210615ba1a2c774d1",
+            "size_bytes": 59
+          },
+          "uw_frontend/ros/export_vins_features.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/ros/export_vins_features.py",
+            "sha256": "567ccc74989d7fb4ddcb38ac558fecea33033139a0b0db98e61124c6bac5a00d",
+            "size_bytes": 437542
+          },
+          "uw_frontend/scheduler/__init__.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/scheduler/__init__.py",
+            "sha256": "c7ddade87b1a990451e559aa16a24892309a95cee6f5b976bc7e93e719279a90",
+            "size_bytes": 44
+          },
+          "uw_frontend/scheduler/hybrid_scheduler.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/scheduler/hybrid_scheduler.py",
+            "sha256": "71e8ee6f95b47e6fbbfc8d25c96affea2abca217c91c47f75e0d13750ab3279b",
+            "size_bytes": 6956
+          },
+          "uw_frontend/tracking/__init__.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/tracking/__init__.py",
+            "sha256": "74c60ba0b8a4cceec88519da9c269dce3b796812e900a0cdf10110488c2a696a",
+            "size_bytes": 34
+          },
+          "uw_frontend/tracking/hybrid_tracker.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/tracking/hybrid_tracker.py",
+            "sha256": "7772772f1baf0966a4b1096ac1cd3122d71edbe18031756de409443e7c5ea2ae",
+            "size_bytes": 220766
+          },
+          "uw_frontend/tracking/klt_tracker.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/tracking/klt_tracker.py",
+            "sha256": "e60957bc0b45a11ef24824fa95ef9093dbbd7ba5998bc82bb91641c831f1fb5b",
+            "size_bytes": 12306
+          },
+          "uw_frontend/tracking/matcher_recovery.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/tracking/matcher_recovery.py",
+            "sha256": "3d65f84f0d81a85ec7ce97daa44b9885ed8726f4df4c330b76fa390a9eb46e70",
+            "size_bytes": 30796
+          },
+          "uw_frontend/tracking/orb_tracker.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/tracking/orb_tracker.py",
+            "sha256": "c8490ab98348a6e57b2b250df7faf52cc527206449e9a90778001c84d7e363b2",
+            "size_bytes": 10987
+          },
+          "uw_frontend/tracking/pairwise_matcher_tracker.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/tracking/pairwise_matcher_tracker.py",
+            "sha256": "c2796382afdf79f4ab6c06615390749a6a91e5d8b7cf1f239209ea51e47500c6",
+            "size_bytes": 17147
+          },
+          "uw_frontend/tracking/track_state.py": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/tracking/track_state.py",
+            "sha256": "c6a5f23209f830088a33cf2afd733c3520d7da88e14a0f10c01e8d54ce384802",
+            "size_bytes": 1181
+          }
+        },
+        "schema_version": "aqua-fe-b1-python-local-import-and-yaml-extends-closure-v1",
+        "yaml_extends_file_count": 6,
+        "yaml_extends_files": {
+          "uw_frontend/configs/backend_strict_frontend.yaml": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/configs/backend_strict_frontend.yaml",
+            "sha256": "908351d3d9547b98f917ffd059efdc7b279ee7f9199887688cda48e178a4855a",
+            "size_bytes": 9082
+          },
+          "uw_frontend/configs/experiments/loftr_extreme_only_frontend.yaml": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/configs/experiments/loftr_extreme_only_frontend.yaml",
+            "sha256": "d5927fb412de869cfe9dd6275dfb81a566fc33e4149160bafc0e8fa933b27eed",
+            "size_bytes": 2121
+          },
+          "uw_frontend/configs/experiments/low_texture_active_xfeat_sidecar.yaml": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/configs/experiments/low_texture_active_xfeat_sidecar.yaml",
+            "sha256": "2a61f1c57a77df4ed6bf2d85c080c7e6bd754a2ff47171e526e0643a3d617a25",
+            "size_bytes": 1478
+          },
+          "uw_frontend/configs/experiments/low_texture_xfeat_seedchain_frontend.yaml": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/configs/experiments/low_texture_xfeat_seedchain_frontend.yaml",
+            "sha256": "6f89d861cc002dfaf0eaf5f1294b0dbcfab9fe268c5dc0d09082f79811000bf3",
+            "size_bytes": 1493
+          },
+          "uw_frontend/configs/experiments/paper_vins_safe_learned_sidecar.yaml": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/configs/experiments/paper_vins_safe_learned_sidecar.yaml",
+            "sha256": "4500894ee15f4515881de6322e5780ce7f2381b2a1ce7fba4bd3d958e11264ce",
+            "size_bytes": 1964
+          },
+          "uw_frontend/configs/experiments/three_layer_source_aware_frontend.yaml": {
+            "path": "/home/ma/AQUA-FE_WS/uw_frontend/configs/experiments/three_layer_source_aware_frontend.yaml",
+            "sha256": "236e5173611731ffefd3acdd3b9f69429633dac16ae66429690d609fab0dd5d7",
+            "size_bytes": 5453
+          }
+        }
+      },
+      "b1_v3_contract_hash": "7b6b653b51f0d3cc559962d18c4f3fdef7592b501123bb46bd40c822519f84a0",
+      "b1_v4_ros_environment": {
+        "initial_environment": {
+          "CATKIN_SETUP_UTIL_ARGS": "--local --extend",
+          "CMAKE_PREFIX_PATH": "/home/ma/SLAM/VINS-Fusion-origin/devel",
+          "HOME": "/home/ma",
+          "LANG": "C.UTF-8",
+          "LC_ALL": "C.UTF-8",
+          "LOGNAME": "ma",
+          "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONHASHSEED": "0",
+          "PYTHONNOUSERSITE": "1",
+          "PYTHONPYCACHEPREFIX": "/tmp/aqua-fe-a02-long-eval-empty-pycache-v1",
+          "ROS_DISTRO": "noetic",
+          "ROS_MASTER_URI": "http://localhost:11341",
+          "SHELL": "/bin/bash",
+          "USER": "ma"
+        },
+        "post_source_lines": [
+          "/opt/ros/noetic:/home/ma/SLAM/VINS-Fusion-origin/devel",
+          "/opt/ros/noetic/share:/home/ma/SLAM/VINS-Fusion-origin/src",
+          "/home/ma/SLAM/VINS-Fusion-origin/devel/lib:/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu",
+          "/opt/ros/noetic/lib/python3/dist-packages",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/vins_estimator"
+        ],
+        "status": "PASS_NOETIC_ORIGIN_ONLY_UNDER_NOUNSET"
+      },
+      "command_protocol": {
+        "command_count": 28,
+        "final_gate_single_command": true,
+        "scientific_failure_capture_indices": [
+          8,
+          10,
+          11,
+          12,
+          14,
+          16,
+          18,
+          19,
+          21,
+          22,
+          23,
+          24
+        ],
+        "static_point_of_use_gate_indices": [
+          0,
+          7,
+          13,
+          15,
+          17,
+          20
+        ],
+        "status": "PASS_EXACT_EXPLICIT_RC_NO_EXTERNAL_ERREXIT_ENV_I_AND_NESTED_G0",
+        "strict_b1_decision_global_gate_index": 9,
+        "vins_environment_isolation": "env_i_exact_allowlist",
+        "xfeat_audit_environment_isolation": "env_i_rosbag_cv2_runtime_exact_allowlist",
+        "xfeat_export_environment_isolation": "env_i_cpu_runtime_exact_allowlist"
+      },
+      "evaluation_runtime": {
+        "evo_record_hashed_rows": 52,
+        "evo_record_rows": 91,
+        "files": {
+          "/home/ma/.evo/assets_version": {
+            "path": "/home/ma/.evo/assets_version",
+            "sha256": "4be46314bd7bb15822fda619849fea4d28b993d5bb6631352605819b9819a4e6",
+            "size_bytes": 7
+          },
+          "/home/ma/.evo/settings.json": {
+            "path": "/home/ma/.evo/settings.json",
+            "sha256": "62a54e1c4b15fdbae6d36ea2c875b99c1f1a70a8d874d6b905b282ae0bd4d3bd",
+            "size_bytes": 1850
+          },
+          "/home/ma/.local/bin/evo_ape": {
+            "path": "/home/ma/.local/bin/evo_ape",
+            "sha256": "6bee25dc5bfdab0ead8988ab4014a72511339e94697ec61699f66f68f5f24d15",
+            "size_bytes": 213
+          },
+          "/home/ma/.local/bin/evo_rpe": {
+            "path": "/home/ma/.local/bin/evo_rpe",
+            "sha256": "9e07d0bd4566aa680d5e39e58589176a286f4f8a22ba9107a5834ddb278e2bd1",
+            "size_bytes": 213
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/evo-1.31.1.dist-info/RECORD": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/evo-1.31.1.dist-info/RECORD",
+            "sha256": "a720ae5d78b1cf5d0c5b3ed81b8deb2adc41cb686ccffd773a42a1553823cbde",
+            "size_bytes": 5951
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/evo/__init__.py": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/evo/__init__.py",
+            "sha256": "ea1a753dbb2d53e58f5b3c7c1691fbcac02295cd22be8fe0831092fe7e009010",
+            "size_bytes": 583
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/numpy.libs/libgfortran-040039e1.so.5.0.0": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/numpy.libs/libgfortran-040039e1.so.5.0.0",
+            "sha256": "47ab3b68295b0a3ce8990a448de7fab11abddbc160f8895972ca9aa712cf86d0",
+            "size_bytes": 2686064
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/numpy.libs/libopenblas64_p-r0-15028c96.3.21.so": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/numpy.libs/libopenblas64_p-r0-15028c96.3.21.so",
+            "sha256": "554bde1d8a0c71d8dc21ae74de05c44da4fff5dbc6791a819f6acf5adfe90bd9",
+            "size_bytes": 32955056
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/numpy.libs/libquadmath-96973f99.so.0.0.0": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/numpy.libs/libquadmath-96973f99.so.0.0.0",
+            "sha256": "97cda85ddb5163e2da6e1edb4e1d6b557833a99a40eda079ae37e5039465b65d",
+            "size_bytes": 247608
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/numpy/core/_multiarray_umath.cpython-38-x86_64-linux-gnu.so": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/numpy/core/_multiarray_umath.cpython-38-x86_64-linux-gnu.so",
+            "sha256": "190fed599b26cf689e22f198faf97d632f1d19b8aa75fdf5ca7fb96d37d97e37",
+            "size_bytes": 6311424
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/numpy/lib/function_base.py": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/numpy/lib/function_base.py",
+            "sha256": "e2c03da3ca2ee0f918b8759df35a621db422f36dc6c017eef0f769188c8d452e",
+            "size_bytes": 185141
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/numpy/linalg/_umath_linalg.cpython-38-x86_64-linux-gnu.so": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/numpy/linalg/_umath_linalg.cpython-38-x86_64-linux-gnu.so",
+            "sha256": "77d989daf30e91b14b657f0a125377d1c5bf49d7d950522baefdce9a7a93f927",
+            "size_bytes": 230272
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/numpy/linalg/lapack_lite.cpython-38-x86_64-linux-gnu.so": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/numpy/linalg/lapack_lite.cpython-38-x86_64-linux-gnu.so",
+            "sha256": "793234784255abc82b21e594a61906664219da405b0f73bf613da7b36e70c776",
+            "size_bytes": 29992
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/numpy/linalg/linalg.py": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/numpy/linalg/linalg.py",
+            "sha256": "304a00b1bbd5f933e3920264c93f7a21a46e4091a05fc714248492b54e78d1c9",
+            "size_bytes": 89351
+          },
+          "/opt/ros/noetic/lib/python3/dist-packages/geometry_msgs/msg/__init__.py": {
+            "path": "/opt/ros/noetic/lib/python3/dist-packages/geometry_msgs/msg/__init__.py",
+            "sha256": "d19edf818de477fe4555552190ee083ce4967320d3b0ce63a6e79b0eceff0cb2",
+            "size_bytes": 848
+          },
+          "/opt/ros/noetic/lib/python3/dist-packages/nav_msgs/msg/__init__.py": {
+            "path": "/opt/ros/noetic/lib/python3/dist-packages/nav_msgs/msg/__init__.py",
+            "sha256": "83cb4a545c959030c156611321bdadc8de74d09519beaf08b0c7e190191821cf",
+            "size_bytes": 351
+          },
+          "/opt/ros/noetic/lib/python3/dist-packages/rospy/__init__.py": {
+            "path": "/opt/ros/noetic/lib/python3/dist-packages/rospy/__init__.py",
+            "sha256": "9e5c4e111abae5c45266c74c2ed83ff045d00b29d4c514d31c09b250460c9159",
+            "size_bytes": 4636
+          },
+          "/opt/ros/noetic/lib/python3/dist-packages/sensor_msgs/msg/__init__.py": {
+            "path": "/opt/ros/noetic/lib/python3/dist-packages/sensor_msgs/msg/__init__.py",
+            "sha256": "c34aa9962d67d308caafc5cf61acf0515c9ba4826f6de2dbfee3b50ca8a9128f",
+            "size_bytes": 762
+          },
+          "/opt/ros/noetic/lib/python3/dist-packages/std_msgs/msg/__init__.py": {
+            "path": "/opt/ros/noetic/lib/python3/dist-packages/std_msgs/msg/__init__.py",
+            "sha256": "d51bf5761f4b02c5d4ba24325c02eb9962d49cfafbaf98f60eaaffe12b52b9f2",
+            "size_bytes": 855
+          }
+        },
+        "probe": {
+          "assets_version_path": "/home/ma/.evo/assets_version",
+          "cv2_file": "/usr/lib/python3/dist-packages/cv2.cpython-38-x86_64-linux-gnu.so",
+          "evo_ape": "/home/ma/.local/bin/evo_ape",
+          "evo_file": "/home/ma/.local/lib/python3.8/site-packages/evo/__init__.py",
+          "evo_rpe": "/home/ma/.local/bin/evo_rpe",
+          "evo_version": "v1.31.1",
+          "float64_eps_hex": "0x1.0000000000000p-52",
+          "function_base_file": "/home/ma/.local/lib/python3.8/site-packages/numpy/lib/function_base.py",
+          "geometry_msgs_file": "/opt/ros/noetic/lib/python3/dist-packages/geometry_msgs/msg/__init__.py",
+          "lapack_lite_file": "/home/ma/.local/lib/python3.8/site-packages/numpy/linalg/lapack_lite.cpython-38-x86_64-linux-gnu.so",
+          "linalg_file": "/home/ma/.local/lib/python3.8/site-packages/numpy/linalg/linalg.py",
+          "longdouble_bits": 128,
+          "longdouble_nmant": 63,
+          "main_ape_file": "/home/ma/.local/lib/python3.8/site-packages/evo/main_ape.py",
+          "main_rpe_file": "/home/ma/.local/lib/python3.8/site-packages/evo/main_rpe.py",
+          "multiarray_file": "/home/ma/.local/lib/python3.8/site-packages/numpy/core/_multiarray_umath.cpython-38-x86_64-linux-gnu.so",
+          "nav_msgs_file": "/opt/ros/noetic/lib/python3/dist-packages/nav_msgs/msg/__init__.py",
+          "numpy_file": "/home/ma/.local/lib/python3.8/site-packages/numpy/__init__.py",
+          "numpy_version": "1.24.4",
+          "rosbag_file": "/opt/ros/noetic/lib/python3/dist-packages/rosbag/__init__.py",
+          "rospy_file": "/opt/ros/noetic/lib/python3/dist-packages/rospy/__init__.py",
+          "sensor_msgs_file": "/opt/ros/noetic/lib/python3/dist-packages/sensor_msgs/msg/__init__.py",
+          "settings_path": "/home/ma/.evo/settings.json",
+          "std_msgs_file": "/opt/ros/noetic/lib/python3/dist-packages/std_msgs/msg/__init__.py",
+          "svd_hex": [
+            "0x1.16999f048dfbbp+4",
+            "0x1.c0152602e522bp-1",
+            "0x1.932ec12f0363cp-3"
+          ],
+          "umath_linalg_file": "/home/ma/.local/lib/python3.8/site-packages/numpy/linalg/_umath_linalg.cpython-38-x86_64-linux-gnu.so"
+        },
+        "sealed_environment": {
+          "HOME": "/home/ma",
+          "LANG": "C.UTF-8",
+          "LC_ALL": "C.UTF-8",
+          "LOGNAME": "ma",
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "PATH": "/home/ma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONHASHSEED": "0",
+          "PYTHONNOUSERSITE": "1",
+          "PYTHONPATH": "/home/ma/AQUA-FE_WS:/home/ma/.local/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages",
+          "PYTHONPYCACHEPREFIX": "/tmp/aqua-fe-a02-long-eval-empty-pycache-v1",
+          "SHELL": "/bin/bash",
+          "USER": "ma"
+        },
+        "status": "PASS_FROZEN_NUMPY1244_EVO1311"
+      },
+      "freeze": {
+        "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_post_stop_long_window_comparison_freeze_v1.json",
+        "sha256": "dfcae748385766f5585e1799603f737abe9223cb30d1a9bcc43fe84476abf9be",
+        "size_bytes": 63541
+      },
+      "hfnet_runtime_closure": {
+        "runtime_file_count": 6,
+        "runtime_files": {
+          "scripts/export_aqualoc_a02_shared_4500_6300_v1.py": {
+            "path": "/home/ma/AQUA-FE_WS/scripts/export_aqualoc_a02_shared_4500_6300_v1.py",
+            "sha256": "c3c79bef0e96a54dca7fe559e4f5a4d4646ad4e4e73828a13ca5aa603e5e361f",
+            "size_bytes": 36414
+          },
+          "scripts/export_aqualoc_to_hfnet_euroc_full_v2.py": {
+            "path": "/home/ma/AQUA-FE_WS/scripts/export_aqualoc_to_hfnet_euroc_full_v2.py",
+            "sha256": "b13f56b69fd88799d4885c044c75bd41aa4331e688c22edaa2301c523ef42013",
+            "size_bytes": 14829
+          },
+          "scripts/export_aqualoc_to_hfnet_euroc_v1.py": {
+            "path": "/home/ma/AQUA-FE_WS/scripts/export_aqualoc_to_hfnet_euroc_v1.py",
+            "sha256": "7bc4fcdae60172b00c630ae35fba1515b8969cf1a403a33a2cdbc2847cb1b9b0",
+            "size_bytes": 32173
+          },
+          "scripts/run_hfnet_slam_a02_full901_diagnostic_v2.py": {
+            "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_slam_a02_full901_diagnostic_v2.py",
+            "sha256": "165589aae498225d825b7a2e43586607475704fdbf98cba484a16346ffb245c4",
+            "size_bytes": 52355
+          },
+          "scripts/run_hfnet_slam_a02_full901_headless_v3.py": {
+            "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_slam_a02_full901_headless_v3.py",
+            "sha256": "b5ad8731f7d50ed2dd5eb0e435f95ed2db9e854474c6d559ab6d21bcec4675a2",
+            "size_bytes": 20668
+          },
+          "scripts/run_hfnet_slam_a02_long1801_headless_v4.py": {
+            "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_slam_a02_long1801_headless_v4.py",
+            "sha256": "3cbf73588be58da7cd550b2deba42e0082968924bb9ed756684181720a38f41f",
+            "size_bytes": 42063
+          }
+        },
+        "schema_version": "aqua-fe-hfnet-python-local-import-closure-v1"
+      },
+      "identity_count": 131,
+      "status": "PASS_STATIC_IDENTITY_AND_B1_V3_CONTRACT",
+      "vins_dynamic_linkage": {
+        "binary": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/vins/vins_node",
+        "resolved_libraries": {
+          "libcamera_models.so": {
+            "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/libcamera_models.so",
+            "sha256": "6d7b261f12791b693f95aebea6a762a97bc3501f1f1f3c94a6af6e50f2e6690d",
+            "size_bytes": 2970640
+          },
+          "libvins_lib.so": {
+            "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/libvins_lib.so",
+            "sha256": "c1080aefdfd0eb3f011d491041c773649917a77923b97e24503bd90136bab467",
+            "size_bytes": 165207064
+          }
+        },
+        "resolver": {
+          "path": "/usr/bin/ldd",
+          "sha256": "d089c1054925b1f1dc9b574c2e7fabf3a495a1ce2ef946cd66d507daf09b7b8f",
+          "size_bytes": 5428
+        },
+        "status": "PASS"
+      },
+      "window_contract": {
+        "status": "PASS_EXACT_INTEGER_WINDOW_CONTRACT",
+        "window": {
+          "camera_feed_count": 1801,
+          "camera_feed_global_indices_inclusive": [
+            4500,
+            6300
+          ],
+          "canonical_margin_imu_count": 18084,
+          "canonical_margin_imu_endpoints_ns": [
+            1542829016456083680,
+            1542829106933121504
+          ],
+          "frame_5400_feed_count": 1,
+          "hfnet_inner_imu_count": 17987,
+          "preroll_global_indices_inclusive": [
+            4500,
+            5399
+          ],
+          "score_global_indices_inclusive": [
+            5400,
+            6300
+          ],
+          "score_timestamp_ns_inclusive": [
+            1542829061692686528,
+            1542829106687510592
+          ]
+        }
+      },
+      "working_directory": "/home/ma/AQUA-FE_WS",
+      "xfeat_audit_runtime": {
+        "cv2_core": {
+          "path": "/tmp/aqua-fe-opencv-usac-v1/lib/python3.8/site-packages/cv2/cv2.abi3.so",
+          "sha256": "72c7fe9b389ecd9549b6e9cdca35ee11940de15d13d46722b8412865cafabc78",
+          "size_bytes": 65651673
+        },
+        "cv2_version": "4.10.0",
+        "numpy_module": {
+          "path": "/usr/lib/python3/dist-packages/numpy/__init__.py",
+          "sha256": "e9ba95ebf3add32b201e50e1d2685aa28c21a3ce5ce460b9384b7266b49c77d5",
+          "size_bytes": 7110
+        },
+        "numpy_version": "1.17.4",
+        "resolved_interpreter": {
+          "path": "/usr/bin/python3.8",
+          "sha256": "298a9e830ed52f36c299427565485d717d1ce0179c0597cc16560513eb780b06",
+          "size_bytes": 5490456
+        },
+        "rosbag_module": "/opt/ros/noetic/lib/python3/dist-packages/rosbag/__init__.py",
+        "sealed_environment": {
+          "HOME": "/home/ma",
+          "LANG": "C.UTF-8",
+          "LC_ALL": "C.UTF-8",
+          "LOGNAME": "ma",
+          "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONHASHSEED": "0",
+          "PYTHONNOUSERSITE": "1",
+          "PYTHONPATH": "/opt/ros/noetic/lib/python3/dist-packages",
+          "PYTHONPYCACHEPREFIX": "/tmp/aqua-fe-a02-long-eval-empty-pycache-v1",
+          "SHELL": "/bin/bash",
+          "USER": "ma"
+        },
+        "status": "PASS",
+        "venv_python": "/tmp/aqua-fe-opencv-usac-v1/bin/python"
+      },
+      "xfeat_export_runtime": {
+        "external_timeout_policy": "NO_SHORT_TIMEOUT_EXPECT_10_TO_15_MINUTES_CPU",
+        "files": {
+          "/home/ma/.local/lib/python3.8/site-packages/numpy/__init__.py": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/numpy/__init__.py",
+            "sha256": "edd18feff93348beb02f392959e80b9fda1875a842d7f9760847f32386fdfd48",
+            "size_bytes": 16174
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/torch/_C.cpython-38-x86_64-linux-gnu.so": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/torch/_C.cpython-38-x86_64-linux-gnu.so",
+            "sha256": "cbf6861cb2e89e098e1cc88c38fa3e565b70cdf471042b0bde14a351df26acf1",
+            "size_bytes": 37489
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/torch/__init__.py": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/torch/__init__.py",
+            "sha256": "fe825c99bf91627cc438ab1967e413f4efef8599de835fb71af926c15b07a223",
+            "size_bytes": 78481
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libc10.so": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libc10.so",
+            "sha256": "4804bd9f2524b593a71eecaeb5b09d82594ca98408574a93fcf70e92d3f28966",
+            "size_bytes": 1167384
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libgomp-a34b3233.so.1": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libgomp-a34b3233.so.1",
+            "sha256": "570455c2902d6cc2a7f367703c06dac07495dd7f8a1ed2c8fc4cea628c881b13",
+            "size_bytes": 168721
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libshm.so": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libshm.so",
+            "sha256": "46e21dd56dc8093909ebe0d7c01c1609b7957ffc269a137590b4e78bb40a9d98",
+            "size_bytes": 35280
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libtorch.so": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libtorch.so",
+            "sha256": "d85f826501ff97723aa4671328929a43e456dcda589e0be33f7bab5e9b882b37",
+            "size_bytes": 7192
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libtorch_cpu.so": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libtorch_cpu.so",
+            "sha256": "ea615ec43ee633af935a073f6937f25555f4f68484935472ead52f80f6c801e2",
+            "size_bytes": 471835833
+          },
+          "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libtorch_python.so": {
+            "path": "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libtorch_python.so",
+            "sha256": "ff832d1a405158eaae1241f17d4fef0ec143c42e3f129c9f7a934a617c773bdf",
+            "size_bytes": 23371696
+          },
+          "/opt/ros/noetic/lib/python3/dist-packages/rosbag/__init__.py": {
+            "path": "/opt/ros/noetic/lib/python3/dist-packages/rosbag/__init__.py",
+            "sha256": "a65e884f18df0e88ff7403b53d77ad9ac59bd24734d880e301f7afe68fec4a81",
+            "size_bytes": 1800
+          },
+          "/usr/lib/python3/dist-packages/cv2.cpython-38-x86_64-linux-gnu.so": {
+            "path": "/usr/lib/python3/dist-packages/cv2.cpython-38-x86_64-linux-gnu.so",
+            "sha256": "00f302d1efe76049187e2e2c7a05262e883394f82316490e2f28adb807ac1833",
+            "size_bytes": 6970496
+          }
+        },
+        "probe": {
+          "cuda_available": false,
+          "cv2_file": "/usr/lib/python3/dist-packages/cv2.cpython-38-x86_64-linux-gnu.so",
+          "cv2_version": "4.2.0",
+          "numpy_file": "/home/ma/.local/lib/python3.8/site-packages/numpy/__init__.py",
+          "numpy_version": "1.24.4",
+          "rosbag_file": "/opt/ros/noetic/lib/python3/dist-packages/rosbag/__init__.py",
+          "torch_c_file": "/home/ma/.local/lib/python3.8/site-packages/torch/_C.cpython-38-x86_64-linux-gnu.so",
+          "torch_cuda": null,
+          "torch_cudnn_benchmark": false,
+          "torch_cudnn_deterministic": false,
+          "torch_deterministic_algorithms": false,
+          "torch_file": "/home/ma/.local/lib/python3.8/site-packages/torch/__init__.py",
+          "torch_mkldnn_enabled": true,
+          "torch_num_interop_threads": 12,
+          "torch_num_threads": 6,
+          "torch_version": "2.2.2+cpu"
+        },
+        "sealed_environment": {
+          "CUDA_VISIBLE_DEVICES": "0",
+          "HOME": "/home/ma",
+          "LANG": "C.UTF-8",
+          "LC_ALL": "C.UTF-8",
+          "LOGNAME": "ma",
+          "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONHASHSEED": "0",
+          "PYTHONNOUSERSITE": "1",
+          "PYTHONPATH": "/home/ma/AQUA-FE_WS:/home/ma/.local/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages",
+          "PYTHONPYCACHEPREFIX": "/tmp/aqua-fe-a02-long-eval-empty-pycache-v1",
+          "SHELL": "/bin/bash",
+          "USER": "ma"
+        },
+        "status": "PASS_FROZEN_CPU_RUNTIME"
+      },
+      "xfeat_official_closure": {
+        "file_count": 5,
+        "files": {
+          "external_tools/accelerated_features/LICENSE": {
+            "path": "/mnt/data/AQUA-FE_WS/external_tools/accelerated_features/LICENSE",
+            "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+            "size_bytes": 11357
+          },
+          "external_tools/accelerated_features/modules/interpolator.py": {
+            "path": "/mnt/data/AQUA-FE_WS/external_tools/accelerated_features/modules/interpolator.py",
+            "sha256": "d63a6163eb6fff81e8720231f62537a42a69fccb44dc8851b04de5115daab4da",
+            "size_bytes": 1175
+          },
+          "external_tools/accelerated_features/modules/model.py": {
+            "path": "/mnt/data/AQUA-FE_WS/external_tools/accelerated_features/modules/model.py",
+            "sha256": "d9a665f18fcea5eaf3e278925e1a92103afcba9051e05b2334f3daa29f411964",
+            "size_bytes": 4542
+          },
+          "external_tools/accelerated_features/modules/xfeat.py": {
+            "path": "/mnt/data/AQUA-FE_WS/external_tools/accelerated_features/modules/xfeat.py",
+            "sha256": "385ccd31d095b0d4176b04e982088b85321b11ade4324f83b097ee6524f2a6e7",
+            "size_bytes": 13472
+          },
+          "external_tools/accelerated_features/weights/xfeat.pt": {
+            "path": "/mnt/data/AQUA-FE_WS/external_tools/accelerated_features/weights/xfeat.pt",
+            "sha256": "0f5187fd7bedd26c7fe6acc9685444493a165a35ecc087b33c2db3627f3ea10b",
+            "size_bytes": 6247949
+          }
+        },
+        "status": "PASS",
+        "upstream_commit": "e92685f57f8318b18725c5c8c0bd28c7fe188d9a"
+      }
+    },
+    "trajectory_eval_core": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/trajectory_eval_core.py",
+      "sha256": "aa9ac4da81df7298d1f1c369548ca98a57235916004337cad66f4cf331560635",
+      "size_bytes": 27945
+    },
+    "vins_binary": {
+      "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/vins/vins_node",
+      "sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+      "size_bytes": 13104360
+    },
+    "vins_dynamic_linkage": {
+      "binary": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/vins/vins_node",
+      "resolved_libraries": {
+        "libcamera_models.so": {
+          "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/libcamera_models.so",
+          "sha256": "6d7b261f12791b693f95aebea6a762a97bc3501f1f1f3c94a6af6e50f2e6690d",
+          "size_bytes": 2970640
+        },
+        "libvins_lib.so": {
+          "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/libvins_lib.so",
+          "sha256": "c1080aefdfd0eb3f011d491041c773649917a77923b97e24503bd90136bab467",
+          "size_bytes": 165207064
+        }
+      },
+      "resolver": {
+        "path": "/usr/bin/ldd",
+        "sha256": "d089c1054925b1f1dc9b574c2e7fabf3a495a1ce2ef946cd66d507daf09b7b8f",
+        "size_bytes": 5428
+      },
+      "status": "PASS"
+    },
+    "vins_environment_recorder": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/record_vins_env.sh",
+      "sha256": "577e17acb5e8df1a4a6d8d5b6ed531103adb984a5c7cb1cc8523f95d6e695ad3",
+      "size_bytes": 2049
+    },
+    "vins_runner_internal_evaluator": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_sim_ape.py",
+      "sha256": "ef68c19a0af6c06598bb473f57c581a7bb874b68cdccc95f4c85905bb9219d33",
+      "size_bytes": 10127
+    },
+    "window_materializer": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/materialize_aqualoc_a02_4500_6300_window_v1.py",
+      "sha256": "7d5ca32fea25945fcce454b948c55bc9d883b8dca3f5bf481611ced0395cd7a3",
+      "size_bytes": 14820
+    },
+    "xfeat_audit_base": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/audit_superpoint_lk_carrier_v1.py",
+      "sha256": "f8a6abecb6c2253d8721befaccf1e49eb6e68013b6d1376cff8dbd71f579f1d1",
+      "size_bytes": 43981
+    },
+    "xfeat_audit_runtime": {
+      "cv2_core": {
+        "path": "/tmp/aqua-fe-opencv-usac-v1/lib/python3.8/site-packages/cv2/cv2.abi3.so",
+        "sha256": "72c7fe9b389ecd9549b6e9cdca35ee11940de15d13d46722b8412865cafabc78",
+        "size_bytes": 65651673
+      },
+      "cv2_version": "4.10.0",
+      "numpy_module": {
+        "path": "/usr/lib/python3/dist-packages/numpy/__init__.py",
+        "sha256": "e9ba95ebf3add32b201e50e1d2685aa28c21a3ce5ce460b9384b7266b49c77d5",
+        "size_bytes": 7110
+      },
+      "numpy_version": "1.17.4",
+      "resolved_interpreter": {
+        "path": "/usr/bin/python3.8",
+        "sha256": "298a9e830ed52f36c299427565485d717d1ce0179c0597cc16560513eb780b06",
+        "size_bytes": 5490456
+      },
+      "rosbag_module": "/opt/ros/noetic/lib/python3/dist-packages/rosbag/__init__.py",
+      "sealed_environment": {
+        "HOME": "/home/ma",
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "LOGNAME": "ma",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONHASHSEED": "0",
+        "PYTHONNOUSERSITE": "1",
+        "PYTHONPATH": "/opt/ros/noetic/lib/python3/dist-packages",
+        "PYTHONPYCACHEPREFIX": "/tmp/aqua-fe-a02-long-eval-empty-pycache-v1",
+        "SHELL": "/bin/bash",
+        "USER": "ma"
+      },
+      "status": "PASS",
+      "venv_python": "/tmp/aqua-fe-opencv-usac-v1/bin/python"
+    },
+    "xfeat_auditor": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/audit_xfeat_lk_carrier_v1.py",
+      "sha256": "89998cacb929b00de08eb93cc21e36e7b64434a59acb3fc1b332f16822608935",
+      "size_bytes": 2574
+    },
+    "xfeat_carrier_base": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/export_superpoint_lk_carrier_v1.py",
+      "sha256": "2419fddc561c3a5bb2742aa033c62aa24d7361806a975c09c7e25ecf5995a34c",
+      "size_bytes": 67327
+    },
+    "xfeat_export_runtime": {
+      "external_timeout_policy": "NO_SHORT_TIMEOUT_EXPECT_10_TO_15_MINUTES_CPU",
+      "files": {
+        "/home/ma/.local/lib/python3.8/site-packages/numpy/__init__.py": {
+          "path": "/home/ma/.local/lib/python3.8/site-packages/numpy/__init__.py",
+          "sha256": "edd18feff93348beb02f392959e80b9fda1875a842d7f9760847f32386fdfd48",
+          "size_bytes": 16174
+        },
+        "/home/ma/.local/lib/python3.8/site-packages/torch/_C.cpython-38-x86_64-linux-gnu.so": {
+          "path": "/home/ma/.local/lib/python3.8/site-packages/torch/_C.cpython-38-x86_64-linux-gnu.so",
+          "sha256": "cbf6861cb2e89e098e1cc88c38fa3e565b70cdf471042b0bde14a351df26acf1",
+          "size_bytes": 37489
+        },
+        "/home/ma/.local/lib/python3.8/site-packages/torch/__init__.py": {
+          "path": "/home/ma/.local/lib/python3.8/site-packages/torch/__init__.py",
+          "sha256": "fe825c99bf91627cc438ab1967e413f4efef8599de835fb71af926c15b07a223",
+          "size_bytes": 78481
+        },
+        "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libc10.so": {
+          "path": "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libc10.so",
+          "sha256": "4804bd9f2524b593a71eecaeb5b09d82594ca98408574a93fcf70e92d3f28966",
+          "size_bytes": 1167384
+        },
+        "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libgomp-a34b3233.so.1": {
+          "path": "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libgomp-a34b3233.so.1",
+          "sha256": "570455c2902d6cc2a7f367703c06dac07495dd7f8a1ed2c8fc4cea628c881b13",
+          "size_bytes": 168721
+        },
+        "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libshm.so": {
+          "path": "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libshm.so",
+          "sha256": "46e21dd56dc8093909ebe0d7c01c1609b7957ffc269a137590b4e78bb40a9d98",
+          "size_bytes": 35280
+        },
+        "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libtorch.so": {
+          "path": "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libtorch.so",
+          "sha256": "d85f826501ff97723aa4671328929a43e456dcda589e0be33f7bab5e9b882b37",
+          "size_bytes": 7192
+        },
+        "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libtorch_cpu.so": {
+          "path": "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libtorch_cpu.so",
+          "sha256": "ea615ec43ee633af935a073f6937f25555f4f68484935472ead52f80f6c801e2",
+          "size_bytes": 471835833
+        },
+        "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libtorch_python.so": {
+          "path": "/home/ma/.local/lib/python3.8/site-packages/torch/lib/libtorch_python.so",
+          "sha256": "ff832d1a405158eaae1241f17d4fef0ec143c42e3f129c9f7a934a617c773bdf",
+          "size_bytes": 23371696
+        },
+        "/opt/ros/noetic/lib/python3/dist-packages/rosbag/__init__.py": {
+          "path": "/opt/ros/noetic/lib/python3/dist-packages/rosbag/__init__.py",
+          "sha256": "a65e884f18df0e88ff7403b53d77ad9ac59bd24734d880e301f7afe68fec4a81",
+          "size_bytes": 1800
+        },
+        "/usr/lib/python3/dist-packages/cv2.cpython-38-x86_64-linux-gnu.so": {
+          "path": "/usr/lib/python3/dist-packages/cv2.cpython-38-x86_64-linux-gnu.so",
+          "sha256": "00f302d1efe76049187e2e2c7a05262e883394f82316490e2f28adb807ac1833",
+          "size_bytes": 6970496
+        }
+      },
+      "probe": {
+        "cuda_available": false,
+        "cv2_file": "/usr/lib/python3/dist-packages/cv2.cpython-38-x86_64-linux-gnu.so",
+        "cv2_version": "4.2.0",
+        "numpy_file": "/home/ma/.local/lib/python3.8/site-packages/numpy/__init__.py",
+        "numpy_version": "1.24.4",
+        "rosbag_file": "/opt/ros/noetic/lib/python3/dist-packages/rosbag/__init__.py",
+        "torch_c_file": "/home/ma/.local/lib/python3.8/site-packages/torch/_C.cpython-38-x86_64-linux-gnu.so",
+        "torch_cuda": null,
+        "torch_cudnn_benchmark": false,
+        "torch_cudnn_deterministic": false,
+        "torch_deterministic_algorithms": false,
+        "torch_file": "/home/ma/.local/lib/python3.8/site-packages/torch/__init__.py",
+        "torch_mkldnn_enabled": true,
+        "torch_num_interop_threads": 12,
+        "torch_num_threads": 6,
+        "torch_version": "2.2.2+cpu"
+      },
+      "sealed_environment": {
+        "CUDA_VISIBLE_DEVICES": "0",
+        "HOME": "/home/ma",
+        "LANG": "C.UTF-8",
+        "LC_ALL": "C.UTF-8",
+        "LOGNAME": "ma",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONHASHSEED": "0",
+        "PYTHONNOUSERSITE": "1",
+        "PYTHONPATH": "/home/ma/AQUA-FE_WS:/home/ma/.local/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages",
+        "PYTHONPYCACHEPREFIX": "/tmp/aqua-fe-a02-long-eval-empty-pycache-v1",
+        "SHELL": "/bin/bash",
+        "USER": "ma"
+      },
+      "status": "PASS_FROZEN_CPU_RUNTIME"
+    },
+    "xfeat_exporter": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/export_xfeat_lk_carrier_v1.py",
+      "sha256": "d7b6a698b784e0cee1c432308eb6f7546251503f0b47f4eeed9651b8fe401aba",
+      "size_bytes": 24279
+    },
+    "xfeat_official_closure": {
+      "file_count": 5,
+      "files": {
+        "external_tools/accelerated_features/LICENSE": {
+          "path": "/mnt/data/AQUA-FE_WS/external_tools/accelerated_features/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size_bytes": 11357
+        },
+        "external_tools/accelerated_features/modules/interpolator.py": {
+          "path": "/mnt/data/AQUA-FE_WS/external_tools/accelerated_features/modules/interpolator.py",
+          "sha256": "d63a6163eb6fff81e8720231f62537a42a69fccb44dc8851b04de5115daab4da",
+          "size_bytes": 1175
+        },
+        "external_tools/accelerated_features/modules/model.py": {
+          "path": "/mnt/data/AQUA-FE_WS/external_tools/accelerated_features/modules/model.py",
+          "sha256": "d9a665f18fcea5eaf3e278925e1a92103afcba9051e05b2334f3daa29f411964",
+          "size_bytes": 4542
+        },
+        "external_tools/accelerated_features/modules/xfeat.py": {
+          "path": "/mnt/data/AQUA-FE_WS/external_tools/accelerated_features/modules/xfeat.py",
+          "sha256": "385ccd31d095b0d4176b04e982088b85321b11ade4324f83b097ee6524f2a6e7",
+          "size_bytes": 13472
+        },
+        "external_tools/accelerated_features/weights/xfeat.pt": {
+          "path": "/mnt/data/AQUA-FE_WS/external_tools/accelerated_features/weights/xfeat.pt",
+          "sha256": "0f5187fd7bedd26c7fe6acc9685444493a165a35ecc087b33c2db3627f3ea10b",
+          "size_bytes": 6247949
+        }
+      },
+      "status": "PASS",
+      "upstream_commit": "e92685f57f8318b18725c5c8c0bd28c7fe188d9a"
+    },
+    "xfeat_quality_reference_source": {
+      "path": "/home/ma/AQUA-FE_WS/uw_frontend/quality/image_quality.py",
+      "sha256": "e0b4a885cb8ecd2909b8abefc0fbc17098c9596df44091d5a3398df56583b89e",
+      "size_bytes": 13301
+    }
+  },
+  "hfnet_provenance": {},
+  "post_incident_continuation": {
+    "active_continuation_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_component_only_continuation_freeze_v2_3.json",
+      "sha256": "0d008cb6b18ae2d4fada2f84dfd444b16e54abf0fdf54c7a9ad80b1f352e4609",
+      "size_bytes": 916846
+    },
+    "active_verifier": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/verify_a02_long_component_continuation_v2_3.py",
+      "sha256": "f90b1d552b621202f99c471c94cc6b6a9a6c4750668df05163ffda605a8bfef0",
+      "size_bytes": 51388
+    },
+    "execution_boundary": {
+      "bridge_not_run": true,
+      "component_ranking_not_performed": true,
+      "evaluator_not_run": true,
+      "hfnet_immutable_unusable_no_rerun": true,
+      "new_paths_only": true,
+      "no_retry": true
+    },
+    "protocol_history": [
+      {
+        "incident": {
+          "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_command9_infrastructure_false_negative_incident_v1.json",
+          "sha256": "5b19c46b06563250b4e54799608893e509269b85748de2213feb531df3694b07",
+          "size_bytes": 3901
+        },
+        "protocol": "v1",
+        "status": "TERMINATED_AT_COMMAND9_RC42_NOT_RESUMED"
+      },
+      {
+        "incident": {
+          "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_v2_1_9r_infrastructure_false_negative_incident_v1.json",
+          "sha256": "ed71ba881409786292b1c741a8d925bf0fd13574745e7806d23d29ef48b42aea",
+          "size_bytes": 6337
+        },
+        "protocol": "v2.1",
+        "status": "TERMINATED_AT_9R_RC42_NOT_RESUMED"
+      },
+      {
+        "incident": {
+          "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_v2_2_terminal_incident_v1.json",
+          "sha256": "0de6c739ab40d27ff07bf509ff7002d45b533aeb4b8c6174a96ee941f55305b8",
+          "size_bytes": 16456
+        },
+        "protocol": "v2.2",
+        "status": "FIXED_ORDER_COMPLETED_FAIL_NO_RANKING_NOT_RESUMED"
+      }
+    ],
+    "role": "THIRD_REVISED_POST_INCIDENT_DEVELOPMENT_EXPLORATORY_COMPONENT_OUTCOMES_NOT_CONFIRMATORY",
+    "source_partition_correction": {
+      "constq_rewrite_repeated": false,
+      "native_or_constq_bag_modified": false,
+      "only_semantic_delta": "quality_audit_source_codes_[1]_to_[1,2]"
+    }
+  },
+  "reference": {
+    "identity": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_shared_baselines_v1/a02_4500_6300_shared_r1/shared/reference_proxy.tum",
+      "sha256": "b1ae03e073ea1c2bcf12891ae0cca0eab462e044e73a1045ad4f11aa8b108d2c",
+      "size_bytes": 7488
+    },
+    "independent_ground_truth": false,
+    "row_count": 46,
+    "shared_and_canonical_source_chain": {
+      "canonical_converter_claim": {
+        "path": "/home/ma/AQUA-FE_WS/uw_frontend/datasets/aqualoc_raw_to_rosbag.py",
+        "sha256": "b0c4b7ce7f3e29dcb18cb1604190cc8690cae370fc222246c8dfeb4fc79ffbec",
+        "size_bytes": 8310
+      },
+      "canonical_gt_claim": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_groundtruth_files/new_archaeo_colmap_traj_sequence_02.txt",
+        "sha256": "1122b753372545966026df10f1899e751cdaa3359a6938be251cd8e22b6e4379",
+        "size_bytes": 64318
+      },
+      "canonical_output_topic_counts": {
+        "/aqualoc/colmap_gt": 91,
+        "/camera/image_raw": 1801,
+        "/rtimulib_node/imu": 18084
+      },
+      "canonical_raw_tar_claim": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_2_raw_data.tar.gz",
+        "sha256": "8f6203e0b46068a9d237f03e469acecb5f51eedbd6b7c1dc7c1f980ea6ea6d69",
+        "size_bytes": 2195786266
+      },
+      "canonical_window_bag_identity": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_6300.bag",
+        "sha256": "eebd45439e76c461e58a2a1d6321f3fcb82dbcf57ea4093929548c9620e63a83",
+        "size_bytes": 449056538
+      },
+      "canonical_window_manifest_identity": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_6300.bag.manifest.json",
+        "sha256": "41667ae9fd00dc6baf261cb2c519642b0ff9c2123ba154421780bc41bcf4de8e",
+        "size_bytes": 4502
+      },
+      "shared_manifest_identity": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_shared_baselines_v1/a02_4500_6300_shared_r1/conversion_manifest.json",
+        "sha256": "f2931e451e9542a3801209e88fd47519b881d6713ac829c9871a1f9366bc9d93",
+        "size_bytes": 682952
+      }
+    },
+    "shared_manifest_identity": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_shared_baselines_v1/a02_4500_6300_shared_r1/conversion_manifest.json",
+      "sha256": "f2931e451e9542a3801209e88fd47519b881d6713ac829c9871a1f9366bc9d93",
+      "size_bytes": 682952
+    },
+    "uniform_grid_points_expected": 45
+  },
+  "schema_version": "aqua-fe-a02-long-component-outcomes-terminal-v2-3-post-incident-continuation",
+  "scientific_role": "THIRD_REVISED_POST_INCIDENT_DEVELOPMENT_EXPLORATORY_COMPONENT_OUTCOMES_NOT_CONFIRMATORY",
+  "status": "TERMINAL_COMPONENT_ARM_FAILURE_NO_RANKING_HFNET_UNUSABLE",
+  "terminal_outcome": {
+    "bridge_run": false,
+    "component_arm_status": {
+      "B1_CONSTQ": "PASS",
+      "XFEATBIRTH_RAWLK": "FAIL"
+    },
+    "component_arms_all_usable": false,
+    "component_process_receipts": {
+      "B1_CONSTQ": {
+        "identity": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/process_rc_receipt.json",
+          "sha256": "545219acf1fe53422e27c6b0cf1def9d0f83603e1697922ae41dd6122eb43023",
+          "size_bytes": 867
+        },
+        "record": {
+          "actual_process_start_count": 1,
+          "algorithm_started": true,
+          "arm": "B1_CONSTQ",
+          "attempt_count": 1,
+          "continuation_generation": "v2.3_component_only",
+          "feature_bag": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_r1/features.bag",
+          "no_retry": true,
+          "port": 11531,
+          "return_code": 0,
+          "run_dir": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1",
+          "runner": {
+            "path": "/home/ma/AQUA-FE_WS/scripts/run_aqualoc_archaeo_vins_eval.sh",
+            "sha256": "c3bdb181fb4a0f9ef457f9dd0f7cffd4b1a79c8ed8dc2e529d62f02c9f98a1cc"
+          },
+          "schema_version": "aqua-fe-a02-vins-arm-process-receipt-v2-3",
+          "status": "PASS_ACTUAL_PROCESS_RC0",
+          "tag": "litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1"
+        },
+        "status": "OBSERVED"
+      },
+      "XFEATBIRTH_RAWLK": {
+        "identity": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_vins_post_incident_v2_3_r1/process_rc_receipt.json",
+          "sha256": "20b5417f9553f8e9e93c538124d2ed7d1e8354e6d0e187bec2720ed3bb06dd9f",
+          "size_bytes": 969
+        },
+        "record": {
+          "actual_process_start_count": 0,
+          "algorithm_started": false,
+          "arm": "XFEATBIRTH_RAWLK",
+          "attempt_count": 0,
+          "continuation_generation": "v2.3_component_only",
+          "feature_bag": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_post_incident_v2_3_r1/features.bag",
+          "no_retry": true,
+          "port": 11532,
+          "return_code": 125,
+          "run_dir": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_vins_post_incident_v2_3_r1",
+          "runner": {
+            "path": "/home/ma/AQUA-FE_WS/scripts/run_aqualoc_archaeo_vins_eval.sh",
+            "sha256": "c3bdb181fb4a0f9ef457f9dd0f7cffd4b1a79c8ed8dc2e529d62f02c9f98a1cc"
+          },
+          "schema_version": "aqua-fe-a02-vins-arm-process-receipt-v2-3",
+          "status": "DEPENDENCY_SKIP_PROCESS_NOT_STARTED",
+          "tag": "litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_vins_post_incident_v2_3_r1"
+        },
+        "status": "OBSERVED"
+      }
+    },
+    "component_ranking_performed": false,
+    "evaluator_run": false,
+    "hfnet_immutable_unusable": {
+      "evaluable": false,
+      "raw_process_return_code": 0,
+      "run_result_identity": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v4/post_stop_a02_long1801_headless/drivers/aqualoc_a02_4500_6300_headless_r1/run_result.json",
+        "sha256": "b7c911ca364a9d9233fa9b7cf0c6f245b83e89b129882628075fd8e759c6cb73",
+        "size_bytes": 4966
+      },
+      "trajectory_pose_count": 22,
+      "trajectory_score_span_seconds": 1.051619328,
+      "wrapper_return_code": 1
+    },
+    "proxy_reference_is_not_independent_ground_truth": true,
+    "terminal_failure_sealed": true,
+    "three_arm_ranking_eligible": false,
+    "v2_2_preseal_byte_recomputable": {
+      "identity": {
+        "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_three_arm_pre_eval_verification_v2_2_post_incident.json",
+        "sha256": "1cff9e454466673902f26f09811ad46a60122b1fe0b174b3b2b2c71af906cd7e",
+        "size_bytes": 71424
+      },
+      "status": "PASS_BYTE_RECOMPUTABLE",
+      "v2_2_status": "FAIL_ONE_OR_MORE_SCIENTIFIC_ARMS"
+    },
+    "v2_2_preseal_identity": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_three_arm_pre_eval_verification_v2_2_post_incident.json",
+      "sha256": "1cff9e454466673902f26f09811ad46a60122b1fe0b174b3b2b2c71af906cd7e",
+      "size_bytes": 71424
+    }
+  }
+}

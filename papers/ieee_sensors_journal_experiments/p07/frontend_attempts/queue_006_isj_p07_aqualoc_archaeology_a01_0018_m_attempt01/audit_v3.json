@@ -1,0 +1,85 @@
+{
+  "arbitration_summary": null,
+  "arm": "M_xfeat_pairwise_nativeq_v1",
+  "attestation": {
+    "path": "logs/aqualoc_archaeo_vins/external_xfeat_every2_isj_p07_aqualoc_archaeology_a01_0018_m_attempt01/features.bag.p05-xfeat-contract.json",
+    "schema_version": "aqua-fe-p05-xfeat-bag-attestation-v1",
+    "sha256": "e7c8b00f52a9fce010a34cc71ab422b4fad0e6e96d1b5fa3062a9dbf05ce306d"
+  },
+  "checks": {
+    "arm_attestation_bound": true,
+    "complete_13_channel_schema": true,
+    "feature_cap_and_native_q_pass": true,
+    "guard_exact_nonfallback_pass": true,
+    "metrics_match_bag": true,
+    "no_trajectory_outcome_artifacts": true,
+    "p_final_run_summary_bound": false,
+    "queue_allocation_exact": true,
+    "raw_bag_and_copied_topics_exact": true
+  },
+  "command_sha256": "fb6209732dcbf7c0201759d0bc854fd1a5607458cd69fe3a7de98457d9f20fa1",
+  "feature_bag": {
+    "feature_end_stamp": 1542828646.6597795,
+    "feature_frames": 450,
+    "feature_observations": 136786,
+    "feature_start_stamp": 1542828601.768442,
+    "is_learned_counts": {
+      "1": 136786
+    },
+    "max_features_per_frame": 332,
+    "min_features_per_frame": 262,
+    "path": "logs/aqualoc_archaeo_vins/external_xfeat_every2_isj_p07_aqualoc_archaeology_a01_0018_m_attempt01/features.bag",
+    "quality_max": 0.9127234816551208,
+    "quality_min": 0.8279926180839539,
+    "sha256": "a9cbab3a25c5e1302915814bfb383d63eb23edaa223c63691427a7fc6a3b6ae6",
+    "sigma_max": 1.0989723205566406,
+    "sigma_min": 1.0467196702957153,
+    "size_bytes": 12403050,
+    "source_counts": {
+      "20": 136786
+    },
+    "topic_counts": {
+      "/aqualoc/colmap_gt": 46,
+      "/feature_tracker/feature": 450,
+      "/rtimulib_node/imu": 9093
+    },
+    "zero_feature_frames": 0
+  },
+  "forbidden_outcome_artifacts": [],
+  "frontend_metrics": {
+    "exported_feature_observations": 136786,
+    "path": "logs/aqualoc_archaeo_vins/external_xfeat_every2_isj_p07_aqualoc_archaeology_a01_0018_m_attempt01/frontend_metrics.csv",
+    "rows": 450,
+    "sha256": "a46fd6067db0b0dd28fab4b1b5e6f138f54ebffe8ab730e18fd751393605cb3f",
+    "size_bytes": 284731
+  },
+  "guard": {
+    "action": "ALLOW_M_XFEAT",
+    "contract_hash": "4e31a9a29e8ee2198535de6b0bce01550b17077434e8e01ed68057822d4eace4",
+    "path": "logs/backend_contract_decisions/p05/p05_xfeat_guard_20260806T170319Z_546224_decision.json",
+    "schema_version": "aqua-fe-p05-xfeat-backend-guard-decision-v1",
+    "sha256": "b5c0d167feba019ad91e42b131a3a623efe2512e5a1d087fea8c7d8d8c0e5488"
+  },
+  "held_out_frontend_outcome_read": true,
+  "held_out_trajectory_outcome_read": false,
+  "learned_lineages": null,
+  "outcome_boundary": "FRONTEND_EXPORT_ONLY_NO_VINS_APE_RPE_TRAJECTORY",
+  "probe_run": null,
+  "queue_index": 6,
+  "raw_bag": {
+    "path": "datasets/aqualoc/rosbags/archaeo01_16200_17100.bag",
+    "sha256": "aaec5f5606d5450a145eb8f6a8c2956ecb0cd558384f784435006a31eb96fce6",
+    "size_bytes": 247176446,
+    "topic_counts": {
+      "/aqualoc/colmap_gt": 46,
+      "/camera/image_raw": 901,
+      "/rtimulib_node/imu": 9093
+    }
+  },
+  "run_dir": "logs/aqualoc_archaeo_vins/external_xfeat_every2_isj_p07_aqualoc_archaeology_a01_0018_m_attempt01",
+  "run_id": "isj-nativeq-v3_P07_aqualoc_archaeology-A01_16200-17100_M_f0_b00_20260806T084500Z",
+  "schema_version": "isj-p07-a01-frontend-export-audit-v3",
+  "status": "PASS",
+  "window_id": "aqualoc_archaeology:A01:0018",
+  "zero_action_identity": null
+}

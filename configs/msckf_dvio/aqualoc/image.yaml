@@ -1,0 +1,31 @@
+TRACK:
+  mode: TRACK_FEATURE
+  num_aruco: 1024
+  downsize_aruco: false
+  use_stereo: false
+  max_camera: 1
+  cam_id: 0
+  downsample_ratio: 1.0
+  img_enhancement: 0
+
+TRACK_FEATURE:
+  todo: 1
+
+Feature:
+  max_cond_number: 10000
+  min_dist: 0.1
+  max_dist: 60
+  lam_mult: 10
+  init_lamda: 0.001
+  max_runs: 5
+  max_lamda: 1e10
+  min_dx: 1e-6
+  min_dcost: 1e-6
+  max_baseline: 40
+
+Keyframe:
+  frame_count: 0
+  frame_motion: 0.0
+  motion_space: 3
+  min_tracked: 50
+  scene_ratio: 1.0

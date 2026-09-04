@@ -1,0 +1,159 @@
+{
+  "candidate_bundle_pass": false,
+  "checks": [
+    {
+      "detail": {
+        "path": "papers/ieee_sensors_journal_experiments/protocol_v1_candidate.md",
+        "required_token_count": 23,
+        "route_token": "MULTI_SEQUENCE_CANDIDATE",
+        "status_token": "CANDIDATE_P03",
+        "tokens_checked": [
+          "any_repeat",
+          "base_export_cap",
+          "budget_active",
+          "candidate_identity",
+          "candidate_status",
+          "claim_disclaimer",
+          "cqg_independent",
+          "cqg_not_causal",
+          "cqg_outcome_blind",
+          "dose_matching",
+          "f_threshold",
+          "failure_reducer",
+          "h_threshold",
+          "k0_l_e_contract",
+          "master_stream",
+          "min_gain",
+          "multi_sequence_route",
+          "no_confirmatory_result",
+          "no_valid_base_model",
+          "reliability_alpha",
+          "reliability_horizon",
+          "stage_boundary",
+          "total_feature_cap"
+        ]
+      },
+      "name": "protocol_required_tokens",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "error": "BundleValidationError: artifact hash/size mismatch: uw_frontend/geometry/master_candidate_stream.py"
+      },
+      "name": "method_lock_artifact_hash_integrity",
+      "status": "FAIL"
+    },
+    {
+      "detail": {
+        "classifier_probe": "valid/hard/solver-risk/queue-drop/reducer PASS",
+        "hard_failure_reason_count": 7,
+        "path": "papers/ieee_sensors_journal_experiments/failure_taxonomy_v1.yaml",
+        "schema_version": "isj-failure-taxonomy-v1",
+        "solver_signature_groups": [
+          "estimator_reset_or_restart",
+          "linear_solver_failure",
+          "numerical_abnormality"
+        ]
+      },
+      "name": "failure_taxonomy_classifier_contract",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "chain": "predecessor/hash/retirement PASS",
+        "classical_live_rows": 4320,
+        "event_count": 20,
+        "final_master_hash": "42e39ee83f3126355daf231311c3ddc288a080a6027a7722a2278372424e246d",
+        "first_master_hash": "faa99d6d20ece8e721d514f90055ada3b160c4a5f7273c39cc8045e13fd66158",
+        "learned_live_rows": 1893,
+        "path": "papers/ieee_sensors_journal_experiments/p03/smoke_a06_learned_v3/master_stream.jsonl",
+        "sequence_id": "A06_smoke_v3"
+      },
+      "name": "smoke_a06_learned_v3_master_chain",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "error": "BundleValidationError: shadow row 13: n_eligible does not match master event"
+      },
+      "name": "shadow_csv_schema_and_master_alignment",
+      "status": "FAIL"
+    },
+    {
+      "detail": {
+        "claim_docs_scanned": [
+          "papers/ieee_sensors_journal_experiments/protocol_v1_candidate.md",
+          "papers/ieee_sensors_journal_experiments/p03/a10_2400_2800/runtime_probe.json",
+          "papers/ieee_sensors_journal_experiments/p03/a10_400_800/runtime_probe.json"
+        ],
+        "confirmatory_claim_authorized": false,
+        "development_values_guarded": [
+          "0.268486",
+          "0.113326",
+          "0.265652",
+          "0.113263",
+          "0.255863",
+          "0.108435",
+          "0.118616",
+          "0.062520",
+          "0.058071",
+          "0.048803",
+          "0.050207",
+          "0.113417",
+          "0.113416"
+        ],
+        "forbidden_claim_count": 0
+      },
+      "name": "development_confirmatory_claim_boundary",
+      "status": "PASS"
+    },
+    {
+      "detail": {
+        "commands": [
+          {
+            "command": "/usr/bin/python3 -m unittest scripts.tests.test_failure_classifier scripts.tests.test_master_candidate_stream scripts.tests.test_fh_residuals scripts.tests.test_classical_proposer scripts.tests.test_temporal_reliability",
+            "output_tail": "...........................\n----------------------------------------------------------------------\nRan 27 tests in 0.086s\n\nOK\n",
+            "returncode": 0
+          },
+          {
+            "command": "/usr/bin/python3 -m uw_frontend.geometry._marginal_support_selftest",
+            "output_tail": "[PASS] new-region gain > redundant gain  (new=1.03818 redundant=0.02424)\n[PASS] new-region admitted rank 1  (selected=[2, 1])\n[PASS] higher q_lower -> higher gain  (q0.9=1.03818 q0.3=0.47500)\n[PASS] higher residual -> lower gain  (e0=1.03818 e3=0.08692)\n[PASS] scale-invariant selection order  ([2, 3, 1] vs [2, 3, 1])\n[PASS] image-shape-sensitive frame hash\n[PASS] input-order-invariant selection  ([0, 2, 1] vs [0, 2, 1])\n[PASS] input-order-invariant hash\n[PASS] respects b_active budget  (selected=[0, 2])\n[PASS] active lineage consumes slots (b_slots=1)  (b_slots=1)\n[PASS] high min_gain admits nothing  (selected=[])\n[PASS] G-mode picks geometric novelty  (g=[1])\n[PASS] Q-mode picks reliability  (q=[2])\n[PASS] total feature cap includes K0 base  (selected=[1])\n[PASS] NO_VALID_BASE_MODEL rejects every candidate\n[PASS] K0/L/E duplicate IDs rejected\n[PASS] frame hash includes model-fit identity\n\n17/17 contracts passed\n",
+            "returncode": 0
+          },
+          {
+            "command": "/usr/bin/python3 -m uw_frontend.geometry._shadow_rankings_selftest",
+            "output_tail": "[PASS] QG admits 2 (budget)  (n_t=2)\n[PASS] H top-2 = the redundant pair  (h=[1, 2])\n[PASS] QG top-2 spreads regions  (qg=[1, 3])\n[PASS] H/QG overlap < 1 (they differ)  (o_H=0.50)\n[PASS] all five arms produce full orders\n[PASS] all top-n_t have size n_t  (n_t=3)\n[PASS] QG overlaps itself = 1.0\n[PASS] Q top-1 = most reliable id  (q=[2])\n[PASS] R top-3 spans three non-empty cells  (r=[4, 1, 6])\n\n9/9 contracts passed\n",
+            "returncode": 0
+          }
+        ],
+        "status": "all unit tests and selector selftests PASS"
+      },
+      "name": "related_unit_and_selftests",
+      "status": "PASS"
+    }
+  ],
+  "confirmatory_claim_authorized": false,
+  "generated_at_utc": "2026-08-01T16:46:00+00:00",
+  "inputs": {
+    "failure_taxonomy": "papers/ieee_sensors_journal_experiments/failure_taxonomy_v1.yaml",
+    "master_stream": "papers/ieee_sensors_journal_experiments/p03/smoke_a06_learned_v3/master_stream.jsonl",
+    "method_lock": "papers/ieee_sensors_journal_experiments/method_lock_candidate.json",
+    "protocol": "papers/ieee_sensors_journal_experiments/protocol_v1_candidate.md",
+    "shadow_csv": "papers/ieee_sensors_journal_experiments/p03/smoke_a06_learned_v3/shadow_rankings.csv"
+  },
+  "notes": [
+    "Development smoke and historical VINS numbers remain development-only.",
+    "A PASS here validates the candidate bundle only; it does not append a ledger event."
+  ],
+  "p03_pass_authorized": false,
+  "residual_blockers": [
+    "canonical VINS exporter integration and H/P selector-only bag probe are pending",
+    "pooled reliability calibration split/subgroup gates are not frozen",
+    "CPU-only shadow selection P95 exceeds the 1 ms P03B gate",
+    "C-QG matched-dose implementation is pending"
+  ],
+  "schema_version": "isj-p03-candidate-bundle-validation-v1",
+  "stage": "P03",
+  "stage_status": "IN_PROGRESS",
+  "validation_status": "FAIL"
+}

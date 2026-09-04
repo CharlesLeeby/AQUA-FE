@@ -1,0 +1,29 @@
+test_evo_rmse_parser (test_evaluate_vins_common_support.EvaluateVinsCommonSupportTest) ... ok
+test_json_cleaner_converts_nonfinite_values_to_null (test_evaluate_vins_common_support.EvaluateVinsCommonSupportTest) ... ok
+test_legacy_reuse_diagnostic_counts_repeated_reference_use (test_evaluate_vins_common_support.EvaluateVinsCommonSupportTest) ... ok
+test_load_tum_preserves_orientation_and_rejects_mixed_rows (test_evaluate_vins_common_support.EvaluateVinsCommonSupportTest) ... ok
+test_load_vins_reads_wxyz_output_as_xyzw (test_evaluate_vins_common_support.EvaluateVinsCommonSupportTest) ... ok
+test_named_path_parser_requires_unique_name_value_pairs (test_evaluate_vins_common_support.EvaluateVinsCommonSupportTest) ... ok
+test_tum_serialization_uses_17_significant_digits (test_evaluate_vins_common_support.EvaluateVinsCommonSupportTest) ... ok
+test_insufficient_support_forces_review (test_summarize_g0_common_support.SummarizeG0CommonSupportTest) ... ok
+test_supported_gain_routes_to_preserved_or_redirect (test_summarize_g0_common_support.SummarizeG0CommonSupportTest) ... ok
+test_body_to_sensor_transform_uses_body_orientation (test_trajectory_eval_core.TrajectoryEvalCoreTest) ... ok
+test_common_evaluation_reports_insufficient_support (test_trajectory_eval_core.TrajectoryEvalCoreTest) ... ok
+test_common_evaluation_uses_one_mask_and_exact_rpe_pairs (test_trajectory_eval_core.TrajectoryEvalCoreTest) ... ok
+test_common_mask_and_segments_split_at_invalid_grid_points (test_trajectory_eval_core.TrajectoryEvalCoreTest) ... ok
+test_estimate_validation_preserves_hard_failures (test_trajectory_eval_core.TrajectoryEvalCoreTest) ... ok
+test_evaluation_rate_uses_largest_allowed_rate_below_reference (test_trajectory_eval_core.TrajectoryEvalCoreTest) ... ok
+test_interpolation_rejects_out_of_range_and_long_brackets (test_trajectory_eval_core.TrajectoryEvalCoreTest) ... ok
+test_legacy_assignment_is_unique_global_and_prefers_earlier_tie (test_trajectory_eval_core.TrajectoryEvalCoreTest) ... ok
+test_legacy_assignment_respects_match_tolerance (test_trajectory_eval_core.TrajectoryEvalCoreTest) ... ok
+test_prepare_reference_rejects_conflicting_duplicate_pose (test_trajectory_eval_core.TrajectoryEvalCoreTest) ... ok
+test_prepare_reference_sorts_audits_and_deduplicates_identical_pose (test_trajectory_eval_core.TrajectoryEvalCoreTest) ... ok
+test_se3_alignment_does_not_estimate_scale (test_trajectory_eval_core.TrajectoryEvalCoreTest) ... ok
+test_strict_delta_pairs_stay_within_segments (test_trajectory_eval_core.TrajectoryEvalCoreTest) ... ok
+test_translation_and_quaternion_interpolation (test_trajectory_eval_core.TrajectoryEvalCoreTest) ... ok
+test_uniform_grid_is_window_anchored_and_inclusive (test_trajectory_eval_core.TrajectoryEvalCoreTest) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.017s
+
+OK

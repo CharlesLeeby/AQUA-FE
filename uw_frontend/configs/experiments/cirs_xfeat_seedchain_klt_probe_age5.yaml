@@ -1,0 +1,6 @@
+extends: cirs_xfeat_seedchain_klt_probe.yaml
+
+hybrid:
+  # Stricter gate-ladder diagnostic: require learned XFeat seeds to survive
+  # five LK/KLT confirmation frames before they can become learned-origin tracks.
+  learned_confirmation_min_frames: 5

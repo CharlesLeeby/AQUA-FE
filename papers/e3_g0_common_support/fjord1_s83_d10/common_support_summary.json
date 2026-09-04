@@ -1,0 +1,152 @@
+{
+  "arms": {
+    "drop": {
+      "ape_max_m": 2.9542279555775206,
+      "ape_median_m": 0.7357817824424743,
+      "ape_rmse_m": 1.0008501992024104,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 86,
+        "raw_count": 86,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 86
+      },
+      "bracket_gap_max_s": 0.10000252723693848,
+      "bracket_gap_p50_s": 0.09999895095825195,
+      "bracket_gap_p95_s": 0.09999918937683105,
+      "legacy_max_reference_reuse": 1,
+      "legacy_pair_count": 86,
+      "legacy_timestamp_error_max_s": 0.010958671569824219,
+      "legacy_timestamp_error_p95_s": 0.009887337684631348,
+      "legacy_unique_assignment_error_max_s": 0.010958671569824219,
+      "legacy_unique_assignment_error_p95_s": 0.009887337684631348,
+      "legacy_unique_assignment_pair_count": 86,
+      "legacy_unique_reference_used": 86,
+      "matched_count": 85,
+      "rejection_histogram": {
+        "INTERPOLATED": 85,
+        "OUT_OF_RANGE": 3037
+      },
+      "rpe_max_m": 1.8896232595163056,
+      "rpe_median_m": 0.43461641184265104,
+      "rpe_pairs": 75,
+      "rpe_rmse_m": 0.8274810019202045,
+      "valid_grid_count": 85
+    },
+    "full": {
+      "ape_max_m": 0.23436709468773823,
+      "ape_median_m": 0.05860403824916678,
+      "ape_rmse_m": 0.07917945430051859,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 86,
+        "raw_count": 86,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 86
+      },
+      "bracket_gap_max_s": 0.10000252723693848,
+      "bracket_gap_p50_s": 0.09999895095825195,
+      "bracket_gap_p95_s": 0.09999918937683105,
+      "legacy_max_reference_reuse": 1,
+      "legacy_pair_count": 86,
+      "legacy_timestamp_error_max_s": 0.010958671569824219,
+      "legacy_timestamp_error_p95_s": 0.009887337684631348,
+      "legacy_unique_assignment_error_max_s": 0.010958671569824219,
+      "legacy_unique_assignment_error_p95_s": 0.009887337684631348,
+      "legacy_unique_assignment_pair_count": 86,
+      "legacy_unique_reference_used": 86,
+      "matched_count": 85,
+      "rejection_histogram": {
+        "INTERPOLATED": 85,
+        "OUT_OF_RANGE": 3037
+      },
+      "rpe_max_m": 0.16644181112585477,
+      "rpe_median_m": 0.05959376281588058,
+      "rpe_pairs": 75,
+      "rpe_rmse_m": 0.08031020689967514,
+      "valid_grid_count": 85
+    },
+    "klt": {
+      "ape_max_m": 0.6086032430738468,
+      "ape_median_m": 0.164220905449685,
+      "ape_rmse_m": 0.1812776201988145,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 86,
+        "raw_count": 86,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 86
+      },
+      "bracket_gap_max_s": 0.10000252723693848,
+      "bracket_gap_p50_s": 0.09999895095825195,
+      "bracket_gap_p95_s": 0.09999918937683105,
+      "legacy_max_reference_reuse": 1,
+      "legacy_pair_count": 86,
+      "legacy_timestamp_error_max_s": 0.010958671569824219,
+      "legacy_timestamp_error_p95_s": 0.009887337684631348,
+      "legacy_unique_assignment_error_max_s": 0.010958671569824219,
+      "legacy_unique_assignment_error_p95_s": 0.009887337684631348,
+      "legacy_unique_assignment_pair_count": 86,
+      "legacy_unique_reference_used": 86,
+      "matched_count": 85,
+      "rejection_histogram": {
+        "INTERPOLATED": 85,
+        "OUT_OF_RANGE": 3037
+      },
+      "rpe_max_m": 0.4044951470956041,
+      "rpe_median_m": 0.08629577412729762,
+      "rpe_pairs": 75,
+      "rpe_rmse_m": 0.1319396110894335,
+      "valid_grid_count": 85
+    }
+  },
+  "protocol": {
+    "arm_time_offsets_s": {
+      "drop": 0.0,
+      "full": 0.0,
+      "klt": 0.0
+    },
+    "body_to_camera_applied": true,
+    "contrast_name": "fjord1_s83_d10",
+    "evaluation_rate_hz": 10.0,
+    "max_estimate_gap_s": 0.25,
+    "max_reference_gap_s": 0.05,
+    "nominal_estimate_rate_hz": 10.0,
+    "nominal_reference_rate_hz": 50.0,
+    "reference": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/ntnu_hf/subset-fjord/fjord_1/fjord_1_baseline.tum",
+    "reference_time_offset_s": 0.0,
+    "rpe_delta_s": 1.0,
+    "rpe_semantics": "aligned_global_frame_positional_delta",
+    "window_end_s": 1700605093.854292,
+    "window_start_s": 1700604781.6781669
+  },
+  "reference": {
+    "audit": {
+      "duplicate_count": 0,
+      "finite_count": 17280,
+      "raw_count": 17280,
+      "rejected_nonfinite_count": 0,
+      "unique_count": 17280
+    },
+    "bracket_gap_max_s": 0.13499999046325684,
+    "bracket_gap_p50_s": 0.017999887466430664,
+    "bracket_gap_p95_s": 0.020999908447265625,
+    "rejection_histogram": {
+      "EXACT": 1,
+      "GAP_EXCEEDED": 34,
+      "INTERPOLATED": 3087
+    },
+    "valid_grid_count": 3088
+  },
+  "support": {
+    "ape_valid": false,
+    "common_coverage": 0.027226137091607944,
+    "common_span_s": 8.399999856948853,
+    "grid_count": 3122,
+    "matched_count": 85,
+    "rpe_pairs": 75,
+    "rpe_valid": true,
+    "segment_count": 1,
+    "window_duration_s": 312.17612504959106
+  }
+}

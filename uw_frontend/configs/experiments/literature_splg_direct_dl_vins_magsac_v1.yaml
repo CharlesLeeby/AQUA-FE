@@ -1,0 +1,17 @@
+extends: literature_splg_direct_persistent_v1.yaml
+
+# Exact temporal geometry comparator from DL-VINS-Factory's published code:
+# LightGlue-filtered adjacent-frame matches are calibrated to the normalized
+# image plane, then filtered by Essential USAC_MAGSAC at 1/focal_mean,
+# probability 0.999 and maxIters 200.  The official <8/error/bad-mask/<0.5
+# inlier-ratio cases are fail-open.  No NCC or recoverPose is part of this arm.
+# This calibrated comparator is intentionally export_vins_features-only; the
+# generic image-sequence evaluator has no camera-calibration input and therefore
+# must fail rather than silently run an uncalibrated substitute.
+pairwise:
+  use_ncc: false
+  geometry_mode: dl_vins_magsac
+
+# Inherited and intentionally unchanged:
+# max_features=350, continuity_first_v2, LightGlue filter_threshold=0.1,
+# sparse-feature cache enabled, measurement selection disabled, backend q=const.

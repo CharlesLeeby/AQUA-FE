@@ -1,0 +1,114 @@
+{
+  "attempt_id": "attempt02",
+  "calibration_contract": {
+    "camera_info": {
+      "D": [
+        -0.16289394362063583,
+        0.08351833356682732,
+        0.012276483503048642,
+        0.0006858966792660155,
+        0.0
+      ],
+      "K": [
+        1138.83276975,
+        0.0,
+        708.17293738,
+        0.0,
+        1139.59469807,
+        617.12897383,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "canonical_sha256": "a042bb8f34c9db98d07b817cbb05aee170496490b3b8706cf5a897917ee0c18e",
+      "height": 1200,
+      "matches_correction": true,
+      "topic": "/cam_fl/image_raw/cam_info",
+      "width": 1600
+    },
+    "correction_manifest": {
+      "path": "papers/ieee_sensors_journal_experiments/p06/afrl_calibration_correction_v1.json",
+      "sha256": "9745eb7cd6eae42a95032fcd217c403e7b701a012c54a3b41352337325998610",
+      "size_bytes": 3444
+    },
+    "learned_outcome_read": false,
+    "outcome_boundary": "KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME",
+    "schema_version": "isj-p06-afrl-calibration-contract-v1",
+    "selected_calibration_path": "datasets/full_downloads/afrl_hf/camera_imu_parameters/camchain_cemetery.yaml",
+    "selected_calibration_sha256": "abf9aed6ff1b4ab81641c38b2149a5c37f2f194b7b465cc6fe924dd518235b03",
+    "source_manifest": {
+      "path": "papers/ieee_sensors_journal_experiments/data_eligibility_manifest.csv",
+      "sha256": "510c276c33217706eef11ea53e58de4b37318828f8a6dc793dea9262f0a0a0f5"
+    },
+    "status": "PASS",
+    "supersedes_calibration_path": "datasets/full_downloads/afrl_hf/camera_imu_parameters/camchain_cave_gennie.yaml",
+    "trajectory_outcome_read": false
+  },
+  "canonical_run_dir": "papers/ieee_sensors_journal_experiments/p06/screening_runs/afrl/cemetery",
+  "code": [
+    {
+      "path": "uw_frontend/configs/klt_frontend.yaml",
+      "sha256": "73fd335a18ed77c821d8bc19b653f26b544acfa90fbb75a53d65d285888fd653",
+      "size_bytes": 2878
+    },
+    {
+      "path": "uw_frontend/ros/export_vins_features.py",
+      "sha256": "7ed31890e3a55a528430e912df885830176b3c3432c420860a39d714bceae7cf",
+      "size_bytes": 435551
+    },
+    {
+      "path": "scripts/run_p06_afrl_direct_screening.py",
+      "sha256": "16578ba0d58445d90dc400d6c1da781abf96d6b98d46fedc0640aea83017d922",
+      "size_bytes": 4914
+    },
+    {
+      "path": "scripts/run_p06_ros_screening.py",
+      "sha256": "23bd29b43b410e6a4dc4fd6ce1afd17ecf8bb12b4270f730518c7d7c6b6b7367",
+      "size_bytes": 14251
+    },
+    {
+      "path": "scripts/p06_window_selection_v2.py",
+      "sha256": "c50f7e93855e21214ac46a50e38a23e35224826a71cc56f0ed95178874c77c2b",
+      "size_bytes": 2798
+    },
+    {
+      "path": "scripts/run_p06_ros_screening_v3.py",
+      "sha256": "78ab85e3a527f70e66c398caacd67b981cd83bead21e0b004125ef7e6c6ae504",
+      "size_bytes": 9904
+    }
+  ],
+  "command": "AFRL_ADAPTER=isj-p06-afrl-direct-compressed-v1 BACKEND_QUALITY_MODE=default CAMCHAIN=/home/ma/AQUA-FE_WS/datasets/full_downloads/afrl_hf/camera_imu_parameters/camchain_cemetery.yaml CAMERA_KEY=cam0 EXPORT_MAX_FEATURES=350 EXPORT_MIN_AGE=0 FORCE_EXPORT=1 FORMAL_THREE_LAYER_EXPORT=0 FRAME_OFFSET=0 FRONTEND_CONFIG=/home/ma/AQUA-FE_WS/uw_frontend/configs/klt_frontend.yaml MEASUREMENT_SELECTION=0 PREPROCESS=adaptive_clahe PROCESS_SKIPPED_FRAMES=0 RAW_BAG=/home/ma/AQUA-FE_WS/datasets/full_downloads/afrl_hf/ros1_bags/cemetery.bag ROOT=/home/ma/AQUA-FE_WS RUN_DIR=/mnt/data/AQUA-FE_WS/p06_screening_work/afrl/cemetery/attempt02 RUN_VINS=0 SEMIDENSE_FALLBACK_METHOD=none SRC_IMAGE_TOPIC=/cam_fl/image_raw/compressed VINS_SAFE_SOURCE_SELECTION=0 python3 scripts/run_p06_afrl_direct_screening.py --raw-bag /home/ma/AQUA-FE_WS/datasets/full_downloads/afrl_hf/ros1_bags/cemetery.bag --camchain /home/ma/AQUA-FE_WS/datasets/full_downloads/afrl_hf/camera_imu_parameters/camchain_cemetery.yaml --camera-key cam0 --image-topic /cam_fl/image_raw/compressed --duration 434.82 --work-dir /mnt/data/AQUA-FE_WS/p06_screening_work/afrl/cemetery/attempt02",
+  "contract_pass": true,
+  "dataset_family": "afrl",
+  "first_frame_index": "0",
+  "generated_at_utc": "2026-08-05T10:22:01+00:00",
+  "issues": [],
+  "last_frame_index": "7780",
+  "metrics_path": "papers/ieee_sensors_journal_experiments/p06/screening_runs/afrl/cemetery/attempt02/metrics.csv",
+  "metrics_sha256": "d3dd45218d8eb07304ec3134263715cd78a2a953af237857945963427f5aceb4",
+  "outcome_boundary": "KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME",
+  "process_log_path": "papers/ieee_sensors_journal_experiments/p06/screening_runs/afrl/cemetery/attempt02/process.log",
+  "protocol_version": "isj-window-selection-v2",
+  "raw_input": {
+    "path": "datasets/full_downloads/afrl_hf/ros1_bags/cemetery.bag",
+    "registered_sha256": "52e79f563553a7c65eabced807751e18e02bb13a3d6f0f21888c57e14975bfba",
+    "size_bytes": 2357326806
+  },
+  "row_count": 7781,
+  "run_dir": "papers/ieee_sensors_journal_experiments/p06/screening_runs/afrl/cemetery/attempt02",
+  "runner_version": "isj-p06-ros-screening-v3-calibration-corrected",
+  "schema_version": "isj-p06-screening-run-v1",
+  "sequence": "cemetery",
+  "split_role": "SEQUENCE_HELD_OUT_WINDOW_CANDIDATE",
+  "status": "PASS",
+  "temporary_adapter_artifacts": [
+    {
+      "disposition": "delete_after_success_unless_keep_work_bags",
+      "path": "/mnt/data/AQUA-FE_WS/p06_screening_work/afrl/cemetery/attempt02/features.bag",
+      "sha256": "bf16df1c94e730dd84e514c0b2cf0873c145bfdbcd619e04c22536c225b145bf",
+      "size_bytes": 176431102
+    }
+  ],
+  "temporary_bags_retained": false,
+  "work_dir": "/mnt/data/AQUA-FE_WS/p06_screening_work/afrl/cemetery/attempt02"
+}

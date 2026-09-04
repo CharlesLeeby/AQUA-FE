@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/ma/AQUA-FE_WS/uw_frontend/ros/export_vins_features.py", line 10275, in <module>
+    raise SystemExit(main())
+  File "/home/ma/AQUA-FE_WS/uw_frontend/ros/export_vins_features.py", line 2715, in main
+    processed_quality = score_image_quality(gray)
+  File "/home/ma/AQUA-FE_WS/uw_frontend/quality/image_quality.py", line 78, in score_image_quality
+    illumination_nonuniformity = _illumination_nonuniformity(gray_f)
+  File "/home/ma/AQUA-FE_WS/uw_frontend/quality/image_quality.py", line 178, in _illumination_nonuniformity
+    low_freq = cv2.GaussianBlur(gray_f, (0, 0), sigmaX=sigma, sigmaY=sigma)
+KeyboardInterrupt

@@ -1,0 +1,12 @@
+In file included from /mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/include/KeyFrame.h:28,
+                 from /mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/include/MapPoint.h:24,
+                 from /mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/include/FeatureMatcher.h:28,
+                 from scripts/diagnostics/anyfeature_r2d2_init_audit_v1.cpp:13:
+/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/include/FeatureExtractor.h: In member function 'virtual int ANYFEATURE_VSLAM::FeatureExtractor::GetKeypointOctave(const cv::KeyPoint&) const':
+/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/include/FeatureExtractor.h:118:89: warning: no return statement in function returning non-void [-Wreturn-type]
+  118 |         [[nodiscard]] virtual int GetKeypointOctave(const cv::KeyPoint& keypoint) const{};
+      |                                                                                         ^
+/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/include/FeatureExtractor.h: In member function 'virtual float ANYFEATURE_VSLAM::FeatureExtractor::GetKeypointSize(const cv::KeyPoint&) const':
+/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/include/FeatureExtractor.h:119:89: warning: no return statement in function returning non-void [-Wreturn-type]
+  119 |         [[nodiscard]] virtual float GetKeypointSize(const cv::KeyPoint& keypoint) const{};
+      |                                                                                         ^

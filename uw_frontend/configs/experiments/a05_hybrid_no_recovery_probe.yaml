@@ -1,0 +1,16 @@
+extends: loftr_extreme_only_frontend.yaml
+
+hybrid:
+  # Diagnostic profile: keep the HybridKltOrbTracker wrapper, but disable every
+  # path that can alter the KLT state beyond the base KltTracker replenish.
+  enable_classical_recovery: false
+  enable_lk_recovery: false
+  enable_learned_recovery: false
+  enable_learned_initialization: false
+  enable_semidense_fallback_initialization: false
+  enable_learned_track_memory: false
+  enable_gftt_confirmation: false
+  preserve_klt_replenish: true
+
+measurement_selection:
+  enabled: false

@@ -1,0 +1,26 @@
+extends: cirs_xfeat_seedchain_klt_probe.yaml
+
+hybrid:
+  # Low-texture diagnostic profile: learned proposals are only birth seeds.
+  # They must survive LK/KLT confirmation before becoming VINS-visible tracks,
+  # and their learned origin is kept long enough for source/lineage ablations.
+  learned_init_requires_klt_confirmation: true
+  learned_confirmation_min_frames: 4
+  learned_confirmation_preserve_new_pending: true
+  learned_confirmation_geometry_safe: true
+  learned_confirmation_max_pending: 800
+  learned_confirmation_max_confirmed: 64
+
+  # Keep the first safe profile dose-limited. The goal is to identify active,
+  # durable learned-born tracks, not to flood VINS with pairwise matches.
+  promotion_xfeat_max_confirmed: 10
+  promotion_xfeat_min_quality: 0.10
+  promotion_xfeat_max_fb_error: 1.10
+  promotion_xfeat_min_ncc: 0.45
+
+  enable_source_provenance_memory: true
+  source_provenance_learned_hold_frames: 120
+  source_provenance_quality_scale_learned: 0.85
+
+measurement_selection:
+  enabled: false

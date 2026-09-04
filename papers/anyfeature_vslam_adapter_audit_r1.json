@@ -1,0 +1,50 @@
+{
+  "schema_version": "aqua-fe-anyfeature-adapter-independent-audit-v1",
+  "recorded_at": "2026-08-11T19:10:00+08:00",
+  "verdict": "GO_CODE_WITH_EXECUTION_CONDITIONS",
+  "real_bag_read": false,
+  "model_inference_run": false,
+  "slam_run": false,
+  "files": [
+    {
+      "path": "scripts/export_aqualoc_to_anyfeature_v1.py",
+      "sha256": "2dccbe93f68df3ec18f4bbae20ee2fcf24bf3a5e4d857313d23bd2a77690f09e"
+    },
+    {
+      "path": "scripts/tests/test_export_aqualoc_to_anyfeature_v1.py",
+      "sha256": "abb0da317c1c3ed35cfbc87f895203057c4e4f406c688e46b0f2f66634595130"
+    },
+    {
+      "path": "scripts/materialize_anyfeature_r2d2_bins_v1.py",
+      "sha256": "4aa1bcfa9073fa667d47154de64fc0f20d0f3a9806a812514b5616e06702f8e7"
+    },
+    {
+      "path": "scripts/tests/test_materialize_anyfeature_r2d2_bins_v1.py",
+      "sha256": "ada29004e86c295e9ccb3c2437456410749fd66377732b078ef6d8cfae4162ab"
+    }
+  ],
+  "verification": {
+    "py_compile_pass": true,
+    "synthetic_tests_passed": 36,
+    "synthetic_tests_failed": 0,
+    "independent_rerun_pass": true
+  },
+  "contract_checks": {
+    "paper_era_rgb_txt_exact": true,
+    "png_pixel_and_timestamp_identity": true,
+    "camera_calibration_identity": true,
+    "r2d2_archive_imsize_shape_dtype_bounds_scale_finite": true,
+    "zero_feature_frame_is_legal": true,
+    "float32_to_little_endian_float64_roundtrip_exact": true,
+    "prefix_to_full_reuses_prefix_png_archives_and_bins": true,
+    "producer_manifest_binds_extractor_checkpoint_python_cwd_argv_images_logs_and_archives": true,
+    "output_and_report_no_clobber": true,
+    "symlink_unknown_file_and_tamper_rejection": true,
+    "little_endian_consumer_gate": true
+  },
+  "execution_conditions": [
+    "Before real export or smoke, a preregistration addendum must reserve /mnt/data/AQUA-FE_WS/anyfeature_adapter/aqualoc_a02_0005_frame000_smoke_view_r1 and bind it as the one-image sequence_path.",
+    "Before real inference, the R2D2 producer runner must seal sys.path, CPU-only Torch status, package versions and module-file hashes, canonical argv, logs, RC, timing, and each archive hash.",
+    "All four audited file hashes must match immediately before every real adapter action."
+  ]
+}

@@ -1,0 +1,5 @@
+window,status,matched_count,common_span_s,common_coverage,rpe_pairs
+a06_s000_d045,PASS,40,39.0,0.8888888888888888,39
+a09_6000_6800,PASS,38,37.0,0.95,37
+a06_s045_d045,PASS,42,41.0,0.9545454545454546,41
+h07_s000_d050,EXCLUDED_COMMON_SUPPORT,,,,

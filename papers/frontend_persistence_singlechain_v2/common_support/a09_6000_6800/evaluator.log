@@ -1,0 +1,1 @@
+{"output": "/home/ma/AQUA-FE_WS/papers/frontend_persistence_singlechain_v2/common_support/a09_6000_6800", "support": {"ape_valid": true, "common_coverage": 0.95, "common_span_s": 37.0, "grid_count": 40, "matched_count": 38, "rpe_pairs": 37, "rpe_valid": true, "segment_count": 1, "window_duration_s": 39.99340629577637}}

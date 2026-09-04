@@ -1,0 +1,158 @@
+{
+  "causal_chain": [
+    "learned/classical confirmation changes the internal KLT state",
+    "the next frame tracks and replenishes from that changed state",
+    "the replenishment mask, capacity, and ID allocation therefore diverge",
+    "health, trigger, and later proposal opportunity may then diverge",
+    "a post-hoc source swap cannot recover a shared counterfactual K0"
+  ],
+  "checks": [
+    {
+      "check_id": "FROZEN_V3_IDENTITY",
+      "evidence": {
+        "admission": "LK/KLT_probation_then_frozen_microburst_or_safe_fallback",
+        "profile": "isj-nativeq-xfeat-seedchain-legacy-v3",
+        "protocol_version": "isj-nativeq-legacy-candidate-v3",
+        "selector": "frozen_lineage_early_seed_scan_arbitration"
+      },
+      "failure": "",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FROZEN_V3_SAMPLING",
+      "evidence": {
+        "sampling": {
+          "afrl": {
+            "every_n": 2,
+            "frame_offset": 0
+          },
+          "aqualoc_archaeology": {
+            "every_n": 2,
+            "frame_offset": 1
+          },
+          "aqualoc_harbor": {
+            "every_n": 2,
+            "frame_offset": 1
+          },
+          "ntnu": {
+            "every_n": 2,
+            "frame_offset": 1
+          }
+        }
+      },
+      "failure": "",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FROZEN_SOURCE_HASHES",
+      "evidence": {
+        "scripts/run_isj_nativeq_legacy_candidate.sh": {
+          "actual_sha256": "495074b495da085af459eec6655cbe58ab57de8afe02246102268f1c8558cc9e",
+          "expected_sha256": "495074b495da085af459eec6655cbe58ab57de8afe02246102268f1c8558cc9e",
+          "status": "PASS"
+        },
+        "scripts/run_xfeat_seedchain_arbitrated_eval.sh": {
+          "actual_sha256": "82bd47f019a423fc3e8f92bf533c06556dd1eb9b2d20c49ba8ff09e435744fb0",
+          "expected_sha256": "82bd47f019a423fc3e8f92bf533c06556dd1eb9b2d20c49ba8ff09e435744fb0",
+          "status": "PASS"
+        },
+        "uw_frontend/ros/export_vins_features.py": {
+          "actual_sha256": "7ed31890e3a55a528430e912df885830176b3c3432c420860a39d714bceae7cf",
+          "expected_sha256": "7ed31890e3a55a528430e912df885830176b3c3432c420860a39d714bceae7cf",
+          "status": "PASS"
+        },
+        "uw_frontend/tracking/hybrid_tracker.py": {
+          "actual_sha256": "7772772f1baf0966a4b1096ac1cd3122d71edbe18031756de409443e7c5ea2ae",
+          "expected_sha256": "7772772f1baf0966a4b1096ac1cd3122d71edbe18031756de409443e7c5ea2ae",
+          "status": "PASS"
+        },
+        "uw_frontend/tracking/klt_tracker.py": {
+          "actual_sha256": "e60957bc0b45a11ef24824fa95ef9093dbbd7ba5998bc82bb91641c831f1fb5b",
+          "expected_sha256": "e60957bc0b45a11ef24824fa95ef9093dbbd7ba5998bc82bb91641c831f1fb5b",
+          "status": "PASS"
+        }
+      },
+      "failure": "",
+      "status": "PASS"
+    },
+    {
+      "check_id": "LEARNED_WRITES_BACK_TO_KLT_CARRIER",
+      "evidence": {
+        "function": "HybridKltOrbTracker.process",
+        "function_sha256": "b35a85c82e4e77a30b4228cb93a986f492c7966b725ec6dd2c94552bea69afc4",
+        "matched_calls": [
+          "self._append_to_klt_state(learned_initialized)",
+          "self._append_to_klt_state(semidense_initialized)",
+          "self._append_to_klt_state(confirmed_learned)"
+        ],
+        "missing_calls": [],
+        "path": "uw_frontend/tracking/hybrid_tracker.py"
+      },
+      "failure": "",
+      "status": "PASS"
+    },
+    {
+      "check_id": "KLT_STATE_MUTATION_IS_EXPLICIT",
+      "evidence": {
+        "function": "HybridKltOrbTracker._append_to_klt_state",
+        "function_sha256": "63291ddc0f158c29c1f9352c8807587ebc1390b4418f0c0734238b6d09831cdb",
+        "missing_mutations": [],
+        "path": "uw_frontend/tracking/hybrid_tracker.py"
+      },
+      "failure": "",
+      "status": "PASS"
+    },
+    {
+      "check_id": "NEXT_FRAME_KLT_DEPENDS_ON_MUTATED_STATE",
+      "evidence": {
+        "detect_function_sha256": "dd3cce9e7a4351a4e461608bf2a3edc7aff734bd5f3b7c7428cc8f90ecb974cc",
+        "missing_mask_tokens": [],
+        "missing_replenish_tokens": [],
+        "path": "uw_frontend/tracking/klt_tracker.py",
+        "process_function_sha256": "d58b651779edaf0f73a24af1913e83ec240a799ef5d2d830267d35b2835236a7"
+      },
+      "failure": "",
+      "status": "PASS"
+    },
+    {
+      "check_id": "V4_REPLAYER_IS_NOT_V3_ADMISSION",
+      "evidence": {
+        "missing_tokens": [],
+        "path": "scripts/p04_nativeq_arm_replayer_v4.py",
+        "replayer_sha256": "b6eed19fef887bbe2c8c33a034b11bbaa87b58fc5fa9740344c73a149cb0bca0",
+        "v3_selector": "frozen_lineage_early_seed_scan_arbitration",
+        "v4_b_active": 8,
+        "v4_selector": "distance_grid"
+      },
+      "failure": "",
+      "status": "PASS"
+    }
+  ],
+  "decision": "STRICT_MATCHED_CLASSICAL_CONTROL_NOT_IDENTIFIABLE_UNDER_V3",
+  "issues": [],
+  "learned_outcome_read": false,
+  "meaning_of_pass": "The structural non-identifiability decision is reproducible; H2 itself did not pass.",
+  "method_lock": {
+    "candidate_lock_hash": "19b0e4754341d52d6c52e8b3da7409bf22d228ca4a775ae6efe92c072ce71f63",
+    "path": "papers/ieee_sensors_journal_experiments/method_lock_nativeq_legacy_candidate_v3.json",
+    "sha256": "c2a54da0975984a0cdbf2f4d7653f9e9e941a37632eafcaba3f184d205f37048"
+  },
+  "outcome_boundary": "FROZEN_SOURCE_ONLY_NO_BAG_VINS_APE_RPE_TRAJECTORY",
+  "recommended_disposition": {
+    "B2": "RETIRE_AND_NARROW_ADMISSION_SPECIFIC_CLAIM",
+    "C_development_diagnostics": "RETAIN_WITHOUT_CAUSAL_LANGUAGE",
+    "C_legacy_confirmatory": "RETIRE",
+    "D_exact_drop": "RETAIN_CONDITIONAL_ON_PROPOSED_ACTIVE",
+    "H2_CONTROL_CONTRACT": "NOT_APPLICABLE_CARRIER_FEEDBACK",
+    "main_confirmatory_arms": [
+      "B0",
+      "B1",
+      "P_legacy",
+      "M"
+    ],
+    "scientific_method": "RETAIN_NATIVEQ_V3"
+  },
+  "schema_version": "isj-p04-v3-control-identifiability-v1",
+  "status": "PASS",
+  "trajectory_outcome_read": false
+}

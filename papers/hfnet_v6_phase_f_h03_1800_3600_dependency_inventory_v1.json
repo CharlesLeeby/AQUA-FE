@@ -1,0 +1,1728 @@
+{
+  "claims": {
+    "hfnet_started": false,
+    "model_loaded": false,
+    "retry_authorized": false
+  },
+  "core": {
+    "binary": {
+      "path": "/home/ma/AQUA-FE_WS/build/published_baselines/hfnet_slam_headless_entry_v3/mono_inertial_euroc_headless_v3",
+      "sha256": "4d17eecc74ec8f4bcbe4381d579d2bb48160cf63f6dc948f7857d92e681affeb",
+      "size_bytes": 118280
+    },
+    "dependencies": [
+      {
+        "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Thirdparty/g2o/lib/libg2o.so",
+        "sha256": "0fe8e5410ff0a37b4cfcbdba16223f7a401f6e7b0eb2d36f403a9a28e6c9acb7",
+        "size_bytes": 738160,
+        "sonames": [
+          "libg2o.so"
+        ]
+      },
+      {
+        "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/lib/libHFNet_SLAM.so",
+        "sha256": "a56dfd1b48dee4af5be4e55b076d32eac2cf8fb463da8ab943b690377f193717",
+        "size_bytes": 4807712,
+        "sonames": [
+          "libHFNet_SLAM.so"
+        ]
+      },
+      {
+        "path": "/home/ma/SLAM/aqua_deps/install/lib/libpango_core.so",
+        "sha256": "3c21f42088a6b4da79ec373864027b26a9cfde1380108b0b4d2d868d1759c1c0",
+        "size_bytes": 365720,
+        "sonames": [
+          "libpango_core.so"
+        ]
+      },
+      {
+        "path": "/home/ma/SLAM/aqua_deps/install/lib/libpango_display.so",
+        "sha256": "90a61a96eca1578b9315047323ba2d73a5c740a83d650a1fa3bd138cdeaa97c2",
+        "size_bytes": 839576,
+        "sonames": [
+          "libpango_display.so"
+        ]
+      },
+      {
+        "path": "/home/ma/SLAM/aqua_deps/install/lib/libpango_image.so",
+        "sha256": "1f31fd0e45cce7f8d264a23b9469c018ddc14d4182880f1f16cdfe787f9c9a7d",
+        "size_bytes": 128088,
+        "sonames": [
+          "libpango_image.so"
+        ]
+      },
+      {
+        "path": "/home/ma/SLAM/aqua_deps/install/lib/libpango_opengl.so",
+        "sha256": "bb8485c11c2f78adc069ce94a61b90a46182e8c0498543db873634ce16583708",
+        "size_bytes": 275544,
+        "sonames": [
+          "libpango_opengl.so"
+        ]
+      },
+      {
+        "path": "/home/ma/SLAM/aqua_deps/install/lib/libpango_vars.so",
+        "sha256": "fcea96fcf6f01facc0a90401c7dbe154ab4b27ded805281b2b6a299667a23869",
+        "size_bytes": 160512,
+        "sonames": [
+          "libpango_vars.so"
+        ]
+      },
+      {
+        "path": "/home/ma/SLAM/aqua_deps/install/lib/libpango_windowing.so",
+        "sha256": "acbd9a640f9a07f0c30439b91de8a19ecbf1d10ca544d193fd37bb1efc267490",
+        "size_bytes": 239896,
+        "sonames": [
+          "libpango_windowing.so"
+        ]
+      },
+      {
+        "path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libcudnn.so.8.4.1",
+        "sha256": "f8580e8d01284e724527ed4bd90938208aa4675cfe6bd0ca2a4a76e49f4f5fdb",
+        "size_bytes": 150200,
+        "sonames": [
+          "libcudnn.so.8"
+        ]
+      },
+      {
+        "path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libnvinfer.so.8.5.1",
+        "sha256": "f458db65fba6f1c3012c44db701b43abc838f7330f9472c91c6b198cfc4a26ab",
+        "size_bytes": 487512744,
+        "sonames": [
+          "libnvinfer.so.8"
+        ]
+      },
+      {
+        "path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libnvinfer_plugin.so.8.5.1",
+        "sha256": "a4b4390214ff62de0fecfc8937394a53ca8dd4e0f4f30a3e178f525c25b8e0ce",
+        "size_bytes": 43399840,
+        "sonames": [
+          "libnvinfer_plugin.so.8"
+        ]
+      },
+      {
+        "path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libnvonnxparser.so.8.5.1",
+        "sha256": "545821890b69327a02edaf79bac88af3792b897af40c6d9a9a121390505496c9",
+        "size_bytes": 2838832,
+        "sonames": [
+          "libnvonnxparser.so.8"
+        ]
+      },
+      {
+        "path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.6/targets/x86_64-linux/lib/libcudart.so.11.6.55",
+        "sha256": "45da57e39bb0009af905c2ba531fb687ac9d6d4504c7800ed394c2ca0add1c6e",
+        "size_bytes": 666976,
+        "sonames": [
+          "libcudart.so.11.0"
+        ]
+      },
+      {
+        "path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.8/targets/x86_64-linux/lib/libcublas.so.11.11.3.6",
+        "sha256": "3b81d170cd613cf9ee24d30b483f7b6d8170d6d32a0354fc207d09c943ae3f62",
+        "size_bytes": 94729912,
+        "sonames": [
+          "libcublas.so.11"
+        ]
+      },
+      {
+        "path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.8/targets/x86_64-linux/lib/libcublasLt.so.11.11.3.6",
+        "sha256": "b6d14a7461b3ec1995427fd179b98b915c9fc81057366ab7bfa4681451b0d308",
+        "size_bytes": 574565016,
+        "sonames": [
+          "libcublasLt.so.11"
+        ]
+      },
+      {
+        "path": "/usr/lib/libarmadillo.so.9.800.4",
+        "sha256": "80ed3c8ce636146977936dc484608ca30d6c94be6b0d482f356b2c573796b1d2",
+        "size_bytes": 73616,
+        "sonames": [
+          "libarmadillo.so.9"
+        ]
+      },
+      {
+        "path": "/usr/lib/libdfalt.so.0.0.0",
+        "sha256": "f0595f121cf964a89979e10d7d89591b2f430dee3242efd2d8afd9af09b9dba5",
+        "size_bytes": 503888,
+        "sonames": [
+          "libdfalt.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/libgdal.so.26.0.4",
+        "sha256": "c0c68f2c5ddfcaeb8802d4a5e70b10dc5d00b7489cba9866ccb5488089bf695a",
+        "size_bytes": 20197488,
+        "sonames": [
+          "libgdal.so.26"
+        ]
+      },
+      {
+        "path": "/usr/lib/libmfhdfalt.so.0.0.0",
+        "sha256": "33fc343115934127c2bd2228c23058452a53a327294583792005be9607299096",
+        "size_bytes": 161888,
+        "sonames": [
+          "libmfhdfalt.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/libogdi.so.4.1",
+        "sha256": "6e0e64352b18b04ca692c9be91619418d1e3300c9bcd3cdaaa461976473ccd88",
+        "size_bytes": 109000,
+        "sonames": [
+          "libogdi.so.4.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/atlas/libblas.so.3.10.3",
+        "sha256": "4516337d4c705dfc065013f98c636a037cf05b29e0266322201adc585aed0143",
+        "size_bytes": 3950896,
+        "sonames": [
+          "libblas.so.3"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/atlas/liblapack.so.3.10.3",
+        "sha256": "21c2d80ed1c9e9b43d6756d200aadd682cfc50bf26642a21f386d032c92016d1",
+        "size_bytes": 7106784,
+        "sonames": [
+          "liblapack.so.3"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/ld-2.31.so",
+        "sha256": "cfd44e4341767033532d1483c8250d200ad4cdf535d0abc19064ae34cdc51ca0",
+        "size_bytes": 191504,
+        "sonames": [
+          "ld-linux-x86-64.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libCharLS.so.2.0",
+        "sha256": "704e204b597bf085dfa457d499ed06856ea361c1bbe83a13010855e18b1b36ba",
+        "size_bytes": 284856,
+        "sonames": [
+          "libCharLS.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libEGL.so.1.1.0",
+        "sha256": "cce1d35eeb4087e84144669b2d81ec0508e6a1172729cfe8e766f22bf120eea3",
+        "size_bytes": 80512,
+        "sonames": [
+          "libEGL.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libGL.so.1.7.0",
+        "sha256": "887514c6156db32ca306debe372c295094a6a8c7bfd082f7bfc7fb01411ee06c",
+        "size_bytes": 547152,
+        "sonames": [
+          "libGL.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libGLEW.so.2.1.0",
+        "sha256": "564631c3da161d89c1ad59e54831a0ce3dd92457eaeb3f2cd69fe537674217f4",
+        "size_bytes": 669584,
+        "sonames": [
+          "libGLEW.so.2.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0",
+        "sha256": "74c0d009f5b67172ea84f308be4754b90b6f6302c56b7cc747e95eb17937b7eb",
+        "size_bytes": 141912,
+        "sonames": [
+          "libGLX.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0",
+        "sha256": "80f42924c9ee8e5c08e469ce53e50463b47e50177a828c8aa4a672b8662ed7c9",
+        "size_bytes": 715200,
+        "sonames": [
+          "libGLdispatch.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libHalf.so.24.0.0",
+        "sha256": "614356b1ab7910b7f44a894fd32772f4c676d20799fb1f56d5e444f81ad84da2",
+        "size_bytes": 276776,
+        "sonames": [
+          "libHalf.so.24"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libIex-2_3.so.24.0.0",
+        "sha256": "f9b274118e0904dbfa2df5fec5e5e72c049f0668fb721032da708aa4d7aac7b7",
+        "size_bytes": 129608,
+        "sonames": [
+          "libIex-2_3.so.24"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libIlmImf-2_3.so.24.0.0",
+        "sha256": "72bfabbd5abf189017b536e28845a5f8824bf4fb83fd4b0f738bf2049bc6a5b4",
+        "size_bytes": 3000752,
+        "sonames": [
+          "libIlmImf-2_3.so.24"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libIlmThread-2_3.so.24.0.0",
+        "sha256": "b765c51dab7cbb5b8c5a8ea50cb0490adf56e718e45b07b8c5323f4214bf2e4f",
+        "size_bytes": 35512,
+        "sonames": [
+          "libIlmThread-2_3.so.24"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libOpenGL.so.0.0.0",
+        "sha256": "9502a6a87e16092c9b870a45e4fcad7e2162b710af1bc72ca0c9a0569b32d9be",
+        "size_bytes": 174408,
+        "sonames": [
+          "libOpenGL.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libX11.so.6.3.0",
+        "sha256": "04de566fe59e577bbfb531f01c5c171af5cd46a4ef0f471ea9e48df0a7bca515",
+        "size_bytes": 1293928,
+        "sonames": [
+          "libX11.so.6"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libXau.so.6.0.0",
+        "sha256": "2a883844bd6b9507467f372d8a46ddc55edef5ea87e1c63c75e08fb7c939beb1",
+        "size_bytes": 18688,
+        "sonames": [
+          "libXau.so.6"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0",
+        "sha256": "728e78bade090a7b1c31583d542c1114ca328be3ad4bfd0dedcedcba9e081562",
+        "size_bytes": 14488,
+        "sonames": [
+          "libXcomposite.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2",
+        "sha256": "e262036dac16dc45bfa5e3d714e9e08b8098a0cea4861bb1045f9594b0cdbb8e",
+        "size_bytes": 47584,
+        "sonames": [
+          "libXcursor.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0",
+        "sha256": "866693c9845ba3c91e85e7e8d9cf5bf6573fdc58902e2ed9c9a629c09b048183",
+        "size_bytes": 14512,
+        "sonames": [
+          "libXdamage.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0",
+        "sha256": "a65f7757d765b8eeb15fea3db8b66da969fa10e44264fcf01f7ab19a1dbd0d24",
+        "size_bytes": 26800,
+        "sonames": [
+          "libXdmcp.so.6"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libXext.so.6.4.0",
+        "sha256": "44407caa11bb722887d72dae56db13807e37a13757f2d01e5552c96b798c2012",
+        "size_bytes": 81600,
+        "sonames": [
+          "libXext.so.6"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0",
+        "sha256": "f83cbadcee1cc53aebcb132ad2d2018f36e820e809d2b99cd3fd025e6bfb242d",
+        "size_bytes": 26824,
+        "sonames": [
+          "libXfixes.so.3"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libXi.so.6.1.0",
+        "sha256": "3bec56140bf3b8fb8207474d67e59bab0c868b0d42b0f2396948e906e553f815",
+        "size_bytes": 68128,
+        "sonames": [
+          "libXi.so.6"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0",
+        "sha256": "b8c4347145e6f95a784ef562a8113aa3056a7085f89ac6a5ec24d206aaffe2cb",
+        "size_bytes": 14496,
+        "sonames": [
+          "libXinerama.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0",
+        "sha256": "08e43e35a7e0ba3ba66e5ccb075d8df709dea55774c9674db190e574932a38f4",
+        "size_bytes": 47504,
+        "sonames": [
+          "libXrandr.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0",
+        "sha256": "cc7418b319483ce6cf9d0cd704c125690d61dd2093dc395ceaa2139291d079cb",
+        "size_bytes": 39448,
+        "sonames": [
+          "libXrender.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libaec.so.0.0.10",
+        "sha256": "b34a02a4b077852debd7e3024ec1e73c6731362cf4e8d13a0915f5c3bc9ac01e",
+        "size_bytes": 30712,
+        "sonames": [
+          "libaec.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libarpack.so.2.1.0",
+        "sha256": "f481328e141da1eea6439623a5f5ecd1a96d2d28821248385d47217c7c9f2dd7",
+        "size_bytes": 289768,
+        "sonames": [
+          "libarpack.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libasn1.so.8.0.0",
+        "sha256": "7568bad0b3c38d1cd0cc044de98c3a581b718519244a3c2197700148badfb117",
+        "size_bytes": 674144,
+        "sonames": [
+          "libasn1.so.8"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.23510.1",
+        "sha256": "d6093a21f136bbc86ed9289941b689494816307d9b59ab801455bce80124bf63",
+        "size_bytes": 165968,
+        "sonames": [
+          "libatk-1.0.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libatk-bridge-2.0.so.0.0.0",
+        "sha256": "aabd5e492ced66bd6ddde9afe2b4fa9b9d37765ae32e5059da7be8310f7d2ec2",
+        "size_bytes": 219008,
+        "sonames": [
+          "libatk-bridge-2.0.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libatspi.so.0.0.1",
+        "sha256": "70c64d1595c15c9e1f55d58c82afcd4a28c2bf992528b86b0910dcc50a3d6454",
+        "size_bytes": 219464,
+        "sonames": [
+          "libatspi.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libblkid.so.1.1.0",
+        "sha256": "8b89d8dc862cd889eeb302395604f500bbad60fbaa4206de31346a1f4f6db618",
+        "size_bytes": 351352,
+        "sonames": [
+          "libblkid.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libboost_serialization.so.1.71.0",
+        "sha256": "e1cd1dfdb60c9ac2e9c168cf2f0958a5ece96084604d21f7933250f5845bf1e8",
+        "size_bytes": 272552,
+        "sonames": [
+          "libboost_serialization.so.1.71.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1.0.7",
+        "sha256": "d564b04526d7c8271227b75d413997a9d9b904d6513029c73b70c776774b9f13",
+        "size_bytes": 137784,
+        "sonames": [
+          "libbrotlicommon.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libbrotlidec.so.1.0.7",
+        "sha256": "7d8ec2dde0b174b0ba1892f1085f7b458fc6d5e65dce3ef9d20410694bdd0249",
+        "size_bytes": 51512,
+        "sonames": [
+          "libbrotlidec.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libbsd.so.0.10.0",
+        "sha256": "f660c0d2fba4d82d7866af4d174a33bf3de8dfb3632267662db74c33013c0913",
+        "size_bytes": 96728,
+        "sonames": [
+          "libbsd.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4",
+        "sha256": "4488544d0a32b1e38d369342f219677ee621a2f16e64f529e4776c7322bc86d3",
+        "size_bytes": 74848,
+        "sonames": [
+          "libbz2.so.1.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libc-2.31.so",
+        "sha256": "53b909551f8e581120ddc2d24cfb5df76c52e3c2e2a5dac0d202b25638b3e902",
+        "size_bytes": 2029592,
+        "sonames": [
+          "libc.so.6"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libcairo-gobject.so.2.11600.0",
+        "sha256": "877c43a9a4102754b3f273a6610db88d95707ca4d7243da2427d8cea797d27b8",
+        "size_bytes": 42920,
+        "sonames": [
+          "libcairo-gobject.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libcairo.so.2.11600.0",
+        "sha256": "572d5336dcb41a56872affb2a1a7e1b2d583097d363468d5a8f5ad0610f3cc35",
+        "size_bytes": 1183496,
+        "sonames": [
+          "libcairo.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libcfitsio.so.8.3.47",
+        "sha256": "47e76b685d3434002d100f99eaad3d5948f981c0e6cd540b3051d88110b288b1",
+        "size_bytes": 1498520,
+        "sonames": [
+          "libcfitsio.so.8"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libcom_err.so.2.1",
+        "sha256": "73e0494932d2e812f2e4f7853d19b0a93ba321f9f5c94daa3abb931db689a6a1",
+        "size_bytes": 22600,
+        "sonames": [
+          "libcom_err.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libcrypt.so.1.1.0",
+        "sha256": "5744b3669e4574920dfac2b33207db4e8cb501df88ef28c3801ba0673a7c7d6f",
+        "size_bytes": 202760,
+        "sonames": [
+          "libcrypt.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.1.1",
+        "sha256": "bf99926de2ce739d3fdccc4a551d97d64aac6e968589aaad9dc4ac8d143b519a",
+        "size_bytes": 2958176,
+        "sonames": [
+          "libcrypto.so.1.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.6.0",
+        "sha256": "2ee16c0a20ae68ae0aa6ebb309fbe0a440c5120113207b78ecb7d6212d866cb7",
+        "size_bytes": 584312,
+        "sonames": [
+          "libcurl-gnutls.so.4"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libdap.so.25.2.2",
+        "sha256": "111348eca822a5cbfa93da863d4df916a5eb0153d4f630da031f6416bf5b704f",
+        "size_bytes": 1685872,
+        "sonames": [
+          "libdap.so.25"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libdapclient.so.6.1.11",
+        "sha256": "b3e933bb68ac286eb309b2f4a1b196d9d9ad763621638c4899a818dea5d9179e",
+        "size_bytes": 288952,
+        "sonames": [
+          "libdapclient.so.6"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libdatrie.so.1.3.5",
+        "sha256": "3c0502100b4a71e0a96adf8d8fd6c2bb876816f80d3be13015668cf86c6813d1",
+        "size_bytes": 34888,
+        "sonames": [
+          "libdatrie.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libdbus-1.so.3.19.11",
+        "sha256": "c5c41a4c1788cce9ef39d20327b1d439da0a64d669b0efa7e31e4a110ae10423",
+        "size_bytes": 325944,
+        "sonames": [
+          "libdbus-1.so.3"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libdl-2.31.so",
+        "sha256": "e0d0cace80b627e50ca3f7b621b64917677c27c74077080854d57cf4e548edc6",
+        "size_bytes": 18848,
+        "sonames": [
+          "libdl.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libepoxy.so.0.0.0",
+        "sha256": "ddc7d587ec6bc5aa7279010ba9f56de202c794142ee00c8858e206c320dd4480",
+        "size_bytes": 1255152,
+        "sonames": [
+          "libepoxy.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libepsilon.so.1.0.0",
+        "sha256": "71bde857017205af118cba7fcd0ebf18cb11a5aa8ac658b4cfc7c3719d2bd16d",
+        "size_bytes": 102992,
+        "sonames": [
+          "libepsilon.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libexpat.so.1.6.11",
+        "sha256": "78f843a1bedfa4446d888d3ac0a501bbd27c08d3ef35999cbf6afc2592b357d6",
+        "size_bytes": 182560,
+        "sonames": [
+          "libexpat.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libffi.so.7.1.0",
+        "sha256": "e49fdd8e80867abe9f0f6062272b0838570467066f8cf270badf1567ca49fba6",
+        "size_bytes": 43416,
+        "sonames": [
+          "libffi.so.7"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libfontconfig.so.1.12.0",
+        "sha256": "ebabad569f1a4dad2ed486dbcf924375bf0b5b5b26ecd89ccc2049ce07c3b721",
+        "size_bytes": 285840,
+        "sonames": [
+          "libfontconfig.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libfreetype.so.6.17.1",
+        "sha256": "b2547240b7b34218248106b1c9c94e18b63038f87aa51d4bae3dc8b1fd05f3c9",
+        "size_bytes": 776264,
+        "sonames": [
+          "libfreetype.so.6"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libfreexl.so.1.1.0",
+        "sha256": "4d7375ef67843dbe8ad34b3b3d5d2e39cea5c9287722348fc1c899e92b353696",
+        "size_bytes": 38760,
+        "sonames": [
+          "libfreexl.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libfribidi.so.0.4.0",
+        "sha256": "0845bbf89897635938489c93e6a2c61cab9da961e0c4a30fd3b9cdd6cb9ffc84",
+        "size_bytes": 112960,
+        "sonames": [
+          "libfribidi.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libfyba.so.0.0.0",
+        "sha256": "c124ffbc24b2fc3169c5ca153b9fe890deeb9e601e6df74f3550e6fe1dc35e92",
+        "size_bytes": 227408,
+        "sonames": [
+          "libfyba.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libfygm.so.0.0.0",
+        "sha256": "22d58a56da5de84b9987105f8bfd9e0b10ac0b56866f0477e0892b0401d0f563",
+        "size_bytes": 30712,
+        "sonames": [
+          "libfygm.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libfyut.so.0.0.0",
+        "sha256": "39050712b2118c87099fdc6c1c884dedb9aeea8f394fc8540f65eece4f289ae6",
+        "size_bytes": 43016,
+        "sonames": [
+          "libfyut.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgcc_s.so.1",
+        "sha256": "489803ded8a4d803e2c792763a2767c12185f5764b7bba080742d14ef2452b27",
+        "size_bytes": 104984,
+        "sonames": [
+          "libgcc_s.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgcrypt.so.20.2.5",
+        "sha256": "f648d4ed0fe1fe7645992d10a5cbc84679d298ce8561a1aeafa780fee67b3036",
+        "size_bytes": 1168056,
+        "sonames": [
+          "libgcrypt.so.20"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgdcmCommon.so.3.0.5",
+        "sha256": "6a5411cec00935835aac9a20d9533390450adb687fab3e12309b23dc4860993a",
+        "size_bytes": 158048,
+        "sonames": [
+          "libgdcmCommon.so.3.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgdcmDICT.so.3.0.5",
+        "sha256": "95ca87b58883afb43475d31aff5b19da7ee581d50e73a821e7f8a7a3af83944b",
+        "size_bytes": 2809896,
+        "sonames": [
+          "libgdcmDICT.so.3.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgdcmDSED.so.3.0.5",
+        "sha256": "034e0bef5214d5b09c0f053771d7896102b5edb3550080b6c6fca22a869a59dd",
+        "size_bytes": 1248016,
+        "sonames": [
+          "libgdcmDSED.so.3.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgdcmIOD.so.3.0.5",
+        "sha256": "df508dea11106eadc2ddf9350869a22ec2b00306c57b2be19d6fcc8d8058b980",
+        "size_bytes": 92480,
+        "sonames": [
+          "libgdcmIOD.so.3.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgdcmMSFF.so.3.0.5",
+        "sha256": "21af924f021311af7bfef7eb64409b2c855353ed752efd2fd1746aed6765444d",
+        "size_bytes": 2771352,
+        "sonames": [
+          "libgdcmMSFF.so.3.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgdcmjpeg12.so.3.0.5",
+        "sha256": "691dd590797f87da5ef1d48e66d4a2041cfa2cb3921ade5146acc96a3b1870bf",
+        "size_bytes": 166120,
+        "sonames": [
+          "libgdcmjpeg12.so.3.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgdcmjpeg16.so.3.0.5",
+        "sha256": "35ab71ebf2f74103fe0680063adcee36fca0c3884e13250b1d2aef9313d4b920",
+        "size_bytes": 166120,
+        "sonames": [
+          "libgdcmjpeg16.so.3.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgdcmjpeg8.so.3.0.5",
+        "sha256": "83b575a3989b0adc873988eabc22db0c220bd6c8e3a0a1a3c2ca38616a7b884b",
+        "size_bytes": 166120,
+        "sonames": [
+          "libgdcmjpeg8.so.3.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgdk-3.so.0.2404.16",
+        "sha256": "5acd055be85a3733d21b4e0938a2ebac736017c0533074b29d98985716d88005",
+        "size_bytes": 1063760,
+        "sonames": [
+          "libgdk-3.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.4000.0",
+        "sha256": "8cf9a852ec69a972fbd248bcebb1b526ee55ce69a88ef1120add30809710886e",
+        "size_bytes": 157944,
+        "sonames": [
+          "libgdk_pixbuf-2.0.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgeos-3.8.0.so",
+        "sha256": "bd8a4145abcaf1d8196174cf5278e90144b0d0ca3935203340ff169b352a5992",
+        "size_bytes": 1866104,
+        "sonames": [
+          "libgeos-3.8.0.so"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgeos_c.so.1.13.1",
+        "sha256": "49f50c3e961b0e86012591b8c66c5eec0e82438ddb61483c0c81a2b2c98011fc",
+        "size_bytes": 268464,
+        "sonames": [
+          "libgeos_c.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgeotiff.so.5.0.1",
+        "sha256": "c863be0663b3b5e6f06b00ea6d9b047142ddd5563921b78c7d20a05fbee419c3",
+        "size_bytes": 211136,
+        "sonames": [
+          "libgeotiff.so.5"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0",
+        "sha256": "01fc721062fc3c2b5492202d276c5a374b7d952fc168d2d1e603fa85660cc502",
+        "size_bytes": 2911456,
+        "sonames": [
+          "libgfortran.so.5"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgif.so.7.1.0",
+        "sha256": "d65109362450ab3addc7b69e6ad15cc9d124bfa4cea65ec8a63648d754c410f1",
+        "size_bytes": 38904,
+        "sonames": [
+          "libgif.so.7"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.6400.6",
+        "sha256": "36cf6480979c393870047f4406611a9d9dd3b7a4533041a271232abaea858308",
+        "size_bytes": 1961296,
+        "sonames": [
+          "libgio-2.0.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libglib-2.0.so.0.6400.6",
+        "sha256": "b0057d1c3863b30b0f6d16b8b3d46cad97c66a41ab8898a3083d30a12f3e032f",
+        "size_bytes": 1212016,
+        "sonames": [
+          "libglib-2.0.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.6400.6",
+        "sha256": "fc2eeeea1efb277c4dd08d6d193777c85fdf237a87f19bc42dddfa88a3fa0784",
+        "size_bytes": 18640,
+        "sonames": [
+          "libgmodule-2.0.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgmp.so.10.4.0",
+        "sha256": "adce2ea41ec466959525ddc6ac1582bc513641866b72d393f0a85b3c00c001a0",
+        "size_bytes": 534880,
+        "sonames": [
+          "libgmp.so.10"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgnutls.so.30.27.0",
+        "sha256": "dad48214f4382c08570e79e9294ce1b1e34aa04a8a1701ad18fb491e00fbb50b",
+        "size_bytes": 1914336,
+        "sonames": [
+          "libgnutls.so.30"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.6400.6",
+        "sha256": "ad05112049a4791bef3a92aad15ede3ecf84ad3197698c70422e1730dbaa387a",
+        "size_bytes": 387448,
+        "sonames": [
+          "libgobject-2.0.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0",
+        "sha256": "98b21ff32bb07b53f1fb266d887d2db0086ea66c8ad03696a1db53f65321cd94",
+        "size_bytes": 265856,
+        "sonames": [
+          "libgomp.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgpg-error.so.0.28.0",
+        "sha256": "df95914ef7aeaadcafa4acdd614068836a0014ed3001ddb8390f7ef44d3c5248",
+        "size_bytes": 137584,
+        "sonames": [
+          "libgpg-error.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgraphite2.so.3.2.1",
+        "sha256": "7e8f59a07cf46b8211d6361c1911856fb2a71e0a94c4f4c037fc12e5b509928d",
+        "size_bytes": 178488,
+        "sonames": [
+          "libgraphite2.so.3"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgssapi.so.3.0.0",
+        "sha256": "db2df4963e32fed7fa52659be383b4e46099aabf8268e69f08a2e1dd2891e79b",
+        "size_bytes": 278160,
+        "sonames": [
+          "libgssapi.so.3"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2",
+        "sha256": "2c252a6b49ab4d2d7b7fe4f4835a04f267cb19c2f0cd71e6191a97cdfe2c6e25",
+        "size_bytes": 309712,
+        "sonames": [
+          "libgssapi_krb5.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2404.16",
+        "sha256": "980f565b7e6dd9ffcbabca2f2a17a86b0ca66020161473101ba1c0394ab79d56",
+        "size_bytes": 8037912,
+        "sonames": [
+          "libgtk-3.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.20600.4",
+        "sha256": "8145ba2f938d56a68c62894ad52dbd580a050ff576173e4cf3f513d7fc8449ed",
+        "size_bytes": 1061728,
+        "sonames": [
+          "libharfbuzz.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libhcrypto.so.4.1.0",
+        "sha256": "e4d346a0cb6cd9e064f5ed7ec42b42d1e7e6e0b89d18ff94d70a2b1177342a0f",
+        "size_bytes": 221816,
+        "sonames": [
+          "libhcrypto.so.4"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libhdf5_serial.so.103.0.0",
+        "sha256": "42afa6aa10b9b4de447b4c7667a2eae5938360008aa44ff7343cb643f0de4b69",
+        "size_bytes": 3644264,
+        "sonames": [
+          "libhdf5_serial.so.103"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libhdf5_serial_hl.so.100.1.1",
+        "sha256": "103ae492c80886208bb8ce62cee0419ff079fc4d93f9b905aaa6b6dd2ea8e376",
+        "size_bytes": 151024,
+        "sonames": [
+          "libhdf5_serial_hl.so.100"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libheimbase.so.1.0.0",
+        "sha256": "ca98fdee5b60fd22ccd87a7bb031acb49c86cac8de90ea047e23b0274eabef15",
+        "size_bytes": 68752,
+        "sonames": [
+          "libheimbase.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libheimntlm.so.0.1.0",
+        "sha256": "7bf7850320f9738e70b12fe54e3caaac207b4a0c6450e1814b0263df8521cca5",
+        "size_bytes": 43712,
+        "sonames": [
+          "libheimntlm.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libhogweed.so.5.0",
+        "sha256": "2148ce14bc11620e36ba773891172c870b9ee2ccfb8fa77cc2862101343c9d86",
+        "size_bytes": 219976,
+        "sonames": [
+          "libhogweed.so.5"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libhx509.so.5.0.0",
+        "sha256": "ae29acaa296cb14fe91771c08ad7c659a07383545173af964525ce10a35fc7ee",
+        "size_bytes": 313336,
+        "sonames": [
+          "libhx509.so.5"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libicudata.so.66.1",
+        "sha256": "50b039da86ab40fed973954892aa52b0b833127b94103ec62b71c1e0891ce5ed",
+        "size_bytes": 28046896,
+        "sonames": [
+          "libicudata.so.66"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libicuuc.so.66.1",
+        "sha256": "d41e9287614412b6e95f809773a5f0f86ee3763a7d5f0db4856e79f64f7c8dab",
+        "size_bytes": 1976648,
+        "sonames": [
+          "libicuuc.so.66"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libidn2.so.0.3.6",
+        "sha256": "db118382dc3e4d0d936dd91f279ef82d32c9fa94d2c2dd596bfd27a78c1bdc95",
+        "size_bytes": 129096,
+        "sonames": [
+          "libidn2.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libjbig.so.0",
+        "sha256": "0f1087b4b881a5cfdf4d4e544756e1f7de2af3ca220de962d67e69e2f1ca4850",
+        "size_bytes": 66568,
+        "sonames": [
+          "libjbig.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libjpeg.so.8.2.2",
+        "sha256": "55cb507f51d746b6ec808690771122349c4e664ba83cad4daa171f633485149a",
+        "size_bytes": 539352,
+        "sonames": [
+          "libjpeg.so.8"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libjson-c.so.4.0.0",
+        "sha256": "3768995f31e8e83e3bc8945d156677b3fd3d2e6d5444a57b62290f28b9b0e2aa",
+        "size_bytes": 67912,
+        "sonames": [
+          "libjson-c.so.4"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1",
+        "sha256": "0f4c60086f06cf9d3e9a45b4a4dc251ebff3f41a9d1955a4a4a2907b39b9b8a4",
+        "size_bytes": 191040,
+        "sonames": [
+          "libk5crypto.so.3"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libkeyutils.so.1.8",
+        "sha256": "04ecd5ab88e22bb2c1a9260c28dfdf762b0e2193ee660f7108f45e10aa293c92",
+        "size_bytes": 22600,
+        "sonames": [
+          "libkeyutils.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libkmlbase.so.1.3.0",
+        "sha256": "fd1d450189501727d13ecf7fb0bed20ad7b94383b8bd749447968f627c2dcf2d",
+        "size_bytes": 112832,
+        "sonames": [
+          "libkmlbase.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libkmldom.so.1.3.0",
+        "sha256": "1e8f83688a1baec7cdb985a6a63a33f6af6878030d54e39f84b53f16ef9b882b",
+        "size_bytes": 653488,
+        "sonames": [
+          "libkmldom.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libkmlengine.so.1.3.0",
+        "sha256": "f61b8c147e09751ce22abc38266589edc90458dcdcc4241ab2976aa8ff5e50b6",
+        "size_bytes": 231584,
+        "sonames": [
+          "libkmlengine.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libkrb5.so.26.0.0",
+        "sha256": "a7f13b15b979a6cccbb193bf0a749328cba052b8f392a4c3943030381835b858",
+        "size_bytes": 594104,
+        "sonames": [
+          "libkrb5.so.26"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libkrb5.so.3.3",
+        "sha256": "34582fe154bf0dabc2aa21bf5217d1addcc0a67a700f199031d952cfc7ddd133",
+        "size_bytes": 902016,
+        "sonames": [
+          "libkrb5.so.3"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1",
+        "sha256": "3b05f4db1e0510a04b9feb8ececdbba5fd69f32ecb36be4afa76c031c3e2f6f0",
+        "size_bytes": 56096,
+        "sonames": [
+          "libkrb5support.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/liblber-2.4.so.2.10.12",
+        "sha256": "4020406109734b34996b283b678830c7ad0dc8f1ffe98ba51e1d8819e8f0829a",
+        "size_bytes": 63888,
+        "sonames": [
+          "liblber-2.4.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/liblcms2.so.2.0.8",
+        "sha256": "caa5d83feabd749bb04393b7447c18334dfa16a5110674b86f6b7e62a7b9f6ed",
+        "size_bytes": 365568,
+        "sonames": [
+          "liblcms2.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libldap_r-2.4.so.2.10.12",
+        "sha256": "2ce2662d62e5dcf91e069f627f545036e51df60f46c11a2d897d8b268b1e1946",
+        "size_bytes": 339472,
+        "sonames": [
+          "libldap_r-2.4.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libltdl.so.7.3.1",
+        "sha256": "38a0746163265f8e7431e7bf49759db35d5bf68991687a494b8ce73afcd1356c",
+        "size_bytes": 39368,
+        "sonames": [
+          "libltdl.so.7"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/liblz4.so.1.9.2",
+        "sha256": "d6574e34006e27cfb5d00dc75018cc06832d0bbc9e1b35316b9c03148355f0a0",
+        "size_bytes": 129248,
+        "sonames": [
+          "liblz4.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/liblzma.so.5.2.4",
+        "sha256": "79a1dbc7cc49eaa96d0326c7d979fc41d8db1f748e517858a5cc024a6554b073",
+        "size_bytes": 162264,
+        "sonames": [
+          "liblzma.so.5"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libm-2.31.so",
+        "sha256": "a0e70f48f02a399e8dd37f861a99e226c285a9daf50a25d19fff7ccf18b97f9c",
+        "size_bytes": 1369384,
+        "sonames": [
+          "libm.so.6"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libminizip.so.1.0.0",
+        "sha256": "fbdca10d7786e86eb94b341096b448a777a05b557ebafcf1ed2096bca8aa0ba0",
+        "size_bytes": 43184,
+        "sonames": [
+          "libminizip.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libmount.so.1.1.0",
+        "sha256": "a0bbb844c8e96be13147e5e2abdb8b975cedefcb12db4bce25ad8ce417d12454",
+        "size_bytes": 387768,
+        "sonames": [
+          "libmount.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libmysqlclient.so.21.2.42",
+        "sha256": "a16279af732957ac926d8847270c46ada66a8c735831d37fcd8466e0afe366b1",
+        "size_bytes": 7496616,
+        "sonames": [
+          "libmysqlclient.so.21"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libnetcdf.so.15",
+        "sha256": "a9f742cd5bf81ccd4a1acd7bc8bffbe096777329153f4439fc4467fb945df3da",
+        "size_bytes": 1186808,
+        "sonames": [
+          "libnetcdf.so.15"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libnettle.so.7.0",
+        "sha256": "df063133112eb3461198e79cb11371641b5b1a118fb857749bc5137234a78ae4",
+        "size_bytes": 231592,
+        "sonames": [
+          "libnettle.so.7"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libnghttp2.so.14.19.0",
+        "sha256": "63ab65418fc9e131e0161195dc3aeb3e5411051482a6dfc3732fa37d9ecea9b6",
+        "size_bytes": 166288,
+        "sonames": [
+          "libnghttp2.so.14"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libnspr4.so",
+        "sha256": "06a7047639b0103fbc8b1ca8f2abc80a69f3e30dd5d9a4f1583197cdcdd4ccbf",
+        "size_bytes": 251760,
+        "sonames": [
+          "libnspr4.so"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libnss3.so",
+        "sha256": "f553418cb0f4171d1f38c607305de0c114f6bfb76454165e3a58e7f1f8d9529e",
+        "size_bytes": 1413008,
+        "sonames": [
+          "libnss3.so"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libnssutil3.so",
+        "sha256": "36d5aa0fbaf98793294c8522c18e7713a755498d994e733bbaa73885dbe94a43",
+        "size_bytes": 203808,
+        "sonames": [
+          "libnssutil3.so"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libodbc.so.2.0.0",
+        "sha256": "6642b2c144f4bc444e6c12e5321d0621b957c42a8aaf11f09af75f650045d213",
+        "size_bytes": 451664,
+        "sonames": [
+          "libodbc.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libodbcinst.so.2.0.0",
+        "sha256": "4cd82f1d98d8e4d7c1a4e16fd528734e4e2eda5b6902619a7efa04f0654238e5",
+        "size_bytes": 79944,
+        "sonames": [
+          "libodbcinst.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libopencv_calib3d.so.4.2.0",
+        "sha256": "953ebae257e70f28c9dd16c1aa8a7aba3833315aa16d918c35b723f00ff03df6",
+        "size_bytes": 1907000,
+        "sonames": [
+          "libopencv_calib3d.so.4.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libopencv_core.so.4.2.0",
+        "sha256": "7b40148fa383e73b3fd968a7cb9842dce2c9210a02bf2257f468c3df0c00cbb2",
+        "size_bytes": 3840856,
+        "sonames": [
+          "libopencv_core.so.4.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libopencv_features2d.so.4.2.0",
+        "sha256": "26bbb59986d3a2ed5e097d529b0af60ea2f1070685dde94801a6abd4f0f8f8c2",
+        "size_bytes": 862616,
+        "sonames": [
+          "libopencv_features2d.so.4.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libopencv_flann.so.4.2.0",
+        "sha256": "2f9db13da752e3e16d3183e7a0d01158a8e3139a728f609c5c1852fc04de01b2",
+        "size_bytes": 383240,
+        "sonames": [
+          "libopencv_flann.so.4.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libopencv_highgui.so.4.2.0",
+        "sha256": "d09879f2a955d54cbcaacb94b00ea306f46a5a5c83d7f18feca985a01d651ad8",
+        "size_bytes": 100528,
+        "sonames": [
+          "libopencv_highgui.so.4.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.4.2.0",
+        "sha256": "d11cb0efb7afdeed5a661e38c6b62c0a9016b3ad4fcecf4b53ee58fd09aaed02",
+        "size_bytes": 359008,
+        "sonames": [
+          "libopencv_imgcodecs.so.4.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.4.2.0",
+        "sha256": "42746b815bd7d0b1755d95e41f80b5b36c606612cfbdb5858fdcf306866c4610",
+        "size_bytes": 5266136,
+        "sonames": [
+          "libopencv_imgproc.so.4.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libopenjp2.so.2.3.1",
+        "sha256": "711390ff2ce77e9cc6ea5dfa0eb5f941d130bd96a177e9770547525158409a44",
+        "size_bytes": 346592,
+        "sonames": [
+          "libopenjp2.so.7"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libp11-kit.so.0.3.0",
+        "sha256": "bfb69a489e3ab26bd7deb2d422619dce5aff9f5640e89955c18e8e2e04759ac3",
+        "size_bytes": 1265624,
+        "sonames": [
+          "libp11-kit.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.4400.7",
+        "sha256": "8f11002f884f8d8699589ff83e1c5ae62ffaae4d732758cc1e12a1a3bd96529a",
+        "size_bytes": 317512,
+        "sonames": [
+          "libpango-1.0.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.4400.7",
+        "sha256": "b133ca1015cc7477a0574ff271e439c86ffc14832843d605ac55f96d176c84bc",
+        "size_bytes": 67712,
+        "sonames": [
+          "libpangocairo-1.0.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.4400.7",
+        "sha256": "e68c0cd959039ee7f09af23ea527d81ff07bf5c9ed83b7f8c4d7b601226ed601",
+        "size_bytes": 96248,
+        "sonames": [
+          "libpangoft2-1.0.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libpcre.so.3.13.3",
+        "sha256": "fb2fc875c7902c8c80045c93957d9aa45f5d80e096f74baa4ecf80f25e40752d",
+        "size_bytes": 465008,
+        "sonames": [
+          "libpcre.so.3"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libpcre2-8.so.0.9.0",
+        "sha256": "2ee0f443107012eefbce274fe61b18cd3a04d7e7824200eaae0c55fb65e6f1ea",
+        "size_bytes": 588488,
+        "sonames": [
+          "libpcre2-8.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libpixman-1.so.0.38.4",
+        "sha256": "a2611b5dda9373a73d834be0655c83c38212dc518bade8e5ee77e7f9844437cb",
+        "size_bytes": 678064,
+        "sonames": [
+          "libpixman-1.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libplc4.so",
+        "sha256": "3e1ee1ad05bffac56fa8ffbb39a5b9bbda1534ddd543130b09a9f19000ffcd2c",
+        "size_bytes": 22928,
+        "sonames": [
+          "libplc4.so"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libplds4.so",
+        "sha256": "fb121d4ebea702a92a1437230fcd3ad1432d5e409832d4b0058bc6974f79a288",
+        "size_bytes": 14640,
+        "sonames": [
+          "libplds4.so"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libpng16.so.16.37.0",
+        "sha256": "4a697b98b4ff6426cf533e038e798ed3e674e24b1797876fbd1471341f3702cc",
+        "size_bytes": 223304,
+        "sonames": [
+          "libpng16.so.16"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libpoppler.so.97.0.0",
+        "sha256": "da549b0f7476489dbdf313988fb18a7b22babae552fc61f4e1d2272f4defc6fb",
+        "size_bytes": 3418032,
+        "sonames": [
+          "libpoppler.so.97"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libpq.so.5.12",
+        "sha256": "1d5413361f02f1b68fbfb132a07e1071e6869ed562bcbdcc5596009b5670543c",
+        "size_bytes": 325768,
+        "sonames": [
+          "libpq.so.5"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libproj.so.15.3.1",
+        "sha256": "22169faddc4af0f16ae066a682bd8f6af75a772b334454dd58ab2d72a827064c",
+        "size_bytes": 3064824,
+        "sonames": [
+          "libproj.so.15"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libpsl.so.5.3.2",
+        "sha256": "248a69df47f45a7bd97fe358c31bc9e17a74d5573b422e7cc8c5a840ba87a0c1",
+        "size_bytes": 71672,
+        "sonames": [
+          "libpsl.so.5"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libpthread-2.31.so",
+        "sha256": "af27ed906f6185e0143b9c0d0da287788efa7eb6b2639e44d48fb2939415fdc5",
+        "size_bytes": 157224,
+        "sonames": [
+          "libpthread.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libqhull.so.7.2.0",
+        "sha256": "a7d4a97cce14ddc93480bdc44d9936784952f3a29e0cbb23ccb1bd7c054ce2b0",
+        "size_bytes": 366440,
+        "sonames": [
+          "libqhull.so.7"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libquadmath.so.0.0.0",
+        "sha256": "36ccd8fddb16b65129879a6ecf379b468d6e920bdcaeb01e3a7fdd4e7ddf1be8",
+        "size_bytes": 297784,
+        "sonames": [
+          "libquadmath.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libresolv-2.31.so",
+        "sha256": "5efd8032ec3bbd5158cb8022892dd5cc6770c54c93f7923bc6f3d9b008a524a7",
+        "size_bytes": 101352,
+        "sonames": [
+          "libresolv.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libroken.so.18.1.0",
+        "sha256": "f0a825f453c3934f77c22d7ff4cc8b009ae70da472ca03328bf6b8bd041c052d",
+        "size_bytes": 97024,
+        "sonames": [
+          "libroken.so.18"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/librt-2.31.so",
+        "sha256": "fd90f6cc09dda34e0fefeaba5bc60533773c4240f9e7ef672c508b1d610c425e",
+        "size_bytes": 35960,
+        "sonames": [
+          "librt.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/librtmp.so.1",
+        "sha256": "de583d2ccc102aeece38a6ce0d7a8ad0f895dc7687704e2347fb5101f1281b76",
+        "size_bytes": 125960,
+        "sonames": [
+          "librtmp.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libsasl2.so.2.0.25",
+        "sha256": "d6fe54f77a1ffa6caa9cea1b95f9e7f52182c9343420bb326ce175fcfc787d22",
+        "size_bytes": 113552,
+        "sonames": [
+          "libsasl2.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libselinux.so.1",
+        "sha256": "21801f05810593a6d7699bd81df3a37a47dfd029a64156d6b1b2a14cad9f2982",
+        "size_bytes": 163200,
+        "sonames": [
+          "libselinux.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libsmime3.so",
+        "sha256": "f686084c8f469608ac427b25735bc297caed762a2f9757b8056fbddec26070c1",
+        "size_bytes": 192776,
+        "sonames": [
+          "libsmime3.so"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libspatialite.so.7.1.0",
+        "sha256": "bc324e79971c66e51be42d42b57e759f70e2ad88800fcbade8fcb9ab7c4638b8",
+        "size_bytes": 5819416,
+        "sonames": [
+          "libspatialite.so.7"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libsqlite3.so.0.8.6",
+        "sha256": "99b8e84f8f61339cdff8afc043fe3e549b6d60c6017a6d29ea80018e4c3c2d20",
+        "size_bytes": 1212216,
+        "sonames": [
+          "libsqlite3.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libssh.so.4.8.4",
+        "sha256": "5e6f718e776dd0f189e461a0397a2e371951aaf94589443053404b108e766204",
+        "size_bytes": 450072,
+        "sonames": [
+          "libssh.so.4"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libssl.so.1.1",
+        "sha256": "5ca16b9d9251a5d2c5d14db43ebbd81eab9799043a63a548aec75fb6b505c4f2",
+        "size_bytes": 598104,
+        "sonames": [
+          "libssl.so.1.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28",
+        "sha256": "26916e7389a561537a0510661fc75538cea236139346f3dbe21bc64ba65605bf",
+        "size_bytes": 1956992,
+        "sonames": [
+          "libstdc++.so.6"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libsuperlu.so.5.2.1",
+        "sha256": "8e3eb48b08faf0bd98deaf6a058fce522ce2e82aaf66802e539d425288a1a044",
+        "size_bytes": 453112,
+        "sonames": [
+          "libsuperlu.so.5"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libsystemd.so.0.28.0",
+        "sha256": "4d12bf8dfcd3a7ab3cc414981ecb1dbd9a4eb51b4e1fd5b8a61a136626a2b9f9",
+        "size_bytes": 709496,
+        "sonames": [
+          "libsystemd.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libsz.so.2.0.1",
+        "sha256": "54df300ea60de9dd992425d1877946d33c199aa1701bd029a686d0632dd7bebb",
+        "size_bytes": 14256,
+        "sonames": [
+          "libsz.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libtasn1.so.6.6.0",
+        "sha256": "4821df72fa325303ec857f2a9de353e190db500a0e9deb08f57807df470b496b",
+        "size_bytes": 84120,
+        "sonames": [
+          "libtasn1.so.6"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libtbb.so.2",
+        "sha256": "26115b1a00c49e84d314e3f75eab0c752a2dfb20a61c60897f5656b1db239cba",
+        "size_bytes": 272840,
+        "sonames": [
+          "libtbb.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libthai.so.0.3.1",
+        "sha256": "540fb65a08c2a1de647129d3fb2c67b7c2ab0698ef03daedd07e723827d70fcf",
+        "size_bytes": 41152,
+        "sonames": [
+          "libthai.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libtiff.so.5.5.0",
+        "sha256": "688daa34cf8f85f8d2f2ca59e0b64c0b8ec610f829e36cc92018fb1579ada6a9",
+        "size_bytes": 527032,
+        "sonames": [
+          "libtiff.so.5"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libunistring.so.2.1.0",
+        "sha256": "fbf5c238ae84206e774f6f2145b6d3f6b7899fa5e77907b7cc5fa277e5689160",
+        "size_bytes": 1575112,
+        "sonames": [
+          "libunistring.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/liburiparser.so.1.0.26",
+        "sha256": "ee4a7dfa9eaee2c6cbe6bf04149995b756d5ddb703e7a75a6f434ffc601cd4ce",
+        "size_bytes": 120976,
+        "sonames": [
+          "liburiparser.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libuuid.so.1.3.0",
+        "sha256": "5255c40077f560d9572f60e8c1b85333bd409ac5daeee326e5c1bb3273dca0a9",
+        "size_bytes": 30936,
+        "sonames": [
+          "libuuid.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libwayland-client.so.0.3.0",
+        "sha256": "f68275ba9d6d9764cccec5fec1dca2d45b4f3ea62d066d529b5833d01244e45d",
+        "size_bytes": 64808,
+        "sonames": [
+          "libwayland-client.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libwayland-cursor.so.0.0.0",
+        "sha256": "04df0e0c027df230f3da3068835f4216f694e8ed7101789d06cebc8a4351ee00",
+        "size_bytes": 39448,
+        "sonames": [
+          "libwayland-cursor.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libwayland-egl.so.1.0.0",
+        "sha256": "7662c373988df0419db0eedfc591de1b671e3594203f982d4bc739414bf32352",
+        "size_bytes": 14368,
+        "sonames": [
+          "libwayland-egl.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libwebp.so.6.0.2",
+        "sha256": "702eed9cf7b00bf48d1b68902f66e4e2a6ddbadfc55b04617bcfcb82805c6d37",
+        "size_bytes": 420376,
+        "sonames": [
+          "libwebp.so.6"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libwind.so.0.0.0",
+        "sha256": "fa260d1d5936eea5ad5d9f3cebbd0f333705a4f84a91a24175f226b7dc57246f",
+        "size_bytes": 166040,
+        "sonames": [
+          "libwind.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0",
+        "sha256": "e4ca525317538fb8dc9a5033cd77a88ff4e5c9f669dcb3830b94b2bf0f1fd0ca",
+        "size_bytes": 55544,
+        "sonames": [
+          "libxcb-render.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0",
+        "sha256": "eb2ca488655d8697abf8c70c4d4d4a3b975a7ed892d099910e4bc87d998f9f5b",
+        "size_bytes": 14568,
+        "sonames": [
+          "libxcb-shm.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0",
+        "sha256": "29965900a4ad6fdee5ca5272ef0c91f517c7e7d67829bef7b73a5546637d16a8",
+        "size_bytes": 166488,
+        "sonames": [
+          "libxcb.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libxerces-c-3.2.so",
+        "sha256": "1b5c67b7d7dc09925c47ec856a777fae368a803e99f7bd8a3e3aa6c80b8dec70",
+        "size_bytes": 3742960,
+        "sonames": [
+          "libxerces-c-3.2.so"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libxkbcommon.so.0.0.0",
+        "sha256": "b192237d18978cc945a9eea1fabbd80f3d4f739985929dcdda7f2b648231587d",
+        "size_bytes": 264768,
+        "sonames": [
+          "libxkbcommon.so.0"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libxml2.so.2.9.10",
+        "sha256": "101605ea7125abd8b691f1ef21a39144adf1937db4a018b90a407100871b0734",
+        "size_bytes": 1799408,
+        "sonames": [
+          "libxml2.so.2"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libz.so.1.2.11",
+        "sha256": "ccfda8d7e0d2f77c8a4feb2febbae057edab668d7d7ee6410e2c517724c056c8",
+        "size_bytes": 108936,
+        "sonames": [
+          "libz.so.1"
+        ]
+      },
+      {
+        "path": "/usr/lib/x86_64-linux-gnu/libzstd.so.1.4.4",
+        "sha256": "9edef536cef4c60106f858649d2c2fb6bba708a83fab2e0ead2ebdb671a43c19",
+        "size_bytes": 686160,
+        "sonames": [
+          "libzstd.so.1"
+        ]
+      }
+    ],
+    "dependency_count": 211,
+    "dependency_records_sha256": "9be9cb1459ce2b925a0cbeb0850a012b486a5f52da5f7f8597913f8b57f52cb5",
+    "dependency_total_bytes": 1399072400,
+    "elf": {
+      "direct_needed": [
+        "libGLEW.so.2.1",
+        "libHFNet_SLAM.so",
+        "libOpenGL.so.0",
+        "libc.so.6",
+        "libgcc_s.so.1",
+        "libopencv_core.so.4.2",
+        "libopencv_imgcodecs.so.4.2",
+        "libopencv_imgproc.so.4.2",
+        "libpango_display.so",
+        "libpango_opengl.so",
+        "libpthread.so.0",
+        "libstdc++.so.6"
+      ],
+      "runpath": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/lib:/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Thirdparty/g2o/lib:/home/ma/SLAM/aqua_deps/install/lib:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.6/lib64:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.8/lib64"
+    },
+    "ld_library_path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/lib:/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Thirdparty/g2o/lib:/home/ma/SLAM/aqua_deps/install/lib:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.6/targets/x86_64-linux/lib:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.6/targets/x86_64-linux/lib:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.8/targets/x86_64-linux/lib:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.8/targets/x86_64-linux/lib"
+  },
+  "created_at_utc": "2026-08-16T16:49:28+00:00",
+  "schema_version": "aqua-fe-hfnet-v6-phase-f-h03-dependency-inventory-v1",
+  "status": "FROZEN_RESOLVED_ELF_DEPENDENCY_CLOSURE"
+}

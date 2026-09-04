@@ -1,0 +1,57 @@
+{
+  "files": {
+    "aquafe_proposed_safe_config": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/vins_aqualoc_external.yaml",
+      "sha256": "a2866a4a68a33e2b7c5e762a8de77858ecd383bc2c247277f1589805a03a3338",
+      "size_bytes": 1024
+    },
+    "aquafe_proposed_safe_trajectory": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/vins_output/vio.csv",
+      "sha256": "10204c57eadaf1933bfddf850f3a853f634bbc30c3331a7ed9a9a4670c24317e",
+      "size_bytes": 90995
+    },
+    "evaluator": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support.py",
+      "sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110",
+      "size_bytes": 27933
+    },
+    "external_klt_config": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/vins_aqualoc_external.yaml",
+      "sha256": "56aade70d916abf16d412ba6688aa1db9c321c79d214827d7222be7d47e99872",
+      "size_bytes": 992
+    },
+    "external_klt_trajectory": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/vins_output/vio.csv",
+      "sha256": "20d71bbc19c2dd3501ccc8831349444849ff69b7d3742b16811d7c10e7ccc3f9",
+      "size_bytes": 91019
+    },
+    "hfnet_bridge": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h07_0001_1720/attempt_001/bridges/hfnet_world_T_body_vins_csv_v1.csv",
+      "sha256": "f23dd861ff738848edd20756e7a7e571a4aae85f8d19d3d8bdd2994bd11ff200",
+      "size_bytes": 176810
+    },
+    "reference_bag": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/raw/harbor07_0001_1720.bag",
+      "sha256": "028697c3c1d36ccb87c98b3862a03608a148e1f8a9a59b88eb99f0a461c53e41",
+      "size_bytes": 291410228
+    },
+    "vanilla_origin_config": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/vanilla_origin/vins_aqualoc_origin.yaml",
+      "sha256": "396f3548d4f2f8e55b823e1033c0af8021af78a1e402622ce417a9a3d93f1de5",
+      "size_bytes": 996
+    },
+    "vanilla_origin_trajectory": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/vanilla_origin/vins_output/vio.csv",
+      "sha256": "1bcdfc17411a5c66d2e752a7ab91b067020faf3a9b045ac169725a79462be486",
+      "size_bytes": 92224
+    }
+  },
+  "formal_gates": {
+    "min_ape_poses": 30,
+    "min_ape_span_s": 10.0,
+    "min_common_coverage": 0.7,
+    "min_rpe_pairs": 10
+  },
+  "schema_version": "aqua-fe-samehistory-common-support-input-manifest-v1",
+  "sequence": "H07"
+}

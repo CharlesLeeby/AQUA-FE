@@ -1,0 +1,102 @@
+{
+  "claims": {
+    "accuracy_measured": false,
+    "attempt_prepared": false,
+    "execution_authorized": false,
+    "gpu_workload_started": false,
+    "hfnet_started": false,
+    "process_launch_authorized": false,
+    "ros_started": false,
+    "scientific_comparison_produced": false,
+    "trajectory_produced": false,
+    "vins_started": false
+  },
+  "frozen_contract": {
+    "attempt": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001",
+    "authorization_token": "HFNET_V6_A09_0000_4400_SCORE_4000_4400_WARMSTART_ATTEMPT_001_START_EXACTLY_ONCE",
+    "feed_camera_count": 4401,
+    "feed_indices_inclusive": [
+      0,
+      4400
+    ],
+    "maximum_hfnet_popen_invocations": 1,
+    "prefix_last_camera_timestamp_ns": 1542888945988866768,
+    "retry_permitted": false,
+    "score_camera_count": 401,
+    "score_indices_inclusive": [
+      4000,
+      4400
+    ],
+    "score_trajectory": "result/trajectory_score_4000_4400.txt",
+    "timeout_seconds": 600
+  },
+  "frozen_implementation": {
+    "runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_v1.py",
+      "sha256": "21981cc560458fd7d47d1d5b8d752a3ad208f499475e0721dd9f758b008a9093",
+      "size_bytes": 69666
+    },
+    "runner_test": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_v1.py",
+      "sha256": "b00d12fe162874cefa4c73e15e68a29f24dcf502bc7e7b6e5499689e2d92b3d3",
+      "size_bytes": 35626
+    }
+  },
+  "immutable_input_chain": {
+    "independent_audit_receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_positive_windows_v1/a09_0000_4400_score_4000_4400_warmstart.audit.json",
+      "sha256": "1e36452d2613e2b8a387f6e56e1f6ea8ef0acdb4d774f6de994981777a2ff2b4",
+      "size_bytes": 3071159
+    },
+    "materialization_authority": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_materialization_authority_v1.json",
+      "sha256": "d812b82a483e7b2b6ea73fa8b6b8e776e9e3cec8be0beb85c0ce20f419a49aee",
+      "size_bytes": 6894
+    },
+    "materialization_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_materialization_freeze_v1.json",
+      "sha256": "b1ed3f0f27cd74667fca20b1e653268ec723e66e490a3a41ac5515effa9b52e9",
+      "size_bytes": 6648
+    },
+    "materialization_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_positive_windows_v1/a09_0000_4400_score_4000_4400_warmstart/materialization_manifest.json",
+      "sha256": "fb54d28425a0eeea3ec7dec42ff2f433cac0a6303da96a0be1265b841fb36c8d",
+      "size_bytes": 2895623
+    },
+    "payload_sha256_excluding_manifest": "845bc56b0de8df58f0dedde3d22e7a6019ba3b02fa4edc7b6ceec395fdee5f52"
+  },
+  "review": {
+    "attempt_namespace_absent_after": true,
+    "canonical_validate_input_authority": {
+      "elapsed_seconds": 4.7,
+      "feed_camera_count": 4401,
+      "prefix_last_camera_timestamp_ns": 1542888945988866768,
+      "score_camera_count": 401,
+      "status": "PASS_INPUT_AUTHORITY"
+    },
+    "combined_process_free_tests": {
+      "failed": 0,
+      "passed": 37,
+      "status": "PASS"
+    },
+    "independent_blocker_review": "GO",
+    "legacy_target_literal_matches_for_a10_2400_2800": 0,
+    "observed_at": "2026-08-25T01:50:27+08:00",
+    "py_compile": "PASS",
+    "runner_process_free_tests": {
+      "failed": 0,
+      "passed": 22,
+      "status": "PASS"
+    }
+  },
+  "stage_boundary": {
+    "not_permitted": [
+      "attempt preparation without a separate exact preparation authority",
+      "process claim creation or any HFNet/ROS/VINS/GPU launch",
+      "retry, trajectory scoring, APE, RPE, ranking, significance, or paper claims"
+    ],
+    "permitted_now": "independent read-only review and creation of a separate attempt-preparation authority only"
+  },
+  "schema_version": "aqua-fe-hfnet-v6-a09-warmstart-runner-freeze-v1",
+  "status": "FROZEN_RUNNER_AND_PROCESS_FREE_TESTS_PASS_PREPARATION_AUTHORITY_MAY_BE_CREATED"
+}

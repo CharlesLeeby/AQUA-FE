@@ -1,0 +1,8 @@
+extends: h04_identity_churn_loftr_active_takeover_probe.yaml
+
+hybrid:
+  # CIRS warmup windows often sit just below the H04 persistence threshold:
+  # repeated frames report not_persistent:0.333 while all other degeneracy
+  # signals are active. This probe only lowers that persistence ratio enough
+  # to test whether LoFTR can enter after VINS has had an initialization window.
+  klt_degeneracy_loftr_min_bad_history_ratio: 0.30

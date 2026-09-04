@@ -1,0 +1,20 @@
+{
+  "created_at_utc": "2026-08-07T20:51:31+00:00",
+  "intent_hash": "234437b151306ebd96da7d836e34b7b2c027c04603d4094f7f6c08c99ca4c2d1",
+  "lock_hash": "be3b8e3334cb68c0320a383f65ff9ee40ad8cd58ed13f4e63ee0f044a22be09b",
+  "outcome_boundary": "CAPACITY_RECOVERY_ONLY_NO_TRAJECTORY_OR_ACCURACY_EVIDENCE",
+  "postcondition": {
+    "candidate_absent": true,
+    "canonical_contract_unchanged": true,
+    "checksum_bindings_unchanged": true,
+    "exact_allocated_file_bytes_unlinked": 23396134912,
+    "exact_logical_bytes_unlinked": 23396131412,
+    "exact_part_count_unlinked": 349,
+    "expected_allocated_tree_bytes": 23396237312,
+    "frozen_artifacts_unchanged": true,
+    "intent_hash": "234437b151306ebd96da7d836e34b7b2c027c04603d4094f7f6c08c99ca4c2d1"
+  },
+  "receipt_hash": "4b91be03353608843143f7ee12a7cf7281192bbcb84ce4d9a95be45d214534e6",
+  "schema": "isj-p07-fjord2-parts-reclaim-receipt-v1",
+  "status": "PASS"
+}

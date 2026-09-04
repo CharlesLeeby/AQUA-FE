@@ -1,0 +1,29 @@
+{
+  "accepted_learned_born_lineage_count": 0,
+  "canonical_stream": {
+    "appended_row_sha256": "f5a6631ccd662496d17d2d024a4b66234054f8194e2a8271b9c231d75354500d",
+    "path": "papers/ieee_sensors_journal_experiments/arm_applicability.csv",
+    "prefix_sha256": "172ace162fc27c04053c1016523e4607f2e8f2e62d6d384c6008891439dbc8a5",
+    "prefix_size_bytes": 14436
+  },
+  "derivation": null,
+  "held_out_trajectory_outcome_read": false,
+  "outcome_boundary": "FRONTEND_EXPORT_ONLY_NO_VINS_APE_RPE_TRAJECTORY",
+  "p_audit": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_047_isj_p07_aqualoc_archaeology_a01_0003_p_attempt01/audit_v4.json",
+  "p_audit_sha256": "c95b27607de14f3c0676e5d919ad6e9d5fd277bd49bbefb911cbcb18de53f1ff",
+  "parent_p_run_id": "isj-nativeq-v3_P07_aqualoc_archaeology-A01_2700-3600_P_f0_b00_20260806T084500Z",
+  "recorded_at": "2026-08-07T23:33:24+08:00",
+  "resolution": "NOT_APPLICABLE",
+  "resolution_lock": "papers/ieee_sensors_journal_experiments/p07/d_resolution_locks/aqualoc_archaeology_a01_0003_v3.json",
+  "resolver_hash": "73b60b87057fc70e37c1dba79135aa655f01397312d3de396b60f42cf3ae44a7",
+  "schema_version": "isj-p07-d-applicability-resolution-v2",
+  "status": "PASS_NOT_APPLICABLE",
+  "window_id": "aqualoc_archaeology:A01:0003",
+  "zero_action_identity": {
+    "b1_feature_bag": "logs/aqualoc_archaeo_vins/external_klt_every2_isj_p07_aqualoc_archaeology_a01_0003_b1_attempt01/features.bag",
+    "b1_feature_bag_sha256": "bb64de3e3eab5c88f6d69673304d6a2571951c72b8f1251b7688f4ba0537c31b",
+    "p_feature_bag": "logs/aqualoc_archaeo_vins/external_klt_every2_isj_p07_aqualoc_archaeology_a01_0003_p_attempt01_klt_safe_fallback/features.bag",
+    "p_feature_bag_sha256": "bb64de3e3eab5c88f6d69673304d6a2571951c72b8f1251b7688f4ba0537c31b",
+    "status": "PASS_BYTE_IDENTICAL_TO_B1"
+  }
+}

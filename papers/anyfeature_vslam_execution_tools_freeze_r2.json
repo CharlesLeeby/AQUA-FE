@@ -1,0 +1,85 @@
+{
+  "schema": "aqua-fe-anyfeature-execution-tools-freeze-r2",
+  "status": "GO_RUNNER_V2_PREFLIGHT_ONLY",
+  "scientific_configuration_changed": false,
+  "official_process_started_before_freeze": false,
+  "accuracy_observed_before_freeze": false,
+  "parent_freeze": {
+    "path": "papers/anyfeature_vslam_execution_tools_freeze_r1.json",
+    "sha256": "c53a2d18a24b2eb5dbd54a9c312ed16cda1ffd730c149e61a4603c6c97a91b4e"
+  },
+  "preregistration": {
+    "path": "papers/anyfeature_vslam_r2d2_a02_preregistration.md",
+    "sha256": "74eb99a57aee660270561850a0b72f288951a80082b9c7a6200ecfed60a3c680"
+  },
+  "infrastructure_addendum": {
+    "path": "papers/anyfeature_vslam_runner_v2_addendum.md",
+    "sha256": "eb1ab675c6734c5d6522b5b858942176ce4d861b2a7dd4ba73ac5c54f99491ea"
+  },
+  "preserved_v1_failure": {
+    "path": "papers/anyfeature_vslam_r2d2_smoke_preflight_failure_r1.json",
+    "sha256": "7571e76a55b69eeb6c12d999c05ceb74e06c26f921429a4bfd81549587619af2",
+    "classification": "project-side ldd checker false negative before official process start"
+  },
+  "runner": {
+    "v1": {
+      "path": "scripts/run_anyfeature_vslam_official_v1.py",
+      "sha256": "0c60fa8126dbc9dfb309b995c15bb324eea29899b07145afc69c10324538707f",
+      "must_remain_unchanged": true
+    },
+    "v1_tests": {
+      "path": "scripts/tests/test_run_anyfeature_vslam_official_v1.py",
+      "sha256": "952777adbfb0add775cce5ad1df2e62aed2c023fc81d813188e99b5b982ac3af",
+      "result": "7/7 PASS"
+    },
+    "v2": {
+      "path": "scripts/run_anyfeature_vslam_official_v2.py",
+      "sha256": "93f0342903e4e5ab9e2a3618ca77d08a7598ff19d67af42f0719a63b42dc5db3",
+      "authorized_delta": "SONAME symlink spelling and strict realpath identity equivalence in ldd audit only"
+    },
+    "v2_tests": {
+      "path": "scripts/tests/test_run_anyfeature_vslam_official_v2.py",
+      "sha256": "b9fd44e24d982445d3f6776d41ec4eaa291e081b28226cae21d517a656110847",
+      "result": "9/9 PASS"
+    },
+    "independent_review": {
+      "verdict": "GO",
+      "p0": 0,
+      "p1": 0,
+      "verified_properties": [
+        "v1 bytes unchanged",
+        "normal .409 symlink ldd accepted only when strict realpath equals frozen target",
+        "real-target spelling accepted",
+        "wrong SONAME rejected",
+        "not found rejected",
+        "outside-env OpenCV rejected",
+        "no v1 module-global mutation",
+        "overlapped two-thread invocation isolated",
+        "all frozen profiles and argv inherited"
+      ]
+    }
+  },
+  "official_identity": {
+    "commit": "6aa014b724f7a61bcbff2f8f28f20836986a43dc",
+    "binary_sha256": "9adb623fc8d83ce35297be7a7d810d269cd65273bd0f4fb1bddebbec0b8bdd59",
+    "core_library_sha256": "eea4a5a6c5dccb5825a8e6a1a3249c6b808881a22c7fe301d0a2a90efaa99954",
+    "dbow2_library_sha256": "7215c8425e3620834ef24ea17f26fd0635b15d9d85b0093b00220e553a40c8c5",
+    "source_or_binary_modified": false
+  },
+  "input_identity": {
+    "smoke_view_manifest_sha256": "68ac4ec0fc1217c9e4950a20cd97e46d1f96c47ec68ee0bc2e42bc5db7f87ac8",
+    "smoke_view_validation_sha256": "d5c690ee82097ffd287bbb9470e81388f6b9e68686cfce0f9a015fd905e4da42",
+    "full_camera_manifest_sha256": "2f08cc97e71d44e56d90720fbdd5bf925c1c7e5892096743f67265fc2df34afe",
+    "full_camera_sequence_identity_sha256": "d43ee7b00bf759ca3c5c2c60e532e453a797300d34a830d7777999931d5fb6e3",
+    "full_camera_frame_count": 901
+  },
+  "one_way_authority": {
+    "next_action": "runner-v2 r2d2-smoke preflight only",
+    "preflight_report": "/mnt/data/AQUA-FE_WS/published_anyfeature_vslam_v1/adapter_reports/a02_r2d2_smoke_preflight_v2_r1.json",
+    "on_preflight_failure": "STOP_R2D2_CLOSURE; no v3 and no alternate spelling or frame",
+    "on_preflight_success": "permit exactly one official r2d2-smoke process start through the same v2 bytes",
+    "on_official_smoke_failure": "STOP_R2D2_CLOSURE; no retry",
+    "on_official_smoke_success": "continue frozen ORB32-full then R2D2-full order through v2",
+    "accuracy_before_both_full_attempts": "forbidden"
+  }
+}

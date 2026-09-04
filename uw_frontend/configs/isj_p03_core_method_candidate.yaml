@@ -1,0 +1,143 @@
+schema_version: isj-core-method-candidate-v1
+status: P03_CANDIDATE_NOT_YET_CANONICAL
+
+b1_klt:
+  config_path: uw_frontend/configs/klt_frontend.yaml
+  preprocess: adaptive_clahe
+  every_n: 1
+  frame_offset: 0
+  max_features: 350
+
+health_trigger:
+  warmup_frames: 8
+  min_k0_tracks: 260
+  min_grid_coverage: 0.80
+  max_median_fb_error: 0.65
+  rolling_window_frames: 3
+  rolling_min_bad_frames: 2
+  max_long_track_ratio: 0.30
+  min_image_degradation: 0.40
+  minimum_trigger_gap_frames: 3
+  logic: any_instant_or_two_of_three_rolling
+
+learned_proposer:
+  identity: xfeat_sparse_v1
+  adapter: uw_frontend/matchers/xfeat_adapter.py
+  repository: external_tools/accelerated_features
+  weights: external_tools/accelerated_features/weights/xfeat.pt
+  top_k: 2048
+  max_candidates_per_trigger: 256
+  semi_dense: false
+  min_cossim: 0.82
+  detector_confidence_used_by_selector: false
+
+classical_proposer:
+  identity: gftt_independent_v1
+  adapter: uw_frontend/tracking/classical_proposer.py
+  detector: gftt
+  max_candidates: 256
+  quality_level: 0.01
+  min_distance: 18
+  block_size: 7
+  use_harris: false
+  harris_k: 0.04
+  exclusion_radius: 18
+  id_base: 14000000
+  grid_rows: 4
+  grid_cols: 6
+  detector_response_used_by_selector: false
+
+probation_and_carrier:
+  min_observations: 5
+  lk_win_size: 21
+  lk_max_level: 3
+  max_fb_error: 1.20
+  min_ncc: 0.42
+  patch_radius: 5
+  border_px: 8
+  min_motion_ratio: 0.60
+  max_motion_ratio: 1.50
+  accepted_id_eviction: false
+  readmission: false
+  termination:
+    lk_failure: true
+    out_of_bounds: true
+    sustained_correctness_failures: 2
+
+fh_correctness:
+  implementation: uw_frontend/geometry/fh_residuals.py
+  fit_source: sorted_k0_only
+  seed: 20260730
+  models: [F, H]
+  fundamental_threshold_px: 2.5
+  homography_threshold_px: 5.0
+  confidence: 0.999
+  max_iterations: 2000
+  min_fundamental_inliers: 8
+  min_homography_inliers: 4
+  arbitration: min_normalized_residual
+  e_max: 4.0
+  no_valid_base_model: reject_all_new_lineages
+
+reliability:
+  identity: temporal_reliability_candidate_v1
+  horizon_frames: 5
+  alpha: 0.10
+  pooled_model: true
+  source_as_feature: false
+  conformal_bucket: global_only
+  q_lower: clip_p_hat_minus_global_q_1_minus_alpha
+  backend_min_quality_floor: false
+  feature_names:
+    - age_norm_30
+    - ncc_score
+    - fb_score_tau_1px
+    - survival_ratio
+    - prior_residual_median_score
+    - prior_residual_p95_score
+
+selector:
+  implementation: uw_frontend/geometry/marginal_support.py
+  lambda_a: 1.0
+  tau_e: 1.0
+  e_max: 4.0
+  b_active: 8
+  total_feature_cap: 350
+  base_export_cap: 342
+  min_gain: 0.001
+  random_seed: 20260730
+  random_grid_rows: 3
+  random_grid_cols: 3
+  h_ranking: empty_4x6_cell_then_nearest_k0_distance_then_canonical_id
+  q_ranking: descending_q_lower_then_canonical_id
+  g_policy: q_lower_equals_one_then_marginal_gain
+  qg_policy: calibrated_reliability_times_residual_weighted_marginal_gain
+  numeric_dtype: float64
+  solve: cholesky_then_linear_solve
+
+master_stream:
+  implementation: uw_frontend/geometry/master_candidate_stream.py
+  schema_version: isj-master-candidate-stream-v1
+  producer_feedback_from_admission: forbidden
+  learned_and_classical_pool_hashes: separate
+  h_p_master_pool_hash_required_equal: true
+  frame_hash_float_encoding: big_endian_ieee754_binary64_hex
+
+export:
+  backend_quality: 1.0
+  total_feature_cap: 350
+  base_export_cap: 342
+  preserve_selected_ids: true
+  measurement_selection: false
+  formal_three_layer_export: false
+  semidense_fallback_method: none
+  vins_safe_source_selection: false
+
+runtime:
+  pythonhashseed: 20260730
+  opencv_rng_seed: 20260730
+  opencv_threads: 1
+  torch_intraop_threads: 1
+  torch_interop_threads: 1
+  vins_multiple_thread: 0
+  playback_rate: 1.0

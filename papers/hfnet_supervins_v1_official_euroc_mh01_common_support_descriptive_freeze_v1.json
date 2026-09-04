@@ -1,0 +1,325 @@
+{
+  "schema_version": "aqua-fe-hfnet-supervins-mh01-common-support-descriptive-freeze-v1",
+  "created_at": "2026-08-21T02:06:51+08:00",
+  "status": "FROZEN_DEVELOPMENT_ONLY_AWAITING_EXECUTION_LOCK_AND_AUTHORITY",
+  "scientific_role": "ONE_SHOT_PURE_ARTIFACT_LEVEL_COMMON_SUPPORT_DESCRIPTIVE_ANALYSIS",
+  "objective": "Evaluate one already generated HFNet-SLAM trajectory and one already generated SuperVINS trajectory against official EuRoC MH_01_easy ground truth on one exact shared camera-timestamp support. This stage performs no model, ROS, publisher, trajectory generation, or inferential comparison.",
+  "sequence": "official EuRoC MH_01_easy; not SuperVINS README-recommended V2_01",
+  "source_artifacts": {
+    "hfnet": {
+      "trajectory": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001/result/trajectory.txt",
+        "sha256": "d08cd9b919a13172c3e134370a4d3cde9ddf53529c5a7021e97fd0bf4d980d27",
+        "size_bytes": 310283,
+        "required_mode": "0755",
+        "required_nlink": 1,
+        "format": "timestamp_ns.000000 tx ty tz qx qy qz qw",
+        "row_count": 2737,
+        "camera_row_indices": "945..3681 inclusive",
+        "pose_semantics": "world_T_body final-map reconstructed trajectory"
+      },
+      "run_result": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001/run_result.json",
+        "sha256": "69256e1f5cff68c2f736d39182b1d50b4acecbae755736a48feaf3de8e7c4b05",
+        "size_bytes": 13052,
+        "required_mode": "0755",
+        "required_nlink": 1,
+        "required_status": "PASS_PHASE_D_OFFICIAL_MH01_RUNABILITY"
+      },
+      "process_start_claim": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001/process_start_claim.json",
+        "sha256": "b62351589ec29e71579c5cbf6ece7153fc01980d0bab9e1831ad32db5b864ce0",
+        "size_bytes": 2432,
+        "required_mode": "0755",
+        "required_nlink": 1
+      },
+      "stdout_log": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001/headless.stdout.log",
+        "sha256": "e5ce2484ca4d2e8ce02987a933cc21b9e07c0a8a17ad4ce8f4128b87b0bd9043",
+        "size_bytes": 11138,
+        "required_mode": "0755",
+        "required_nlink": 1,
+        "role": "Pins the observed pre-final-map failure/reset/not-enough-motion/lost history that the common tail excludes."
+      },
+      "stderr_log": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001/headless.stderr.log",
+        "sha256": "cbd0cd9f9c064c6c91454220809298a1501dff7187e8aeaa9e30365af1da4670",
+        "size_bytes": 5496,
+        "required_mode": "0755",
+        "required_nlink": 1
+      },
+      "passed_stack_lock": {
+        "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_passed_stack_lock_v1.json",
+        "sha256": "cb826526a28f28e77f546d4647e16fd19426494e9a15ab01108301136cbfadad",
+        "size_bytes": 8111,
+        "required_mode": "0664",
+        "required_nlink": 1
+      },
+      "input_adoption": {
+        "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_mh01_input_adoption_v1.json",
+        "sha256": "cd45e7c39f322bc60d840ae18816584fce024d8220e89ef0698915af51c4437d",
+        "size_bytes": 6622,
+        "required_mode": "0664",
+        "required_nlink": 1
+      },
+      "trajectory_writer_source": {
+        "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/src/System.cc",
+        "sha256": "4621d33384b904b68c1041bc5a1acd28eac07fc75481f89733ceeb3470215cc6",
+        "size_bytes": 48911,
+        "required_mode": "0664",
+        "required_nlink": 1
+      },
+      "official_entry_source": {
+        "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Examples/Monocular-Inertial/mono_inertial_euroc.cc",
+        "sha256": "fa3effb0c2b99bc4dd83abda443180cf2f017f61710e02fa6b3f9278cc774d39",
+        "size_bytes": 10201,
+        "required_mode": "0664",
+        "required_nlink": 1
+      },
+      "headless_wrapper_source": {
+        "path": "/home/ma/AQUA-FE_WS/scripts/harnesses/hfnet_slam_mono_inertial_euroc_headless_v3.cc",
+        "sha256": "303947840bdc5377656554560c6785b3218a52e034862a63d5d6da0036b81d90",
+        "size_bytes": 1112,
+        "required_mode": "0664",
+        "required_nlink": 1
+      },
+      "semantic_boundary": "The file is saved after Shutdown by reconstructing each frame from stored relative pose and the final optimized reference keyframe in the selected map; for inertial mode SaveTrajectoryEuRoC writes Twb. It is a final-map reconstructed world_T_body artifact, not an online-published state sequence.",
+      "runability_warning_disclosure": "The pinned HFNet stdout records repeated fail-to-track-local-map, not-enough-motion, active-map reset, and frames-set-to-lost events before the final saved trajectory prefix. The adopted runability evidence also records 31 warning lines, a cuDNN-version mismatch warning, an FP16 warning, seven local-map failures, and eight resets. SaveTrajectoryEuRoC then selects the final largest map and skips lost frames. The common window excludes this failed/reset prefix, and the prior stage did not clear accuracy or superiority claims. This evaluation is conditional on the sealed artifact only."
+    },
+    "supervins": {
+      "trajectory": {
+        "path": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_full_trajectory_20260817_r1/attempt_001/trajectory_output/vio.csv",
+        "sha256": "df2f194453a85c4d6938edbfe45fe48fc67a547e0efb9f2db4c7b1d4a4bfe22d",
+        "size_bytes": 152099,
+        "required_mode": "0664",
+        "required_nlink": 1,
+        "format": "timestamp_s_fixed6 tx ty tz qx qy qz qw",
+        "row_count": 1810,
+        "camera_row_indices": "63..3681 inclusive, step 2",
+        "pose_semantics": "world_T_body online estimator state appended during the run"
+      },
+      "run_result": {
+        "path": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_full_trajectory_20260817_r1/attempt_001/run_result.json",
+        "sha256": "d8cd8f74e0e7ddfc4bf1d1c61fd43696112e47d184949ce1a209aa926bfec22e",
+        "size_bytes": 66563,
+        "required_mode": "0444",
+        "required_nlink": 1,
+        "required_status": "PASS_DEVELOPMENT_OFFICIAL_MH01_FULL_TRAJECTORY_GENERATION"
+      },
+      "stage5_terminal_provenance": {
+        "path": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_gt_evaluation_20260821_r1/attempt_001/run_result.json",
+        "sha256": "72e5c40bb0b3212b37db3deed0ed0a7c0f557458e6277143329c93e55ca83918",
+        "size_bytes": 33695,
+        "required_mode": "0444",
+        "required_nlink": 1
+      },
+      "trajectory_writer_source": {
+        "path": "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/src/utility/visualization.cpp",
+        "sha256": "a82c242b237390c0a026bedc5deb719b3d824c22e6f58c215b07bb6d392871ef",
+        "size_bytes": 17611,
+        "required_mode": "0664",
+        "required_nlink": 1
+      },
+      "semantic_boundary": "The file is an online-published/appended world_T_body estimator-state sequence, not a final-map reconstructed trajectory."
+    }
+  },
+  "official_reference": {
+    "camera_csv": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy/mav0/cam0/data.csv",
+      "sha256": "62db628a8e6358f43df81e66ddb4597ab40b19a10f3d6cd80cc04d590b5adb12",
+      "size_bytes": 165716,
+      "required_mode": "0755",
+      "required_nlink": 1,
+      "row_count": 3682
+    },
+    "ground_truth_csv": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy/mav0/state_groundtruth_estimate0/data.csv",
+      "sha256": "aae2d7c5684724c8afe364d2fd8499a6ed77a9169adf03736531f67d8e7b2117",
+      "size_bytes": 6225269,
+      "required_mode": "0755",
+      "required_nlink": 1,
+      "row_count": 36382,
+      "position_columns": "p_RS_R_x,y,z in metres",
+      "quaternion_columns": "q_RS_w,x,y,z"
+    },
+    "ground_truth_sensor_yaml": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy/mav0/state_groundtruth_estimate0/sensor.yaml",
+      "sha256": "e02cacbad1b654908f1fad9f8997672a2928ec348840225919259f73f1084a95",
+      "size_bytes": 489,
+      "required_mode": "0755",
+      "required_nlink": 1,
+      "required_T_BS": "identity_4x4"
+    },
+    "imu0_sensor_yaml": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy/mav0/imu0/sensor.yaml",
+      "sha256": "91e6c408416f549f87e7405830b83849cca10521f3d3fc8bb3de862c2bc882d0",
+      "size_bytes": 695,
+      "required_mode": "0755",
+      "required_nlink": 1,
+      "required_T_BS": "identity_4x4"
+    },
+    "frame_contract": "Both estimated trajectories are world_T_body and both official sensor/IMU T_BS matrices are identity. Evaluate body position against GT body position; do not apply a camera extrinsic."
+  },
+  "input_read_consistency_contract": {
+    "reason": "The HFNet trajectory, SuperVINS trajectory, and several reference files are not OS-read-only.",
+    "preflight": "Verify exact path, SHA-256, size, mode, and nlink for every frozen input/source without evaluating positions.",
+    "run": "Open every parsed mutable scientific/log artifact (both trajectories and run/log provenance, official camera/GT CSVs, and both T_BS YAMLs) with O_RDONLY|O_CLOEXEC|O_NOFOLLOW where supported, fstat the held descriptor, read exact bytes from that same descriptor into an immutable in-memory snapshot, verify SHA-256/size/mode/nlink against the lock, and parse only those snapshot bytes. Keep descriptors held until postflight; re-fstat and re-hash path bytes after outputs are complete. Other pinned source/runtime files receive complete pre/post path-identity audits. A path replacement, inode/device change, descriptor mutation, or postflight identity change is terminal FAIL.",
+    "scientific_subprocesses": "The evaluator shall spawn no subprocess and shall not start or stop any ROS/model/trajectory-generation process. Process scans are limited to relevant commands and never terminate unrelated processes."
+  },
+  "support_contract": {
+    "camera_row_indices": "945..3659 inclusive, step 2",
+    "first_camera_row_index": 945,
+    "last_camera_row_index": 3659,
+    "camera_row_step": 2,
+    "pair_count": 1358,
+    "first_timestamp_ns": 1403636627013555456,
+    "last_timestamp_ns": 1403636762713555456,
+    "span_ns": 135700000000,
+    "span_s": 135.7,
+    "gt_join": "Every common camera timestamp must join an exactly identical integer timestamp in official GT; no interpolation, extrapolation, or nearest-GT association.",
+      "hfnet_binding": "Validate each 19-digit-nanoseconds-plus-.000000 timestamp by string/Decimal arithmetic only; float-to-int conversion is forbidden. HFNet row i binds exactly to camera row 945+i. Common rows are HFNet camera rows 945..3659; the exact integer prefix must equal the camera timestamp.",
+      "supervins_binding": "Parse fixed-six seconds with Decimal only. SuperVINS row i binds by frozen formula camera row 63+2*i after text proximity <=1000 ns. Common rows correspond exactly to camera rows 945..3659; source nanoseconds are recovered from camera CSV, never float conversion or Decimal(text)*1e9 as restoration of source nanoseconds.",
+    "required_equal_system_sample_count": 1358,
+    "rpe_1s": {
+      "pair_rule": "Within the common odd-camera sequence, pair row i with row i+10, equivalent to camera-index delta 20.",
+      "pair_count": 1348,
+      "required_delta_ns": 1000000000,
+      "floating_time_search": false
+    },
+    "coverage_disclosure": {
+      "hfnet_full_output_rows": 2737,
+      "hfnet_official_input_camera_rows": 3682,
+      "hfnet_first_camera_row": 945,
+      "hfnet_first_final_saved_trajectory_output_delay_from_sequence_cam0_ns": 47249999872,
+      "hfnet_first_final_saved_trajectory_output_delay_from_sequence_cam0_s": 47.249999872,
+      "hfnet_missing_prefix_interpretation": "This is the delay to the first pose retained in the final saved largest-map trajectory after earlier fail/reset/lost events, not evidence of one uninterrupted initialization delay.",
+      "supervins_generated_rows": 1810,
+      "supervins_expected_odd_camera_rows": 1841,
+      "supervins_first_camera_row": 63,
+      "supervins_first_output_delay_from_sequence_cam0_ns": 3149999872,
+      "supervins_first_output_delay_from_sequence_cam0_s": 3.149999872,
+      "common_window_starts_after_supervins_first_output_ns": 44100000000,
+      "common_window_starts_after_supervins_first_output_s": 44.1,
+      "hfnet_post_common_gt_boundary_rows": 22,
+      "supervins_post_common_gt_boundary_rows": 11,
+      "tail_interpretation": "Post-index-3659 rows are outside the exact shared GT-covered window and are coverage boundaries, not algorithm-generation failures. Equal common accuracy support must not hide the different saved-output prefix coverage and histories."
+    }
+  },
+  "alignment_contract": {
+    "primary": "For each system independently, fit one proper fixed-scale SE(3) transform from that system's 1358 common estimated body positions to the same 1358 GT body positions. Never share a transform and never fit on a system's full support.",
+    "scale": 1.0,
+    "reflection_forbidden": true,
+    "source_target_covariance_rank_minimum": 2,
+    "determinant_tolerance": 1e-12,
+    "orthonormal_tolerance": 1e-12,
+    "reference_core": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/trajectory_eval_core.py",
+      "sha256": "aa9ac4da81df7298d1f1c369548ca98a57235916004337cad66f4cf331560635",
+      "size_bytes": 27945,
+      "required_mode": "0664",
+      "required_nlink": 1
+    },
+    "frozen_stage5_implementation": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_published_supervins_v1_official_euroc_mh01_full_trajectory_gt_v1.py",
+      "sha256": "1d94fe884c4221199d32fabb2066c5dbb8fdaf0fbf59e926eb1123d9a9ae68c3",
+      "size_bytes": 86702,
+      "required_mode": "0664",
+      "required_nlink": 1
+    },
+    "rank_gate": "For each system and each alignment, centered source positions, centered GT target positions, and their cross-covariance must each have numerical rank >=2.",
+    "proper_transform_gates": "Every rotation is finite, det(R)>0 and within 1e-12 of +1, and max_abs(R^T R-I)<=1e-12. SE(3) scale is exactly 1. Sim(3) scale is finite and positive.",
+    "fresh_se3_core_crosscheck": "For each system, the fresh fixed-scale SE(3) aligned coordinates must agree with pinned trajectory_eval_core.align_se3_positions on the same 1358 pairs to <=1e-12 m maximum absolute coordinate difference.",
+    "secondary_sim3": "For each system independently, fit proper positive-scale Umeyama Sim(3) on the same 1358 points. Report scale and descriptive APE/RPE only as a diagnostic; it cannot replace the fixed-scale primary analysis or support ranking."
+  },
+  "metric_contract": {
+    "primary_ape": "Euclidean translation error in metres after each system's independent common-support fixed-scale SE(3) alignment; n=1358 each.",
+    "primary_rpe": "Euclidean error between aligned estimated and GT global-frame position deltas for the exact one-second pair rule; n=1348 each.",
+    "secondary": "The same descriptive APE/RPE after each independent common-support proper Sim(3), plus positive finite scale.",
+    "required_statistics": ["n", "rmse_m", "mean_m", "population_std_m", "median_m", "min_m", "p90_m", "p95_m", "max_m", "sse_m2"],
+    "quantile_method": "NumPy linear",
+    "all_values_finite_nonnegative": true,
+    "orientation_metric_run": false
+  },
+  "comparison_and_claim_contract": {
+    "allowed": "Side-by-side descriptive rows for the two sealed artifacts on identical support.",
+    "forbidden_computed_or_reported_fields": ["cross_system_metric_difference", "cross_system_metric_delta", "cross_system_metric_ratio", "percent_improvement", "winner", "best", "rank", "superiority", "p_value", "confidence_interval", "effect_size"],
+    "delta_scope_note": "The prohibition concerns arithmetic between HFNet and SuperVINS metrics. Within-system temporal/positional deltas used by the frozen RPE definition are required and are not cross-system comparison fields.",
+    "inferential_statistics_authorized": false,
+    "reason": "There is one deterministic artifact per system, temporally correlated residuals, substantially different saved-output prefix coverage and histories, and different output semantics.",
+    "mandatory_disclosure": "The common window and HFNet final-saved trajectory begin 44.1 s after SuperVINS' first output. HFNet's missing prefix contains repeated fail/reset/lost events and must not be described as one uninterrupted initialization delay. HFNet is a final-map reconstructed largest-map trajectory with lost frames skipped, whereas SuperVINS is an online-published estimator-state trajectory.",
+    "narrow_claim": "Artifact-level conditional description on the exact common tail only; no winner, superiority, system-wide, initialization-equivalence, underwater, V2_01, or generalization claim."
+  },
+  "analysis_bundle_contract": {
+    "root_relative_to_attempt": "analysis-output",
+    "required_files": [
+      "analysis-output/metrics.json",
+      "analysis-output/input-audit.json",
+      "analysis-output/support-audit.json",
+      "analysis-output/alignment.json",
+      "analysis-output/common-support-poses.csv",
+      "analysis-output/common-support-rpe-1s.csv",
+      "analysis-output/analysis-report.md",
+      "analysis-output/stats-appendix.md",
+      "analysis-output/figure-catalog.md",
+      "analysis-output/figures/figure-01-primary-common-support-overlay.svg",
+      "analysis-output/figures/figure-02-primary-error-traces.svg",
+      "analysis-output/artifact-manifest.json"
+    ],
+    "csv_order": "camera row order 945..3659, and exact one-second pair order respectively",
+    "json_serialization": "UTF-8, sort_keys=true, indent=2, ensure_ascii=false, allow_nan=false, one trailing LF",
+    "manifest": "Manifest excludes itself and records each other required bundle file's exact relative path, SHA-256, size, mode, and nlink. Compute bundle_content_tree_sha256 over compact canonical JSON of the sorted [{path,sha256,size_bytes}] list. Manifest carries a canonical self_hash over its object with self_hash null. Terminal result pins the manifest.",
+    "figures": "Deterministic standard-library SVG. Spatial panels use one shared comparison domain and exact equal metres per pixel across XY/XZ panels. Time and error axes have exact lower bound zero. Horizontal and vertical gridline coordinates are mechanically audited. No uncertainty or significance annotations.",
+    "claim_candidate_location": "analysis-output/analysis-report.md#Claim Boundary",
+    "results_section_prose_authorized": false
+  },
+  "execution_contract": {
+    "fresh_evidence_root": "/home/ma/AQUA-FE_WS/experiments/published_hfnet_supervins_v1_official_euroc_mh01_common_support_descriptive_20260821_r1",
+    "attempt": "attempt_001",
+    "maximum_evaluator_starts": 1,
+    "retry_authorized": false,
+    "authorization_token": "HFNET_SUPERVINS_STAGE6_MH01_COMMON_SUPPORT_ATTEMPT_001_START_ONCE",
+    "execution_authority_required": true,
+    "authority_root_confirmation": "ROOT_CONFIRMED_STAGE6_EXACTLY_ONE_PURE_COMMON_SUPPORT_EVALUATION",
+    "authority_claim_boundary": {
+      "pure_existing_artifact_computation_only": true,
+      "model_ros_publisher_or_trajectory_generation_authorized": false,
+      "cross_system_metric_contrast_authorized": false,
+      "performance_ordering_authorized": false,
+      "inferential_statistics_authorized": false,
+      "next_stage_automatically_authorized": false
+    },
+    "start_claim": "attempt_001/evaluation_start_claim.json",
+    "terminal_result": "attempt_001/run_result.json",
+    "terminal_result_written_last": true,
+    "all_outputs_O_EXCL": true,
+    "python_bytecode_forbidden": true,
+    "network_forbidden": true,
+    "subprocess_spawn_forbidden": true,
+    "ros_model_publisher_trajectory_generation_forbidden": true,
+    "all_existing_artifact_mutation_forbidden": true,
+    "seal": "Final freeze, lock, separate root authority, test receipt, start claim, every bundle file, and terminal result are mode 0444 with nlink=1."
+  },
+  "preflight_contract": {
+    "timestamp_only": true,
+    "position_orientation_error_alignment_or_metric_values_must_not_be_parsed_or_computed": true,
+    "required_checks": "All frozen pins; exact source row counts and timestamp-to-camera formulas; exact common indices/timestamps/GT joins/count/span; exact 1s pair count/deltas; coverage/init arithmetic; schemas; final seals; fresh root/start claim and authority absent; no relevant active generator/ROS/model process.",
+    "required_status_before_authority": "GO_AWAITING_SEPARATE_ROOT_AUTHORITY_FOR_EXACTLY_ONE_PURE_COMMON_SUPPORT_EVALUATION"
+  },
+  "success_contract": {
+    "pre_and_post_pins_match": true,
+    "held_descriptor_snapshots_match_paths": true,
+    "exact_one_start_no_retry": true,
+    "support_exact_1358_each": true,
+    "rpe_pairs_exact_1348_each": true,
+    "independent_proper_se3_and_sim3_alignments": true,
+    "primary_and_secondary_metrics_finite_nonnegative": true,
+    "forbidden_cross_system_metric_contrast_absent": true,
+    "mandatory_coverage_and_semantics_disclosures_present": true,
+    "strict_bundle_complete_manifested_tree_hashed_and_self_hashed": true,
+    "figures_equal_metric_aspect_comparable_domain_and_nonnegative_axes": true,
+    "single_terminal_result": true,
+    "no_subprocess_ros_model_or_trajectory_generation": true
+  },
+  "failure_closeout": "After the fresh namespace or start claim exists, any exception or caught SIGINT/SIGTERM/SIGHUP produces one exclusive terminal FAIL result containing the frozen preflight pin snapshot, held-descriptor audit, available postflight pins, completed artifact identities, and error. SIGKILL cannot be guaranteed. No retry.",
+  "postcondition": "A PASS supports only a side-by-side descriptive statement about these two pinned artifacts on the exact 135.7 s common GT-covered tail. It does not establish a winner, superiority, significance, equivalent initialization, online-state equivalence, V2_01 performance, underwater performance, or generalization."
+}

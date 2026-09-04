@@ -1,0 +1,11 @@
+extends: formal_loftr_v31_repro_frontend.yaml
+
+hybrid:
+  # Retain the LoFTR origin while LK maintains an accepted sidecar track.
+  # Export-side ID isolation keeps it separate from the classical landmark;
+  # the observation budget still limits total backend influence.
+  enable_source_provenance_memory: true
+  source_provenance_recovered_hold_frames: 0
+  source_provenance_learned_hold_frames: 20
+  source_provenance_quality_scale_recovered: 1.0
+  source_provenance_quality_scale_learned: 0.82

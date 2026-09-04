@@ -1,0 +1,70 @@
+{
+  "schema_version": "aqua-fe-anyfeature-formal-execution-tools-freeze-v1",
+  "recorded_at": "2026-08-11T19:32:00+08:00",
+  "status": "GO_PREFIX_R2D2_INFERENCE",
+  "scientific_model_inference_started_at_freeze": false,
+  "slam_started_at_freeze": false,
+  "authority": {
+    "preregistration_sha256": "74eb99a57aee660270561850a0b72f288951a80082b9c7a6200ecfed60a3c680",
+    "adapter_execution_addendum_sha256": "e3535909f9f6418ae07da5d7c51f99663ef185b51d3a1e61454690b521245785",
+    "r3_provisioning_result_sha256": "cd74fc9cf16ab89ab02429031901590e9ee347e1197756286a05cb7c9edc3442",
+    "prefix_camera_result_sha256": "eb63d635b0c1cc56d5cd1adf28f78889a5b63a02cbe96aa8e050d4a7e06ab2c3"
+  },
+  "adapter": {
+    "camera_exporter_sha256": "2dccbe93f68df3ec18f4bbae20ee2fcf24bf3a5e4d857313d23bd2a77690f09e",
+    "r2d2_materializer_sha256": "4aa1bcfa9073fa667d47154de64fc0f20d0f3a9806a812514b5616e06702f8e7",
+    "independent_audit_sha256": "3f32f4705fd99a430526224a650091240f54220909f7124729e28af3fb2437b7"
+  },
+  "r2d2_producer": {
+    "runner": "scripts/run_anyfeature_r2d2_producer_v1.py",
+    "runner_sha256": "7689bb5245e73605d75564ddcd25461a2710aee1b0bdf74a12201df25fbfb084",
+    "cpu_hook": "scripts/anyfeature_r2d2_cpu_runtime/sitecustomize.py",
+    "cpu_hook_sha256": "c9f7ce3376bc179073a218d91a46fa89716746e9834bc6780565d9094fc78087",
+    "tests_sha256": "e58ee84fee61e0d67a2ddaa2f901e701bcfdbd8f2308dfda47be9409695be251",
+    "official_extract_py_sha256": "1720d85eadbcca605eafd35d430b41be12cdc22cd39b478b4fc5ad2ce977ad80",
+    "checkpoint_sha256": "9ae90e02a9a133d100ca7aeaa32f4d4d7736a6dd222a530a25c8f7da5e508528",
+    "runtime_snapshot_sha256": "380eb276d96ca5eb9dae7c0b7b579531b3b948508b9b5ebc5295a9a5b6b261f5",
+    "pip_freeze_sha256": "de261b777783a9d02ed0999aae9d9437b1c78dbb02e383eac3219486c8ce7b3b",
+    "cpu_contract": {
+      "torch_intraop_threads": 6,
+      "torch_interop_threads": 1,
+      "OMP_NUM_THREADS": "6",
+      "MKL_NUM_THREADS": "6",
+      "CUDA_VISIBLE_DEVICES": "-1",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "prefix_command_profile": "a02-prefix200",
+    "prefix_inference_indices_inclusive": [0, 199]
+  },
+  "official_runner": {
+    "runner": "scripts/run_anyfeature_vslam_official_v1.py",
+    "runner_sha256": "0c60fa8126dbc9dfb309b995c15bb324eea29899b07145afc69c10324538707f",
+    "tests_sha256": "952777adbfb0add775cce5ad1df2e62aed2c023fc81d813188e99b5b982ac3af",
+    "binary_sha256": "9adb623fc8d83ce35297be7a7d810d269cd65273bd0f4fb1bddebbec0b8bdd59",
+    "environment_explicit_lock_sha256": "12656125f716a449af782fbbde07e49d8a20139e529e3d55c0a6c436c1236d0b",
+    "profiles": ["r2d2-smoke", "orb32-full", "r2d2-full"]
+  },
+  "evaluation": {
+    "evaluator_sha256": "9e494c8f5e483e1ba6f4134d402e89a4361fe05439771f17114e109c31099013",
+    "evaluator_tests_sha256": "9dfbcdb6cb64c0b98f2e6560d13536bc87ea2e2892f43f02d28b8cadb85ae1a5",
+    "reference_exporter_sha256": "6aa02ce274f7f6bbb1b91cf137621fb5a6bf8432ba145ed2ea04681509295104",
+    "reference_exporter_tests_sha256": "a2599918d1cd1d540b4532a785c8f52f34cfc20e33e081640c9f539ba9e9acc2",
+    "reference_role": "same-image COLMAP plus pressure-scale reference proxy; not independent ground truth",
+    "execution_deferred_until_both_full_attempts_are_sealed": true
+  },
+  "verification": {
+    "independent_audit_verdict": "GO",
+    "p0_count": 0,
+    "p1_count": 0,
+    "producer_tests_passed": 8,
+    "official_runner_tests_passed": 7,
+    "evaluator_tests_passed": 16,
+    "cpu_hook_directory_sealed_without_pycache": true
+  },
+  "pre_run_absence": {
+    "regular_venv_interpreter_copy_absent": true,
+    "producer_manifest_absent": true,
+    "producer_evidence_directory_absent": true,
+    "prefix_r2d2_archives_absent": true
+  }
+}

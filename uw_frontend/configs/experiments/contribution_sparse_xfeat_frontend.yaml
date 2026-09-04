@@ -1,0 +1,22 @@
+extends: ../backend_strict_frontend.yaml
+
+hybrid:
+  # Sparse-contribution profile for attribution experiments.
+  #
+  # Keep the backend-strict old-track measurement selector, but disable
+  # classical/LK recovery so any non-KLT additions come from learned XFeat
+  # sidecars. This is not the normal safe profile; it deliberately exposes a
+  # weak KLT backbone to test whether learned sidecars provide useful support.
+  enable_classical_recovery: false
+  enable_lk_recovery: false
+  enable_learned_recovery: false
+  enable_learned_initialization: true
+  enable_semidense_fallback_initialization: false
+  preserve_klt_replenish: true
+  learned_before_lk_on_degradation: true
+  learned_init_requires_klt_confirmation: false
+  enable_source_provenance_memory: false
+  enable_gftt_confirmation: false
+
+measurement_selection:
+  enabled: false

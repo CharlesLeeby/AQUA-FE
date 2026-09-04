@@ -1,0 +1,18 @@
+{
+  "all_frame_calibration_amortized_ms": 0.0,
+  "all_frame_combined_amortized_ms": 357.59968993409615,
+  "all_frame_count": 401,
+  "all_frame_kernel_amortized_ms": 357.59968993409615,
+  "calibration_p50_ms": 0.0,
+  "calibration_p95_ms": 0.0,
+  "combined_p50_ms": 345.0588406994939,
+  "combined_p95_ms": 625.3847904503343,
+  "events": 401,
+  "invoked_frame_count": 389,
+  "invoked_frame_p50_ms": 345.0588406994939,
+  "invoked_frame_p95_ms": 625.3847904503343,
+  "kernel_p50_ms": 345.0588406994939,
+  "kernel_p95_ms": 625.3847904503343,
+  "master_final_hash": "152a881361e47be3ab74330c1b41faacd6a5f89a592df268faef0231a9983648",
+  "output": "papers/ieee_sensors_journal_experiments/p03/a10_2400_2800/shadow_rankings.csv"
+}

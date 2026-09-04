@@ -1,0 +1,25 @@
+extends: h07_churn_residual_neutral.yaml
+
+hybrid:
+  # Focused H07 v2 experiment: keep the existing two-frame learned probation,
+  # then admit only a tiny residual-ranked, spatially spread subset. Default
+  # configs keep this gate disabled.
+  enable_learned_churn_precision_gate: true
+  learned_churn_precision_only_on_churn: true
+  learned_churn_precision_min_reference_tracks: 40
+  learned_churn_precision_max_new: 6
+  learned_churn_precision_max_per_cell: 1
+  learned_churn_precision_min_ncc: 0.62
+  learned_churn_precision_max_fb_error: 0.75
+  learned_churn_precision_max_epipolar_error: 0.18
+  learned_churn_precision_max_homography_error: 0.40
+  learned_churn_precision_epipolar_error_ratio: 1.00
+  learned_churn_precision_homography_error_ratio: 1.02
+  learned_churn_precision_epipolar_error_abs_increase: 0.010
+  learned_churn_precision_homography_error_abs_increase: 0.030
+
+  learned_confirmation_max_confirmed: 24
+  max_learned_initialized: 24
+  max_learned_init_fraction: 0.08
+  learned_init_acceptance_weak_max_new: 8
+  learned_init_acceptance_weak_max_fraction: 0.03

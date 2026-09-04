@@ -1,0 +1,144 @@
+{
+  "camera": {
+    "all_output_png_bytes_identical_to_canonical_source_members": true,
+    "all_png_chunk_crc_valid": true,
+    "all_png_idat_decoded": true,
+    "chunk_count_histogram": {
+      "26": 359,
+      "27": 466,
+      "28": 1090,
+      "29": 755,
+      "30": 422,
+      "31": 562,
+      "32": 741,
+      "33": 230,
+      "34": 49,
+      "35": 46,
+      "36": 77,
+      "37": 112,
+      "38": 211,
+      "39": 391,
+      "40": 181,
+      "41": 244,
+      "42": 364
+    },
+    "count": 6300,
+    "header_ns_inclusive": [
+      1542828791787420320,
+      1542829106687510592
+    ],
+    "inventory_identity": {
+      "crc32": "76115d23",
+      "sha256": "1f06f9ddc43c8fdfd946719b389a1809d0194128c6ec5b963f13f9b27fa77ff0"
+    },
+    "schema": "968x608 8-bit grayscale non-interlaced PNG",
+    "score_relative_indices_inclusive": [
+      4499,
+      6299
+    ],
+    "score_source_camera_indices_inclusive": [
+      4500,
+      6300
+    ],
+    "source_camera_indices_inclusive": [
+      1,
+      6300
+    ],
+    "source_gzip_stream_fully_consumed_and_crc_checked": true,
+    "source_indices_inclusive": [
+      1,
+      6300
+    ],
+    "source_members_compared": 6300,
+    "total_png_bytes": 1525166693
+  },
+  "claims": {
+    "accuracy_measured": false,
+    "detector_started": false,
+    "evaluator_started": false,
+    "hfnet_started": false,
+    "runner_created": false,
+    "scientific_comparison_produced": false,
+    "start_claim_created": false,
+    "trajectory_produced": false,
+    "vins_started": false
+  },
+  "config": {
+    "crc32": "43f1d5c6",
+    "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_a02_0001_6300_score_4500_6300_v1.yaml",
+    "sha256": "b08c38d73347e4a506a43b3114b014a445d03df9fd76d01f75a1a9300de99b23",
+    "size_bytes": 2024
+  },
+  "file_count_including_manifest": 6304,
+  "generated_files": [
+    {
+      "crc32": "8cd30fea",
+      "path": "cam0_times.txt",
+      "sha256": "0b117ff76aec9266260ffad4c075b6c669b8f816e7ab19f2f1bbf4d5b44d9d4d",
+      "size_bytes": 126000
+    },
+    {
+      "crc32": "796bb5d8",
+      "path": "mav0/cam0/data.csv",
+      "sha256": "ad9f7795cc7ca931ece0e8294dcfe3af87a266cc7d656de6b233e964e8164113",
+      "size_bytes": 277225
+    },
+    {
+      "crc32": "93d98670",
+      "path": "mav0/imu0/data.csv",
+      "sha256": "accf260a3bc99dc90c91db33e57be9fe720f702362bd4c3dca17252c2d15cc47",
+      "size_bytes": 7100776
+    }
+  ],
+  "imu": {
+    "count": 62939,
+    "endpoints_ns": [
+      1542828791783309344,
+      1542828791788632128,
+      1542829106686399136,
+      1542829106691806560
+    ],
+    "final_newline": false,
+    "reader_bracket_valid": true,
+    "source_zero_based_indices_inclusive": [
+      2,
+      62940
+    ],
+    "strictly_monotonic": true,
+    "synthetic_samples_added": false,
+    "time_transform": "output_ns=raw_ns+53694112"
+  },
+  "input_root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_a02_full_history_v1/aqualoc_archaeology_a02_0001_6300",
+  "manifest": {
+    "crc32": "a1943094",
+    "path": "materialization_manifest.json",
+    "sha256": "9b8e83bc5054d2903de56ea0462c0ea47e55dd0c9798d5d3a602fdefdfd05b29",
+    "size_bytes": 4137824
+  },
+  "payload_file_count_excluding_manifest": 6303,
+  "payload_identity_excluding_manifest": {
+    "crc32": "8481e897",
+    "sha256": "86d2730e32d82b37cf6811c73dfe6b66368fb208877911d7ca7720686e358a58"
+  },
+  "reporting_boundary": "development-only full-history input preparation; old A02 and P07 evidence remain read-only; no trajectory, accuracy, or comparison",
+  "reused_independent_auditor": {
+    "crc32": "69582b68",
+    "path": "/home/ma/AQUA-FE_WS/scripts/audit_hfnet_v6_a06_0000_2460_exact_window_input_v1.py",
+    "sha256": "b41412233b3c403d0ca8fb2841374a3c97484cce7bbe260bb4be8c780a46d3a2",
+    "size_bytes": 17765
+  },
+  "schema_version": "aqua-fe-hfnet-v6-a02-0001-6300-score-4500-6300-independent-input-audit-v1",
+  "selector_freeze": {
+    "crc32": "57cc157c",
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_score_4500_6300_selector_freeze_v1.json",
+    "sha256": "54e1340a4fe655be30b971d89178e8c588b1b973a93e4287b6ed6dd39feb7505",
+    "size_bytes": 3320
+  },
+  "source": {
+    "crc32": "f7cfd86f",
+    "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_2_raw_data.tar.gz",
+    "sha256": "8f6203e0b46068a9d237f03e469acecb5f51eedbd6b7c1dc7c1f980ea6ea6d69",
+    "size_bytes": 2195786266
+  },
+  "status": "PASS_PREPARATION_ONLY_INDEPENDENT_AUDIT"
+}

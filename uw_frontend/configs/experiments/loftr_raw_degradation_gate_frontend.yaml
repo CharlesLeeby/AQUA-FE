@@ -1,0 +1,14 @@
+extends: paper_full_quality_hybrid_loftr_sparse_probe.yaml
+
+quality:
+  # Track/match on the preprocessed image, but decide underwater degradation
+  # from the raw frame as well. This keeps CLAHE from hiding textureless
+  # near-wall regions from the LoFTR sparse-cell trigger.
+  gate_source: raw_degradation
+
+hybrid:
+  # LoFTR points are born as age-1 sidecars and are usually exported only after
+  # LK has carried them forward. Keep their learned provenance across that
+  # handoff so the backend/export audit can distinguish them from ordinary KLT.
+  enable_source_provenance_memory: true
+  source_provenance_learned_hold_frames: 24

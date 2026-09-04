@@ -1,0 +1,10 @@
+window,selected_feature_index,raw_frame_index,published_xfeat,missing_klt,eligible_xfeat,eligible_gftt,replaced_gftt,single_chain_suppressed,committed_sidecar_id,export_source_histogram
+a06_s000_d045,1,3,1,1,1,5,1,11,10000002,gftt:4;klt:345;xfeat_confirmed:1
+a06_s000_d045,2,5,1,1,1,15,1,28,10000002,gftt:14;klt:335;xfeat_confirmed:1
+a06_s000_d045,3,7,1,1,1,7,1,8,10000002,gftt:6;klt:343;xfeat_confirmed:1
+a09_6000_6800,2,5,1,1,1,96,1,0,10000000,gftt:95;klt:254;xfeat_confirmed:1
+a09_6000_6800,3,7,1,1,1,102,1,0,10000000,gftt:101;klt:248;xfeat_confirmed:1
+a09_6000_6800,4,9,1,1,1,106,1,0,10000000,gftt:105;klt:244;xfeat_confirmed:1
+a06_s045_d045,2,5,1,1,1,76,1,0,10000000,gftt:75;klt:274;xfeat_confirmed:1
+a06_s045_d045,3,7,1,1,1,72,1,4,10000000,gftt:71;klt:278;xfeat_confirmed:1
+a06_s045_d045,4,9,1,1,1,69,1,5,10000000,gftt:68;klt:281;xfeat_confirmed:1

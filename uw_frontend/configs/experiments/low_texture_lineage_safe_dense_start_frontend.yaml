@@ -1,0 +1,23 @@
+extends: cirs_xfeat_seedchain_klt_probe.yaml
+
+hybrid:
+  # Hybrid diagnostic profile: preserve the CIRS s575 dense-start behavior
+  # while keeping longer source provenance for later lineage-drop audits.
+  learned_init_requires_klt_confirmation: true
+  learned_confirmation_min_frames: 3
+  learned_confirmation_preserve_new_pending: true
+  learned_confirmation_geometry_safe: true
+  learned_confirmation_max_pending: 800
+  learned_confirmation_max_confirmed: 80
+
+  promotion_xfeat_max_confirmed: 12
+  promotion_xfeat_min_quality: 0.10
+  promotion_xfeat_max_fb_error: 1.20
+  promotion_xfeat_min_ncc: 0.42
+
+  enable_source_provenance_memory: true
+  source_provenance_learned_hold_frames: 120
+  source_provenance_quality_scale_learned: 0.88
+
+measurement_selection:
+  enabled: false

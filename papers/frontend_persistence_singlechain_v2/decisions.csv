@@ -1,0 +1,5 @@
+window,decision,reason
+a06_s000_d045,FAIL,scale_diverged_repeat=True;medians_within_klt_envelope=False
+a09_6000_6800,POSITIVE_RETAINED,both fixed-scale medians below KLT
+a06_s045_d045,FAIL,positive not retained
+h07_s000_d050,NO_HARM_INPUT,feature bag byte-identical to KLT

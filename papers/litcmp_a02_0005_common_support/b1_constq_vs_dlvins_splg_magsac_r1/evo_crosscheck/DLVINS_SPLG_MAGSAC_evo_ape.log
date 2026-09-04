@@ -1,0 +1,12 @@
+$ evo_ape tum /home/ma/AQUA-FE_WS/papers/litcmp_a02_0005_common_support/b1_constq_vs_dlvins_splg_magsac_r1/evo_crosscheck/reference_common.tum /home/ma/AQUA-FE_WS/papers/litcmp_a02_0005_common_support/b1_constq_vs_dlvins_splg_magsac_r1/evo_crosscheck/DLVINS_SPLG_MAGSAC_common_aligned.tum -a -r trans_part
+APE w.r.t. translation part (m)
+(with SE(3) Umeyama alignment)
+
+       max	4842.897244
+      mean	1653.361870
+    median	1585.548082
+       min	221.507608
+      rmse	1959.523105
+       sse	165108424.318327
+       std	1051.724928
+

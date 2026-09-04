@@ -1,0 +1,5 @@
+window,v1_outcome,active_selected_frames,replaced_gftt_by_frame,eligible_gftt_by_frame,replacement_fraction_by_frame,published_xfeat_observations,unique_xfeat_ids,singleton_xfeat_ids,three_frame_xfeat_ids,victim_lifetime_ge_10,victim_lifetime_ge_20,diagnosis
+a09_6000_6800,WIN,2;3;4,1;1;1,96;102;106,0.0104;0.0098;0.0094,3,1,0,1,0,0,sparse persistent chain
+a06_s045_d045,WIN,2;3;4,1;5;6,76;72;69,0.0132;0.0694;0.0870,12,6,1,1,1,1,sparse burst with one persistent core chain
+a06_s000_d045,REGRESSION,1;2;3,5;15;7,5;15;7,1.0000;1.0000;1.0000,27,16,9,4,12,6,complete GFTT birth starvation plus identity-churning burst
+h07_s000_d050,NO_HARM_INPUT,none,0,0,0,0,0,0,0,0,0,late candidates blocked by horizon

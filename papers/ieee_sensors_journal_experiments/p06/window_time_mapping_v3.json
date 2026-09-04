@@ -1,0 +1,46 @@
+{
+  "excluded_sequence_count": 1,
+  "excluded_sequences": [
+    "afrl/cave_gennie"
+  ],
+  "fail_count": 0,
+  "interfaces": [
+    "AQUALOC_FRAME_INTERVAL_HALF_OPEN",
+    "ROS_BAG_START_OFFSET_AND_DURATION"
+  ],
+  "learned_outcome_read": false,
+  "outcome_boundary": "KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME",
+  "output": {
+    "path": "papers/ieee_sensors_journal_experiments/p06/window_time_mapping_v3.csv",
+    "sha256": "57507cfe0253380482f1953556772467362339d2b542879d2bc71ea30ce4d157",
+    "size_bytes": 35820
+  },
+  "pass_count": 156,
+  "protocol_version": "isj-window-selection-v2",
+  "reference_eligible_sequence_count": 17,
+  "row_count": 156,
+  "runner_start_adjustment_count": 1,
+  "runner_start_adjustments": [
+    {
+      "clamped_runner_start": 0.0,
+      "dataset_family": "ntnu",
+      "original_runner_start": -0.02828836441040039,
+      "sequence": "fjord_6",
+      "tolerance_s": 0.25,
+      "window_index": "0"
+    }
+  ],
+  "runner_start_clamp_tolerance_s": 0.25,
+  "schema_version": "isj-p06-window-time-mapping-summary-v3",
+  "source_builder": {
+    "path": "scripts/build_p06_window_time_mapping_v3.py",
+    "sha256": "e8d3d6b45a2232b96dd62b2acc27024984fee5bbe3670730626a935317105f36"
+  },
+  "supersedes": {
+    "mapping_path": "papers/ieee_sensors_journal_experiments/p06/window_time_mapping_v2.csv",
+    "mapping_sha256": "515986b4349cf31d1508fa2753d6a1c7666533f4a45c7e14a01156043f74b261",
+    "summary_path": "papers/ieee_sensors_journal_experiments/p06/window_time_mapping_v2.json",
+    "summary_sha256": "f0c2a202e9e5bbc30d5653a8ba8293ad7d3379361810934d550881679a183330"
+  },
+  "trajectory_outcome_read": false
+}

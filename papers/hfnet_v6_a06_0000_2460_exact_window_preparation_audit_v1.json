@@ -1,0 +1,116 @@
+{
+  "camera": {
+    "all_output_png_bytes_identical_to_canonical_source_members": true,
+    "all_png_chunk_crc_valid": true,
+    "all_png_idat_decoded": true,
+    "chunk_count_histogram": {
+      "26": 11,
+      "27": 647,
+      "28": 534,
+      "29": 402,
+      "30": 141,
+      "31": 293,
+      "32": 153,
+      "33": 59,
+      "34": 42,
+      "35": 58,
+      "36": 22,
+      "37": 81,
+      "38": 18
+    },
+    "count": 2461,
+    "header_ns_inclusive": [
+      1542883311780022336,
+      1542883434765650624
+    ],
+    "inventory_identity": {
+      "crc32": "03c2d990",
+      "sha256": "1dee6b53ef749584f218316701f40fbddbcf4be3fd17e24cae1f1f3a12073193"
+    },
+    "schema": "968x608 8-bit grayscale non-interlaced PNG",
+    "score_camera_indices_inclusive": [
+      2210,
+      2460
+    ],
+    "source_gzip_stream_fully_consumed_and_crc_checked": true,
+    "source_members_compared": 2461,
+    "total_png_bytes": 544207164
+  },
+  "claims": {
+    "accuracy_measured": false,
+    "detector_started": false,
+    "evaluator_started": false,
+    "hfnet_started": false,
+    "runner_created": false,
+    "scientific_comparison_produced": false,
+    "start_claim_created": false,
+    "trajectory_produced": false,
+    "vins_started": false
+  },
+  "config": {
+    "crc32": "6d91a36f",
+    "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_a06_0000_2460_exact_window_v1.yaml",
+    "sha256": "37ec8f0f274818b3a8f952a535d9be87dae0f8d0436ce05503381791ace69db6",
+    "size_bytes": 2037
+  },
+  "file_count_including_manifest": 2465,
+  "generated_files": [
+    {
+      "crc32": "ab59a657",
+      "path": "cam0_times.txt",
+      "sha256": "7b81913749fe5b296aae4280531e6e26cda3349791e7331befdb72eb6de7f861",
+      "size_bytes": 49220
+    },
+    {
+      "crc32": "f5fd3504",
+      "path": "mav0/cam0/data.csv",
+      "sha256": "91ccea67a551f15090e6136dd754fa6cae00eeece798b3b025c0c1209928eb23",
+      "size_bytes": 108309
+    },
+    {
+      "crc32": "40a84fd6",
+      "path": "mav0/imu0/data.csv",
+      "sha256": "2e5d9a78192d86d6de55a46f9c29a1f639536e114702b5f9b0480c070d0a9388",
+      "size_bytes": 2749671
+    }
+  ],
+  "imu": {
+    "count": 24581,
+    "endpoints_ns": [
+      1542883311777960896,
+      1542883311783094496,
+      1542883434762137952,
+      1542883434767231456
+    ],
+    "final_newline": false,
+    "reader_bracket_valid": true,
+    "strictly_monotonic": true
+  },
+  "input_root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_a06_exact_window_v1/aqualoc_archaeology_a06_0000_2460",
+  "manifest": {
+    "crc32": "71678207",
+    "path": "materialization_manifest.json",
+    "sha256": "8e10e8e729ce5a1c4665bd92472c6a6efbff5ab2a1ba6d49e2d689f64e511b0b",
+    "size_bytes": 1618714
+  },
+  "payload_file_count_excluding_manifest": 2464,
+  "payload_identity_excluding_manifest": {
+    "crc32": "489e46af",
+    "sha256": "a03a119b98ec4c3a862905692325133310acae6d268cabaf7369262803b36673"
+  },
+  "reporting_boundary": "development-only input preparation; no trajectory, accuracy, or comparison",
+  "schema_version": "aqua-fe-hfnet-v6-a06-0000-2460-independent-input-audit-v1",
+  "selector_freeze": {
+    "crc32": "170b11e4",
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a06_0000_2460_exact_window_selector_freeze_v1.json",
+    "sha256": "1d0937320c087cb73911db7a5c55d8cde40d0bf0c800c4cf42aba68342b72b15",
+    "size_bytes": 8273
+  },
+  "source": {
+    "crc32": "3b794007",
+    "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_6_raw_data.tar.gz",
+    "sha256": "02795e92984321d61cbf7ee5555cf2b4ee344e2263bb7dcf37ffd94cb2472bd9",
+    "size_bytes": 758010849
+  },
+  "status": "PASS_PREPARATION_ONLY_INDEPENDENT_AUDIT"
+}

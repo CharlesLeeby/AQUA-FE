@@ -1,0 +1,39 @@
+extends: loftr_raw_degradation_gate_frontend.yaml
+
+hybrid:
+  # Final-policy probe: adaptive CLAHE is still used for tracking, but LoFTR
+  # may propose points only when the raw frame is degraded and the KLT backbone
+  # itself is measurably weak. This suppresses H05-like cases where raw texture
+  # looks poor but KLT already has enough stable constraints.
+  loftr_requires_planar_severe: true
+  loftr_requires_klt_degeneracy: true
+  enable_three_layer_source_aware: true
+  source_aware_loftr_modes:
+    - extreme_textureless
+    - planar_near_wall
+  source_aware_loftr_requires_confirmation: true
+  source_aware_loftr_min_confirmation_frames: 3
+  learned_init_requires_klt_confirmation: true
+  learned_confirmation_min_frames: 3
+  learned_confirmation_max_pending: 500
+  learned_confirmation_max_confirmed: 36
+  learned_confirmation_preserve_new_pending: true
+
+  enable_klt_degeneracy_loftr_gate: true
+  klt_degeneracy_loftr_max_track_count: 80
+  klt_degeneracy_loftr_max_mature_track_count: 80
+  klt_degeneracy_loftr_mature_track_min_age: 3
+  klt_degeneracy_loftr_max_grid_coverage: 0.55
+  klt_degeneracy_loftr_max_median_track_age: 12.0
+  klt_degeneracy_loftr_max_long_track_ratio: 0.45
+  klt_degeneracy_loftr_min_dropout_ratio: 0.35
+  klt_degeneracy_loftr_max_frontend_state: 0.78
+  klt_degeneracy_loftr_min_bad_signals: 2
+  klt_degeneracy_loftr_history_size: 3
+  klt_degeneracy_loftr_min_bad_history_ratio: 0.34
+  klt_degeneracy_loftr_allow_degraded_texture: true
+
+  semidense_use_mature_support: true
+  semidense_mature_support_min_age: 3
+  semidense_fallback_requires_degradation: true
+  semidense_fallback_min_grid_coverage: 0.86

@@ -1,0 +1,100 @@
+{
+  "arbitration_summary": {
+    "duplicate_diagnostic_keys": [],
+    "path": "logs/ntnu_vins/external_klt_every2_isj_p07_ntnu_fjord_6_0002_p_attempt01_klt_safe_fallback/arbitration_summary.txt",
+    "profile": "klt_safe_fallback",
+    "sha256": "788da3e059ace23d54bb99032ea4e6dbae7a82a593579f710f224bb75f70b565"
+  },
+  "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+  "attestation": {
+    "path": "logs/ntnu_vins/external_klt_every2_isj_p07_ntnu_fjord_6_0002_p_attempt01_klt_safe_fallback/features.bag.quality-contract.json",
+    "schema_version": "aqua-fe-nativeq-bag-attestation-v1",
+    "sha256": "593242a8f99e168424750b74d2dd0dd51d39df8fe1581b76310a59cd49e8a169"
+  },
+  "checks": {
+    "arm_attestation_bound": true,
+    "complete_13_channel_schema": true,
+    "feature_cap_and_native_q_pass": true,
+    "guard_exact_nonfallback_pass": true,
+    "metrics_match_bag": true,
+    "no_trajectory_outcome_artifacts": true,
+    "p_final_run_summary_bound": true,
+    "queue_allocation_exact": true,
+    "required_sensor_reference_topics_present": true,
+    "zero_action_identity_terminal_or_deferred": true
+  },
+  "command_sha256": "fb2cdc96177bbfa06d97ae5a97737c2de0cd68babb5421d6d10d69b90aec43cd",
+  "dataset_family": "ntnu",
+  "feature_bag": {
+    "feature_end_stamp": 1700603842.8068476,
+    "feature_frames": 450,
+    "feature_observations": 157500,
+    "feature_start_stamp": 1700603797.9073224,
+    "is_learned_counts": {
+      "0": 157500
+    },
+    "max_features_per_frame": 350,
+    "min_features_per_frame": 350,
+    "path": "logs/ntnu_vins/external_klt_every2_isj_p07_ntnu_fjord_6_0002_p_attempt01_klt_safe_fallback/features.bag",
+    "quality_max": 0.9656899571418762,
+    "quality_min": 0.800000011920929,
+    "required_sensor_reference_topics": [
+      "/alphasense_driver_ros/imu"
+    ],
+    "sha256": "9fe13355b2a93e18fe792bc6b3f25740ca122c82d566bf5433efa708e4d696bf",
+    "sigma_max": 1.1180340051651,
+    "sigma_min": 1.0176094770431519,
+    "size_bytes": 13694885,
+    "source_counts": {
+      "1": 77744,
+      "2": 79756
+    },
+    "topic_counts": {
+      "/alphasense_driver_ros/imu": 9000,
+      "/feature_tracker/feature": 450
+    },
+    "zero_feature_frames": 0
+  },
+  "forbidden_outcome_artifacts": [],
+  "frontend_metrics": {
+    "exported_feature_observations": 157500,
+    "path": "logs/ntnu_vins/external_klt_every2_isj_p07_ntnu_fjord_6_0002_p_attempt01_klt_safe_fallback/frontend_metrics.csv",
+    "rows": 450,
+    "sha256": "98846bde3181bab6e34d89d9cd3d3c7868c630db7c62fbd5a6a178590f64dbe9",
+    "size_bytes": 277461
+  },
+  "guard": {
+    "action": "ALLOW_LEARNED",
+    "contract_hash": "39eaea6d26e6f5a881ef2b17b898cbda75c7aba8087ce447fe897e2fe0bdfce0",
+    "path": "logs/backend_contract_decisions/nativeq_guard_20260806T204630Z_677014_decision.json",
+    "schema_version": "aqua-fe-nativeq-backend-guard-decision-v1",
+    "sha256": "58876a9cb0739112038315aab1df55037d95749693b4bd1eac715ee3c792aaa5"
+  },
+  "held_out_frontend_outcome_read": true,
+  "held_out_trajectory_outcome_read": false,
+  "learned_lineages": {
+    "accepted_learned_born_lineage_count": 0,
+    "birth_rule": "first ID occurrence has is_learned=1 or source_code in {10,20,30}",
+    "births": [],
+    "distinct_feature_ids": 88576,
+    "feature_frames": 450,
+    "late_marker_policy": "FAIL_CLOSED",
+    "learned_born_feature_ids": [],
+    "learned_born_observations": 0,
+    "lineage_observation_counts": {}
+  },
+  "outcome_boundary": "FRONTEND_EXPORT_ONLY_NO_VINS_APE_RPE_TRAJECTORY",
+  "probe_run": "logs/ntnu_vins/external_hybrid_xfeat_every2_isj_p07_ntnu_fjord_6_0002_p_attempt01_probe_oldcontract_densecap",
+  "queue_index": 17,
+  "run_dir": "logs/ntnu_vins/external_klt_every2_isj_p07_ntnu_fjord_6_0002_p_attempt01_klt_safe_fallback",
+  "run_id": "isj-nativeq-v3_P07_ntnu-fjord_6_90-135_P_f0_b00_20260806T084500Z",
+  "schema_version": "isj-p07-frontend-export-audit-v3",
+  "status": "PASS",
+  "window_id": "ntnu:fjord_6:0002",
+  "zero_action_identity": {
+    "b1_feature_bag": "logs/ntnu_vins/external_klt_every2_isj_p07_ntnu_fjord_6_0002_b1_attempt01/features.bag",
+    "b1_feature_bag_sha256": "9fe13355b2a93e18fe792bc6b3f25740ca122c82d566bf5433efa708e4d696bf",
+    "p_feature_bag_sha256": "9fe13355b2a93e18fe792bc6b3f25740ca122c82d566bf5433efa708e4d696bf",
+    "status": "PASS_BYTE_IDENTICAL_TO_B1"
+  }
+}

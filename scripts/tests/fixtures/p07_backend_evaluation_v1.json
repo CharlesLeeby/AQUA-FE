@@ -1,0 +1,25 @@
+{
+  "evaluator_protocol_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "evaluator_script_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "reference": {
+    "kind": "tum",
+    "max_estimate_gap_s": 0.25,
+    "max_reference_gap_s": 0.25,
+    "nominal_estimate_rate_hz": 10.0,
+    "nominal_reference_rate_hz": 10.0,
+    "path": "fixtures/reference.tum",
+    "reference_time_offset_s": 0.0,
+    "window_end_s": 45.0,
+    "window_start_s": 0.0
+  },
+  "windows": [
+    {
+      "d_applicable": false,
+      "window_id": "fixture_normal_0001"
+    },
+    {
+      "d_applicable": true,
+      "window_id": "fixture_low_0001"
+    }
+  ]
+}

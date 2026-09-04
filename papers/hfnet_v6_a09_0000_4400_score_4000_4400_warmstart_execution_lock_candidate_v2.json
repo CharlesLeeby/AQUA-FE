@@ -1,0 +1,172 @@
+{
+  "attempt_local_files": {
+    "local_cache_pre": {
+      "dev_inode": "2050:373745",
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/run_local_model/HFNet-RT/HF-Net.cache",
+      "sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7",
+      "size_bytes": 853319
+    },
+    "local_onnx": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/run_local_model/HFNet-RT/HF-Net.onnx",
+      "sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5",
+      "size_bytes": 132238602
+    },
+    "prepared_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/prepared_manifest.json",
+      "sha256": "9687bfd79147778afe4108b4c74281c7f4d639b82b2312fb48b2a64ef18733a4",
+      "size_bytes": 8917
+    },
+    "runtime_config": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/runtime_config_model_path_only.yaml",
+      "sha256": "448176bb0cfbaa38f6dd9faf632081464edb0234706353329d338a535f30e930",
+      "size_bytes": 2126
+    },
+    "shared_cache_seed_dev_inode": "66312:6189087",
+    "subset_times": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/cam0_times_0000_4400.txt",
+      "sha256": "c8b9bb58e1692ae570cfc855e2069bda734110c2866004093c8eefa4293f16a8",
+      "size_bytes": 88020
+    }
+  },
+  "candidate_v1": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_execution_lock_candidate_v1.json",
+    "role": "immutable blocked predecessor containing the full static authority, input, prepared, child-env, argv, claim, and terminal contracts; its incomplete dynamic-loader list is superseded by this v2 binding list",
+    "sha256": "3feb05bcb387f1e0d5ba12a5a9d6725e98b0fe0a3007f71b0d21e908558da0e9",
+    "size_bytes": 13724,
+    "status": "BLOCKED_RESOURCE_GATE_PENDING_NO_LAUNCH_AUTHORITY"
+  },
+  "claims": {
+    "execution_authorized": false,
+    "fresh_ready_snapshot_present": false,
+    "hfnet_started": false,
+    "launch_authority_created": false,
+    "process_claim_created": false,
+    "trajectory_produced": false
+  },
+  "dynamic_loader_bindings": [
+    {
+      "loader_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libnvinfer.so.8",
+      "resolved_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libnvinfer.so.8.5.1",
+      "sha256": "f458db65fba6f1c3012c44db701b43abc838f7330f9472c91c6b198cfc4a26ab",
+      "size_bytes": 487512744,
+      "soname": "libnvinfer.so.8"
+    },
+    {
+      "loader_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libnvonnxparser.so.8",
+      "resolved_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libnvonnxparser.so.8.5.1",
+      "sha256": "545821890b69327a02edaf79bac88af3792b897af40c6d9a9a121390505496c9",
+      "size_bytes": 2838832,
+      "soname": "libnvonnxparser.so.8"
+    },
+    {
+      "loader_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libnvinfer_plugin.so.8",
+      "resolved_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libnvinfer_plugin.so.8.5.1",
+      "sha256": "a4b4390214ff62de0fecfc8937394a53ca8dd4e0f4f30a3e178f525c25b8e0ce",
+      "size_bytes": 43399840,
+      "soname": "libnvinfer_plugin.so.8"
+    },
+    {
+      "loader_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.6/targets/x86_64-linux/lib/libcudart.so.11.0",
+      "resolved_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.6/targets/x86_64-linux/lib/libcudart.so.11.6.55",
+      "sha256": "45da57e39bb0009af905c2ba531fb687ac9d6d4504c7800ed394c2ca0add1c6e",
+      "size_bytes": 666976,
+      "soname": "libcudart.so.11.0"
+    },
+    {
+      "loader_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.8/targets/x86_64-linux/lib/libcublas.so.11",
+      "resolved_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.8/targets/x86_64-linux/lib/libcublas.so.11.11.3.6",
+      "sha256": "3b81d170cd613cf9ee24d30b483f7b6d8170d6d32a0354fc207d09c943ae3f62",
+      "size_bytes": 94729912,
+      "soname": "libcublas.so.11"
+    },
+    {
+      "loader_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.8/targets/x86_64-linux/lib/libcublasLt.so.11",
+      "resolved_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.8/targets/x86_64-linux/lib/libcublasLt.so.11.11.3.6",
+      "sha256": "b6d14a7461b3ec1995427fd179b98b915c9fc81057366ab7bfa4681451b0d308",
+      "size_bytes": 574565016,
+      "soname": "libcublasLt.so.11"
+    },
+    {
+      "loader_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libcudnn.so.8",
+      "resolved_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libcudnn.so.8.4.1",
+      "sha256": "f8580e8d01284e724527ed4bd90938208aa4675cfe6bd0ca2a4a76e49f4f5fdb",
+      "size_bytes": 150200,
+      "soname": "libcudnn.so.8"
+    },
+    {
+      "loader_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8",
+      "resolved_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.4.1",
+      "sha256": "654a6bbe158d2ebdd4b2ec998250d43b619d92854e44b82fa71998ba46fea60d",
+      "size_bytes": 115709968,
+      "soname": "libcudnn_adv_infer.so.8"
+    },
+    {
+      "loader_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8",
+      "resolved_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.4.1",
+      "sha256": "05834727210ff5f0adf6ba0412ca436ba96ccc58bb37e5fe2ee44de507c9daa8",
+      "size_bytes": 95822736,
+      "soname": "libcudnn_adv_train.so.8"
+    },
+    {
+      "loader_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8",
+      "resolved_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.4.1",
+      "sha256": "42fbcae4e23962fd11fdac00c1bcb0d89e6b09ac3f3f2ef555141f4360fec600",
+      "size_bytes": 734142536,
+      "soname": "libcudnn_cnn_infer.so.8"
+    },
+    {
+      "loader_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8",
+      "resolved_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.4.1",
+      "sha256": "7e76d4363726ff917471200fff0152deb6a810cab82ee44633a9350307bd7795",
+      "size_bytes": 88801384,
+      "soname": "libcudnn_cnn_train.so.8"
+    },
+    {
+      "loader_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8",
+      "resolved_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.4.1",
+      "sha256": "59e594e148753103bdcbc7f7ed7b72f04970c7452f8043633adfece249f467b7",
+      "size_bytes": 91095456,
+      "soname": "libcudnn_ops_infer.so.8"
+    },
+    {
+      "loader_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8",
+      "resolved_path": "/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.4.1",
+      "sha256": "0c342eb3fe4e263598f25d7a920064d5fa745c2e56e04eee3f1c6e95910ab852",
+      "size_bytes": 71946488,
+      "soname": "libcudnn_ops_train.so.8"
+    },
+    {
+      "loader_path": "/usr/lib/x86_64-linux-gnu/libcuda.so.1",
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libcuda.so.535.183.01",
+      "sha256": "b7759e577409c86949f455f18fcc044d72b466be5e2982b6ba9e20348e86fa97",
+      "size_bytes": 29380816,
+      "soname": "libcuda.so.1"
+    },
+    {
+      "loader_path": "/usr/lib/x86_64-linux-gnu/libnvidia-ml.so.1",
+      "resolved_path": "/usr/lib/x86_64-linux-gnu/libnvidia-ml.so.535.183.01",
+      "sha256": "67185f510159acdc8f38b768b059bfb0f3ec5869baaffd1dc1c949e52012b18f",
+      "size_bytes": 1942744,
+      "soname": "libnvidia-ml.so.1"
+    }
+  ],
+  "known_runtime_confound": {
+    "must_not_be_changed_for_this_attempt": true,
+    "observation_from_a10": "TensorRT reports linked cuDNN 8.6.0 while the frozen loader closure resolves cuDNN 8.4.1; preserve and report this deployment-stack mismatch."
+  },
+  "promotion_contract": {
+    "dynamic_loader_validation": "For every row, require readlink -f(loader_path) == resolved_path and the resolved regular file to match size_bytes and sha256.",
+    "final_lock_must_pin_candidate_v2": true,
+    "fresh_ready_snapshot_present": false,
+    "launch_authority_created": false,
+    "required_ldd_not_found": [],
+    "resource_gate_pending": true
+  },
+  "resource_gate_tool": {
+    "path": "/usr/bin/nvidia-smi",
+    "sha256": "70b7292808702f3ef3ff93af56367f45b3232c9ef131f48fc9264a940c00e57a",
+    "size_bytes": 686384
+  },
+  "schema_version": "aqua-fe-hfnet-v6-a09-warmstart-execution-lock-candidate-v2",
+  "status": "BLOCKED_RESOURCE_GATE_PENDING_NO_LAUNCH_AUTHORITY"
+}

@@ -1,0 +1,177 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a08-0000-4660-score-4500-4660-input-freeze-v1",
+  "status": "FROZEN_PASS_PREPARATION_ONLY_HFNET_NOT_STARTED",
+  "created_at_local": "2026-08-28T01:38:26+08:00",
+  "scientific_role": "DEVELOPMENT_ONLY_INPUT_FOR_EXTERNAL_HFNET_RUNABILITY_ON_A_JULY14_OLD_FROZEN_POSITIVE_WINDOW",
+  "selection": {
+    "dataset_family": "aqualoc_archaeology",
+    "sequence_id": "A08",
+    "feed_source_indices_inclusive": [
+      0,
+      4660
+    ],
+    "feed_local_indices_inclusive": [
+      0,
+      4660
+    ],
+    "feed_camera_count": 4661,
+    "preroll_source_indices_inclusive": [
+      0,
+      4499
+    ],
+    "score_source_indices_inclusive": [
+      4500,
+      4660
+    ],
+    "score_local_indices_inclusive": [
+      4500,
+      4660
+    ],
+    "score_camera_count": 161,
+    "camera_zero_included_after_input_legality_proved_before_any_hfnet_result": true,
+    "synthetic_or_extrapolated_imu_used": false
+  },
+  "canonical_artifacts": {
+    "materialized_input_root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_old_frozen_positive_windows_v1/a08_0000_4660_score_4500_4660_warmstart",
+    "materialization_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_old_frozen_positive_windows_v1/a08_0000_4660_score_4500_4660_warmstart/materialization_manifest.json",
+      "size_bytes": 3062663,
+      "sha256": "46c174a3c57ca3f4565b4b14198c09842777dfab13f0f8573456590fe6970ac0",
+      "schema_version": "aqua-fe-hfnet-v6-a08-0000-4660-score-4500-4660-input-materialization-v1",
+      "status": "PASS_PREPARATION_ONLY"
+    },
+    "independent_audit_receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_old_frozen_positive_windows_v1/a08_0000_4660_score_4500_4660_warmstart.independent_audit_v1.json",
+      "size_bytes": 5827,
+      "sha256": "2f128f57cdaf463cf67edd03ceb3b3249916061147d639107afba58a7a3e56c6",
+      "schema_version": "aqua-fe-hfnet-v6-a08-0000-4660-score-4500-4660-independent-input-audit-v1",
+      "status": "PASS_PREPARATION_ONLY_INDEPENDENT_AUDIT"
+    }
+  },
+  "frozen_content": {
+    "camera": {
+      "count": 4661,
+      "timestamp_ns_inclusive": [
+        1542884961144554192,
+        1542885194106222672
+      ],
+      "all_png_bytes_identical_to_canonical_source_members": true,
+      "all_png_crc_and_idat_checks_passed": true,
+      "total_png_bytes": 1217553726,
+      "source_inventory_sha256": "25261d228458d0b8dfecb5424407fcd6830422df1c2bcd07c566166138dd5e1f",
+      "source_inventory_crc32": "2cf7b8cd",
+      "renamed_inventory_sha256": "ce1187dd1218ab5486fec13e5f434cebe9194f4382ddfff2c4ab96914c9e8e32",
+      "renamed_inventory_crc32": "51852c78"
+    },
+    "imu": {
+      "count": 46559,
+      "source_indices_inclusive_zero_based": [
+        12,
+        46570
+      ],
+      "time_transform": "output_ns=raw_ns+53694112",
+      "strictly_monotonic": true,
+      "every_camera_has_predecessor_and_successor": true,
+      "first_second_penultimate_last_output_ns": [
+        1542884961144041712,
+        1542884961146933296,
+        1542885194103702576,
+        1542885194108826192
+      ]
+    },
+    "generated_files": {
+      "cam0_times.txt": {
+        "size_bytes": 93220,
+        "sha256": "0ce637bc6e9e74a300dee7b40eb18e84962106fb7fc867d5d0eae83bf47f7662",
+        "crc32": "2d2d0119"
+      },
+      "mav0/cam0/data.csv": {
+        "size_bytes": 205109,
+        "sha256": "43203c2d25a3d806397648558006bd8a21fdc7aa7f908b0099f44d5251c0c361",
+        "crc32": "9d90eca7"
+      },
+      "mav0/imu0/data.csv": {
+        "size_bytes": 5211752,
+        "sha256": "98b7ca7feab3913edce8803f131e29a2861b2883a8578882cc19eb858c919262",
+        "crc32": "87378882"
+      }
+    },
+    "payload_excluding_manifest": {
+      "file_count": 4664,
+      "total_size_bytes": 1223063807,
+      "sha256": "96780753aa681e97245e0bbffa6e6fb93c67ee15915861ac54dc1f642c58612b",
+      "crc32": "08afdf7a"
+    },
+    "tree_closure": {
+      "file_count_including_manifest": 4665,
+      "directory_count_including_root": 5,
+      "exact_file_and_directory_sets": true,
+      "symlink_count": 0,
+      "unchanged_during_independent_audit": true
+    }
+  },
+  "immutable_provenance": {
+    "selector_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a08_0000_4660_score_4500_4660_selector_freeze_v1.json",
+      "size_bytes": 4960,
+      "sha256": "2cc49bb2311c87338a06f266e8557e5ac68fadad044d57f4b6bea09de7522ed7"
+    },
+    "runability_protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a08_0000_4660_score_4500_4660_runability_protocol_v1.md",
+      "size_bytes": 5118,
+      "sha256": "be2681e3f0a31507d47333357f78567255dee0f526dc5b28e3e3d385b8ce6c49"
+    },
+    "materializer": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/materialize_hfnet_v6_a08_0000_4660_score_4500_4660_v1.py",
+      "size_bytes": 13342,
+      "sha256": "67043bfb2e9f57d0b2f83a5471d9f8f365f3222753d766cd1e5df9eca4d6826d"
+    },
+    "materializer_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_materialize_hfnet_v6_a08_0000_4660_score_4500_4660_v1.py",
+      "size_bytes": 6803,
+      "sha256": "3e7db37230ce4fd1fe523d2e4aff0b1a9a83e98d59947351596ebe92c8d67fe2"
+    },
+    "independent_auditor": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/audit_hfnet_v6_a08_0000_4660_score_4500_4660_input_v1.py",
+      "size_bytes": 14409,
+      "sha256": "684cf14d7d38b186548837a518caff3782939ae0a452a68ec4f09048da3c7d75"
+    },
+    "independent_auditor_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_audit_hfnet_v6_a08_0000_4660_score_4500_4660_input_v1.py",
+      "size_bytes": 3487,
+      "sha256": "8ae98ec344574cb1c5b584a011eb6c5cad0d09ac4c333474eb36b5e8974de5e8"
+    }
+  },
+  "observed_preparation": {
+    "materialization_process_invocations": 1,
+    "materialization_exit_code": 0,
+    "materialization_elapsed_seconds": 101.3,
+    "independent_audit_process_invocations": 2,
+    "independent_audit_first_exit_code": 2,
+    "independent_audit_first_failure": "A05 parser default-argument adapter leak expected 3983 cameras while canonical A08 CSV contained the correct 9391; no receipt was created",
+    "independent_auditor_patched_before_receipt": true,
+    "independent_audit_terminal_exit_code": 0,
+    "independent_audit_terminal_elapsed_seconds": 29.5,
+    "independent_audit_receipts_created": 1,
+    "hfnet_process_invocations": 0
+  },
+  "claims": {
+    "input_preparation_passed": true,
+    "hfnet_started": false,
+    "trajectory_produced": false,
+    "runability_passed": false,
+    "accuracy_evaluated": false,
+    "system_ranking_supported": false,
+    "superiority_supported": false,
+    "confirmatory_evidence": false
+  },
+  "next_stage_boundary": {
+    "permitted": "reviewed process-free runner tests, runner freeze, attempt preparation, and a separately frozen exactly-once execution lock",
+    "prohibited": [
+      "editing or replacing the canonical input, manifest, or audit receipt",
+      "another materialization or independent audit invocation",
+      "starting HFNet before the runner and execution lock are frozen",
+      "computing APE, RPE, a winner, ranking, significance, or paper claim without history-matched comparators and common-support gates"
+    ]
+  }
+}

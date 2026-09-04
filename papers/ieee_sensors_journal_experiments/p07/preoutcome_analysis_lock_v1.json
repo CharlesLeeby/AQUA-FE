@@ -1,0 +1,221 @@
+{
+  "arms": {
+    "conditional": [
+      "D_legacy_exact_lineage_drop_v3"
+    ],
+    "required": [
+      "B0_native_vins_origin_v1",
+      "B1_klt_nativeq_v3",
+      "P_legacy_nativeq_xfeat_seedchain_v3",
+      "M_xfeat_pairwise_nativeq_v1"
+    ],
+    "retired_no_slots": [
+      "C_legacy_independent_classical_v3",
+      "B2_all_eligible"
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "papers/ieee_sensors_journal_experiments/method_lock.json",
+      "sha256": "eae7a0fc6e94766a119be6abe5763fbfba8f64d9663f45f2f48ee591cf62a3cf",
+      "size_bytes": 9634
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/protocol_v1_nativeq_v3.md",
+      "sha256": "4466cff65d9df2be4dab97350041c2c79f687e624e6b658fb734a70459222bda",
+      "size_bytes": 2978
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/dataset_manifest_v4.csv",
+      "sha256": "aae68a271e2b9b258a3f91ba18a79eea1f37ab2dc373221be93cac814a493a00",
+      "size_bytes": 7348
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/arm_order.csv",
+      "sha256": "1afc17e256274d86725b146728cca51fd59df1a630e23c2c109a1cec2137c9f4",
+      "size_bytes": 34303
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/evaluator_protocol_v1.md",
+      "sha256": "d3ae583ca799ef423054a5b9ece8b53e0000a8d3bbb1ea8c50121f7a60a40816",
+      "size_bytes": 7036
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/failure_taxonomy_v1.yaml",
+      "sha256": "0a465876e43a6a28a24ad76d06abbdd762b5833ee45eeb5a540b4e7b7066c252",
+      "size_bytes": 1775
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_export_queue_v1.csv",
+      "sha256": "8ced85066e7cd5aa8e7a0fc7d5f42ce07e99e97a36703b9404b8aab9f2103457",
+      "size_bytes": 36841
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/d_applicability_queue_v1.csv",
+      "sha256": "5b177636673db2a3198638a5bdca42d8e53de024b91081ac206f939f367ce45c",
+      "size_bytes": 8914
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_queue_lock_v1.json",
+      "sha256": "92300f09d0c29c7e5db6e24e36bedaf518722c0b5a36e720e33f79065be517e1",
+      "size_bytes": 2645
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_queue_validation_v1.json",
+      "sha256": "e76b4f8508f3ee1d7d380bdf2330f73b0f1aa2da2148ba624a68ee11f07f2332",
+      "size_bytes": 16646
+    },
+    {
+      "path": "scripts/build_p07_preoutcome_governance_v1.py",
+      "sha256": "02253550667b322da433adb20b44ed69200bd0f8f2c7179c2c3fa038bb2414b1",
+      "size_bytes": 22982
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/split_role_audit_v1.csv",
+      "sha256": "7ef0321f2a02632c9f45f3808b8506cbe16dad2f19033eddbbc9eecd59791e2b",
+      "size_bytes": 6655
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/split_role_audit_v1.json",
+      "sha256": "362cacf918885b9b3093635311c8c2d8c95e5892e8d1f08f829925e1e5e9cedf",
+      "size_bytes": 1801
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_run_allocation_v1.csv",
+      "sha256": "05b706010ce5fc1d5032bf680dc286d2b69fc98c190a25fdf4e1ceee84df84ec",
+      "size_bytes": 40388
+    }
+  ],
+  "claim_boundary": {
+    "allowed": [
+      "outcome-blind exact-history-excluded multi-sequence window evaluation",
+      "VINS-primary controlled comparison under a frozen native-q consumer",
+      "operational normal-texture no-harm only if H4a passes"
+    ],
+    "forbidden": [
+      "external-held-out or cross-domain validation from the current matrix",
+      "sequence-held-out low-texture validation from the current matrix",
+      "learned features are uniformly superior",
+      "D removes the complete learned frontend",
+      "real-time without P08 PROFILED_REAL_TIME evidence"
+    ]
+  },
+  "execution": {
+    "algorithmic_replays_per_window_arm": 3,
+    "base_backend_replays": 240,
+    "conditional_D_replays_per_applicable_window": 3,
+    "maximum_backend_replays": 300,
+    "minimum_evaluable_replays": 2,
+    "numeric_reducer": "median_over_evaluable_replays",
+    "one_ros_vins_instance_at_a_time": true,
+    "parent_P_failure_D_resolution": "UNRESOLVABLE_PARENT_FAILURE_AND_D_BLOCKED",
+    "phase_order": [
+      "allocate_registry_and_pending_D_slots",
+      "complete_and_attest_all_60_frontend_exports",
+      "resolve_all_20_D_slots_before_any_trajectory_metric",
+      "derive_and_exact-drop-audit_every_applicable_D_bag",
+      "freeze_backend_queue_in_Williams_arm_order",
+      "run_all_backend_replays_serially",
+      "evaluate_without_changing_method_window_or_evaluator"
+    ],
+    "scientific_unit": "sequence_not_replay"
+  },
+  "failure_denominator": {
+    "B1_only_hard_failure": "proposed_failure_win",
+    "all_preregistered_windows_remain": true,
+    "any_repeat_hard_failure": "any_of_3",
+    "both_hard_failure": "failure_tie",
+    "insufficient_common_support": "INCONCLUSIVE_PAIR_retained_in_denominator",
+    "proposed_only_hard_failure": "automatic_proposed_loss",
+    "solver_risk": "any_of_3"
+  },
+  "held_out_frontend_outcome_read": false,
+  "held_out_trajectory_outcome_read": false,
+  "hypotheses": {
+    "H1_low_degraded_P_vs_B1": {
+      "adequacy": {
+        "minimum_numeric_windows": 8,
+        "minimum_sequences": 6
+      },
+      "denominator": "all_10_preregistered_low_or_degraded_windows",
+      "inference_gate": "bootstrap_CI_lower_gt_0_or_exact_sign_p_lt_0p05",
+      "practical_gate": "sequence_equal_median_RPE_improvement_at_least_5_percent",
+      "role": "sole_primary_effectiveness_contrast",
+      "safety_gate": "zero_proposed_only_window_arm_hard_failures"
+    },
+    "H2_source_specificity": {
+      "reason": "C_legacy is non-identifiable under frozen native-q v3",
+      "status": "NOT_APPLICABLE_CARRIER_FEEDBACK"
+    },
+    "H3_direct_backend_exposure_P_vs_D": {
+      "adequacy": {
+        "minimum_domains": 2,
+        "minimum_low_windows": 6,
+        "minimum_sequences": 3
+      },
+      "practical_gate": "sequence_equal_median_RPE_improvement_at_least_3_percent",
+      "required": "PASS_EXACT_WHOLE_LINEAGE_DROP_for_every_included_window",
+      "role": "conditional_mechanistic_contrast_not_complete_frontend_removal"
+    },
+    "H4a_overall_normal_no_harm_P_vs_B1": {
+      "coverage_gate": "sequence_median_coverage_loss_at_most_2_percentage_points",
+      "denominator": "all_10_preregistered_normal_windows",
+      "failure_gate": "zero_proposed_only_window_arm_hard_failures",
+      "sequence_gate": "at_least_80_percent_have_sequence_RPE_ratio_at_most_1p05",
+      "solver_gate": "proposed_solver_risk_event_rate_does_not_increase",
+      "window_gate": "at_least_9_of_10_have_RPE_degradation_at_most_5_percent"
+    },
+    "H4b_active_normal_no_harm": {
+      "activity_gate": "at_least_3_active_normal_windows_across_at_least_2_sequences",
+      "otherwise": "INCONCLUSIVE_ACTIVITY",
+      "window_gate": "every_active_normal_window_RPE_degradation_at_most_5_percent"
+    },
+    "M_controlled_modern_baseline": {
+      "report": "P_vs_M_effect_failure_coverage_and_runtime_without_win_requirement",
+      "status_rule": "PASS_means_complete_fair_comparison_not_P_superiority"
+    }
+  },
+  "mandatory_strata": {
+    "ABSOLUTE_LOW": 3,
+    "RELATIVE_Q80_FALLBACK": 7,
+    "STRICT_NORMAL": 10
+  },
+  "method_lock_hash": "1d032e4d43b2a647626b40cef906144dcceab523126bfee3b345b05b4efb578d",
+  "metrics": {
+    "lower_is_better": true,
+    "primary": "G0_common_support_exact_1s_translation_RPE_RMSE",
+    "secondary": "G0_common_support_SE3_APE_RMSE_only_when_APE_valid",
+    "support": {
+      "ape_minimum_common_coverage": 0.7,
+      "ape_minimum_common_grid_poses": 30,
+      "ape_minimum_span_s": 10,
+      "rpe_minimum_exact_pairs": 10
+    }
+  },
+  "outcome_boundary": "FROZEN_BEFORE_P07_FRONTEND_OR_TRAJECTORY_OUTCOME",
+  "queue_lock_hash": "23095fffe3474d3c85fd809c94b0bf4cd0094aa8bbc083b65dd1a4cc950144eb",
+  "reducer_and_inference": {
+    "bootstrap": {
+      "confidence": 0.95,
+      "iterations": 10000,
+      "seed": 20260730,
+      "type": "hierarchical_percentile_sequence_then_window"
+    },
+    "overall_effect": "equal_weight_median_over_sequences",
+    "replays_are_not_independent_samples": true,
+    "sequence_effect": "median_window_effect_within_sequence",
+    "small_sample_test": "exact_two_sided_sign_test_on_sequence_effects",
+    "window_arm_numeric": "median_of_at_least_2_of_3_evaluable_replays",
+    "window_effect": "log(RPE_proposed/RPE_comparator)"
+  },
+  "schema_version": "isj-p07-preoutcome-rpe-analysis-lock-v1",
+  "scientific_method_identity": "UNCHANGED_FROM_NATIVEQ_V3",
+  "split_identity": {
+    "core_matrix": "outcome-blind exact-history-excluded windows; 19/20 are within development-exposed sequences",
+    "external_held_out_windows": 0,
+    "sequence_unseen_low_windows": 0,
+    "sequence_unseen_windows": 1,
+    "submission_ceiling_without_new_protocol_supplement": "CONDITIONAL_MULTI_SEQUENCE_VINS_PRIMARY"
+  },
+  "status": "FROZEN_BEFORE_P07_OUTCOMES"
+}

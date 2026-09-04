@@ -1,0 +1,242 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "aqua-fe://schemas/hfnet-multiwindow-result-v2",
+  "title": "AQUA-FE HFNet multi-window strict result row v2",
+  "description": "One record per current protocol window or legacy terminal context. Legacy A02 is not an independent window. Accuracy values must be null unless accuracy.state is VALID_DESCRIPTIVE.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol_id",
+    "row_role",
+    "attempt_relation",
+    "window_id",
+    "dataset_family",
+    "sequence",
+    "method_id",
+    "system_class",
+    "evidence_role",
+    "feed",
+    "score",
+    "synchronization",
+    "execution",
+    "usability",
+    "reference",
+    "comparability",
+    "accuracy",
+    "artifacts"
+  ],
+  "properties": {
+    "schema_version": {"const": "aqua-fe-hfnet-multiwindow-result-v2"},
+    "protocol_id": {"const": "hfnet-multiwindow-comparison-20260822-v2"},
+    "row_role": {"enum": ["CURRENT_PROTOCOL_WINDOW", "LEGACY_TERMINAL_CONTEXT"]},
+    "attempt_relation": {"enum": ["EXISTING_PASSED", "NEW_ADDITIVE_PROTOCOL", "LEGACY_TERMINAL_ZERO_RETRY"]},
+    "window_id": {"type": "string", "minLength": 1},
+    "dataset_family": {"type": "string", "minLength": 1},
+    "sequence": {"type": "string", "minLength": 1},
+    "method_id": {"type": "string", "minLength": 1},
+    "system_class": {"enum": ["WHOLE_SYSTEM", "SHARED_BACKEND_COMPONENT_ARM"]},
+    "evidence_role": {"enum": ["DEVELOPMENT_ONLY", "POST_STOP_EXPLORATORY", "LEGACY_PROVENANCE_ONLY"]},
+    "feed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start_index", "end_index", "frame_count", "preroll_start_index", "preroll_end_index", "input_rate_hz"],
+      "properties": {
+        "start_index": {"type": "integer", "minimum": 0},
+        "end_index": {"type": "integer", "minimum": 0},
+        "frame_count": {"type": "integer", "minimum": 1},
+        "preroll_start_index": {"type": ["integer", "null"], "minimum": 0},
+        "preroll_end_index": {"type": ["integer", "null"], "minimum": 0},
+        "input_rate_hz": {"type": ["number", "null"], "exclusiveMinimum": 0}
+      }
+    },
+    "score": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start_index", "end_index", "expected_frame_count", "nominal_duration_s"],
+      "properties": {
+        "start_index": {"type": "integer", "minimum": 0},
+        "end_index": {"type": "integer", "minimum": 0},
+        "expected_frame_count": {"type": "integer", "minimum": 1},
+        "nominal_duration_s": {"type": "number", "minimum": 0}
+      }
+    },
+    "synchronization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sync_trim_applied",
+        "trimmed_source_indices",
+        "trim_reason",
+        "camera0_has_shifted_imu_predecessor",
+        "first_fed_camera_has_shifted_imu_predecessor",
+        "synthetic_or_extrapolated_imu_permitted"
+      ],
+      "properties": {
+        "sync_trim_applied": {"type": "boolean"},
+        "trimmed_source_indices": {"type": "array", "uniqueItems": true, "items": {"type": "integer", "minimum": 0}},
+        "trim_reason": {"type": "string", "minLength": 1},
+        "camera0_has_shifted_imu_predecessor": {"type": ["boolean", "null"]},
+        "first_fed_camera_has_shifted_imu_predecessor": {"type": ["boolean", "null"]},
+        "synthetic_or_extrapolated_imu_permitted": {"const": false}
+      }
+    },
+    "execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "process_start_count", "retry_count", "raw_returncode", "timed_out", "wall_time_s"],
+      "properties": {
+        "state": {"enum": ["COMPLETED", "PENDING", "NOT_RUN", "INFRASTRUCTURE_FAILURE"]},
+        "process_start_count": {"type": "integer", "minimum": 0},
+        "retry_count": {"type": "integer", "minimum": 0},
+        "raw_returncode": {"type": ["integer", "null"]},
+        "timed_out": {"type": ["boolean", "null"]},
+        "wall_time_s": {"type": ["number", "null"], "minimum": 0}
+      }
+    },
+    "usability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "failure_code",
+        "score_pose_count",
+        "score_coverage_fraction",
+        "score_first_output_delay_s",
+        "score_first_output_censor_reason",
+        "score_longest_contiguous_count",
+        "score_longest_contiguous_fraction",
+        "score_gap_count",
+        "score_trajectory_span_s",
+        "keyframe_score_count"
+      ],
+      "properties": {
+        "status": {"enum": ["PASS", "FAIL", "PENDING", "NOT_RUN"]},
+        "failure_code": {
+          "enum": [
+            "NONE",
+            "PENDING_NOT_STARTED",
+            "LATE_INITIALIZATION_INSUFFICIENT_SCORE_SUPPORT",
+            "NO_TRAJECTORY",
+            "NONFINITE_TRAJECTORY",
+            "NONMONOTONIC_TRAJECTORY",
+            "INSUFFICIENT_SCORE_COVERAGE",
+            "INSUFFICIENT_CONTINUOUS_SUPPORT",
+            "NO_SCORE_KEYFRAME",
+            "NONZERO_RETURN_CODE",
+            "TIMEOUT",
+            "INFRASTRUCTURE_FAILURE"
+          ]
+        },
+        "score_pose_count": {"type": ["integer", "null"], "minimum": 0},
+        "score_coverage_fraction": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "score_first_output_delay_s": {"type": ["number", "null"], "minimum": 0},
+        "score_first_output_censor_reason": {"type": ["string", "null"]},
+        "score_longest_contiguous_count": {"type": ["integer", "null"], "minimum": 0},
+        "score_longest_contiguous_fraction": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "score_gap_count": {"type": ["integer", "null"], "minimum": 0},
+        "score_trajectory_span_s": {"type": ["number", "null"], "minimum": 0},
+        "keyframe_score_count": {"type": ["integer", "null"], "minimum": 0}
+      }
+    },
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "independent_ground_truth", "native_rows_in_score", "path", "sha256"],
+      "properties": {
+        "kind": {"enum": ["SAME_IMAGE_COLMAP_DEPTH_SCALE_PROXY", "OTHER_PROXY", "INDEPENDENT_GROUND_TRUTH", "NONE"]},
+        "independent_ground_truth": {"type": "boolean"},
+        "native_rows_in_score": {"type": "integer", "minimum": 0},
+        "path": {"type": ["string", "null"]},
+        "sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "comparability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["history_match_existing_aqua_fe", "score_support_match_existing_aqua_fe", "pose_convention_match", "evaluator_identity_match", "input_rate_disclosed"],
+      "properties": {
+        "history_match_existing_aqua_fe": {"type": "boolean"},
+        "score_support_match_existing_aqua_fe": {"type": "boolean"},
+        "pose_convention_match": {"type": "boolean"},
+        "evaluator_identity_match": {"type": "boolean"},
+        "input_rate_disclosed": {"type": "boolean"}
+      }
+    },
+    "accuracy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "block_codes", "common_grid_count", "common_coverage", "common_span_s", "ape_valid", "ape_rmse_m", "ape_median_m", "ape_max_m", "rpe_valid", "rpe_delta_s", "rpe_pairs", "rpe_rmse_m", "rpe_median_m", "rpe_max_m"],
+      "properties": {
+        "state": {"enum": ["VALID_DESCRIPTIVE", "BLOCKED", "BLOCKED_UNUSABLE", "NOT_EVALUATED"]},
+        "block_codes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "SYSTEM_UNUSABLE",
+              "HISTORY_MISMATCH",
+              "SCORE_SUPPORT_MISMATCH",
+              "POSE_CONVENTION_MISMATCH",
+              "EVALUATOR_IDENTITY_MISMATCH",
+              "REFERENCE_NATIVE_ROWS_LT_30",
+              "COMMON_GRID_LT_30",
+              "COMMON_SPAN_LT_10S",
+              "COMMON_COVERAGE_LT_0_70",
+              "RPE_PAIRS_LT_10",
+              "NONFINITE_METRIC",
+              "NO_INDEPENDENT_GROUND_TRUTH_FORMAL_CLAIM_BLOCKED"
+            ]
+          }
+        },
+        "common_grid_count": {"type": ["integer", "null"], "minimum": 0},
+        "common_coverage": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "common_span_s": {"type": ["number", "null"], "minimum": 0},
+        "ape_valid": {"type": "boolean"},
+        "ape_rmse_m": {"type": ["number", "null"], "minimum": 0},
+        "ape_median_m": {"type": ["number", "null"], "minimum": 0},
+        "ape_max_m": {"type": ["number", "null"], "minimum": 0},
+        "rpe_valid": {"type": "boolean"},
+        "rpe_delta_s": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "rpe_pairs": {"type": ["integer", "null"], "minimum": 0},
+        "rpe_rmse_m": {"type": ["number", "null"], "minimum": 0},
+        "rpe_median_m": {"type": ["number", "null"], "minimum": 0},
+        "rpe_max_m": {"type": ["number", "null"], "minimum": 0}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"state": {"const": "VALID_DESCRIPTIVE"}}},
+          "then": {"properties": {"ape_valid": {"const": true}, "rpe_valid": {"const": true}, "ape_rmse_m": {"type": "number"}, "rpe_rmse_m": {"type": "number"}}}
+        },
+        {
+          "if": {"properties": {"state": {"enum": ["BLOCKED", "BLOCKED_UNUSABLE", "NOT_EVALUATED"]}}},
+          "then": {
+            "properties": {
+              "ape_valid": {"const": false},
+              "ape_rmse_m": {"const": null},
+              "ape_median_m": {"const": null},
+              "ape_max_m": {"const": null},
+              "rpe_valid": {"const": false},
+              "rpe_rmse_m": {"const": null},
+              "rpe_median_m": {"const": null},
+              "rpe_max_m": {"const": null}
+            }
+          }
+        }
+      ]
+    },
+    "artifacts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["selector_or_contract_path", "run_result_path", "trajectory_path", "keyframe_trajectory_path", "execution_lock_path"],
+      "properties": {
+        "selector_or_contract_path": {"type": ["string", "null"]},
+        "run_result_path": {"type": ["string", "null"]},
+        "trajectory_path": {"type": ["string", "null"]},
+        "keyframe_trajectory_path": {"type": ["string", "null"]},
+        "execution_lock_path": {"type": ["string", "null"]}
+      }
+    },
+    "notes": {"type": ["string", "null"]}
+  }
+}

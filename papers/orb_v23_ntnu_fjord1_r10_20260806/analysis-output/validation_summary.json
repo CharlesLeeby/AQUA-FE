@@ -1,0 +1,92 @@
+{
+  "added_windows": 1,
+  "date": "2026-08-06",
+  "roster_rows": 17,
+  "roster_unique_windows": 17,
+  "schema_version": 5,
+  "snapshot_entries": 576,
+  "snapshot_entries_verified": 576,
+  "snapshot_manifests": 20,
+  "snapshot_manifests_verified": 20,
+  "source_contract": {
+    "canonical_equal_after_added_channels_removed": true,
+    "canonical_messages": 6300,
+    "canonical_sha256": "7cd79f97918957be564b426733946f8d719311c6e19143a4772dae1e245b8829",
+    "feature_times_sha256": "13da054a1d8c2542fd2e04043e3a8c47e00104da4cf90c1b18955802370c6862",
+    "full_seeds_sha256": "4a5805f863c50a96c09910e34a64b43bb171db0088aacf18db1ef4aca339226f",
+    "is_learned_channels_added": 208,
+    "legacy_clean_frames": 300,
+    "legacy_clean_frames_with_drops": 8,
+    "legacy_native_observations_kept": 50348,
+    "legacy_observations_removed": 15,
+    "normalization_frames": 300,
+    "normalization_learned_observations": 138,
+    "normalization_observations": 50486,
+    "seed_frames": 92,
+    "seed_ids": 3,
+    "seed_max_timestamp_difference_ns": 0,
+    "seed_observations": 138,
+    "source_code_channels_added": 208
+  },
+  "updated_counts": {
+    "action_positive": 17,
+    "all_control_strict": 2,
+    "operational_low_grid": 10,
+    "project_strict": 5,
+    "sparse_base_klt": 0,
+    "strict_operational_low_grid": 3
+  },
+  "windows": {
+    "NTNU_fjord1_s30_d30": {
+      "action_positive": true,
+      "all_control_strict": false,
+      "formal_root": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/postinit_candidate_search_20260806/ntnu_fjord1_s30_d30/formal_n3_d14_min8_ignore0_clean_legacyid_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09",
+      "formal_runs": 20,
+      "formal_runs_ok": 20,
+      "frontend_frames": 300,
+      "full_vs_bridge_off_improvements": 4,
+      "full_vs_native_improvements": 0,
+      "full_vs_unbounded_improvements": 2,
+      "level": "action_positive_metric_negative_native_negative_non_strict",
+      "low_grid_frames_le_0p80": 265,
+      "native_negative": true,
+      "non_strict": true,
+      "operational_low_grid": true,
+      "project_strict": false,
+      "repeat4_order_swapped": true,
+      "role_counter_signatures": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_keyframe_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_online_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_reconstructed_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "snapshot_entries": 576,
+      "snapshot_entries_verified": 576,
+      "snapshot_manifests": 20,
+      "snapshot_manifests_verified": 20,
+      "sparse_base_klt": false
+    }
+  }
+}

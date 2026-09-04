@@ -1,0 +1,1 @@
+RUN_VINS=0 FORCE_EXPORT=1 TAG=isj_p07_aqualoc_archaeology_a02_0005_m_attempt01 bash scripts/run_p05_modern_xfeat_baseline_guarded_v2.sh aqualoc_archaeology 2 4500 5400 2

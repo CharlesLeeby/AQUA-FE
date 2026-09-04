@@ -1,0 +1,118 @@
+{
+  "schema_version": "aqua-fe-published-supervins-v1-official-euroc-mh01-first2s-inference-smoke-attempt-002-freeze-v1",
+  "created_at": "2026-08-17T00:06:00+08:00",
+  "status": "FROZEN_BEFORE_STAGE_3_ATTEMPT_002_MASTER_NODE_OR_PUBLISHER_START",
+  "scientific_role": "DEVELOPMENT_ONLY_OFFICIAL_DATA_INFERENCE_RUNABILITY_SMOKE",
+  "relationship": {
+    "mode": "ADDITIVE_NEW_ATTEMPT_AND_FRESH_NAMESPACE",
+    "attempt_001_modified": false,
+    "attempt_001_retried": false,
+    "attempt_001_evidence_reused_for_writes": false,
+    "base_input_models_runtime_and_success_gates_changed": false,
+    "only_controller_delta": "After observing the session marker, read-only poll getSystemState for at most 12 seconds until /supervins_estimator is the exact subscriber on both /imu0 and /cam0/image_raw before creating the publisher start claim."
+  },
+  "base_stage_3_freeze": {
+    "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_first2s_inference_smoke_freeze_v1.json",
+    "sha256": "bcb02beddb337bb13c87b3953e2819c702b52bcce22179a6915abacb42ad2caf",
+    "size_bytes": 9143
+  },
+  "attempt_001_failure_adoption": {
+    "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_first2s_inference_smoke_attempt_001_failure_adoption_v1.json",
+    "sha256": "47bf464242d98fea5ca0ade791fa5ebbac29012960ce1a9bcfb849856f347012",
+    "size_bytes": 5292,
+    "required_status": "ADOPTED_TERMINAL_FAIL_CLOSED_NO_RETRY"
+  },
+  "unchanged_contract": {
+    "input_manifest_sha256": "a8ec6e7e878ec28e018b78fc1cd891acfa5a05825264d3b58d8b4630fa51a398",
+    "publisher_sha256": "973b096ad56aa52ff521634a77ad65f2c41f0bec5d87d733c53edcc4691e3106",
+    "node_binary_sha256": "5aaec22bb03da92f2b48aaff037646d9cd06ab87fd67c594c6dbb005da5ed2e3",
+    "config_sha256": "8c2ce030a4a585e483686f9b1c19b652b20e60e13bdf6127d9a2f8cfaa6be62c",
+    "extractor_model_sha256": "234d12c9f523292efb34e0ca513b011050b0c052700da9c01787b9356a1138d2",
+    "matcher_model_sha256": "4f44f440bc08f71afc2ba619d33154d395284001c1387b14a3b58a3224f9490e",
+    "sequence": "official EuRoC MH_01_easy first closed 2.000000000 seconds; not README-recommended V2_01",
+    "camera_count": 41,
+    "imu_count": 401,
+    "event_count": 442,
+    "topics": [
+      "/imu0",
+      "/cam0/image_raw"
+    ],
+    "success_gates": {
+      "session_ready_marker_minimum": 1,
+      "publisher_complete_camera_count_exact": 41,
+      "publisher_complete_imu_count_exact": 401,
+      "publisher_complete_event_count_exact": 442,
+      "extract_feature_time_occurrences_minimum": 2,
+      "matches_size_occurrences_minimum": 1,
+      "all_processes_reaped": true,
+      "all_pins_and_trajectory_artifacts_unchanged": true
+    }
+  },
+  "fresh_namespace": {
+    "pre_state": "ABSENT",
+    "evidence_root": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_20260817_r2",
+    "attempt": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_20260817_r2/attempt_002",
+    "start_claims": [
+      "roscore_start_claim.json",
+      "node_start_claim.json",
+      "publisher_start_claim.json"
+    ],
+    "reuse_after_any_outcome": false
+  },
+  "one_shot_authority": {
+    "authorization_token": "SUPERVINS_STAGE3_MH01_FIRST2S_ATTEMPT_002_START_ONCE",
+    "maximum_roscore_starts": 1,
+    "maximum_node_starts": 1,
+    "maximum_publisher_starts": 1,
+    "retry_authorized": false,
+    "master_ready_timeout_seconds": 12,
+    "node_session_ready_timeout_seconds": 15,
+    "post_marker_subscription_poll_timeout_seconds": 12,
+    "publisher_connection_timeout_seconds": 12,
+    "inference_gate_timeout_seconds": 90,
+    "termination": "publisher then node then roscore; TERM, 3-second grace, KILL if needed, synchronous reap"
+  },
+  "ros": {
+    "master_uri": "http://127.0.0.1:11554",
+    "master_command": [
+      "/opt/ros/noetic/bin/roscore",
+      "-p",
+      "11554"
+    ],
+    "node_command": [
+      "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/devel/lib/supervins/supervins_node",
+      "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/config/euroc/euroc_mono_imu_config.yaml"
+    ],
+    "publisher_command": [
+      "/usr/bin/python3",
+      "-B",
+      "/home/ma/AQUA-FE_WS/scripts/publish_supervins_euroc_mh01_first2s_v1.py",
+      "--action",
+      "run",
+      "--authorization-token",
+      "SUPERVINS_STAGE3_MH01_FIRST2S_PUBLISH_ONCE"
+    ],
+    "required_node_subscriptions_before_publisher_start": {
+      "/imu0": [
+        "/supervins_estimator"
+      ],
+      "/cam0/image_raw": [
+        "/supervins_estimator"
+      ]
+    },
+    "allowed_input_publisher_node": "/aqua_fe_euroc_mh01_first2s_publisher",
+    "other_input_publishers_allowed": []
+  },
+  "claim_boundary": {
+    "feature_extractor_inference_authorized": true,
+    "matcher_inference_authorized": true,
+    "full_vio_or_trajectory_run_authorized": false,
+    "trajectory_artifact_change_authorized": false,
+    "ape_rpe_authorized": false,
+    "formal_baseline_authorized": false,
+    "underwater_claim_authorized": false,
+    "next_stage_automatically_authorized": false
+  },
+  "success_status": "PASS_DEVELOPMENT_OFFICIAL_MH01_FIRST2S_EXTRACTOR_MATCHER_INFERENCE_ATTEMPT_002",
+  "postcondition": "A pass proves only extractor and matcher inference runability on the frozen first two seconds of official MH_01_easy. It is not V2_01, complete VIO, a trajectory or accuracy result, an underwater result, or a comparison with AQUA-FE."
+}

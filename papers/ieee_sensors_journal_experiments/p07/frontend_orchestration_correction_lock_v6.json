@@ -1,0 +1,108 @@
+{
+  "allowed_queue_indices": [
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60
+  ],
+  "artifacts": [
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/frontend_execution_correction_lock_v5.json",
+      "sha256": "76a75780cf515e21157ddd06d67e0753b7a83e02ea2c276ddbfda1f984d5f47e",
+      "size_bytes": 4947
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/d_resolution_locks/afrl_bus_outside_0001_v3.json",
+      "sha256": "bd9f7175bca28125edc0baabdf4508fbb7a6345e5f609f7f39828bdb13912cca",
+      "size_bytes": 6082
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p07/d_resolutions/afrl_bus_outside_0001_not_applicable_v2.json",
+      "sha256": "e297a358796240b4b5b86c58ca4e9c38b30088a4290bce491c8eaf916fae3cc7",
+      "size_bytes": 1776
+    },
+    {
+      "path": "scripts/run_p07_frontend_export_job_v5.py",
+      "sha256": "75a1f1f198c1b057c1dcbf9fe37a252839c8a13b3348a12819bd5ba19b20904f",
+      "size_bytes": 6297
+    },
+    {
+      "path": "scripts/run_p07_frontend_queue_v6.py",
+      "sha256": "4da71d1c078c6e7352d23e6cc587a679dbb09c1be5abc7ee24803b8928fbb62f",
+      "size_bytes": 6470
+    },
+    {
+      "path": "scripts/resolve_p07_d_applicability_v3.py",
+      "sha256": "d11aa506796495ffd7e1dc82adbff54b96f10ab62766166711dbf6c81bc39013",
+      "size_bytes": 5619
+    },
+    {
+      "path": "scripts/build_p07_d_resolution_lock_v3.py",
+      "sha256": "92cc6711f14db8ec543912f2cc6e8ad4d9ba1e6ab5044b4e11fa65872a8bab80",
+      "size_bytes": 2823
+    },
+    {
+      "path": "scripts/build_p07_frontend_orchestration_correction_lock_v6.py",
+      "sha256": "2046a9db21e86d7463b5d1ec533c3a5ffaf705adbcaf6ec430467c8e8b30a92e",
+      "size_bytes": 5472
+    },
+    {
+      "path": "scripts/tests/test_p07_frontend_orchestration_v6.py",
+      "sha256": "0747541749a6eb42a53f2e36c3dfaba7b821652a6b13b568f394a81bde4b3d15",
+      "size_bytes": 987
+    }
+  ],
+  "correction": {
+    "accepted_p_audit_schema_added": "isj-p07-frontend-export-audit-v4",
+    "frontend_scientific_command_changed": false,
+    "lineage_or_exact_drop_contract_changed": false,
+    "trajectory_outcome_read": false
+  },
+  "d_lock_builder": "scripts/build_p07_d_resolution_lock_v3.py",
+  "d_resolver": "scripts/resolve_p07_d_applicability_v3.py",
+  "frontend_executor": "scripts/run_p07_frontend_export_job_v5.py",
+  "frozen_at": "2026-08-07T07:01:21+08:00",
+  "mutable_stream_prefix_snapshots": [
+    {
+      "path": "papers/ieee_sensors_journal_experiments/run_registry.csv",
+      "sha256": "d17ad0b506c7a7883cbe0086adb6f13f2fa061ca43d85179c1d9ddc08aa4e0b1",
+      "size_bytes": 139909
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/arm_applicability.csv",
+      "sha256": "71f0a79c6b35e02d4fc6b14cda2f403a4fda5caa3494dec82d5583e83fadd879",
+      "size_bytes": 12279
+    }
+  ],
+  "next_action": "RESUME_QUEUE_INDEX_31_THROUGH_60_SERIAL",
+  "orchestration_lock_hash": "56d7bcd37aafb8c4becac382838bd272cfb1e3eac7088132ee04845293c24081",
+  "outcome_boundary": "FRONTEND_EXPORT_ONLY_NO_VINS_APE_RPE_TRAJECTORY",
+  "schema_version": "isj-p07-frontend-orchestration-correction-lock-v6",
+  "status": "FROZEN_READY_WITH_V4_AUDIT_AND_V3_D_RESOLUTION"
+}

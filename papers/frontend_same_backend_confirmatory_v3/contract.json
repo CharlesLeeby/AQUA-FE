@@ -1,0 +1,39 @@
+{
+  "schema_version": "aqua-fe-same-backend-confirmatory-v3",
+  "frozen_at": "2026-09-04T02:25:43+08:00",
+  "status": "FROZEN_BEFORE_CONFIRMATORY_FRONTEND_OR_TRAJECTORY_OUTCOME",
+  "scientific_unit": "one_nonoverlapping_45s_window_per_sequence",
+  "window_count": 12,
+  "repeat_count": 3,
+  "arms": ["klt", "splg", "xfeat_v3"],
+  "gates": {
+    "repeat_coverage_min": 0.70,
+    "window_required_repeats": 3,
+    "common_poses_min": 30,
+    "common_span_s_min": 10.0,
+    "common_coverage_min": 0.70,
+    "rpe_pairs_min": 10,
+    "rpe_delta_s": 1.0,
+    "feature_budget_max": 350
+  },
+  "alignment": {
+    "primary": "fixed_scale_proper_se3_per_trajectory",
+    "diagnostic": "sim3_with_explicit_scale",
+    "silent_scale_fitting_forbidden": true
+  },
+  "frozen_hashes": {
+    "window_audit_v4": "e6da25ed6338deddb85b7b7d6b016668e0a220df8f88554beec52b5e18e226d6",
+    "data_eligibility_manifest": "510c276c33217706eef11ea53e58de4b37318828f8a6dc793dea9262f0a0a0f5",
+    "exporter": "f4bf20b254dbcc441f899c9b9b80b0d6043063798f7e90fe850aba63e7b9620d",
+    "frontend_config": "6f89d861cc002dfaf0eaf5f1294b0dbcfab9fe268c5dc0d09082f79811000bf3",
+    "seedchain_env": "805f0c747d5da5167d1e9b3a147c799d141a499ab4516bb9c49d68c639dde19e",
+    "seedchain_runner": "5a18fa6a590ae6f64311a0329c2dd5c0ddf6c79dc19ceb13ad7587e39d42410e",
+    "vins_node": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+    "libvins_lib": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8"
+  },
+  "storage": {
+    "paper_root": "/home/ma/AQUA-FE_WS/papers/frontend_same_backend_confirmatory_v3",
+    "runtime_root": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_same_backend_confirmatory_v3",
+    "forbid_writes_under": "/mnt/data"
+  }
+}

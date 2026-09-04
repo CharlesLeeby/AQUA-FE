@@ -1,0 +1,10 @@
+extends: formal_loftr_v31_repro_frontend.yaml
+
+hybrid:
+  # A09 5920-6060 probe: the old low-texture run accepted LoFTR at
+  # H-inlier ratios near 0.959, while the current formal sparse-homography
+  # gate inherited 0.970 and blocks that same planar support window. This
+  # probe only relaxes the sparse-H pre-trigger, keeping the later coverage,
+  # geometry, LK/NCC/FB confirmation, and export gates unchanged.
+  loftr_sparse_min_h_inlier_ratio: 0.955
+  loftr_sparse_min_planar_score: 0.955

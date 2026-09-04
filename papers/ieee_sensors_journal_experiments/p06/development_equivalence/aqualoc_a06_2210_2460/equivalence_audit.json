@@ -1,0 +1,50 @@
+{
+  "audit_script": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/audit_p06_screening_equivalence.py",
+    "sha256": "0688afedc4dfe6d6ae3100a3ef573aae2be000c53a33ee952f33552ada46c053",
+    "size_bytes": 7016
+  },
+  "direct_csv": {
+    "path": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/p06/development_equivalence/aqualoc_a06_2210_2460/direct_metrics.csv",
+    "sha256": "5996d398ded7abced076e738cd40809ba192518c2bd954dc5f8f61f3e43aa79e",
+    "size_bytes": 249846
+  },
+  "direct_rows": 251,
+  "direct_start_index": 2210,
+  "max_abs_diff": {
+    "degradation_score": 0.0,
+    "dropout_ratio": 0.0,
+    "flat_region_ratio": 0.0,
+    "grid_coverage": 0.0
+  },
+  "metric_mismatch_count": {
+    "degradation_score": 0,
+    "dropout_ratio": 0,
+    "flat_region_ratio": 0,
+    "grid_coverage": 0
+  },
+  "normalized_index_mismatches": 0,
+  "paired_rows": 251,
+  "range_violation_count": {
+    "degradation_score": 0,
+    "dropout_ratio": 0,
+    "flat_region_ratio": 0,
+    "grid_coverage": 0
+  },
+  "required_metrics": [
+    "grid_coverage",
+    "dropout_ratio",
+    "flat_region_ratio",
+    "degradation_score"
+  ],
+  "ros_csv": {
+    "path": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/p06/development_equivalence/aqualoc_a06_2210_2460/ros_metrics.csv",
+    "sha256": "cd23f8a4ff6f9c93f623dbccd30f0be6dd2895f85ace43d99669d6ad1576b9db",
+    "size_bytes": 155443
+  },
+  "ros_rows": 251,
+  "ros_start_index": 0,
+  "schema_version": "isj-p06-screening-equivalence-v1",
+  "status": "PASS",
+  "tolerance": 1e-12
+}

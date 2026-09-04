@@ -1,0 +1,117 @@
+{
+  "cases": [
+    {
+      "evidence": {
+        "algorithmic_slot": true,
+        "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+        "infrastructure_codes": [],
+        "initialization": {
+          "first_output_delay_s": 2.5,
+          "success": true
+        },
+        "process": {
+          "exit_code": 0,
+          "timed_out": false
+        },
+        "queue": {
+          "backlog_growth_s": 0.0,
+          "drop_rate": 0.0
+        },
+        "replay_index": 1,
+        "run_id": "fixture_clean_r1",
+        "solver_log_inspected": true,
+        "solver_log_text": "normal shutdown",
+        "support": {
+          "coverage_ratio": 0.95
+        },
+        "trajectory": {
+          "finite": true,
+          "present": true,
+          "row_count": 200,
+          "strictly_increasing": true
+        },
+        "window_id": "fixture_low_0001"
+      },
+      "expected_hard_codes": [],
+      "expected_solver_codes": [],
+      "expected_status": "EVALUABLE"
+    },
+    {
+      "evidence": {
+        "algorithmic_slot": true,
+        "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+        "infrastructure_codes": [],
+        "initialization": {
+          "first_output_delay_s": 12.0,
+          "success": false
+        },
+        "process": {
+          "exit_code": 2,
+          "timed_out": true
+        },
+        "queue": {
+          "backlog_growth_s": 6.0,
+          "drop_rate": 0.02
+        },
+        "replay_index": 2,
+        "run_id": "fixture_hard_r2",
+        "solver_log_inspected": true,
+        "solver_log_text": "Linear solver failure; value nan",
+        "support": {
+          "coverage_ratio": 0.4
+        },
+        "trajectory": {
+          "finite": false,
+          "present": true,
+          "row_count": 5,
+          "strictly_increasing": false
+        },
+        "window_id": "fixture_low_0001"
+      },
+      "expected_hard_codes": [
+        "NONZERO_EXIT",
+        "TIMEOUT",
+        "NONFINITE_TRAJECTORY",
+        "NONMONOTONIC_TRAJECTORY",
+        "INITIALIZATION_FAILURE",
+        "COVERAGE_BELOW_0P50"
+      ],
+      "expected_solver_codes": [
+        "LINEAR_SOLVER_FAILURE",
+        "NUMERICAL_ABNORMALITY"
+      ],
+      "expected_status": "HARD_FAILURE"
+    },
+    {
+      "evidence": {
+        "algorithmic_slot": false,
+        "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+        "infrastructure_codes": [
+          "DISK_FULL"
+        ],
+        "initialization": {},
+        "process": {
+          "exit_code": 1,
+          "timed_out": false
+        },
+        "queue": {},
+        "replay_index": 3,
+        "run_id": "fixture_infrastructure_attempt",
+        "solver_log_inspected": true,
+        "solver_log_text": "",
+        "support": {},
+        "trajectory": {
+          "present": false,
+          "row_count": 0
+        },
+        "window_id": "fixture_low_0001"
+      },
+      "expected_hard_codes": [
+        "NONZERO_EXIT",
+        "EMPTY_TRAJECTORY"
+      ],
+      "expected_solver_codes": [],
+      "expected_status": "INFRASTRUCTURE_REPLACEMENT_REQUIRED"
+    }
+  ]
+}

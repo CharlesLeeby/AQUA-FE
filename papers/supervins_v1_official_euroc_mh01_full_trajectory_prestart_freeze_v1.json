@@ -1,0 +1,345 @@
+{
+  "schema_version": "aqua-fe-published-supervins-v1-official-euroc-mh01-full-trajectory-prestart-freeze-v1",
+  "created_at": "2026-08-17T04:07:43+08:00",
+  "status": "FROZEN_PRESTART_AWAITING_SEPARATE_ROOT_EXECUTION_CONFIRMATION",
+  "scientific_role": "DEVELOPMENT_ONLY_OFFICIAL_FULL_SEQUENCE_TRAJECTORY_RUNABILITY",
+  "objective": "Publish every official MH_01_easy cam0 and imu0 record once to the unchanged pinned SuperVINS r1 estimator, require observed complete camera coverage, initialization, estimator coverage for every hard-coded even camera frame, and capture an isolated fresh trajectory without performing accuracy evaluation. Exact subscriber-callback receipt of every IMU record is not claimed because the estimator exposes no IMU callback counter.",
+  "relationship": {
+    "mode": "ADDITIVE_NEW_STAGE_AND_FRESH_NAMESPACE",
+    "stage_2_or_stage_3_evidence_modified": false,
+    "stage_3_formal_fail_overridden": false,
+    "stage_3_adjudicated_runtime_gates_adopted": true,
+    "automatic_execution_authorized_by_this_freeze": false
+  },
+  "adopted_evidence": {
+    "stage_2_pass_seal": {
+      "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_ortsession_smoke_attempt_002_pass_seal_v1.json",
+      "sha256": "fef7f133c2d515d29566c4d44aed4e3a4595c57d37acbd244a2d20345968755f",
+      "size_bytes": 4816
+    },
+    "stage_2_run_result": {
+      "path": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_ortsession_smoke_20260816_r2/attempt_002/run_result.json",
+      "sha256": "a86cf96999810849de4673900af18f036dbc654e1449f3b0d0b8ec302f32b0dd",
+      "size_bytes": 16338
+    },
+    "stage_2_stack_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_ortsession_construction_smoke_freeze_v1.json",
+      "sha256": "8095a9eeb702b9671a58678cd22059c98638ec8962ef2ad18e7e81b5c165004d",
+      "size_bytes": 8690
+    },
+    "stage_3_immutable_adjudication": {
+      "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_first2s_inference_smoke_attempt_002_immutable_adjudication_v1.json",
+      "sha256": "9eeab15ab25e07ecaf68bc47bc5159d9ee1203b07d894108c8721c9d26e2b7ff",
+      "size_bytes": 12683
+    },
+    "stage_3_read_only_auditor": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/audit_supervins_v1_official_euroc_mh01_first2s_inference_smoke_attempt_002.py",
+      "sha256": "8626381c74a9c4f97c1c664761d090e8783d0b627e0c18381fbc14d976cd6d70",
+      "size_bytes": 9225
+    }
+  },
+  "input": {
+    "manifest": {
+      "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_input_manifest_v1.json",
+      "sha256": "31fbc4a8d968f6eda7fb013b4ea830c9226459986a4917b786bfb86f0ced2a44",
+      "size_bytes": 7142
+    },
+    "publisher": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/publish_supervins_euroc_mh01_full_v1.py",
+      "sha256": "2ec8b7c7457f933206e61c4a79ec782664849fd201d6a459bb0a19edab4d1371",
+      "size_bytes": 14026
+    },
+    "sequence": "official EuRoC MH_01_easy complete cam0+imu0 streams; not README-recommended V2_01",
+    "camera_count": 3682,
+    "imu_count": 36820,
+    "event_count": 40502,
+    "first_event_timestamp_ns": 1403636579758555392,
+    "last_event_timestamp_ns": 1403636763853555456,
+    "source_duration_seconds": 184.095000064,
+    "source_time_per_wall_time": 0.2,
+    "expected_wall_publish_span_seconds": 920.47500032,
+    "event_order": "timestamp ascending; IMU before cam0 at equal timestamps",
+    "publisher_transport": "synchronous rospy publishers (queue_size=None) with exact live subscriber connections required before first event and at terminal",
+    "topics": {
+      "/imu0": "sensor_msgs/Imu",
+      "/cam0/image_raw": "sensor_msgs/Image"
+    }
+  },
+  "publisher_runtime_pins": {
+    "/usr/bin/python3": {
+      "sha256": "298a9e830ed52f36c299427565485d717d1ce0179c0597cc16560513eb780b06",
+      "size_bytes": 5490456
+    },
+    "/usr/lib/python3/dist-packages/cv2.cpython-38-x86_64-linux-gnu.so": {
+      "sha256": "00f302d1efe76049187e2e2c7a05262e883394f82316490e2f28adb807ac1833",
+      "size_bytes": 6970496
+    },
+    "/home/ma/.local/lib/python3.8/site-packages/numpy/core/_multiarray_umath.cpython-38-x86_64-linux-gnu.so": {
+      "sha256": "190fed599b26cf689e22f198faf97d632f1d19b8aa75fdf5ca7fb96d37d97e37",
+      "size_bytes": 6311424
+    },
+    "/opt/ros/noetic/lib/python3/dist-packages/rospy/__init__.py": {
+      "sha256": "9e5c4e111abae5c45266c74c2ed83ff045d00b29d4c514d31c09b250460c9159",
+      "size_bytes": 4636
+    },
+    "/opt/ros/noetic/lib/python3/dist-packages/sensor_msgs/msg/_Image.py": {
+      "sha256": "ea36643a165267e46fb5b5c227143d541d833b4f493c4077c77a799b8e41db2d",
+      "size_bytes": 10705
+    },
+    "/opt/ros/noetic/lib/python3/dist-packages/sensor_msgs/msg/_Imu.py": {
+      "sha256": "da6283c0d88361f53d81f15e2ccd0ea55d32331f5e671d2d93bbe31690ae6386",
+      "size_bytes": 13030
+    },
+    "/opt/ros/noetic/lib/python3/dist-packages/std_msgs/msg/_Header.py": {
+      "sha256": "a4171605d65979479a395892ca44d22d5bc6fac3ef184c9c8fe177ea914487e3",
+      "size_bytes": 5706
+    }
+  },
+  "adapted_config": {
+    "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_config_v1/euroc_mono_imu_config.yaml",
+    "sha256": "bf0d2500e60a96b09f50defbd1299b12d62cf85ce581f6a3b8da743f1b84b32b",
+    "size_bytes": 3520,
+    "original_path": "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/config/euroc/euroc_mono_imu_config.yaml",
+    "original_sha256": "8c2ce030a4a585e483686f9b1c19b652b20e60e13bdf6127d9a2f8cfaa6be62c",
+    "original_size_bytes": 3233,
+    "semantic_delta": {
+      "only_key_changed": "output_path",
+      "old_value": "SuperVINS/supervins_estimator/vio_output",
+      "new_value": "../../../AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_full_trajectory_20260817_r1/attempt_001/trajectory_output",
+      "network_or_model_changed": false,
+      "frontend_threshold_changed": false,
+      "backend_or_sensor_parameter_changed": false
+    },
+    "cam0_calibration_copy": {
+      "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_config_v1/cam0_mei.yaml",
+      "sha256": "cf80ecac499664460eb52159de38786058c7cfb5eee81ab6489dea37a5d64059",
+      "size_bytes": 429,
+      "byte_identical_to_original": true,
+      "original_path": "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/config/euroc/cam0_mei.yaml",
+      "original_sha256": "cf80ecac499664460eb52159de38786058c7cfb5eee81ab6489dea37a5d64059",
+      "original_size_bytes": 429
+    }
+  },
+  "exact_supervins_runtime": {
+    "binary": {
+      "path": "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/devel/lib/supervins/supervins_node",
+      "sha256": "5aaec22bb03da92f2b48aaff037646d9cd06ab87fd67c594c6dbb005da5ed2e3",
+      "size_bytes": 13269280
+    },
+    "library": {
+      "path": "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/devel/lib/libsupervins_lib.so",
+      "sha256": "42e84ffb781ed2f15582aa487be1e62a315ed9bb54d9db51176c2f5c1a97db22",
+      "size_bytes": 168386832
+    },
+    "extractor_model": {
+      "path": "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/weights_dpl/superpoint.onnx",
+      "sha256": "234d12c9f523292efb34e0ca513b011050b0c052700da9c01787b9356a1138d2",
+      "size_bytes": 5272808
+    },
+    "matcher_model": {
+      "path": "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/weights_dpl/superpoint_lightglue_fused_cpu.onnx",
+      "sha256": "4f44f440bc08f71afc2ba619d33154d395284001c1387b14a3b58a3224f9490e",
+      "size_bytes": 45634561
+    },
+    "compile_time_project_source_dir": "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src"
+  },
+  "fresh_namespace": {
+    "pre_state": "ABSENT",
+    "evidence_root": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_full_trajectory_20260817_r1",
+    "attempt": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_full_trajectory_20260817_r1/attempt_001",
+    "node_cwd": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_full_trajectory_20260817_r1",
+    "trajectory_output_directory": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_full_trajectory_20260817_r1/attempt_001/trajectory_output",
+    "trajectory_file": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_full_trajectory_20260817_r1/attempt_001/trajectory_output/vio.csv",
+    "extrinsic_file": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_full_trajectory_20260817_r1/attempt_001/trajectory_output/extrinsic_parameter.csv",
+    "start_claims": [
+      "roscore_start_claim.json",
+      "node_start_claim.json",
+      "publisher_start_claim.json"
+    ],
+    "reuse_after_any_outcome": false
+  },
+  "output_path_resolution_contract": {
+    "configured_relative_output_path": "../../../AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_full_trajectory_20260817_r1/attempt_001/trajectory_output",
+    "resolve_from_node_cwd": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_full_trajectory_20260817_r1/attempt_001/trajectory_output",
+    "resolve_after_binary_prefixes_project_source_dir": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_full_trajectory_20260817_r1/attempt_001/trajectory_output",
+    "both_resolutions_must_be_identical": true,
+    "trajectory_output_directory_precreated_before_any_process_start": true,
+    "reason": "readParameters opens and truncates OUTPUT_FOLDER/vio.csv before supervins_main prefixes VINS_RESULT_PATH with PROJECT_SOURCE_DIR; precreation makes that first cwd-relative open land in the same fresh canonical directory.",
+    "writes_outside_fresh_namespace_authorized": false
+  },
+  "one_shot_authority": {
+    "prestart_only_now": true,
+    "execution_authority_file": "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_execution_authority_v1.json",
+    "execution_authority_file_required_absent_for_prestart_go": true,
+    "root_confirmation_required_before_run": true,
+    "authorization_token": "SUPERVINS_STAGE4_MH01_FULL_TRAJECTORY_ATTEMPT_001_START_ONCE",
+    "exact_controller_command": [
+      "/usr/bin/python3",
+      "-B",
+      "/home/ma/AQUA-FE_WS/scripts/run_published_supervins_v1_official_euroc_mh01_full_trajectory_v1.py",
+      "--action",
+      "run",
+      "--authorization-token",
+      "SUPERVINS_STAGE4_MH01_FULL_TRAJECTORY_ATTEMPT_001_START_ONCE"
+    ],
+    "maximum_roscore_starts": 1,
+    "maximum_node_starts": 1,
+    "maximum_publisher_starts": 1,
+    "retry_authorized": false,
+    "master_ready_timeout_seconds": 12,
+    "node_session_ready_timeout_seconds": 15,
+    "post_marker_subscription_timeout_seconds": 12,
+    "publisher_registration_timeout_seconds": 120,
+    "publisher_completion_timeout_seconds": 1200,
+    "post_publisher_processing_drain_timeout_seconds": 300,
+    "continuous_runtime_graph_poll_interval_seconds": 2,
+    "gpu_gate": "GPU 0 free memory >= 3072 MiB and nvidia-smi compute-app list empty at PRESTART and immediately before the sole node Popen",
+    "termination": "controller catches SIGTERM/SIGHUP/SIGINT as a controlled terminal failure; then publisher, node, and roscore receive TERM, 3-second grace, KILL if needed, synchronous reap. SIGKILL of the controller is outside the catchable guarantee."
+  },
+  "ros": {
+    "master_uri": "http://127.0.0.1:11555",
+    "master_command": [
+      "/opt/ros/noetic/bin/roscore",
+      "-p",
+      "11555"
+    ],
+    "node_command": [
+      "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/devel/lib/supervins/supervins_node",
+      "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_config_v1/euroc_mono_imu_config.yaml"
+    ],
+    "publisher_command": [
+      "/usr/bin/python3",
+      "-B",
+      "/home/ma/AQUA-FE_WS/scripts/publish_supervins_euroc_mh01_full_v1.py",
+      "--action",
+      "run",
+      "--authorization-token",
+      "SUPERVINS_STAGE4_MH01_FULL_PUBLISH_ONCE"
+    ],
+    "expected_node_name": "/supervins_estimator",
+    "expected_input_publisher_node": "/aqua_fe_euroc_mh01_full_publisher",
+    "required_input_subscriptions_before_publisher": {
+      "/imu0": [
+        "/supervins_estimator"
+      ],
+      "/cam0/image_raw": [
+        "/supervins_estimator"
+      ]
+    },
+    "required_trajectory_publishers": {
+      "/supervins_estimator/odometry": [
+        "/supervins_estimator"
+      ],
+      "/supervins_estimator/path": [
+        "/supervins_estimator"
+      ]
+    }
+  },
+  "existing_source_trajectory_pre_pins": {
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/vio_output/vio.csv": {
+      "sha256": "1644403a60c4bb6f672e41aa903cb3cf0ec54a5154ebe9d5e98f9817ea12ac6d",
+      "size_bytes": 116990
+    },
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/vio_output/vio_loop.csv": {
+      "sha256": "b484a9f72b3acb105eaf558cf0b7c1cfc244164ea05e7f569ecabf4a50bd6b78",
+      "size_bytes": 29233
+    },
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/vio_output/vio_output.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    }
+  },
+  "success_contract": {
+    "session_ready_marker_count_minimum": 1,
+    "exact_input_publisher_identity_required": true,
+    "publisher_terminal_status": "PUBLISH_COMPLETE",
+    "published_camera_count_exact": 3682,
+    "published_imu_count_exact": 36820,
+    "published_event_count_exact": 40502,
+    "published_content_digests_match_manifest": true,
+    "publisher_first_event_timestamp_ns_exact": 1403636579758555392,
+    "publisher_last_event_timestamp_ns_exact": 1403636763853555456,
+    "publisher_source_time_per_wall_time_exact": 0.2,
+    "publisher_wall_span_seconds_range_inclusive": [
+      917.47500032,
+      1200.0
+    ],
+    "publisher_terminal_image_and_imu_connections_minimum": 1,
+    "publisher_transport_exact": "synchronous_rospy_queue_size_none",
+    "continuous_exact_ros_graph_and_process_liveness_violations_maximum": 0,
+    "extract_feature_time_count_exact": 3682,
+    "node_camera_timestamp_line_count_exact": 3682,
+    "node_camera_timestamp_first_exact": "1403636579.763555527",
+    "node_camera_timestamp_last_exact": "1403636763.813555479",
+    "node_camera_timestamp_lf_sha256_exact": "b7e4e9b485f86d7af386d67affa2b40d1f63698e0562a6b4d30f89b9a77e5dfe",
+    "node_even_camera_timestamp_lf_sha256_exact": "6da29c0921ba91d269610da981268d6f9a24dc47c6d2880d8a432eec57001bd9",
+    "estimator_process_measurement_record_count_exact": 1841,
+    "estimator_process_measurement_record_source": "estimator.cpp appends one finite nonnegative duration after processImage() for every feature frame popped from the hard-coded even-image featureBuf; this is not claimed to be an optimization count",
+    "initialization_finish_count_exact": 1,
+    "failure_detection_count_exact": 0,
+    "system_reboot_count_exact": 0,
+    "trajectory_file_required": true,
+    "trajectory_format": "TUM text: timestamp tx ty tz qx qy qz qw",
+    "trajectory_valid_row_count_minimum": 920,
+    "trajectory_timestamps_strictly_increasing": true,
+    "trajectory_all_values_finite": true,
+    "trajectory_quaternion_norm_range_inclusive": [
+      0.9,
+      1.1
+    ],
+    "trajectory_source_span_seconds_minimum": 92.0,
+    "trajectory_timestamps_must_be_contiguous_suffix_of_all_even_camera_timestamps": true,
+    "trajectory_last_timestamp_fixed6_exact": "1403636763.813555",
+    "trajectory_tail_gap_defined_as_last_camera_minus_last_trajectory_seconds_range_inclusive": [
+      0.0,
+      1e-05
+    ],
+    "post_completion_trajectory_backend_and_extrinsic_file_snapshot_stable_seconds_minimum": 1.0,
+    "optimized_extrinsic_opencv_yaml_file_required_nonempty_with_finite_se3_body_T_cam0": {
+      "last_row_max_abs_error": 1e-06,
+      "rotation_orthonormal_max_abs_error": 0.001,
+      "rotation_determinant_abs_error_from_positive_one": 0.001
+    },
+    "trajectory_topics_advertised_by_exact_node": true,
+    "node_and_roscore_alive_until_controller_teardown": true,
+    "gpu_revalidated_immediately_before_node_start": true,
+    "publisher_natural_return_code_exact": 0,
+    "all_three_processes_reaped": true,
+    "all_frozen_pins_unchanged_post": true,
+    "existing_source_trajectory_artifacts_unchanged": true,
+    "enumerated_estimator_controller_ros_and_runtime_cache_persistent_outputs_confined_to_fresh_namespace": true,
+    "persistent_output_isolation_environment": [
+      "ROS_HOME",
+      "ROS_LOG_DIR",
+      "CUDA_CACHE_PATH",
+      "XDG_CACHE_HOME",
+      "TMPDIR",
+      "PYTHONDONTWRITEBYTECODE=1"
+    ],
+    "pass_status": "PASS_DEVELOPMENT_OFFICIAL_MH01_FULL_TRAJECTORY_GENERATION"
+  },
+  "failure_closeout": {
+    "any_started_attempt_is_terminal": true,
+    "same_namespace_retry_authorized": false,
+    "persist_stdout_stderr_claims_process_records_master_and_rospy_logs_result": true,
+    "outer_exception_guard_persists_emergency_terminal_result_after_unconditional_cleanup": true,
+    "controller_sigterm_sighup_sigint_use_same_guarded_terminal_closeout": true,
+    "controller_sigkill_cannot_be_caught_or_closed_out": true,
+    "terminate_and_reap_every_started_process": true,
+    "preserve_partial_trajectory_as_failed_attempt_evidence": true,
+    "automatic_repair_or_parameter_change_authorized": false
+  },
+  "claim_boundary": {
+    "complete_sequence_trajectory_generation_authorized_after_root_confirmation": true,
+    "exact_all_imu_subscriber_callback_receipt_claim_authorized": false,
+    "groundtruth_consumption_authorized": false,
+    "ape_rpe_or_accuracy_authorized": false,
+    "formal_readme_v2_01_baseline_authorized": false,
+    "underwater_transfer_authorized": false,
+    "comparison_with_aqua_fe_authorized": false,
+    "network_model_threshold_or_backend_change_authorized": false,
+    "loop_fusion_node_start_authorized": false,
+    "next_stage_automatically_authorized": false
+  },
+  "postcondition": "A pass would prove only complete-sequence trajectory generation runability of the pinned repaired SuperVINS estimator on official MH_01_easy with frozen coverage gates. It would not be a V2_01 result or an accuracy, underwater, loop-closure, or comparative result."
+}

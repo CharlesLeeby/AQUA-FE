@@ -1,0 +1,16 @@
+method,repeat,ape_rmse_m,rpe_rmse_m,init_success,solver_failures,run_dir
+full,1,0.160443,0.225076,1,0,logs/aqualoc_archaeo_vins/external_klt_every2_jul20_online_autoscale_a08_full_r1
+full,2,0.161868,0.225165,1,0,logs/aqualoc_archaeo_vins/external_klt_every2_jul20_online_autoscale_geomgate_a08_full_r2
+full,3,0.161853,0.225169,1,0,logs/aqualoc_archaeo_vins/external_klt_every2_jul20_online_autoscale_geomgate_a08_full_r3
+full,4,0.161713,0.225158,1,0,logs/aqualoc_archaeo_vins/external_klt_every2_jul20_online_autoscale_geomgate_a08_full_r4
+full,5,0.160419,0.225072,1,0,logs/aqualoc_archaeo_vins/external_klt_every2_jul20_online_autoscale_geomgate_a08_full_r5
+drop,1,0.157882,0.225001,1,0,logs/aqualoc_archaeo_vins/external_klt_every2_jul20_online_autoscale_a08_drop_r1
+drop,2,0.163098,0.225273,1,0,logs/aqualoc_archaeo_vins/external_klt_every2_jul20_online_autoscale_geomgate_a08_drop_r2
+drop,3,0.163101,0.225271,1,0,logs/aqualoc_archaeo_vins/external_klt_every2_jul20_online_autoscale_geomgate_a08_drop_r3
+drop,4,0.163100,0.225270,1,0,logs/aqualoc_archaeo_vins/external_klt_every2_jul20_online_autoscale_geomgate_a08_drop_r4
+drop,5,0.163096,0.225271,1,0,logs/aqualoc_archaeo_vins/external_klt_every2_jul20_online_autoscale_geomgate_a08_drop_r5
+klt,1,0.163098,0.225270,1,0,logs/aqualoc_archaeo_vins/external_klt_every2_jul20_online_autoscale_a08_klt_r1
+klt,2,0.163101,0.225271,1,0,logs/aqualoc_archaeo_vins/external_klt_every2_jul20_online_autoscale_geomgate_a08_klt_r2
+klt,3,0.163098,0.225273,1,0,logs/aqualoc_archaeo_vins/external_klt_every2_jul20_online_autoscale_geomgate_a08_klt_r3
+klt,4,0.163100,0.225270,1,0,logs/aqualoc_archaeo_vins/external_klt_every2_jul20_online_autoscale_geomgate_a08_klt_r4
+klt,5,0.163100,0.225270,1,0,logs/aqualoc_archaeo_vins/external_klt_every2_jul20_online_autoscale_geomgate_a08_klt_r5

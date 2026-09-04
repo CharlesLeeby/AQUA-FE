@@ -1,0 +1,24 @@
+Command exited with non-zero status 1
+	Command being timed: "/mnt/data/opt/anyfeature-paper-2024-r3/env/bin/g++ -std=c++14 -O2 -g0 scripts/diagnostics/anyfeature_r2d2_init_audit_v1.cpp -o papers/anyfeature_r2d2_init_audit_prefix200_r1/anyfeature_r2d2_init_audit_v1 -I/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/include -I/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/Thirdparty/DBoW2 -I/mnt/data/opt/anyfeature-paper-2024-r3/env/include/eigen3 -I/mnt/data/opt/anyfeature-paper-2024-r3/env/include/opencv4 -L/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/lib -lAnyFeature-VSLAM -L/mnt/data/opt/anyfeature-paper-2024-r3/env/lib -lopencv_calib3d -lopencv_features2d -lopencv_imgcodecs -lopencv_imgproc -lopencv_core"
+	User time (seconds): 0.18
+	System time (seconds): 0.31
+	Percent of CPU this job got: 49%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.01
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 41636
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 6214
+	Voluntary context switches: 64447
+	Involuntary context switches: 38
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1

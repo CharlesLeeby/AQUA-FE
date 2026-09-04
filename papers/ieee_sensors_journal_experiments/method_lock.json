@@ -1,0 +1,237 @@
+{
+  "H2_CONTROL_CONTRACT": "NOT_APPLICABLE_CARRIER_FEEDBACK",
+  "arms": {
+    "conditional_before_trajectory_outcome": [
+      "D_legacy_exact_lineage_drop_v3"
+    ],
+    "required_every_window": [
+      "B0_native_vins_origin_v1",
+      "B1_klt_nativeq_v3",
+      "P_legacy_nativeq_xfeat_seedchain_v3",
+      "M_xfeat_pairwise_nativeq_v1"
+    ],
+    "retired_no_slots": [
+      "C_legacy_independent_classical_v3",
+      "B2_all_eligible"
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "papers/ieee_sensors_journal_experiments/dataset_manifest_v4.csv",
+      "sha256": "aae68a271e2b9b258a3f91ba18a79eea1f37ab2dc373221be93cac814a493a00",
+      "size_bytes": 7348
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/window_selection_audit_v4.csv",
+      "sha256": "e6da25ed6338deddb85b7b7d6b016668e0a220df8f88554beec52b5e18e226d6",
+      "size_bytes": 90230
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p06/screening_progress_v4.json",
+      "sha256": "777d639db9df5769fa48f36841e1e8fb0d0036901639d6901b0902ddd66bd47b",
+      "size_bytes": 3529
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p06/final_artifact_validation_v4.json",
+      "sha256": "284da5f2f6a739358081cc6c0b1f1b12a3dafbfbd18eb305381bd09dd7e56e41",
+      "size_bytes": 7549
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/method_lock_nativeq_legacy_candidate_v5.json",
+      "sha256": "fe51c61b63adb1afe28320ed68770559c808b70a4dd99c3eb943774c2da625a2",
+      "size_bytes": 7847
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p04/nativeq_v3_route_contract_v1.json",
+      "sha256": "962d0aba34484a69fc5f044b711fdab864c3492f6182d65f96a2972155069593",
+      "size_bytes": 5965
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/backend_quality_contract_v1.json",
+      "sha256": "14abab7ca7ad0f48af8856372b3cf97470d405c1e20081cdb4247f3c87b64957",
+      "size_bytes": 4893
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p05/backend_consumer_contract_xfeat_v1.json",
+      "sha256": "7cc27811379148db92937e563ba97f0c8aec7ebcfc49834f9707a4306858ab61",
+      "size_bytes": 8792
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p04/nativeq_v3_route_addendum_v1.md",
+      "sha256": "b9002e335067689528e65c5fb57eb9205d4996993cfc2d00580904e2c20f3b4c",
+      "size_bytes": 5136
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p06/window_selection_quota_repair_v3.md",
+      "sha256": "c13ffcebe54673c4acbaa0f5db6e807f54104437339d7ac2ad12076f28549010",
+      "size_bytes": 3451
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/p06/final_reference_gate_repair_v4.md",
+      "sha256": "913cc373e53b0d577a43b51ca224f77ee6531ad5fe06bd89bc80c728d8581ff6",
+      "size_bytes": 2305
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/evaluator_protocol_v1.md",
+      "sha256": "d3ae583ca799ef423054a5b9ece8b53e0000a8d3bbb1ea8c50121f7a60a40816",
+      "size_bytes": 7036
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/failure_taxonomy_v1.yaml",
+      "sha256": "0a465876e43a6a28a24ad76d06abbdd762b5833ee45eeb5a540b4e7b7066c252",
+      "size_bytes": 1775
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/environment_manifest.txt",
+      "sha256": "c0b5e1795c08e951dbbfc11f08fb5aa05df72ccc40436f2316a447345c75ae1a",
+      "size_bytes": 3617
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/environment_manifest_nativeq_v3_addendum.txt",
+      "sha256": "aee68be5f919e7e920c1440470d4f1b0ba8236dc74586f4e52cf8b53d0fbbd36",
+      "size_bytes": 3113
+    },
+    {
+      "path": "scripts/run_isj_nativeq_contract_guarded_v4.sh",
+      "sha256": "f4bffa30037261c0896bb4fd4f14929bc4445f854ca409ac82b6240ac4706373",
+      "size_bytes": 2217
+    },
+    {
+      "path": "scripts/run_p05_modern_xfeat_baseline_guarded_v2.sh",
+      "sha256": "6af0f33684a717fa8403cf668b03e5f3040592f11e1ccb2e6173cc86742945df",
+      "size_bytes": 4659
+    },
+    {
+      "path": "scripts/audit_whole_lineage_exact_drop_v1.py",
+      "sha256": "bf6ccbf47d3b6b1e4fdad8b9e8b49d17f9545b312ce64970b61ed6c56cdf71b4",
+      "size_bytes": 27756
+    },
+    {
+      "path": "scripts/evaluate_vins_common_support.py",
+      "sha256": "21685f522c484d6cf333595a27b9566c1acd921e2fc0e060381e5749a6c0a8e1",
+      "size_bytes": 27265
+    },
+    {
+      "path": "scripts/build_p06_screening_manifest_v4.py",
+      "sha256": "0a0e48a75b236619b78ac15a61a3919face3683bf8ec00983928dc38d7d892cc",
+      "size_bytes": 11106
+    },
+    {
+      "path": "scripts/validate_p06_final_artifacts_v4.py",
+      "sha256": "35018123fa1693fb0332ad42231b2b4f792fe1c33b104aa11b31a5de38482cf3",
+      "size_bytes": 9335
+    },
+    {
+      "path": "scripts/build_p06_final_freeze_v1.py",
+      "sha256": "ea80c1ddf3fa71c58926f2ea0821c133deb6d819879c69b1dd58dfbfcb722cf3",
+      "size_bytes": 23823
+    },
+    {
+      "path": "scripts/tests/test_p06_final_freeze_v1.py",
+      "sha256": "c4c3f351e6116990701ec524379c9a187fe3de865ef1e889d134cb9f6a59fa61",
+      "size_bytes": 3069
+    }
+  ],
+  "base_candidate_lock_hash": "fe3a91c3c54c3c2ef20de697ca8f04f2b835454bf8e49c4d8179153a16ff0014",
+  "claim_boundary": {
+    "allowed": "A gated learned-seeded persistent frontend is evaluated against strong KLT and modern XFeat baselines under a frozen native-q consumer.",
+    "forbidden": [
+      "learned measurements are uniformly superior to classical features",
+      "detector source has a common-carrier causal effect under frozen v3",
+      "D_legacy removes the complete learned frontend",
+      "development A03 or NTNU results are held-out confirmation"
+    ]
+  },
+  "data_freeze": {
+    "dataset_checksum_manifest": {
+      "path": "papers/ieee_sensors_journal_experiments/dataset_checksum_manifest.txt",
+      "sha256": "8b4715d0e55414bade394935472a2ef6a88132492c96b58edfbe2d6961f1a2e7",
+      "size_bytes": 6924
+    },
+    "selected_unique_input_artifacts": 41
+  },
+  "entrypoints": {
+    "D_legacy_exact_lineage_drop_v3": "scripts/audit_whole_lineage_exact_drop_v1.py",
+    "M_xfeat_pairwise_nativeq_v1": "scripts/run_p05_modern_xfeat_baseline_guarded_v2.sh",
+    "P_legacy_nativeq_xfeat_seedchain_v3": "scripts/run_isj_nativeq_contract_guarded_v4.sh"
+  },
+  "evaluation": {
+    "evaluator": {
+      "path": "papers/ieee_sensors_journal_experiments/evaluator_protocol_v1.md",
+      "sha256": "d3ae583ca799ef423054a5b9ece8b53e0000a8d3bbb1ea8c50121f7a60a40816",
+      "size_bytes": 7036
+    },
+    "failure_taxonomy": {
+      "path": "papers/ieee_sensors_journal_experiments/failure_taxonomy_v1.yaml",
+      "sha256": "0a465876e43a6a28a24ad76d06abbdd762b5833ee45eeb5a540b4e7b7066c252",
+      "size_bytes": 1775
+    },
+    "primary": "G0_common_support_1s_translation_RPE_RMSE",
+    "secondary": "G0_valid_SE3_APE_RMSE"
+  },
+  "execution_freeze": {
+    "algorithmic_replays": 3,
+    "arm_order": {
+      "path": "papers/ieee_sensors_journal_experiments/arm_order.csv",
+      "sha256": "1afc17e256274d86725b146728cca51fd59df1a630e23c2c109a1cec2137c9f4",
+      "size_bytes": 34303
+    },
+    "environment": {
+      "path": "papers/ieee_sensors_journal_experiments/environment_manifest_nativeq_v5_final.txt",
+      "sha256": "3a541136b7b112d5c480139383edd575558e54da61393079ac63260e90a6386b",
+      "size_bytes": 1484
+    },
+    "hard_failure_and_solver_risk": "any_of_3",
+    "minimum_evaluable_replays": 2,
+    "numeric_reducer": "median_over_evaluable_replays",
+    "scientific_unit": "sequence_not_replay"
+  },
+  "held_out_learned_outcome_read": false,
+  "held_out_trajectory_outcome_read": false,
+  "method_lock_hash": "1d032e4d43b2a647626b40cef906144dcceab523126bfee3b345b05b4efb578d",
+  "next_stage": "P07_CONFIRMATORY_FRONTEND_EXPORT_QUEUE",
+  "outcome_boundary": "FROZEN_BEFORE_HELD_OUT_LEARNED_OR_TRAJECTORY_OUTCOME",
+  "p04_route_contract_hash": "b8d673057432b9b9f34f0d41d0a254375ac9d9d930b9ef5d2ee4efb077c5bfeb",
+  "protocol_version": "isj-nativeq-v3-confirmatory-protocol-v1",
+  "quality_contracts": {
+    "M": "4e31a9a29e8ee2198535de6b0bce01550b17077434e8e01ed68057822d4eace4",
+    "P_B1_D": "39eaea6d26e6f5a881ef2b17b898cbda75c7aba8087ce447fe897e2fe0bdfce0",
+    "external_feature_cap": 350,
+    "mapping": "vins_safe_floor0p80_alpha0p65"
+  },
+  "schema_version": "isj-method-lock-nativeq-v3-final-v1",
+  "scientific_method_identity": "UNCHANGED_FROM_NATIVEQ_V3",
+  "selection": {
+    "manifest": {
+      "path": "papers/ieee_sensors_journal_experiments/dataset_manifest_v4.csv",
+      "sha256": "aae68a271e2b9b258a3f91ba18a79eea1f37ab2dc373221be93cac814a493a00",
+      "size_bytes": 7348
+    },
+    "progress": {
+      "path": "papers/ieee_sensors_journal_experiments/p06/screening_progress_v4.json",
+      "sha256": "777d639db9df5769fa48f36841e1e8fb0d0036901639d6901b0902ddd66bd47b",
+      "size_bytes": 3529
+    },
+    "protocol": "isj-window-selection-v4-full-reference",
+    "strata": {
+      "low_or_degraded": 10,
+      "normal": 10
+    },
+    "tiers": {
+      "ABSOLUTE_LOW": 3,
+      "RELATIVE_Q80_FALLBACK": 7,
+      "STRICT_NORMAL": 10
+    },
+    "validation": {
+      "path": "papers/ieee_sensors_journal_experiments/p06/final_artifact_validation_v4.json",
+      "sha256": "284da5f2f6a739358081cc6c0b1f1b12a3dafbfbd18eb305381bd09dd7e56e41",
+      "size_bytes": 7549
+    },
+    "window_audit": {
+      "path": "papers/ieee_sensors_journal_experiments/window_selection_audit_v4.csv",
+      "sha256": "e6da25ed6338deddb85b7b7d6b016668e0a220df8f88554beec52b5e18e226d6",
+      "size_bytes": 90230
+    }
+  },
+  "status": "FROZEN_FOR_P07_CONFIRMATORY_EXECUTION"
+}

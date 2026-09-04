@@ -1,0 +1,10 @@
+extends: formal_loftr_v31_repro_frontend.yaml
+
+hybrid:
+  # Keep confirmed learned/LoFTR tracks source-labelled while LK continues to
+  # track them. This preserves the KLT backbone / learned sidecar separation in
+  # the scheduler and export gates instead of letting confirmed LoFTR silently
+  # become ordinary KLT on the next frame.
+  enable_source_provenance_memory: true
+  source_provenance_learned_hold_frames: 40
+  source_provenance_quality_scale_learned: 0.92

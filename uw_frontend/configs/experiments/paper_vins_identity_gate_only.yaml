@@ -1,0 +1,26 @@
+extends: loftr_extreme_only_frontend.yaml
+
+hybrid:
+  enable_classical_identity_safe_gate: true
+  classical_identity_safe_history_size: 5
+  classical_identity_safe_min_recent_triggers: 2
+  classical_identity_safe_max_grid_coverage: 0.72
+  classical_identity_safe_min_dropout_ratio: 0.30
+  classical_identity_safe_max_frontend_state: 0.87
+  classical_identity_safe_max_track_health: 0.88
+  classical_identity_safe_large_batch: 50
+  classical_identity_safe_min_grid_gain: 0.01
+  classical_identity_safe_max_fraction: 0.30
+  classical_identity_safe_warmup_frames: 12
+
+  # Keep source provenance off for this ablation. Original A09 gains may rely
+  # on recovered tracks becoming normal KLT observations after admission.
+  enable_source_provenance_memory: false
+
+measurement_selection:
+  enabled: false
+
+backend_quality:
+  mode: source_aware
+  floor: 0.80
+  alpha: 0.85

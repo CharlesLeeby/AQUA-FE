@@ -1,0 +1,57 @@
+{
+  "files": {
+    "aquafe_proposed_safe_config": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/vins_aqualoc_archaeo_external.yaml",
+      "sha256": "32dd52cac1ff326240e7ecbafd1394e5858f8eae0e54e64eae25b3dce9257b9c",
+      "size_bytes": 1008
+    },
+    "aquafe_proposed_safe_trajectory": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/vins_output/vio.csv",
+      "sha256": "9535c953fe543201cfd01dc1cd631daa50687fa9e89905b609642fefc1d5d6c0",
+      "size_bytes": 124964
+    },
+    "evaluator": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support.py",
+      "sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110",
+      "size_bytes": 27933
+    },
+    "external_klt_config": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/vins_aqualoc_archaeo_external.yaml",
+      "sha256": "8a00f216e306d3373b7b815b4123934cd62e1f6df106b5ee03eb03d9236026c4",
+      "size_bytes": 945
+    },
+    "external_klt_trajectory": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/vins_output/vio.csv",
+      "sha256": "c4bb08ab3cea8fd509539beb40b36f9c6764f788fcc195c70020dd2c253fc93b",
+      "size_bytes": 124824
+    },
+    "hfnet_bridge": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a06_0000_2460/attempt_001/bridges/hfnet_world_T_body_vins_csv_v1.csv",
+      "sha256": "e460b4d51c40f6bb04068a81dcf74cb050a4192e586fa2def334e76ee9b2227d",
+      "size_bytes": 259978
+    },
+    "reference_bag": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/raw/archaeo06_0000_2460.bag",
+      "sha256": "22cc3cff28dabc34de04c870eed5180ab76832c1f3c912da62d0268e9acb2e9a",
+      "size_bytes": 573420704
+    },
+    "vanilla_origin_config": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/vanilla_origin/vins_aqualoc_archaeo_origin.yaml",
+      "sha256": "8e0860e33b8b017c32a6f203c05a03ce2081cbcb3083fc34b0a0081ef5c7f077",
+      "size_bytes": 980
+    },
+    "vanilla_origin_trajectory": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/vanilla_origin/vins_output/vio.csv",
+      "sha256": "932025ff3a818fcad2880e88c8385022019b4f3d11df8fff8fc0bb7289a9a35a",
+      "size_bytes": 127225
+    }
+  },
+  "formal_gates": {
+    "min_ape_poses": 30,
+    "min_ape_span_s": 10.0,
+    "min_common_coverage": 0.7,
+    "min_rpe_pairs": 10
+  },
+  "schema_version": "aqua-fe-samehistory-common-support-input-manifest-v1",
+  "sequence": "A06"
+}

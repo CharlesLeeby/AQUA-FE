@@ -1,0 +1,52 @@
+{
+  "claims": {
+    "accuracy_measured": false,
+    "hfnet_started": false,
+    "input_materialized": false,
+    "runner_created": false,
+    "system_ranking_supported": false,
+    "trajectory_produced": false
+  },
+  "knowledge_boundary": {
+    "development_results_visible_before_roster_construction": true,
+    "existing_a05_a08_a09_hfnet_artifacts_are_read_only": true,
+    "history_policy": "exact historical positive window, cold start at the first score frame",
+    "natural_history_is_not_the_primary_comparison": true,
+    "scientific_role": "preparation-only input roster for same-window external-system runability checks"
+  },
+  "output_namespace": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_aqualoc_old_positive_coldstart_roster_v1",
+  "profiles": {
+    "a02_7600_8000": {
+      "camera_count": 401,
+      "camera_indices_inclusive": [7600, 8000],
+      "sequence_id": "A02",
+      "source_archive_sha256": "8f6203e0b46068a9d237f03e469acecb5f51eedbd6b7c1dc7c1f980ea6ea6d69"
+    },
+    "a05_3300_3700": {
+      "camera_count": 401,
+      "camera_indices_inclusive": [3300, 3700],
+      "sequence_id": "A05",
+      "source_archive_sha256": "49fc60a27a2da30ab3e3a883badafd43b579406a1fad10de632e175ad18be52c"
+    },
+    "a07_10800_11200": {
+      "camera_count": 401,
+      "camera_indices_inclusive": [10800, 11200],
+      "sequence_id": "A07",
+      "source_archive_sha256": "f201abbe0b5271695b80a4009883e1a588bd4a0057f2a49777649c1f97c5032c"
+    },
+    "a08_4500_4660": {
+      "camera_count": 161,
+      "camera_indices_inclusive": [4500, 4660],
+      "sequence_id": "A08",
+      "source_archive_sha256": "b45e4f6dbf852ff8d7e5c9386e3df2db4daa84d1841f1eafb01a4637d2fe9153"
+    },
+    "a09_6000_6200": {
+      "camera_count": 201,
+      "camera_indices_inclusive": [6000, 6200],
+      "sequence_id": "A09",
+      "source_archive_sha256": "4d20237571928067cfe4dbb813224cfd2277270c424a6ef97ef50d2933da2901"
+    }
+  },
+  "schema_version": "aqua-fe-hfnet-v6-aqualoc-old-positive-coldstart-roster-v1",
+  "status": "PROSPECTIVE_PREPARATION_ONLY_NO_RUN_AUTHORITY"
+}

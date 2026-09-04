@@ -1,0 +1,334 @@
+{
+  "analysis_state": "TERMINAL_DEVELOPMENT_ONLY",
+  "claim_boundary": {
+    "accuracy_evaluated": false,
+    "development_only": true,
+    "fair_head_to_head": false,
+    "formal_paper_claim_authorized": false,
+    "ranking_computed": false,
+    "runability_only": true,
+    "significance_testing_performed": false,
+    "superiority_claimed": false
+  },
+  "cold_start_history_sensitivity_diagnostics": [
+    {
+      "accuracy": {
+        "state": "UNAVAILABLE_SYSTEM_UNUSABLE",
+        "value": null
+      },
+      "cold_start_score_indices_inclusive": [
+        2210,
+        2460
+      ],
+      "diagnostic_role": "HISTORY_SENSITIVITY_ONLY_NOT_A_NATURAL_HISTORY_TABLE_ROW",
+      "execution": {
+        "invocations": 1,
+        "raw_returncode": -15,
+        "retry_performed": false,
+        "timed_out": true
+      },
+      "keyframe_count": 0,
+      "result_identity": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a06_2210_2460_coldstart/attempt_001/run_result.json",
+        "sha256": "b4c2496467fa9d914918ffe87645f0bbb55917a220c0a2ea343b1565d952e39c",
+        "size_bytes": 4083
+      },
+      "terminal_status": "FAIL_EXPLORATORY_COLDSTART_USABILITY",
+      "trajectory_pose_count": 0,
+      "window_id": "A06"
+    },
+    {
+      "accuracy": {
+        "state": "UNAVAILABLE_SYSTEM_UNUSABLE",
+        "value": null
+      },
+      "cold_start_score_indices_inclusive": [
+        2400,
+        2800
+      ],
+      "diagnostic_role": "HISTORY_SENSITIVITY_ONLY_NOT_A_NATURAL_HISTORY_TABLE_ROW",
+      "execution": {
+        "invocations": 1,
+        "raw_returncode": -15,
+        "retry_performed": false,
+        "timed_out": false
+      },
+      "keyframe_count": 0,
+      "result_identity": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a10_2400_2800_coldstart/attempt_001/run_result.json",
+        "sha256": "45679325dae5bfca18a0e11586c7c2626057617afd555e91feca1871f4fc29b6",
+        "size_bytes": 4537
+      },
+      "terminal_status": "FAIL_EXPLORATORY_COLDSTART_ZERO_KEYFRAMES",
+      "trajectory_pose_count": 0,
+      "window_id": "A10"
+    },
+    {
+      "accuracy": {
+        "state": "UNAVAILABLE_SYSTEM_UNUSABLE",
+        "value": null
+      },
+      "cold_start_score_indices_inclusive": [
+        4000,
+        4400
+      ],
+      "diagnostic_role": "HISTORY_SENSITIVITY_ONLY_NOT_A_NATURAL_HISTORY_TABLE_ROW",
+      "execution": {
+        "invocations": 1,
+        "raw_returncode": -15,
+        "retry_performed": false,
+        "timed_out": false
+      },
+      "keyframe_count": 0,
+      "result_identity": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_4000_4400_coldstart/attempt_001/run_result.json",
+        "sha256": "e6a0ef87e456dc99552b04b5ae00c016bd83302c8c979c57c2c7a5288b988f05",
+        "size_bytes": 4536
+      },
+      "terminal_status": "FAIL_EXPLORATORY_COLDSTART_ZERO_KEYFRAMES",
+      "trajectory_pose_count": 0,
+      "window_id": "A09"
+    }
+  ],
+  "descriptive_counts": {
+    "planned_natural_history_windows": 3,
+    "runability_pass_count": 3,
+    "terminal_natural_history_windows": 3
+  },
+  "generated_at_utc": "2026-08-25T13:15:51+00:00",
+  "natural_history_windows": [
+    {
+      "accuracy": {
+        "state": "NOT_EVALUATED",
+        "value": null
+      },
+      "execution": {
+        "invocations": 1,
+        "raw_returncode": 0,
+        "retry_performed": false,
+        "timed_out": false
+      },
+      "feed_indices_inclusive": [
+        0,
+        2460
+      ],
+      "history_events": {
+        "init_frame_ids": [
+          0
+        ],
+        "parse_complete": true,
+        "reset_count_before_score": 0,
+        "score_window_init_frame_ids": [],
+        "score_window_reset_count": 0,
+        "source": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a06_0000_2460/attempt_001/headless.stdout.log",
+          "sha256": "1f03cf3e23c27e6263877af9cc3c85fed901c977b61374c06062b9db65f68969",
+          "size_bytes": 3360
+        }
+      },
+      "history_mode": "NATURAL_HISTORY_FROM_FRAME_0",
+      "result_identity": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a06_0000_2460/attempt_001/run_result.json",
+        "sha256": "2b9640fbc206f11db8e5a90d74f8c57214ae0912a3608263e9d3ddc23686441b",
+        "size_bytes": 161265
+      },
+      "runability_passed": true,
+      "score_indices_inclusive": [
+        2210,
+        2460
+      ],
+      "selection_role": "DEVELOPMENT_RESULT_CONDITIONED_KLT_POSITIVE_WINDOW",
+      "sequence": "AQUALOC archaeology_sequence_06",
+      "support": {
+        "full_keyframe_count": 268,
+        "full_pose_count": 2457,
+        "keyframe_identity": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a06_0000_2460/attempt_001/result/trajectory_keyframe.txt",
+          "sha256": "9bb7b96df11ca2cf354c5ca75ce25dd1d0631d320d6c44b7e0cbfaa9556b52db",
+          "size_bytes": 30970
+        },
+        "preroll_to_score_boundary_continuous": true,
+        "score_camera_count": 251,
+        "score_coverage_fraction": 1.0,
+        "score_keyframe_count": 27,
+        "score_pose_count": 251,
+        "trajectory_identity": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a06_0000_2460/attempt_001/result/trajectory.txt",
+          "sha256": "72cbd969ec645ea0b5f527c9b1a404fd4e4176a9475819a054b2dd553d027460",
+          "size_bytes": 277177
+        }
+      },
+      "terminal_status": "PASS_EXPLORATORY_UNDERWATER_USABILITY",
+      "window_id": "A06"
+    },
+    {
+      "accuracy": {
+        "state": "NOT_EVALUATED",
+        "value": null
+      },
+      "execution": {
+        "invocations": 1,
+        "raw_returncode": 0,
+        "retry_performed": false,
+        "timed_out": false
+      },
+      "feed_indices_inclusive": [
+        0,
+        2800
+      ],
+      "history_events": {
+        "init_frame_ids": [
+          0,
+          105,
+          243,
+          419,
+          497,
+          560,
+          717,
+          882,
+          1122,
+          1231,
+          1405,
+          1471,
+          1537,
+          1705,
+          1774,
+          1854,
+          1927,
+          2032,
+          2092,
+          2152,
+          2172,
+          2230,
+          2355
+        ],
+        "parse_complete": true,
+        "reset_count_before_score": 22,
+        "score_window_init_frame_ids": [],
+        "score_window_reset_count": 0,
+        "source": "score_adjudication.runtime_log"
+      },
+      "history_mode": "NATURAL_HISTORY_FROM_FRAME_0",
+      "result_identity": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a10_0000_2800_score_2400_2800_warmstart/attempt_001/run_result.json",
+        "sha256": "88c340849adcc60985711dedd499c74db36e36b3ac103768bc3aa0d615372a46",
+        "size_bytes": 21463
+      },
+      "runability_passed": true,
+      "score_indices_inclusive": [
+        2400,
+        2800
+      ],
+      "selection_role": "DEVELOPMENT_RESULT_CONDITIONED_KLT_POSITIVE_WINDOW",
+      "sequence": "AQUALOC archaeology_sequence_10",
+      "support": {
+        "full_keyframe_count": 34,
+        "full_pose_count": 444,
+        "keyframe_identity": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a10_0000_2800_score_2400_2800_warmstart/attempt_001/result/trajectory_keyframe.txt",
+          "sha256": "b2d4edc550a6bf754bcda1baaee98b1a89b22dd7044dc5ac00d235fc8b24bda0",
+          "size_bytes": 3947
+        },
+        "preroll_to_score_boundary_continuous": true,
+        "score_camera_count": 401,
+        "score_coverage_fraction": 1.0,
+        "score_keyframe_count": 30,
+        "score_pose_count": 401,
+        "trajectory_identity": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a10_0000_2800_score_2400_2800_warmstart/attempt_001/result/trajectory.txt",
+          "sha256": "4080682d034ab1c18997ae913a49cd26b78df39eb5768224d52216baf8218dde",
+          "size_bytes": 50429
+        }
+      },
+      "terminal_status": "PASS_DEVELOPMENT_RUNABILITY_RESCUE",
+      "window_id": "A10"
+    },
+    {
+      "accuracy": {
+        "state": "NOT_EVALUATED",
+        "value": null
+      },
+      "execution": {
+        "invocations": 1,
+        "raw_returncode": 0,
+        "retry_performed": false,
+        "timed_out": false
+      },
+      "feed_indices_inclusive": [
+        0,
+        4400
+      ],
+      "history_events": {
+        "init_frame_ids": [
+          0,
+          124,
+          351,
+          492,
+          694,
+          757,
+          867,
+          933,
+          961,
+          1105,
+          1268,
+          1606,
+          1771,
+          1882,
+          1944,
+          2097,
+          2199,
+          2358,
+          2506,
+          2557,
+          2625,
+          2699,
+          2853,
+          2905,
+          3175,
+          3240
+        ],
+        "parse_complete": true,
+        "reset_count_before_score": 25,
+        "score_window_init_frame_ids": [],
+        "score_window_reset_count": 0,
+        "source": "score_adjudication.runtime_log"
+      },
+      "history_mode": "NATURAL_HISTORY_FROM_FRAME_0",
+      "result_identity": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/run_result.json",
+        "sha256": "a0b03e41ac96c8e07d63325fdfc67d5292fc0c6c4b2debb3c6a40817a1d62fa7",
+        "size_bytes": 23846
+      },
+      "runability_passed": true,
+      "score_indices_inclusive": [
+        4000,
+        4400
+      ],
+      "selection_role": "DEVELOPMENT_RESULT_CONDITIONED_KLT_POSITIVE_WINDOW",
+      "sequence": "AQUALOC archaeology_sequence_9",
+      "support": {
+        "full_keyframe_count": 62,
+        "full_pose_count": 1154,
+        "keyframe_identity": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/result/trajectory_keyframe.txt",
+          "sha256": "2966adde9aec14f17d8ec988dc8f8861c1bc601fdd9d192c0db26334cab9762c",
+          "size_bytes": 7140
+        },
+        "preroll_to_score_boundary_continuous": true,
+        "score_camera_count": 401,
+        "score_coverage_fraction": 1.0,
+        "score_keyframe_count": 33,
+        "score_pose_count": 401,
+        "trajectory_identity": {
+          "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/result/trajectory.txt",
+          "sha256": "a90bbac6b3ec2c5fc660c6fea666a9bd0c13652e727743d64cc37faf0933097f",
+          "size_bytes": 130393
+        }
+      },
+      "terminal_status": "PASS_DEVELOPMENT_RUNABILITY_RESCUE",
+      "window_id": "A09"
+    }
+  ],
+  "pending_window": null,
+  "schema_version": "aqua-fe-hfnet-positive-natural-history-runability-summary-v1"
+}

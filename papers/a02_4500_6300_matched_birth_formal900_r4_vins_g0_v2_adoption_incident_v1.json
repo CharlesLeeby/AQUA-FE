@@ -1,0 +1,239 @@
+{
+  "builder_execution_contract": {
+    "active_same_uid_namespace_adversary_out_of_scope": true,
+    "authorized_write_once_argv": [
+      "/usr/bin/python3.8",
+      "-I",
+      "-B",
+      "-c",
+      "import ctypes,errno,hashlib,os,re,stat,sys\np=sys.argv[1]\nh=sys.argv[2]\na=sys.argv[3:]\nif len(sys.argv)!=11 or a[0]!='--action' or a[1]!='write-once' or a[2]!='--successor-governor-sha256' or re.fullmatch(r'[0-9a-f]{64}',a[3]) is None or a[4]!='--successor-governor-size-bytes' or re.fullmatch(r'[1-9][0-9]*',a[5]) is None or a[6]!='--v2-job-hash' or re.fullmatch(r'[0-9a-f]{64}',a[7]) is None or not os.path.isabs(p) or os.path.normpath(p)!=p or os.path.realpath(p)!=p:\n raise RuntimeError('incident builder carrier arguments differ')\nf=os.open(p,os.O_RDONLY|os.O_CLOEXEC|getattr(os,'O_NOFOLLOW',0))\ntry:\n before=os.fstat(f)\n if not stat.S_ISREG(before.st_mode) or before.st_nlink!=1:\n  raise RuntimeError('incident builder source is not direct regular')\n chunks=[]\n offset=0\n while offset<before.st_size:\n  chunk=os.pread(f,min(1048576,before.st_size-offset),offset)\n  if not chunk:\n   raise RuntimeError('incident builder source short read')\n  chunks.append(chunk)\n  offset+=len(chunk)\n data=b''.join(chunks)\n after=os.fstat(f)\n named=os.lstat(p)\n key=lambda x:(x.st_dev,x.st_ino,x.st_mode,x.st_nlink,x.st_uid,x.st_gid,x.st_size,x.st_mtime_ns,x.st_ctime_ns)\n if key(before)!=key(after) or key(before)!=key(named) or hashlib.sha256(data).hexdigest()!=h:\n  raise RuntimeError('incident builder source identity/hash differs')\n code=compile(data,p,'exec',dont_inherit=True)\n binding={'fd':f,'source_bytes':data,'stat_identity':key(before),'sha256':h,'code':code,'carrier_source':sys.argv[0]}\n namespace=globals()\n namespace.update({'__name__':'__main__','__file__':p,'__package__':None,'__spec__':None,'__loader__':None,'__cached__':None,'_AQUAFE_INCIDENT_CARRIER_BINDING':binding})\n sys.argv=[p,*a]\n outcome=None\n try:\n  exec(code,namespace,namespace)\n except SystemExit as caught:\n  outcome=caught\nfinally:\n os.close(f)\nif outcome is not None:\n code_value=outcome.code\n if code_value is None:\n  code_value=0\n if type(code_value) is not int or code_value==0:\n  raise RuntimeError('incident builder caught SystemExit is not clean success')\n raise outcome\nif namespace.get('_AQUAFE_INCIDENT_CLEAN_SUCCESS')!={'action':'write-once','exit_code':0}:\n raise RuntimeError('incident builder clean completion sentinel differs')\ncommit=namespace.get('_AQUAFE_INCIDENT_FINAL_COMMIT')\nif not isinstance(commit,dict) or set(commit)!={'path','pending_path','content','sha256','mode','required_records','required_absent','required_sibling_namespaces'}:\n raise RuntimeError('incident builder final commit differs')\npath=commit['path']\npending_path=commit['pending_path']\ncontent=commit['content']\nif not isinstance(path,str) or not os.path.isabs(path) or os.path.normpath(path)!=path or os.path.realpath(os.path.dirname(path))!=os.path.dirname(path) or pending_path!=os.path.join(os.path.dirname(path),'.'+os.path.basename(path)+'.pending_v1') or not isinstance(content,bytes) or commit['sha256']!=hashlib.sha256(content).hexdigest() or commit['mode']!=0o444:\n raise RuntimeError('incident builder final commit identity differs')\nrecords=commit['required_records']\nif not isinstance(records,list) or not records:\n raise RuntimeError('incident builder final authority is empty')\nheld=[]\ndef hold_parent(parent):\n if not isinstance(parent,str) or not os.path.isabs(parent) or os.path.normpath(parent)!=parent:\n  raise RuntimeError('incident builder held parent path differs')\n flags=os.O_RDONLY|os.O_DIRECTORY|os.O_CLOEXEC|getattr(os,'O_NOFOLLOW',0)\n current=os.open('/',flags)\n held.append(current)\n root_stat=os.fstat(current)\n chain=[('',(root_stat.st_dev,root_stat.st_ino))]\n for part in [item for item in parent.split('/') if item]:\n  child=os.open(part,flags,dir_fd=current)\n  held.append(child)\n  info=os.fstat(child)\n  if not stat.S_ISDIR(info.st_mode):\n   raise RuntimeError('incident builder held parent is not a directory')\n  chain.append((part,(info.st_dev,info.st_ino)))\n  current=child\n return current,chain\ndef validate_chain(chain):\n flags=os.O_RDONLY|os.O_DIRECTORY|os.O_CLOEXEC|getattr(os,'O_NOFOLLOW',0)\n current=os.open('/',flags)\n try:\n  root_stat=os.fstat(current)\n  if (root_stat.st_dev,root_stat.st_ino)!=chain[0][1]:\n   raise RuntimeError('incident builder filesystem root drifted')\n  for part,identity in chain[1:]:\n   child=os.open(part,flags,dir_fd=current)\n   os.close(current)\n   current=child\n   info=os.fstat(current)\n   if (info.st_dev,info.st_ino)!=identity:\n    raise RuntimeError('incident builder held ancestor is unreachable')\n finally:\n  os.close(current)\nrecord_holds=[]\nfor record in records:\n if not isinstance(record,dict) or set(record)!={'path','size_bytes','sha256','device_id','inode','uid','mode_octal','nlink'}:\n  raise RuntimeError('incident builder final authority record differs')\n rp=record['path']\n if not isinstance(rp,str) or not os.path.isabs(rp) or os.path.normpath(rp)!=rp:\n  raise RuntimeError('incident builder final authority path differs')\n parent_fd,chain=hold_parent(os.path.dirname(rp))\n name=os.path.basename(rp)\n rf=os.open(name,os.O_RDONLY|os.O_CLOEXEC|getattr(os,'O_NOFOLLOW',0),dir_fd=parent_fd)\n held.append(rf)\n rs=os.fstat(rf)\n chunks=[]\n offset=0\n while offset<rs.st_size:\n  chunk=os.pread(rf,min(1048576,rs.st_size-offset),offset)\n  if not chunk:\n   raise RuntimeError('incident builder final authority short read')\n  chunks.append(chunk)\n  offset+=len(chunk)\n data=b''.join(chunks)\n named=os.stat(name,dir_fd=parent_fd,follow_symlinks=False)\n if key(rs)!=key(named) or not stat.S_ISREG(rs.st_mode) or rs.st_nlink!=1 or rs.st_size!=record['size_bytes'] or hashlib.sha256(data).hexdigest()!=record['sha256'] or rs.st_dev!=record['device_id'] or rs.st_ino!=record['inode'] or rs.st_uid!=record['uid'] or format(stat.S_IMODE(rs.st_mode),'04o')!=record['mode_octal'] or rs.st_nlink!=record['nlink']:\n  raise RuntimeError('incident builder final authority identity differs')\n record_holds.append((parent_fd,chain,name,rf,key(rs),data))\nabsent=commit['required_absent']\nif not isinstance(absent,list) or not absent:\n raise RuntimeError('incident builder final absence authority differs')\nabsence_holds=[]\nfor item in absent:\n if not isinstance(item,str) or not os.path.isabs(item) or os.path.normpath(item)!=item:\n  raise RuntimeError('incident builder final absence path differs')\n parent_fd,chain=hold_parent(os.path.dirname(item))\n name=os.path.basename(item)\n try:\n  os.stat(name,dir_fd=parent_fd,follow_symlinks=False)\n except FileNotFoundError:\n  pass\n else:\n  raise RuntimeError('incident builder final absence authority differs')\n absence_holds.append((item,parent_fd,chain,name))\nif path not in absent or pending_path not in absent:\n raise RuntimeError('incident builder output/pending absence differs')\nsibling_contracts=commit['required_sibling_namespaces']\nif not isinstance(sibling_contracts,list) or len(sibling_contracts)!=2:\n raise RuntimeError('incident builder sibling namespace contract differs')\nsibling_holds=[]\nfor index,item in enumerate(sibling_contracts):\n if not isinstance(item,dict) or set(item)!={'parent','basename','allowed_names'}:\n  raise RuntimeError('incident builder sibling namespace shape differs')\n sibling_parent=item['parent']\n basename=item['basename']\n allowed=item['allowed_names']\n expected_basename=('formal900_r4_xfeatbirth_vs_gfttbirth_r1' if index==0 else 'formal900_r4_xfeatbirth_vs_gfttbirth_r2')\n expected_hash=('c51e1b38696ca936' if index==0 else a[7][:16])\n expected_prefix='.'+expected_basename+'.'+expected_hash\n expected_names=sorted([expected_prefix+'.staging',expected_prefix+'.publication_intent_v1.json',expected_prefix+'.publication_closeout_v1.json'])\n if basename!=expected_basename or allowed!=expected_names or not isinstance(sibling_parent,str) or not os.path.isabs(sibling_parent) or os.path.normpath(sibling_parent)!=sibling_parent:\n  raise RuntimeError('incident builder sibling namespace authority differs')\n sibling_fd,sibling_chain=hold_parent(sibling_parent)\n sibling_holds.append((sibling_fd,sibling_chain,basename,set(allowed)))\ndef validate_siblings():\n for sibling_fd,sibling_chain,basename,allowed in sibling_holds:\n  validate_chain(sibling_chain)\n  observed={entry.name for entry in os.scandir(sibling_fd) if entry.name.startswith('.'+basename+'.') and (entry.name.endswith('.staging') or entry.name.endswith('.publication_intent_v1.json') or entry.name.endswith('.publication_closeout_v1.json'))}\n  if observed-allowed:\n   raise RuntimeError('incident builder unexpected publication sibling')\nvalidate_siblings()\nparent=os.path.dirname(path)\nname=os.path.basename(path)\nd,output_chain=hold_parent(parent)\npending_name=os.path.basename(pending_path)\nleaf=os.open('.',os.O_RDWR|os.O_CLOEXEC|getattr(os,'O_TMPFILE',0),0o600,dir_fd=d)\nheld.append(leaf)\noffset=0\nwhile offset<len(content):\n wrote=os.write(leaf,content[offset:])\n if wrote<=0:\n  raise RuntimeError('incident builder final commit short write')\n offset+=wrote\nos.fsync(leaf)\nos.fchmod(leaf,0o444)\nos.fsync(leaf)\n# Link the exact held anonymous inode under a hidden, preregistered name and\n# fsync that durable directory entry before the final atomic rename.\nlibc=ctypes.CDLL(None,use_errno=True)\nlinkat=getattr(libc,'linkat',None)\nrenameat2=getattr(libc,'renameat2',None)\nif linkat is None or renameat2 is None:\n raise RuntimeError('incident builder strict link/rename primitives unavailable')\nlinkat.argtypes=[ctypes.c_int,ctypes.c_char_p,ctypes.c_int,ctypes.c_char_p,ctypes.c_int]\nlinkat.restype=ctypes.c_int\nrenameat2.argtypes=[ctypes.c_int,ctypes.c_char_p,ctypes.c_int,ctypes.c_char_p,ctypes.c_uint]\nrenameat2.restype=ctypes.c_int\nif linkat(leaf,b'',d,os.fsencode(pending_name),0x1000)!=0:\n first_errno=ctypes.get_errno()\n proc_source=os.fsencode('/proc/self/fd/'+str(leaf))\n if linkat(-100,proc_source,d,os.fsencode(pending_name),0x400)!=0:\n  raise RuntimeError('incident builder hidden inode link failed errno='+str(first_errno)+'/'+str(ctypes.get_errno()))\nos.fsync(d)\n# Revalidate every retained authority and ancestor at the linearization edge.\nfor parent_fd,chain,record_name,rf,token,data in record_holds:\n validate_chain(chain)\n current=os.fstat(rf)\n reachable=os.stat(record_name,dir_fd=parent_fd,follow_symlinks=False)\n if key(current)!=token or key(reachable)!=token or os.pread(rf,len(data)+1,0)!=data:\n  raise RuntimeError('incident builder final retained authority drifted')\nfor item,parent_fd,chain,absent_name in absence_holds:\n validate_chain(chain)\n if item in {path,pending_path}:\n  continue\n try:\n  os.stat(absent_name,dir_fd=parent_fd,follow_symlinks=False)\n except FileNotFoundError:\n  pass\n else:\n  raise RuntimeError('incident builder final retained absence drifted')\nvalidate_chain(output_chain)\nls=os.fstat(leaf)\nnamed=os.stat(pending_name,dir_fd=d,follow_symlinks=False)\nif key(ls)!=key(named) or not stat.S_ISREG(ls.st_mode) or ls.st_nlink!=1 or stat.S_IMODE(ls.st_mode)!=0o444 or os.pread(leaf,len(content)+1,0)!=content:\n raise RuntimeError('incident builder precommit publication differs')\nvalidate_siblings()\n# The no-replace rename is the commit linearization point.  The exact held\n# inode is already complete, 0444, file-fsynced, hidden-linked and dir-fsynced;\n# no fallible Python operation follows a successful rename.\nif renameat2(d,os.fsencode(pending_name),d,os.fsencode(name),1)!=0:\n code=ctypes.get_errno()\n if code in {errno.EEXIST,errno.ENOTEMPTY}:\n  raise RuntimeError('incident builder canonical namespace already consumed')\n raise RuntimeError('incident builder final atomic rename failed errno='+str(code))\nos._exit(0)\n",
+      "/home/ma/AQUA-FE_WS/scripts/build_a02_matched_birth_r4_vins_g0_probe_stderr_incident_v1.py",
+      "1880aa77df0f02fbca55c17393f261ed2b6e1a9c22c2d23e64150ea17d73776f",
+      "--action",
+      "write-once",
+      "--successor-governor-sha256",
+      "8c738362a7aee9adacd22c182a330a16df7c08ce253b36b2643e6451718c0fb9",
+      "--successor-governor-size-bytes",
+      "296051",
+      "--v2-job-hash",
+      "48f29b21b4e9d31409a15fcf93458bc1309fb8a5b5d674c1d90d349f8ab862b2"
+    ],
+    "builder_process_is_publication_control_plane_only": true,
+    "commit_linearization": "O_TMPFILE_HIDDEN_LINK_FSYNC_RENAMEAT2_NOREPLACE",
+    "environment": {
+      "HOME": "/home/ma",
+      "LANG": "C.UTF-8",
+      "LC_ALL": "C.UTF-8",
+      "LOGNAME": "ma",
+      "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONHASHSEED": "0",
+      "PYTHONNOUSERSITE": "1",
+      "SHELL": "/bin/bash",
+      "USER": "ma"
+    },
+    "publication": "O_TMPFILE_HELD_INODE_0444_FILE_FSYNC_HIDDEN_LINK_DIR_FSYNC_RENAMEAT2_NOREPLACE",
+    "scientific_evaluator_detector_vins_process_start_count": 0,
+    "working_directory": "/home/ma/AQUA-FE_WS"
+  },
+  "builder_identity": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/build_a02_matched_birth_r4_vins_g0_probe_stderr_incident_v1.py",
+    "sha256": "1880aa77df0f02fbca55c17393f261ed2b6e1a9c22c2d23e64150ea17d73776f",
+    "size_bytes": 62774
+  },
+  "claim_boundary": {
+    "scientific_outcome_claimed": false,
+    "v1_failure_receipt_reconstructed": false,
+    "v1_freeze_pass_claimed": false,
+    "v1_stdout_or_stderr_content_claimed": false,
+    "v2_is_additive_post_incident_exploratory": true
+  },
+  "human_record": {
+    "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_g0_v2_adoption_incident_v1.md",
+    "sha256": "9c0fbba0635ba0c047d06ab11264e7904b350b71d8163d18599984e792d043a1",
+    "size_bytes": 4242
+  },
+  "incident_class": "RUNTIME_PROBE_STDERR_GATE_FAILURE_RECEIPT_FALSE_NEGATIVE",
+  "incident_hash": "791ce7d3736570806d74128485f6f211e9e8f3859ca4b88c9b38f7235eb1050e",
+  "outcome_firewall": {
+    "arm_relative_result_available_to_builder": false,
+    "result_conditioned_successor_selection": false,
+    "trajectory_values_read_or_recorded": false,
+    "vio_metric_files_read": false
+  },
+  "retained_code_authorities": {
+    "backend": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/p07_backend_replay_common_v1.py",
+      "sha256": "930fa2934d28155c3c063908afd151d80f5545e67aca3a135d405c87b4c683f0",
+      "size_bytes": 138671
+    },
+    "backend_evaluation": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/p07_backend_evaluation_v1.py",
+      "sha256": "d4c34bb87a6b70aade822ce40627d3014bdbec90013e062a2df6941630f054e4",
+      "size_bytes": 42206
+    },
+    "child_bootstrap": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/formal_g0_child_bootstrap_v1.py",
+      "sha256": "331d687f6249a3b7a87898237c542948beb456f8942f59531fa6f63875faeeb5",
+      "size_bytes": 80068
+    },
+    "formal_io": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/p07_backend_formal_io_v1.py",
+      "sha256": "ca6cefc3f3b959dce69f887bab8dbae2a391b90acf58bff1a2ee7412ba846876",
+      "size_bytes": 21016
+    },
+    "p07_governance": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/p07_g0_governance_v1.py",
+      "sha256": "d0063c06eaf1267e4da0e9847ce432048d239eef6699e0b2a1178da6e5c340c3",
+      "size_bytes": 138170
+    },
+    "retained_publisher": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/p07_g0_publisher_v1.py",
+      "sha256": "97bd0b37a8c5c282f65f14a8a8fe05716f67bc88d378bf54e6640ce23baa0b3b",
+      "size_bytes": 116515
+    },
+    "runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_p07_g0_evaluation_v1.py",
+      "sha256": "5321688f65e5c2556858962571082c0662e8024bf332ce1c32e2fa8d0acc1213",
+      "size_bytes": 35196
+    },
+    "v1_governor": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/govern_matched_birth_r4_vins_g0_v1.py",
+      "sha256": "afe10ee7ab413163be0ed208c6d62b7f906327b316a5e46bc9ec2aa882579de0",
+      "size_bytes": 233604
+    }
+  },
+  "retained_v1_evidence": {
+    "failure_receipt_missing": true,
+    "intent_semantics": {
+      "attempt_count": 1,
+      "authorized_process_start_count": 1,
+      "no_retry_after_pending_evidence": true,
+      "status": "DURABLE_RUNTIME_PROBE_LAUNCH_PENDING_NO_RETRY"
+    },
+    "required_absences": [
+      "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_freeze_v1.json",
+      "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_failure_receipt_v1.json",
+      "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r1",
+      "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_seal_v1.json",
+      "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r1.c51e1b38696ca936.staging",
+      "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r1.c51e1b38696ca936.publication_intent_v1.json",
+      "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r1.c51e1b38696ca936.publication_closeout_v1.json"
+    ],
+    "runtime_probe_launch_intent": {
+      "device_id": 66312,
+      "inode": 6074562,
+      "mode_octal": "0644",
+      "nlink": 1,
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_launch_intent_v1.json",
+      "sha256": "d433ce9e5be085efc8854d60b2e34279c9f8e5dc3953e400e89751b53fdcba0a",
+      "size_bytes": 3626,
+      "uid": 1000
+    },
+    "stderr_bytes_recoverable": false,
+    "stdout_bytes_recoverable": false
+  },
+  "schema_version": "aqua-fe-matched-birth-r4-vins-g0-probe-stderr-incident-adoption-v1",
+  "scientific_role": "POST_INCIDENT_INFRASTRUCTURE_RECOVERY_NO_OUTCOME_SELECTION",
+  "static_control_flow_diagnosis": {
+    "authority": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/govern_matched_birth_r4_vins_g0_v1.py",
+      "sha256": "afe10ee7ab413163be0ed208c6d62b7f906327b316a5e46bc9ec2aa882579de0",
+      "size_bytes": 233604
+    },
+    "classification": "MECHANICALLY_CHECKED_STATIC_CONTROL_FLOW_DEFECT",
+    "facts": [
+      "capture_returns_before_late_freeze_runtime_static_validation",
+      "failure_receipt_backfill_is_scoped_inside_capture",
+      "late_nonempty_stderr_rejection_is_outside_that_backfill_scope"
+    ],
+    "operator_observed_unsealed_diagnostic": {
+      "classification": "OPERATOR_OBSERVED_UNSEALED_NOT_ORIGINAL_STREAM_BYTES",
+      "roslz4_explanation": "INFERENCE_ONLY_NOT_A_V1_BYTE_CLAIM",
+      "text": "runtime probe emitted stderr"
+    }
+  },
+  "status": "ADOPTED_CONSUMED_V1_PROBE_INTENT_FOR_ONE_REPAIRED_V2_NAMESPACE",
+  "successor_authorization": {
+    "all_other_stderr_is_terminal_failure": true,
+    "authorized_action_sequence": [
+      "write-freeze",
+      "check-start",
+      "run",
+      "seal-post",
+      "check-post"
+    ],
+    "authorized_successor_evaluation_namespace_count": 1,
+    "detector_or_feature_export_rerun_authorized": false,
+    "exact_namespace": {
+      "freeze": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_freeze_v2.json",
+      "incident": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_g0_v2_adoption_incident_v1.json",
+      "post": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_seal_v2.json",
+      "probe_failure": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_failure_receipt_v2.json",
+      "probe_intent": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_launch_intent_v2.json",
+      "probe_success": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_success_closeout_v2.json",
+      "publication_closeout": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.publication_closeout_v1.json",
+      "publication_intent": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.publication_intent_v1.json",
+      "result": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r2",
+      "staging": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.staging"
+    },
+    "failure_receipt_is_best_effort_additive_not_retry_authority": true,
+    "old_v1_namespace_retry_or_mutation_authorized": false,
+    "scientific_or_evaluation_contract_change_authorized": false,
+    "sole_governor": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/govern_matched_birth_r4_vins_g0_v2.py",
+      "sha256": "8c738362a7aee9adacd22c182a330a16df7c08ce253b36b2643e6451718c0fb9",
+      "size_bytes": 296051
+    },
+    "stderr_allowlist_for_future_v2_probe": [
+      {
+        "meaning": "EMPTY_STDERR",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size_bytes": 0
+      },
+      {
+        "meaning": "EXACT_PREREGISTERED_ROSLZ4_WARNING_ONLY",
+        "sha256": "857f79ad98b5d842b860470a6675d7aeaa1d7ad4a7181b1c3966e7e9bd9c3fff",
+        "size_bytes": 88
+      }
+    ],
+    "success_closeout_required_before_later_actions": true,
+    "successor_namespace_contract": {
+      "closeout": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.publication_closeout_v1.json",
+      "destination": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/formal900_r4_xfeatbirth_vs_gfttbirth_r2",
+      "freeze": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_freeze_v2.json",
+      "intent": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.publication_intent_v1.json",
+      "job_hash": "48f29b21b4e9d31409a15fcf93458bc1309fb8a5b5d674c1d90d349f8ab862b2",
+      "job_id": "matched_birth_r4_vins_g0_v2",
+      "post": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_seal_v2.json",
+      "probe_failure": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_failure_receipt_v2.json",
+      "probe_intent": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_launch_intent_v2.json",
+      "probe_success": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_matched_birth_formal900_r4_vins_runtime_probe_success_closeout_v2.json",
+      "schema_version": "aqua-fe-matched-birth-r4-vins-g0-v2-incident-namespace-contract-v1",
+      "staging": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/.formal900_r4_xfeatbirth_vs_gfttbirth_r2.48f29b21b4e9d314.staging",
+      "successor_governor": {
+        "path": "scripts/govern_matched_birth_r4_vins_g0_v2.py",
+        "sha256": "8c738362a7aee9adacd22c182a330a16df7c08ce253b36b2643e6451718c0fb9",
+        "size_bytes": 296051
+      }
+    },
+    "terminal_evidence_boundary": {
+      "coverage": "FAIL_CLOSED_BY_VISIBLE_INTENT_WITHOUT_EXACT_SUCCESS_CLOSEOUT;RECEIPT_ONLY_WHEN_PARENT_OBSERVES_AND_COMMIT_SUCCEEDS",
+      "failure_receipt_durability_unconditional_claimed": false,
+      "failure_receipt_io_failure_fallback": "VISIBLE_INTENT_ALONE_CONSUMES_NAMESPACE_NO_RETRY",
+      "unobservable_or_uncommittable_exclusions": [
+        "SIGKILL",
+        "SIGSTOP",
+        "PROCESS_CRASH",
+        "POWER_LOSS",
+        "KERNEL_FAILURE",
+        "STORAGE_FAILURE",
+        "SIGNAL_API_FAILURE",
+        "FAILURE_RECEIPT_WRITE_OR_FSYNC_FAILURE"
+      ]
+    },
+    "v2_job_hash": "48f29b21b4e9d31409a15fcf93458bc1309fb8a5b5d674c1d90d349f8ab862b2",
+    "vins_rerun_authorized": false,
+    "visible_intent_without_exact_success_closeout_consumes_namespace_and_forbids_retry_or_continuation": true
+  }
+}

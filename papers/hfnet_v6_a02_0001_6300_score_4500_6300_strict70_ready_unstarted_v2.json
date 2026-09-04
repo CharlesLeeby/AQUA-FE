@@ -1,0 +1,147 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a02-0001-6300-strict70-ready-unstarted-v2",
+  "status": "READY_STATIC_PRESTART_EXECUTION_SCHEDULING_NOGO",
+  "created_at_utc": "2026-08-22T13:51:50Z",
+  "scientific_role": "HFNET_V6_A02_FULL_HISTORY_STRICT70_EXTERNAL_LEARNED_SYSTEM_DEVELOPMENT_ONLY",
+  "decision": {
+    "static_prestart_ready": true,
+    "execution_scheduling_ready": false,
+    "hfnet_popen_authorized": false,
+    "authorization_token_recorded_in_this_receipt": false,
+    "root_explicit_release_required": true,
+    "next_action": "WAIT; immediately rerun fail-closed check and resource gate only after root explicitly releases the one-shot Popen"
+  },
+  "latest_prestart_check": {
+    "schema_version": "aqua-fe-hfnet-v6-a02-0001-6300-strict70-prestart-check-v2",
+    "status": "PRESTART_GO_EXACTLY_ONE_ELF_START",
+    "ready": true,
+    "return_code": 0,
+    "errors": [],
+    "process_conflicts": [],
+    "claims": {
+      "filesystem_writes": false,
+      "hfnet_started": false
+    },
+    "gpu_resource_gate": {
+      "ready": true,
+      "total_mib": 4096,
+      "used_mib": 425,
+      "free_mib": 3475,
+      "minimum_free_mib": 3072,
+      "compute_applications": []
+    }
+  },
+  "external_scheduling_risk": {
+    "status": "NOGO_UNTIL_ROOT_CONFIRMS_QUIET_WINDOW",
+    "process_family": "run_mimir_uw_vins_eval.sh / MIMIR VINS",
+    "started_by_this_controller": false,
+    "observed_local_intervals_asia_shanghai": [
+      "2026-08-22T21:34:00+08:00/2026-08-22T21:34:47+08:00",
+      "2026-08-22T21:39:45+08:00/2026-08-22T21:40:26+08:00",
+      "2026-08-22T21:40:37+08:00/2026-08-22T21:41:19+08:00"
+    ],
+    "periodic_restart_risk": true,
+    "current_observation_at_receipt": "process absent and NVIDIA compute-app list empty",
+    "kill_external_process_authorized": false,
+    "gamble_on_eight_minute_gap_authorized": false
+  },
+  "frozen_artifacts": {
+    "runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a02_0001_6300_score_4500_6300_strict70_v2.py",
+      "size_bytes": 40129,
+      "sha256": "e508195ffc4a3b337c2ae07fc601f5a968afa694d5f77c2e5a860ecb6123fba7"
+    },
+    "runner_test": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_hfnet_v6_a02_0001_6300_score_4500_6300_strict70_v2.py",
+      "size_bytes": 12196,
+      "sha256": "196b365bb08b0abdd4be0e9024e38cb860ab12f704581d827c3079dcf115fd0f",
+      "tests_passed": 15,
+      "tests_failed": 0
+    },
+    "strict70_protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_score_4500_6300_strict70_protocol_v2.json",
+      "size_bytes": 5429,
+      "sha256": "7647db1a251480534b393bb3547f7fcb4cfa5e7209bcf64f8d1faa3ff972521b"
+    },
+    "dependency_inventory": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_dependency_inventory_v2_1.json",
+      "size_bytes": 56673,
+      "sha256": "b77b3f249bb8457cce4f1dcfd311eae6a6cdcfca4d359f2be3a219bfa0082170",
+      "mode": "0444"
+    },
+    "prepared_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300_strict70/attempt_001/prepared_manifest.json",
+      "size_bytes": 87847,
+      "sha256": "1a7163a613c609ed6d1d292a69c01bcb6e0d645687a64169938c153bbb33a113"
+    },
+    "execution_lock": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_score_4500_6300_strict70_execution_lock_v2.json",
+      "size_bytes": 16572,
+      "sha256": "cd923513c1b3f1632dcd7044d5949e3ad40bcb5d219251b50fa534db4c3c8214",
+      "mode": "0444"
+    },
+    "v1_abandonment_receipt": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_v1_prepared_abandoned_gate_correction_v1.json",
+      "size_bytes": 3547,
+      "sha256": "918f2ec1dcf9b0d1952176282caeb7c07b55e6e9ed935038eab20f120beae237"
+    },
+    "superseded_dependency_receipt": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_dependency_inventory_v2_superseded_preprepare_v1.json",
+      "size_bytes": 1529,
+      "sha256": "01871c27e9f7558ff4882c2b824e520e9642686fc54c17285296db1c8edc09a0"
+    }
+  },
+  "attempt_state": {
+    "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300_strict70/attempt_001",
+    "prepared_files_exact": [
+      "prepared_manifest.json",
+      "run_local_model/HFNet-RT/HF-Net.cache",
+      "run_local_model/HFNet-RT/HF-Net.onnx",
+      "runtime_config_model_path_only.yaml"
+    ],
+    "process_start_claim_exists": false,
+    "stdout_log_exists": false,
+    "stderr_log_exists": false,
+    "result_directory_exists": false,
+    "run_result_exists": false,
+    "popen_invocations": 0,
+    "hfnet_started": false,
+    "retry_permitted": false
+  },
+  "strict70_gate": {
+    "score_source_indices_inclusive": [
+      4500,
+      6300
+    ],
+    "score_camera_count": 1801,
+    "minimum_score_poses": 1261,
+    "minimum_score_coverage_fraction": 0.7,
+    "minimum_contiguous_score_poses": 1261,
+    "minimum_longest_contiguous_fraction": 0.7,
+    "minimum_score_keyframes": 1
+  },
+  "comparison_boundary": {
+    "existing_adopted_evidence_family": "B1_CONSTQ_V2_3_VS_XFEATBIRTH_RAWLK_V2_4_POST_INCIDENT_V2_5",
+    "external_hfnet_feed_history_source_indices_inclusive": [
+      1,
+      6300
+    ],
+    "existing_adopted_feed_history_source_indices_inclusive": [
+      4500,
+      6300
+    ],
+    "possible_common_score_support_source_indices_inclusive": [
+      5400,
+      6300
+    ],
+    "accuracy_head_to_head_status": "BLOCKED_HISTORY_MISMATCH",
+    "fair_direct_accuracy_comparison_permitted": false
+  },
+  "old_v1_live_terminal_absence": {
+    "execution_lock_exists": false,
+    "process_start_claim_exists": false,
+    "run_result_exists": false,
+    "result_directory_exists": false,
+    "status": "PASS_V1_REMAINS_PREPARED_ONLY_PRELOCK_UNSTARTED"
+  }
+}

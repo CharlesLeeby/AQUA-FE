@@ -1,0 +1,6 @@
+extends: ../backend_strict_frontend.yaml
+
+backend_quality:
+  mode: source_aware
+  floor: 0.80
+  alpha: 0.85

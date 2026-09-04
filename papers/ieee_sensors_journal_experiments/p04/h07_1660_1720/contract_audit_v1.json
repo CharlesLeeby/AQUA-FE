@@ -1,0 +1,32 @@
+{
+  "arms": ["P_legacy", "C_legacy", "B2_all_eligible"],
+  "bundle_hash": "1bd460229c432a5353fe4c3887fd2b41f4efaed2d7581f4967d9f65bbc9602f2",
+  "classical_live_observations": 5874,
+  "contract_hash": "e31c1c0db5e30cf7535d0a5e9a4bceffb64282904f74d8b67b396839efbb8e5b",
+  "dataset_family": "aqualoc_real",
+  "event_count": 61,
+  "learned_live_observations": 2964,
+  "learned_outcome_read": false,
+  "normalized_stream_hash": "8ed84593eca11f0d93440f43bdb8081118e23547dd73b7466bc23040f1565a43",
+  "outcome_boundary": "normalized_frontend_records_only_no_VINS_APE_RPE",
+  "protocol_version": "isj-nativeq-legacy-candidate-v4-p04-preflight",
+  "replay_bundle_sha256": "b86803a43c9f08fa04e5f47f66ab1de40a1b74b5162e91e85c9d5967923d6425",
+  "replay_repeat_sha256": "b86803a43c9f08fa04e5f47f66ab1de40a1b74b5162e91e85c9d5967923d6425",
+  "sequence": "H07",
+  "source_attribution_status": "APPLICABLE",
+  "status": "P04_PREFLIGHT_PASS_H07_ONLY",
+  "trajectory_outcome_read": false,
+  "checks": {
+    "common_trigger_fh_gate": "PASS",
+    "native_q_role_neutral": "PASS",
+    "pool_independence": "PASS",
+    "replay_determinism": "PASS",
+    "zero_action_classical_supply": "NOT_APPLICABLE",
+    "vins_started": false
+  },
+  "limitations": [
+    "H07 is one development window and is not a confirmatory sequence unit.",
+    "The adapter consumes an existing immutable P03 master stream; it does not yet provide the new common producer physical-attempt audit.",
+    "A03 and NTNU decisive online C_legacy probes remain pending."
+  ]
+}

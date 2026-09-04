@@ -1,0 +1,94 @@
+{
+  "atomic_publish": "HARDLINK_NOREPLACE_THEN_UNLINK_TEMP",
+  "converter_argv": [
+    "python3",
+    "-m",
+    "uw_frontend.datasets.aqualoc_raw_to_rosbag",
+    "--input",
+    "datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_4_raw_data.tar.gz",
+    "--output-bag",
+    "/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/.archaeo04_1800_2700.bag.partial.962975",
+    "--sequence-name",
+    "archaeo_sequence_4",
+    "--raw-root",
+    "",
+    "--image-dir",
+    "images_sequence_4",
+    "--image-csv",
+    "img_sequence_4.csv",
+    "--imu-csv",
+    "imu_sequence_4.csv",
+    "--gt-txt",
+    "datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_groundtruth_files/new_archaeo_colmap_traj_sequence_04.txt",
+    "--start-index",
+    "1800",
+    "--end-index",
+    "2700",
+    "--image-topic",
+    "/camera/image_raw",
+    "--imu-topic",
+    "/rtimulib_node/imu",
+    "--gt-topic",
+    "/aqualoc/colmap_gt"
+  ],
+  "expected_topic_counts": {
+    "/aqualoc/colmap_gt": 44,
+    "/camera/image_raw": 901,
+    "/rtimulib_node/imu": 9091
+  },
+  "ground_truth_input": {
+    "path": "datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_groundtruth_files/new_archaeo_colmap_traj_sequence_04.txt",
+    "sha256": "7b6242a9046e5894143f39e2d60b98dcddfd33f8ff2a13d3157ba88ceda878d5"
+  },
+  "original_queue_index": 55,
+  "outcome_boundary": "FRONTEND_EXPORT_ONLY_NO_VINS_APE_RPE_TRAJECTORY",
+  "raw_bag": {
+    "device": 2050,
+    "inode": 506839,
+    "path": "datasets/aqualoc/rosbags/archaeo04_1800_2700.bag",
+    "sha256": "efb7abf4037372e1bd09a218b352ded7396c72832686f22a5aaa1768cfe17699",
+    "size_bytes": 228522141,
+    "topic_counts": {
+      "/aqualoc/colmap_gt": 44,
+      "/camera/image_raw": 901,
+      "/rtimulib_node/imu": 9091
+    },
+    "topic_stamp_ranges_ns": {
+      "/aqualoc/colmap_gt": {
+        "first": 1455212968514516160,
+        "last": 1455213013506824032
+      },
+      "/camera/image_raw": {
+        "first": 1455212968514516160,
+        "last": 1455213013506824032
+      },
+      "/rtimulib_node/imu": {
+        "first": 1455212968268012320,
+        "last": 1455213013751688960
+      }
+    }
+  },
+  "recorded_at": "2026-08-08T01:32:33+08:00",
+  "reference_input_topics_read_for_integrity": true,
+  "replacement_lock_hash": "6b24939fa78a2ff29538dc9707c78a41dee4d81330217b4c15ab5972b39803a0",
+  "replacement_run_id": "isj-nativeq-v3_P07_aqualoc_archaeology-A04_1800-2700_P_f0_b00_20260806T084500Z_layout_attempt02",
+  "schema_version": "isj-p07-a04-raw-materialization-v1",
+  "source_archive": {
+    "layout": {
+      "archive_image_rows": 13385,
+      "archive_layout": "MEMBERS_AT_ARCHIVE_ROOT",
+      "forbidden_legacy_member": "raw_data/img_sequence_4.csv",
+      "raw_root_argv": "",
+      "required_members": [
+        "img_sequence_4.csv",
+        "imu_sequence_4.csv",
+        "images_sequence_4/"
+      ],
+      "window_image_rows": 901
+    },
+    "path": "datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_4_raw_data.tar.gz",
+    "sha256": "b81d03e63a112e6d9bc3f7ae9855f3e183c93c7897b87deb136e705bb574109e"
+  },
+  "status": "PASS",
+  "trajectory_outcome_read": false
+}

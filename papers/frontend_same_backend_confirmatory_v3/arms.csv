@@ -1,0 +1,4 @@
+order,arm,display_name,method,seed_source,seedchain_profile,role,claim_boundary
+1,klt,KLT,klt,xfeat,lineage_early_seed_noharm_v4,classical_baseline,pure_KLT_GFTT_baseline
+2,splg,SP+LG,hybrid_superpoint_lightglue,all_learned,lineage_early_seed_scan,modern_learned_baseline,tested_SP_LG_frontend_not_full_SuperVINS
+3,xfeat_v3,AQUA-FE XFeat churn-guard v3,hybrid_xfeat,xfeat,lineage_early_seed_churn_guard_v3,proposed,frozen_v3_profile_0p10_boundary

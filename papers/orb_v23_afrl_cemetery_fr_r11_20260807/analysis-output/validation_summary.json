@@ -1,0 +1,140 @@
+{
+  "added_windows": 1,
+  "date": "2026-08-07",
+  "roster_rows": 18,
+  "roster_unique_windows": 18,
+  "schema_version": 5,
+  "snapshot_entries": 576,
+  "snapshot_entries_verified": 576,
+  "snapshot_manifests": 20,
+  "snapshot_manifests_verified": 20,
+  "source_contract": {
+    "feature_times_sha256": "90b6c0a39c52afafe272db47ebf1474dc87091b6cf613284416da85f008f2743",
+    "fresh_bag_audit": {
+      "frames": 278,
+      "high_id_observations": 0,
+      "learned_codes": {
+        "0": 87839
+      },
+      "observations": 87839,
+      "out_of_bounds": 0,
+      "source_codes": {
+        "1": 87489,
+        "2": 350
+      },
+      "unique_ids": 11538
+    },
+    "fresh_klt_frames": 278,
+    "fresh_klt_observations": 87839,
+    "full_bag_sha256": "6bcfe118d1407412890b48a79721fd5cbe21c547c67e3d10d2602fa65c912953",
+    "full_seeds_sha256": "0b44f98c1d46517f8312c05c1a8bfae0c109c9babb8ed964cc6ceb2b2a090d25",
+    "image_count": 278,
+    "image_height": 600,
+    "image_width": 800,
+    "klt_features_sha256": "ad07cdba539e20070711fb190a5f338022dfaece3212a700149f508743fab2c7",
+    "learned_observations_removed": 0,
+    "seed_frames": 43,
+    "seed_ids": 3,
+    "seed_max_timestamp_difference_ns": 0,
+    "seed_observations": 47,
+    "selected_full_bag_audit": {
+      "frames": 278,
+      "high_id_observations": 47,
+      "learned_codes": {
+        "0": 87839,
+        "1": 47
+      },
+      "observations": 87886,
+      "out_of_bounds": 0,
+      "source_codes": {
+        "1": 87489,
+        "2": 350,
+        "20": 47
+      },
+      "unique_ids": 11541
+    },
+    "sidecar_bag_audit": {
+      "frames": 278,
+      "high_id_observations": 0,
+      "learned_codes": {
+        "1": 602
+      },
+      "observations": 602,
+      "out_of_bounds": 0,
+      "source_codes": {
+        "20": 602
+      },
+      "unique_ids": 150
+    },
+    "sidecar_candidates": 150,
+    "sidecar_frames": 278,
+    "sidecar_sha256": "35adc1aaa869d98ad59efb27b0f0a85edafb3075fad08ddfb36b52e810484f1a",
+    "sidecar_trigger_frames": [
+      16,
+      28,
+      45
+    ],
+    "sidecar_triggers": 3
+  },
+  "updated_counts": {
+    "action_positive": 18,
+    "all_control_strict": 3,
+    "operational_low_grid": 11,
+    "project_strict": 6,
+    "sparse_base_klt": 0,
+    "strict_operational_low_grid": 4
+  },
+  "windows": {
+    "AFRL_Cemetery_FR_s230_d30": {
+      "action_positive": true,
+      "all_control_strict": true,
+      "formal_root": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/postinit_candidate_search_20260807/afrl_cemetery_fr_s230_d30/formal_n3_d14_min8_ignore0_clean_halfres_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09",
+      "formal_runs": 20,
+      "formal_runs_ok": 20,
+      "frontend_frames": 278,
+      "full_vs_bridge_off_improvements": 4,
+      "full_vs_native_improvements": 4,
+      "full_vs_unbounded_improvements": 4,
+      "level": "repeatwise_strict",
+      "low_grid_frames_le_0p80": 254,
+      "native_negative": false,
+      "non_strict": false,
+      "operational_low_grid": true,
+      "project_strict": true,
+      "repeat4_order_swapped": true,
+      "role_counter_signatures": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_keyframe_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_online_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_reconstructed_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "snapshot_entries": 576,
+      "snapshot_entries_verified": 576,
+      "snapshot_manifests": 20,
+      "snapshot_manifests_verified": 20,
+      "sparse_base_klt": false
+    }
+  }
+}

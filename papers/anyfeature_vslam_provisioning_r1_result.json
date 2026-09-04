@@ -1,0 +1,38 @@
+{
+  "schema_version": "aqua-fe-published-anyfeature-provisioning-result-v1",
+  "recorded_at": "2026-08-11T18:27:16+08:00",
+  "status": "STOP_PROVISIONING",
+  "scientific_execution_started": false,
+  "trajectory_generated": false,
+  "official_system": {
+    "name": "AnyFeature-VSLAM",
+    "commit": "6aa014b724f7a61bcbff2f8f28f20836986a43dc",
+    "tree": "36b264e1da05c6fe9cd987965e9a75ba96930b63",
+    "source_modified": false,
+    "tracked_worktree_clean": true
+  },
+  "environment": {
+    "official_environment_yaml_sha256": "39ba3cbc54dee52ad1b408f359efc1c4d600153daa58502e8ab306fb29cb92a2",
+    "solve_plan_sha256": "88d8c9a78ea4a6c173f530249fb58065b31598a54312a40f6e8877c8b1e61dcb",
+    "explicit_lock_sha256": "13c5cad61af5bd9a2c405a6f5082ebd0fde0eb3e09b41d40cf751c0bc0b0e8aa",
+    "package_count": 340,
+    "resolved_opencv": "5.0.0",
+    "resolved_eigen": "5.0.1",
+    "resolved_cmake": "4.4.2",
+    "resolved_python": "3.14.6"
+  },
+  "attempt": {
+    "upstream_build_script_rc": 0,
+    "upstream_build_log_sha256": "10f52fab3b3302670ca72dee8342eff1ba9d877cc5d864c250c4c1d69c5c8977",
+    "independent_dbow2_build_rc": 1,
+    "independent_dbow2_log_sha256": "3a1603e9c48bf4d1d5917cbf31d468e57266276920c936f15ff0f096683dd71f",
+    "mono_binary_present": false
+  },
+  "root_cause": {
+    "class": "UNPINNED_UPSTREAM_ENVIRONMENT_RESOLVED_TO_INCOMPATIBLE_OPENCV5",
+    "missing_header": "opencv2/features2d/features2d.hpp",
+    "consumer": "fontan brisk/agast dependency while compiling the frozen DBoW2 submodule",
+    "interpretation": "The paper-era environment named OpenCV without a version bound. Its 2026 solve selected OpenCV 5, after the legacy compatibility header had been removed. The upstream build script continued after the failed sub-build and returned zero, so its return code is not evidence of a usable build."
+  },
+  "stopping_rule_applied": "The r1 provisioning attempt is retained and is not repaired in place. Any continuation requires a separately preregistered r2 infrastructure attempt with a new environment and checkout path; source edits remain forbidden."
+}

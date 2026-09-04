@@ -1,0 +1,68 @@
+{
+  "schema_version": "aqua-fe-supervins-mh01-full-trajectory-gt-evaluation-test-receipt-v1",
+  "created_at": "2026-08-21T01:06:52+08:00",
+  "status": "PASS_SYNTHETIC_AND_CONTRACT_TESTS",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "-q",
+    "scripts.tests.test_evaluate_published_supervins_v1_official_euroc_mh01_full_trajectory_gt_v1"
+  ],
+  "working_directory": "/home/ma/AQUA-FE_WS",
+  "started_at": "2026-08-21T01:06:37.719287+08:00",
+  "completed_at": "2026-08-21T01:06:38.186681+08:00",
+  "wall_elapsed_ns": 467343812,
+  "return_code": 0,
+  "stdout_utf8": "",
+  "stderr_utf8": "----------------------------------------------------------------------\nRan 36 tests in 0.302s\n\nOK\n",
+  "reported_test_count": 36,
+  "reported_result": "OK",
+  "runtime": {
+    "python_command_path": "/usr/bin/python3",
+    "python_command_path_identity_following_symlink": {
+      "sha256": "298a9e830ed52f36c299427565485d717d1ce0179c0597cc16560513eb780b06",
+      "size_bytes": 5490456
+    },
+    "resolved_python_executable": "/usr/bin/python3.8",
+    "resolved_python_identity": {
+      "sha256": "298a9e830ed52f36c299427565485d717d1ce0179c0597cc16560513eb780b06",
+      "size_bytes": 5490456
+    },
+    "python_version": "3.8.10",
+    "numpy_version": "1.24.4",
+    "numpy_init": {
+      "path": "/home/ma/.local/lib/python3.8/site-packages/numpy/__init__.py",
+      "sha256": "edd18feff93348beb02f392959e80b9fda1875a842d7f9760847f32386fdfd48",
+      "size_bytes": 16174
+    }
+  },
+  "tested_files": {
+    "evaluator": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_published_supervins_v1_official_euroc_mh01_full_trajectory_gt_v1.py",
+      "sha256": "1d94fe884c4221199d32fabb2066c5dbb8fdaf0fbf59e926eb1123d9a9ae68c3",
+      "size_bytes": 86702
+    },
+    "tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_evaluate_published_supervins_v1_official_euroc_mh01_full_trajectory_gt_v1.py",
+      "sha256": "13df8f776de69f85eb85e1580cfe221e45aaee70928b64087ba91d42b5b56514",
+      "size_bytes": 21140
+    },
+    "protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_gt_evaluation_freeze_v1.json",
+      "sha256": "0413dc9f5c17036de8cf765cdb13d84c4ef873db3997247f03e75d860b4298c6",
+      "size_bytes": 19442
+    }
+  },
+  "scientific_boundary": {
+    "synthetic_numeric_alignment_and_failure_tests_run": true,
+    "sealed_input_structure_and_timestamp_support_audited": true,
+    "sealed_trajectory_and_gt_position_error_computed": false,
+    "sealed_trajectory_alignment_run": false,
+    "ape_computed": false,
+    "rpe_computed": false,
+    "ros_or_model_started": false,
+    "stage5_evidence_namespace_created": false
+  }
+}

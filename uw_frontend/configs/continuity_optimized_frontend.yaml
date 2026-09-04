@@ -1,0 +1,17 @@
+extends: conservative_frontend.yaml
+
+hybrid:
+  # Paper-facing continuity setting:
+  #
+  # - learned and classical candidates still pass source-specific candidate
+  #   geometry filtering;
+  # - learned recovery/initialization batches still pass geometry-safe gating;
+  # - classical LK/ORB recovery skips the extra batch-level rejection so that
+  #   already filtered classical tracks can rescue sudden underwater dropout.
+  #
+  # This setting is intentionally paired with backend_strict_frontend.yaml for
+  # backend-ready measurement export when geometric consistency is the target.
+  enable_temporal_health_gate: true
+  enable_geometry_safe_recovery: true
+  geometry_safe_apply_to_classical: false
+  geometry_safe_classical_rescue_enabled: false

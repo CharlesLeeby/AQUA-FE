@@ -1,0 +1,13 @@
+{
+  "batch_d_upper_bound_bytes": 16777216,
+  "batch_window_id": "afrl:bus_outside:0001",
+  "governance_free_bytes": 2983395328,
+  "governance_minimum_free_bytes": 536870912,
+  "governance_pass": true,
+  "output_free_bytes": 6147682304,
+  "output_minimum_free_bytes": 3979555636,
+  "output_pass": true,
+  "output_root": "logs/afrl_cave_v31",
+  "remaining_batch_job_count": 3,
+  "remaining_batch_run_bytes": 1509949440
+}

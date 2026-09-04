@@ -1,0 +1,118 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a09-0000-6200-score-6000-6200-todesk-corun-overlay-freeze-v1",
+  "status": "FROZEN_PROCESS_FREE_TESTS_AND_INDEPENDENT_REVIEW_PASS_ATTEMPT_NOT_PREPARED_HFNET_NOT_STARTED",
+  "created_at_local": "2026-08-28T02:35:31+08:00",
+  "scientific_role": "TODESK_CORUN_DEVELOPMENT_ONLY_HFNET_NATURAL_HISTORY_RUNABILITY_ON_JULY14_A09_OLD_FROZEN_POSITIVE_WINDOW",
+  "user_scope": {
+    "authorization_basis": "The user explicitly allowed ignoring project-local exclusivity requirements and running with ToDesk when the restriction is ours rather than HFNet's method requirement.",
+    "does_not_authorize": [
+      "starting when the proven GPU memory floor is not met",
+      "starting alongside another HFNet, ORB-SLAM, or learned-baseline GPU process",
+      "changing HFNet configuration, model, input, score window, or timeout",
+      "retry after a process-start claim",
+      "accuracy, ranking, runtime, realtime, superiority, or paper claims"
+    ]
+  },
+  "overlay": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a09_0000_6200_score_6000_6200_todesk_corun_development_only_v1.py",
+    "size_bytes": 15504,
+    "sha256": "ab1974c3e53faf9fcfdfacc9a3d52b00b86a971c47e9ebe4865e4c0f9b45f7d1"
+  },
+  "overlay_tests": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_hfnet_v6_a09_0000_6200_score_6000_6200_todesk_corun_development_only_v1.py",
+    "size_bytes": 18486,
+    "sha256": "e2f443464487c5a30f2e3561e28e678650ac30ab302f01b8b3195a26544a43ef"
+  },
+  "frozen_parent": {
+    "runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a09_0000_6200_score_6000_6200_warmstart_v1.py",
+      "size_bytes": 42404,
+      "sha256": "f0f27f8783d2669cdcfa15420c31225743c465a4e75c517fd17f23cb86062f62"
+    },
+    "runner_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_hfnet_v6_a09_0000_6200_score_6000_6200_warmstart_v1.py",
+      "size_bytes": 18476,
+      "sha256": "995ed80ed34172f410d759b35c4df24608b3b3322154006a4b71a6c51fba0974"
+    },
+    "runner_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_6200_score_6000_6200_runner_freeze_v1.json",
+      "size_bytes": 6771,
+      "sha256": "6d7bb6ce45d1f83a45ddd40051d96790500fdee6ba8d27bec87fe9778c2cb3aa"
+    }
+  },
+  "proven_resource_helper": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a08_0000_4660_score_4500_4660_todesk_corun_development_only_v1.py",
+    "size_bytes": 15434,
+    "sha256": "f5a6931ba3419ff5d84a2805c0b8c9be946a4513371f786df4606bfdaa257ca7",
+    "freeze_size_bytes": 5265,
+    "freeze_sha256": "8d918093c0374452d924c55ad945cad500565d71d17bc07d95b6a14435e8b0e7"
+  },
+  "resource_policy_delta_only": {
+    "resource_isolation": false,
+    "todesk_corun": true,
+    "unrelated_cpu_ros_vins_processes_permitted": true,
+    "unrelated_nonbaseline_compute_applications_permitted_only_if_memory_floor_met": true,
+    "competing_hfnet_orb_or_learned_baseline_process_permitted": false,
+    "expected_gpu_model_token": "GTX 1650",
+    "expected_gpu_total_mib": 4096,
+    "minimum_prestart_free_gpu_mib": 3072,
+    "gpu_floor_basis": "FROZEN_FORMAL_A09_TERMINAL_PASS_PRECEDENT",
+    "runtime_or_realtime_claim_permitted": false
+  },
+  "unchanged_scientific_and_execution_contract": {
+    "input_and_payload": true,
+    "hfnet_binary_library_model_cache_and_configuration": true,
+    "feed_source_indices_inclusive": [0, 6200],
+    "feed_local_indices_inclusive": [0, 6200],
+    "score_source_indices_inclusive": [6000, 6200],
+    "score_local_indices_inclusive": [6000, 6200],
+    "score_camera_count": 201,
+    "timeout_seconds": 900,
+    "maximum_hfnet_popen_invocations": 1,
+    "retry_permitted": false,
+    "process_start_claim_o_excl": true,
+    "post_claim_terminal_seal_required": true,
+    "accuracy_gate_open": false
+  },
+  "attempt_contract": {
+    "namespace": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/corun/old_frozen_positive_windows/a09_0000_6200_score_6000_6200_todesk_corun_development_only/attempt_001",
+    "authorization_token": "HFNET_V6_A09_0000_6200_SCORE_6000_6200_TODESK_CORUN_DEVELOPMENT_ONLY_ATTEMPT_001_START_EXACTLY_ONCE",
+    "formal_attempt_namespace_exists_at_freeze": false,
+    "corun_attempt_namespace_exists_at_freeze": false
+  },
+  "verification": {
+    "python_compile_exit_code": 0,
+    "overlay_process_free_unit_test_count": 16,
+    "overlay_process_free_unit_test_failures": 0,
+    "formal_plus_overlay_process_free_unit_test_count": 30,
+    "formal_plus_overlay_process_free_unit_test_failures": 0,
+    "independent_static_review_blockers": 0,
+    "strict_provenance_guard": "PASS",
+    "prior_a08_overlay_contamination_replaced": true,
+    "real_binding_authority_validation": "PASS_READ_ONLY_NO_ATTEMPT_CREATED",
+    "hfnet_process_invocations": 0,
+    "attempt_prepared": false
+  },
+  "claims": {
+    "overlay_implemented_reviewed_and_frozen": true,
+    "attempt_prepared": false,
+    "process_start_claim_created": false,
+    "hfnet_started": false,
+    "trajectory_produced": false,
+    "runability_passed": false,
+    "accuracy_evaluated": false,
+    "runtime_or_realtime_claim_supported": false,
+    "system_ranking_supported": false,
+    "superiority_supported": false,
+    "confirmatory_evidence": false
+  },
+  "next_stage_boundary": {
+    "permitted": "prepare this fresh co-run attempt exactly once, freeze the prepared artifacts, perform a fresh resource check, then issue one exact execution lock",
+    "prohibited": [
+      "editing the frozen formal runner, overlay, tests, input, or authority artifacts",
+      "starting HFNet before the prepared-attempt freeze and execution lock exist",
+      "retry after any process-start claim",
+      "accuracy, ranking, runtime, realtime, superiority, significance, or paper claims"
+    ]
+  }
+}

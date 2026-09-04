@@ -1,0 +1,8 @@
+extends: formal_loftr_v31_repro_frontend.yaml
+
+hybrid:
+  # Contribution profile for extreme low-texture windows where the first few
+  # KLT frames already have enough parallax for VINS initialization. It restores
+  # the validated A06-style early LoFTR proposal opportunity, while the export
+  # side still requires LK/NCC/FB confirmation plus F/E/H residual gates.
+  semidense_fallback_start_frame: 0

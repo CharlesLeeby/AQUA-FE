@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "evidence_id": "ER-20260802-orb-v23-postinit-followup-01",
+  "analysis_date": "2026-08-02",
+  "scope": "deduplicated ORB-v23 post-init mechanism search across AQUALOC and NTNU",
+  "independent_unit": "fixed image window",
+  "repeat_interpretation": "four runtime repeats are deterministic reproducibility checks, not independent windows",
+  "roles": ["orb_only", "drop", "full_bridge_off", "full_unbounded", "full"],
+  "project_strict_rule": "full must improve reconstructed and online APE/RPE against native/drop with stable action and no metric conflict; the unbounded shadow is a causal comparison",
+  "audit_strict_rule": "for every repeat, full must be lower than native/drop and full_unbounded on reconstructed and online APE/RPE",
+  "window_deduplication": "selector variants and rearm variants from the same image interval count once",
+  "legacy_label_note": "A10 2400-2800 is retained as a stable project-level ORB positive, but is aggregate-positive rather than repeatwise strict because full beats full_unbounded in 3/4 repeats",
+  "counts": {
+    "unique_mechanism_positive_windows": 5,
+    "project_promoted_strict_windows": 3,
+    "audit_repeatwise_all_control_windows": 2,
+    "operational_low_texture_or_degraded_all_mechanism": "2/5",
+    "operational_low_texture_or_degraded_project_strict": "1/3",
+    "operational_low_texture_or_degraded_audit_repeatwise_all_control": "1/2",
+    "sparse_base_klt_low_texture_all_mechanism": "0/5"
+  },
+  "source_reports": [
+    "../../logs/orb_v23_postinit_search_20260802_final.md",
+    "../../logs/orb_v23_mclab1_action_search_20260802.md",
+    "../../logs/orb_v23_mclab2_action_search_20260802.md",
+    "../../logs/history_scan_candidates_20260801.md",
+    "../../logs/orbslam3_seeded_validation/a10_2400_2800_lineage_pre_kf_outlier_purge_v23_20260730.md",
+    "../orb_v23_postinit_action_search_20260731/analysis-output/analysis-report.md"
+  ]
+}

@@ -1,0 +1,11 @@
+extends: paper_vins_safe_learned_sidecar.yaml
+
+backend_quality:
+  # Keep KLT's useful dynamic q_i while preventing learned/LoFTR observations
+  # from being over-discounted during VINS optimization.
+  mode: vins_safe
+  floor: null
+  alpha: 0.65
+
+measurement_selection:
+  enabled: false

@@ -1,0 +1,131 @@
+{
+  "corrected_implementation_binding": {
+    "bundle_hash_algorithm": "sha256(canonical_json_ordered_file_records_sort_keys_ascii_compact)",
+    "files": [
+      {
+        "path": "scripts/evaluate_vins_common_support.py",
+        "sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110",
+        "size_bytes": 27933
+      },
+      {
+        "path": "scripts/trajectory_eval_core.py",
+        "sha256": "aa9ac4da81df7298d1f1c369548ca98a57235916004337cad66f4cf331560635",
+        "size_bytes": 27945
+      }
+    ],
+    "implementation_bundle_sha256": "4c260bfea872ae7514fb01a496735a642e93f41f12e06e6a95b088c23b2d1936",
+    "ordered_paths": [
+      "scripts/evaluate_vins_common_support.py",
+      "scripts/trajectory_eval_core.py"
+    ],
+    "required_for_all_new_p07_backend_evaluation": true
+  },
+  "correction_kind": "ADDITIVE_IMPLEMENTATION_PRECISION_CORRECTION",
+  "correction_lock_hash": "f46be78c8b0eb00885f5cfa8ec058e926f1600878a17da391c15299c71dd910c",
+  "frozen_at": "2026-08-08T00:07:08+08:00",
+  "governance_artifacts": [
+    {
+      "path": "scripts/build_p07_evaluator_precision_correction_lock_v1.py",
+      "sha256": "856360d9ad651fe2e8a56c8256423bb3959b4c56fb3fe5ba5af70b02da5bdbac",
+      "size_bytes": 12555
+    },
+    {
+      "path": "scripts/tests/test_p07_evaluator_precision_correction_lock_v1.py",
+      "sha256": "c68dec8b8381aab4aa217b30baa64aadb435d1e5c4f826de5c56932e8d6f4552",
+      "size_bytes": 6579
+    },
+    {
+      "path": "scripts/tests/test_evaluate_vins_common_support.py",
+      "sha256": "f7a11ffc1e820c69cae4ce6724c9163abf42b67005f60fc7f2ca3c6c83c462e5",
+      "size_bytes": 4653
+    },
+    {
+      "path": "scripts/tests/test_trajectory_eval_core.py",
+      "sha256": "e53f136b47e97fc2a391f23d42af208a669f4ead77483474d2cdf085102c1663",
+      "size_bytes": 9527
+    }
+  ],
+  "next_action": "BACKEND_QUEUE_AND_EXECUTION_LOCK_MUST_BIND_THIS_CORRECTION_LOCK_AND_CORRECTED_IMPLEMENTATION_BUNDLE",
+  "outcome_blind_audit": {
+    "ape_artifact_read": false,
+    "backend_queue_generated": false,
+    "builder_allowed_read_paths": [
+      "papers/ieee_sensors_journal_experiments/method_lock.json",
+      "papers/ieee_sensors_journal_experiments/evaluator_protocol_v1.md",
+      "scripts/evaluate_vins_common_support.py",
+      "scripts/trajectory_eval_core.py",
+      "scripts/build_p07_evaluator_precision_correction_lock_v1.py",
+      "scripts/tests/test_p07_evaluator_precision_correction_lock_v1.py",
+      "scripts/tests/test_evaluate_vins_common_support.py",
+      "scripts/tests/test_trajectory_eval_core.py"
+    ],
+    "evaluation_plan_generated": false,
+    "evaluator_executed": false,
+    "real_trajectory_artifact_read": false,
+    "result_artifact_read": false,
+    "rpe_artifact_read": false,
+    "vins_executed": false,
+    "workspace_discovery_used": false
+  },
+  "outcome_boundary": "SOURCE_AND_GOVERNANCE_ONLY_NO_REAL_TRAJECTORY_APE_RPE_RESULT_READ",
+  "parent_method_lock": {
+    "path": "papers/ieee_sensors_journal_experiments/method_lock.json",
+    "schema_version": "isj-method-lock-nativeq-v3-final-v1",
+    "scientific_method_identity": "UNCHANGED_FROM_NATIVEQ_V3",
+    "sha256": "eae7a0fc6e94766a119be6abe5763fbfba8f64d9663f45f2f48ee591cf62a3cf",
+    "size_bytes": 9634,
+    "status": "FROZEN_FOR_P07_CONFIRMATORY_EXECUTION"
+  },
+  "precision_correction": {
+    "extended_precision_preserved_through": [
+      "timestamp_parse",
+      "strict_monotonicity_validation",
+      "uniform_grid_construction",
+      "trajectory_resampling",
+      "exact_delta_pair_selection"
+    ],
+    "metric_equivalence_on_real_outcomes_claimed": false,
+    "new_epoch_ns_conversion": "np.longdouble(raw_integer_nanoseconds) / np.longdouble(1000000000)",
+    "old_epoch_ns_conversion": "float(raw_integer_nanoseconds) * 1e-9",
+    "prevents": [
+      "epoch_scale_integer_to_float64_double_rounding",
+      "sub_float64_interval_timestamp_collapse"
+    ],
+    "reason_no_equivalence_claim": "outcome-blind source correction frozen before reading any real trajectory metric",
+    "scope": "TIMESTAMP_NUMERIC_REPRESENTATION_ONLY",
+    "unchanged_contracts": [
+      "reference_and_estimate_input_semantics",
+      "camera_frame_transform",
+      "evaluation_rate_selection",
+      "window_boundaries",
+      "gap_limits",
+      "common_support_intersection",
+      "SE3_fixed_scale_alignment",
+      "exact_1s_translation_RPE",
+      "APE_and_RPE_support_thresholds",
+      "metric_definitions",
+      "failure_taxonomy",
+      "2_of_3_reducer",
+      "scientific_unit_sequence_not_replay"
+    ]
+  },
+  "prior_implementation_binding": {
+    "disposition": "PARENT_PROVENANCE_ONLY_NOT_AUTHORIZED_FOR_P07_BACKEND_EVALUATION",
+    "evaluator": {
+      "path": "scripts/evaluate_vins_common_support.py",
+      "sha256": "21685f522c484d6cf333595a27b9566c1acd921e2fc0e060381e5749a6c0a8e1",
+      "size_bytes": 27265
+    },
+    "trajectory_eval_core": "NOT_SEPARATELY_HASH_BOUND_IN_PARENT_METHOD_LOCK"
+  },
+  "protocol_binding": {
+    "current_sha256": "d3ae583ca799ef423054a5b9ece8b53e0000a8d3bbb1ea8c50121f7a60a40816",
+    "parent_sha256": "d3ae583ca799ef423054a5b9ece8b53e0000a8d3bbb1ea8c50121f7a60a40816",
+    "path": "papers/ieee_sensors_journal_experiments/evaluator_protocol_v1.md",
+    "protocol_identity": "isj-evaluator-v1",
+    "unchanged": true
+  },
+  "schema_version": "isj-p07-evaluator-precision-correction-lock-v1",
+  "scientific_method_identity": "UNCHANGED_FROM_NATIVEQ_V3",
+  "status": "FROZEN_OUTCOME_BLIND_ADDITIVE_EVALUATOR_PRECISION_CORRECTION"
+}

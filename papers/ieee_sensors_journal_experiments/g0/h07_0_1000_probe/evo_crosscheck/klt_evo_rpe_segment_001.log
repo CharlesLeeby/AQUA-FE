@@ -1,0 +1,13 @@
+$ evo_rpe tum papers/ieee_sensors_journal_experiments/g0/h07_0_1000_probe/evo_crosscheck/reference_segment_001.tum papers/ieee_sensors_journal_experiments/g0/h07_0_1000_probe/evo_crosscheck/klt_segment_001.tum -r trans_part -d 2 -u f --all_pairs --pairs_from_reference
+RPE w.r.t. translation part (m)
+for delta = 2 (frames) using all pairs
+(not aligned)
+
+       max	0.847361
+      mean	0.379849
+    median	0.334135
+       min	0.239316
+      rmse	0.404378
+       sse	3.270423
+       std	0.138693
+

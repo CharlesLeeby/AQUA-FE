@@ -1,0 +1,2923 @@
+{
+  "a06_external_klt_corrective_replay": {
+    "adopted": true,
+    "backend_corrective_is_independent_method_repeat": false,
+    "corrective_namespace": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay",
+    "corrective_receipt": {
+      "arm_id": "a06_external_klt_corrective_replay",
+      "claimed_identities": {
+        "legacy_ape_diagnostic": {
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/ape.txt",
+          "sha256": "1af747f811b784740c19765d194b859f94ac7fc59d65099009ae897755070a82",
+          "size_bytes": 649
+        },
+        "replay_manifest_sha256": "1c91c5f81b08a4cdf1a444cd9afea66600b653554c591f718658ae998344ad78",
+        "replay_runner_sha256": "2233e2be8bf9f9db3eb691392218b59bd7f9fbbe741bf51b6bea40316d509f8e",
+        "runtime_vins_config_sha256": "8a00f216e306d3373b7b815b4123934cd62e1f6df106b5ee03eb03d9236026c4",
+        "source_features_bag": {
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/features.bag",
+          "sha256": "0779bb8a71e4d81ddf02ba933b7428e548534ab580fd4483754f08e26e9bbeb6",
+          "size_bytes": 37403698
+        },
+        "source_frontend_metrics_sha256": "aab2266ace8f565ff39faf475889e6f8face3345b40385fb894d435eafdfd25e",
+        "vins_log": {
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/vins.log",
+          "sha256": "26fcae0e29724112b1cc6cff6fd0a9f6d45e77905df2cd2ca4558c03073851db",
+          "size_bytes": 123053
+        },
+        "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+        "vio_csv": {
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/vins_output/vio.csv",
+          "sha256": "c4bb08ab3cea8fd509539beb40b36f9c6764f788fcc195c70020dd2c253fc93b",
+          "size_bytes": 124824
+        }
+      },
+      "corrective_contract": {
+        "front_end_recomputed": false,
+        "original_namespace_modified": false,
+        "original_terminal_receipt_path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/formal_run_receipt_v1.json",
+        "original_terminal_receipt_sha256": "214c854afc5a88c57a04459911919eff103821f1ba2571899e58a1ef83d86a90",
+        "protocol_path": "/home/ma/AQUA-FE_WS/papers/samehistory_system_comparison_v1_a06_klt_corrective_replay_protocol.md",
+        "protocol_sha256": "4f4c96e435c94331a8e185d1c30899d6d88156a86dc118fce6076f3025016571",
+        "result_informed_change": false
+      },
+      "ended_at_local": "2026-08-23T15:53:39.328721600+08:00",
+      "errors": [],
+      "identity": {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/formal_run_receipt_v1.json",
+        "sha256": "e4ba54b2e2a09689318d2dcfd25d78f144c60eb2c1bee511bbfaf5f31d66a3bd",
+        "size_bytes": 3902
+      },
+      "launch_count": 1,
+      "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/formal_run_receipt_v1.json",
+      "policy_compliant": true,
+      "raw_return_code": 0,
+      "retry_count": 0,
+      "schema_version": "aqua-fe-samehistory-formal-run-receipt-v1",
+      "started_at_local": "2026-08-23T15:51:16+08:00",
+      "state": "TERMINAL",
+      "wall_time_s": 143.8
+    },
+    "errors": [],
+    "frozen_source_payload": {
+      "errors": [],
+      "files": {
+        "camera_config": {
+          "exists": true,
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/aqualoc_archaeo06_pinhole.yaml",
+          "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+          "size_bytes": 357
+        },
+        "corrective_runner": {
+          "path": "/home/ma/AQUA-FE_WS/scripts/run_existing_featurebag_vins_eval.sh",
+          "sha256": "2233e2be8bf9f9db3eb691392218b59bd7f9fbbe741bf51b6bea40316d509f8e",
+          "size_bytes": 4357
+        },
+        "feature_bag": {
+          "exists": true,
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/features.bag",
+          "sha256": "0779bb8a71e4d81ddf02ba933b7428e548534ab580fd4483754f08e26e9bbeb6",
+          "size_bytes": 37403698
+        },
+        "frontend_metrics": {
+          "exists": true,
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/frontend_metrics.csv",
+          "sha256": "aab2266ace8f565ff39faf475889e6f8face3345b40385fb894d435eafdfd25e",
+          "size_bytes": 878746
+        },
+        "vins_config": {
+          "exists": true,
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/vins_aqualoc_archaeo_external.yaml",
+          "sha256": "e3b0ef0badfbe4392b3c29f59b1dd0a4d6c5260b528bf7380dc0b17ac4de19d0",
+          "size_bytes": 976
+        },
+        "vins_node": {
+          "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/vins/vins_node",
+          "sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+          "size_bytes": 13104360
+        }
+      },
+      "state": "PASS"
+    },
+    "original_incident": {
+      "algorithm_failure": false,
+      "errors": [],
+      "failure_stage": {
+        "algorithmic_usability_adjudicated": false,
+        "feature_frames_written": 1230,
+        "last_partial_pose_timestamp_ns": 1542883348725525760,
+        "legacy_evaluator_started": false,
+        "offline_feature_export_completed": true,
+        "partial_pose_count": 326,
+        "score_window_reached": false,
+        "score_window_start_timestamp_ns": 1542883422269233600,
+        "vins_replay_completed": false,
+        "vins_replay_started": true
+      },
+      "partial_trajectory_score_eligible": false,
+      "receipt": {
+        "arm_id": "a06_external_klt",
+        "claimed_identities": {
+          "execution_lock_sha256": "14f4a6beebd4af78900a53ec79c35a13738319a792a8d42214aeb7cd3420d8aa",
+          "features_bag": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/features.bag",
+            "sha256": "0779bb8a71e4d81ddf02ba933b7428e548534ab580fd4483754f08e26e9bbeb6",
+            "size_bytes": 37403698
+          },
+          "frontend_metrics": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/frontend_metrics.csv",
+            "sha256": "aab2266ace8f565ff39faf475889e6f8face3345b40385fb894d435eafdfd25e",
+            "size_bytes": 878746
+          },
+          "partial_vins_log": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/vins.log",
+            "sha256": "66be18c91e8f3e6bc4a40f152d1e2868270937ed33e10de7ccd809244b0518e5",
+            "size_bytes": 37130
+          },
+          "partial_vio_csv": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/vins_output/vio.csv",
+            "sha256": "4692c54cfdc89f7c1ad7c45b871b1856932b6980b54b07a753f9591d5f98c4d8",
+            "size_bytes": 34330
+          },
+          "profile_wrapper_sha256": "266e3c6f0c57eaae0555e1918298d450d9452794569de83de83700f8bae87130",
+          "raw_bag_sha256": "22cc3cff28dabc34de04c870eed5180ab76832c1f3c912da62d0268e9acb2e9a",
+          "runner_sha256": "c3bdb181fb4a0f9ef457f9dd0f7cffd4b1a79c8ed8dc2e529d62f02c9f98a1cc",
+          "vins_config": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/vins_aqualoc_archaeo_external.yaml",
+            "sha256": "e3b0ef0badfbe4392b3c29f59b1dd0a4d6c5260b528bf7380dc0b17ac4de19d0",
+            "size_bytes": 976
+          }
+        },
+        "corrective_contract": null,
+        "ended_at_local": "2026-08-23T15:46:58+08:00",
+        "errors": [],
+        "identity": {
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/formal_run_receipt_v1.json",
+          "sha256": "214c854afc5a88c57a04459911919eff103821f1ba2571899e58a1ef83d86a90",
+          "size_bytes": 3459
+        },
+        "launch_count": 1,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/formal_run_receipt_v1.json",
+        "policy_compliant": true,
+        "raw_return_code": 124,
+        "retry_count": 0,
+        "schema_version": "aqua-fe-samehistory-formal-run-receipt-v1",
+        "started_at_local": "2026-08-23T15:16:58+08:00",
+        "state": "TERMINAL",
+        "wall_time_s": 1800.0
+      },
+      "state": "VALID_INFRASTRUCTURE_CENSORED_INCIDENT"
+    },
+    "original_namespace_rewritten": false,
+    "original_partial_trajectory_scored": false,
+    "protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/samehistory_system_comparison_v1_a06_klt_corrective_replay_protocol.md",
+      "sha256": "4f4c96e435c94331a8e185d1c30899d6d88156a86dc118fce6076f3025016571",
+      "size_bytes": 2571
+    },
+    "selected_run_dir": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay",
+    "source_feature_bag": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/features.bag",
+      "sha256": "0779bb8a71e4d81ddf02ba933b7428e548534ab580fd4483754f08e26e9bbeb6",
+      "size_bytes": 37403698
+    },
+    "state": "ADOPTED_EXACT_BACKEND_ONLY_CORRECTIVE_REPLAY"
+  },
+  "accuracy": {
+    "A06": {
+      "block_codes": [
+        "COMMON_MATCHED_ROWS_LT_30",
+        "REFERENCE_NATIVE_ROWS_LT_30"
+      ],
+      "common_support": {
+        "ape_valid": false,
+        "common_coverage": 1.0,
+        "common_span_s": 12.0,
+        "grid_count": 13,
+        "matched_count": 13,
+        "rpe_pairs": 12,
+        "rpe_valid": true,
+        "segment_count": 1,
+        "window_duration_s": 12.496417023940012
+      },
+      "cross_window_mean_ranking_permitted": false,
+      "descriptive_proxy_metrics": {
+        "arms": {
+          "AQUAFE_PROPOSED_SAFE": {
+            "ape_max_m": 0.2648282350216598,
+            "ape_median_m": 0.13711121120234587,
+            "ape_rmse_m": 0.16440819566646325,
+            "matched_count": 13,
+            "rpe_max_m": 0.06579099286456626,
+            "rpe_median_m": 0.04679146036939817,
+            "rpe_pairs": 12,
+            "rpe_rmse_m": 0.04959772665434283
+          },
+          "EXTERNAL_KLT": {
+            "ape_max_m": 0.268231782192149,
+            "ape_median_m": 0.14107583600272341,
+            "ape_rmse_m": 0.16777114650095612,
+            "matched_count": 13,
+            "rpe_max_m": 0.06574035374812037,
+            "rpe_median_m": 0.04866804084017473,
+            "rpe_pairs": 12,
+            "rpe_rmse_m": 0.050465136504323806
+          },
+          "HFNET_SLAM": {
+            "ape_max_m": 0.775449516168073,
+            "ape_median_m": 0.4184061478450136,
+            "ape_rmse_m": 0.49542200286114135,
+            "matched_count": 13,
+            "rpe_max_m": 0.1954837594074121,
+            "rpe_median_m": 0.14026452210581936,
+            "rpe_pairs": 12,
+            "rpe_rmse_m": 0.14519567622314122
+          },
+          "VANILLA_ORIGIN": {
+            "ape_max_m": 0.2582973428539242,
+            "ape_median_m": 0.1359474901919524,
+            "ape_rmse_m": 0.1632547041449268,
+            "matched_count": 13,
+            "rpe_max_m": 0.06706212979618859,
+            "rpe_median_m": 0.04626482735474775,
+            "rpe_pairs": 12,
+            "rpe_rmse_m": 0.05001001219943033
+          }
+        },
+        "label": "DESCRIPTIVE_SAME_IMAGE_COLMAP_PROXY_ONLY_NO_RANKING"
+      },
+      "failure_zero_imputation_permitted": false,
+      "formal_winner_permitted": false,
+      "native_reference_rows_in_score": 13,
+      "significance_test_permitted": false,
+      "state": "BLOCKED_FORMAL"
+    },
+    "H07": {
+      "block_codes": [
+        "COMMON_MATCHED_ROWS_LT_30",
+        "COMMON_SPAN_LT_10S",
+        "REFERENCE_NATIVE_ROWS_LT_30",
+        "RPE_PAIRS_LT_10"
+      ],
+      "common_support": {
+        "ape_valid": false,
+        "common_coverage": 1.0,
+        "common_span_s": 2.5,
+        "grid_count": 6,
+        "matched_count": 6,
+        "rpe_pairs": 4,
+        "rpe_valid": false,
+        "segment_count": 1,
+        "window_duration_s": 2.999640896101482
+      },
+      "cross_window_mean_ranking_permitted": false,
+      "descriptive_proxy_metrics": {
+        "arms": {
+          "AQUAFE_PROPOSED_SAFE": {
+            "ape_max_m": 0.05707128500076416,
+            "ape_median_m": 0.0303379648914405,
+            "ape_rmse_m": 0.035640098749669974,
+            "matched_count": 6,
+            "rpe_max_m": 0.05208590321353654,
+            "rpe_median_m": 0.039266665704204874,
+            "rpe_pairs": 4,
+            "rpe_rmse_m": 0.04214454569373286
+          },
+          "EXTERNAL_KLT": {
+            "ape_max_m": 0.05841918563740329,
+            "ape_median_m": 0.031407149960846516,
+            "ape_rmse_m": 0.036614964245600165,
+            "matched_count": 6,
+            "rpe_max_m": 0.05304845721052574,
+            "rpe_median_m": 0.04077850457483395,
+            "rpe_pairs": 4,
+            "rpe_rmse_m": 0.04330123188984664
+          },
+          "HFNET_SLAM": {
+            "ape_max_m": 0.00805202025977717,
+            "ape_median_m": 0.006605277645681875,
+            "ape_rmse_m": 0.006112802716626705,
+            "matched_count": 6,
+            "rpe_max_m": 0.010399446971035528,
+            "rpe_median_m": 0.007117713190185917,
+            "rpe_pairs": 4,
+            "rpe_rmse_m": 0.00756204731848604
+          },
+          "VANILLA_ORIGIN": {
+            "ape_max_m": 0.3669423823120831,
+            "ape_median_m": 0.30812557045278877,
+            "ape_rmse_m": 0.2778497457829842,
+            "matched_count": 6,
+            "rpe_max_m": 0.6156512766285803,
+            "rpe_median_m": 0.23507344059782528,
+            "rpe_pairs": 4,
+            "rpe_rmse_m": 0.3666800883398499
+          }
+        },
+        "label": "DESCRIPTIVE_SAME_IMAGE_COLMAP_PROXY_ONLY_NO_RANKING"
+      },
+      "failure_zero_imputation_permitted": false,
+      "formal_winner_permitted": false,
+      "native_reference_rows_in_score": 13,
+      "significance_test_permitted": false,
+      "state": "BLOCKED_FORMAL"
+    }
+  },
+  "analysis_state": "TERMINAL_DESCRIPTIVE_FORMAL_ACCURACY_BLOCKED",
+  "camera_history": {
+    "A06": {
+      "feed_source_range": [
+        0,
+        2460
+      ],
+      "identity": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_a06_exact_window_v1/aqualoc_archaeology_a06_0000_2460/mav0/cam0/data.csv",
+        "sha256": "91ccea67a551f15090e6136dd754fa6cae00eeece798b3b025c0c1209928eb23",
+        "size_bytes": 108309
+      },
+      "score_source_range": [
+        2210,
+        2460
+      ]
+    },
+    "H07": {
+      "feed_source_range": [
+        1,
+        1720
+      ],
+      "identity": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_h07_exact_window_v1/aqualoc_harbor_h07_0001_1720/mav0/cam0/data.csv",
+        "sha256": "f2528507e8a44ce9d5d87e3267c2976fd195230cce23c03eae9270cd0dbf9567",
+        "size_bytes": 75705
+      },
+      "score_source_range": [
+        1660,
+        1720
+      ]
+    }
+  },
+  "cross_system_disclosures": [
+    "A06 external_klt original replay was infrastructure-censored before score; only the exact frozen-feature backend corrective namespace may be adopted, and the immutable partial output is never scored",
+    "vanilla_origin is the pinned native-image context control from the local quality-capable checkout, not a byte-identical pristine upstream Vanilla VINS-Fusion",
+    "camera-history matched / IMU API support differs",
+    "external AQUA-FE arms export at 10 Hz while HFNet camera/backend is 20 Hz",
+    "origin sees 20 Hz images but MT1 queues every second tracker feature frame",
+    "Candidate/pre-gate/gate-drop sums are repeated per-frame pipeline diagnostics, not independent samples or exported learned action",
+    "Byte-identical external_klt and proposed feature bags prohibit attributing any VIO difference to the learned frontend",
+    "VINS online outputs and HFNet final-map trajectory semantics differ",
+    "reference is a same-image COLMAP depth-scale proxy, not sensor-independent GT"
+  ],
+  "evaluator_audit": {
+    "A06": {
+      "input_manifest": {
+        "files": {
+          "aquafe_proposed_safe_config": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/vins_aqualoc_archaeo_external.yaml",
+            "sha256": "32dd52cac1ff326240e7ecbafd1394e5858f8eae0e54e64eae25b3dce9257b9c",
+            "size_bytes": 1008
+          },
+          "aquafe_proposed_safe_trajectory": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/vins_output/vio.csv",
+            "sha256": "9535c953fe543201cfd01dc1cd631daa50687fa9e89905b609642fefc1d5d6c0",
+            "size_bytes": 124964
+          },
+          "evaluator": {
+            "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support.py",
+            "sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110",
+            "size_bytes": 27933
+          },
+          "external_klt_config": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/vins_aqualoc_archaeo_external.yaml",
+            "sha256": "8a00f216e306d3373b7b815b4123934cd62e1f6df106b5ee03eb03d9236026c4",
+            "size_bytes": 945
+          },
+          "external_klt_trajectory": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/vins_output/vio.csv",
+            "sha256": "c4bb08ab3cea8fd509539beb40b36f9c6764f788fcc195c70020dd2c253fc93b",
+            "size_bytes": 124824
+          },
+          "hfnet_bridge": {
+            "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a06_0000_2460/attempt_001/bridges/hfnet_world_T_body_vins_csv_v1.csv",
+            "sha256": "e460b4d51c40f6bb04068a81dcf74cb050a4192e586fa2def334e76ee9b2227d",
+            "size_bytes": 259978
+          },
+          "reference_bag": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/raw/archaeo06_0000_2460.bag",
+            "sha256": "22cc3cff28dabc34de04c870eed5180ab76832c1f3c912da62d0268e9acb2e9a",
+            "size_bytes": 573420704
+          },
+          "vanilla_origin_config": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/vanilla_origin/vins_aqualoc_archaeo_origin.yaml",
+            "sha256": "8e0860e33b8b017c32a6f203c05a03ce2081cbcb3083fc34b0a0081ef5c7f077",
+            "size_bytes": 980
+          },
+          "vanilla_origin_trajectory": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/vanilla_origin/vins_output/vio.csv",
+            "sha256": "932025ff3a818fcad2880e88c8385022019b4f3d11df8fff8fc0bb7289a9a35a",
+            "size_bytes": 127225
+          }
+        },
+        "formal_gates": {
+          "min_ape_poses": 30,
+          "min_ape_span_s": 10.0,
+          "min_common_coverage": 0.7,
+          "min_rpe_pairs": 10
+        },
+        "schema_version": "aqua-fe-samehistory-common-support-input-manifest-v1",
+        "sequence": "A06"
+      },
+      "state": "READ_EXISTING_COMMON_SUPPORT",
+      "summary_path": "/home/ma/AQUA-FE_WS/papers/samehistory_system_comparison_v1_analysis/common_support/a06/common_support_summary.json"
+    },
+    "H07": {
+      "input_manifest": {
+        "files": {
+          "aquafe_proposed_safe_config": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/vins_aqualoc_external.yaml",
+            "sha256": "a2866a4a68a33e2b7c5e762a8de77858ecd383bc2c247277f1589805a03a3338",
+            "size_bytes": 1024
+          },
+          "aquafe_proposed_safe_trajectory": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/vins_output/vio.csv",
+            "sha256": "10204c57eadaf1933bfddf850f3a853f634bbc30c3331a7ed9a9a4670c24317e",
+            "size_bytes": 90995
+          },
+          "evaluator": {
+            "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support.py",
+            "sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110",
+            "size_bytes": 27933
+          },
+          "external_klt_config": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/vins_aqualoc_external.yaml",
+            "sha256": "56aade70d916abf16d412ba6688aa1db9c321c79d214827d7222be7d47e99872",
+            "size_bytes": 992
+          },
+          "external_klt_trajectory": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/vins_output/vio.csv",
+            "sha256": "20d71bbc19c2dd3501ccc8831349444849ff69b7d3742b16811d7c10e7ccc3f9",
+            "size_bytes": 91019
+          },
+          "hfnet_bridge": {
+            "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h07_0001_1720/attempt_001/bridges/hfnet_world_T_body_vins_csv_v1.csv",
+            "sha256": "f23dd861ff738848edd20756e7a7e571a4aae85f8d19d3d8bdd2994bd11ff200",
+            "size_bytes": 176810
+          },
+          "reference_bag": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/raw/harbor07_0001_1720.bag",
+            "sha256": "028697c3c1d36ccb87c98b3862a03608a148e1f8a9a59b88eb99f0a461c53e41",
+            "size_bytes": 291410228
+          },
+          "vanilla_origin_config": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/vanilla_origin/vins_aqualoc_origin.yaml",
+            "sha256": "396f3548d4f2f8e55b823e1033c0af8021af78a1e402622ce417a9a3d93f1de5",
+            "size_bytes": 996
+          },
+          "vanilla_origin_trajectory": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/vanilla_origin/vins_output/vio.csv",
+            "sha256": "1bcdfc17411a5c66d2e752a7ab91b067020faf3a9b045ac169725a79462be486",
+            "size_bytes": 92224
+          }
+        },
+        "formal_gates": {
+          "min_ape_poses": 30,
+          "min_ape_span_s": 10.0,
+          "min_common_coverage": 0.7,
+          "min_rpe_pairs": 10
+        },
+        "schema_version": "aqua-fe-samehistory-common-support-input-manifest-v1",
+        "sequence": "H07"
+      },
+      "state": "READ_EXISTING_COMMON_SUPPORT",
+      "summary_path": "/home/ma/AQUA-FE_WS/papers/samehistory_system_comparison_v1_analysis/common_support/h07/common_support_summary.json"
+    }
+  },
+  "execution_lock": {
+    "path": "/home/ma/AQUA-FE_WS/papers/samehistory_system_comparison_v1_execution_lock.json",
+    "sha256": "14f4a6beebd4af78900a53ec79c35a13738319a792a8d42214aeb7cd3420d8aa",
+    "size_bytes": 4168
+  },
+  "figures_generated": false,
+  "frontend_payload_comparisons": {
+    "A06": {
+      "action_class": "NO_ACTION_BYTE_IDENTICAL_TO_KLT",
+      "backend_run_nondeterminism_observed": true,
+      "candidate_activity_is_independent_sample_evidence": false,
+      "feature_bags": {
+        "aquafe_proposed_safe": {
+          "exists": true,
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/features.bag",
+          "role": "FORMAL_AQUAFE_PROPOSED_SAFE_FEATURE_BAG",
+          "sha256": "0779bb8a71e4d81ddf02ba933b7428e548534ab580fd4483754f08e26e9bbeb6",
+          "size_bytes": 37403698
+        },
+        "external_klt": {
+          "exists": true,
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/features.bag",
+          "role": "FROZEN_SOURCE_FEATURE_BAG_FOR_CORRECTIVE_BACKEND_REPLAY",
+          "sha256": "0779bb8a71e4d81ddf02ba933b7428e548534ab580fd4483754f08e26e9bbeb6",
+          "size_bytes": 37403698
+        }
+      },
+      "interpretation": "Identical feature-bag bytes fix the complete frontend payload. Any selected VIO SHA difference is a backend-run difference, not learned-frontend evidence.",
+      "learning_improvement_attribution": "PROHIBITED_PAYLOAD_BYTE_IDENTICAL",
+      "learning_improvement_claim_permitted": false,
+      "payload_byte_identical": true,
+      "proposed_learned_observations_full": 0,
+      "proposed_learned_pipeline_activity_columns_present": {
+        "learned_candidate_count_sum": true,
+        "learned_export_gate_dropped_sum": true,
+        "pre_gate_sidecar_total_sum": true
+      },
+      "proposed_learned_pipeline_activity_full": {
+        "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+        "learned_candidate_count_sum": 1021,
+        "learned_export_gate_dropped_sum": 2921,
+        "pre_gate_sidecar_total_sum": 2921
+      },
+      "proposed_learned_pipeline_activity_observed": true,
+      "selected_trajectories": {
+        "aquafe_proposed_safe": {
+          "exists": true,
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/vins_output/vio.csv",
+          "role": "AQUAFE_PROPOSED_SAFE_VIO",
+          "sha256": "9535c953fe543201cfd01dc1cd631daa50687fa9e89905b609642fefc1d5d6c0",
+          "size_bytes": 124964
+        },
+        "external_klt": {
+          "exists": true,
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/vins_output/vio.csv",
+          "role": "SELECTED_EXTERNAL_KLT_VIO",
+          "sha256": "c4bb08ab3cea8fd509539beb40b36f9c6764f788fcc195c70020dd2c253fc93b",
+          "size_bytes": 124824
+        }
+      },
+      "sequence": "A06",
+      "state": "COMPLETE",
+      "trajectory_comparison_eligible": true,
+      "trajectory_difference_not_attributable_to_frontend": true,
+      "trajectory_sha_different": true
+    },
+    "H07": {
+      "action_class": "NO_ACTION_BYTE_IDENTICAL_TO_KLT",
+      "backend_run_nondeterminism_observed": true,
+      "candidate_activity_is_independent_sample_evidence": false,
+      "feature_bags": {
+        "aquafe_proposed_safe": {
+          "exists": true,
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/features.bag",
+          "role": "FORMAL_AQUAFE_PROPOSED_SAFE_FEATURE_BAG",
+          "sha256": "45659eb766a29b6671e77108f181bad58a27d47f6487e2c770fd2f98b51c0630",
+          "size_bytes": 26259535
+        },
+        "external_klt": {
+          "exists": true,
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/features.bag",
+          "role": "FORMAL_EXTERNAL_KLT_FEATURE_BAG",
+          "sha256": "45659eb766a29b6671e77108f181bad58a27d47f6487e2c770fd2f98b51c0630",
+          "size_bytes": 26259535
+        }
+      },
+      "interpretation": "Identical feature-bag bytes fix the complete frontend payload. Any selected VIO SHA difference is a backend-run difference, not learned-frontend evidence.",
+      "learning_improvement_attribution": "PROHIBITED_PAYLOAD_BYTE_IDENTICAL",
+      "learning_improvement_claim_permitted": false,
+      "payload_byte_identical": true,
+      "proposed_learned_observations_full": 0,
+      "proposed_learned_pipeline_activity_columns_present": {
+        "learned_candidate_count_sum": true,
+        "learned_export_gate_dropped_sum": true,
+        "pre_gate_sidecar_total_sum": true
+      },
+      "proposed_learned_pipeline_activity_full": {
+        "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+        "learned_candidate_count_sum": 650,
+        "learned_export_gate_dropped_sum": 1954,
+        "pre_gate_sidecar_total_sum": 1954
+      },
+      "proposed_learned_pipeline_activity_observed": true,
+      "selected_trajectories": {
+        "aquafe_proposed_safe": {
+          "exists": true,
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/vins_output/vio.csv",
+          "role": "AQUAFE_PROPOSED_SAFE_VIO",
+          "sha256": "10204c57eadaf1933bfddf850f3a853f634bbc30c3331a7ed9a9a4670c24317e",
+          "size_bytes": 90995
+        },
+        "external_klt": {
+          "exists": true,
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/vins_output/vio.csv",
+          "role": "SELECTED_EXTERNAL_KLT_VIO",
+          "sha256": "20d71bbc19c2dd3501ccc8831349444849ff69b7d3742b16811d7c10e7ccc3f9",
+          "size_bytes": 91019
+        }
+      },
+      "sequence": "H07",
+      "state": "COMPLETE",
+      "trajectory_comparison_eligible": true,
+      "trajectory_difference_not_attributable_to_frontend": true,
+      "trajectory_sha_different": true
+    }
+  },
+  "frozen_protocol": {
+    "path": "/home/ma/AQUA-FE_WS/papers/samehistory_system_comparison_v1_protocol.md",
+    "sha256": "7a4ffa58dbb64eb2ce51be9497c49fbd66db49ca740972e110f96609eb9837b1",
+    "size_bytes": 5318
+  },
+  "hfnet_bundle": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_multiwindow_strict_analysis_v2_1/hfnet_multiwindow_analysis_bundle_v2.json",
+    "sha256": "fac9d80e3019c8b1a21dc0902677a5a0549db21ba80e30404dd4be5feda9bff6",
+    "size_bytes": 25589
+  },
+  "hfnet_sealed_summary": {
+    "denominator": 3,
+    "failed_terminal_count": 1,
+    "final_usable_k_of_3": "2/3",
+    "legacy_context_excluded_from_denominator": true,
+    "pending_count": 0,
+    "terminal_count": 3,
+    "unit_of_analysis": "frozen_current_protocol_window",
+    "usable_terminal_count": 2
+  },
+  "question": "Same raw camera history: native-image VINS context, same-exporter KLT ablation, AQUA-FE proposed_safe, and sealed HFNet-SLAM usability.",
+  "rows": [
+    {
+      "analysis_state": "TERMINAL",
+      "frontend": {
+        "state": "NOT_APPLICABLE_NATIVE_IMAGE_TRACKER"
+      },
+      "input_rate": "20_HZ_NATIVE_TRACKER_MT1_EVERY_SECOND_BACKEND",
+      "method": "vanilla_origin",
+      "receipt": {
+        "arm_id": "a06_vanilla_origin",
+        "claimed_identities": {
+          "execution_lock_sha256": "14f4a6beebd4af78900a53ec79c35a13738319a792a8d42214aeb7cd3420d8aa",
+          "legacy_ape_diagnostic": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/vanilla_origin/ape.txt",
+            "sha256": "d16e9174f4dccd1752b81d7d59affb95fa951a2049518b491210b49e4efdac88",
+            "size_bytes": 649
+          },
+          "raw_bag": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/raw/archaeo06_0000_2460.bag",
+            "sha256": "22cc3cff28dabc34de04c870eed5180ab76832c1f3c912da62d0268e9acb2e9a",
+            "size_bytes": 573420704
+          },
+          "runner_sha256": "c3bdb181fb4a0f9ef457f9dd0f7cffd4b1a79c8ed8dc2e529d62f02c9f98a1cc",
+          "vins_config": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/vanilla_origin/vins_aqualoc_archaeo_origin.yaml",
+            "sha256": "8e0860e33b8b017c32a6f203c05a03ce2081cbcb3083fc34b0a0081ef5c7f077"
+          },
+          "vins_log": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/vanilla_origin/vins.log",
+            "sha256": "13477676644a2505d6f2742b77d85080c179f74f4f43d6c568e9acd520f00621",
+            "size_bytes": 121283
+          },
+          "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+          "vio_csv": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/vanilla_origin/vins_output/vio.csv",
+            "sha256": "932025ff3a818fcad2880e88c8385022019b4f3d11df8fff8fc0bb7289a9a35a",
+            "size_bytes": 127225
+          }
+        },
+        "corrective_contract": null,
+        "ended_at_local": "2026-08-23T15:15:41.942015200+08:00",
+        "errors": [],
+        "identity": {
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/vanilla_origin/formal_run_receipt_v1.json",
+          "sha256": "b26ff3648a92379e1120845a2a9538fc72d6dc85c85bf547b5aa36ae58382079",
+          "size_bytes": 2832
+        },
+        "launch_count": 1,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/vanilla_origin/formal_run_receipt_v1.json",
+        "policy_compliant": true,
+        "raw_return_code": 0,
+        "retry_count": 0,
+        "schema_version": "aqua-fe-samehistory-formal-run-receipt-v1",
+        "started_at_local": "2026-08-23T15:08:03+08:00",
+        "state": "TERMINAL",
+        "wall_time_s": 458.7
+      },
+      "run_dir": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/vanilla_origin",
+      "score_support": {
+        "associated_feed_parity_counts": {
+          "even": 0,
+          "odd": 1207
+        },
+        "camera_grid_coverage_fraction": 0.49800796812749004,
+        "camera_grid_covered_count": 125,
+        "camera_grid_expected_count": 251,
+        "covered_source_indices": [
+          2211,
+          2213,
+          2215,
+          2217,
+          2219,
+          2221,
+          2223,
+          2225,
+          2227,
+          2229,
+          2231,
+          2233,
+          2235,
+          2237,
+          2239,
+          2241,
+          2243,
+          2245,
+          2247,
+          2249,
+          2251,
+          2253,
+          2255,
+          2257,
+          2259,
+          2261,
+          2263,
+          2265,
+          2267,
+          2269,
+          2271,
+          2273,
+          2275,
+          2277,
+          2279,
+          2281,
+          2283,
+          2285,
+          2287,
+          2289,
+          2291,
+          2293,
+          2295,
+          2297,
+          2299,
+          2301,
+          2303,
+          2305,
+          2307,
+          2309,
+          2311,
+          2313,
+          2315,
+          2317,
+          2319,
+          2321,
+          2323,
+          2325,
+          2327,
+          2329,
+          2331,
+          2333,
+          2335,
+          2337,
+          2339,
+          2341,
+          2343,
+          2345,
+          2347,
+          2349,
+          2351,
+          2353,
+          2355,
+          2357,
+          2359,
+          2361,
+          2363,
+          2365,
+          2367,
+          2369,
+          2371,
+          2373,
+          2375,
+          2377,
+          2379,
+          2381,
+          2383,
+          2385,
+          2387,
+          2389,
+          2391,
+          2393,
+          2395,
+          2397,
+          2399,
+          2401,
+          2403,
+          2405,
+          2407,
+          2409,
+          2411,
+          2413,
+          2415,
+          2417,
+          2419,
+          2421,
+          2423,
+          2425,
+          2427,
+          2429,
+          2431,
+          2433,
+          2435,
+          2437,
+          2439,
+          2441,
+          2443,
+          2445,
+          2447,
+          2449,
+          2451,
+          2453,
+          2455,
+          2457,
+          2459
+        ],
+        "first_score_output_delay_s": 0.0455768,
+        "first_score_output_source": 2211,
+        "method_native_coverage_fraction": 1.0,
+        "method_native_covered_count": 125,
+        "method_native_expected_count": 125,
+        "method_native_expected_first_source": 2211,
+        "method_native_expected_last_source": 2459,
+        "method_native_longest_contiguous_count": 125,
+        "method_native_longest_contiguous_fraction": 1.0,
+        "phase": "odd",
+        "phase_confidence": 1.0,
+        "phase_source": "OBSERVED_ORIGIN_MT1_TIMESTAMP_ASSOCIATION",
+        "phase_state": "PASS",
+        "score_source_range": [
+          2210,
+          2460
+        ]
+      },
+      "sequence": "A06",
+      "timestamp_association": {
+        "ambiguous_nearest_count": 0,
+        "duplicate_source_association_count": 0,
+        "matched_pose_count": 1207,
+        "max_abs_error_ns": 224,
+        "p95_abs_error_ns": 192.0,
+        "tolerance_ns": 5000000,
+        "total_pose_count": 1207,
+        "unique_source_count": 1207,
+        "unmatched_pose_count": 0
+      },
+      "trajectory": {
+        "finite_count": 1207,
+        "first_timestamp_ns": 1542883314131397376,
+        "last_timestamp_ns": 1542883434726108672,
+        "malformed_count": 0,
+        "nonfinite_count": 0,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/vanilla_origin/vins_output/vio.csv",
+        "pose_count": 1207,
+        "state": "VALID",
+        "strictly_increasing": true
+      },
+      "usability": {
+        "failure_codes": [],
+        "initialization_success": true,
+        "receipt_artifact_identity_errors": [],
+        "required_artifacts_missing": [],
+        "solver_failure_count_disclosed_not_automatically_failed": 0,
+        "status": "PASS"
+      },
+      "vins_log": {
+        "counts": {
+          "explicit_reset_or_reboot": 0,
+          "failure_detection": 0,
+          "gyro_bias_initial_calibration": 9,
+          "init_first_imu_pose": 1,
+          "initialization_finish": 1,
+          "linear_solver_failure": 0,
+          "marginalization_failure": 0
+        },
+        "examples": {
+          "gyro_bias_initial_calibration": [
+            {
+              "line_number": 25,
+              "text": "[ WARN] [1787469206.632694520, 1542883313.123886645]: gyroscope bias initial calibration  0.0632411 -0.0187202 -0.0704697"
+            },
+            {
+              "line_number": 26,
+              "text": "[ WARN] [1787469206.675472851, 1542883313.192340997]: gyroscope bias initial calibration -0.0511294  0.0172264  0.0152471"
+            },
+            {
+              "line_number": 27,
+              "text": "[ WARN] [1787469206.784556940, 1542883313.299433385]: gyroscope bias initial calibration   0.0276469 -0.00315226  -0.0193321"
+            },
+            {
+              "line_number": 28,
+              "text": "[ WARN] [1787469207.030948178, 1542883313.529567762]: gyroscope bias initial calibration -0.0295133 0.00694021  0.0170115"
+            },
+            {
+              "line_number": 29,
+              "text": "[ WARN] [1787469207.158244131, 1542883313.623722235]: gyroscope bias initial calibration -0.0554213  0.0136105  0.0226477"
+            }
+          ],
+          "init_first_imu_pose": [
+            {
+              "line_number": 19,
+              "text": "init first imu pose"
+            }
+          ],
+          "initialization_finish": [
+            {
+              "line_number": 47,
+              "text": "[ INFO] [1787469207.692517427, 1542883314.208878608]: Initialization finish!"
+            }
+          ]
+        },
+        "hard_reset_evidence_count": 0,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/vanilla_origin/vins.log",
+        "state": "READ"
+      }
+    },
+    {
+      "analysis_state": "TERMINAL",
+      "feature_bag_identity": {
+        "exists": true,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/features.bag",
+        "role": "FROZEN_SOURCE_FEATURE_BAG_FOR_CORRECTIVE_BACKEND_REPLAY",
+        "sha256": "0779bb8a71e4d81ddf02ba933b7428e548534ab580fd4483754f08e26e9bbeb6",
+        "size_bytes": 37403698
+      },
+      "frontend": {
+        "errors": [],
+        "learned_action_class": "NO_LEARNED_ACTION_NO_HARM_ONLY",
+        "learned_pipeline_activity_columns_present": {
+          "learned_candidate_count_sum": true,
+          "learned_export_gate_dropped_sum": true,
+          "pre_gate_sidecar_total_sum": true
+        },
+        "learned_pipeline_activity_interpretation": "Candidate, pre-gate sidecar, and gate-drop sums show pipeline activity only; they are repeated per-frame diagnostics and are not independent samples or exported learned action.",
+        "mapping": {
+          "authority": "TIMESTAMP_TO_FROZEN_CAMERA_CSV",
+          "first_source": 1,
+          "frame_index_formula_audit": "source=feed_start+frame_index",
+          "last_source": 2459,
+          "mapped_row_count": 1230
+        },
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/frontend_metrics.csv",
+        "segments": {
+          "full": {
+            "exported_features_sum": 430485,
+            "learned_affected_frames": {
+              "any": 0,
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "xfeat": 0
+            },
+            "learned_observations": {
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "total": 0,
+              "xfeat": 0
+            },
+            "learned_pipeline_activity": {
+              "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+              "learned_candidate_count_sum": 0,
+              "learned_export_gate_dropped_sum": 0,
+              "pre_gate_sidecar_total_sum": 0
+            },
+            "metric_rows": 1230,
+            "published_feature_rows": 1230
+          },
+          "preroll": {
+            "exported_features_sum": 386735,
+            "learned_affected_frames": {
+              "any": 0,
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "xfeat": 0
+            },
+            "learned_observations": {
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "total": 0,
+              "xfeat": 0
+            },
+            "learned_pipeline_activity": {
+              "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+              "learned_candidate_count_sum": 0,
+              "learned_export_gate_dropped_sum": 0,
+              "pre_gate_sidecar_total_sum": 0
+            },
+            "metric_rows": 1105,
+            "published_feature_rows": 1105
+          },
+          "score": {
+            "exported_features_sum": 43750,
+            "learned_affected_frames": {
+              "any": 0,
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "xfeat": 0
+            },
+            "learned_observations": {
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "total": 0,
+              "xfeat": 0
+            },
+            "learned_pipeline_activity": {
+              "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+              "learned_candidate_count_sum": 0,
+              "learned_export_gate_dropped_sum": 0,
+              "pre_gate_sidecar_total_sum": 0
+            },
+            "metric_rows": 125,
+            "published_feature_rows": 125
+          }
+        },
+        "state": "VALID"
+      },
+      "frontend_payload_pair_audit": {
+        "action_class": "NO_ACTION_BYTE_IDENTICAL_TO_KLT",
+        "backend_run_nondeterminism_observed": true,
+        "candidate_activity_is_independent_sample_evidence": false,
+        "learning_improvement_attribution": "PROHIBITED_PAYLOAD_BYTE_IDENTICAL",
+        "learning_improvement_claim_permitted": false,
+        "payload_byte_identical": true,
+        "proposed_learned_observations_full": 0,
+        "proposed_learned_pipeline_activity_columns_present": {
+          "learned_candidate_count_sum": true,
+          "learned_export_gate_dropped_sum": true,
+          "pre_gate_sidecar_total_sum": true
+        },
+        "proposed_learned_pipeline_activity_full": {
+          "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+          "learned_candidate_count_sum": 1021,
+          "learned_export_gate_dropped_sum": 2921,
+          "pre_gate_sidecar_total_sum": 2921
+        },
+        "proposed_learned_pipeline_activity_observed": true,
+        "state": "COMPLETE",
+        "trajectory_difference_not_attributable_to_frontend": true,
+        "trajectory_sha_different": true
+      },
+      "infrastructure_corrective_replay": {
+        "adopted": true,
+        "backend_corrective_is_independent_method_repeat": false,
+        "corrective_namespace": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay",
+        "corrective_receipt": {
+          "arm_id": "a06_external_klt_corrective_replay",
+          "claimed_identities": {
+            "legacy_ape_diagnostic": {
+              "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/ape.txt",
+              "sha256": "1af747f811b784740c19765d194b859f94ac7fc59d65099009ae897755070a82",
+              "size_bytes": 649
+            },
+            "replay_manifest_sha256": "1c91c5f81b08a4cdf1a444cd9afea66600b653554c591f718658ae998344ad78",
+            "replay_runner_sha256": "2233e2be8bf9f9db3eb691392218b59bd7f9fbbe741bf51b6bea40316d509f8e",
+            "runtime_vins_config_sha256": "8a00f216e306d3373b7b815b4123934cd62e1f6df106b5ee03eb03d9236026c4",
+            "source_features_bag": {
+              "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/features.bag",
+              "sha256": "0779bb8a71e4d81ddf02ba933b7428e548534ab580fd4483754f08e26e9bbeb6",
+              "size_bytes": 37403698
+            },
+            "source_frontend_metrics_sha256": "aab2266ace8f565ff39faf475889e6f8face3345b40385fb894d435eafdfd25e",
+            "vins_log": {
+              "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/vins.log",
+              "sha256": "26fcae0e29724112b1cc6cff6fd0a9f6d45e77905df2cd2ca4558c03073851db",
+              "size_bytes": 123053
+            },
+            "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+            "vio_csv": {
+              "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/vins_output/vio.csv",
+              "sha256": "c4bb08ab3cea8fd509539beb40b36f9c6764f788fcc195c70020dd2c253fc93b",
+              "size_bytes": 124824
+            }
+          },
+          "corrective_contract": {
+            "front_end_recomputed": false,
+            "original_namespace_modified": false,
+            "original_terminal_receipt_path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/formal_run_receipt_v1.json",
+            "original_terminal_receipt_sha256": "214c854afc5a88c57a04459911919eff103821f1ba2571899e58a1ef83d86a90",
+            "protocol_path": "/home/ma/AQUA-FE_WS/papers/samehistory_system_comparison_v1_a06_klt_corrective_replay_protocol.md",
+            "protocol_sha256": "4f4c96e435c94331a8e185d1c30899d6d88156a86dc118fce6076f3025016571",
+            "result_informed_change": false
+          },
+          "ended_at_local": "2026-08-23T15:53:39.328721600+08:00",
+          "errors": [],
+          "identity": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/formal_run_receipt_v1.json",
+            "sha256": "e4ba54b2e2a09689318d2dcfd25d78f144c60eb2c1bee511bbfaf5f31d66a3bd",
+            "size_bytes": 3902
+          },
+          "launch_count": 1,
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/formal_run_receipt_v1.json",
+          "policy_compliant": true,
+          "raw_return_code": 0,
+          "retry_count": 0,
+          "schema_version": "aqua-fe-samehistory-formal-run-receipt-v1",
+          "started_at_local": "2026-08-23T15:51:16+08:00",
+          "state": "TERMINAL",
+          "wall_time_s": 143.8
+        },
+        "errors": [],
+        "frozen_source_payload": {
+          "errors": [],
+          "files": {
+            "camera_config": {
+              "exists": true,
+              "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/aqualoc_archaeo06_pinhole.yaml",
+              "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+              "size_bytes": 357
+            },
+            "corrective_runner": {
+              "path": "/home/ma/AQUA-FE_WS/scripts/run_existing_featurebag_vins_eval.sh",
+              "sha256": "2233e2be8bf9f9db3eb691392218b59bd7f9fbbe741bf51b6bea40316d509f8e",
+              "size_bytes": 4357
+            },
+            "feature_bag": {
+              "exists": true,
+              "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/features.bag",
+              "sha256": "0779bb8a71e4d81ddf02ba933b7428e548534ab580fd4483754f08e26e9bbeb6",
+              "size_bytes": 37403698
+            },
+            "frontend_metrics": {
+              "exists": true,
+              "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/frontend_metrics.csv",
+              "sha256": "aab2266ace8f565ff39faf475889e6f8face3345b40385fb894d435eafdfd25e",
+              "size_bytes": 878746
+            },
+            "vins_config": {
+              "exists": true,
+              "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/vins_aqualoc_archaeo_external.yaml",
+              "sha256": "e3b0ef0badfbe4392b3c29f59b1dd0a4d6c5260b528bf7380dc0b17ac4de19d0",
+              "size_bytes": 976
+            },
+            "vins_node": {
+              "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/vins/vins_node",
+              "sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+              "size_bytes": 13104360
+            }
+          },
+          "state": "PASS"
+        },
+        "original_incident": {
+          "algorithm_failure": false,
+          "errors": [],
+          "failure_stage": {
+            "algorithmic_usability_adjudicated": false,
+            "feature_frames_written": 1230,
+            "last_partial_pose_timestamp_ns": 1542883348725525760,
+            "legacy_evaluator_started": false,
+            "offline_feature_export_completed": true,
+            "partial_pose_count": 326,
+            "score_window_reached": false,
+            "score_window_start_timestamp_ns": 1542883422269233600,
+            "vins_replay_completed": false,
+            "vins_replay_started": true
+          },
+          "partial_trajectory_score_eligible": false,
+          "receipt": {
+            "arm_id": "a06_external_klt",
+            "claimed_identities": {
+              "execution_lock_sha256": "14f4a6beebd4af78900a53ec79c35a13738319a792a8d42214aeb7cd3420d8aa",
+              "features_bag": {
+                "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/features.bag",
+                "sha256": "0779bb8a71e4d81ddf02ba933b7428e548534ab580fd4483754f08e26e9bbeb6",
+                "size_bytes": 37403698
+              },
+              "frontend_metrics": {
+                "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/frontend_metrics.csv",
+                "sha256": "aab2266ace8f565ff39faf475889e6f8face3345b40385fb894d435eafdfd25e",
+                "size_bytes": 878746
+              },
+              "partial_vins_log": {
+                "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/vins.log",
+                "sha256": "66be18c91e8f3e6bc4a40f152d1e2868270937ed33e10de7ccd809244b0518e5",
+                "size_bytes": 37130
+              },
+              "partial_vio_csv": {
+                "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/vins_output/vio.csv",
+                "sha256": "4692c54cfdc89f7c1ad7c45b871b1856932b6980b54b07a753f9591d5f98c4d8",
+                "size_bytes": 34330
+              },
+              "profile_wrapper_sha256": "266e3c6f0c57eaae0555e1918298d450d9452794569de83de83700f8bae87130",
+              "raw_bag_sha256": "22cc3cff28dabc34de04c870eed5180ab76832c1f3c912da62d0268e9acb2e9a",
+              "runner_sha256": "c3bdb181fb4a0f9ef457f9dd0f7cffd4b1a79c8ed8dc2e529d62f02c9f98a1cc",
+              "vins_config": {
+                "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/vins_aqualoc_archaeo_external.yaml",
+                "sha256": "e3b0ef0badfbe4392b3c29f59b1dd0a4d6c5260b528bf7380dc0b17ac4de19d0",
+                "size_bytes": 976
+              }
+            },
+            "corrective_contract": null,
+            "ended_at_local": "2026-08-23T15:46:58+08:00",
+            "errors": [],
+            "identity": {
+              "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/formal_run_receipt_v1.json",
+              "sha256": "214c854afc5a88c57a04459911919eff103821f1ba2571899e58a1ef83d86a90",
+              "size_bytes": 3459
+            },
+            "launch_count": 1,
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/formal_run_receipt_v1.json",
+            "policy_compliant": true,
+            "raw_return_code": 124,
+            "retry_count": 0,
+            "schema_version": "aqua-fe-samehistory-formal-run-receipt-v1",
+            "started_at_local": "2026-08-23T15:16:58+08:00",
+            "state": "TERMINAL",
+            "wall_time_s": 1800.0
+          },
+          "state": "VALID_INFRASTRUCTURE_CENSORED_INCIDENT"
+        },
+        "original_namespace_rewritten": false,
+        "original_partial_trajectory_scored": false,
+        "protocol": {
+          "path": "/home/ma/AQUA-FE_WS/papers/samehistory_system_comparison_v1_a06_klt_corrective_replay_protocol.md",
+          "sha256": "4f4c96e435c94331a8e185d1c30899d6d88156a86dc118fce6076f3025016571",
+          "size_bytes": 2571
+        },
+        "selected_run_dir": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay",
+        "source_feature_bag": {
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/features.bag",
+          "sha256": "0779bb8a71e4d81ddf02ba933b7428e548534ab580fd4483754f08e26e9bbeb6",
+          "size_bytes": 37403698
+        },
+        "state": "ADOPTED_EXACT_BACKEND_ONLY_CORRECTIVE_REPLAY"
+      },
+      "input_rate": "20_HZ_TRACKER_STATE_10_HZ_EVERY2_EXPORT_AND_BACKEND",
+      "method": "external_klt",
+      "receipt": {
+        "arm_id": "a06_external_klt_corrective_replay",
+        "claimed_identities": {
+          "legacy_ape_diagnostic": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/ape.txt",
+            "sha256": "1af747f811b784740c19765d194b859f94ac7fc59d65099009ae897755070a82",
+            "size_bytes": 649
+          },
+          "replay_manifest_sha256": "1c91c5f81b08a4cdf1a444cd9afea66600b653554c591f718658ae998344ad78",
+          "replay_runner_sha256": "2233e2be8bf9f9db3eb691392218b59bd7f9fbbe741bf51b6bea40316d509f8e",
+          "runtime_vins_config_sha256": "8a00f216e306d3373b7b815b4123934cd62e1f6df106b5ee03eb03d9236026c4",
+          "source_features_bag": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/features.bag",
+            "sha256": "0779bb8a71e4d81ddf02ba933b7428e548534ab580fd4483754f08e26e9bbeb6",
+            "size_bytes": 37403698
+          },
+          "source_frontend_metrics_sha256": "aab2266ace8f565ff39faf475889e6f8face3345b40385fb894d435eafdfd25e",
+          "vins_log": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/vins.log",
+            "sha256": "26fcae0e29724112b1cc6cff6fd0a9f6d45e77905df2cd2ca4558c03073851db",
+            "size_bytes": 123053
+          },
+          "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+          "vio_csv": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/vins_output/vio.csv",
+            "sha256": "c4bb08ab3cea8fd509539beb40b36f9c6764f788fcc195c70020dd2c253fc93b",
+            "size_bytes": 124824
+          }
+        },
+        "corrective_contract": {
+          "front_end_recomputed": false,
+          "original_namespace_modified": false,
+          "original_terminal_receipt_path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt/formal_run_receipt_v1.json",
+          "original_terminal_receipt_sha256": "214c854afc5a88c57a04459911919eff103821f1ba2571899e58a1ef83d86a90",
+          "protocol_path": "/home/ma/AQUA-FE_WS/papers/samehistory_system_comparison_v1_a06_klt_corrective_replay_protocol.md",
+          "protocol_sha256": "4f4c96e435c94331a8e185d1c30899d6d88156a86dc118fce6076f3025016571",
+          "result_informed_change": false
+        },
+        "ended_at_local": "2026-08-23T15:53:39.328721600+08:00",
+        "errors": [],
+        "identity": {
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/formal_run_receipt_v1.json",
+          "sha256": "e4ba54b2e2a09689318d2dcfd25d78f144c60eb2c1bee511bbfaf5f31d66a3bd",
+          "size_bytes": 3902
+        },
+        "launch_count": 1,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/formal_run_receipt_v1.json",
+        "policy_compliant": true,
+        "raw_return_code": 0,
+        "retry_count": 0,
+        "schema_version": "aqua-fe-samehistory-formal-run-receipt-v1",
+        "started_at_local": "2026-08-23T15:51:16+08:00",
+        "state": "TERMINAL",
+        "wall_time_s": 143.8
+      },
+      "run_dir": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay",
+      "score_support": {
+        "associated_feed_parity_counts": {
+          "even": 0,
+          "odd": 1186
+        },
+        "camera_grid_coverage_fraction": 0.49800796812749004,
+        "camera_grid_covered_count": 125,
+        "camera_grid_expected_count": 251,
+        "covered_source_indices": [
+          2211,
+          2213,
+          2215,
+          2217,
+          2219,
+          2221,
+          2223,
+          2225,
+          2227,
+          2229,
+          2231,
+          2233,
+          2235,
+          2237,
+          2239,
+          2241,
+          2243,
+          2245,
+          2247,
+          2249,
+          2251,
+          2253,
+          2255,
+          2257,
+          2259,
+          2261,
+          2263,
+          2265,
+          2267,
+          2269,
+          2271,
+          2273,
+          2275,
+          2277,
+          2279,
+          2281,
+          2283,
+          2285,
+          2287,
+          2289,
+          2291,
+          2293,
+          2295,
+          2297,
+          2299,
+          2301,
+          2303,
+          2305,
+          2307,
+          2309,
+          2311,
+          2313,
+          2315,
+          2317,
+          2319,
+          2321,
+          2323,
+          2325,
+          2327,
+          2329,
+          2331,
+          2333,
+          2335,
+          2337,
+          2339,
+          2341,
+          2343,
+          2345,
+          2347,
+          2349,
+          2351,
+          2353,
+          2355,
+          2357,
+          2359,
+          2361,
+          2363,
+          2365,
+          2367,
+          2369,
+          2371,
+          2373,
+          2375,
+          2377,
+          2379,
+          2381,
+          2383,
+          2385,
+          2387,
+          2389,
+          2391,
+          2393,
+          2395,
+          2397,
+          2399,
+          2401,
+          2403,
+          2405,
+          2407,
+          2409,
+          2411,
+          2413,
+          2415,
+          2417,
+          2419,
+          2421,
+          2423,
+          2425,
+          2427,
+          2429,
+          2431,
+          2433,
+          2435,
+          2437,
+          2439,
+          2441,
+          2443,
+          2445,
+          2447,
+          2449,
+          2451,
+          2453,
+          2455,
+          2457,
+          2459
+        ],
+        "first_score_output_delay_s": 0.0455768,
+        "first_score_output_source": 2211,
+        "method_native_coverage_fraction": 1.0,
+        "method_native_covered_count": 125,
+        "method_native_expected_count": 125,
+        "method_native_expected_first_source": 2211,
+        "method_native_expected_last_source": 2459,
+        "method_native_longest_contiguous_count": 125,
+        "method_native_longest_contiguous_fraction": 1.0,
+        "phase": "odd",
+        "phase_confidence": 1.0,
+        "phase_source": "FROZEN_EXTERNAL_EVERY2_FRAME_OFFSET1",
+        "phase_state": "PASS",
+        "score_source_range": [
+          2210,
+          2460
+        ]
+      },
+      "sequence": "A06",
+      "timestamp_association": {
+        "ambiguous_nearest_count": 0,
+        "duplicate_source_association_count": 0,
+        "matched_pose_count": 1186,
+        "max_abs_error_ns": 224,
+        "p95_abs_error_ns": 192.0,
+        "tolerance_ns": 5000000,
+        "total_pose_count": 1186,
+        "unique_source_count": 1186,
+        "unmatched_pose_count": 0
+      },
+      "trajectory": {
+        "finite_count": 1186,
+        "first_timestamp_ns": 1542883316229918464,
+        "last_timestamp_ns": 1542883434726108672,
+        "malformed_count": 0,
+        "nonfinite_count": 0,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/vins_output/vio.csv",
+        "pose_count": 1186,
+        "state": "VALID",
+        "strictly_increasing": true
+      },
+      "usability": {
+        "failure_codes": [],
+        "initialization_success": true,
+        "receipt_artifact_identity_errors": [],
+        "required_artifacts_missing": [],
+        "solver_failure_count_disclosed_not_automatically_failed": 0,
+        "status": "PASS"
+      },
+      "vins_log": {
+        "counts": {
+          "explicit_reset_or_reboot": 0,
+          "failure_detection": 0,
+          "gyro_bias_initial_calibration": 23,
+          "init_first_imu_pose": 1,
+          "initialization_finish": 1,
+          "linear_solver_failure": 0,
+          "marginalization_failure": 0
+        },
+        "examples": {
+          "gyro_bias_initial_calibration": [
+            {
+              "line_number": 25,
+              "text": "[ WARN] [1787471488.323958688, 1542883312.873791129]: gyroscope bias initial calibration -0.0220561  0.0106174 -0.0433408"
+            },
+            {
+              "line_number": 26,
+              "text": "[ WARN] [1787471488.430125649, 1542883312.984449527]: gyroscope bias initial calibration    0.0239647 -0.000465581   -0.0402654"
+            },
+            {
+              "line_number": 27,
+              "text": "[ WARN] [1787471488.520844475, 1542883313.074979803]: gyroscope bias initial calibration -0.0251235 0.00250649  0.0319539"
+            },
+            {
+              "line_number": 28,
+              "text": "[ WARN] [1787471488.635708905, 1542883313.185648732]: gyroscope bias initial calibration -0.051804 0.0122424 0.0325331"
+            },
+            {
+              "line_number": 29,
+              "text": "[ WARN] [1787471488.740848972, 1542883313.296314820]: gyroscope bias initial calibration  0.0683222 -0.0179587  -0.034388"
+            }
+          ],
+          "init_first_imu_pose": [
+            {
+              "line_number": 19,
+              "text": "init first imu pose"
+            }
+          ],
+          "initialization_finish": [
+            {
+              "line_number": 87,
+              "text": "[ INFO] [1787471491.878138765, 1542883316.434996197]: Initialization finish!"
+            }
+          ]
+        },
+        "hard_reset_evidence_count": 0,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/external_klt_corrective_replay/vins.log",
+        "state": "READ"
+      }
+    },
+    {
+      "analysis_state": "TERMINAL",
+      "feature_bag_identity": {
+        "exists": true,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/features.bag",
+        "role": "FORMAL_AQUAFE_PROPOSED_SAFE_FEATURE_BAG",
+        "sha256": "0779bb8a71e4d81ddf02ba933b7428e548534ab580fd4483754f08e26e9bbeb6",
+        "size_bytes": 37403698
+      },
+      "frontend": {
+        "errors": [],
+        "learned_action_class": "NO_LEARNED_ACTION_NO_HARM_ONLY",
+        "learned_pipeline_activity_columns_present": {
+          "learned_candidate_count_sum": true,
+          "learned_export_gate_dropped_sum": true,
+          "pre_gate_sidecar_total_sum": true
+        },
+        "learned_pipeline_activity_interpretation": "Candidate, pre-gate sidecar, and gate-drop sums show pipeline activity only; they are repeated per-frame diagnostics and are not independent samples or exported learned action.",
+        "mapping": {
+          "authority": "TIMESTAMP_TO_FROZEN_CAMERA_CSV",
+          "first_source": 1,
+          "frame_index_formula_audit": "source=feed_start+frame_index",
+          "last_source": 2459,
+          "mapped_row_count": 1230
+        },
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/frontend_metrics.csv",
+        "segments": {
+          "full": {
+            "exported_features_sum": 430485,
+            "learned_affected_frames": {
+              "any": 0,
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "xfeat": 0
+            },
+            "learned_observations": {
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "total": 0,
+              "xfeat": 0
+            },
+            "learned_pipeline_activity": {
+              "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+              "learned_candidate_count_sum": 1021,
+              "learned_export_gate_dropped_sum": 2921,
+              "pre_gate_sidecar_total_sum": 2921
+            },
+            "metric_rows": 1230,
+            "published_feature_rows": 1230
+          },
+          "preroll": {
+            "exported_features_sum": 386735,
+            "learned_affected_frames": {
+              "any": 0,
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "xfeat": 0
+            },
+            "learned_observations": {
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "total": 0,
+              "xfeat": 0
+            },
+            "learned_pipeline_activity": {
+              "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+              "learned_candidate_count_sum": 770,
+              "learned_export_gate_dropped_sum": 2601,
+              "pre_gate_sidecar_total_sum": 2601
+            },
+            "metric_rows": 1105,
+            "published_feature_rows": 1105
+          },
+          "score": {
+            "exported_features_sum": 43750,
+            "learned_affected_frames": {
+              "any": 0,
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "xfeat": 0
+            },
+            "learned_observations": {
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "total": 0,
+              "xfeat": 0
+            },
+            "learned_pipeline_activity": {
+              "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+              "learned_candidate_count_sum": 251,
+              "learned_export_gate_dropped_sum": 320,
+              "pre_gate_sidecar_total_sum": 320
+            },
+            "metric_rows": 125,
+            "published_feature_rows": 125
+          }
+        },
+        "state": "VALID"
+      },
+      "frontend_payload_pair_audit": {
+        "action_class": "NO_ACTION_BYTE_IDENTICAL_TO_KLT",
+        "backend_run_nondeterminism_observed": true,
+        "candidate_activity_is_independent_sample_evidence": false,
+        "learning_improvement_attribution": "PROHIBITED_PAYLOAD_BYTE_IDENTICAL",
+        "learning_improvement_claim_permitted": false,
+        "payload_byte_identical": true,
+        "proposed_learned_observations_full": 0,
+        "proposed_learned_pipeline_activity_columns_present": {
+          "learned_candidate_count_sum": true,
+          "learned_export_gate_dropped_sum": true,
+          "pre_gate_sidecar_total_sum": true
+        },
+        "proposed_learned_pipeline_activity_full": {
+          "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+          "learned_candidate_count_sum": 1021,
+          "learned_export_gate_dropped_sum": 2921,
+          "pre_gate_sidecar_total_sum": 2921
+        },
+        "proposed_learned_pipeline_activity_observed": true,
+        "state": "COMPLETE",
+        "trajectory_difference_not_attributable_to_frontend": true,
+        "trajectory_sha_different": true
+      },
+      "input_rate": "20_HZ_TRACKER_STATE_10_HZ_EVERY2_EXPORT_AND_BACKEND",
+      "method": "aquafe_proposed_safe",
+      "receipt": {
+        "arm_id": "a06_aquafe_proposed_safe",
+        "claimed_identities": {
+          "camera_config": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/aqualoc_archaeo06_pinhole.yaml",
+            "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+            "size_bytes": 357
+          },
+          "execution_lock_sha256": "14f4a6beebd4af78900a53ec79c35a13738319a792a8d42214aeb7cd3420d8aa",
+          "features_bag": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/features.bag",
+            "sha256": "0779bb8a71e4d81ddf02ba933b7428e548534ab580fd4483754f08e26e9bbeb6",
+            "size_bytes": 37403698
+          },
+          "frontend_metrics": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/frontend_metrics.csv",
+            "sha256": "9ec2110f6806aeeb158157c1efb7e2a18c170b30eb00fda020bdef1bce5862a0",
+            "size_bytes": 1098581
+          },
+          "legacy_ape_diagnostic": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/ape.txt",
+            "sha256": "d8eafb62231af8fb5772dbf019cd794d8dd9f224cc95756c1c3867eed518ba33",
+            "size_bytes": 650
+          },
+          "profile_wrapper_sha256": "266e3c6f0c57eaae0555e1918298d450d9452794569de83de83700f8bae87130",
+          "raw_bag": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/raw/archaeo06_0000_2460.bag",
+            "sha256": "22cc3cff28dabc34de04c870eed5180ab76832c1f3c912da62d0268e9acb2e9a",
+            "size_bytes": 573420704
+          },
+          "replay_manifest": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/replay_manifest.txt",
+            "sha256": "634b09d7cd3361c6fedd22599a088c5cd932e9f2e3393f3b6794ef7c89fa1bb6",
+            "size_bytes": 624
+          },
+          "runner_sha256": "c3bdb181fb4a0f9ef457f9dd0f7cffd4b1a79c8ed8dc2e529d62f02c9f98a1cc",
+          "v33_config_sha256": "e50669deb51da948999aafa004ff6c5c7d355445847ef1db4252bad829bb15f4",
+          "vins_config": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/vins_aqualoc_archaeo_external.yaml",
+            "sha256": "32dd52cac1ff326240e7ecbafd1394e5858f8eae0e54e64eae25b3dce9257b9c",
+            "size_bytes": 1008
+          },
+          "vins_log": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/vins.log",
+            "sha256": "a0a1b7da729cc91682715a22118ff280a28d2231f09e1eadfa2678ccfa6d1e71",
+            "size_bytes": 123242
+          },
+          "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+          "vio_csv": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/vins_output/vio.csv",
+            "sha256": "9535c953fe543201cfd01dc1cd631daa50687fa9e89905b609642fefc1d5d6c0",
+            "size_bytes": 124964
+          }
+        },
+        "corrective_contract": null,
+        "ended_at_local": "2026-08-23T16:49:19.9+08:00",
+        "errors": [],
+        "identity": {
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/formal_run_receipt_v1.json",
+          "sha256": "1b880a85bc60699a32549e41bf4a13c1f6c65ffcf599891010288c6ea4a5de40",
+          "size_bytes": 4712
+        },
+        "launch_count": 1,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/formal_run_receipt_v1.json",
+        "policy_compliant": true,
+        "raw_return_code": 0,
+        "retry_count": 0,
+        "schema_version": "aqua-fe-samehistory-formal-run-receipt-v1",
+        "started_at_local": "2026-08-23T15:55:06+08:00",
+        "state": "TERMINAL",
+        "wall_time_s": 3253.9
+      },
+      "run_dir": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe",
+      "score_support": {
+        "associated_feed_parity_counts": {
+          "even": 0,
+          "odd": 1186
+        },
+        "camera_grid_coverage_fraction": 0.49800796812749004,
+        "camera_grid_covered_count": 125,
+        "camera_grid_expected_count": 251,
+        "covered_source_indices": [
+          2211,
+          2213,
+          2215,
+          2217,
+          2219,
+          2221,
+          2223,
+          2225,
+          2227,
+          2229,
+          2231,
+          2233,
+          2235,
+          2237,
+          2239,
+          2241,
+          2243,
+          2245,
+          2247,
+          2249,
+          2251,
+          2253,
+          2255,
+          2257,
+          2259,
+          2261,
+          2263,
+          2265,
+          2267,
+          2269,
+          2271,
+          2273,
+          2275,
+          2277,
+          2279,
+          2281,
+          2283,
+          2285,
+          2287,
+          2289,
+          2291,
+          2293,
+          2295,
+          2297,
+          2299,
+          2301,
+          2303,
+          2305,
+          2307,
+          2309,
+          2311,
+          2313,
+          2315,
+          2317,
+          2319,
+          2321,
+          2323,
+          2325,
+          2327,
+          2329,
+          2331,
+          2333,
+          2335,
+          2337,
+          2339,
+          2341,
+          2343,
+          2345,
+          2347,
+          2349,
+          2351,
+          2353,
+          2355,
+          2357,
+          2359,
+          2361,
+          2363,
+          2365,
+          2367,
+          2369,
+          2371,
+          2373,
+          2375,
+          2377,
+          2379,
+          2381,
+          2383,
+          2385,
+          2387,
+          2389,
+          2391,
+          2393,
+          2395,
+          2397,
+          2399,
+          2401,
+          2403,
+          2405,
+          2407,
+          2409,
+          2411,
+          2413,
+          2415,
+          2417,
+          2419,
+          2421,
+          2423,
+          2425,
+          2427,
+          2429,
+          2431,
+          2433,
+          2435,
+          2437,
+          2439,
+          2441,
+          2443,
+          2445,
+          2447,
+          2449,
+          2451,
+          2453,
+          2455,
+          2457,
+          2459
+        ],
+        "first_score_output_delay_s": 0.0455768,
+        "first_score_output_source": 2211,
+        "method_native_coverage_fraction": 1.0,
+        "method_native_covered_count": 125,
+        "method_native_expected_count": 125,
+        "method_native_expected_first_source": 2211,
+        "method_native_expected_last_source": 2459,
+        "method_native_longest_contiguous_count": 125,
+        "method_native_longest_contiguous_fraction": 1.0,
+        "phase": "odd",
+        "phase_confidence": 1.0,
+        "phase_source": "FROZEN_EXTERNAL_EVERY2_FRAME_OFFSET1",
+        "phase_state": "PASS",
+        "score_source_range": [
+          2210,
+          2460
+        ]
+      },
+      "sequence": "A06",
+      "timestamp_association": {
+        "ambiguous_nearest_count": 0,
+        "duplicate_source_association_count": 0,
+        "matched_pose_count": 1186,
+        "max_abs_error_ns": 224,
+        "p95_abs_error_ns": 192.0,
+        "tolerance_ns": 5000000,
+        "total_pose_count": 1186,
+        "unique_source_count": 1186,
+        "unmatched_pose_count": 0
+      },
+      "trajectory": {
+        "finite_count": 1186,
+        "first_timestamp_ns": 1542883316229918464,
+        "last_timestamp_ns": 1542883434726108672,
+        "malformed_count": 0,
+        "nonfinite_count": 0,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/vins_output/vio.csv",
+        "pose_count": 1186,
+        "state": "VALID",
+        "strictly_increasing": true
+      },
+      "usability": {
+        "failure_codes": [],
+        "initialization_success": true,
+        "receipt_artifact_identity_errors": [],
+        "required_artifacts_missing": [],
+        "solver_failure_count_disclosed_not_automatically_failed": 0,
+        "status": "PASS"
+      },
+      "vins_log": {
+        "counts": {
+          "explicit_reset_or_reboot": 0,
+          "failure_detection": 0,
+          "gyro_bias_initial_calibration": 23,
+          "init_first_imu_pose": 1,
+          "initialization_finish": 1,
+          "linear_solver_failure": 0,
+          "marginalization_failure": 0
+        },
+        "examples": {
+          "gyro_bias_initial_calibration": [
+            {
+              "line_number": 25,
+              "text": "[ WARN] [1787474828.836961158, 1542883312.875109274]: gyroscope bias initial calibration -0.0220561  0.0106174 -0.0433408"
+            },
+            {
+              "line_number": 26,
+              "text": "[ WARN] [1787474828.944211252, 1542883312.985687166]: gyroscope bias initial calibration    0.0239647 -0.000465581   -0.0402654"
+            },
+            {
+              "line_number": 27,
+              "text": "[ WARN] [1787474829.032871943, 1542883313.076207266]: gyroscope bias initial calibration -0.0251235 0.00250649  0.0319539"
+            },
+            {
+              "line_number": 28,
+              "text": "[ WARN] [1787474829.147234964, 1542883313.186828920]: gyroscope bias initial calibration -0.051804 0.0122424 0.0325331"
+            },
+            {
+              "line_number": 29,
+              "text": "[ WARN] [1787474829.257076993, 1542883313.297480055]: gyroscope bias initial calibration  0.0683222 -0.0179587  -0.034388"
+            }
+          ],
+          "init_first_imu_pose": [
+            {
+              "line_number": 19,
+              "text": "init first imu pose"
+            }
+          ],
+          "initialization_finish": [
+            {
+              "line_number": 87,
+              "text": "[ INFO] [1787474832.395695852, 1542883316.436310218]: Initialization finish!"
+            }
+          ]
+        },
+        "hard_reset_evidence_count": 0,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/a06/aquafe_proposed_safe/vins.log",
+        "state": "READ"
+      }
+    },
+    {
+      "analysis_state": "SEALED_TERMINAL",
+      "artifacts": {
+        "execution_lock_path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a06_0000_2460_exact_window_execution_lock_v1.json",
+        "keyframe_trajectory_path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a06_0000_2460/attempt_001/result/trajectory_keyframe.txt",
+        "run_result_path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a06_0000_2460/attempt_001/run_result.json",
+        "selector_or_contract_path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a06_0000_2460_exact_window_selector_freeze_v1.json",
+        "trajectory_path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a06_0000_2460/attempt_001/result/trajectory.txt"
+      },
+      "frontend": {
+        "state": "NOT_AVAILABLE_SEALED_EXTERNAL_WHOLE_SYSTEM"
+      },
+      "input_rate": "20_HZ_CAMERA_AND_BACKEND",
+      "method": "hfnet_slam",
+      "score_support": {
+        "camera_grid_coverage_fraction": 1.0,
+        "camera_grid_covered_count": 251,
+        "camera_grid_expected_count": 251,
+        "first_score_output_delay_s": 0.0,
+        "method_native_coverage_fraction": 1.0,
+        "method_native_covered_count": 251,
+        "method_native_expected_count": 251,
+        "method_native_longest_contiguous_count": 251,
+        "method_native_longest_contiguous_fraction": 1.0
+      },
+      "sealed_source_window_id": "A06_SCORE_2210_2460",
+      "sequence": "A06",
+      "usability": {
+        "failure_code": "NONE",
+        "keyframe_score_count": 27,
+        "score_coverage_fraction": 1.0,
+        "score_first_output_censor_reason": null,
+        "score_first_output_delay_s": 0.0,
+        "score_gap_count": 0,
+        "score_longest_contiguous_count": 251,
+        "score_longest_contiguous_fraction": 1.0,
+        "score_pose_count": 251,
+        "score_trajectory_span_s": 12.496417024,
+        "status": "PASS"
+      }
+    },
+    {
+      "analysis_state": "TERMINAL",
+      "frontend": {
+        "state": "NOT_APPLICABLE_NATIVE_IMAGE_TRACKER"
+      },
+      "input_rate": "20_HZ_NATIVE_TRACKER_MT1_EVERY_SECOND_BACKEND",
+      "method": "vanilla_origin",
+      "receipt": {
+        "arm_id": "h07_vanilla_origin",
+        "claimed_identities": {
+          "camera_config": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/vanilla_origin/aqualoc_harbor07_kannala.yaml",
+            "sha256": "40b62d139ef4246589b5cbafaa04619c0ebb9da0218a332e62706cfeda3d0242",
+            "size_bytes": 345
+          },
+          "execution_lock_sha256": "14f4a6beebd4af78900a53ec79c35a13738319a792a8d42214aeb7cd3420d8aa",
+          "legacy_ape_diagnostic": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/vanilla_origin/ape.txt",
+            "sha256": "68ce6b298629553a6493fd08d75d2d80766f6e48654b56723fd3751a946405b4",
+            "size_bytes": 646
+          },
+          "raw_bag": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/raw/harbor07_0001_1720.bag",
+            "sha256": "028697c3c1d36ccb87c98b3862a03608a148e1f8a9a59b88eb99f0a461c53e41",
+            "size_bytes": 291410228
+          },
+          "raw_materialization_receipt_sha256": "985b99d28760a0bcf948364621695143bbc56862d5a6643d16197b845e17cdd3",
+          "replay_manifest": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/vanilla_origin/replay_manifest.txt",
+            "sha256": "4c41800d4da8219a9d4001dae14ff54451a35cd74da783178315e572a1538360",
+            "size_bytes": 464
+          },
+          "runner_sha256": "a8cf19217dcdd358e73a6ec1293319868142d301a63db9f2a67208f01d7a6e48",
+          "vins_config": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/vanilla_origin/vins_aqualoc_origin.yaml",
+            "sha256": "396f3548d4f2f8e55b823e1033c0af8021af78a1e402622ce417a9a3d93f1de5",
+            "size_bytes": 996
+          },
+          "vins_log": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/vanilla_origin/vins.log",
+            "sha256": "56c77dd84cf5d92c687f85cb9c08a05528883c251c621512a8ad8f6744941a9a",
+            "size_bytes": 83337
+          },
+          "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+          "vio_csv": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/vanilla_origin/vins_output/vio.csv",
+            "sha256": "1bcdfc17411a5c66d2e752a7ab91b067020faf3a9b045ac169725a79462be486",
+            "size_bytes": 92224
+          }
+        },
+        "corrective_contract": null,
+        "ended_at_local": "2026-08-23T16:58:33.412034447+08:00",
+        "errors": [],
+        "identity": {
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/vanilla_origin/formal_run_receipt_v1.json",
+          "sha256": "7fc2fc74fc9f4904b7d77d39eefc755f7bc11157d8ae751855a0b5de56fafa92",
+          "size_bytes": 3668
+        },
+        "launch_count": 1,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/vanilla_origin/formal_run_receipt_v1.json",
+        "policy_compliant": true,
+        "raw_return_code": 0,
+        "retry_count": 0,
+        "schema_version": "aqua-fe-samehistory-formal-run-receipt-v1",
+        "started_at_local": "2026-08-23T16:56:34.379913438+08:00",
+        "state": "TERMINAL",
+        "wall_time_s": 119.1
+      },
+      "run_dir": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/vanilla_origin",
+      "score_support": {
+        "associated_feed_parity_counts": {
+          "even": 850,
+          "odd": 0
+        },
+        "camera_grid_coverage_fraction": 0.5081967213114754,
+        "camera_grid_covered_count": 31,
+        "camera_grid_expected_count": 61,
+        "covered_source_indices": [
+          1660,
+          1662,
+          1664,
+          1666,
+          1668,
+          1670,
+          1672,
+          1674,
+          1676,
+          1678,
+          1680,
+          1682,
+          1684,
+          1686,
+          1688,
+          1690,
+          1692,
+          1694,
+          1696,
+          1698,
+          1700,
+          1702,
+          1704,
+          1706,
+          1708,
+          1710,
+          1712,
+          1714,
+          1716,
+          1718,
+          1720
+        ],
+        "first_score_output_delay_s": 0.0,
+        "first_score_output_source": 1660,
+        "method_native_coverage_fraction": 1.0,
+        "method_native_covered_count": 31,
+        "method_native_expected_count": 31,
+        "method_native_expected_first_source": 1660,
+        "method_native_expected_last_source": 1720,
+        "method_native_longest_contiguous_count": 31,
+        "method_native_longest_contiguous_fraction": 1.0,
+        "phase": "even",
+        "phase_confidence": 1.0,
+        "phase_source": "OBSERVED_ORIGIN_MT1_TIMESTAMP_ASSOCIATION",
+        "phase_state": "PASS",
+        "score_source_range": [
+          1660,
+          1720
+        ]
+      },
+      "sequence": "H07",
+      "timestamp_association": {
+        "ambiguous_nearest_count": 0,
+        "duplicate_source_association_count": 0,
+        "matched_pose_count": 850,
+        "max_abs_error_ns": 224,
+        "p95_abs_error_ns": 192.0,
+        "tolerance_ns": 5000000,
+        "total_pose_count": 850,
+        "unique_source_count": 850,
+        "unmatched_pose_count": 0
+      },
+      "trajectory": {
+        "finite_count": 850,
+        "first_timestamp_ns": 1523387547223270912,
+        "last_timestamp_ns": 1523387632157611776,
+        "malformed_count": 0,
+        "nonfinite_count": 0,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/vanilla_origin/vins_output/vio.csv",
+        "pose_count": 850,
+        "state": "VALID",
+        "strictly_increasing": true
+      },
+      "usability": {
+        "failure_codes": [],
+        "initialization_success": true,
+        "receipt_artifact_identity_errors": [],
+        "required_artifacts_missing": [],
+        "solver_failure_count_disclosed_not_automatically_failed": 0,
+        "status": "PASS"
+      },
+      "vins_log": {
+        "counts": {
+          "explicit_reset_or_reboot": 0,
+          "failure_detection": 0,
+          "gyro_bias_initial_calibration": 1,
+          "init_first_imu_pose": 1,
+          "initialization_finish": 1,
+          "linear_solver_failure": 0,
+          "marginalization_failure": 0
+        },
+        "examples": {
+          "gyro_bias_initial_calibration": [
+            {
+              "line_number": 25,
+              "text": "[ WARN] [1787475406.510623124, 1523387547.270257063]: gyroscope bias initial calibration 0.0236252 0.0121077   -0.0534"
+            }
+          ],
+          "init_first_imu_pose": [
+            {
+              "line_number": 19,
+              "text": "init first imu pose"
+            }
+          ],
+          "initialization_finish": [
+            {
+              "line_number": 26,
+              "text": "[ INFO] [1787475406.532908425, 1523387547.300434820]: Initialization finish!"
+            }
+          ]
+        },
+        "hard_reset_evidence_count": 0,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/vanilla_origin/vins.log",
+        "state": "READ"
+      }
+    },
+    {
+      "analysis_state": "TERMINAL",
+      "feature_bag_identity": {
+        "exists": true,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/features.bag",
+        "role": "FORMAL_EXTERNAL_KLT_FEATURE_BAG",
+        "sha256": "45659eb766a29b6671e77108f181bad58a27d47f6487e2c770fd2f98b51c0630",
+        "size_bytes": 26259535
+      },
+      "frontend": {
+        "errors": [],
+        "learned_action_class": "NO_LEARNED_ACTION_NO_HARM_ONLY",
+        "learned_pipeline_activity_columns_present": {
+          "learned_candidate_count_sum": true,
+          "learned_export_gate_dropped_sum": true,
+          "pre_gate_sidecar_total_sum": true
+        },
+        "learned_pipeline_activity_interpretation": "Candidate, pre-gate sidecar, and gate-drop sums show pipeline activity only; they are repeated per-frame diagnostics and are not independent samples or exported learned action.",
+        "mapping": {
+          "authority": "TIMESTAMP_TO_FROZEN_CAMERA_CSV",
+          "first_source": 2,
+          "frame_index_formula_audit": "source=feed_start+frame_index",
+          "last_source": 1720,
+          "mapped_row_count": 860
+        },
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/frontend_metrics.csv",
+        "segments": {
+          "full": {
+            "exported_features_sum": 299350,
+            "learned_affected_frames": {
+              "any": 0,
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "xfeat": 0
+            },
+            "learned_observations": {
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "total": 0,
+              "xfeat": 0
+            },
+            "learned_pipeline_activity": {
+              "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+              "learned_candidate_count_sum": 0,
+              "learned_export_gate_dropped_sum": 0,
+              "pre_gate_sidecar_total_sum": 0
+            },
+            "metric_rows": 860,
+            "published_feature_rows": 860
+          },
+          "preroll": {
+            "exported_features_sum": 288500,
+            "learned_affected_frames": {
+              "any": 0,
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "xfeat": 0
+            },
+            "learned_observations": {
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "total": 0,
+              "xfeat": 0
+            },
+            "learned_pipeline_activity": {
+              "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+              "learned_candidate_count_sum": 0,
+              "learned_export_gate_dropped_sum": 0,
+              "pre_gate_sidecar_total_sum": 0
+            },
+            "metric_rows": 829,
+            "published_feature_rows": 829
+          },
+          "score": {
+            "exported_features_sum": 10850,
+            "learned_affected_frames": {
+              "any": 0,
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "xfeat": 0
+            },
+            "learned_observations": {
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "total": 0,
+              "xfeat": 0
+            },
+            "learned_pipeline_activity": {
+              "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+              "learned_candidate_count_sum": 0,
+              "learned_export_gate_dropped_sum": 0,
+              "pre_gate_sidecar_total_sum": 0
+            },
+            "metric_rows": 31,
+            "published_feature_rows": 31
+          }
+        },
+        "state": "VALID"
+      },
+      "frontend_payload_pair_audit": {
+        "action_class": "NO_ACTION_BYTE_IDENTICAL_TO_KLT",
+        "backend_run_nondeterminism_observed": true,
+        "candidate_activity_is_independent_sample_evidence": false,
+        "learning_improvement_attribution": "PROHIBITED_PAYLOAD_BYTE_IDENTICAL",
+        "learning_improvement_claim_permitted": false,
+        "payload_byte_identical": true,
+        "proposed_learned_observations_full": 0,
+        "proposed_learned_pipeline_activity_columns_present": {
+          "learned_candidate_count_sum": true,
+          "learned_export_gate_dropped_sum": true,
+          "pre_gate_sidecar_total_sum": true
+        },
+        "proposed_learned_pipeline_activity_full": {
+          "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+          "learned_candidate_count_sum": 650,
+          "learned_export_gate_dropped_sum": 1954,
+          "pre_gate_sidecar_total_sum": 1954
+        },
+        "proposed_learned_pipeline_activity_observed": true,
+        "state": "COMPLETE",
+        "trajectory_difference_not_attributable_to_frontend": true,
+        "trajectory_sha_different": true
+      },
+      "input_rate": "20_HZ_TRACKER_STATE_10_HZ_EVERY2_EXPORT_AND_BACKEND",
+      "method": "external_klt",
+      "receipt": {
+        "arm_id": "h07_external_klt",
+        "claimed_identities": {
+          "camera_config": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/aqualoc_harbor07_kannala.yaml",
+            "sha256": "40b62d139ef4246589b5cbafaa04619c0ebb9da0218a332e62706cfeda3d0242",
+            "size_bytes": 345
+          },
+          "execution_lock_sha256": "14f4a6beebd4af78900a53ec79c35a13738319a792a8d42214aeb7cd3420d8aa",
+          "features_bag": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/features.bag",
+            "sha256": "45659eb766a29b6671e77108f181bad58a27d47f6487e2c770fd2f98b51c0630",
+            "size_bytes": 26259535
+          },
+          "frontend_metrics": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/frontend_metrics.csv",
+            "sha256": "402166f89a7c9ce2e388ef44a6e6a96c3c1c9b51b9889b017f18abfc19c06183",
+            "size_bytes": 611354
+          },
+          "legacy_ape_diagnostic": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/ape.txt",
+            "sha256": "713fe5563a48d40d1c092201a254b876828cb941031091008ebf3a56fa2aaf72",
+            "size_bytes": 643
+          },
+          "profile_wrapper_sha256": "266e3c6f0c57eaae0555e1918298d450d9452794569de83de83700f8bae87130",
+          "raw_bag": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/raw/harbor07_0001_1720.bag",
+            "sha256": "028697c3c1d36ccb87c98b3862a03608a148e1f8a9a59b88eb99f0a461c53e41",
+            "size_bytes": 291410228
+          },
+          "replay_manifest": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/replay_manifest.txt",
+            "sha256": "2658cba4b10b16e1349d79437e907f42dd6a6e48e509c76fd0c621a55646b1b4",
+            "size_bytes": 518
+          },
+          "runner_sha256": "a8cf19217dcdd358e73a6ec1293319868142d301a63db9f2a67208f01d7a6e48",
+          "v33_config_sha256": "e50669deb51da948999aafa004ff6c5c7d355445847ef1db4252bad829bb15f4",
+          "vins_config": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/vins_aqualoc_external.yaml",
+            "sha256": "56aade70d916abf16d412ba6688aa1db9c321c79d214827d7222be7d47e99872",
+            "size_bytes": 992
+          },
+          "vins_log": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/vins.log",
+            "sha256": "7fa08cacf4fa4155526fe7e9450eee9787c563436656d6468b13616f33dfee58",
+            "size_bytes": 83342
+          },
+          "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+          "vio_csv": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/vins_output/vio.csv",
+            "sha256": "20d71bbc19c2dd3501ccc8831349444849ff69b7d3742b16811d7c10e7ccc3f9",
+            "size_bytes": 91019
+          }
+        },
+        "corrective_contract": null,
+        "ended_at_local": "2026-08-23T17:08:22.886990718+08:00",
+        "errors": [],
+        "identity": {
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/formal_run_receipt_v1.json",
+          "sha256": "28188b091a4c0f6e6fe56aeb08bf246d27e9f9864661707ebc3dd11d4e20b618",
+          "size_bytes": 4286
+        },
+        "launch_count": 1,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/formal_run_receipt_v1.json",
+        "policy_compliant": true,
+        "raw_return_code": 0,
+        "retry_count": 0,
+        "schema_version": "aqua-fe-samehistory-formal-run-receipt-v1",
+        "started_at_local": "2026-08-23T16:59:46.867293328+08:00",
+        "state": "TERMINAL",
+        "wall_time_s": 516.1
+      },
+      "run_dir": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt",
+      "score_support": {
+        "associated_feed_parity_counts": {
+          "even": 850,
+          "odd": 0
+        },
+        "camera_grid_coverage_fraction": 0.5081967213114754,
+        "camera_grid_covered_count": 31,
+        "camera_grid_expected_count": 61,
+        "covered_source_indices": [
+          1660,
+          1662,
+          1664,
+          1666,
+          1668,
+          1670,
+          1672,
+          1674,
+          1676,
+          1678,
+          1680,
+          1682,
+          1684,
+          1686,
+          1688,
+          1690,
+          1692,
+          1694,
+          1696,
+          1698,
+          1700,
+          1702,
+          1704,
+          1706,
+          1708,
+          1710,
+          1712,
+          1714,
+          1716,
+          1718,
+          1720
+        ],
+        "first_score_output_delay_s": 0.0,
+        "first_score_output_source": 1660,
+        "method_native_coverage_fraction": 1.0,
+        "method_native_covered_count": 31,
+        "method_native_expected_count": 31,
+        "method_native_expected_first_source": 1660,
+        "method_native_expected_last_source": 1720,
+        "method_native_longest_contiguous_count": 31,
+        "method_native_longest_contiguous_fraction": 1.0,
+        "phase": "even",
+        "phase_confidence": 1.0,
+        "phase_source": "FROZEN_EXTERNAL_EVERY2_FRAME_OFFSET1",
+        "phase_state": "PASS",
+        "score_source_range": [
+          1660,
+          1720
+        ]
+      },
+      "sequence": "H07",
+      "timestamp_association": {
+        "ambiguous_nearest_count": 0,
+        "duplicate_source_association_count": 0,
+        "matched_pose_count": 850,
+        "max_abs_error_ns": 224,
+        "p95_abs_error_ns": 192.0,
+        "tolerance_ns": 5000000,
+        "total_pose_count": 850,
+        "unique_source_count": 850,
+        "unmatched_pose_count": 0
+      },
+      "trajectory": {
+        "finite_count": 850,
+        "first_timestamp_ns": 1523387547223270912,
+        "last_timestamp_ns": 1523387632157611776,
+        "malformed_count": 0,
+        "nonfinite_count": 0,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/vins_output/vio.csv",
+        "pose_count": 850,
+        "state": "VALID",
+        "strictly_increasing": true
+      },
+      "usability": {
+        "failure_codes": [],
+        "initialization_success": true,
+        "receipt_artifact_identity_errors": [],
+        "required_artifacts_missing": [],
+        "solver_failure_count_disclosed_not_automatically_failed": 0,
+        "status": "PASS"
+      },
+      "vins_log": {
+        "counts": {
+          "explicit_reset_or_reboot": 0,
+          "failure_detection": 0,
+          "gyro_bias_initial_calibration": 1,
+          "init_first_imu_pose": 1,
+          "initialization_finish": 1,
+          "linear_solver_failure": 0,
+          "marginalization_failure": 0
+        },
+        "examples": {
+          "gyro_bias_initial_calibration": [
+            {
+              "line_number": 25,
+              "text": "[ WARN] [1787476008.391719540, 1523387547.352251016]: gyroscope bias initial calibration  0.0324085 0.00700383 -0.0659929"
+            }
+          ],
+          "init_first_imu_pose": [
+            {
+              "line_number": 19,
+              "text": "init first imu pose"
+            }
+          ],
+          "initialization_finish": [
+            {
+              "line_number": 26,
+              "text": "[ INFO] [1787476008.435105634, 1523387547.392492603]: Initialization finish!"
+            }
+          ]
+        },
+        "hard_reset_evidence_count": 0,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/external_klt/vins.log",
+        "state": "READ"
+      }
+    },
+    {
+      "analysis_state": "TERMINAL",
+      "feature_bag_identity": {
+        "exists": true,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/features.bag",
+        "role": "FORMAL_AQUAFE_PROPOSED_SAFE_FEATURE_BAG",
+        "sha256": "45659eb766a29b6671e77108f181bad58a27d47f6487e2c770fd2f98b51c0630",
+        "size_bytes": 26259535
+      },
+      "frontend": {
+        "errors": [],
+        "learned_action_class": "NO_LEARNED_ACTION_NO_HARM_ONLY",
+        "learned_pipeline_activity_columns_present": {
+          "learned_candidate_count_sum": true,
+          "learned_export_gate_dropped_sum": true,
+          "pre_gate_sidecar_total_sum": true
+        },
+        "learned_pipeline_activity_interpretation": "Candidate, pre-gate sidecar, and gate-drop sums show pipeline activity only; they are repeated per-frame diagnostics and are not independent samples or exported learned action.",
+        "mapping": {
+          "authority": "TIMESTAMP_TO_FROZEN_CAMERA_CSV",
+          "first_source": 2,
+          "frame_index_formula_audit": "source=feed_start+frame_index",
+          "last_source": 1720,
+          "mapped_row_count": 860
+        },
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/frontend_metrics.csv",
+        "segments": {
+          "full": {
+            "exported_features_sum": 299350,
+            "learned_affected_frames": {
+              "any": 0,
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "xfeat": 0
+            },
+            "learned_observations": {
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "total": 0,
+              "xfeat": 0
+            },
+            "learned_pipeline_activity": {
+              "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+              "learned_candidate_count_sum": 650,
+              "learned_export_gate_dropped_sum": 1954,
+              "pre_gate_sidecar_total_sum": 1954
+            },
+            "metric_rows": 860,
+            "published_feature_rows": 860
+          },
+          "preroll": {
+            "exported_features_sum": 288500,
+            "learned_affected_frames": {
+              "any": 0,
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "xfeat": 0
+            },
+            "learned_observations": {
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "total": 0,
+              "xfeat": 0
+            },
+            "learned_pipeline_activity": {
+              "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+              "learned_candidate_count_sum": 627,
+              "learned_export_gate_dropped_sum": 1683,
+              "pre_gate_sidecar_total_sum": 1683
+            },
+            "metric_rows": 829,
+            "published_feature_rows": 829
+          },
+          "score": {
+            "exported_features_sum": 10850,
+            "learned_affected_frames": {
+              "any": 0,
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "xfeat": 0
+            },
+            "learned_observations": {
+              "loftr": 0,
+              "other_non_loftr": 0,
+              "sp_lg": 0,
+              "total": 0,
+              "xfeat": 0
+            },
+            "learned_pipeline_activity": {
+              "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+              "learned_candidate_count_sum": 23,
+              "learned_export_gate_dropped_sum": 271,
+              "pre_gate_sidecar_total_sum": 271
+            },
+            "metric_rows": 31,
+            "published_feature_rows": 31
+          }
+        },
+        "state": "VALID"
+      },
+      "frontend_payload_pair_audit": {
+        "action_class": "NO_ACTION_BYTE_IDENTICAL_TO_KLT",
+        "backend_run_nondeterminism_observed": true,
+        "candidate_activity_is_independent_sample_evidence": false,
+        "learning_improvement_attribution": "PROHIBITED_PAYLOAD_BYTE_IDENTICAL",
+        "learning_improvement_claim_permitted": false,
+        "payload_byte_identical": true,
+        "proposed_learned_observations_full": 0,
+        "proposed_learned_pipeline_activity_columns_present": {
+          "learned_candidate_count_sum": true,
+          "learned_export_gate_dropped_sum": true,
+          "pre_gate_sidecar_total_sum": true
+        },
+        "proposed_learned_pipeline_activity_full": {
+          "interpretation": "SUMMED_PER-FRAME_DIAGNOSTIC_COUNTS_NOT_INDEPENDENT_SAMPLES",
+          "learned_candidate_count_sum": 650,
+          "learned_export_gate_dropped_sum": 1954,
+          "pre_gate_sidecar_total_sum": 1954
+        },
+        "proposed_learned_pipeline_activity_observed": true,
+        "state": "COMPLETE",
+        "trajectory_difference_not_attributable_to_frontend": true,
+        "trajectory_sha_different": true
+      },
+      "input_rate": "20_HZ_TRACKER_STATE_10_HZ_EVERY2_EXPORT_AND_BACKEND",
+      "method": "aquafe_proposed_safe",
+      "receipt": {
+        "arm_id": "h07_aquafe_proposed_safe",
+        "claimed_identities": {
+          "camera_config": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/aqualoc_harbor07_kannala.yaml",
+            "sha256": "40b62d139ef4246589b5cbafaa04619c0ebb9da0218a332e62706cfeda3d0242",
+            "size_bytes": 345
+          },
+          "execution_lock_sha256": "14f4a6beebd4af78900a53ec79c35a13738319a792a8d42214aeb7cd3420d8aa",
+          "features_bag": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/features.bag",
+            "sha256": "45659eb766a29b6671e77108f181bad58a27d47f6487e2c770fd2f98b51c0630",
+            "size_bytes": 26259535
+          },
+          "frontend_metrics": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/frontend_metrics.csv",
+            "sha256": "1e9118140a303a84ee02c9c06df3445854c9a942d5a375603c5d8c6b103a0f12",
+            "size_bytes": 743835
+          },
+          "legacy_ape_diagnostic": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/ape.txt",
+            "sha256": "8ca59e92e50f2a0b74dd035c4735d90a6fa482f01a016973a1dfe62c4a47beb8",
+            "size_bytes": 643
+          },
+          "profile_wrapper_sha256": "266e3c6f0c57eaae0555e1918298d450d9452794569de83de83700f8bae87130",
+          "raw_bag": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/raw/harbor07_0001_1720.bag",
+            "sha256": "028697c3c1d36ccb87c98b3862a03608a148e1f8a9a59b88eb99f0a461c53e41",
+            "size_bytes": 291410228
+          },
+          "replay_manifest": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/replay_manifest.txt",
+            "sha256": "0c498fa038d70225ef6a9f6f2cba57cdc6c6333e6914019bf9e2ac690ce1a5c5",
+            "size_bytes": 614
+          },
+          "runner_sha256": "a8cf19217dcdd358e73a6ec1293319868142d301a63db9f2a67208f01d7a6e48",
+          "v33_config_sha256": "e50669deb51da948999aafa004ff6c5c7d355445847ef1db4252bad829bb15f4",
+          "vins_config": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/vins_aqualoc_external.yaml",
+            "sha256": "a2866a4a68a33e2b7c5e762a8de77858ecd383bc2c247277f1589805a03a3338",
+            "size_bytes": 1024
+          },
+          "vins_log": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/vins.log",
+            "sha256": "58a5b56dd5f163564883a6302beb754694a4bb7191743196fd909d3f59ecd179",
+            "size_bytes": 83438
+          },
+          "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+          "vio_csv": {
+            "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/vins_output/vio.csv",
+            "sha256": "10204c57eadaf1933bfddf850f3a853f634bbc30c3331a7ed9a9a4670c24317e",
+            "size_bytes": 90995
+          }
+        },
+        "corrective_contract": null,
+        "ended_at_local": "2026-08-23T17:47:34.170565301+08:00",
+        "errors": [],
+        "identity": {
+          "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/formal_run_receipt_v1.json",
+          "sha256": "0baba171ace50952e1a8f625d8863082179e38325f38810daa551c9b9fbc786e",
+          "size_bytes": 4829
+        },
+        "launch_count": 1,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/formal_run_receipt_v1.json",
+        "policy_compliant": true,
+        "raw_return_code": 0,
+        "retry_count": 0,
+        "schema_version": "aqua-fe-samehistory-formal-run-receipt-v1",
+        "started_at_local": "2026-08-23T17:09:21.340499072+08:00",
+        "state": "TERMINAL",
+        "wall_time_s": 2292.9
+      },
+      "run_dir": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe",
+      "score_support": {
+        "associated_feed_parity_counts": {
+          "even": 850,
+          "odd": 0
+        },
+        "camera_grid_coverage_fraction": 0.5081967213114754,
+        "camera_grid_covered_count": 31,
+        "camera_grid_expected_count": 61,
+        "covered_source_indices": [
+          1660,
+          1662,
+          1664,
+          1666,
+          1668,
+          1670,
+          1672,
+          1674,
+          1676,
+          1678,
+          1680,
+          1682,
+          1684,
+          1686,
+          1688,
+          1690,
+          1692,
+          1694,
+          1696,
+          1698,
+          1700,
+          1702,
+          1704,
+          1706,
+          1708,
+          1710,
+          1712,
+          1714,
+          1716,
+          1718,
+          1720
+        ],
+        "first_score_output_delay_s": 0.0,
+        "first_score_output_source": 1660,
+        "method_native_coverage_fraction": 1.0,
+        "method_native_covered_count": 31,
+        "method_native_expected_count": 31,
+        "method_native_expected_first_source": 1660,
+        "method_native_expected_last_source": 1720,
+        "method_native_longest_contiguous_count": 31,
+        "method_native_longest_contiguous_fraction": 1.0,
+        "phase": "even",
+        "phase_confidence": 1.0,
+        "phase_source": "FROZEN_EXTERNAL_EVERY2_FRAME_OFFSET1",
+        "phase_state": "PASS",
+        "score_source_range": [
+          1660,
+          1720
+        ]
+      },
+      "sequence": "H07",
+      "timestamp_association": {
+        "ambiguous_nearest_count": 0,
+        "duplicate_source_association_count": 0,
+        "matched_pose_count": 850,
+        "max_abs_error_ns": 224,
+        "p95_abs_error_ns": 192.0,
+        "tolerance_ns": 5000000,
+        "total_pose_count": 850,
+        "unique_source_count": 850,
+        "unmatched_pose_count": 0
+      },
+      "trajectory": {
+        "finite_count": 850,
+        "first_timestamp_ns": 1523387547223270912,
+        "last_timestamp_ns": 1523387632157611776,
+        "malformed_count": 0,
+        "nonfinite_count": 0,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/vins_output/vio.csv",
+        "pose_count": 850,
+        "state": "VALID",
+        "strictly_increasing": true
+      },
+      "usability": {
+        "failure_codes": [],
+        "initialization_success": true,
+        "receipt_artifact_identity_errors": [],
+        "required_artifacts_missing": [],
+        "solver_failure_count_disclosed_not_automatically_failed": 0,
+        "status": "PASS"
+      },
+      "vins_log": {
+        "counts": {
+          "explicit_reset_or_reboot": 0,
+          "failure_detection": 0,
+          "gyro_bias_initial_calibration": 1,
+          "init_first_imu_pose": 1,
+          "initialization_finish": 1,
+          "linear_solver_failure": 0,
+          "marginalization_failure": 0
+        },
+        "examples": {
+          "gyro_bias_initial_calibration": [
+            {
+              "line_number": 25,
+              "text": "[ WARN] [1787478359.670431762, 1523387547.352662367]: gyroscope bias initial calibration  0.0324085 0.00700383 -0.0659929"
+            }
+          ],
+          "init_first_imu_pose": [
+            {
+              "line_number": 19,
+              "text": "init first imu pose"
+            }
+          ],
+          "initialization_finish": [
+            {
+              "line_number": 26,
+              "text": "[ INFO] [1787478359.714261279, 1523387547.392902105]: Initialization finish!"
+            }
+          ]
+        },
+        "hard_reset_evidence_count": 0,
+        "path": "/mnt/data/AQUA-FE_WS/experiments/samehistory_system_v1/runs/h07/aquafe_proposed_safe/vins.log",
+        "state": "READ"
+      }
+    },
+    {
+      "analysis_state": "SEALED_TERMINAL",
+      "artifacts": {
+        "execution_lock_path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_h07_0001_1720_exact_window_execution_lock_v1.json",
+        "keyframe_trajectory_path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h07_0001_1720/attempt_001/result/trajectory_keyframe.txt",
+        "run_result_path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h07_0001_1720/attempt_001/run_result.json",
+        "selector_or_contract_path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_h07_0001_1720_exact_window_selector_freeze_v1.json",
+        "trajectory_path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_harbor_h07_0001_1720/attempt_001/result/trajectory.txt"
+      },
+      "frontend": {
+        "state": "NOT_AVAILABLE_SEALED_EXTERNAL_WHOLE_SYSTEM"
+      },
+      "input_rate": "20_HZ_CAMERA_AND_BACKEND",
+      "method": "hfnet_slam",
+      "score_support": {
+        "camera_grid_coverage_fraction": 1.0,
+        "camera_grid_covered_count": 61,
+        "camera_grid_expected_count": 61,
+        "first_score_output_delay_s": 0.0,
+        "method_native_coverage_fraction": 1.0,
+        "method_native_covered_count": 61,
+        "method_native_expected_count": 61,
+        "method_native_longest_contiguous_count": 61,
+        "method_native_longest_contiguous_fraction": 1.0
+      },
+      "sealed_source_window_id": "H07_SCORE_1660_1720",
+      "sequence": "H07",
+      "usability": {
+        "failure_code": "NONE",
+        "keyframe_score_count": 19,
+        "score_coverage_fraction": 1.0,
+        "score_first_output_censor_reason": null,
+        "score_first_output_delay_s": 0.0,
+        "score_gap_count": 0,
+        "score_longest_contiguous_count": 61,
+        "score_longest_contiguous_fraction": 1.0,
+        "score_pose_count": 61,
+        "score_trajectory_span_s": 2.999640896,
+        "status": "PASS"
+      }
+    }
+  ],
+  "schema_version": "aqua-fe-samehistory-system-analysis-v1",
+  "statistical_gate": {
+    "a06_external_klt_corrective_backend_replay_is_independent_repeat": false,
+    "formal_algorithmic_outcome_count_per_arm_window": 1,
+    "inferential_statistics_permitted": false,
+    "reason": "Only two development windows and one formal execution per arm/window; trajectory frames are repeated time-series samples, not independent n.",
+    "unit_of_analysis": "frozen_development_window",
+    "window_count": 2
+  }
+}

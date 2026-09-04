@@ -1,0 +1,8 @@
+extends: low_texture_xfeat_seedchain_processall_frontend.yaml
+
+# Dataset-neutral track-admission correctness switch.  GFTT detections are
+# proposals, not public tracks: an ID is allocated only after the proposal
+# survives the existing FB/NCC/border confirmation on the next processed
+# image.  No detector, confirmation, or export-gate threshold is changed.
+hybrid:
+  enable_temporal_gftt_admission: true

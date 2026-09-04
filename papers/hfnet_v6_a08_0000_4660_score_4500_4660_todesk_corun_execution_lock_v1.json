@@ -1,0 +1,107 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a08-0000-4660-score-4500-4660-todesk-corun-execution-lock-v1",
+  "status": "AUTHORIZED_EXACTLY_ONE_HFNET_ELF_START_ATTEMPT_001_NO_RETRY",
+  "created_at_utc": "2026-08-27T18:05:29Z",
+  "scientific_role": "TODESK_CORUN_DEVELOPMENT_ONLY_HFNET_NATURAL_HISTORY_RUNABILITY_ON_JULY14_A08_OLD_FROZEN_POSITIVE_WINDOW",
+  "authority_chain": {
+    "input_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a08_0000_4660_score_4500_4660_input_freeze_v1.json",
+      "size_bytes": 7178,
+      "sha256": "9122f89b486cefbb637542ef31068c116d09cba38fc92a72308997cd6582ae51"
+    },
+    "formal_runner_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a08_0000_4660_score_4500_4660_runner_freeze_v1.json",
+      "size_bytes": 4701,
+      "sha256": "a2ea3a171c33a08d6ea2a68dd3d1681df01164e3897b9b5b46d681f7733f0b88"
+    },
+    "corun_overlay": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a08_0000_4660_score_4500_4660_todesk_corun_development_only_v1.py",
+      "size_bytes": 15434,
+      "sha256": "f5a6931ba3419ff5d84a2805c0b8c9be946a4513371f786df4606bfdaa257ca7"
+    },
+    "corun_overlay_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_hfnet_v6_a08_0000_4660_score_4500_4660_todesk_corun_development_only_v1.py",
+      "size_bytes": 17403,
+      "sha256": "6232f6f7b3bf2d63c2f4e8838bb80f020f93baa952be29a9aa205d31dd3d4108"
+    },
+    "corun_overlay_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a08_0000_4660_score_4500_4660_todesk_corun_overlay_freeze_v1.json",
+      "size_bytes": 5265,
+      "sha256": "8d918093c0374452d924c55ad945cad500565d71d17bc07d95b6a14435e8b0e7"
+    },
+    "attempt_preparation_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a08_0000_4660_score_4500_4660_todesk_corun_attempt_preparation_freeze_v1.json",
+      "size_bytes": 5672,
+      "sha256": "ac7bba01d57a5f69286edbc1e354d02d3bc03c78c97a693322074c160b21c853"
+    },
+    "prepared_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/corun/old_frozen_positive_windows/a08_0000_4660_score_4500_4660_todesk_corun_development_only/attempt_001/prepared_manifest.json",
+      "size_bytes": 14197,
+      "sha256": "6dd2f5eae62e3f80fbb7fba96d08b12e09e6d4ee7cdd94ba9df8f84a5918d8c2"
+    }
+  },
+  "fresh_ready_evidence": {
+    "runner_check": {
+      "checked_at_utc": "2026-08-27T18:05:21+00:00",
+      "schema_version": "aqua-fe-hfnet-v6-a08-0000-4660-score-4500-4660-todesk-corun-development-only-check-v1",
+      "return_code": 0,
+      "ready": true,
+      "errors": [],
+      "gpu_model": "NVIDIA GeForce GTX 1650",
+      "gpu_total_mib": 4096,
+      "gpu_used_mib": 466,
+      "gpu_free_mib": 3434,
+      "minimum_free_mib": 3072,
+      "allowed_compute_applications": [],
+      "forbidden_compute_applications": [],
+      "forbidden_baseline_processes": []
+    },
+    "immediate_snapshot": {
+      "captured_at_utc": "2026-08-27T18:05:29Z",
+      "gpu_model": "NVIDIA GeForce GTX 1650",
+      "gpu_total_mib": 4096,
+      "gpu_used_mib": 456,
+      "gpu_free_mib": 3444,
+      "compute_applications": []
+    },
+    "stable_quiet_interval_omitted_by_explicit_user_scope": true,
+    "todesk_permitted": true,
+    "unrelated_cpu_ros_vins_permitted": true,
+    "runtime_or_realtime_claim_permitted": false,
+    "runner_internal_full_check_required_immediately_before_claim": true
+  },
+  "launch_contract": {
+    "authorized_supervisor_invocation_count": 1,
+    "maximum_hfnet_elf_starts": 1,
+    "exact_supervisor_command": "PYTHONDONTWRITEBYTECODE=1 python3 -B /home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a08_0000_4660_score_4500_4660_todesk_corun_development_only_v1.py run --authorization-token HFNET_V6_A08_0000_4660_SCORE_4500_4660_TODESK_CORUN_DEVELOPMENT_ONLY_ATTEMPT_001_START_EXACTLY_ONCE",
+    "authorization_token": "HFNET_V6_A08_0000_4660_SCORE_4500_4660_TODESK_CORUN_DEVELOPMENT_ONLY_ATTEMPT_001_START_EXACTLY_ONCE",
+    "timeout_seconds": 900,
+    "start_new_session": true,
+    "process_start_claim_o_excl_before_popen": true,
+    "retry_permitted": false,
+    "authority_consumed_on_supervisor_invocation_even_if_preclaim_check_fails": true
+  },
+  "terminal_contract": {
+    "terminal_result_required_after_any_process_start_claim": true,
+    "score_gate": "161/161 contiguous score poses, score keyframe, initialization before source/local 4500, no score reset/reinit, resolved reset boundaries, parseable nonempty final atlas, official save, and unchanged authority",
+    "failure_accuracy_state": "NA_NOT_ZERO",
+    "post_hoc_gate_relaxation_permitted": false
+  },
+  "claims": {
+    "execution_authorized": true,
+    "attempt_prepared": true,
+    "process_start_claim_created_at_lock_time": false,
+    "hfnet_started_at_lock_time": false,
+    "trajectory_produced_at_lock_time": false,
+    "accuracy_evaluation_authorized": false,
+    "runtime_or_realtime_claim_authorized": false,
+    "ranking_or_superiority_authorized": false,
+    "confirmatory_claim_authorized": false
+  },
+  "prohibited_actions": [
+    "a second supervisor invocation, HFNet start, or retry",
+    "mutating or replacing any input, prepared artifact, code, model, configuration, cache seed, or authority file",
+    "treating failure as zero accuracy",
+    "computing APE, RPE, a winner, ranking, significance, superiority, held-out generalization, runtime, or realtime claims"
+  ]
+}

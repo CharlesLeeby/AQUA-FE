@@ -1,0 +1,138 @@
+{
+  "schema_version": "aqua-fe-published-supervins-v1-official-euroc-mh01-first2s-input-manifest-v1",
+  "created_at": "2026-08-16T22:50:00+08:00",
+  "status": "FROZEN_BEFORE_STAGE_3_ROS_OR_MODEL_START",
+  "scientific_role": "DEVELOPMENT_ONLY_OFFICIAL_DATA_INFERENCE_SMOKE_INPUT",
+  "sequence_disclosure": {
+    "selected_sequence": "EuRoC MAV Machine Hall 01 easy (MH_01_easy)",
+    "official_supervins_readme_recommended_sequence": "EuRoC MAV V2_01_easy.bag",
+    "selected_sequence_is_readme_recommended_v2_01": false,
+    "reason": "No V2_01_easy bag or extracted V2_01 image/IMU sequence was found under the scoped local dataset, workspace, SLAM, and Downloads roots. Only two PL-VINS V2_01 configuration/ground-truth directories were found. The already adopted official MH_01_easy cam0+imu0 extraction is therefore used as a development-only EuRoC runtime input.",
+    "searched_roots": [
+      "/mnt/data/AQUA-FE_WS/datasets",
+      "/home/ma/AQUA-FE_WS",
+      "/home/ma/SLAM",
+      "/home/ma/Downloads"
+    ],
+    "v2_01_bag_matches": [],
+    "v2_01_extracted_image_imu_matches": [],
+    "non_dataset_v2_01_matches": [
+      "/home/ma/SLAM/plvins20.04_ws/src/Ubuntu20.04PL_VINS-main/benchmark_publisher/config/V2_01_easy",
+      "/home/ma/SLAM/plvins_ws/src/PL-VINS-master/benchmark_publisher/config/V2_01_easy"
+    ],
+    "formal_supervins_baseline_claim_authorized": false
+  },
+  "official_source_adoption": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_mh01_input_adoption_v1.json",
+    "sha256": "cd45e7c39f322bc60d840ae18816584fce024d8220e89ef0698915af51c4437d",
+    "size_bytes": 6622,
+    "official_url": "https://www.research-collection.ethz.ch/server/api/core/bitstreams/7b2419c1-62b5-4714-b7f8-485e5fe3e5fe/content",
+    "archive_member": "machine_hall/MH_01_easy/MH_01_easy.zip",
+    "inner_archive": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/downloads/MH_01_easy.zip",
+      "sha256": "5f4ecbc563e7bf04950efab76fc3b14e126d4c91a1dd1134c33124fe18a4bfc6",
+      "size_bytes": 1571292346,
+      "all_7384_zip_entries_crc_valid": true
+    },
+    "download_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/downloads/MH_01_easy_download_manifest_v1.json",
+      "sha256": "3cbf9f91c286fee760eb620cb6ee97f6461e5df5a7f1700a6c17514a0ea71d4b",
+      "size_bytes": 726
+    },
+    "extracted_root": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy",
+    "full_extracted_inventory": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy_input_inventory_v1.json",
+      "sha256": "a6009f56146fc675131f44fd2d355092b37035958e6d1e73b87ce21130427ff6",
+      "size_bytes": 664378,
+      "tree_sha256": "e6033bcf32b182eafad64c68cc634dbce896b5e33caef99bee6840d3c1590a08"
+    }
+  },
+  "source_metadata_pins": {
+    "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy/mav0/cam0/data.csv": {
+      "sha256": "62db628a8e6358f43df81e66ddb4597ab40b19a10f3d6cd80cc04d590b5adb12",
+      "size_bytes": 165716
+    },
+    "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy/mav0/cam0/sensor.yaml": {
+      "sha256": "191748edddda5d1368188f5b0a3c4bed6c48842c178ef9d83c50cba17d66e819",
+      "size_bytes": 683
+    },
+    "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy/mav0/imu0/data.csv": {
+      "sha256": "226470999dc8ba758c838982fd7eb2bc9f3f2b489e85a38d0ecf8b9d40785a5b",
+      "size_bytes": 5210832
+    },
+    "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy/mav0/imu0/sensor.yaml": {
+      "sha256": "91e6c408416f549f87e7405830b83849cca10521f3d3fc8bb3de862c2bc882d0",
+      "size_bytes": 695
+    }
+  },
+  "selection": {
+    "rule": "Select every cam0 and imu0 CSV record with timestamp_ns in the closed interval [first_cam0_timestamp_ns, first_cam0_timestamp_ns + 2000000000].",
+    "start_timestamp_ns": 1403636579763555584,
+    "end_timestamp_ns": 1403636581763555584,
+    "duration_ns": 2000000000,
+    "interval_closed": true,
+    "camera_count": 41,
+    "camera_first_timestamp_ns": 1403636579763555584,
+    "camera_last_timestamp_ns": 1403636581763555584,
+    "camera_timestamps_strictly_increasing": true,
+    "imu_count": 401,
+    "imu_first_timestamp_ns": 1403636579763555584,
+    "imu_last_timestamp_ns": 1403636581763555584,
+    "imu_timestamps_strictly_increasing": true,
+    "event_count": 442,
+    "event_order": "timestamp ascending; at equal timestamps publish IMU before cam0",
+    "publish_wall_rate": 1.0
+  },
+  "selected_content_digests": {
+    "camera_png_assets": {
+      "algorithm": "sha256_each_timestamp_NUL_relpath_NUL_decimal_png_size_NUL_lowercase_png_sha256_LF_in_camera_csv_order",
+      "sha256": "318e7091ae2b92fe5e8ca8ba882ba622ac9dd4278a7a8f0a5270eaff3b3182cc",
+      "total_png_bytes": 14847631
+    },
+    "camera_decoded_mono8_pixels": {
+      "algorithm": "sha256_each_timestamp_NUL_height_NUL_width_NUL_dtype_NUL_decimal_pixel_bytes_NUL_lowercase_pixel_sha256_LF_in_camera_csv_order",
+      "sha256": "99ddabba251a121a89c302091138ef667f717abf2435f9c34348bec1974d368b",
+      "height": 480,
+      "width": 752,
+      "dtype": "uint8",
+      "bytes_per_image": 360960,
+      "total_pixel_bytes": 14799360
+    },
+    "imu_rows": {
+      "algorithm": "sha256_utf8_comma_joined_selected_rows_with_LF_in_imu_csv_order",
+      "sha256": "89fc376d40f505f7f4a63b8c22ca9fff744a0b872cef17a4496300d204791e25"
+    },
+    "combined_events": {
+      "algorithm": "sha256_timestamp_NUL_type_order_NUL_type_NUL_payload_LF_sorted_by_timestamp_then_IMU_before_CAM",
+      "sha256": "56595d520f53b928d272dc2c7fe04011d8b5ddd286d334cb9e58ae3ad90e7039"
+    }
+  },
+  "ros_mapping": {
+    "camera_topic": "/cam0/image_raw",
+    "camera_message_type": "sensor_msgs/Image",
+    "camera_frame_id": "cam0",
+    "camera_encoding": "mono8",
+    "camera_is_bigendian": 0,
+    "camera_step": 752,
+    "camera_conversion": "Decode official lossless PNG with pinned OpenCV IMREAD_UNCHANGED and copy the exact frozen 480x752 uint8 pixel matrix into sensor_msgs/Image.data. No resize, normalization, color conversion, recompression, or lossy re-encoding.",
+    "imu_topic": "/imu0",
+    "imu_message_type": "sensor_msgs/Imu",
+    "imu_frame_id": "imu0",
+    "imu_mapping": {
+      "angular_velocity_xyz": "w_RS_S_x,w_RS_S_y,w_RS_S_z",
+      "linear_acceleration_xyz": "a_RS_S_x,a_RS_S_y,a_RS_S_z",
+      "orientation_covariance_0": -1
+    },
+    "timestamps": "Original integer nanoseconds converted exactly to ROS sec/nsec fields.",
+    "subscriber_connection_required_before_first_event": true
+  },
+  "boundary": {
+    "groundtruth_published": false,
+    "cam1_published": false,
+    "rosbag_created_or_replayed": false,
+    "image_algorithmic_preprocessing": false,
+    "trajectory_or_ape_rpe_authorized": false,
+    "formal_sequence_comparison_authorized": false,
+    "underwater_claim_authorized": false
+  }
+}

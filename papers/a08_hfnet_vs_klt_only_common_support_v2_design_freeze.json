@@ -1,0 +1,265 @@
+{
+  "backend_campaign_prelaunch_presence_at_freeze": {
+    "backend_root": "ABSENT",
+    "backend_runtime_root": "ABSENT",
+    "workspace:KLT_R01": "ABSENT",
+    "workspace:KLT_R02": "ABSENT",
+    "workspace:KLT_R03": "ABSENT",
+    "workspace:KLT_R04": "ABSENT",
+    "workspace:KLT_R05": "ABSENT"
+  },
+  "backend_terminal_presence_at_freeze": {
+    "KLT_R01": "MISSING",
+    "KLT_R02": "MISSING",
+    "KLT_R03": "MISSING",
+    "KLT_R04": "MISSING",
+    "KLT_R05": "MISSING",
+    "backend_lock": "MISSING"
+  },
+  "claim_boundary": {
+    "ape_or_rpe_computed": false,
+    "backend_lock_opened": false,
+    "backend_terminal_receipts_opened": false,
+    "final_dynamic_analysis_lock_built": false,
+    "ros_or_vins_started": false,
+    "xfeat_terminal_failure_opened_for_exclusion": true
+  },
+  "created_at_utc": "2026-08-28T11:02:42+00:00",
+  "design_contract": {
+    "campaign": "A08_HFNET_VS_KLT_ONLY_COMMON_SUPPORT_V2",
+    "execution_rules": {
+      "atomic_noreplace_publication": true,
+      "automatic_retry_count": 0,
+      "design_freeze_before_backend_terminal_results": true,
+      "dynamic_lock_after_five_terminal_receipts_before_accuracy": true,
+      "incomplete_consumed_state_is_blocked": true,
+      "post_claim_actions_inside_terminalization_boundary": true,
+      "read_only_audit_recomputes_primary_from_locked_inputs": true,
+      "single_analysis_allowance": true
+    },
+    "grid": {
+      "float_serialization_is_not_timestamp_authority": true,
+      "grid_count": 33,
+      "grid_last_ns": 1542885193111831216,
+      "grid_step_ns": 1000000000,
+      "schema_version": "aqua-fe-a08-exact-integer-ns-grid-v2",
+      "timestamps_ns": [
+        1542885161111831216,
+        1542885162111831216,
+        1542885163111831216,
+        1542885164111831216,
+        1542885165111831216,
+        1542885166111831216,
+        1542885167111831216,
+        1542885168111831216,
+        1542885169111831216,
+        1542885170111831216,
+        1542885171111831216,
+        1542885172111831216,
+        1542885173111831216,
+        1542885174111831216,
+        1542885175111831216,
+        1542885176111831216,
+        1542885177111831216,
+        1542885178111831216,
+        1542885179111831216,
+        1542885180111831216,
+        1542885181111831216,
+        1542885182111831216,
+        1542885183111831216,
+        1542885184111831216,
+        1542885185111831216,
+        1542885186111831216,
+        1542885187111831216,
+        1542885188111831216,
+        1542885189111831216,
+        1542885190111831216,
+        1542885191111831216,
+        1542885192111831216,
+        1542885193111831216
+      ],
+      "window_end_minus_grid_last_ns": 994391456,
+      "window_end_ns_inclusive": 1542885194106222672,
+      "window_start_ns": 1542885161111831216
+    },
+    "numeric_rules": {
+      "all_six_primary_metrics_must_be_finite_nonnegative": true,
+      "all_time_offsets_s": 0.0,
+      "estimate_rate_hz": 10.0,
+      "evaluation_rate_hz": 1.0,
+      "evo_abs_tolerance_m": 1e-05,
+      "fixed_denominator": 33,
+      "max_estimate_gap_s": 0.25,
+      "max_reference_gap_s": 2.5,
+      "min_ape_poses": 30,
+      "min_ape_span_s": 10.0,
+      "min_common_coverage": 0.7,
+      "min_rpe_pairs": 10,
+      "proper_fixed_scale_se3": true,
+      "reference_rate_hz": 1.0,
+      "rpe_delta_s": 1.0,
+      "shared_full_precision_body_T_cam0_for_every_arm": true,
+      "sim3_or_scale_fit": false,
+      "single_joint_mask_across_hfnet_and_all_accepted_klt_repeats": true
+    },
+    "population_and_failure_rules": {
+      "any_formal_gate_or_integrity_failure_sets_all_hfnet_klt_metrics_na": true,
+      "backend_integrity_failure_blocks": true,
+      "backend_item_order": [
+        "KLT_R01",
+        "KLT_R02",
+        "KLT_R03",
+        "KLT_R04",
+        "KLT_R05"
+      ],
+      "backend_scientific_failure_is_na_not_replaced": true,
+      "best_repeat_selection_permitted": false,
+      "klt_planned_count": 5,
+      "klt_summary": "coordinatewise_median_over_all_valid_planned_repeats",
+      "klt_valid_count_from_terminal_dispositions": true,
+      "original_ten_slot_order": [
+        "KLT_R01",
+        "XFEAT_R01",
+        "KLT_R02",
+        "XFEAT_R02",
+        "KLT_R03",
+        "XFEAT_R03",
+        "KLT_R04",
+        "XFEAT_R04",
+        "KLT_R05",
+        "XFEAT_R05"
+      ],
+      "xfeat_backend_items_launched": 0,
+      "xfeat_disposition": "NA_FRONTEND_STRUCTURAL_GATE_FAILED_NOT_LAUNCHED",
+      "xfeat_in_joint_mask_or_ranking": false,
+      "xfeat_learning_contribution_claim_permitted": false
+    }
+  },
+  "evo_authority": {
+    "distribution": "evo",
+    "entrypoints": {
+      "evo_ape": {
+        "path": "/home/ma/.local/bin/evo_ape",
+        "sha256": "6bee25dc5bfdab0ead8988ab4014a72511339e94697ec61699f66f68f5f24d15",
+        "size_bytes": 213
+      },
+      "evo_rpe": {
+        "path": "/home/ma/.local/bin/evo_rpe",
+        "sha256": "9e07d0bd4566aa680d5e39e58589176a286f4f8a22ba9107a5834ddb278e2bd1",
+        "size_bytes": 213
+      }
+    },
+    "version": "1.31.1"
+  },
+  "excluded_xfeat": {
+    "accepted_frontend_receipt_path": "/mnt/data/AQUA-FE_WS/experiments/a08_history_matched_controls_v1/frontends_v1/xfeat_attempt002_export_receipt_v1.json",
+    "accepted_frontend_receipt_present": false,
+    "backend_items_launched": 0,
+    "backend_trajectory_admitted": false,
+    "disposition": "NA_FRONTEND_STRUCTURAL_GATE_FAILED_NOT_LAUNCHED",
+    "fallback_byte_identical_to_accepted_klt_inputs": true,
+    "forensic_audit": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a08_xfeat_attempt002_terminal_forensic_audit_v1.md",
+      "sha256": "4087a9cded9617e20c4f8e383bc4280c1a1c1cafe5d9fd49fbaa9fb2005bbf5a",
+      "size_bytes": 3695
+    },
+    "learning_contribution_claim_permitted": false,
+    "method_native_profile": "klt_safe_fallback",
+    "original_planned_backend_slots": 5,
+    "structural_failure_code": "FEATURE_POINT_COUNT_RANGE",
+    "terminal_failure_receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a08_history_matched_controls_v1/frontends_v1/xfeat_attempt002_export_failure_v1.json",
+      "sha256": "15eaad3e5b02f54b4f141db416e9b1db868bea15fcb66fe8bee11318765df22c",
+      "size_bytes": 4017
+    }
+  },
+  "freeze_sha256": "e9279b3192bdcbcac9f75d252564b29719d1c728e642986c602c49a193e6db1d",
+  "klt_frontend": {
+    "receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a08_history_matched_controls_v1/frontends_v1/klt_attempt002_export_receipt_v1.json",
+      "sha256": "69a857307f088e58ea18abbb6c25cd2069b7b15783fc2d17548e1fb001c4d2b8",
+      "size_bytes": 363673
+    },
+    "stage": "klt",
+    "status": "PASS_FRONTEND_EXPORT_ACCEPTED"
+  },
+  "schema_version": "aqua-fe-a08-hfnet-vs-klt-only-common-support-design-freeze-v2",
+  "sealed_support": {
+    "artifacts": {
+      "hfnet_body_T_cam0_config": {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/a08_hfnet_history_matched_support_extension_v1/evaluation_inputs/hfnet_aqualoc_body_T_cam0.yaml",
+        "sha256": "a76c728b31d47c3a87f54c465fb581007ed2da2b7d7d84df81dbde93e9a886c1",
+        "size_bytes": 415
+      },
+      "hfnet_world_T_body_vins_csv_bridge": {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/a08_hfnet_history_matched_support_extension_v1/evaluation_inputs/hfnet_world_T_body_support_source_4000_4660.vio.csv",
+        "sha256": "be8a6bd278ad0222adeaf869a50c710d791c6eb5bee6db1afd57e1678ca9b04c",
+        "size_bytes": 70021
+      },
+      "reference_tum": {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/a08_hfnet_history_matched_support_extension_v1/evaluation_inputs/a08_reference_source_4000_4660.tum",
+        "sha256": "25ccba084e5b5edd5651d24bec2bf753b119bc8de7174d36b870855680086682",
+        "size_bytes": 5082
+      }
+    },
+    "receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a08_hfnet_history_matched_support_extension_v1/evaluation_inputs/support_preparation_receipt_v1.json",
+      "sha256": "2fa2150604e2b81ea93556b9c82f4a15ae394429cb7fc51c96d31977a37e37d3",
+      "size_bytes": 5286
+    },
+    "shared_body_T_cam0_for_every_arm": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a08_hfnet_history_matched_support_extension_v1/evaluation_inputs/hfnet_aqualoc_body_T_cam0.yaml",
+      "sha256": "a76c728b31d47c3a87f54c465fb581007ed2da2b7d7d84df81dbde93e9a886c1",
+      "size_bytes": 415
+    },
+    "trajectory_convention": "world_T_body"
+  },
+  "static_identities": {
+    "backend_replay_authority_runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_a08_recovered_july_history_matched_backend_klt_only_replays_v2.py",
+      "sha256": "f0285508a405f912238640e29d2245709caec32f3c8dc5cd2073ea4ec0835d77",
+      "size_bytes": 39763
+    },
+    "backend_replay_protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a08_recovered_july_history_matched_backend_klt_only_replays_v2_protocol.md",
+      "sha256": "ff70e97da324a699c7ca6c09848dd67b8f7e1932b09a3a72942f155d70ac1d03",
+      "size_bytes": 6637
+    },
+    "common_security_and_numeric_library": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_a08_recovered_july_joint_common_support_v1.py",
+      "sha256": "5d2ec51d6ac01886b5a162359df205734b3628c5dd40630fd562c6e322e1a7e0",
+      "size_bytes": 93215
+    },
+    "epoch_nanosecond_adapter": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support_epoch_v2.py",
+      "sha256": "3c455299b23157cc749b474b9460ca4a408b3bee516e9d1bf2109f253cf89f91",
+      "size_bytes": 5447
+    },
+    "primary_evaluator": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support.py",
+      "sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110",
+      "size_bytes": 27933
+    },
+    "process_free_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_a08_hfnet_vs_klt_only_common_support_v2.py",
+      "sha256": "c7d3deda07945c6759e5a9761e3dbec0f99e09b67aac4bedc98944bdcfe0da76",
+      "size_bytes": 30682
+    },
+    "protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a08_hfnet_vs_klt_only_common_support_v2_protocol.md",
+      "sha256": "e429f62cd644661d3d9964f466b5b84d989af47313b131b2ba2e660933531132",
+      "size_bytes": 11335
+    },
+    "runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_a08_hfnet_vs_klt_only_common_support_v2.py",
+      "sha256": "f6dc1364607a0332da0f4f552f57716182be87b044d072f592c71c740e8d6ddd",
+      "size_bytes": 86460
+    },
+    "trajectory_eval_core": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/trajectory_eval_core.py",
+      "sha256": "aa9ac4da81df7298d1f1c369548ca98a57235916004337cad66f4cf331560635",
+      "size_bytes": 27945
+    }
+  },
+  "status": "FROZEN_AFTER_XFEAT_EXCLUSION_BEFORE_KLT_BACKEND_RESULTS_AND_ACCURACY"
+}

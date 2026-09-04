@@ -1,0 +1,11 @@
+extends: ../continuity_optimized_frontend.yaml
+
+hybrid:
+  enable_local_quality_map: true
+  local_quality_rows: 4
+  local_quality_cols: 6
+  local_quality_weight: 0.45
+  local_quality_min_learned_score: 0.08
+  local_quality_min_birth_score: 0.06
+  local_quality_apply_to_candidate_scoring: true
+  local_quality_apply_to_output_q: true

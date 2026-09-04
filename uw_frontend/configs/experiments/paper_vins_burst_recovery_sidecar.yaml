@@ -1,0 +1,43 @@
+extends: paper_vins_safe_learned_sidecar.yaml
+
+hybrid:
+  # Experimental VINS profile:
+  # keep the learned/LoFTR sidecar from paper_vins_safe_learned_sidecar, but
+  # allow classical old-ID LK recovery only during sustained degradation bursts.
+  #
+  # A05 shows that two isolated low-grid frames during VINS initialization can
+  # destabilize the backend if LK-recovered old IDs are injected. A09 starts in
+  # persistent low coverage; this profile waits for a full short burst before
+  # admitting LK recovery.
+  enable_classical_recovery: true
+  enable_lk_recovery: true
+  enable_learned_recovery: false
+  enable_geometry_safe_recovery: true
+  geometry_safe_apply_to_classical: true
+  geometry_safe_reject_weak_reference_classical: true
+
+  enable_classical_identity_safe_gate: true
+  classical_identity_safe_history_size: 5
+  classical_identity_safe_min_recent_triggers: 5
+  classical_identity_safe_max_grid_coverage: 0.72
+  classical_identity_safe_min_dropout_ratio: 0.30
+  classical_identity_safe_max_frontend_state: 0.87
+  classical_identity_safe_max_track_health: 0.88
+  classical_identity_safe_large_batch: 50
+  classical_identity_safe_min_grid_gain: 0.01
+  classical_identity_safe_max_fraction: 0.30
+  classical_identity_safe_warmup_frames: 0
+
+  enable_source_provenance_memory: true
+  source_provenance_recovered_hold_frames: 60
+  source_provenance_learned_hold_frames: 60
+  source_provenance_quality_scale_recovered: 0.82
+  source_provenance_quality_scale_learned: 0.88
+
+measurement_selection:
+  enabled: false
+
+backend_quality:
+  mode: source_aware
+  floor: 0.80
+  alpha: 0.85

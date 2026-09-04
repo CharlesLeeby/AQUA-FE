@@ -1,0 +1,79 @@
+{
+  "arbitration_summary": null,
+  "arm": "M_xfeat_pairwise_nativeq_v1",
+  "attestation": {
+    "path": "logs/ntnu_vins/external_xfeat_every2_isj_p07_ntnu_fjord_6_0001_m_attempt01/features.bag.p05-xfeat-contract.json",
+    "schema_version": "aqua-fe-p05-xfeat-bag-attestation-v1",
+    "sha256": "733ba58636fb71a1c1298e837ab197f0f35ac82c82ffa0cbd7bb41bcd475054d"
+  },
+  "checks": {
+    "arm_attestation_bound": true,
+    "complete_13_channel_schema": true,
+    "feature_cap_and_native_q_pass": true,
+    "guard_exact_nonfallback_pass": true,
+    "metrics_match_bag": true,
+    "no_trajectory_outcome_artifacts": true,
+    "p_final_run_summary_bound": false,
+    "queue_allocation_exact": true,
+    "required_sensor_reference_topics_present": true,
+    "zero_action_identity_terminal_or_deferred": true
+  },
+  "command_sha256": "d0c0a97c6de04385927eeab28d682b41fbe84a0d82b97e7e48b2def5c044889c",
+  "dataset_family": "ntnu",
+  "feature_bag": {
+    "feature_end_stamp": 1700603797.8073232,
+    "feature_frames": 450,
+    "feature_observations": 108416,
+    "feature_start_stamp": 1700603752.907818,
+    "is_learned_counts": {
+      "1": 108416
+    },
+    "max_features_per_frame": 305,
+    "min_features_per_frame": 134,
+    "path": "logs/ntnu_vins/external_xfeat_every2_isj_p07_ntnu_fjord_6_0001_m_attempt01/features.bag",
+    "quality_max": 0.9131775498390198,
+    "quality_min": 0.8259836435317993,
+    "required_sensor_reference_topics": [
+      "/alphasense_driver_ros/imu"
+    ],
+    "sha256": "1b75395b80058c7d0afffc8eeadb507bd70cb2a13e4945b346d6152569b6c5b7",
+    "sigma_max": 1.1003080606460571,
+    "sigma_min": 1.046459436416626,
+    "size_bytes": 10551605,
+    "source_counts": {
+      "20": 108416
+    },
+    "topic_counts": {
+      "/alphasense_driver_ros/imu": 8998,
+      "/feature_tracker/feature": 450
+    },
+    "zero_feature_frames": 0
+  },
+  "forbidden_outcome_artifacts": [],
+  "frontend_metrics": {
+    "exported_feature_observations": 108416,
+    "path": "logs/ntnu_vins/external_xfeat_every2_isj_p07_ntnu_fjord_6_0001_m_attempt01/frontend_metrics.csv",
+    "rows": 450,
+    "sha256": "0dc63d8986e6ec42a31e50e11a52f0598b01757f67512b05ea6c500f65c3585b",
+    "size_bytes": 281933
+  },
+  "guard": {
+    "action": "ALLOW_M_XFEAT",
+    "contract_hash": "4e31a9a29e8ee2198535de6b0bce01550b17077434e8e01ed68057822d4eace4",
+    "path": "logs/backend_contract_decisions/p05/p05_xfeat_guard_20260806T194835Z_628293_decision.json",
+    "schema_version": "aqua-fe-p05-xfeat-backend-guard-decision-v1",
+    "sha256": "2243767462ddb1021d32e46686d7da71c5b5e8ae3094620b26306d4e0eeb05c0"
+  },
+  "held_out_frontend_outcome_read": true,
+  "held_out_trajectory_outcome_read": false,
+  "learned_lineages": null,
+  "outcome_boundary": "FRONTEND_EXPORT_ONLY_NO_VINS_APE_RPE_TRAJECTORY",
+  "probe_run": null,
+  "queue_index": 10,
+  "run_dir": "logs/ntnu_vins/external_xfeat_every2_isj_p07_ntnu_fjord_6_0001_m_attempt01",
+  "run_id": "isj-nativeq-v3_P07_ntnu-fjord_6_45-90_M_f0_b00_20260806T084500Z",
+  "schema_version": "isj-p07-frontend-export-audit-v3",
+  "status": "PASS",
+  "window_id": "ntnu:fjord_6:0001",
+  "zero_action_identity": null
+}

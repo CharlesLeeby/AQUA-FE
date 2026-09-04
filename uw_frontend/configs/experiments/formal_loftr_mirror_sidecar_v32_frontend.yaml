@@ -1,0 +1,50 @@
+extends: formal_loftr_lowcoverage_v31_probe_frontend.yaml
+
+hybrid:
+  # Final paper-facing LoFTR policy:
+  # LoFTR is an extreme-low-texture / low-coverage sidecar, not a replacement
+  # for the VINS-visible KLT/GFTT backbone. The export profile keeps the full
+  # classical mirror backbone and admits only confirmed, residual-stable LoFTR
+  # points that provide coverage gain.
+  preserve_klt_replenish: true
+  enable_source_provenance_memory: true
+  source_provenance_recovered_hold_frames: 0
+  source_provenance_learned_hold_frames: 20
+  source_provenance_quality_scale_recovered: 1.0
+  source_provenance_quality_scale_learned: 0.82
+
+  source_aware_loftr_modes:
+    - low_coverage_recovery
+    - low_texture
+    - planar_near_wall
+    - extreme_textureless
+
+  semidense_fallback_start_frame: 0
+  semidense_fallback_min_frame_gap: 8
+  semidense_fallback_cooldown_on_attempt: true
+  semidense_fallback_max_new: 40
+  semidense_fallback_sidecar_max_extra: 40
+  semidense_fallback_max_fraction: 0.12
+
+  source_aware_loftr_min_confirmation_frames: 2
+  semidense_candidate_min_quality: 0.12
+  semidense_candidate_min_ncc: 0.40
+  semidense_candidate_max_fb_error: 1.20
+  promotion_loftr_min_quality: 0.12
+  promotion_loftr_min_ncc: 0.40
+  promotion_loftr_max_fb_error: 1.20
+  promotion_loftr_quality_scale: 0.45
+  promotion_loftr_max_confirmed: 6
+
+  semidense_acceptance_subset_on_geometry_fail: true
+  semidense_acceptance_subset_max_count: 6
+  semidense_acceptance_subset_min_count: 3
+  semidense_acceptance_subset_max_per_cell: 1
+
+backend_quality:
+  mode: vins_safe
+  floor: null
+  alpha: 0.65
+
+measurement_selection:
+  enabled: false

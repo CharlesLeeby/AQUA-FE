@@ -1,0 +1,58 @@
+extends: ../paper_full_quality_hybrid_frontend.yaml
+
+hybrid:
+  # Experimental H07 identity-churn repair. Do not use as the default paper
+  # frontend unless it is validated beyond H07 1740-1820.
+  learned_init_on_track_churn: true
+  learned_init_churn_min_dropout_ratio: 0.60
+  learned_init_churn_max_median_age: 2.0
+  learned_init_rolling_churn: true
+  learned_init_rolling_churn_window: 3
+  learned_init_rolling_churn_min_bad_frames: 2
+  learned_init_rolling_churn_min_grid_coverage: 0.90
+  learned_init_rolling_churn_max_long_track_ratio: 0.25
+
+  # Keep learned matches probationary. They must survive LK tracking before
+  # promotion, and newly queued candidates are preserved while old probationary
+  # candidates mature.
+  learned_init_requires_klt_confirmation: true
+  learned_confirmation_min_frames: 2
+  learned_confirmation_preserve_new_pending: true
+  learned_confirmation_geometry_safe: true
+  learned_confirmation_max_pending: 240
+  learned_confirmation_max_confirmed: 36
+  max_learned_initialized: 36
+  max_learned_init_fraction: 0.11
+  learned_sidecar_max_extra: 60
+  learned_init_acceptance_weak_max_new: 12
+  learned_init_acceptance_weak_max_fraction: 0.04
+
+  # Residual-neutral gate: candidate batches may repair identity churn only if
+  # they do not measurably worsen the current frame geometry.
+  enable_geometry_safe_recovery: true
+  geometry_safe_min_candidate_tracks: 1
+  geometry_safe_min_reference_tracks: 40
+  geometry_safe_max_f_inlier_drop: 0.010
+  geometry_safe_max_h_inlier_drop: 0.020
+  geometry_safe_max_epipolar_error_ratio: 1.02
+  geometry_safe_max_homography_error_ratio: 1.05
+  geometry_safe_residual_neutral: true
+  geometry_safe_max_epipolar_error_abs_increase: 0.004
+  geometry_safe_max_homography_error_abs_increase: 0.020
+  geometry_safe_min_subset_size: 1
+  geometry_safe_subset_fractions: [0.75, 0.50, 0.25]
+
+  enable_candidate_geometry_filter: true
+  candidate_geometry_apply_to_learned: true
+  candidate_geometry_min_candidate_tracks: 1
+  candidate_geometry_filter_mode: adaptive_strict
+  candidate_geometry_max_epipolar_error: 1.20
+  candidate_geometry_max_homography_error: 2.50
+  candidate_geometry_quality_weight: 0.85
+
+  promotion_lightglue_min_quality: 0.12
+  promotion_lightglue_max_fb_error: 1.00
+  promotion_lightglue_min_ncc: 0.52
+
+measurement_selection:
+  enabled: false

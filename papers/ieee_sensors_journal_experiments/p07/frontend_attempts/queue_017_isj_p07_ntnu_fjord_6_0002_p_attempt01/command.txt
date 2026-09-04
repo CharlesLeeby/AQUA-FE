@@ -1,0 +1,1 @@
+RUN_VINS=0 FORCE_EXPORT=1 TAG_BASE=isj_p07_ntnu_fjord_6_0002_p_attempt01 bash scripts/run_isj_nativeq_contract_guarded_v4.sh ntnu fjord_6 90 45 hybrid_xfeat 2

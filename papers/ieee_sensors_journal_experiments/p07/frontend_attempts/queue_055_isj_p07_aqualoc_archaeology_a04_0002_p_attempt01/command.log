@@ -1,0 +1,20 @@
+NATIVEQ_BACKEND_GUARD action=ALLOW_LEARNED reasons=0 decision=/home/ma/AQUA-FE_WS/logs/backend_contract_decisions/nativeq_guard_20260807T165129Z_952090_decision.json
+native-q backend contract PASS; decision=/home/ma/AQUA-FE_WS/logs/backend_contract_decisions/nativeq_guard_20260807T165129Z_952090_decision.json
+Traceback (most recent call last):
+  File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/ma/AQUA-FE_WS/uw_frontend/datasets/aqualoc_raw_to_rosbag.py", line 219, in <module>
+    raise SystemExit(main())
+  File "/home/ma/AQUA-FE_WS/uw_frontend/datasets/aqualoc_raw_to_rosbag.py", line 68, in main
+    image_rows = _read_image_rows(tar, _member_path(args.raw_root, args.image_csv))
+  File "/home/ma/AQUA-FE_WS/uw_frontend/datasets/aqualoc_raw_to_rosbag.py", line 135, in _read_image_rows
+    rows = _read_csv_from_tar(tar, member)
+  File "/home/ma/AQUA-FE_WS/uw_frontend/datasets/aqualoc_raw_to_rosbag.py", line 127, in _read_csv_from_tar
+    extracted = tar.extractfile(member)
+  File "/usr/lib/python3.8/tarfile.py", line 2125, in extractfile
+    tarinfo = self.getmember(member)
+  File "/usr/lib/python3.8/tarfile.py", line 1812, in getmember
+    raise KeyError("filename %r not found" % name)
+KeyError: "filename 'raw_data/img_sequence_4.csv' not found"

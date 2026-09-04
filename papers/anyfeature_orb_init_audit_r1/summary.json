@@ -1,0 +1,333 @@
+{
+  "allowed_next_path": {
+    "forbidden_under_current_comparison_rule": "Adding H-to-F fallback, changing RH=0.4, weakening the 0.75 ambiguity gate, forcing Fundamental, or changing feature/matcher thresholds.",
+    "without_algorithm_change": "Use an outcome-blind predeclared sequence/window whose natural startup produces RH<=0.4 or a uniquely reconstructable H, preserving official code."
+  },
+  "features_and_motion": {
+    "all_keypoints": {
+      "max": 2659,
+      "mean": 1483.2641509433963,
+      "median": 1404,
+      "min": 578
+    },
+    "matched_displacement_median_px": {
+      "max": 128.9386117932348,
+      "mean": 24.675711938883225,
+      "median": 14.183708788226124,
+      "min": 0.6495562985621177
+    },
+    "octave0_keypoints": {
+      "max": 390,
+      "mean": 185.75138734739178,
+      "median": 170,
+      "min": 50
+    },
+    "official_initializer_matches": {
+      "max": 277,
+      "mean": 117.63235294117646,
+      "median": 113.0,
+      "min": 35
+    }
+  },
+  "fundamental_counterfactual_diagnostic": {
+    "exact_success_count_this_frozen_rng_realization": 15,
+    "exact_success_rows": [
+      {
+        "index": 79,
+        "matches": 113,
+        "median_displacement_px": 23.63834015808449,
+        "reference_index": 64,
+        "rh": 0.4799956679344177
+      },
+      {
+        "index": 133,
+        "matches": 119,
+        "median_displacement_px": 6.786858685549762,
+        "reference_index": 115,
+        "rh": 0.48057225346565247
+      },
+      {
+        "index": 137,
+        "matches": 116,
+        "median_displacement_px": 8.321510332763523,
+        "reference_index": 115,
+        "rh": 0.4765998423099518
+      },
+      {
+        "index": 145,
+        "matches": 107,
+        "median_displacement_px": 11.572467831482763,
+        "reference_index": 115,
+        "rh": 0.4758524000644684
+      },
+      {
+        "index": 191,
+        "matches": 105,
+        "median_displacement_px": 12.561896940869376,
+        "reference_index": 184,
+        "rh": 0.4868122935295105
+      },
+      {
+        "index": 352,
+        "matches": 121,
+        "median_displacement_px": 35.32287961001977,
+        "reference_index": 327,
+        "rh": 0.4853960871696472
+      },
+      {
+        "index": 490,
+        "matches": 109,
+        "median_displacement_px": 42.61413423464473,
+        "reference_index": 469,
+        "rh": 0.481997549533844
+      },
+      {
+        "index": 501,
+        "matches": 132,
+        "median_displacement_px": 16.96308232552905,
+        "reference_index": 492,
+        "rh": 0.48286527395248413
+      },
+      {
+        "index": 504,
+        "matches": 128,
+        "median_displacement_px": 21.989990793156217,
+        "reference_index": 492,
+        "rh": 0.4833711087703705
+      },
+      {
+        "index": 511,
+        "matches": 132,
+        "median_displacement_px": 37.71567880073341,
+        "reference_index": 492,
+        "rh": 0.4815486967563629
+      },
+      {
+        "index": 513,
+        "matches": 128,
+        "median_displacement_px": 42.212705912797844,
+        "reference_index": 492,
+        "rh": 0.47995269298553467
+      },
+      {
+        "index": 514,
+        "matches": 118,
+        "median_displacement_px": 44.59133092964982,
+        "reference_index": 492,
+        "rh": 0.480055034160614
+      },
+      {
+        "index": 516,
+        "matches": 136,
+        "median_displacement_px": 50.778425574659366,
+        "reference_index": 492,
+        "rh": 0.4776346981525421
+      },
+      {
+        "index": 519,
+        "matches": 124,
+        "median_displacement_px": 57.11461531676106,
+        "reference_index": 492,
+        "rh": 0.4689509868621826
+      },
+      {
+        "index": 599,
+        "matches": 225,
+        "median_displacement_px": 21.4714888956625,
+        "reference_index": 587,
+        "rh": 0.48575112223625183
+      }
+    ],
+    "officially_executed_by_state_machine": false,
+    "rng_warning": "Official RandomIntegerGenerator seeds mt19937 from random_device; the exact counterfactual count can vary across diagnostic processes."
+  },
+  "homography_reconstruction": {
+    "ambiguity_gate_passes": 0,
+    "best_parallax_degrees": {
+      "max": 12.956296920776367,
+      "mean": 2.5799979622875835,
+      "median": 1.6337459683418274,
+      "min": 0.0
+    },
+    "exact_successes": 0,
+    "good_fraction_0_9_gate_passes": 596,
+    "min_good_50_gate_passes": 596,
+    "parallax_1deg_gate_passes": 372,
+    "relaxed_min_parallax_0_min_triangulated_0_successes": 0,
+    "required_second_best_over_best": "<0.75",
+    "second_best_over_best_good": {
+      "max": 1.0,
+      "mean": 0.9927426412701388,
+      "median": 1.0,
+      "min": 0.8384615384615385
+    },
+    "svd_gate_passes": 596
+  },
+  "identities": {
+    "audit_csv": {
+      "path": "/home/ma/AQUA-FE_WS/papers/anyfeature_orb_init_audit_r1/exact_state_machine.csv",
+      "sha256": "5e0dbb9b93dd661c54d375ff3fa296e49e0fbf7b17e74b9dcc5015c4bb3ae36a",
+      "size_bytes": 218408
+    },
+    "harness": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/diagnostics/anyfeature_orb_init_audit_v1.cpp",
+      "sha256": "e172e22e5119cab09b81f1b0febd1eb079a70dc5faabf8ee5a560639a639567c",
+      "size_bytes": 13549
+    },
+    "official_library": {
+      "path": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/lib/libAnyFeature-VSLAM.so",
+      "sha256": "eea4a5a6c5dccb5825a8e6a1a3249c6b808881a22c7fe301d0a2a90efaa99954",
+      "size_bytes": 2284232
+    },
+    "official_settings": {
+      "path": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/settings/orb32_settings.yaml",
+      "sha256": "38a19b5f45863f64ee81b3306b3c66b43c4f587712fdda8babaef9b5f04c9647",
+      "size_bytes": 204
+    },
+    "official_source": {
+      "commit": "6aa014b724f7a61bcbff2f8f28f20836986a43dc",
+      "files": {
+        "include/FeatureExtractor.h": {
+          "path": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/include/FeatureExtractor.h",
+          "sha256": "447e91c188cba3c7972bba18116c79b60916d19f35a1048add6ebace027838eb",
+          "size_bytes": 28511
+        },
+        "include/FeatureMatcher.h": {
+          "path": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/include/FeatureMatcher.h",
+          "sha256": "91043d26c2e4a37db4ad84d3bcae40f5757f3771c17d57955679927a13c7e5c8",
+          "size_bytes": 5777
+        },
+        "include/Initializer.h": {
+          "path": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/include/Initializer.h",
+          "sha256": "9d062166ff97ef188c693d675faa7263edd3c1d05d8f70313b69e0d81fe6bfb9",
+          "size_bytes": 5073
+        },
+        "include/Tracking.h": {
+          "path": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/include/Tracking.h",
+          "sha256": "175cd7c3a1ae37d14c67c3adfe0643f84ae635a76515d0f6b89df3160b538297",
+          "size_bytes": 10194
+        },
+        "include/Utils.h": {
+          "path": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/include/Utils.h",
+          "sha256": "af889365ac6189a8750c995e520e5e8c8469ae75477df9ec45597a55beb39fdb",
+          "size_bytes": 1427
+        },
+        "src/FeatureExtractor.cpp": {
+          "path": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/src/FeatureExtractor.cpp",
+          "sha256": "c5232aa1f59317ca53a7d497cef7504a6541267c764f56fa7e7d0542b011865d",
+          "size_bytes": 12757
+        },
+        "src/FeatureMatcher.cc": {
+          "path": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/src/FeatureMatcher.cc",
+          "sha256": "cd75d4cf844631152032d92109c9199fb8bcfdf5d0c3eb0efa3194824ef804ea",
+          "size_bytes": 55534
+        },
+        "src/Feature_orb32.cpp": {
+          "path": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/src/Feature_orb32.cpp",
+          "sha256": "c59a1b5f6542bcf68ff27178413b491beffe46613a25926058ba808f03932370",
+          "size_bytes": 3758
+        },
+        "src/Frame.cc": {
+          "path": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/src/Frame.cc",
+          "sha256": "e6867a35c735b1ee7c4f836c4b8b2898a3f7b47da48b5ead8fa9b132f09340f0",
+          "size_bytes": 22018
+        },
+        "src/Image.cpp": {
+          "path": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/src/Image.cpp",
+          "sha256": "95d7f6f8493c7383c023967b8c7f8db4531002c0012a26ef58e1c87e5564dccd",
+          "size_bytes": 1747
+        },
+        "src/Initializer.cc": {
+          "path": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/src/Initializer.cc",
+          "sha256": "4bd89e5ce007214611eac0a74eba201d48e0fe40ecc1ad4a828a9596974a8ad8",
+          "size_bytes": 26165
+        },
+        "src/Tracking.cc": {
+          "path": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/src/Tracking.cc",
+          "sha256": "d572cc247749e9d4db26f5f9e49f497bafcccc3807f1c815adc5daced13b719a",
+          "size_bytes": 50162
+        },
+        "src/Utils.cpp": {
+          "path": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/src/Utils.cpp",
+          "sha256": "8af8f97cfe31f5862263fba04f5074fc92eea019cee31dc8185cd6f7e59c2e28",
+          "size_bytes": 6606
+        }
+      },
+      "repo": "/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3",
+      "staged_diff_empty": true,
+      "tracked_diff_empty": true,
+      "tree": "36b264e1da05c6fe9cd987965e9a75ba96930b63"
+    },
+    "sequence_calibration": {
+      "path": "/mnt/data/AQUA-FE_WS/anyfeature_adapter/aqualoc_a02_0005_full_r1/calibration.yaml",
+      "sha256": "656455cc1235e197108b841a17ace07835f892df15053fcbfd188b7c9cc7ffdf",
+      "size_bytes": 404
+    },
+    "sequence_conversion_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/anyfeature_adapter/aqualoc_a02_0005_full_r1/conversion_manifest.json",
+      "sha256": "2f08cc97e71d44e56d90720fbdd5bf925c1c7e5892096743f67265fc2df34afe",
+      "size_bytes": 794594
+    },
+    "sequence_rgb_txt": {
+      "path": "/mnt/data/AQUA-FE_WS/anyfeature_adapter/aqualoc_a02_0005_full_r1/rgb.txt",
+      "sha256": "abb30058d0ec330a3860ca45674bf99930548e71c68c2b8f19eeac416020908f",
+      "size_bytes": 44149
+    }
+  },
+  "input_contract": {
+    "delta_seconds": {
+      "max": 0.05492067337036133,
+      "mean": 0.04999139017528958,
+      "median": 0.050017595291137695,
+      "min": 0.04498410224914551
+    },
+    "frame_count": 901,
+    "image_contract": "mono8 PNG, 968x608; audited by frozen adapter manifest",
+    "span_seconds": 44.99225115776062,
+    "timestamp_strict": true
+  },
+  "model_selection": {
+    "fallback_after_selected_model_failure": false,
+    "fundamental_selected": 0,
+    "homography_selected": 596,
+    "rh": {
+      "max": 0.4911576509475708,
+      "mean": 0.4811677469203136,
+      "median": 0.48262540996074677,
+      "min": 0.44969943165779114
+    },
+    "source_rule": "RH=SH/(SH+SF); RH>0.4 selects ReconstructH, otherwise ReconstructF"
+  },
+  "root_cause": {
+    "confidence": "high",
+    "primary": "All 596 viable pairs are routed to Homography; all fail the Homography unique-solution ambiguity gate, and the implementation does not fall back to Fundamental.",
+    "ruled_out_as_primary": [
+      "missing or unread images",
+      "too few ORB keypoints",
+      "all pairs below the 100-match gate",
+      "timestamp order or nominal-rate error",
+      "image size/channel mismatch",
+      "the post-save thread-destruction abort"
+    ]
+  },
+  "schema": "aqua-fe-anyfeature-orb-init-readonly-audit-v1",
+  "scope": {
+    "counterfactual_fundamental_branch_changes_algorithm": true,
+    "diagnostic_only": true,
+    "official_slam_rerun": false,
+    "official_source_modified": false
+  },
+  "state_machine": {
+    "event_counts": {
+      "initializer_geometry_reject": 596,
+      "reset_too_few_matches": 152,
+      "set_reference": 153
+    },
+    "geometry_attempts_matches_ge_100": 596,
+    "initializer_successes": 0,
+    "matches_below_100": 152,
+    "matching_attempts": 748,
+    "rows": 901
+  },
+  "status": "PASS_ROOT_CAUSE_LOCALIZED"
+}

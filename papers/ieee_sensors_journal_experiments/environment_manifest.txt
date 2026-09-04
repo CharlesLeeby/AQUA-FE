@@ -1,0 +1,93 @@
+IEEE Sensors Journal P03 Environment Manifest
+=============================================
+
+Manifest schema: isj-environment-manifest-v1
+Status: FROZEN_CANDIDATE_P03
+Observed at: 2026-08-01T16:56:23+08:00
+Workspace: /home/ma/AQUA-FE_WS
+
+Host and operating system
+-------------------------
+Hostname: qiu
+OS: Ubuntu 20.04.6 LTS (focal)
+Kernel: Linux 5.15.0-139-generic x86_64
+CPU: AMD Ryzen 5 3600 6-Core Processor
+CPU topology: 1 socket, 6 physical cores, 12 logical CPUs
+Online CPUs: 0-11
+Installed memory: 31 GiB RAM, 14 GiB swap
+Observed process affinity: CPUs 0-11
+
+ROS and VINS-Fusion
+-------------------
+ROS distribution: noetic
+ros-noetic-ros-comm: 1.17.0-1focal.20250411.002502
+ros-noetic-roscpp: 1.17.0-1focal.20240913.184530
+ros-noetic-rosbag: 1.17.0-1focal.20240913.191931
+ros-noetic-sensor-msgs: 1.13.1-1focal.20240913.192251
+ros-noetic-cv-bridge: 1.16.2-1focal.20240913.193012
+VINS source root: /home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master
+VINS source reported HEAD: 6c3eda28f4614ae3d7c4c1c1668ebe553efffa08
+VINS estimator+camera-model source snapshot SHA-256: 68e507e88b17f1adbddd50531295c55c1dc686aba51487fb78014bd38ff58789
+VINS binary: /home/ma/SLAM/VINS-Fusion-origin/devel/lib/vins/vins_node
+VINS binary SHA-256: 4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278
+Protected historical workspace (never modify): /home/ma/SLAM/VINS-Fusion_3-15-WS
+
+Python and scientific stack
+---------------------------
+Python: 3.8.10
+pip: 20.0.2 (/usr/lib/python3/dist-packages)
+NumPy: 1.24.4
+Pandas: 2.0.3
+SciPy: 1.10.1
+PyYAML: 5.3.1
+OpenCV Python: 4.2.0 (/usr/lib/python3/dist-packages/cv2.cpython-38-x86_64-linux-gnu.so)
+OpenCV system package: 4.2.0+dfsg-5
+evo: v1.31.1
+PyTorch: 2.2.2+cpu (/home/ma/.local/lib/python3.8/site-packages/torch)
+
+GPU and CUDA visibility
+-----------------------
+GPU: NVIDIA GeForce GTX 1650, 4096 MiB, compute capability 7.5
+NVIDIA driver: 535.183.01
+CUDA toolkit/nvcc: NOT_INSTALLED_OR_NOT_ON_PATH
+PyTorch CUDA runtime: NONE
+torch.cuda.is_available(): false
+cuDNN: NONE
+
+The P03 candidate environment is therefore CPU-only for learned inference.
+No GPU or real-time claim is authorized from this environment. Installing a
+CUDA-enabled PyTorch build or changing the device creates a new environment
+manifest and requires new deterministic/runtime probes.
+
+Frozen controlled-run settings
+------------------------------
+CPU affinity: taskset CPUs 0-11 for every compared arm
+OMP_NUM_THREADS=1
+OPENBLAS_NUM_THREADS=1
+MKL_NUM_THREADS=1
+NUMEXPR_NUM_THREADS=1
+PYTHONHASHSEED=20260730
+OpenCV threads: 1
+PyTorch intra-op threads: 1
+PyTorch inter-op threads: 1
+OpenCV RNG seed: 20260730 before each F/H fit
+VINS multiple_thread: 0
+ROS/VINS instances: serial; one roscore and one vins_node per replay
+Playback rate: 1.0
+Frontend preprocessing: adaptive_clahe
+Frontend frame stride: every_n=1, frame_offset=0
+Backend quality for B1/B2/H/P/D/C-QG/M: constant q=1
+B0 quality: native VINS behavior
+
+Observed shell variables at manifest capture were unset for OMP_NUM_THREADS,
+OPENBLAS_NUM_THREADS, MKL_NUM_THREADS, NUMEXPR_NUM_THREADS,
+CUDA_VISIBLE_DEVICES, and PYTHONHASHSEED. Runners must set the frozen values
+explicitly; inheriting the interactive shell is not a valid controlled run.
+
+Snapshot caveat
+---------------
+The enclosing filesystem has a mis-scoped Git worktree rooted at '/', so Git
+status is not a trustworthy workspace cleanliness signal. Method identity is
+therefore defined by the per-file and canonical tree SHA-256 values in
+method_lock_candidate.json, not by a clean-worktree claim. The VINS reported
+HEAD is recorded only as supplemental provenance.

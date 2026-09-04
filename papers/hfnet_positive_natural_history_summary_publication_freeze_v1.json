@@ -1,0 +1,146 @@
+{
+  "schema_version": "aqua-fe-hfnet-positive-natural-history-summary-publication-freeze-v1",
+  "status": "SEALED_TERMINAL_DEVELOPMENT_ONLY_THREE_OF_THREE_RUNABILITY",
+  "created_at_utc": "2026-08-25T13:16:30Z",
+  "publication_command": "PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 /home/ma/AQUA-FE_WS/scripts/summarize_hfnet_positive_natural_history_v1.py publish --output-json /home/ma/AQUA-FE_WS/papers/hfnet_positive_natural_history_summary_v1.json --output-markdown /home/ma/AQUA-FE_WS/papers/hfnet_positive_natural_history_summary_v1.md",
+  "publication_contract": {
+    "executed_once": true,
+    "return_code": 0,
+    "write_mode": "O_EXCL_NO_OVERWRITE",
+    "analysis_state": "TERMINAL_DEVELOPMENT_ONLY",
+    "generated_at_utc": "2026-08-25T13:15:51+00:00"
+  },
+  "frozen_tool": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/summarize_hfnet_positive_natural_history_v1.py",
+    "size_bytes": 36419,
+    "sha256": "6dd2b6ebd401311fd6b2c5ef91ff497e7a9e47548076b1948ac37dee17c008cb"
+  },
+  "frozen_test": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_summarize_hfnet_positive_natural_history_v1.py",
+    "size_bytes": 11076,
+    "sha256": "0691ed2e9415e7e5302a3120c6acbb1f3b8c482f6b87b48eb744305a30fc9b61",
+    "terminal_state_invariant_tests": {
+      "count": 6,
+      "result": "PASS"
+    },
+    "full_preterminal_lifecycle_suite_after_a09_terminal": {
+      "passed": 6,
+      "failed": 2,
+      "expected_failures": [
+        "current-workspace preterminal assertion now observes the terminal A09 result",
+        "preterminal publication-refusal assertion now observes complete terminal evidence"
+      ],
+      "interpretation": "expected lifecycle transition, not a frozen-tool regression"
+    }
+  },
+  "terminal_inputs": {
+    "A06": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a06_0000_2460/attempt_001/run_result.json",
+      "size_bytes": 161265,
+      "sha256": "2b9640fbc206f11db8e5a90d74f8c57214ae0912a3608263e9d3ddc23686441b"
+    },
+    "A10": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a10_0000_2800_score_2400_2800_warmstart/attempt_001/run_result.json",
+      "size_bytes": 21463,
+      "sha256": "88c340849adcc60985711dedd499c74db36e36b3ac103768bc3aa0d615372a46"
+    },
+    "A09": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/run_result.json",
+      "size_bytes": 23846,
+      "sha256": "a0b03e41ac96c8e07d63325fdfc67d5292fc0c6c4b2debb3c6a40817a1d62fa7"
+    }
+  },
+  "published_outputs": {
+    "json": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_positive_natural_history_summary_v1.json",
+      "size_bytes": 11021,
+      "sha256": "ec984c53af5622bc58ec3ddbf22a33173ed3df80a4ac8e7f54acda8b8691c17f",
+      "mode": "0444"
+    },
+    "markdown": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_positive_natural_history_summary_v1.md",
+      "size_bytes": 1798,
+      "sha256": "2afa3dfef2ecaf5704f9a76776ffe5ebdc9a2cfd89b43a9676bea734c5f2b673",
+      "mode": "0444"
+    }
+  },
+  "natural_history_rows": [
+    {
+      "window_id": "A06",
+      "feed_indices_inclusive": [0, 2460],
+      "score_indices_inclusive": [2210, 2460],
+      "score_poses": 251,
+      "score_cameras": 251,
+      "score_keyframes": 27,
+      "score_window_init_count": 0,
+      "score_window_reset_count": 0,
+      "accuracy": null,
+      "runability_passed": true
+    },
+    {
+      "window_id": "A10",
+      "feed_indices_inclusive": [0, 2800],
+      "score_indices_inclusive": [2400, 2800],
+      "score_poses": 401,
+      "score_cameras": 401,
+      "score_keyframes": 30,
+      "score_window_init_count": 0,
+      "score_window_reset_count": 0,
+      "accuracy": null,
+      "runability_passed": true
+    },
+    {
+      "window_id": "A09",
+      "feed_indices_inclusive": [0, 4400],
+      "score_indices_inclusive": [4000, 4400],
+      "score_poses": 401,
+      "score_cameras": 401,
+      "score_keyframes": 33,
+      "score_window_init_count": 0,
+      "score_window_reset_count": 0,
+      "accuracy": null,
+      "runability_passed": true
+    }
+  ],
+  "descriptive_counts": {
+    "planned_natural_history_windows": 3,
+    "terminal_natural_history_windows": 3,
+    "runability_pass_count": 3
+  },
+  "cold_start_history_sensitivity": {
+    "A06": {
+      "trajectory_poses": 0,
+      "keyframes": 0,
+      "accuracy": null
+    },
+    "A10": {
+      "trajectory_poses": 0,
+      "keyframes": 0,
+      "accuracy": null
+    },
+    "A09": {
+      "trajectory_poses": 0,
+      "keyframes": 0,
+      "accuracy": null
+    },
+    "role": "history-sensitivity diagnostic only; excluded from the natural-history table and pass count"
+  },
+  "independent_prerelease_audit": {
+    "decision": "GO",
+    "all_terminal_and_cold_input_identities_match": true,
+    "process_free_validation_return_code": 0,
+    "output_paths_absent_before_publication": true,
+    "frozen_tool_has_no_slam_or_hfnet_process_execution_surface": true
+  },
+  "claim_boundary": {
+    "development_only": true,
+    "runability_only": true,
+    "accuracy_evaluated": false,
+    "ape_or_rpe_computed": false,
+    "fair_head_to_head": false,
+    "ranking_computed": false,
+    "significance_testing_performed": false,
+    "superiority_claimed": false,
+    "formal_paper_claim_authorized": false
+  }
+}

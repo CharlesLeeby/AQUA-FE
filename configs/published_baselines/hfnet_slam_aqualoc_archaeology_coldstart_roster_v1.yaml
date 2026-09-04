@@ -1,0 +1,64 @@
+%YAML:1.0
+
+# HFNet-SLAM author build-repair commit:
+# c354c72588a97bb6f6a9c7c8317530795956ec80
+# Dataset-only adaptation of the official Monocular-Inertial/EuRoC.yaml.
+# Shared unchanged settings for the AQUALOC Archaeology exact-window cold-start
+# roster.  This file prepares inputs only and does not authorize an execution.
+# A future frozen runner may replace modelPath only with an identity-pinned,
+# attempt-local copy of the already passed HFNet model.
+
+File.version: "1.0"
+
+Camera.type: "PinHole"
+
+Camera1.fx: 543.3327734182214
+Camera1.fy: 542.3987729825660
+Camera1.cx: 489.0253604224790
+Camera1.cy: 305.3872771200281
+
+Camera1.k1: -0.1255945656257394
+Camera1.k2: 0.053221287232781606
+Camera1.p1: 0.0000994070021080493
+Camera1.p2: 0.00009550660927242349
+
+Camera.width: 968
+Camera.height: 608
+Camera.fps: 20
+Camera.RGB: 1
+
+# Transformation from camera to body/IMU: T_imu_cam.
+IMU.T_b_c1: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [-0.999372214240385, -0.034374888513960, -0.008575805730306, -0.019289625059918,
+           0.009015607185122, -0.012659747009765, -0.999879217522163, -0.175142540090067,
+           0.034262169098800, -0.999328823683828,  0.012961709892746, -0.026795196070038,
+           0.0,               0.0,                0.0,                1.0]
+
+IMU.NoiseGyro: 0.003
+IMU.NoiseAcc: 0.05
+IMU.GyroWalk: 0.0001
+IMU.AccWalk: 0.0015
+IMU.Frequency: 200.0
+
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -3.5
+Viewer.ViewpointF: 500.0
+
+Extractor.type: "HFNetRT"
+Extractor.modelPath: "/home/ma/SLAM/HFNet-SLAM-runtime-model-a02-r1/HFNet-RT/"
+Extractor.scaleFactor: 1.2
+Extractor.nLevels: 4
+Extractor.nFeatures: 675
+Extractor.threshold: 0.01
+
+loopClosing: 1

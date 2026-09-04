@@ -1,0 +1,134 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a09-0000-6200-score-6000-6200-runner-freeze-v1",
+  "status": "FROZEN_PROCESS_FREE_TESTS_AND_INDEPENDENT_REVIEW_PASS_ATTEMPT_NOT_PREPARED_HFNET_NOT_STARTED",
+  "created_at_local": "2026-08-28T02:26:54+08:00",
+  "scientific_role": "DEVELOPMENT_ONLY_HFNET_NATURAL_HISTORY_RUNABILITY_ON_JULY14_A09_OLD_FROZEN_POSITIVE_WINDOW",
+  "controller": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a09_0000_6200_score_6000_6200_warmstart_v1.py",
+    "size_bytes": 42404,
+    "sha256": "f0f27f8783d2669cdcfa15420c31225743c465a4e75c517fd17f23cb86062f62"
+  },
+  "controller_tests": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_hfnet_v6_a09_0000_6200_score_6000_6200_warmstart_v1.py",
+    "size_bytes": 18476,
+    "sha256": "995ed80ed34172f410d759b35c4df24608b3b3322154006a4b71a6c51fba0974"
+  },
+  "hardened_supervisor": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a05_0001_3700_score_3300_3700_warmstart_v1.py",
+    "size_bytes": 69153,
+    "sha256": "240e4f219c1ef86f9ebb78077ec14ede3cb09002773f00f26747745ad10eab3d"
+  },
+  "input_authority": {
+    "root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_old_frozen_positive_windows_v1/a09_0000_6200_score_6000_6200_warmstart",
+    "materialization_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_old_frozen_positive_windows_v1/a09_0000_6200_score_6000_6200_warmstart/materialization_manifest.json",
+      "size_bytes": 4072785,
+      "sha256": "e6bf409e46d9cc1e5590ba6f629638a8d3fd19763a1c063029b7ccab3d3b72d2"
+    },
+    "independent_audit_receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_old_frozen_positive_windows_v1/a09_0000_6200_score_6000_6200_warmstart.independent_audit_v1.json",
+      "size_bytes": 6400,
+      "sha256": "6e094706bdc306d9cc7fc306e47634aff2cb3c0725e4a8c37900e0181c08aff0"
+    },
+    "input_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_6200_score_6000_6200_input_freeze_v1.json",
+      "size_bytes": 9353,
+      "sha256": "582ce029d7b77f13530b4303cff1320e2df159e4f88e204378f8f1a441c49c6b"
+    },
+    "payload_file_count_excluding_manifest": 6204,
+    "payload_size_bytes_excluding_manifest": 1530657232,
+    "payload_sha256_excluding_manifest": "a186160594fe6e0fc46ed2e363d6171e22a5ee8abd549467635a4f3833151c1c",
+    "payload_crc32_excluding_manifest": "6ea95711"
+  },
+  "selection_authority": {
+    "selector": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_6200_score_6000_6200_selector_freeze_v1.json",
+      "size_bytes": 4673,
+      "sha256": "2d9bea353a09dfc806cd9764de86d19aa759ee6e640696e33380dc2d9a120883"
+    },
+    "protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_6200_score_6000_6200_runability_protocol_v1.md",
+      "size_bytes": 4997,
+      "sha256": "1e63981a3e5d064f80d72988535b8eec13ad2a778b93fd09146be693bd2445ef"
+    },
+    "historical_evidence_entries_revalidated": 6,
+    "development_result_conditioned_selection": true,
+    "confirmatory_or_held_out": false
+  },
+  "frozen_contract": {
+    "feed_source_indices_inclusive": [0, 6200],
+    "feed_local_indices_inclusive": [0, 6200],
+    "source_to_local_index_offset": 0,
+    "local_to_source_index_offset": 0,
+    "feed_camera_count": 6201,
+    "preroll_indices_inclusive": [0, 5999],
+    "score_source_indices_inclusive": [6000, 6200],
+    "score_local_indices_inclusive": [6000, 6200],
+    "score_camera_count": 201,
+    "score_requires_exact_contiguous_pose_count": "201/201",
+    "preroll_to_score_boundary_continuity_required": true,
+    "score_requires_at_least_one_keyframe": true,
+    "pre_score_initialization_required": true,
+    "score_window_reset_or_reinitialization_permitted": false,
+    "unresolved_reset_boundary_permitted": false,
+    "timeout_seconds": 900,
+    "timeout_role": "child-lifetime safety ceiling only; no runtime or realtime claim",
+    "attempt_namespace": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/old_frozen_positive_windows/a09_0000_6200_score_6000_6200_warmstart/attempt_001",
+    "authorization_token": "HFNET_V6_A09_0000_6200_SCORE_6000_6200_WARMSTART_ATTEMPT_001_START_EXACTLY_ONCE",
+    "maximum_hfnet_popen_invocations": 1,
+    "retry_permitted": false,
+    "process_start_claim_o_excl": true,
+    "terminal_result_o_excl": true,
+    "child_reaping_required_before_post_audits": true,
+    "formal_resource_contract_relaxed_for_todesk_or_unrelated_ros": false
+  },
+  "shared_interpreter_provenance_guard": {
+    "captured_a05_python_functions_checked_by_module_name_and_code_filename": 12,
+    "strict_a06_resource_gate_checked_by_module_name_and_code_filename": true,
+    "a08_facade_configured_before_a09_import": "FAIL_CLOSED_AS_REQUIRED",
+    "todesk_corun_overlay_configured_after_clean_a09_import": "STRICT_FORMAL_BINDINGS_RESTORED",
+    "contaminated_facade_may_be_blessed_as_strict": false
+  },
+  "verification": {
+    "python_compile_exit_code": 0,
+    "process_free_unit_test_count": 14,
+    "process_free_unit_test_failures": 0,
+    "process_free_unit_test_errors": 0,
+    "real_input_authority_validation": "PASS_READ_ONLY_INPUT_AUTHORITY",
+    "pending_identity_pins": [],
+    "independent_read_only_runner_review": "PASS_NO_BLOCKER",
+    "independent_review_controller_size_bytes": 42404,
+    "independent_review_controller_sha256": "f0f27f8783d2669cdcfa15420c31225743c465a4e75c517fd17f23cb86062f62",
+    "independent_review_test_size_bytes": 18476,
+    "independent_review_test_sha256": "995ed80ed34172f410d759b35c4df24608b3b3322154006a4b71a6c51fba0974",
+    "fresh_standalone_profile_capture": "PASS",
+    "a08_before_a09_import_regression": "PASS_FAIL_CLOSED",
+    "prepare_invocations": 0,
+    "hfnet_process_invocations": 0,
+    "formal_attempt_namespace_exists": false,
+    "corun_attempt_namespace_exists": false
+  },
+  "claims": {
+    "runner_implemented_reviewed_and_frozen": true,
+    "attempt_prepared": false,
+    "process_start_claim_created": false,
+    "hfnet_started": false,
+    "trajectory_produced": false,
+    "runability_passed": false,
+    "accuracy_evaluated": false,
+    "accuracy_value": null,
+    "runtime_claim_supported": false,
+    "system_ranking_supported": false,
+    "superiority_supported": false,
+    "confirmatory_evidence": false
+  },
+  "next_stage_boundary": {
+    "permitted": "separately reviewed attempt preparation and a separately frozen exactly-once execution lock",
+    "prohibited": [
+      "editing the frozen runner, runner tests, input, manifest, or audit receipt",
+      "starting HFNet without a reviewed attempt preparation and execution lock",
+      "retrying the same attempt after any terminal PASS or FAIL",
+      "computing APE, RPE, a winner, ranking, significance, or paper claim without history-matched comparators and common-support gates"
+    ]
+  }
+}

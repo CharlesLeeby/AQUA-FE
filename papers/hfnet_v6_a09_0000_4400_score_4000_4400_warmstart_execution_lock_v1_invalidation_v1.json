@@ -1,0 +1,70 @@
+{
+  "claims": {
+    "attempt_consumed": false,
+    "execution_started": false,
+    "hfnet_elf_start_count": 0,
+    "process_claim_created": false,
+    "supervisor_invocation_count": 0,
+    "trajectory_produced": false
+  },
+  "invalidated_lock": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_execution_lock_v1.json",
+    "sha256": "82f644548d26ddf18ae9165cd6ffdd35bcc3f8df1eddb511e4c1b498e2165b18",
+    "size_bytes": 6923
+  },
+  "invalidation": {
+    "independent_launch_review": "NO_GO_DO_NOT_INVOKE",
+    "observed_at_local": "2026-08-25T02:46:11+08:00",
+    "reason": "The fresh-ready snapshot became stale before invocation because a new unrelated ROS/VINS prewarm replay started.",
+    "resource_errors": [
+      "GPU_COMPUTE_APPLICATION_PRESENT",
+      "CONFLICTING_SLAM_OR_ROS_PROCESS_PRESENT"
+    ],
+    "unrelated_processes": [
+      {
+        "pid": 1014224,
+        "role": "roscore"
+      },
+      {
+        "pid": 1014290,
+        "role": "rosmaster"
+      },
+      {
+        "gpu_memory_mib": 48,
+        "pid": 1014420,
+        "role": "vins_node"
+      },
+      {
+        "pid": 1014545,
+        "role": "rosbag"
+      },
+      {
+        "pid": 1014594,
+        "role": "play"
+      }
+    ],
+    "unrelated_workflow": {
+      "duration_seconds_at_rate_one": 30.0,
+      "output_root": "/mnt/data/Dataset_pool/eval_wall_triplet_c3_gravity_off_prewarm_171342_rate01_relay_20260825_r1",
+      "play_rate": 0.1,
+      "root_pid": 1014186
+    }
+  },
+  "policy": {
+    "invalidated_lock_must_never_be_invoked": true,
+    "processes_must_not_be_terminated": true,
+    "required_next_steps": [
+      "wait for the unrelated workflow to exit naturally",
+      "obtain a new stable fresh-ready check and independent snapshot",
+      "create and independently review a new no-clobber execution lock v2"
+    ]
+  },
+  "prohibited_artifacts_verified_absent": [
+    "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/process_start_claim.json",
+    "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/run_result.json",
+    "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/headless.stdout.log",
+    "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/headless.stderr.log"
+  ],
+  "schema_version": "aqua-fe-hfnet-v6-a09-warmstart-execution-lock-v1-invalidation-v1",
+  "status": "INVALIDATED_STALE_READY_SNAPSHOT_UNCONSUMED_NO_LAUNCH"
+}

@@ -1,0 +1,7 @@
+artifact_path,canonical_sequence_id,include_for_pool,expected_split,provenance_status,notes
+papers/ieee_sensors_journal_experiments/p03/a10_2400_2800/calibration_rows.csv,A10,1,train,DEVELOPMENT_SEQUENCE_DISJOINT,AQUALOC archaeology sequence 10 low positive window; same sequence identity as A10 400-800
+papers/ieee_sensors_journal_experiments/p03/a10_400_800/calibration_rows.csv,A10,1,train,DEVELOPMENT_SEQUENCE_DISJOINT,AQUALOC archaeology sequence 10 boundary window; same sequence identity as A10 2400-2800
+papers/ieee_sensors_journal_experiments/p03/a08_7200_7600/calibration_rows.csv,A08,1,train,DEVELOPMENT_SEQUENCE_DISJOINT,AQUALOC archaeology sequence 8 boundary window
+papers/ieee_sensors_journal_experiments/p03/a09_4000_4400/calibration_rows.csv,A09,1,calibration,DEVELOPMENT_SEQUENCE_DISJOINT,AQUALOC archaeology sequence 9 low positive window; held entirely for calibration split
+papers/ieee_sensors_journal_experiments/p03/h07_1660_1720/calibration_rows.csv,H07,1,calibration,DEVELOPMENT_SEQUENCE_DISJOINT,AQUALOC harbor sequence 7 normal window; held entirely for calibration split
+papers/ieee_sensors_journal_experiments/p03/tank_short_0_15/calibration_rows.csv,Tank_short_test,1,train,AUXILIARY_DEVELOPMENT_BAG_EXTRACT,Tank short_test has no independent GT and is runtime/normal zero-action only

@@ -1,0 +1,9 @@
+extends: low_texture_xfeat_temporal_gftt_frontend.yaml
+
+# Candidate v2: keep private GFTT shadow replacements while the public state
+# is full.  Surviving public tracks suppress duplicates through the unchanged
+# confirmation-distance gate; only temporally confirmed replacements for
+# tracks that died can receive new public IDs.  No detector, confirmation, or
+# export threshold differs from the v1 temporal-admission profile.
+hybrid:
+  enable_temporal_gftt_shadow_replacement: true

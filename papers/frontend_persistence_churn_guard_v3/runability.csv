@@ -1,0 +1,9 @@
+window,arm,status,repeats_passed,repeats_required,reuse_exact_klt_input,reuse_exact_input,source_result_arm
+a06_s000_d045,klt,PASS,3,3,False,True,klt
+a06_s000_d045,churn_guard_v3,PASS,3,3,False,True,klt
+a09_6000_6800,klt,PASS,3,3,False,True,klt
+a09_6000_6800,churn_guard_v3,PASS,3,3,False,True,persistence_replace
+a06_s045_d045,klt,PASS,3,3,False,True,klt
+a06_s045_d045,churn_guard_v3,PASS,3,3,False,True,persistence_replace
+h07_s000_d050,klt,PASS,3,3,False,True,klt
+h07_s000_d050,churn_guard_v3,PASS,3,3,False,True,klt

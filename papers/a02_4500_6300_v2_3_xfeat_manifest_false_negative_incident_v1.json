@@ -1,0 +1,122 @@
+{
+  "b1_component_arm": {
+    "immutable_log": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/vins.log",
+      "sha256": "454d828f9eec6884c680d079e0664db0e4de2dcacc6bef62ad2ddddb8842281e",
+      "size_bytes": 87615
+    },
+    "immutable_receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/process_rc_receipt.json",
+      "sha256": "545219acf1fe53422e27c6b0cf1def9d0f83603e1697922ae41dd6122eb43023",
+      "size_bytes": 867
+    },
+    "immutable_vio": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/vins_output/vio.csv",
+      "sha256": "59c505704e9e82c050abe2c3e2edb83517b7044828beb694780646ff7a2bea92",
+      "size_bytes": 93578
+    },
+    "status": "PASS"
+  },
+  "continuation_boundary": {
+    "additive_not_v2_3_resume": true,
+    "b1_xfeat_producer_auditor_hfnet_bridge_common_support_evaluator_forbidden": true,
+    "hfnet_remains_immutable_unusable_and_excluded": true,
+    "only_never_started_xfeat_vins_may_start_once": true,
+    "ranking_forbidden": true,
+    "runner_native_single_arm_descriptive_report_is_inherent_not_a_common_support_comparison": true
+  },
+  "root_cause": {
+    "actual_runtime_contract": {
+      "actual_detect_calls": 1562,
+      "compatibility_projection_leaf_paths": [
+        "code_artifacts.detector.closure.interpolator.py.path",
+        "code_artifacts.detector.closure.model.py.path",
+        "code_artifacts.detector.closure.xfeat.pt.path",
+        "code_artifacts.detector.closure.xfeat.py.path",
+        "code_artifacts.detector.license.file.path",
+        "code_artifacts.detector.runtime.detect_calls"
+      ],
+      "compatibility_projection_written_to_disk": false,
+      "detector_runtime_all_count": 1562,
+      "detector_runtime_steady_state_count": 1561,
+      "detector_runtime_warmup_count": 1,
+      "positive_detector_candidate_count": 1562,
+      "published_frame_count": 900,
+      "raw_frame_diagnostic_count": 1800,
+      "refill_condition_count": 1562,
+      "resolved_identity_equivalence": {
+        "code_artifacts.detector.closure.interpolator.py": {
+          "path": "/mnt/data/AQUA-FE_WS/external_tools/accelerated_features/modules/interpolator.py",
+          "sha256": "d63a6163eb6fff81e8720231f62537a42a69fccb44dc8851b04de5115daab4da",
+          "size_bytes": 1175
+        },
+        "code_artifacts.detector.closure.model.py": {
+          "path": "/mnt/data/AQUA-FE_WS/external_tools/accelerated_features/modules/model.py",
+          "sha256": "d9a665f18fcea5eaf3e278925e1a92103afcba9051e05b2334f3daa29f411964",
+          "size_bytes": 4542
+        },
+        "code_artifacts.detector.closure.xfeat.pt": {
+          "path": "/mnt/data/AQUA-FE_WS/external_tools/accelerated_features/weights/xfeat.pt",
+          "sha256": "0f5187fd7bedd26c7fe6acc9685444493a165a35ecc087b33c2db3627f3ea10b",
+          "size_bytes": 6247949
+        },
+        "code_artifacts.detector.closure.xfeat.py": {
+          "path": "/mnt/data/AQUA-FE_WS/external_tools/accelerated_features/modules/xfeat.py",
+          "sha256": "385ccd31d095b0d4176b04e982088b85321b11ade4324f83b097ee6524f2a6e7",
+          "size_bytes": 13472
+        },
+        "code_artifacts.detector.license.file": {
+          "path": "/mnt/data/AQUA-FE_WS/external_tools/accelerated_features/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "size_bytes": 11357
+        }
+      },
+      "runtime_profile_detect_count": 1562,
+      "status": "PASS_ACTUAL_1562_SELF_CONSISTENT"
+    },
+    "bad_legacy_comparison": "detector_calls_was_compared_to_published_frames",
+    "classification": "LEGACY_XFEAT_MANIFEST_VALIDATOR_FALSE_NEGATIVE",
+    "lexical_alias_count": 5,
+    "lexical_aliases_resolve_to_byte_identical_targets": true,
+    "manifest_or_bag_modified_by_diagnosis": false
+  },
+  "schema_version": "aqua-fe-a02-4500-6300-v2-3-xfeat-manifest-false-negative-incident-v1",
+  "scientific_role": "POST_STOP_EXPLORATORY_INFRASTRUCTURE_FALSE_NEGATIVE_NOT_A_RESULT",
+  "status": "V2_3_FIXED_ORDER_COMPLETED_XFEAT_VINS_NOT_STARTED_FALSE_NEGATIVE",
+  "v2_3_fixed_order_completed": true,
+  "v2_3_must_not_resume_or_retry": true,
+  "v2_3_terminal": {
+    "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_component_outcomes_terminal_v2_3_post_incident.json",
+    "sha256": "533c2c58f07ccaff7e513bed098178764b026334b362dafc889dc616f232ac2b",
+    "size_bytes": 84391
+  },
+  "xfeat_producer_and_audit": {
+    "audit": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_post_incident_v2_3_r1/audit.json",
+      "sha256": "d2bc2d8be0c5daf5700a89e1e68ebbc6f9c479ebf260eb80fac10c01031901b5",
+      "size_bytes": 6053
+    },
+    "audit_rerun_forbidden": true,
+    "bag": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_post_incident_v2_3_r1/features.bag",
+      "sha256": "13d0daf45e81560506cc44927318d91821ffc40564ded4529ce1466ed70700c0",
+      "size_bytes": 27396366
+    },
+    "manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_post_incident_v2_3_r1/export_manifest.json",
+      "sha256": "49ab1814a84222167a173f9e01a9ff9a70b33df9974a131d4b32e026f436da99",
+      "size_bytes": 812038
+    },
+    "producer_rerun_forbidden": true,
+    "scientific_artifacts_passed_independent_audit": true
+  },
+  "xfeat_vins_v2_3": {
+    "algorithm_process_start_count": 0,
+    "classification": "DEPENDENCY_SKIP_NOT_ALGORITHM_ATTEMPT",
+    "dependency_skip_receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_vins_post_incident_v2_3_r1/process_rc_receipt.json",
+      "sha256": "20b5417f9553f8e9e93c538124d2ed7d1e8354e6d0e187bec2720ed3bb06dd9f",
+      "size_bytes": 969
+    }
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "adopted_b1_constq_xfeatbirth_read_only_pins": {
+    "b1_constq_vio": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/vins_output/vio.csv",
+      "sha256": "59c505704e9e82c050abe2c3e2edb83517b7044828beb694780646ff7a2bea92",
+      "size_bytes": 93578
+    },
+    "common_support_summary": {
+      "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/b1_constq_vs_xfeatbirth_adopted_v2_5_r1/common_support_summary.json",
+      "sha256": "4641d2498fed5be8188f25d153fa11b76289de18afd7c8aeedea5106f1567d65",
+      "size_bytes": 3738
+    },
+    "evaluator_process_receipt": {
+      "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/b1_constq_vs_xfeatbirth_adopted_v2_5_r1/evaluator_process_receipt_v2_5.json",
+      "sha256": "5637e2ad33e3bfaf00ffff9b8f18d7a5a609f826f60eaa824cf9f92f49618778",
+      "size_bytes": 1702
+    },
+    "xfeatbirth_rawlk_vio": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_vins_post_incident_v2_4_r1/vins_output/vio.csv",
+      "sha256": "d6d8742753e96d7fa6243b469337c2bebaa28aac1ba9f47bcaa43971e8e88b00",
+      "size_bytes": 91884
+    }
+  },
+  "attempt": {
+    "maximum_elf_starts": 1,
+    "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300_strict70/attempt_001",
+    "process_start_claim_absent": true,
+    "retry": false,
+    "run_result_absent": true
+  },
+  "claim_boundary": {
+    "accuracy_claimed_by_run_controller": false,
+    "development_exposed_window": true,
+    "external_learned_system_trajectory_only": true,
+    "fair_accuracy_head_to_head_claimed": false,
+    "full_history_protocol_is_additive_not_a_rewrite_of_old_a02": true,
+    "identical_score_window_with_existing_adopted_b1_constq_xfeatbirth_claimed": false,
+    "p07_backfill_forbidden": true,
+    "possible_common_score_support_does_not_remove_history_mismatch": true,
+    "reference_is_image_derived_proxy_not_independent_ground_truth": true,
+    "superiority_claimed": false,
+    "v1_prepared_attempt_reuse_forbidden": true
+  },
+  "comparison_window_boundary": {
+    "accuracy_head_to_head_status": "BLOCKED_HISTORY_MISMATCH",
+    "exact_score_window_match": false,
+    "existing_adopted_b1_constq_xfeatbirth_feed_history_source_indices_inclusive": [
+      4500,
+      6300
+    ],
+    "existing_adopted_b1_constq_xfeatbirth_score_source_indices_inclusive": [
+      5400,
+      6300
+    ],
+    "existing_adopted_evidence_family": "B1_CONSTQ_V2_3_VS_XFEATBIRTH_RAWLK_V2_4_POST_INCIDENT_V2_5",
+    "external_hfnet_feed_history_source_indices_inclusive": [
+      1,
+      6300
+    ],
+    "external_hfnet_score_source_indices_inclusive": [
+      4500,
+      6300
+    ],
+    "fair_direct_accuracy_comparison_permitted": false,
+    "feed_history_match": false,
+    "possible_common_score_support_source_indices_inclusive": [
+      5400,
+      6300
+    ],
+    "unblock_requirement": "rerun every compared arm with the same frozen feed/history and score support"
+  },
+  "config": {
+    "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_a02_0001_6300_score_4500_6300_v1.yaml",
+    "sha256": "b08c38d73347e4a506a43b3114b014a445d03df9fd76d01f75a1a9300de99b23",
+    "size_bytes": 2024
+  },
+  "dependency_inventory": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_dependency_inventory_v2_1.json",
+    "sha256": "b77b3f249bb8457cce4f1dcfd311eae6a6cdcfca4d359f2be3a219bfa0082170",
+    "size_bytes": 56673
+  },
+  "dependency_v2_supersession_receipt": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_dependency_inventory_v2_superseded_preprepare_v1.json",
+    "sha256": "01871c27e9f7558ff4882c2b824e520e9642686fc54c17285296db1c8edc09a0",
+    "size_bytes": 1529
+  },
+  "exploratory_usability_gate": {
+    "minimum_contiguous_score_poses": 1261,
+    "minimum_last_camera_index": 4499,
+    "minimum_score_keyframes": 1,
+    "minimum_score_poses": 1261,
+    "raw_returncode_zero": true,
+    "synchronously_reaped": true,
+    "timed_out": false
+  },
+  "frozen_profile_sha256": "df9dcfef528ced0f73f8114854496da6f573b53822c40c6fba7767d60aa802f9",
+  "full_input_tree": {
+    "file_count": 6304,
+    "record_algorithm": "sorted_utf8_relative_path_NUL_size_NUL_sha256_NUL_crc32_newline",
+    "root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_a02_full_history_v1/aqualoc_archaeology_a02_0001_6300",
+    "total_bytes": 1536808518,
+    "tree_crc32": "0150a4a4",
+    "tree_sha256": "e14f62462366063e334ebcb3d3b8c889c68682d81ef6cdfb728e65447a3d65a3"
+  },
+  "headless_source": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/harnesses/hfnet_slam_mono_inertial_euroc_headless_v3.cc",
+    "sha256": "303947840bdc5377656554560c6785b3218a52e034862a63d5d6da0036b81d90",
+    "size_bytes": 1112
+  },
+  "input_auditor": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/audit_hfnet_v6_a02_0001_6300_score_4500_6300_input_v1.py",
+    "sha256": "14fbb99d1c26d382de09cec6761d02ca25225449403716ad4ec824871ee916bc",
+    "size_bytes": 14982
+  },
+  "launch": {
+    "argv": [
+      "/home/ma/AQUA-FE_WS/build/published_baselines/hfnet_slam_headless_entry_v3/mono_inertial_euroc_headless_v3",
+      "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300_strict70/attempt_001/runtime_config_model_path_only.yaml",
+      "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300_strict70/attempt_001/result/",
+      "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_a02_full_history_v1/aqualoc_archaeology_a02_0001_6300",
+      "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_a02_full_history_v1/aqualoc_archaeology_a02_0001_6300/cam0_times.txt"
+    ],
+    "authorization_token": "HFNET_V6_A02_0001_6300_SCORE_4500_6300_STRICT70_ATTEMPT_001_START_EXACTLY_ONCE",
+    "cwd": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300_strict70/attempt_001",
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "0",
+      "HOME": "/home/ma",
+      "LANG": "C",
+      "LC_ALL": "C",
+      "LD_LIBRARY_PATH": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/lib:/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Thirdparty/g2o/lib:/home/ma/SLAM/aqua_deps/install/lib:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.6/targets/x86_64-linux/lib:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.6/targets/x86_64-linux/lib:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.8/targets/x86_64-linux/lib:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.8/targets/x86_64-linux/lib",
+      "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "USER": "ma"
+    },
+    "maximum_elf_starts": 1,
+    "maximum_popen_invocations": 1,
+    "retry": false,
+    "timeout_seconds": 900
+  },
+  "locked_at_utc": "2026-08-22T13:50:39+00:00",
+  "materializer": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/materialize_hfnet_v6_a02_0001_6300_score_4500_6300_v1.py",
+    "sha256": "522a09c8d6586e9bdafbd0a57f4329b020e132bcfad49a648852060f5b320abc",
+    "size_bytes": 12335
+  },
+  "official_elf": {
+    "path": "/home/ma/AQUA-FE_WS/build/published_baselines/hfnet_slam_headless_entry_v3/mono_inertial_euroc_headless_v3",
+    "sha256": "4d17eecc74ec8f4bcbe4381d579d2bb48160cf63f6dc948f7857d92e681affeb",
+    "size_bytes": 118280
+  },
+  "official_entry": {
+    "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Examples/Monocular-Inertial/mono_inertial_euroc.cc",
+    "sha256": "fa3effb0c2b99bc4dd83abda443180cf2f017f61710e02fa6b3f9278cc774d39",
+    "size_bytes": 10201
+  },
+  "official_library": {
+    "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/lib/libHFNet_SLAM.so",
+    "sha256": "a56dfd1b48dee4af5be4e55b076d32eac2cf8fb463da8ab943b690377f193717",
+    "size_bytes": 4807712
+  },
+  "passed_stack_lock": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_passed_stack_lock_v1.json",
+    "sha256": "cb826526a28f28e77f546d4647e16fd19426494e9a15ab01108301136cbfadad",
+    "size_bytes": 8111
+  },
+  "preparation_audit": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_score_4500_6300_preparation_audit_v1.json",
+    "sha256": "8de706487a1bd4168d796c0957fbaa078142fa29def0d09f3989db0a52199747",
+    "size_bytes": 4488
+  },
+  "prepared_manifest": {
+    "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300_strict70/attempt_001/prepared_manifest.json",
+    "sha256": "1a7163a613c609ed6d1d292a69c01bcb6e0d645687a64169938c153bbb33a113",
+    "size_bytes": 87847
+  },
+  "resolved_dependencies": {
+    "count": 211,
+    "records_sha256": "9be9cb1459ce2b925a0cbeb0850a012b486a5f52da5f7f8597913f8b57f52cb5",
+    "total_bytes": 1399072400
+  },
+  "resource_gate": {
+    "checked_again_immediately_before_start": true,
+    "minimum_gpu_free_mib": 3072,
+    "no_matching_hfnet_vins_orb_detector_evaluator_processes": true,
+    "no_nvidia_compute_applications": true
+  },
+  "reused_v1_controller": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a02_0001_6300_score_4500_6300_v1.py",
+    "sha256": "0a3969a8471078ceb5724d14f7f33af0486741035bce49786618ad8114b4a258",
+    "size_bytes": 17260
+  },
+  "run_local": {
+    "cache_seed": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300_strict70/attempt_001/run_local_model/HFNet-RT/HF-Net.cache",
+      "sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7",
+      "size_bytes": 853319
+    },
+    "onnx": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300_strict70/attempt_001/run_local_model/HFNet-RT/HF-Net.onnx",
+      "sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5",
+      "size_bytes": 132238602
+    },
+    "runtime_config": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300_strict70/attempt_001/runtime_config_model_path_only.yaml",
+      "sha256": "583274eb316bdf9624ac3d2ae5d40d5723aab61f2afd0be1610940e866489294",
+      "size_bytes": 2137
+    }
+  },
+  "runner": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a02_0001_6300_score_4500_6300_strict70_v2.py",
+    "sha256": "e508195ffc4a3b337c2ae07fc601f5a968afa694d5f77c2e5a860ecb6123fba7",
+    "size_bytes": 40129
+  },
+  "runner_test": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_hfnet_v6_a02_0001_6300_score_4500_6300_v1.py",
+    "sha256": "1af804a7417561edc4b53d3a6fe7138fc0d9ef58d9247e6cc9d8f29dcc12d4b2",
+    "size_bytes": 6603
+  },
+  "schema_version": "aqua-fe-hfnet-v6-a02-0001-6300-strict70-execution-lock-v2",
+  "scientific_role": "HFNET_V6_A02_FULL_HISTORY_STRICT70_EXTERNAL_LEARNED_SYSTEM_DEVELOPMENT_ONLY",
+  "selection": {
+    "accuracy_head_to_head_status": "BLOCKED_HISTORY_MISMATCH",
+    "camera_count": 6300,
+    "exact_score_window_match_with_existing_adopted_b1_constq_xfeatbirth": false,
+    "existing_adopted_b1_constq_vio": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/vins_output/vio.csv",
+    "existing_adopted_b1_constq_xfeatbirth_feed_history_source_indices_inclusive": [
+      4500,
+      6300
+    ],
+    "existing_adopted_b1_constq_xfeatbirth_score_source_indices_inclusive": [
+      5400,
+      6300
+    ],
+    "existing_adopted_common_support_summary": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/b1_constq_vs_xfeatbirth_adopted_v2_5_r1/common_support_summary.json",
+    "existing_adopted_evaluator_window_end_s": 1542829106.6875105,
+    "existing_adopted_evaluator_window_start_s": 1542829061.6926866,
+    "existing_adopted_evidence_family": "B1_CONSTQ_V2_3_VS_XFEATBIRTH_RAWLK_V2_4_POST_INCIDENT_V2_5",
+    "existing_adopted_xfeatbirth_rawlk_vio": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_vins_post_incident_v2_4_r1/vins_output/vio.csv",
+    "experiment_and_window_selection_is_development_result_informed": true,
+    "external_hfnet_feed_history_source_indices_inclusive": [
+      1,
+      6300
+    ],
+    "fair_direct_accuracy_comparison_permitted": false,
+    "feed_history_match_with_existing_adopted_b1_constq_xfeatbirth": false,
+    "legacy_failures_and_existing_results_were_visible": true,
+    "possible_common_score_support_source_indices_inclusive": [
+      5400,
+      6300
+    ],
+    "preroll_relative_indices_inclusive": [
+      0,
+      4498
+    ],
+    "preroll_source_indices_inclusive": [
+      1,
+      4499
+    ],
+    "score_camera_count": 1801,
+    "score_reference_kind": "image-derived COLMAP proxy",
+    "score_reference_proxy_pose_count": 91,
+    "score_relative_indices_inclusive": [
+      4499,
+      6299
+    ],
+    "score_source_indices_inclusive": [
+      4500,
+      6300
+    ],
+    "sequence": "AQUALOC archaeology_sequence_02",
+    "source_camera_zero_trimmed_for_missing_shifted_imu_predecessor": true,
+    "source_frame_indices_inclusive": [
+      1,
+      6300
+    ],
+    "strict70_minimum_contiguous_score_poses": 1261,
+    "strict70_minimum_score_poses": 1261,
+    "strict70_threshold_correction_is_pre_v2_result_outcome_blind": true,
+    "synthetic_imu_samples_added": false
+  },
+  "selector": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_score_4500_6300_selector_freeze_v1.json",
+    "sha256": "54e1340a4fe655be30b971d89178e8c588b1b973a93e4287b6ed6dd39feb7505",
+    "size_bytes": 3320
+  },
+  "shared_cache_seed": {
+    "path": "/home/ma/SLAM/HFNet-SLAM-runtime-model-a02-r1/HFNet-RT/HF-Net.cache",
+    "sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7",
+    "size_bytes": 853319
+  },
+  "shared_model": {
+    "path": "/home/ma/SLAM/HFNet-SLAM-runtime-model-a02-r1/HFNet-RT/HF-Net.onnx",
+    "sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5",
+    "size_bytes": 132238602
+  },
+  "status": "LOCKED_PRESTART_EXACTLY_ONE_HFNET_ELF_START",
+  "strict70_primary_gate": {
+    "integer_threshold_rule": "ceil(0.70 * 1801) = 1261",
+    "minimum_contiguous_score_poses": 1261,
+    "minimum_longest_contiguous_fraction": 0.7,
+    "minimum_score_coverage_fraction": 0.7,
+    "minimum_score_keyframes": 1,
+    "minimum_score_poses": 1261,
+    "score_camera_count": 1801
+  },
+  "strict70_protocol": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_score_4500_6300_strict70_protocol_v2.json",
+    "sha256": "7647db1a251480534b393bb3547f7fcb4cfa5e7209bcf64f8d1faa3ff972521b",
+    "size_bytes": 5429
+  },
+  "strict70_v2_controller": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a02_0001_6300_score_4500_6300_strict70_v2.py",
+    "sha256": "e508195ffc4a3b337c2ae07fc601f5a968afa694d5f77c2e5a860ecb6123fba7",
+    "size_bytes": 40129
+  },
+  "v1_abandoned_live_absence": {
+    "all_forbidden_terminal_paths_absent": true,
+    "observations": {
+      "execution_lock": {
+        "exists": false,
+        "is_symlink": false,
+        "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_score_4500_6300_execution_lock_v1.json"
+      },
+      "process_start_claim": {
+        "exists": false,
+        "is_symlink": false,
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300/attempt_001/process_start_claim.json"
+      },
+      "result_directory": {
+        "exists": false,
+        "is_symlink": false,
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300/attempt_001/result"
+      },
+      "run_result": {
+        "exists": false,
+        "is_symlink": false,
+        "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/fresh_underwater/aqualoc_archaeology_a02_feed_0001_6300_score_4500_6300/attempt_001/run_result.json"
+      }
+    },
+    "status": "PASS_V1_REMAINS_PREPARED_ONLY_PRELOCK_UNSTARTED"
+  },
+  "v1_abandonment_receipt": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a02_0001_6300_v1_prepared_abandoned_gate_correction_v1.json",
+    "sha256": "918f2ec1dcf9b0d1952176282caeb7c07b55e6e9ed935038eab20f120beae237",
+    "size_bytes": 3547
+  }
+}

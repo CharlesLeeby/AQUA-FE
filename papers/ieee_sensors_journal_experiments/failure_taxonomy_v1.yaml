@@ -1,0 +1,53 @@
+schema_version: isj-failure-taxonomy-v1
+status: FROZEN_CANDIDATE_P03
+thresholds:
+  initialization_deadline_s: 10.0
+  output_segment_max_gap_s: 1.0
+  hard_failure_coverage_below: 0.50
+  sustained_queue_drop_rate_above: 0.01
+  sustained_backlog_growth_s_at_least: 5.0
+  planned_algorithmic_replays: 3
+  minimum_evaluable_replays: 2
+valid_pose:
+  timestamp_strictly_increasing: true
+  finite_row_required: true
+  inside_preregistered_window_required: true
+replay_hard_failure_any:
+  - NONZERO_EXIT
+  - TIMEOUT
+  - EMPTY_TRAJECTORY
+  - NONFINITE_TRAJECTORY
+  - NONMONOTONIC_TRAJECTORY
+  - INITIALIZATION_FAILURE
+  - COVERAGE_BELOW_0P50
+solver_risk_signatures:
+  linear_solver_failure:
+    - 'Linear solver failure'
+    - 'Unable to perform dense Cholesky factorization'
+  estimator_reset_or_restart:
+    - 'failure detection!'
+    - 'system reboot!'
+    - 'restart the estimator!'
+  numerical_abnormality:
+    - '(?<![A-Za-z])nan(?![A-Za-z])'
+    - '(?<![A-Za-z])[+-]?inf(?:inity)?(?![A-Za-z])'
+infrastructure_evidence_vocabulary:
+  - ROS_MASTER_CONFLICT
+  - FILE_NOT_FOUND
+  - DISK_FULL
+  - PERMISSION_DENIED
+  - HARDWARE_INTERRUPTION
+  - OPERATOR_INTERRUPTION
+reducer:
+  unit: window_x_arm
+  input: three_registered_algorithmic_replays_after_infrastructure_replacement
+  evaluable_gate: at_least_2_of_3
+  numeric_reducer: median_over_evaluable_replays
+  any_repeat_hard_failure: any_of_3
+  window_arm_solver_risk: any_of_3
+  preserve_evaluable_count: true
+notes:
+  - Solver risk does not by itself make a replay numerically unevaluable.
+  - Infrastructure attempts remain in the registry but are replaced before the three algorithmic replays are reduced.
+  - Common-support insufficiency is contrast-specific and is classified by the evaluator, not by this replay classifier.
+

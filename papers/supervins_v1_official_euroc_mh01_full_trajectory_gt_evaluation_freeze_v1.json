@@ -1,0 +1,359 @@
+{
+  "schema_version": "aqua-fe-supervins-mh01-full-trajectory-gt-evaluation-freeze-v1",
+  "created_at": "2026-08-21T01:02:10+08:00",
+  "status": "DEVELOPMENT_ONLY_PROTOCOL_FROZEN_FOR_SEPARATE_EXECUTION_LOCK",
+  "scientific_role": "ONE_SHOT_PURE_GT_EVALUATION_OF_THE_SEALED_STAGE4_SUPERVINS_MH01_TRAJECTORY",
+  "objective": "Evaluate the already sealed SuperVINS stage-4 trajectory once against the official EuRoC MH_01_easy state ground truth using deterministic timestamp association, fixed-scale SE(3) alignment, translation APE, and one-second positional-delta RPE. This stage performs no model, ROS, publisher, trajectory generation, loop fusion, or system comparison.",
+  "source_run": {
+    "sequence": "official EuRoC MH_01_easy; not README-recommended V2_01",
+    "run_result": {
+      "path": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_full_trajectory_20260817_r1/attempt_001/run_result.json",
+      "sha256": "d8cd8f74e0e7ddfc4bf1d1c61fd43696112e47d184949ce1a209aa926bfec22e",
+      "size_bytes": 66563,
+      "required_status": "PASS_DEVELOPMENT_OFFICIAL_MH01_FULL_TRAJECTORY_GENERATION",
+      "required_return_code": 0,
+      "required_mode": "0444",
+      "required_nlink": 1
+    },
+    "trajectory": {
+      "path": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_full_trajectory_20260817_r1/attempt_001/trajectory_output/vio.csv",
+      "sha256": "df2f194453a85c4d6938edbfe45fe48fc67a547e0efb9f2db4c7b1d4a4bfe22d",
+      "size_bytes": 152099,
+      "format": "TUM text: timestamp_s tx ty tz qx qy qz qw",
+      "row_count": 1810,
+      "first_timestamp_text": "1403636582.913555",
+      "last_timestamp_text": "1403636763.813555",
+      "pose_semantics": "world_T_body from estimator.Ps[WINDOW_SIZE] and estimator.Rs[WINDOW_SIZE]",
+      "generation_rows_are_not_accuracy_sample_count": true
+    },
+    "stage4_protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_prestart_freeze_v1.json",
+      "sha256": "0393ce030ee862f0d0448f7d96e7e3283552a1d3d010cb2d8c78f74e763b5a68",
+      "size_bytes": 18387
+    },
+    "stage4_lock": {
+      "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_execution_lock_v1.json",
+      "sha256": "889d7a98e5f3885d64dcb936650657f1bd312a5d6b59a1a0dfd91439482eb93a",
+      "size_bytes": 2896
+    },
+    "stage4_authority": {
+      "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_execution_authority_v1.json",
+      "sha256": "de46a37159d896bafd801d06cf6ba9abe49f5530d678fd6bc333e8079a4a9036",
+      "size_bytes": 1812
+    },
+    "adapted_config": {
+      "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_config_v1/euroc_mono_imu_config.yaml",
+      "sha256": "bf0d2500e60a96b09f50defbd1299b12d62cf85ce581f6a3b8da743f1b84b32b",
+      "size_bytes": 3520
+    },
+    "trajectory_writer_source": {
+      "path": "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/src/utility/visualization.cpp",
+      "sha256": "a82c242b237390c0a026bedc5deb719b3d824c22e6f58c215b07bb6d392871ef",
+      "size_bytes": 17611
+    }
+  },
+  "official_ground_truth": {
+    "provenance": "Official EuRoC MH_01_easy nonlinear least-squares batch solution over Leica position and IMU measurements including time-offset estimation; orientation is observed by the IMU.",
+    "data": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy/mav0/state_groundtruth_estimate0/data.csv",
+      "sha256": "aae2d7c5684724c8afe364d2fd8499a6ed77a9169adf03736531f67d8e7b2117",
+      "size_bytes": 6225269,
+      "data_row_count": 36382,
+      "column_count": 17,
+      "first_timestamp_ns": 1403636580838555648,
+      "last_timestamp_ns": 1403636762743555584,
+      "position_columns": "p_RS_R_x,y,z in metres",
+      "quaternion_columns": "q_RS_w,x,y,z"
+    },
+    "sensor": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy/mav0/state_groundtruth_estimate0/sensor.yaml",
+      "sha256": "e02cacbad1b654908f1fad9f8997672a2928ec348840225919259f73f1084a95",
+      "size_bytes": 489,
+      "required_T_BS": [
+        [1.0, 0.0, 0.0, 0.0],
+        [0.0, 1.0, 0.0, 0.0],
+        [0.0, 0.0, 1.0, 0.0],
+        [0.0, 0.0, 0.0, 1.0]
+      ]
+    },
+    "official_imu0_sensor": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy/mav0/imu0/sensor.yaml",
+      "sha256": "91e6c408416f549f87e7405830b83849cca10521f3d3fc8bb3de862c2bc882d0",
+      "size_bytes": 695,
+      "required_T_BS": [
+        [1.0, 0.0, 0.0, 0.0],
+        [0.0, 1.0, 0.0, 0.0],
+        [0.0, 0.0, 1.0, 0.0],
+        [0.0, 0.0, 0.0, 1.0]
+      ],
+      "role": "Confirms that the estimator IMU/body pose and the official EuRoC body frame coincide."
+    },
+    "official_cam0_timestamps": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy/mav0/cam0/data.csv",
+      "sha256": "62db628a8e6358f43df81e66ddb4597ab40b19a10f3d6cd80cc04d590b5adb12",
+      "size_bytes": 165716,
+      "data_row_count": 3682,
+      "role": "Authoritative recovery of the source camera nanosecond timestamp for every fixed-six-decimal trajectory row before an exact integer join to GT."
+    },
+    "input_inventory": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy_input_inventory_v1.json",
+      "sha256": "a6009f56146fc675131f44fd2d355092b37035958e6d1e73b87ce21130427ff6",
+      "size_bytes": 664378
+    },
+    "download_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/downloads/MH_01_easy_download_manifest_v1.json",
+      "sha256": "3cbf9f91c286fee760eb620cb6ee97f6461e5df5a7f1700a6c17514a0ea71d4b",
+      "size_bytes": 726,
+      "declared_archive_sha256": "5f4ecbc563e7bf04950efab76fc3b14e126d4c91a1dd1134c33124fe18a4bfc6",
+      "declared_archive_size_bytes": 1571292346
+    },
+    "frame_contract": "The GT sensor T_BS is exactly identity, so p_RS_R is evaluated as the body position. The SuperVINS output is world_T_body. No camera extrinsic is composed for this body-to-body evaluation."
+  },
+  "association_contract": {
+    "timestamp_parser": "Parse the sealed fixed-six-decimal trajectory text with Decimal only to compare it with official camera timestamps. Never treat Decimal(timestamp_text)*1e9 as restoration of the original ROS/camera nanoseconds: all 1810 rows have lost the source sub-microsecond value. The signed text-ns minus source-camera-ns difference is -456 ns for 1086 rows and +544 ns for 724 rows; the latter 724 formatted values cross upward to the next microsecond.",
+    "policy": "First bind every trajectory row to one unique official cam0/data.csv row. The independently nearest camera timestamp within 1000 ns must equal the frozen source suffix cam0 row index 63 + 2*trajectory_row_index. Recover the source nanoseconds exclusively from that camera CSV row. Then join the recovered integer camera timestamp to an exactly identical integer timestamp in official GT. No nearest-GT association, GT interpolation, or extrapolation is allowed. A camera timestamp absent from GT is excluded only when it is after the official GT interval, with reason EXCLUDED_OUTSIDE_GT_COVERAGE; an in-range missing exact GT timestamp is a hard failure.",
+    "trajectory_to_camera_maximum_absolute_timestamp_error_ns": 1000,
+    "required_camera_row_index_formula": "63 + 2 * trajectory_row_index",
+    "required_first_camera_row_index": 63,
+    "required_last_camera_row_index": 3681,
+    "required_unique_camera_rows": 1810,
+    "observed_preflight_maximum_trajectory_text_to_camera_error_ns": 544,
+    "generation_support": {
+      "expected_estimator_output_camera_rows": {
+        "count": 1841,
+        "camera_row_indices": "1..3681 inclusive, step 2",
+        "meaning": "All 10 Hz odd-index camera rows at which the stage-4 estimator could emit its every-second-image trajectory output."
+      },
+      "generated_trajectory_rows": 1810,
+      "generated_camera_row_indices": "63..3681 inclusive, step 2",
+      "missing_initialization_prefix_rows": 31,
+      "missing_interior_rows": 0,
+      "missing_terminal_rows": 0,
+      "generation_coverage_fraction": {
+        "numerator": 1810,
+        "denominator": 1841,
+        "decimal_17g": "0.98316132536664858"
+      },
+      "first_generated_output_delay_from_sequence_cam0_ns": 3149999872,
+      "first_generated_output_delay_from_sequence_cam0_s": 3.149999872,
+      "first_generated_output_delay_from_first_expected_output_ns": 3100000000,
+      "first_generated_output_delay_from_first_expected_output_s": 3.1,
+      "gt_evaluable_generated_fraction": {
+        "numerator": 1799,
+        "denominator": 1810,
+        "decimal_17g": "0.99392265193370166"
+      },
+      "gt_evaluable_expected_fraction": {
+        "numerator": 1799,
+        "denominator": 1841,
+        "decimal_17g": "0.97718631178707227"
+      },
+      "tail_11_interpretation": "The final 11 generated rows are outside official GT time coverage; they are not generation failures and are excluded from accuracy statistics."
+    },
+    "gt_join_timestamp_error_ns": 0,
+    "gt_position_interpolation_run": false,
+    "gt_position_extrapolation_run": false,
+    "required_estimate_rows": 1810,
+    "required_matched_pairs": 1799,
+    "required_unique_gt_rows": 1799,
+    "required_excluded_outside_gt_tail_rows": 11,
+    "required_other_rejections": 0,
+    "required_first_matched_estimate_row_index": 0,
+    "required_last_matched_estimate_row_index": 1798,
+    "required_first_matched_camera_row_index": 63,
+    "required_last_matched_camera_row_index": 3659,
+    "required_first_excluded_camera_row_index": 3661,
+    "accuracy_sample_count": 1799,
+    "forbidden_accuracy_sample_count": 1810
+  },
+  "alignment_contract": {
+    "method": "Kabsch/Umeyama fixed-scale rigid SE(3) alignment of all 1799 associated estimate body positions to their GT body positions",
+    "scale": 1.0,
+    "scale_optimization_or_correction": false,
+    "reflection_forbidden": true,
+    "required_rotation_determinant_tolerance": 1e-12,
+    "required_rotation_orthonormal_max_abs_error": 1e-12,
+    "rank_gate": "Centered source positions, centered target positions, and cross-covariance must each have numerical rank >=2 under the pinned NumPy matrix-rank tolerance; rank-0 and rank-1 inputs are hard failures.",
+    "implementation_crosscheck": "The fresh evaluator implementation must agree with the frozen scripts/trajectory_eval_core.py align_se3_positions output to <=1e-12 m max absolute coordinate difference on the same associated positions.",
+    "frozen_reference_core": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/trajectory_eval_core.py",
+      "sha256": "aa9ac4da81df7298d1f1c369548ca98a57235916004337cad66f4cf331560635",
+      "size_bytes": 27945
+    },
+    "secondary_sim3_scale_diagnostic": {
+      "enabled": true,
+      "method": "Proper Umeyama Sim(3) alignment on the exact same 1799 associated body-position pairs",
+      "role": "Secondary monocular scale diagnostic only",
+      "required_scale_finite_positive": true,
+      "reflection_forbidden": true,
+      "required_rotation_determinant_tolerance": 1e-12,
+      "required_rotation_orthonormal_max_abs_error": 1e-12,
+      "required_outputs": [
+        "scale",
+        "translation APE descriptive statistics",
+        "one-second positional-delta RPE descriptive statistics"
+      ],
+      "may_replace_primary_fixed_scale_se3": false,
+      "may_enter_ranking_or_superiority_claim": false,
+      "implementation_and_synthetic_tests_must_be_hard_pinned_in_execution_lock": true
+    }
+  },
+  "metric_contract": {
+    "primary_metric": "fixed-scale SE(3)-aligned translation APE in metres",
+    "ape_definition": "Euclidean norm of aligned estimate position minus matched GT position at each of 1799 associated timestamps.",
+    "rpe_definition": "After the same global fixed-scale SE(3) alignment, Euclidean norm of the difference between estimate and GT global-frame positional deltas over a nominal one-second interval.",
+    "rpe_pair_rule": {
+      "primary_key": "matched source estimate/even-camera row sequence",
+      "index_delta": 10,
+      "official_camera_row_index_delta": 20,
+      "required_same_contiguous_matched_segment": true,
+      "required_all_intermediate_source_rows_matched": true,
+      "nominal_delta_ns": 1000000000,
+      "maximum_absolute_delta_error_ns": 1000,
+      "required_pair_count": 1789,
+      "observed_preflight_actual_delta_min_ns": 1000000000,
+      "observed_preflight_actual_delta_max_ns": 1000000000,
+      "floating_time_search_for_pairs": false
+    },
+    "required_descriptive_statistics": [
+      "n",
+      "rmse_m",
+      "mean_m",
+      "population_std_m",
+      "median_m",
+      "min_m",
+      "p90_m",
+      "p95_m",
+      "max_m",
+      "sse_m2"
+    ],
+    "quantile_method": "NumPy linear",
+    "orientation_metric_run": false,
+    "sim3_metric_is_secondary_scale_diagnostic_only": true
+  },
+  "statistical_contract": {
+    "unit_of_analysis": "one sealed trajectory run",
+    "timestamp_error_samples_are_independent_replicates": false,
+    "random_seed_count": 0,
+    "inferential_statistics_authorized": false,
+    "confidence_intervals_authorized": false,
+    "p_values_authorized": false,
+    "significance_claims_authorized": false,
+    "effect_size_against_other_methods_authorized": false,
+    "reason": "There is one deterministic run and its timestamp-wise residuals are serially correlated. The bundle is descriptive only."
+  },
+  "analysis_bundle_contract": {
+    "root_relative_to_attempt": "analysis-output",
+    "required_files": [
+      "analysis-output/metrics.json",
+      "analysis-output/input-audit.json",
+      "analysis-output/association-audit.json",
+      "analysis-output/alignment.json",
+      "analysis-output/associated-pairs.csv",
+      "analysis-output/rpe-pairs-1s.csv",
+      "analysis-output/analysis-report.md",
+      "analysis-output/stats-appendix.md",
+      "analysis-output/figure-catalog.md",
+      "analysis-output/figures/figure-01-trajectory-overlay.svg",
+      "analysis-output/figures/figure-02-error-over-time.svg",
+      "analysis-output/artifact-manifest.json"
+    ],
+    "bundle_schema": {
+      "metrics_json_required_top_level": [
+        "schema_version",
+        "support",
+        "primary_fixed_scale_se3",
+        "secondary_sim3_scale_diagnostic",
+        "statistical_boundary"
+      ],
+      "associated_pairs_csv_columns": [
+        "estimate_row_index",
+        "camera_row_index",
+        "estimate_timestamp_text",
+        "display_timestamp_ns",
+        "source_camera_timestamp_ns",
+        "gt_row_index",
+        "timestamp_text_minus_source_ns",
+        "gt_x_m",
+        "gt_y_m",
+        "gt_z_m",
+        "estimate_x_m",
+        "estimate_y_m",
+        "estimate_z_m",
+        "se3_aligned_x_m",
+        "se3_aligned_y_m",
+        "se3_aligned_z_m",
+        "se3_ape_m",
+        "sim3_aligned_x_m",
+        "sim3_aligned_y_m",
+        "sim3_aligned_z_m",
+        "sim3_ape_m"
+      ],
+      "rpe_pairs_csv_columns": [
+        "left_estimate_row_index",
+        "right_estimate_row_index",
+        "left_camera_row_index",
+        "right_camera_row_index",
+        "left_source_timestamp_ns",
+        "right_source_timestamp_ns",
+        "delta_ns",
+        "se3_rpe_m",
+        "sim3_rpe_m"
+      ],
+      "artifact_manifest_algorithm": "SHA-256 over each completed bundle file's exact bytes. Then compute bundle_content_tree_sha256 over compact canonical JSON (sort_keys=true, separators comma/colon) of the sorted list [{path,sha256,size_bytes}]. The manifest excludes itself and is then pinned by terminal run_result.json."
+    },
+    "serialization": {
+      "json": "UTF-8, sort_keys=true, indent=2, ensure_ascii=false, exactly one trailing LF",
+      "csv": "UTF-8, frozen header order, source-row order, LF line endings, floating values serialized with Python format .17g",
+      "svg": "UTF-8 deterministic standard-library text generator; no timestamps, external processes, fonts, matplotlib, or network assets"
+    },
+    "figures": "Deterministic vector SVG generated by the pinned evaluator using Python standard-library text generation only, with no matplotlib or external figure process. The palette is colour-blind-safe. No error bars are shown because this is one deterministic trajectory, not repeated independent runs.",
+    "claim_candidate_required": true,
+    "claim_candidate_location": "analysis-output/analysis-report.md#Claim Candidates",
+    "forbidden_results_section_prose": true
+  },
+  "execution_contract": {
+    "fresh_evidence_root": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_gt_evaluation_20260821_r1",
+    "attempt": "attempt_001",
+    "maximum_evaluator_starts": 1,
+    "retry_authorized": false,
+    "execution_authority_required": true,
+    "authorization_token": "SUPERVINS_STAGE5_MH01_GT_EVALUATION_ATTEMPT_001_START_ONCE",
+    "start_claim": "attempt_001/evaluation_start_claim.json",
+    "terminal_result": "attempt_001/run_result.json",
+    "terminal_result_written_last": true,
+    "all_output_files_created_exclusively": true,
+    "python_bytecode_forbidden": true,
+    "ros_or_model_process_start_forbidden": true,
+    "network_access_forbidden": true,
+    "stage4_evidence_mutation_forbidden": true,
+    "seal_contract": "Final freeze, execution lock, root authority, start claim, all analysis bundle files, and terminal run_result must each be mode 0444 with nlink=1. Runner and tests are byte-identity pinned by the execution lock."
+  },
+  "success_contract": {
+    "preflight_and_postflight_pins_unchanged": true,
+    "stage4_terminal_result_remains_unchanged": true,
+    "exact_one_evaluator_start": true,
+    "association_counts_exact": true,
+    "initialization_and_generation_coverage_mechanically_audited": true,
+    "ape_and_rpe_values_all_finite_nonnegative": true,
+    "alignment_is_fixed_scale_proper_se3": true,
+    "core_alignment_crosscheck_passes": true,
+    "secondary_sim3_is_proper_positive_scale_and_descriptive_only": true,
+    "analysis_bundle_complete_manifested_and_tree_hashed": true,
+    "single_terminal_result": true,
+    "no_ros_model_publisher_or_trajectory_generation": true
+  },
+  "failure_closeout": "After the fresh namespace or start claim exists, any exception or caught SIGINT/SIGTERM/SIGHUP must produce one exclusive terminal FAIL result with input pins, completed artifact identities, and error details. SIGKILL cannot be guaranteed. No retry is allowed.",
+  "claim_boundary": {
+    "development_only_official_mh01_single_run_description": true,
+    "readme_recommended_v2_01_claimed": false,
+    "cross_system_comparison_run": false,
+    "superiority_claim_authorized": false,
+    "underwater_claim_authorized": false,
+    "generalization_claim_authorized": false,
+    "statistical_significance_claim_authorized": false,
+    "model_or_ros_rerun_authorized": false,
+    "next_stage_automatically_authorized": false
+  },
+  "postcondition": "A PASS supports only that the one pinned sealed SuperVINS trajectory has the reported descriptive fixed-scale SE(3)-aligned translation APE and one-second positional-delta RPE on the official MH_01_easy GT overlap. It does not establish V2_01 performance, statistical significance, generalization, underwater performance, or superiority over AQUA-FE or any other system."
+}

@@ -1,0 +1,505 @@
+{
+  "artifacts": {
+    "d_queue_sha256": "5b177636673db2a3198638a5bdca42d8e53de024b91081ac206f939f367ce45c",
+    "frontend_queue_sha256": "8ced85066e7cd5aa8e7a0fc7d5f42ce07e99e97a36703b9404b8aab9f2103457",
+    "queue_lock_sha256": "92300f09d0c29c7e5db6e24e36bedaf518722c0b5a36e720e33f79065be517e1"
+  },
+  "conditional_d_slots": 20,
+  "deterministic_rebuild": {
+    "d_queue_byte_identical": true,
+    "frontend_queue_byte_identical": true,
+    "queue_lock_semantic_identical": true
+  },
+  "dry_run_all_requested": true,
+  "dry_run_pass_count": 60,
+  "dry_runs": [
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "f283175c388738d1e6dd2e332c26e91871a3a06d1435a086f8bbc30f63be6a44",
+      "pass": true,
+      "queue_index": 1,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A02:0005"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "23b9dc052626dea8cfa86d02ef9033ad9e1ea9a7f159a02e6deadbecb30a5845",
+      "pass": true,
+      "queue_index": 2,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A02:0005"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "d27f69a22c978c710a53cdb5360e7a25bc8acb28aeaa81b9ab6f9e9334d1f22e",
+      "pass": true,
+      "queue_index": 3,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A02:0005"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "bd3ed3cd7fa895d2301bf7233747165d648542e30032db744e964317866e1ed0",
+      "pass": true,
+      "queue_index": 4,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A01:0018"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "7879351cf5246abcaa782815efd2cdffe60fd351e34be27b75d1400e5101eecc",
+      "pass": true,
+      "queue_index": 5,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A01:0018"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "06016e45507896317b23e3b5ea6b2747ee3ca2bccc7991de684ebfa5904761c1",
+      "pass": true,
+      "queue_index": 6,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A01:0018"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "3a98788de4107b208853a7e54f775661163235cfd67fbef4b2f46a22c53a86c8",
+      "pass": true,
+      "queue_index": 7,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H05:0002"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "0f6248e1f552bafbb30437ccbd7fd54252fe12ee59d0b852a2dd34c73ffe4436",
+      "pass": true,
+      "queue_index": 8,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H05:0002"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "d0de4e44f7884dda4e63d54c3872f6755dd346a3b8764a3324dbc427c8142625",
+      "pass": true,
+      "queue_index": 9,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H05:0002"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "c694c2c6c02e31e544a5b60debc06fcbeeffb5bb3d60d6933f85ba21c350a33d",
+      "pass": true,
+      "queue_index": 10,
+      "returncode": 0,
+      "window_id": "ntnu:fjord_6:0001"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "d5e9e94eb5a472313b72a7a6ebdd6abadffb5defb3cdaf1ad43f0775c15e7f40",
+      "pass": true,
+      "queue_index": 11,
+      "returncode": 0,
+      "window_id": "ntnu:fjord_6:0001"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "03eeb4bf330fd43c8bda6286157f1b4770bc89a2e6d8cb2480f6bdc77ebc488a",
+      "pass": true,
+      "queue_index": 12,
+      "returncode": 0,
+      "window_id": "ntnu:fjord_6:0001"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "1dcd237363643f30ef6b285775c3b749dafa8cd0b2a8286c498b63388f531f93",
+      "pass": true,
+      "queue_index": 13,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H06:0000"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "a425a695b561d2841c980b918ccec745c8a6cd330fea2b755a7a993df15895e6",
+      "pass": true,
+      "queue_index": 14,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H06:0000"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "8cfe1e2385abf20c9ea48cc3a3e3709d549d64c9c64445e7ba8c122dc6f9ac6f",
+      "pass": true,
+      "queue_index": 15,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H06:0000"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "bbde9c1107cf091a2c2b6bc4283bfe2ee9069dd27a1c8bb32731737e66d01c34",
+      "pass": true,
+      "queue_index": 16,
+      "returncode": 0,
+      "window_id": "ntnu:fjord_6:0002"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "93c58ada6945a0e292ba0b8d303a56f3b1d14d1480741c3db41256eff4c8380b",
+      "pass": true,
+      "queue_index": 17,
+      "returncode": 0,
+      "window_id": "ntnu:fjord_6:0002"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "a5688734c7eb457d9a051877e32f82bf2b67489a9fcaec1ea6554b1585f799a8",
+      "pass": true,
+      "queue_index": 18,
+      "returncode": 0,
+      "window_id": "ntnu:fjord_6:0002"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "a75b82b69c2f40d757356e38a6693ad6aa836be98195b69b79439786a190d64e",
+      "pass": true,
+      "queue_index": 19,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A03:0001"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "80033fa517029ce30aee27c90fe7a493138a1bf529727da80070e30ba20a90eb",
+      "pass": true,
+      "queue_index": 20,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A03:0001"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "d3cde430276a9ce8e7c196e5f3fc5c6e5b406fa71de03abb0c7bc44adde68a22",
+      "pass": true,
+      "queue_index": 21,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A03:0001"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "95c4c07a3ed49b3d93c17eae19f7e927ee1ba1d28b2f68619194c3b933ba099a",
+      "pass": true,
+      "queue_index": 22,
+      "returncode": 0,
+      "window_id": "ntnu:fjord_6:0003"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "fc5e7ea247ec0821f8fca2cd21b699bd58968cd745366707b2c0af7178d6c3b1",
+      "pass": true,
+      "queue_index": 23,
+      "returncode": 0,
+      "window_id": "ntnu:fjord_6:0003"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "d72ba52212df97556178cc2bed34f1c9fae25a8789e1ff40e321686d9873dddf",
+      "pass": true,
+      "queue_index": 24,
+      "returncode": 0,
+      "window_id": "ntnu:fjord_6:0003"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "6aa0c1d286af2de86f32bc468ad1df9dcc02f4886eb00f3155cdac9b687d3dab",
+      "pass": true,
+      "queue_index": 25,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H01:0000"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "b2eb6892a566fe13b5a7e2ac1aa5c3004233bf1ef336859109d1f714c2727d4e",
+      "pass": true,
+      "queue_index": 26,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H01:0000"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "74bf38a9285864517cc6633871e8d8d491f19a3c4e15c89f8ff845a9ad9ee631",
+      "pass": true,
+      "queue_index": 27,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H01:0000"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "81d28db717d2f51d74e68758b1d41d6b7a330929c6aac0c7076ad70054a52dd0",
+      "pass": true,
+      "queue_index": 28,
+      "returncode": 0,
+      "window_id": "afrl:bus_outside:0001"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "4f6e42a7d6b2715c49cbdb897409ac85084f006a8cca294d5b228c503d1a9ef8",
+      "pass": true,
+      "queue_index": 29,
+      "returncode": 0,
+      "window_id": "afrl:bus_outside:0001"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "d4cd88f23fdd0724f33b1fd84add5fc94e626385ddf285075bea6345bad05ba4",
+      "pass": true,
+      "queue_index": 30,
+      "returncode": 0,
+      "window_id": "afrl:bus_outside:0001"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "d92e234b0ff905ff5a53c04a6cd3ea70806b09aef9c594204652fbe0a5aa70bf",
+      "pass": true,
+      "queue_index": 31,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A10:0013"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "5214e09f5cb34e5c1b4bf3776bc0fea037a473a451befd59c1472a433d15f322",
+      "pass": true,
+      "queue_index": 32,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A10:0013"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "800dcb5c76adab843b961f76a36b5cad3773db97e87ee12b6106d8716ae01944",
+      "pass": true,
+      "queue_index": 33,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A10:0013"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "b5e278b6c73c1d7be9175a35e3edafb32568f059ecb9ed9b1f48976a81261744",
+      "pass": true,
+      "queue_index": 34,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H02:0007"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "7e44f8541c99f151cf2e2add231af8d0ebbec01f292b09b36b694280a77f6499",
+      "pass": true,
+      "queue_index": 35,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H02:0007"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "519678aaa1cc90cf7158351f4449646d5e40d86ea0e2ff202d1f350c23d8a915",
+      "pass": true,
+      "queue_index": 36,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H02:0007"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "86d2e14188cc3fe66dd5f9048166ac0b37e399bb8db3c198941a3cb48bd71eb9",
+      "pass": true,
+      "queue_index": 37,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A10:0007"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "59720945eb10851cca923be7fbefdd529401ffcf3c6df284f6177bb0be3f059d",
+      "pass": true,
+      "queue_index": 38,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A10:0007"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "fa5ad3a5c99018b2b68c7556933a66dea901e3208d2a7100a4966460de533d10",
+      "pass": true,
+      "queue_index": 39,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A10:0007"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "9247e722dbc817b981c1dbac1ddfb3bac9ebbb77545054fd24f8a8a6ce3e50c8",
+      "pass": true,
+      "queue_index": 40,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A08:0002"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "4052a1162b15716a36f24efac2286624257625808fe178e3146b8df76ac832cb",
+      "pass": true,
+      "queue_index": 41,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A08:0002"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "7b73dd38f5642f06829919212395d168117645be099402612d6e35d0631fac82",
+      "pass": true,
+      "queue_index": 42,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A08:0002"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "79c79ab2af9afb95f12db19d2f6c6de12fcd1ba180fe6da8ab624161fe04507f",
+      "pass": true,
+      "queue_index": 43,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H03:0001"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "77a2c639b9efbd18c4f3ab10d8e4cbeb33ee0eb12df13344da1db674be2c3ce8",
+      "pass": true,
+      "queue_index": 44,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H03:0001"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "32f77c97e182e611b44222491a4b07d36dc29de50b066dc9f21dc3d5a0628691",
+      "pass": true,
+      "queue_index": 45,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H03:0001"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "89116b83f96d744b240c330142355e42e8c734fbf0d38815bae6c3d68d81fa0a",
+      "pass": true,
+      "queue_index": 46,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A01:0003"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "9784b6fb6235484583a1f2f3f6eb4ff863dfd00aac2e18458bc0fd3028564d53",
+      "pass": true,
+      "queue_index": 47,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A01:0003"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "c7645cc33625160333c8f4a135d73d33033d3f05348f036bc8197feca003f7c8",
+      "pass": true,
+      "queue_index": 48,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A01:0003"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "d4836ad49296b78f6f40f6b33bbb5d195b304f4f29ddef845753278cb5d785ab",
+      "pass": true,
+      "queue_index": 49,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A07:0002"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "0d0e529a97b2794ebbded3daf80cf51d281cc16bf99adb891979159758db4418",
+      "pass": true,
+      "queue_index": 50,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A07:0002"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "e855f4b415a7bc25abd378b9b37095e8e4156a2e2c073d2633e7ec48f9943864",
+      "pass": true,
+      "queue_index": 51,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A07:0002"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "fd690483a574d15db1ec86ed169ca1f950168b9d465953c926126c20931724db",
+      "pass": true,
+      "queue_index": 52,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H04:0003"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "f603b3cef8ad53fa541b5dedc1209133184dbeb486d1ca0c7fe46bfb37ade889",
+      "pass": true,
+      "queue_index": 53,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H04:0003"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "2dbb6cc34213b6bdba7ad6818528f59097207ff2c860eecf3810174fb88cf3ec",
+      "pass": true,
+      "queue_index": 54,
+      "returncode": 0,
+      "window_id": "aqualoc_harbor:H04:0003"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "d5812e31b58e504335b7bf420b2743c7bda39aa6c72cd8e1c684d130558a4a42",
+      "pass": true,
+      "queue_index": 55,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A04:0002"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "d3bf15ff467258f0f6f7e55875e133ae30473eb207d8158090add3cd753bf4d3",
+      "pass": true,
+      "queue_index": 56,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A04:0002"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "b5403bfb733e05f2b73720d66a183a5aca9a7b89e80b3ae90033853548954a3b",
+      "pass": true,
+      "queue_index": 57,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A04:0002"
+    },
+    {
+      "arm": "M_xfeat_pairwise_nativeq_v1",
+      "output_sha256": "6382436b8f98b63a0c562e40e724d747b7c85e0f0a2d10e407e6ef890652e7dc",
+      "pass": true,
+      "queue_index": 58,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A07:0001"
+    },
+    {
+      "arm": "P_legacy_nativeq_xfeat_seedchain_v3",
+      "output_sha256": "d65b8e8ee090204620dccc14dd57b9afc1d3076ce5d55375bbe766e4e44f0187",
+      "pass": true,
+      "queue_index": 59,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A07:0001"
+    },
+    {
+      "arm": "B1_klt_nativeq_v3",
+      "output_sha256": "0be79a300698b8eac4cbfd04a1d51cdc75d07e554bd1fd2999076a5cbe8deefd",
+      "pass": true,
+      "queue_index": 60,
+      "returncode": 0,
+      "window_id": "aqualoc_archaeology:A07:0001"
+    }
+  ],
+  "frontend_export_jobs": 60,
+  "held_out_frontend_outcome_read": false,
+  "held_out_trajectory_outcome_read": false,
+  "issues": [],
+  "outcome_boundary": "FRONTEND_EXPORT_ONLY_NO_VINS_APE_RPE_TRAJECTORY",
+  "queue_lock_hash": "23095fffe3474d3c85fd809c94b0bf4cd0094aa8bbc083b65dd1a4cc950144eb",
+  "schema_version": "isj-p07-frontend-queue-validation-v1",
+  "status": "PASS"
+}

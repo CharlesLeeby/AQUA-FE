@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "evidence_id": "ER-20260801-orb-v23-postinit-search-01",
+  "analysis_date": "2026-08-01",
+  "screening_root": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/postinit_action_search_20260731",
+  "rpe_delta_frames": 1,
+  "max_time_diff_s": 0.06,
+  "roles": ["orb_only", "drop", "full_bridge_off", "full_unbounded", "full"],
+  "repeats": [1, 2, 3, 4],
+  "candidates": [
+    {
+      "id": "A09_4000_4400",
+      "label": "AQUALOC A09 4000-4400",
+      "window": "4000-4400",
+      "smoke_dir": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/postinit_action_search_20260731/a09_4000_4400/smoke_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09",
+      "formal_dir": null,
+      "screening_decision": "no_go_action",
+      "screening_reason": "Post-init MapPoint and assisted matches were reachable, but no assisted outlier or pre-KF purge occurred."
+    },
+    {
+      "id": "A08_4500_4660",
+      "label": "AQUALOC A08 4500-4660",
+      "window": "4500-4660",
+      "smoke_dir": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/postinit_action_search_20260731/a08_4500_4660/smoke_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09",
+      "formal_dir": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/postinit_action_search_20260731/a08_4500_4660/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09",
+      "screening_decision": "action_positive_not_trajectory_positive",
+      "screening_reason": "Stable purge action occurred, but reconstructed and online metrics did not both improve over native/drop."
+    },
+    {
+      "id": "A07_10800_11200",
+      "label": "AQUALOC A07 10800-11200",
+      "window": "10800-11200",
+      "smoke_dir": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/postinit_action_search_20260731/a07_10800_11200/smoke_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09",
+      "formal_dir": null,
+      "screening_decision": "protocol_excluded_mixed_phase",
+      "screening_reason": "Action occurred, but six observations were pre-init and one post-init observation was rejected at the ORB border."
+    },
+    {
+      "id": "A10_400_800",
+      "label": "AQUALOC A10 400-800",
+      "window": "400-800",
+      "smoke_dir": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/postinit_action_search_20260731/a10_400_800/smoke_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09",
+      "formal_dir": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/postinit_action_search_20260731/a10_400_800/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09",
+      "screening_decision": "guard_rescue_boundary",
+      "screening_reason": "A stable purge action rescued the unbounded branch, but the full branch was not better than native on all four metrics."
+    },
+    {
+      "id": "A02_2800_3200",
+      "label": "AQUALOC A02 2800-3200",
+      "window": "2800-3200",
+      "smoke_dir": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/postinit_action_search_20260731/a02_2800_3200/smoke_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09",
+      "formal_dir": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/postinit_action_search_20260731/a02_2800_3200/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09",
+      "screening_decision": "strict_positive",
+      "screening_reason": "All observations were post-init; the full branch stably purged three assisted outliers and improved all four metrics over native/drop and unbounded."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+extends: ../klt_frontend.yaml
+
+# Direct learned-matcher comparator following the LightGlue-VINS-Mono design:
+# cache SuperPoint features at the shared frame endpoint, propagate persistent
+# IDs through adjacent-frame LightGlue matches, then retain the best 350 tracks.
+# No LK carrier, semidense fallback, or extra geometry selector is part of this
+# arm; those belong to separate hybrid/geometric ablations.
+pairwise:
+  max_features: 350
+  association_radius: 0.25
+  min_ncc: 0.35
+  min_confidence: 0.0
+  q_min: 0.05
+  persistent_id_mode: continuity_first_v2
+
+lightglue:
+  repo_path: external_tools/LightGlue
+  max_keypoints: 2048
+  resize: 1024
+  filter_threshold: 0.1
+  depth_confidence: 0.95
+  width_confidence: 0.99
+  cache_sparse_features: true
+
+measurement_selection:
+  enabled: false
+
+backend_quality:
+  mode: const

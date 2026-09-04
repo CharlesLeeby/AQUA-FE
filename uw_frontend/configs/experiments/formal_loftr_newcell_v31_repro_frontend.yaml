@@ -1,0 +1,14 @@
+extends: formal_loftr_v31_repro_frontend.yaml
+
+hybrid:
+  # LoFTR is kept as an extreme low-texture/near-planar refill layer, but its
+  # proposal batch must add real spatial support before it can enter the
+  # multi-frame confirmation queue. This avoids early low-utility LoFTR bursts
+  # from perturbing the internal KLT backbone while preserving frame types that
+  # open several new cells.
+  semidense_acceptance_min_grid_gain: 0.041
+  semidense_acceptance_min_new_cells: 4
+  semidense_acceptance_min_new_cell_ratio: 0.25
+  source_aware_loftr_min_grid_gain: 0.041
+  source_aware_loftr_min_new_cells: 4
+  source_aware_loftr_min_new_cell_ratio: 0.25

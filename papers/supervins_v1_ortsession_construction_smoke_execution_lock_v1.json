@@ -1,0 +1,53 @@
+{
+  "schema_version": "aqua-fe-published-supervins-v1-ortsession-construction-smoke-execution-lock-v1",
+  "created_at": "2026-08-16T22:31:00+08:00",
+  "status": "LOCKED_FOR_EXACTLY_ONE_NODE_START",
+  "scientific_role": "DEVELOPMENT_RUNTIME_QUALIFICATION_ONLY",
+  "fresh_evidence_root": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_ortsession_smoke_20260816_r1",
+  "attempt": "attempt_001",
+  "authorization_token": "SUPERVINS_V1_ORTSESSION_SMOKE_ATTEMPT_001_START_ONCE",
+  "maximum_supervins_node_starts": 1,
+  "timeout_seconds": 45,
+  "ros_master_uri": "http://127.0.0.1:11551",
+  "roscore_start_authorized": false,
+  "ros_publish_or_replay_authorized": false,
+  "model_inference_authorized": false,
+  "command": [
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/devel/lib/supervins/supervins_node",
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/config/euroc/euroc_mono_imu_config.yaml"
+  ],
+  "success_marker": "waiting for image and imu...",
+  "protocol": {
+    "sha256": "8095a9eeb702b9671a58678cd22059c98638ec8962ef2ad18e7e81b5c165004d",
+    "size_bytes": 8690
+  },
+  "runner": {
+    "sha256": "969131329f3a50c30ac0d305bc9f5717d9c9f5234cfa0d688eb433699d67e6c8",
+    "size_bytes": 30027
+  },
+  "tests": {
+    "sha256": "93ab786ddd1603dac165de25235898da0bc1a2ad1ed653d91315dada7c0fc033",
+    "size_bytes": 4002
+  },
+  "pinned_file_count": 19,
+  "pinned_files_canonical_sha256": "42680784de251be2f0595c7cde2b5189728ce96c3d163cedc33ae93b7ed9ebc2",
+  "pre_start_state": {
+    "evidence_root": "ABSENT",
+    "node_start_claim": "ABSENT",
+    "supervins_node_processes": [],
+    "ros_master_port_11551": "UNBOUND",
+    "non_model_unit_tests": "6_OF_6_PASS"
+  },
+  "termination": {
+    "first": "SIGTERM_PROCESS_GROUP",
+    "grace_seconds": 3,
+    "fallback": "SIGKILL_PROCESS_GROUP",
+    "final": "SYNCHRONOUS_WAIT_REAP"
+  },
+  "outcome_policy": {
+    "namespace_reuse_after_pass": false,
+    "namespace_reuse_after_failure": false,
+    "retry_in_attempt_001": false,
+    "automatic_inference_stage": false
+  }
+}

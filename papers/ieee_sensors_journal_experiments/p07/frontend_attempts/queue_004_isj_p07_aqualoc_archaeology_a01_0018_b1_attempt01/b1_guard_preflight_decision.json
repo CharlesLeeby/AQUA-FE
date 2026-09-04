@@ -1,0 +1,16 @@
+{
+  "action": "ALLOW_B1_KLT_NATIVEQ",
+  "backend_root": "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master",
+  "bag_attestation": null,
+  "binary": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/vins/vins_node",
+  "contract_hash": "39eaea6d26e6f5a881ef2b17b898cbda75c7aba8087ce447fe897e2fe0bdfce0",
+  "contract_pass": true,
+  "contract_path": "papers/ieee_sensors_journal_experiments/backend_quality_contract_v1.json",
+  "counts_as_b1": true,
+  "counts_as_proposed_result": false,
+  "feature_bag": null,
+  "outcome_boundary": "B1_EXECUTION_CONTRACT_ONLY_NO_TRAJECTORY_OUTCOME",
+  "reasons": [],
+  "result_label": "B1_KLT_NATIVEQ_V3",
+  "schema_version": "aqua-fe-b1-klt-nativeq-guard-decision-v1"
+}

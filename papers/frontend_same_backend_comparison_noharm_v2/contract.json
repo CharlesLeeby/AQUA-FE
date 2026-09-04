@@ -1,0 +1,65 @@
+{
+  "schema_version": "aqua-fe-frontend-same-backend-noharm-v2",
+  "registered_at": "2026-09-01T21:10:30+08:00",
+  "status": "PRE_REGISTERED_BEFORE_FORMAL_EXECUTION",
+  "experiment_id": "frontend_same_backend_comparison_noharm_v2",
+  "scope": "eight duration-eligible windows; repaired final-mirror no-harm exporter; frontend isolation within one exact backend epoch",
+  "historical_pooling_policy": "do not pool this repaired exporter epoch with either prior frontend comparison epoch",
+  "repeats_per_window_arm": 3,
+  "repeat_unit": "VINS replay of one arm-window feature bag; export once at r1 and reuse immutable bag for r2/r3",
+  "window_policy": {
+    "count": 8,
+    "minimum_duration_seconds": 30,
+    "selection_basis": "the already preregistered supplemental-v1 roster, selected from historical nonempty vio.csv before noharm-v2 outcomes",
+    "post_outcome_replacement_forbidden": true
+  },
+  "runability": {
+    "primary_endpoint": true,
+    "coverage_threshold": 0.7,
+    "arm_window_pass_rule": "3_of_3_repeats_initialize_and_each_reaches_coverage_threshold"
+  },
+  "accuracy": {
+    "alignment": "independent fixed-scale proper SE(3) per trajectory",
+    "sim3_forbidden": true,
+    "common_support": "one intersection over all 3 arms x 3 repeats within each window",
+    "rpe_delta_seconds": 1.0,
+    "minimum_common_poses": 30,
+    "minimum_common_span_seconds": 10.0,
+    "minimum_common_coverage": 0.7,
+    "minimum_rpe_pairs": 10,
+    "evo_crosscheck": true,
+    "scientific_unit": "window; repeats are not independent samples"
+  },
+  "frozen_runtime": {
+    "vins_workspace": "/home/ma/SLAM/VINS-Fusion-origin",
+    "backend_epoch": "noharm_v2_libvins_373a598c_exporter_fdb624f2",
+    "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+    "libvins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+    "exporter_sha256": "fdb624f24d97fe032c1cdcf0600dd07b370e498f32806ac6eba25467d8020c04",
+    "frontend_config_sha256": "6f89d861cc002dfaf0eaf5f1294b0dbcfab9fe268c5dc0d09082f79811000bf3",
+    "measurement_selection": 0,
+    "export_max_features": 350,
+    "vins_safe_source_selection": 0,
+    "every_n": 2,
+    "frame_offset": 1,
+    "force_export": 1,
+    "run_vins": 1,
+    "vins_multiple_thread": 0,
+    "vins_estimate_td": 0,
+    "process_skipped_frames": 1,
+    "preprocess": "adaptive_clahe",
+    "backend_quality_mode": "vins_safe",
+    "backend_quality_floor": 0.8,
+    "backend_quality_alpha": 0.65,
+    "seedchain_profile": "lineage_early_seed_scan",
+    "final_mirror_noharm_contract": "zero surviving sidecars restores independent KLT mirror verbatim; surviving sidecars replace equal-count KLT tracks under the 350 cap"
+  },
+  "storage": {
+    "run_symlinks": "/home/ma/AQUA-FE_WS/logs/<family>/external_*_fsbcnh2_*",
+    "physical_run_root": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_same_backend_noharm_v2",
+    "reason": "storage-only offload shared by every arm; workspace filesystem had less than 4 GiB free at registration"
+  },
+  "proxy_reference_disclosure": "APE/RPE measure agreement with COLMAP or dataset baseline proxy, not independent ground-truth absolute error",
+  "source_lineage_disclosure": "the seedchain config matches P_legacy_nativeq_xfeat_seedchain_v3; the exporter is a newly repaired and separately hashed frontend epoch, so prior results are not relabeled",
+  "optional_loftr": "excluded from the primary roster"
+}

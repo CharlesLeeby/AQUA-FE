@@ -1,0 +1,12 @@
+$ evo_ape tum /home/ma/AQUA-FE_WS/papers/frontend_same_backend_comparison_supplemental_v1/common_support/fjord6_s45_d45/evo_crosscheck/reference_common.tum /home/ma/AQUA-FE_WS/papers/frontend_same_backend_comparison_supplemental_v1/common_support/fjord6_s45_d45/evo_crosscheck/xfeat_seed_r3_common_aligned.tum -a -r trans_part
+APE w.r.t. translation part (m)
+(with SE(3) Umeyama alignment)
+
+       max	0.226527
+      mean	0.128016
+    median	0.122664
+       min	0.038992
+      rmse	0.135279
+       sse	8.033891
+       std	0.043731
+

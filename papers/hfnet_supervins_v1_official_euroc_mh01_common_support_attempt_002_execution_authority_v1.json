@@ -1,0 +1,58 @@
+{
+  "schema_version": "aqua-fe-hfnet-supervins-mh01-common-support-attempt-002-root-authority-v1",
+  "status": "AUTHORIZED_EXACTLY_ONE_CORRECTIVE_PURE_COMMON_SUPPORT_EVALUATION_ATTEMPT_002_START",
+  "authorization_token_sha256": "871b6d0885aba28e476459320596bc0a45a237baeb4bac97a72b45ee6d7280c2",
+  "controller_command": [
+    "/usr/bin/python3.8",
+    "-B",
+    "/home/ma/AQUA-FE_WS/scripts/evaluate_hfnet_supervins_v1_official_euroc_mh01_common_support_attempt_002_v1.py",
+    "--action",
+    "run",
+    "--authorization-token",
+    "HFNET_SUPERVINS_STAGE6_MH01_COMMON_SUPPORT_ATTEMPT_002_CORRECTIVE_START_ONCE"
+  ],
+  "fresh_evidence_root": "/home/ma/AQUA-FE_WS/experiments/published_hfnet_supervins_v1_official_euroc_mh01_common_support_descriptive_20260821_r2",
+  "attempt": "attempt_002",
+  "prior_global_evaluator_start_count": 1,
+  "maximum_new_evaluator_starts": 1,
+  "global_evaluator_start_count_after": 2,
+  "retry_authorized": false,
+  "root_confirmation": "ROOT_CONFIRMED_STAGE6_CORRECTIVE_ATTEMPT_002_EXACTLY_ONE_PURE_COMMON_SUPPORT_EVALUATION",
+  "claim_boundary": {
+    "pure_existing_artifact_computation_only": true,
+    "model_ros_publisher_or_trajectory_generation_authorized": false,
+    "cross_system_metric_contrast_authorized": false,
+    "performance_ordering_authorized": false,
+    "inferential_statistics_authorized": false,
+    "attempt_003_authorized": false,
+    "next_stage_automatically_authorized": false
+  },
+  "lock": {
+    "sha256": "6ffa7d5cff7e9803ce91c2d69e84f0343505e703dbeac11b37cb718d96c3475a",
+    "size_bytes": 20174
+  },
+  "protocol": {
+    "sha256": "c2cf6b4a8f9a0660399f862f36ac1a2d55f83047772cfe480fbbd6b1d2a27121",
+    "size_bytes": 17982
+  },
+  "runner": {
+    "sha256": "264aeb0ee10941ea9a06d2e83a96d363dac79c2ce6ed93c90f1572a3bc4450da",
+    "size_bytes": 57577
+  },
+  "tests": {
+    "sha256": "68d88be7f0f59a2c183b9230f2700a0ef005a90bf02cca324c75662ec606c566",
+    "size_bytes": 52790
+  },
+  "test_receipt": {
+    "sha256": "1e4e0446e53d99e98b59f3419f42575eb7281fbae24f49ea57771c6191eb836b",
+    "size_bytes": 5963
+  },
+  "failure_adoption": {
+    "sha256": "dead672758a5bd573291d804f817b3c234bcdc474b5eb6600d6033fe4536ffbb",
+    "size_bytes": 6814
+  },
+  "attempt_001_run_result": {
+    "sha256": "a1917adb5a217e96b2bdcbfa8bdcce5025578b3d903fd07437791d38e83d9b82",
+    "size_bytes": 45422
+  }
+}

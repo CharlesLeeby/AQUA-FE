@@ -1,0 +1,25 @@
+extends: cirs_identity_churn_xfeat_probe.yaml
+
+hybrid:
+  # Probe learned seed -> LK confirmation/chaining.
+  #
+  # XFeat proposals must survive multiple LK steps before they get fresh VINS
+  # feature IDs and are appended back into the KLT state. Keep this conservative:
+  # a short 3-frame confirmation is enough to test the mechanism without turning
+  # pairwise matches into direct backend observations.
+  learned_confirmation_min_frames: 3
+  learned_confirmation_preserve_new_pending: true
+  learned_confirmation_geometry_safe: true
+  learned_confirmation_max_pending: 500
+  learned_confirmation_max_confirmed: 80
+
+  promotion_xfeat_max_confirmed: 12
+  promotion_xfeat_min_quality: 0.10
+  promotion_xfeat_max_fb_error: 1.20
+  promotion_xfeat_min_ncc: 0.42
+
+  enable_source_provenance_memory: true
+  source_provenance_learned_hold_frames: 60
+
+measurement_selection:
+  enabled: false

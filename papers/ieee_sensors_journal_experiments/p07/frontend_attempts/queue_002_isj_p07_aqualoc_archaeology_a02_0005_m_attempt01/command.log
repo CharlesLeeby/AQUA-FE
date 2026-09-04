@@ -1,0 +1,10 @@
+P05_XFEAT_BACKEND_GUARD action=ALLOW_M_XFEAT reasons=0 decision=/home/ma/AQUA-FE_WS/logs/backend_contract_decisions/p05/p05_xfeat_guard_20260806T125124Z_328895_decision.json
+P05 XFeat backend contract PASS; decision=/home/ma/AQUA-FE_WS/logs/backend_contract_decisions/p05/p05_xfeat_guard_20260806T125124Z_328895_decision.json
+loading weights from: /mnt/data/AQUA-FE_WS/external_tools/accelerated_features/weights/xfeat.pt
+wrote 450 feature frames to /home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_every2_isj_p07_aqualoc_archaeology_a02_0005_m_attempt01/features.bag
+feature span: 44.891s
+backend quality: mode=vins_safe floor=0.800 alpha=0.650
+RUN_VINS=0, skipping VINS for /home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_every2_isj_p07_aqualoc_archaeology_a02_0005_m_attempt01
+run_dir=/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_every2_isj_p07_aqualoc_archaeology_a02_0005_m_attempt01
+raw_bag=/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_5400.bag
+play_bag=/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_every2_isj_p07_aqualoc_archaeology_a02_0005_m_attempt01/features.bag

@@ -1,0 +1,17 @@
+extends: continuity_optimized_frontend.yaml
+
+hybrid:
+  # Soft local-quality variant.
+  #
+  # This keeps the validated continuity scheduler unchanged: local quality does
+  # not hard-filter births/recoveries and does not change candidate scoring.
+  # It only recalibrates the output per-feature q_i, so the backend receives a
+  # spatially local reliability/sigma signal for uneven underwater degradation.
+  enable_local_quality_map: true
+  local_quality_rows: 4
+  local_quality_cols: 6
+  local_quality_weight: 0.45
+  local_quality_min_learned_score: 0.0
+  local_quality_min_birth_score: 0.0
+  local_quality_apply_to_candidate_scoring: false
+  local_quality_apply_to_output_q: true

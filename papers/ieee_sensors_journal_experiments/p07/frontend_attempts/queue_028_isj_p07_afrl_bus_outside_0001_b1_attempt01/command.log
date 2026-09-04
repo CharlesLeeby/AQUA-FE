@@ -1,0 +1,17 @@
+B1_KLT_NATIVEQ_GUARD action=ALLOW_B1_KLT_NATIVEQ reasons=0 decision=/home/ma/AQUA-FE_WS/logs/backend_contract_decisions/b1/b1_guard_20260806T223323Z_732258_decision.json
+wrote /home/ma/AQUA-FE_WS/logs/afrl_cave_v31/external_klt_every2_isj_p07_afrl_bus_outside_0001_b1_attempt01/cave_gennie_short.bag
+images=565 imu=4500 gt=565
+span_s=45.000
+effective_image_scale=0.5
+camera_config=/home/ma/AQUA-FE_WS/logs/afrl_cave_v31/external_klt_every2_isj_p07_afrl_bus_outside_0001_b1_attempt01/afrl_cave_cam0_pinhole.yaml
+vins_config=/home/ma/AQUA-FE_WS/logs/afrl_cave_v31/external_klt_every2_isj_p07_afrl_bus_outside_0001_b1_attempt01/vins_afrl_cave_external.yaml
+body_T_cam0=T_imu_cam_from_inverse_camchain
+wrote 283 feature frames to /home/ma/AQUA-FE_WS/logs/afrl_cave_v31/external_klt_every2_isj_p07_afrl_bus_outside_0001_b1_attempt01/features.bag
+feature span: 44.933s
+backend quality: mode=vins_safe floor=0.800 alpha=0.650
+run_dir=/home/ma/AQUA-FE_WS/logs/afrl_cave_v31/external_klt_every2_isj_p07_afrl_bus_outside_0001_b1_attempt01
+short_bag=/home/ma/AQUA-FE_WS/logs/afrl_cave_v31/external_klt_every2_isj_p07_afrl_bus_outside_0001_b1_attempt01/cave_gennie_short.bag
+play_bag=/home/ma/AQUA-FE_WS/logs/afrl_cave_v31/external_klt_every2_isj_p07_afrl_bus_outside_0001_b1_attempt01/features.bag
+feature_bag=/home/ma/AQUA-FE_WS/logs/afrl_cave_v31/external_klt_every2_isj_p07_afrl_bus_outside_0001_b1_attempt01/features.bag
+vins_config=/home/ma/AQUA-FE_WS/logs/afrl_cave_v31/external_klt_every2_isj_p07_afrl_bus_outside_0001_b1_attempt01/vins_afrl_cave_external.yaml
+vins_csv=/home/ma/AQUA-FE_WS/logs/afrl_cave_v31/external_klt_every2_isj_p07_afrl_bus_outside_0001_b1_attempt01/vins_output/vio.csv

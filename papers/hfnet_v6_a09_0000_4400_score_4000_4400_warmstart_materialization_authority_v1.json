@@ -1,0 +1,122 @@
+{
+  "authority_scope": {
+    "authorized_action": "exactly one no-clobber canonical materialize-and-independent-audit invocation",
+    "authorized_invocation_count": 1,
+    "authorized_outputs": [
+      "/mnt/data/AQUA-FE_WS/datasets/hfnet_positive_windows_v1/a09_0000_4400_score_4000_4400_warmstart",
+      "/mnt/data/AQUA-FE_WS/datasets/hfnet_positive_windows_v1/a09_0000_4400_score_4000_4400_warmstart.audit.json"
+    ],
+    "consumption_rule": "Authority is consumed when the exact command is invoked, irrespective of return code, interruption, or whether either target becomes visible. Never invoke it a second time. After ambiguity or failure, inspect and adjudicate the existing namespace without retry.",
+    "preparation_only": true
+  },
+  "claims": {
+    "accuracy_measured": false,
+    "attempt_prepared": false,
+    "detector_started": false,
+    "evaluator_started": false,
+    "execution_authorized": false,
+    "gpu_workload_started": false,
+    "hfnet_started": false,
+    "process_launch_authorized": false,
+    "ros_started": false,
+    "scientific_comparison_produced": false,
+    "slam_started": false,
+    "trajectory_produced": false,
+    "vins_started": false
+  },
+  "exact_command": "PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 /home/ma/AQUA-FE_WS/scripts/materialize_hfnet_positive_a09_0000_4400_score_4000_4400_warmstart_v1.py --action materialize-and-audit --selector-freeze /home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_selector_freeze_v1.json --source-archive /mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_9_raw_data.tar.gz --short-bag /home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo09_4000_4400.bag --config /home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_a06_0000_2460_exact_window_v1.yaml --output-root /mnt/data/AQUA-FE_WS/datasets/hfnet_positive_windows_v1/a09_0000_4400_score_4000_4400_warmstart --report /mnt/data/AQUA-FE_WS/datasets/hfnet_positive_windows_v1/a09_0000_4400_score_4000_4400_warmstart.audit.json",
+  "frozen_inputs": {
+    "configuration": {
+      "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_a06_0000_2460_exact_window_v1.yaml",
+      "sha256": "37ec8f0f274818b3a8f952a535d9be87dae0f8d0436ce05503381791ace69db6",
+      "size_bytes": 2037
+    },
+    "materializer": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/materialize_hfnet_positive_a09_0000_4400_score_4000_4400_warmstart_v1.py",
+      "sha256": "fd7a53b245a47c74139c5839e7e1e661d338023d6876f0faed88237493152831",
+      "size_bytes": 56301
+    },
+    "materializer_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_materialize_hfnet_positive_a09_0000_4400_score_4000_4400_warmstart_v1.py",
+      "sha256": "9e917a01dc7855f24e1c981349597af3290cfb17eeef30faf51c466fa3e0ecd8",
+      "size_bytes": 19262
+    },
+    "payload_pin_derivation_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_payload_pin_derivation_freeze_v1.json",
+      "sha256": "e4c64167c70e326237e7835a8b41140ed1c9a8a55eb9b9490b72f73b3de0e857",
+      "size_bytes": 11763
+    },
+    "runability_protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_runability_rescue_protocol_v1.md",
+      "sha256": "090e3458e7a281dd694c6d31582e729ec93a3a2927521cc7783e338e66f6fb12",
+      "size_bytes": 10944
+    },
+    "selector_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_selector_freeze_v1.json",
+      "sha256": "bfec892d6f58f751c12302e93dfbdcd1132d326dad2506066d4fe8e2e87fd51c",
+      "size_bytes": 5743
+    },
+    "short_window_selection_evidence_bag": {
+      "path": "/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo09_4000_4400.bag",
+      "sha256": "ddc41e776b12bdf5f22a043a5862eba049d1c1494a2ab500ac2bf7893b5d9c54",
+      "size_bytes": 98167227
+    },
+    "source_archive": {
+      "gzip_footer_crc32": "b2f3021d",
+      "gzip_footer_isize_mod_2_32": 1742161920,
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_9_raw_data.tar.gz",
+      "sha256": "4d20237571928067cfe4dbb813224cfd2277270c424a6ef97ef50d2933da2901",
+      "size_bytes": 1722658380
+    }
+  },
+  "gate_evidence": {
+    "independent_blocker_review": {
+      "mismatch_count": 0,
+      "scope": "implementation, tests, and no-launch preflight only",
+      "status": "GO_FOR_SEPARATE_EXACT_MATERIALIZATION_AUTHORITY"
+    },
+    "namespace_observation": {
+      "attempt_namespace_absent": true,
+      "audit_receipt_absent": true,
+      "canonical_input_root_absent": true,
+      "matching_attempt_prefix_entries": 0,
+      "matching_dataset_prefix_entries": 0,
+      "observed_at": "2026-08-25T01:24:01+08:00"
+    },
+    "no_launch_preflight": {
+      "canonical_output_file_count_written": 0,
+      "command": "PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 scripts/materialize_hfnet_positive_a09_0000_4400_score_4000_4400_warmstart_v1.py --action preflight",
+      "exit_code": 0,
+      "status": "PREFLIGHT_READY_PREPARATION_ONLY"
+    },
+    "payload_contract": {
+      "expected_file_count_excluding_manifest": 4404,
+      "expected_payload_crc32": "79183172",
+      "expected_payload_sha256": "845bc56b0de8df58f0dedde3d22e7a6019ba3b02fa4edc7b6ceec395fdee5f52",
+      "expected_total_size_bytes_excluding_manifest": 1131077451,
+      "feed_camera_count": 4401,
+      "score_camera_count": 401
+    },
+    "tests": {
+      "passed": 15,
+      "failed": 0,
+      "process_launcher_present": false,
+      "status": "PASS"
+    },
+    "writable_filesystem_free_bytes_observed": 40633954304
+  },
+  "historical_freeze_resolution": {
+    "note": "The immutable selector and protocol truthfully record the earlier blocked state and remain unchanged. The later read-only payload-pin freeze, reviewed materializer, passing tests, no-launch preflight, and this additive stage-specific authority satisfy the protocol's ordered gate for one canonical write without converting either historical document into execution authority.",
+    "selector_field_preserved": "materialization_gate.production_materialization_permitted=false"
+  },
+  "prohibited_actions": [
+    "a second materialize, materialize-and-audit, or recovery invocation",
+    "modifying or replacing any frozen input, prior cold-start evidence, A10 evidence, committed manifest, or audit receipt",
+    "creating or preparing an HFNet attempt namespace",
+    "starting HFNet, ROS, VINS-Fusion, a detector, an evaluator, or any GPU workload",
+    "cropping or scoring a trajectory",
+    "computing APE, RPE, a winner, a ranking, significance, or a paper claim"
+  ],
+  "schema_version": "aqua-fe-hfnet-v6-a09-warmstart-materialization-authority-v1",
+  "status": "AUTHORIZED_EXACTLY_ONE_NO_CLOBBER_MATERIALIZE_AND_AUDIT_PREPARATION_ONLY"
+}

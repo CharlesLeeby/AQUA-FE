@@ -1,0 +1,1516 @@
+{
+  "schema_version": "aqua-fe-a10-samehistory-finalonline-v4-execution-lock-v1",
+  "status": "FROZEN_BEFORE_SCORED_RUNS",
+  "created_at_local": "2026-08-24T23:08:07.876355+08:00",
+  "protocol": {
+    "path": "/home/ma/AQUA-FE_WS/papers/samehistory_system_comparison_a10_finalonline_v4_backend_recovery_protocol.md",
+    "size_bytes": 12978,
+    "sha256": "578f5d6ffd5738bfef4f5bdffe45986a0e77aa042cce9cf26b4fcde1b2e94edf"
+  },
+  "policy": {
+    "item_order": [
+      "vanilla_origin_native_image_context",
+      "klt_external_feature_context",
+      "aquafe_external_feature_context"
+    ],
+    "global_flock_path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v4_backend_recovery/.supervisor.flock",
+    "one_process_launch_per_item": true,
+    "result_informed_retry": false,
+    "serial_execution": true,
+    "require_prior_items_terminal_before_next_launch": false,
+    "dependencies_are_only_declared_item_dependencies": true,
+    "dependency_receipt_requires_terminal_process_rc0_and_artifact_contract_pass": true,
+    "independent_backend_failure_is_retained_not_ranked_as_zero": true,
+    "machine_exclusive_cpu_scheduling": false,
+    "host_namespace_identity": {
+      "network": "net:[4026531840]",
+      "user": "user:[4026531837]"
+    },
+    "recovery_evidence_scope": {
+      "purpose": "PIPELINE_DEBUG_AND_SECONDARY_SENSITIVITY_ONLY",
+      "paper_primary_evidence_permitted": false,
+      "later_machine_exclusive_regeneration_required_for_primary_evidence": true,
+      "v3_vanilla_attempt_reclassified": false,
+      "v3_pending_backend_allowances_consumed": false,
+      "result_informed_input_selection": false
+    },
+    "process_isolation_policy": {
+      "name": "loopback_only_network_namespace",
+      "strict_before_claim_for_every_item": true,
+      "strict_after_claim_before_popen_for_every_item": true,
+      "postflight_by_item": {
+        "vanilla_origin_native_image_context": "loopback_only_network_namespace",
+        "klt_external_feature_context": "loopback_only_network_namespace",
+        "aquafe_external_feature_context": "loopback_only_network_namespace"
+      },
+      "fresh_user_and_network_namespace_per_backend": true,
+      "only_interface_inside_namespace": "lo",
+      "host_network_namespace": "net:[4026531840]",
+      "host_user_namespace": "user:[4026531837]",
+      "formal_loopback_port_inside_each_namespace": 11981,
+      "network_crosstalk_barrier": true,
+      "machine_exclusive_cpu_scheduling": false
+    },
+    "catkin_setup_dynamic_inputs": {
+      "catkin_marker_identity_keys": [
+        "ros_catkin_marker",
+        "vins_catkin_marker",
+        "dave_catkin_marker",
+        "uuv_catkin_marker"
+      ],
+      "ros_profile_directory": "/opt/ros/noetic/etc/catkin/profile.d",
+      "ros_profile_exact_entries": [
+        {
+          "name": "05.catkin_make.bash",
+          "identity_key": "ros_environment_hook_00"
+        },
+        {
+          "name": "05.catkin_make_isolated.bash",
+          "identity_key": "ros_environment_hook_01"
+        },
+        {
+          "name": "1.ros_distro.sh",
+          "identity_key": "ros_environment_hook_02"
+        },
+        {
+          "name": "1.ros_etc_dir.sh",
+          "identity_key": "ros_environment_hook_03"
+        },
+        {
+          "name": "1.ros_package_path.sh",
+          "identity_key": "ros_environment_hook_04"
+        },
+        {
+          "name": "1.ros_python_version.sh",
+          "identity_key": "ros_environment_hook_05"
+        },
+        {
+          "name": "1.ros_version.sh",
+          "identity_key": "ros_environment_hook_06"
+        },
+        {
+          "name": "10.rosbuild.sh",
+          "identity_key": "ros_environment_hook_07"
+        },
+        {
+          "name": "10.roslaunch.sh",
+          "identity_key": "ros_environment_hook_08"
+        },
+        {
+          "name": "15.rosbash.bash",
+          "identity_key": "ros_environment_hook_09"
+        },
+        {
+          "name": "15.rosbash.fish",
+          "identity_key": "ros_environment_hook_10"
+        },
+        {
+          "name": "15.rosbash.tcsh",
+          "identity_key": "ros_environment_hook_11"
+        },
+        {
+          "name": "15.rosbash.zsh",
+          "identity_key": "ros_environment_hook_12"
+        },
+        {
+          "name": "20.transform.bash",
+          "identity_key": "ros_environment_hook_13"
+        },
+        {
+          "name": "99.roslisp.sh",
+          "identity_key": "ros_environment_hook_14"
+        }
+      ],
+      "workspace_profile_directories_required_absent": [
+        "/home/ma/SLAM/VINS-Fusion-origin/devel/etc/catkin/profile.d",
+        "/home/ma/dave_ws/devel/etc/catkin/profile.d",
+        "/home/ma/uuv_ws/devel/etc/catkin/profile.d"
+      ],
+      "python3_symlink": {
+        "path": "/usr/bin/python3",
+        "required_target": "python3.8",
+        "canonical_identity_key": "python3_8"
+      }
+    },
+    "large_artifact_root": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v4_backend_recovery",
+    "runtime_artifact_root": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v4_backend_recovery/runtime",
+    "cwd": "/home/ma/AQUA-FE_WS",
+    "forbidden_workspace": "/home/ma/SLAM/VINS-Fusion_3-15-WS",
+    "command_contract": {
+      "canonical_json": "json.dumps(sort_keys=True,separators=(',',':'),ensure_ascii=False); UTF-8",
+      "argv_and_item_env_must_match_per_item_sha256": true,
+      "effective_environment_is_exact_base_plus_disjoint_item_env_plus_pwd": true,
+      "reject_nul_in_argv_or_environment": true,
+      "reject_equals_in_environment_keys": true,
+      "reject_forbidden_workspace_in_argv_or_environment": true
+    },
+    "workspace_link_policy": {
+      "exact_count": 3,
+      "root": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins",
+      "reject_dot_or_dotdot_components": true,
+      "resolve_and_verify_real_parent": true,
+      "exact_links": {
+        "vanilla_origin_native_image_context": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/origin_klt_every1_systemfair_a10_finalonline_v4_backend_recovery_feed0000_2800_score2400_2800_vanilla_origin",
+        "klt_external_feature_context": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_systemfair_a10_finalonline_v4_backend_recovery_feed0000_2800_score2400_2800_external_klt",
+        "aquafe_external_feature_context": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_systemfair_a10_finalonline_v4_backend_recovery_feed0000_2800_score2400_2800_aquafe_finalonline_xfeat_lineage"
+      }
+    },
+    "output_tree_policy": {
+      "preclaim": "REQUIRE_EMPTY_BEFORE_CLAIM",
+      "reject_symlinks_and_nonregular_artifacts": true,
+      "reject_unexpected_recursive_entries_after_run": true,
+      "supervisor_control_files": [
+        "process_start_claim.json",
+        "formal_run_receipt_v4.json",
+        "supervisor_process.log"
+      ]
+    },
+    "base_environment": {
+      "HOME": "/home/ma",
+      "USER": "ma",
+      "LOGNAME": "ma",
+      "LANG": "zh_CN.UTF-8",
+      "LANGUAGE": "zh_CN:zh",
+      "PATH": "/opt/ros/noetic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "CMAKE_PREFIX_PATH": "/home/ma/dave_ws/devel:/home/ma/uuv_ws/devel:/opt/ros/noetic",
+      "LD_LIBRARY_PATH": "/home/ma/dave_ws/devel/lib:/home/ma/uuv_ws/devel/lib:/opt/ros/noetic/lib:/opt/ros/noetic/lib/x86_64-linux-gnu",
+      "PKG_CONFIG_PATH": "/home/ma/dave_ws/devel/lib/pkgconfig:/home/ma/uuv_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig:/opt/ros/noetic/lib/x86_64-linux-gnu/pkgconfig",
+      "PYTHONPATH": "/home/ma/dave_ws/devel/lib/python3/dist-packages:/home/ma/uuv_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages",
+      "ROS_DISTRO": "noetic",
+      "ROS_ETC_DIR": "/opt/ros/noetic/etc/ros",
+      "ROS_PACKAGE_PATH": "/home/ma/dave_ws/src:/home/ma/uuv_ws/src:/opt/ros/noetic/share",
+      "ROS_PYTHON_VERSION": "3",
+      "ROS_ROOT": "/opt/ros/noetic/share/ros",
+      "ROS_VERSION": "1",
+      "ROS_MASTER_URI": "http://localhost:11311"
+    }
+  },
+  "recovery_provenance": {
+    "scope": "SECONDARY_DEBUG_ONLY",
+    "v3_execution_lock_identity_key": "v3_execution_lock",
+    "accepted_external_sources": {
+      "klt_input_adoption": {
+        "receipt_identity_key": "v3_klt_receipt",
+        "required_disposition": "ACCEPTED",
+        "consumed_by": [
+          "klt_external_feature_context"
+        ]
+      },
+      "aquafe_build": {
+        "receipt_identity_key": "v3_aquafe_receipt",
+        "required_disposition": "ACCEPTED",
+        "consumed_by": [
+          "aquafe_external_feature_context"
+        ]
+      }
+    },
+    "retained_failed_history": {
+      "v3_vanilla_origin_native_image_context": {
+        "receipt_identity_key": "v3_vanilla_failed_receipt",
+        "required_disposition": "PROCESS_FAILED",
+        "used_as_runtime_input": false,
+        "reclassified": false,
+        "retried_under_v3_allowance": false
+      }
+    },
+    "unconsumed_v3_backend_items": [
+      "external_klt_finalonline_backbone",
+      "aquafe_finalonline_xfeat_lineage"
+    ],
+    "v3_pending_backend_allowance_guard": {
+      "required_state": "CLAIM_AND_RECEIPT_ABSENT",
+      "required_absence_phases": [
+        "lock_build",
+        "lock_verification",
+        "before_claim",
+        "after_claim_before_popen",
+        "postflight"
+      ],
+      "items": {
+        "external_klt_finalonline_backbone": {
+          "output_dir": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/backends/external_klt_finalonline_backbone",
+          "claim_path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/backends/external_klt_finalonline_backbone/process_start_claim.json",
+          "receipt_path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/backends/external_klt_finalonline_backbone/formal_run_receipt_v3.json"
+        },
+        "aquafe_finalonline_xfeat_lineage": {
+          "output_dir": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/backends/aquafe_finalonline_xfeat_lineage",
+          "claim_path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/backends/aquafe_finalonline_xfeat_lineage/process_start_claim.json",
+          "receipt_path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/backends/aquafe_finalonline_xfeat_lineage/formal_run_receipt_v3.json"
+        }
+      }
+    }
+  },
+  "external_inputs": {
+    "raw_v1": {
+      "artifact_identity_keys": [
+        "raw_bag"
+      ],
+      "authority_identity_key": "raw_audit",
+      "accepted_v3_receipt_required": false
+    },
+    "klt_v3_accepted": {
+      "artifact_identity_keys": [
+        "v3_klt_features_bag",
+        "v3_klt_frontend_metrics",
+        "v3_klt_camera_yaml",
+        "v3_klt_adoption_manifest"
+      ],
+      "authority_identity_key": "v3_klt_receipt",
+      "accepted_v3_receipt_required": true
+    },
+    "aquafe_v3_accepted": {
+      "artifact_identity_keys": [
+        "v3_aquafe_full_merged_bag",
+        "v3_aquafe_sidecar_bag",
+        "v3_aquafe_stats_csv"
+      ],
+      "authority_identity_key": "v3_aquafe_receipt",
+      "accepted_v3_receipt_required": true
+    }
+  },
+  "score_usability": {
+    "score_start_ns": 1542888916043622160,
+    "score_end_ns": 1542888936039921424,
+    "nominal_backend_output_rate_hz": 10,
+    "crop_interval": "inclusive",
+    "minimum_score_temporal_span_coverage": 0.7,
+    "maximum_score_output_gap_s": 0.5,
+    "require_initialization_before_or_within_score_window": true,
+    "maximum_score_failure_mentions": 0,
+    "maximum_score_restart_or_reset_events": 0,
+    "unresolved_score_log_event_attribution_is_failure": true,
+    "score_failure_is_usability_fail_not_terminal_process_failure": true
+  },
+  "common_support": {
+    "denominator_reference_rows": 21,
+    "minimum_common_rows": 15,
+    "minimum_common_coverage": 0.7,
+    "minimum_descriptive_rpe_pairs": 10,
+    "formal_ape_minimum_poses": 30,
+    "formal_ape_gate_open": false
+  },
+  "identities": {
+    "lock_builder": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/build_samehistory_system_a10_finalonline_v4_backend_recovery_execution_lock.py",
+      "size_bytes": 51401,
+      "sha256": "97ca5a3d7a059ac718b46f7021d1c1c9dce7b9ce1b2918e1d32e6180551f1f69"
+    },
+    "supervisor": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_samehistory_system_a10_finalonline_v4_backend_recovery.py",
+      "size_bytes": 253456,
+      "sha256": "4ac06b942a38f0074df6d2193d17d634673bc360865cee752f5732241224c277"
+    },
+    "analysis_only_analyzer": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/analyze_samehistory_system_a10_finalonline_v4_backend_recovery.py",
+      "size_bytes": 105520,
+      "sha256": "9bfc2dfab4a283b10d0230a7b840fc1bd977e1d4d678c32e3d669383f7270a33"
+    },
+    "protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/samehistory_system_comparison_a10_finalonline_v4_backend_recovery_protocol.md",
+      "size_bytes": 12978,
+      "sha256": "578f5d6ffd5738bfef4f5bdffe45986a0e77aa042cce9cf26b4fcde1b2e94edf"
+    },
+    "dedicated_archaeology_runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_aqualoc_archaeo_vins_eval_v4_backend_recovery.sh",
+      "size_bytes": 54870,
+      "sha256": "d9d805943a230f5fddf7be2262cfb63316ab0958f1e7aa35a94602571783ab9c"
+    },
+    "network_namespace_entry": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/enter_samehistory_backend_netns_v4.py",
+      "size_bytes": 8527,
+      "sha256": "e37e9371e970f167ef13de62f67c026d2eb098d7ec79af77dc409a4af14520ee"
+    },
+    "v3_execution_lock": {
+      "path": "/home/ma/AQUA-FE_WS/papers/samehistory_system_comparison_a10_finalonline_v3_recovery_execution_lock.json",
+      "size_bytes": 144118,
+      "sha256": "b9cf114cc8fa183fc1127b1d7987e20bdabeed60a46f3ed17b178e3a8fa1352d"
+    },
+    "v3_klt_receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/frontends/klt_input_adoption/formal_run_receipt_v3.json",
+      "size_bytes": 93722,
+      "sha256": "d1db99bbaaa1d3f07584858b863f6f1610dab5e96222537ce63dd1bf00637af0"
+    },
+    "v3_klt_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/frontends/klt_input_adoption/process_start_claim.json",
+      "size_bytes": 99490,
+      "sha256": "0c031c49a3c1680a11cb86c8c304fc992b8e12510fcc40432a002004afe0241c"
+    },
+    "v3_klt_log": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/frontends/klt_input_adoption/supervisor_process.log",
+      "size_bytes": 1163,
+      "sha256": "22317848af741ce09582f37988c8084d10e745082bdd49776b85c7e28955c561"
+    },
+    "v3_klt_features_bag": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/frontends/klt_input_adoption/features.bag",
+      "size_bytes": 42576500,
+      "sha256": "34e7ea87dd5706c58e666341776107570cc3351794b92da541f7eb8ec0d04b1f"
+    },
+    "v3_klt_frontend_metrics": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/frontends/klt_input_adoption/frontend_metrics.csv",
+      "size_bytes": 1003812,
+      "sha256": "ef86317bdb97b272955fe07de8f090c7e2313e4193028d974ecd7e4853030a99"
+    },
+    "v3_klt_camera_yaml": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/frontends/klt_input_adoption/aqualoc_archaeo10_pinhole.yaml",
+      "size_bytes": 357,
+      "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5"
+    },
+    "v3_klt_adoption_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/frontends/klt_input_adoption/adoption_manifest.json",
+      "size_bytes": 3620,
+      "sha256": "e28de66d047c98db55669838491a3457c802e311eb10394f7f0030a52f7bd07b"
+    },
+    "v3_aquafe_receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/frontends/aquafe_finalonline/formal_run_receipt_v3.json",
+      "size_bytes": 98125,
+      "sha256": "f17287d343c721a2fa9f7906de6e1c4c27a440704f3f2eec02ada70f398d93fa"
+    },
+    "v3_aquafe_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/frontends/aquafe_finalonline/process_start_claim.json",
+      "size_bytes": 102562,
+      "sha256": "eb5fba04ca55a5ed507fdaaf485d645a3cf8dbf850d87588d92842b216ca98dc"
+    },
+    "v3_aquafe_log": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/frontends/aquafe_finalonline/supervisor_process.log",
+      "size_bytes": 148,
+      "sha256": "f19e5be0c8dd29baa6d28a35cd36e50c6c31d5c4932357e7b348fb5fa307bac3"
+    },
+    "v3_aquafe_full_merged_bag": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/frontends/aquafe_finalonline/full_merged.bag",
+      "size_bytes": 42580404,
+      "sha256": "7b739e0c717ae41c11b07e364e48331d4a34c7786082cdd98bf53e8f58e03754"
+    },
+    "v3_aquafe_sidecar_bag": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/frontends/aquafe_finalonline/sidecar.bag",
+      "size_bytes": 575687,
+      "sha256": "82e773c5dd0a4a4b451e5a7d9e3803cc18193ad87c7686a777cdced3fbb09497"
+    },
+    "v3_aquafe_stats_csv": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/frontends/aquafe_finalonline/stats.csv",
+      "size_bytes": 350112,
+      "sha256": "cfecc933567e0e62503532f0077ca19a64304994ba57c683a6e6bd0c3bc04da5"
+    },
+    "v3_vanilla_failed_receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/backends/vanilla_origin_native_image_context/formal_run_receipt_v3.json",
+      "size_bytes": 100879,
+      "sha256": "49a0acb06211407a05ced876b6a2299a6f52efe8da9fb9d13cc0371519512049"
+    },
+    "v3_vanilla_failed_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/backends/vanilla_origin_native_image_context/process_start_claim.json",
+      "size_bytes": 98575,
+      "sha256": "d39c3b109c40b9a5957d540b3a5b0e687cc8b28b33e6528a1ac6a77d87287857"
+    },
+    "v3_vanilla_failed_log": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/backends/vanilla_origin_native_image_context/supervisor_process.log",
+      "size_bytes": 1505,
+      "sha256": "0e819ac984cab5ba6d357f9338d140e9e8dad6cf793c58aa3717f384ec446986"
+    },
+    "raw_audit": {
+      "path": "/home/ma/AQUA-FE_WS/papers/samehistory_system_comparison_a10_finalonline_v1_raw_audit.json",
+      "size_bytes": 2230,
+      "sha256": "9fea68dde53721a7ba17cf6616c45a6b0f47e160a11595eddf303d23c904f29a"
+    },
+    "raw_bag": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v1/raw/archaeo10_0000_2800.bag",
+      "size_bytes": 765976943,
+      "sha256": "49864715ec19005daa3492fa043fe87204fb6f8cc802b6b98cba55a8ab4fe87e"
+    },
+    "raw_tar": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_10_raw_data.tar.gz",
+      "size_bytes": 3761302356,
+      "sha256": "e8bde74e147236c15fe70d0385c618a75b2fc6e18e6f369dc12e355b49faceee"
+    },
+    "ground_truth": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_groundtruth_files/new_archaeo_colmap_traj_sequence_10.txt",
+      "size_bytes": 99504,
+      "sha256": "29149375d1d052fda4daaca7fa244e0096256b2eda0b7e3131d6204e882a4655"
+    },
+    "record_vins_env": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/record_vins_env.sh",
+      "size_bytes": 2049,
+      "sha256": "577e17acb5e8df1a4a6d8d5b6ed531103adb984a5c7cb1cc8523f95d6e695ad3"
+    },
+    "wait_for_subscribers": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/wait_for_ros_subscribers.py",
+      "size_bytes": 1993,
+      "sha256": "5b1c98907651122439aa4d31bd90fea7fcc44a5a35557ceda5131f9c3d84eaa5"
+    },
+    "legacy_ape_evaluator": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_sim_ape.py",
+      "size_bytes": 10127,
+      "sha256": "ef68c19a0af6c06598bb473f57c581a7bb874b68cdccc95f4c85905bb9219d33"
+    },
+    "common_support_evaluator": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support.py",
+      "size_bytes": 27933,
+      "sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110"
+    },
+    "common_support_evaluator_core": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/trajectory_eval_core.py",
+      "size_bytes": 27945,
+      "sha256": "aa9ac4da81df7298d1f1c369548ca98a57235916004337cad66f4cf331560635"
+    },
+    "vins_node": {
+      "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/vins/vins_node",
+      "size_bytes": 13104360,
+      "sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278"
+    },
+    "vins_library": {
+      "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/libvins_lib.so",
+      "size_bytes": 165205008,
+      "sha256": "4ea9a556f004ecd01ae1aedc1b3abc6ed90ae915acd2916a288601a4375353bc"
+    },
+    "vins_camera_models_library": {
+      "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/libcamera_models.so",
+      "size_bytes": 2970640,
+      "sha256": "6d7b261f12791b693f95aebea6a762a97bc3501f1f1f3c94a6af6e50f2e6690d"
+    },
+    "vins_setup_bash": {
+      "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/setup.bash",
+      "size_bytes": 260,
+      "sha256": "42e35f97c20127488ca0b80af92e9711e37a5cadcd381e5a8b7968dba58864a9"
+    },
+    "vins_setup_sh": {
+      "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/setup.sh",
+      "size_bytes": 2796,
+      "sha256": "d94649c65b9de28137acb78a0efbd620af107458107980a3e659be2d6bcdb35d"
+    },
+    "vins_setup_utility": {
+      "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/_setup_util.py",
+      "size_bytes": 13354,
+      "sha256": "ae5a6f91ecfdf1ac65fa3afb22ecde6e7c87b73affd12442caa95f52bc366309"
+    },
+    "ros_setup_bash": {
+      "path": "/opt/ros/noetic/setup.bash",
+      "size_bytes": 260,
+      "sha256": "42e35f97c20127488ca0b80af92e9711e37a5cadcd381e5a8b7968dba58864a9"
+    },
+    "ros_setup_sh": {
+      "path": "/opt/ros/noetic/setup.sh",
+      "size_bytes": 2773,
+      "sha256": "92be5acede56b1c06fcc762fdcbd8c60559c395c3e3220e45a6ac1046070e5d2"
+    },
+    "ros_setup_utility": {
+      "path": "/opt/ros/noetic/_setup_util.py",
+      "size_bytes": 13309,
+      "sha256": "f5f341fd88d5624f8969fb7a8e40218794cbca5a0ec6bc7f3a18e5ff9d2e11cf"
+    },
+    "ros_catkin_marker": {
+      "path": "/opt/ros/noetic/.catkin",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "vins_catkin_marker": {
+      "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/.catkin",
+      "size_bytes": 36,
+      "sha256": "6ae962388b00cb246b153483c684af8de6f8e8246d21d5e3f8c36bc678e1d42d"
+    },
+    "dave_catkin_marker": {
+      "path": "/home/ma/dave_ws/devel/.catkin",
+      "size_bytes": 20,
+      "sha256": "b23ee327a9452b94a98aa36e3228a1faf014824a12a4b831e7f39e7b8ef70716"
+    },
+    "uuv_catkin_marker": {
+      "path": "/home/ma/uuv_ws/devel/.catkin",
+      "size_bytes": 19,
+      "sha256": "a16ef278ab9583d8311514808ee92807bdd34fb0e259d7b3470907587c368edd"
+    },
+    "rosbag_cli": {
+      "path": "/opt/ros/noetic/bin/rosbag",
+      "size_bytes": 1658,
+      "sha256": "aed85a376f4dafeebe8257846315cb838d605fa67788530e95f86ff36aac67f5"
+    },
+    "roscore_cli": {
+      "path": "/opt/ros/noetic/bin/roscore",
+      "size_bytes": 3950,
+      "sha256": "82b5a3d3899caca90233a9a31b99cf524786e41e1917ff050d7f7bd211d5ce05"
+    },
+    "rosmaster_cli": {
+      "path": "/opt/ros/noetic/bin/rosmaster",
+      "size_bytes": 1668,
+      "sha256": "25f563280acca9905df2361bce8f4103f65864758fc6c5b55cb40c3e877b3719"
+    },
+    "rosparam_cli": {
+      "path": "/opt/ros/noetic/bin/rosparam",
+      "size_bytes": 1660,
+      "sha256": "b0df8cebd0fb172f7a09773947ff726cc9a493f0d60fe0b159453c2741ece643"
+    },
+    "rosrun_cli": {
+      "path": "/opt/ros/noetic/bin/rosrun",
+      "size_bytes": 4312,
+      "sha256": "51d4f5ea46f29b3a889707c5c8676412b7c5ee757575dc91ede95d85a8411f7d"
+    },
+    "rosout_node": {
+      "path": "/opt/ros/noetic/lib/rosout/rosout",
+      "size_bytes": 117088,
+      "sha256": "23179b7bf3c24209b7bda61834987781bed2ce8ba47fff810b861c7a1463c32d"
+    },
+    "unshare": {
+      "path": "/usr/bin/unshare",
+      "size_bytes": 43448,
+      "sha256": "ce0d8955cbaa0d22b6b0a9de8f616165ef46a4d392ac8baf1ae732697979e787"
+    },
+    "ip": {
+      "path": "/usr/bin/ip",
+      "size_bytes": 611960,
+      "sha256": "d0138fe37614898bd5f81092f15074b8fe59a774d2062bce4815d3633aa58377"
+    },
+    "setsid": {
+      "path": "/usr/bin/setsid",
+      "size_bytes": 14568,
+      "sha256": "50c286699e7a33cccc6f1495a583d7956825bd3c73195c5def6b46d2fa377254"
+    },
+    "sleep": {
+      "path": "/usr/bin/sleep",
+      "size_bytes": 39256,
+      "sha256": "45cf3208dc6704e806bbc5d776e884b5487744bd75171a93930c94e9b9b20ebb"
+    },
+    "readlink": {
+      "path": "/usr/bin/readlink",
+      "size_bytes": 51544,
+      "sha256": "d51208f0931965a9ea6afb5596bb24a1af5f9978819a5f2a9a44c6682706d227"
+    },
+    "bash": {
+      "path": "/usr/bin/bash",
+      "size_bytes": 1183448,
+      "sha256": "025cf78cd9d276019e916b97b0decd10cacb14902db8eb9f28233019babfb331"
+    },
+    "python3_8": {
+      "path": "/usr/bin/python3.8",
+      "size_bytes": 5490456,
+      "sha256": "298a9e830ed52f36c299427565485d717d1ce0179c0597cc16560513eb780b06"
+    },
+    "coreutils_cp": {
+      "path": "/usr/bin/cp",
+      "size_bytes": 153976,
+      "sha256": "40ea53f38efe555c09a2c1c860379190e2af94427daaa68756874154c3fa1188"
+    },
+    "coreutils_realpath": {
+      "path": "/usr/bin/realpath",
+      "size_bytes": 51576,
+      "sha256": "e3ef18fd4b85ce6d11e08dacdcfc86bee855ddbe5a59b7d86926eebe463600c9"
+    },
+    "coreutils_rm": {
+      "path": "/usr/bin/rm",
+      "size_bytes": 72056,
+      "sha256": "f31ab9fc2b32ed344c5918915600817224ce32c12258962dc40ab7e1c52319de"
+    },
+    "coreutils_mkdir": {
+      "path": "/usr/bin/mkdir",
+      "size_bytes": 88408,
+      "sha256": "4764ac50184c3092d7e529b07d95f103644229f12cfc1de6759bd1da0e6c56c7"
+    },
+    "coreutils_cat": {
+      "path": "/usr/bin/cat",
+      "size_bytes": 43416,
+      "sha256": "87e5bd81850e11eeec2d3bb696b626b2a7f45673241cbbd64769c83580432869"
+    },
+    "coreutils_basename": {
+      "path": "/usr/bin/basename",
+      "size_bytes": 39256,
+      "sha256": "e582a826a35c6492fce13853a11b2fd26ce214be1f48740ef71771e3433ef7eb"
+    },
+    "coreutils_dirname": {
+      "path": "/usr/bin/dirname",
+      "size_bytes": 39256,
+      "sha256": "215609e575d425e9e90993fda07b35d7c71638149d8b126c27c51467c28e2610"
+    },
+    "coreutils_tee": {
+      "path": "/usr/bin/tee",
+      "size_bytes": 43384,
+      "sha256": "9288b17632f64d8d28f3143978ff1c5909dcd11851d211a5c6a29ac2bc822f07"
+    },
+    "coreutils_date": {
+      "path": "/usr/bin/date",
+      "size_bytes": 108920,
+      "sha256": "a1cb3238a537c39e58c0f25c41e75d22d82b9e92d433185cd00438ba5e8e25a5"
+    },
+    "hostname": {
+      "path": "/usr/bin/hostname",
+      "size_bytes": 26856,
+      "sha256": "5f2d2eb22eb6aa297810acbef50f28c610d197f2577b7316b1791c2528cfd928"
+    },
+    "rospack_cli": {
+      "path": "/opt/ros/noetic/bin/rospack",
+      "size_bytes": 14656,
+      "sha256": "7b32ebba8967bcd4dec1b621ee8a642159a7d743592c8bdaeb4fb58eec6cfb47"
+    },
+    "coreutils_stat": {
+      "path": "/usr/bin/stat",
+      "size_bytes": 88440,
+      "sha256": "422b0e57ae673cb8d58ab672bff58d78792cf4e54fce38e06207a73d4d96980f"
+    },
+    "coreutils_md5sum": {
+      "path": "/usr/bin/md5sum",
+      "size_bytes": 47480,
+      "sha256": "4f5acab1d7cdceb3f47440f934986ff60229d96a79b76b11803b9819d3bb376a"
+    },
+    "sed": {
+      "path": "/usr/bin/sed",
+      "size_bytes": 121288,
+      "sha256": "a0b422c771464c25afd6d6c708ae695f1901c5e7e8686e5d2cbee18462f13688"
+    },
+    "coreutils_uname": {
+      "path": "/usr/bin/uname",
+      "size_bytes": 39288,
+      "sha256": "826971bf079a8c1c0076e359ab67fe8fab23819891e96a5f7b6eca1652af6f54"
+    },
+    "coreutils_mktemp": {
+      "path": "/usr/bin/mktemp",
+      "size_bytes": 47448,
+      "sha256": "49ad1d5b6875c67a20f67ab440666a3805390eb85de07852f3ec81fe1bedf123"
+    },
+    "grep": {
+      "path": "/usr/bin/grep",
+      "size_bytes": 199136,
+      "sha256": "39214499f884820b46f0ba06822e347798b264362edf607bf7668083b92cb51e"
+    },
+    "awk": {
+      "path": "/usr/bin/mawk",
+      "size_bytes": 162552,
+      "sha256": "1c08b1f4daf74d26cc519bdf7c30fa161ae3d13cbfcb70e40487e217b86cdf90"
+    },
+    "rosbash_source": {
+      "path": "/opt/ros/noetic/share/rosbash/rosbash",
+      "size_bytes": 35649,
+      "sha256": "9e691ea53c52f4465ae53a431ccc213d491db94d49c5c321f3795ad2bdf83086"
+    },
+    "ros_environment_hook_00": {
+      "path": "/opt/ros/noetic/etc/catkin/profile.d/05.catkin_make.bash",
+      "size_bytes": 2873,
+      "sha256": "03d6bf3aada039964799a897f6c98da3aedf7126a44f49cba035ec2075cc0e3d"
+    },
+    "ros_environment_hook_01": {
+      "path": "/opt/ros/noetic/etc/catkin/profile.d/05.catkin_make_isolated.bash",
+      "size_bytes": 2786,
+      "sha256": "f4ecae9741b5ce809cd09cf223fbd66b9ef4d6e1413e3ff530ca1b169ba6c1a2"
+    },
+    "ros_environment_hook_02": {
+      "path": "/opt/ros/noetic/etc/catkin/profile.d/1.ros_distro.sh",
+      "size_bytes": 290,
+      "sha256": "2fcb7b1b54373521c2ad459f9c45a4133716b4eda09e1780db1fe335c0f1c3c0"
+    },
+    "ros_environment_hook_03": {
+      "path": "/opt/ros/noetic/etc/catkin/profile.d/1.ros_etc_dir.sh",
+      "size_bytes": 245,
+      "sha256": "b7d7d33fe7615c10e555f82d33052ca0426d8ca9e801c4f33777971152db4130"
+    },
+    "ros_environment_hook_04": {
+      "path": "/opt/ros/noetic/etc/catkin/profile.d/1.ros_package_path.sh",
+      "size_bytes": 1053,
+      "sha256": "f5fcf7eba3fce298b72863f52e17a84d1319fbc86cbf69a86e03730c2433eb2b"
+    },
+    "ros_environment_hook_05": {
+      "path": "/opt/ros/noetic/etc/catkin/profile.d/1.ros_python_version.sh",
+      "size_bytes": 99,
+      "sha256": "3d29af2354f7f2a2c51af77b222cb2560d3cd427a0a408279e70de9136162fab"
+    },
+    "ros_environment_hook_06": {
+      "path": "/opt/ros/noetic/etc/catkin/profile.d/1.ros_version.sh",
+      "size_bytes": 85,
+      "sha256": "bf8ab9eb545afd016930d9c6f8f7ce713b356ab3ecf3f48c6efeca23676af570"
+    },
+    "ros_environment_hook_07": {
+      "path": "/opt/ros/noetic/etc/catkin/profile.d/10.rosbuild.sh",
+      "size_bytes": 236,
+      "sha256": "28ecb4b586f9615520be083493a27a13d8129bcb8e2cf065f93cc4fc4dc5bbe4"
+    },
+    "ros_environment_hook_08": {
+      "path": "/opt/ros/noetic/etc/catkin/profile.d/10.roslaunch.sh",
+      "size_bytes": 122,
+      "sha256": "46798d868e180dcef2b2bfd76ecd574218b6c16e86be690d8fcf8c717a9ed6df"
+    },
+    "ros_environment_hook_09": {
+      "path": "/opt/ros/noetic/etc/catkin/profile.d/15.rosbash.bash",
+      "size_bytes": 202,
+      "sha256": "d3fc46d5c9085bca75a48db6869e0460edee571165e4260456e98cd4f40bba50"
+    },
+    "ros_environment_hook_10": {
+      "path": "/opt/ros/noetic/etc/catkin/profile.d/15.rosbash.fish",
+      "size_bytes": 202,
+      "sha256": "4ade1873537c50806bb9bb8f1acc1aca50813b7f4d4e5585d71cfe5db763df3e"
+    },
+    "ros_environment_hook_11": {
+      "path": "/opt/ros/noetic/etc/catkin/profile.d/15.rosbash.tcsh",
+      "size_bytes": 202,
+      "sha256": "b9deba9624781b952376f4afdf5e9c2a984c65d00d6481a58472ec2fc66de03d"
+    },
+    "ros_environment_hook_12": {
+      "path": "/opt/ros/noetic/etc/catkin/profile.d/15.rosbash.zsh",
+      "size_bytes": 200,
+      "sha256": "832c44df6edb8f19c5cdb940a6da871f63e2a4813dfa1bfae7419a08c335e08e"
+    },
+    "ros_environment_hook_13": {
+      "path": "/opt/ros/noetic/etc/catkin/profile.d/20.transform.bash",
+      "size_bytes": 1171,
+      "sha256": "f8b788ef4ff87b9156b19c0c610a054e2b8726060abf6d750a951f47860b5832"
+    },
+    "ros_environment_hook_14": {
+      "path": "/opt/ros/noetic/etc/catkin/profile.d/99.roslisp.sh",
+      "size_bytes": 905,
+      "sha256": "5f1b5c1c5472d8ffc737a659b20b708fb3b8af40691a40c549c5dd3c54868660"
+    }
+  },
+  "items": {
+    "vanilla_origin_native_image_context": {
+      "kind": "backend_replay",
+      "dependencies": [],
+      "isolation_policy": "loopback_only_network_namespace",
+      "machine_exclusive_cpu_scheduling": false,
+      "timeout_seconds": 600,
+      "argv": [
+        "/usr/bin/unshare",
+        "--user",
+        "--map-root-user",
+        "--net",
+        "/usr/bin/python3.8",
+        "/home/ma/AQUA-FE_WS/scripts/enter_samehistory_backend_netns_v4.py",
+        "--output-dir",
+        "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v4_backend_recovery/backends/vanilla_origin_native_image_context",
+        "--formal-port",
+        "11981",
+        "--host-network-namespace",
+        "net:[4026531840]",
+        "--host-user-namespace",
+        "user:[4026531837]",
+        "--",
+        "/usr/bin/bash",
+        "/home/ma/AQUA-FE_WS/scripts/run_aqualoc_archaeo_vins_eval_v4_backend_recovery.sh",
+        "origin",
+        "10",
+        "0",
+        "2800",
+        "klt",
+        "1"
+      ],
+      "env": {
+        "ROOT": "/home/ma/AQUA-FE_WS",
+        "VINS_WS": "/home/ma/SLAM/VINS-Fusion-origin",
+        "AQUALOC_ROOT": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences",
+        "RAW_TAR": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_10_raw_data.tar.gz",
+        "GT_TXT": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_groundtruth_files/new_archaeo_colmap_traj_sequence_10.txt",
+        "RAW_BAG": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v1/raw/archaeo10_0000_2800.bag",
+        "RUN_VINS": "1",
+        "FORCE_RAW": "0",
+        "FORCE_EXPORT": "0",
+        "VINS_NODE_BIN": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/vins/vins_node",
+        "WAIT_FOR_VINS_SUBSCRIBERS": "1",
+        "WAIT_FOR_VINS_SUBSCRIBERS_TIMEOUT": "20",
+        "VINS_MULTIPLE_THREAD": "1",
+        "AQUALOC_BODY_T_CAM0_MODE": "imu_cam",
+        "VINS_TD": "-0.053694112369382575",
+        "VINS_ESTIMATE_TD": "0",
+        "VINS_MAX_SOLVER_TIME": "0.04",
+        "VINS_MAX_NUM_ITERATIONS": "8",
+        "PLAY_RATE": "1.0",
+        "ROSBAG_PLAY_DELAY": "3",
+        "ROSBAG_WAIT_FOR_SUBSCRIBERS": "0",
+        "POST_PLAY_SLEEP": "8",
+        "BACKEND_REPLAY_ONLY": "0",
+        "TAG": "systemfair_a10_finalonline_v4_backend_recovery_feed0000_2800_score2400_2800_vanilla_origin",
+        "PORT": "11981",
+        "ROS_HOME": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v4_backend_recovery/runtime/vanilla_origin_native_image_context/ros_home",
+        "ROS_LOG_DIR": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v4_backend_recovery/runtime/vanilla_origin_native_image_context/ros_log"
+      },
+      "command_contract": {
+        "cwd": "/home/ma/AQUA-FE_WS",
+        "argv_sha256": "9ccee69ec0c074e721409206701f1ab096a6184248d208df0098c8df5f113832",
+        "env_sha256": "98f3265c9ce76d0626839b33aab062c35c78bf08d84c2dc8fb7e92bedfba6cb7"
+      },
+      "output_dir": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v4_backend_recovery/backends/vanilla_origin_native_image_context",
+      "workspace_link": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/origin_klt_every1_systemfair_a10_finalonline_v4_backend_recovery_feed0000_2800_score2400_2800_vanilla_origin",
+      "output_tree_policy": "REQUIRE_EMPTY_BEFORE_CLAIM",
+      "archival_outputs": {
+        "vins.log": "Raw VINS diagnostic log retained for independent score-usability event attribution.",
+        "vins_env_manifest.txt": "Runtime-environment provenance; not a numerical result artifact.",
+        "roscore.log": "Nonempty namespace-local ROS-master and bounded-cleanup provenance."
+      },
+      "expected_outputs": [
+        "vins_output/vio.csv",
+        "vins.log",
+        "ape.txt",
+        "replay_manifest.txt",
+        "vins_aqualoc_archaeo_origin.yaml",
+        "aqualoc_archaeo10_pinhole.yaml",
+        "vins_env_manifest.txt",
+        "roscore.log",
+        "network_namespace_manifest.json"
+      ],
+      "semantic_checks": [
+        {
+          "type": "vins_trajectory",
+          "path": "vins_output/vio.csv",
+          "min_rows": 2
+        },
+        {
+          "type": "file_sha256",
+          "path": "vins_aqualoc_archaeo_origin.yaml",
+          "sha256": "da4518da471bdcc282430ecef9f7d4f5b69b96148845a60dec012a65ebf656dc"
+        },
+        {
+          "type": "file_sha256",
+          "path": "aqualoc_archaeo10_pinhole.yaml",
+          "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5"
+        },
+        {
+          "type": "replay_manifest",
+          "path": "replay_manifest.txt",
+          "values": {
+            "run_dir": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/origin_klt_every1_systemfair_a10_finalonline_v4_backend_recovery_feed0000_2800_score2400_2800_vanilla_origin",
+            "raw_bag": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v1/raw/archaeo10_0000_2800.bag",
+            "play_bag": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v1/raw/archaeo10_0000_2800.bag",
+            "vins_csv": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/origin_klt_every1_systemfair_a10_finalonline_v4_backend_recovery_feed0000_2800_score2400_2800_vanilla_origin/vins_output/vio.csv"
+          }
+        },
+        {
+          "type": "ape_kv",
+          "path": "ape.txt",
+          "required_keys": [
+            "matched",
+            "duration_s",
+            "max_timestamp_error_s",
+            "se3_ape_rmse_m",
+            "se3_ape_median_m",
+            "se3_ape_max_m",
+            "rpe_delta_s",
+            "rpe_pairs",
+            "rpe_trans_rmse_m",
+            "rpe_trans_median_m",
+            "rpe_trans_max_m",
+            "output_poses",
+            "output_duration_s",
+            "expected_duration_s",
+            "output_coverage_ratio",
+            "first_output_delay_s",
+            "last_output_drop_s",
+            "median_output_dt_s",
+            "max_output_gap_s",
+            "large_output_gap_count",
+            "init_success",
+            "tracking_lost_count_proxy",
+            "log_linear_solver_failures",
+            "log_failure_mentions",
+            "log_restart_mentions",
+            "log_waiting_mentions"
+          ],
+          "integer_keys": [
+            "matched",
+            "rpe_pairs",
+            "output_poses",
+            "large_output_gap_count",
+            "init_success",
+            "tracking_lost_count_proxy",
+            "log_linear_solver_failures",
+            "log_failure_mentions",
+            "log_restart_mentions",
+            "log_waiting_mentions"
+          ],
+          "exact_keys": true
+        },
+        {
+          "type": "network_namespace_manifest",
+          "path": "network_namespace_manifest.json",
+          "expected_host_network_namespace": "net:[4026531840]",
+          "expected_host_user_namespace": "user:[4026531837]",
+          "formal_port": 11981,
+          "backend_argv_sha256": "678643154a92a538ee79320558bf8a3d6b39ad0927cb8f1b2d6d619c7c80be6e"
+        }
+      ],
+      "authority_identity_keys": [
+        "unshare",
+        "python3_8",
+        "network_namespace_entry",
+        "ip",
+        "bash",
+        "dedicated_archaeology_runner",
+        "setsid",
+        "sleep",
+        "readlink",
+        "record_vins_env",
+        "wait_for_subscribers",
+        "legacy_ape_evaluator",
+        "vins_node",
+        "vins_library",
+        "vins_camera_models_library",
+        "vins_setup_bash",
+        "vins_setup_sh",
+        "vins_setup_utility",
+        "ros_setup_bash",
+        "ros_setup_sh",
+        "ros_setup_utility",
+        "rosbag_cli",
+        "roscore_cli",
+        "rosmaster_cli",
+        "rosparam_cli",
+        "rosrun_cli",
+        "rosout_node",
+        "raw_bag",
+        "raw_audit",
+        "raw_tar",
+        "ground_truth",
+        "coreutils_cp",
+        "coreutils_realpath",
+        "coreutils_rm",
+        "coreutils_mkdir",
+        "coreutils_cat",
+        "coreutils_basename",
+        "coreutils_dirname",
+        "coreutils_tee",
+        "coreutils_date",
+        "hostname",
+        "rospack_cli",
+        "coreutils_stat",
+        "coreutils_md5sum",
+        "sed",
+        "coreutils_uname",
+        "coreutils_mktemp",
+        "grep",
+        "awk",
+        "rosbash_source",
+        "ros_catkin_marker",
+        "vins_catkin_marker",
+        "dave_catkin_marker",
+        "uuv_catkin_marker",
+        "ros_environment_hook_00",
+        "ros_environment_hook_01",
+        "ros_environment_hook_02",
+        "ros_environment_hook_03",
+        "ros_environment_hook_04",
+        "ros_environment_hook_05",
+        "ros_environment_hook_06",
+        "ros_environment_hook_07",
+        "ros_environment_hook_08",
+        "ros_environment_hook_09",
+        "ros_environment_hook_10",
+        "ros_environment_hook_11",
+        "ros_environment_hook_12",
+        "ros_environment_hook_13",
+        "ros_environment_hook_14"
+      ],
+      "dependency_artifacts": {},
+      "external_input_bindings": {
+        "raw_bag": {
+          "identity_key": "raw_bag",
+          "source_receipt_identity_key": "raw_audit",
+          "source_item_id": "v1_raw_audit"
+        }
+      }
+    },
+    "klt_external_feature_context": {
+      "kind": "backend_replay",
+      "dependencies": [],
+      "isolation_policy": "loopback_only_network_namespace",
+      "machine_exclusive_cpu_scheduling": false,
+      "timeout_seconds": 600,
+      "argv": [
+        "/usr/bin/unshare",
+        "--user",
+        "--map-root-user",
+        "--net",
+        "/usr/bin/python3.8",
+        "/home/ma/AQUA-FE_WS/scripts/enter_samehistory_backend_netns_v4.py",
+        "--output-dir",
+        "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v4_backend_recovery/backends/klt_external_feature_context",
+        "--formal-port",
+        "11981",
+        "--host-network-namespace",
+        "net:[4026531840]",
+        "--host-user-namespace",
+        "user:[4026531837]",
+        "--",
+        "/usr/bin/bash",
+        "/home/ma/AQUA-FE_WS/scripts/run_aqualoc_archaeo_vins_eval_v4_backend_recovery.sh",
+        "external",
+        "10",
+        "0",
+        "2800",
+        "klt",
+        "2"
+      ],
+      "env": {
+        "ROOT": "/home/ma/AQUA-FE_WS",
+        "VINS_WS": "/home/ma/SLAM/VINS-Fusion-origin",
+        "AQUALOC_ROOT": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences",
+        "RAW_TAR": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_10_raw_data.tar.gz",
+        "GT_TXT": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_groundtruth_files/new_archaeo_colmap_traj_sequence_10.txt",
+        "RAW_BAG": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v1/raw/archaeo10_0000_2800.bag",
+        "RUN_VINS": "1",
+        "FORCE_RAW": "0",
+        "FORCE_EXPORT": "0",
+        "VINS_NODE_BIN": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/vins/vins_node",
+        "WAIT_FOR_VINS_SUBSCRIBERS": "1",
+        "WAIT_FOR_VINS_SUBSCRIBERS_TIMEOUT": "20",
+        "VINS_MULTIPLE_THREAD": "1",
+        "AQUALOC_BODY_T_CAM0_MODE": "imu_cam",
+        "VINS_TD": "-0.053694112369382575",
+        "VINS_ESTIMATE_TD": "0",
+        "VINS_MAX_SOLVER_TIME": "0.04",
+        "VINS_MAX_NUM_ITERATIONS": "8",
+        "PLAY_RATE": "1.0",
+        "ROSBAG_PLAY_DELAY": "3",
+        "ROSBAG_WAIT_FOR_SUBSCRIBERS": "0",
+        "POST_PLAY_SLEEP": "8",
+        "BACKEND_REPLAY_ONLY": "0",
+        "TAG": "systemfair_a10_finalonline_v4_backend_recovery_feed0000_2800_score2400_2800_external_klt",
+        "PORT": "11981",
+        "ROS_HOME": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v4_backend_recovery/runtime/klt_external_feature_context/ros_home",
+        "ROS_LOG_DIR": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v4_backend_recovery/runtime/klt_external_feature_context/ros_log",
+        "FEATURE_BAG_OVERRIDE": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/frontends/klt_input_adoption/features.bag"
+      },
+      "command_contract": {
+        "cwd": "/home/ma/AQUA-FE_WS",
+        "argv_sha256": "a5af9aa017e8d493d640ffbd5c0be43188f2f46c5336f8b6a4d277c127d1f080",
+        "env_sha256": "dd5c4cbd42687a6a381a6a1127960d2c812f3a4f5cc783196f9bc69c093793f8"
+      },
+      "output_dir": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v4_backend_recovery/backends/klt_external_feature_context",
+      "workspace_link": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_systemfair_a10_finalonline_v4_backend_recovery_feed0000_2800_score2400_2800_external_klt",
+      "output_tree_policy": "REQUIRE_EMPTY_BEFORE_CLAIM",
+      "archival_outputs": {
+        "vins.log": "Raw VINS diagnostic log retained for independent score-usability event attribution.",
+        "vins_env_manifest.txt": "Runtime-environment provenance; not a numerical result artifact.",
+        "roscore.log": "Nonempty namespace-local ROS-master and bounded-cleanup provenance."
+      },
+      "expected_outputs": [
+        "vins_output/vio.csv",
+        "vins.log",
+        "ape.txt",
+        "replay_manifest.txt",
+        "vins_aqualoc_archaeo_external.yaml",
+        "aqualoc_archaeo10_pinhole.yaml",
+        "vins_env_manifest.txt",
+        "roscore.log",
+        "network_namespace_manifest.json",
+        "frontend_metrics.csv"
+      ],
+      "semantic_checks": [
+        {
+          "type": "vins_trajectory",
+          "path": "vins_output/vio.csv",
+          "min_rows": 2
+        },
+        {
+          "type": "file_sha256",
+          "path": "vins_aqualoc_archaeo_external.yaml",
+          "sha256": "46db57acf32b1a8f70cfbe67656b7f8544fd7c761e9f79e3c1832e1cce959370"
+        },
+        {
+          "type": "file_sha256",
+          "path": "aqualoc_archaeo10_pinhole.yaml",
+          "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5"
+        },
+        {
+          "type": "replay_manifest",
+          "path": "replay_manifest.txt",
+          "values": {
+            "run_dir": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_systemfair_a10_finalonline_v4_backend_recovery_feed0000_2800_score2400_2800_external_klt",
+            "raw_bag": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v1/raw/archaeo10_0000_2800.bag",
+            "play_bag": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/frontends/klt_input_adoption/features.bag",
+            "vins_csv": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_systemfair_a10_finalonline_v4_backend_recovery_feed0000_2800_score2400_2800_external_klt/vins_output/vio.csv"
+          }
+        },
+        {
+          "type": "ape_kv",
+          "path": "ape.txt",
+          "required_keys": [
+            "matched",
+            "duration_s",
+            "max_timestamp_error_s",
+            "se3_ape_rmse_m",
+            "se3_ape_median_m",
+            "se3_ape_max_m",
+            "rpe_delta_s",
+            "rpe_pairs",
+            "rpe_trans_rmse_m",
+            "rpe_trans_median_m",
+            "rpe_trans_max_m",
+            "output_poses",
+            "output_duration_s",
+            "expected_duration_s",
+            "output_coverage_ratio",
+            "first_output_delay_s",
+            "last_output_drop_s",
+            "median_output_dt_s",
+            "max_output_gap_s",
+            "large_output_gap_count",
+            "init_success",
+            "tracking_lost_count_proxy",
+            "log_linear_solver_failures",
+            "log_failure_mentions",
+            "log_restart_mentions",
+            "log_waiting_mentions"
+          ],
+          "integer_keys": [
+            "matched",
+            "rpe_pairs",
+            "output_poses",
+            "large_output_gap_count",
+            "init_success",
+            "tracking_lost_count_proxy",
+            "log_linear_solver_failures",
+            "log_failure_mentions",
+            "log_restart_mentions",
+            "log_waiting_mentions"
+          ],
+          "exact_keys": true
+        },
+        {
+          "type": "network_namespace_manifest",
+          "path": "network_namespace_manifest.json",
+          "expected_host_network_namespace": "net:[4026531840]",
+          "expected_host_user_namespace": "user:[4026531837]",
+          "formal_port": 11981,
+          "backend_argv_sha256": "90e9f6df85856b2ee6c3ef189662fa479765ce1910096135301f278d8cdab5d6"
+        },
+        {
+          "type": "file_sha256",
+          "path": "frontend_metrics.csv",
+          "sha256": "ef86317bdb97b272955fe07de8f090c7e2313e4193028d974ecd7e4853030a99"
+        }
+      ],
+      "authority_identity_keys": [
+        "unshare",
+        "python3_8",
+        "network_namespace_entry",
+        "ip",
+        "bash",
+        "dedicated_archaeology_runner",
+        "setsid",
+        "sleep",
+        "readlink",
+        "record_vins_env",
+        "wait_for_subscribers",
+        "legacy_ape_evaluator",
+        "vins_node",
+        "vins_library",
+        "vins_camera_models_library",
+        "vins_setup_bash",
+        "vins_setup_sh",
+        "vins_setup_utility",
+        "ros_setup_bash",
+        "ros_setup_sh",
+        "ros_setup_utility",
+        "rosbag_cli",
+        "roscore_cli",
+        "rosmaster_cli",
+        "rosparam_cli",
+        "rosrun_cli",
+        "rosout_node",
+        "raw_bag",
+        "raw_audit",
+        "raw_tar",
+        "ground_truth",
+        "coreutils_cp",
+        "coreutils_realpath",
+        "coreutils_rm",
+        "coreutils_mkdir",
+        "coreutils_cat",
+        "coreutils_basename",
+        "coreutils_dirname",
+        "coreutils_tee",
+        "coreutils_date",
+        "hostname",
+        "rospack_cli",
+        "coreutils_stat",
+        "coreutils_md5sum",
+        "sed",
+        "coreutils_uname",
+        "coreutils_mktemp",
+        "grep",
+        "awk",
+        "rosbash_source",
+        "ros_catkin_marker",
+        "vins_catkin_marker",
+        "dave_catkin_marker",
+        "uuv_catkin_marker",
+        "ros_environment_hook_00",
+        "ros_environment_hook_01",
+        "ros_environment_hook_02",
+        "ros_environment_hook_03",
+        "ros_environment_hook_04",
+        "ros_environment_hook_05",
+        "ros_environment_hook_06",
+        "ros_environment_hook_07",
+        "ros_environment_hook_08",
+        "ros_environment_hook_09",
+        "ros_environment_hook_10",
+        "ros_environment_hook_11",
+        "ros_environment_hook_12",
+        "ros_environment_hook_13",
+        "ros_environment_hook_14",
+        "v3_execution_lock",
+        "v3_klt_receipt",
+        "v3_klt_claim",
+        "v3_klt_log",
+        "v3_klt_features_bag",
+        "v3_klt_frontend_metrics",
+        "v3_klt_camera_yaml",
+        "v3_klt_adoption_manifest"
+      ],
+      "dependency_artifacts": {},
+      "external_input_bindings": {
+        "feature_bag": {
+          "identity_key": "v3_klt_features_bag",
+          "source_receipt_identity_key": "v3_klt_receipt",
+          "source_item_id": "klt_input_adoption"
+        },
+        "frontend_metrics": {
+          "identity_key": "v3_klt_frontend_metrics",
+          "source_receipt_identity_key": "v3_klt_receipt",
+          "source_item_id": "klt_input_adoption"
+        }
+      }
+    },
+    "aquafe_external_feature_context": {
+      "kind": "backend_replay",
+      "dependencies": [],
+      "isolation_policy": "loopback_only_network_namespace",
+      "machine_exclusive_cpu_scheduling": false,
+      "timeout_seconds": 600,
+      "argv": [
+        "/usr/bin/unshare",
+        "--user",
+        "--map-root-user",
+        "--net",
+        "/usr/bin/python3.8",
+        "/home/ma/AQUA-FE_WS/scripts/enter_samehistory_backend_netns_v4.py",
+        "--output-dir",
+        "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v4_backend_recovery/backends/aquafe_external_feature_context",
+        "--formal-port",
+        "11981",
+        "--host-network-namespace",
+        "net:[4026531840]",
+        "--host-user-namespace",
+        "user:[4026531837]",
+        "--",
+        "/usr/bin/bash",
+        "/home/ma/AQUA-FE_WS/scripts/run_aqualoc_archaeo_vins_eval_v4_backend_recovery.sh",
+        "external",
+        "10",
+        "0",
+        "2800",
+        "hybrid_xfeat",
+        "2"
+      ],
+      "env": {
+        "ROOT": "/home/ma/AQUA-FE_WS",
+        "VINS_WS": "/home/ma/SLAM/VINS-Fusion-origin",
+        "AQUALOC_ROOT": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences",
+        "RAW_TAR": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_10_raw_data.tar.gz",
+        "GT_TXT": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_groundtruth_files/new_archaeo_colmap_traj_sequence_10.txt",
+        "RAW_BAG": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v1/raw/archaeo10_0000_2800.bag",
+        "RUN_VINS": "1",
+        "FORCE_RAW": "0",
+        "FORCE_EXPORT": "0",
+        "VINS_NODE_BIN": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/vins/vins_node",
+        "WAIT_FOR_VINS_SUBSCRIBERS": "1",
+        "WAIT_FOR_VINS_SUBSCRIBERS_TIMEOUT": "20",
+        "VINS_MULTIPLE_THREAD": "1",
+        "AQUALOC_BODY_T_CAM0_MODE": "imu_cam",
+        "VINS_TD": "-0.053694112369382575",
+        "VINS_ESTIMATE_TD": "0",
+        "VINS_MAX_SOLVER_TIME": "0.04",
+        "VINS_MAX_NUM_ITERATIONS": "8",
+        "PLAY_RATE": "1.0",
+        "ROSBAG_PLAY_DELAY": "3",
+        "ROSBAG_WAIT_FOR_SUBSCRIBERS": "0",
+        "POST_PLAY_SLEEP": "8",
+        "BACKEND_REPLAY_ONLY": "0",
+        "TAG": "systemfair_a10_finalonline_v4_backend_recovery_feed0000_2800_score2400_2800_aquafe_finalonline_xfeat_lineage",
+        "PORT": "11981",
+        "ROS_HOME": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v4_backend_recovery/runtime/aquafe_external_feature_context/ros_home",
+        "ROS_LOG_DIR": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v4_backend_recovery/runtime/aquafe_external_feature_context/ros_log",
+        "FEATURE_BAG_OVERRIDE": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/frontends/aquafe_finalonline/full_merged.bag"
+      },
+      "command_contract": {
+        "cwd": "/home/ma/AQUA-FE_WS",
+        "argv_sha256": "743f5a36a23aece218c834fcf840fd309482366b20962d06cfe9bf4bf380298d",
+        "env_sha256": "aef48252d87e0e0958972d6f9484335f76ecafc7e6e259e1f8398965acb316cd"
+      },
+      "output_dir": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v4_backend_recovery/backends/aquafe_external_feature_context",
+      "workspace_link": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_systemfair_a10_finalonline_v4_backend_recovery_feed0000_2800_score2400_2800_aquafe_finalonline_xfeat_lineage",
+      "output_tree_policy": "REQUIRE_EMPTY_BEFORE_CLAIM",
+      "archival_outputs": {
+        "vins.log": "Raw VINS diagnostic log retained for independent score-usability event attribution.",
+        "vins_env_manifest.txt": "Runtime-environment provenance; not a numerical result artifact.",
+        "roscore.log": "Nonempty namespace-local ROS-master and bounded-cleanup provenance."
+      },
+      "expected_outputs": [
+        "vins_output/vio.csv",
+        "vins.log",
+        "ape.txt",
+        "replay_manifest.txt",
+        "vins_aqualoc_archaeo_external.yaml",
+        "aqualoc_archaeo10_pinhole.yaml",
+        "vins_env_manifest.txt",
+        "roscore.log",
+        "network_namespace_manifest.json"
+      ],
+      "semantic_checks": [
+        {
+          "type": "vins_trajectory",
+          "path": "vins_output/vio.csv",
+          "min_rows": 2
+        },
+        {
+          "type": "file_sha256",
+          "path": "vins_aqualoc_archaeo_external.yaml",
+          "sha256": "4f45c72928f6437b134844954c038bbc5dd9cefdf52dea35dc2bfba11c33ff11"
+        },
+        {
+          "type": "file_sha256",
+          "path": "aqualoc_archaeo10_pinhole.yaml",
+          "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5"
+        },
+        {
+          "type": "replay_manifest",
+          "path": "replay_manifest.txt",
+          "values": {
+            "run_dir": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_systemfair_a10_finalonline_v4_backend_recovery_feed0000_2800_score2400_2800_aquafe_finalonline_xfeat_lineage",
+            "raw_bag": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v1/raw/archaeo10_0000_2800.bag",
+            "play_bag": "/mnt/data/AQUA-FE_WS/experiments/a10_samehistory_system_v3_recovery/frontends/aquafe_finalonline/full_merged.bag",
+            "vins_csv": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_systemfair_a10_finalonline_v4_backend_recovery_feed0000_2800_score2400_2800_aquafe_finalonline_xfeat_lineage/vins_output/vio.csv"
+          }
+        },
+        {
+          "type": "ape_kv",
+          "path": "ape.txt",
+          "required_keys": [
+            "matched",
+            "duration_s",
+            "max_timestamp_error_s",
+            "se3_ape_rmse_m",
+            "se3_ape_median_m",
+            "se3_ape_max_m",
+            "rpe_delta_s",
+            "rpe_pairs",
+            "rpe_trans_rmse_m",
+            "rpe_trans_median_m",
+            "rpe_trans_max_m",
+            "output_poses",
+            "output_duration_s",
+            "expected_duration_s",
+            "output_coverage_ratio",
+            "first_output_delay_s",
+            "last_output_drop_s",
+            "median_output_dt_s",
+            "max_output_gap_s",
+            "large_output_gap_count",
+            "init_success",
+            "tracking_lost_count_proxy",
+            "log_linear_solver_failures",
+            "log_failure_mentions",
+            "log_restart_mentions",
+            "log_waiting_mentions"
+          ],
+          "integer_keys": [
+            "matched",
+            "rpe_pairs",
+            "output_poses",
+            "large_output_gap_count",
+            "init_success",
+            "tracking_lost_count_proxy",
+            "log_linear_solver_failures",
+            "log_failure_mentions",
+            "log_restart_mentions",
+            "log_waiting_mentions"
+          ],
+          "exact_keys": true
+        },
+        {
+          "type": "network_namespace_manifest",
+          "path": "network_namespace_manifest.json",
+          "expected_host_network_namespace": "net:[4026531840]",
+          "expected_host_user_namespace": "user:[4026531837]",
+          "formal_port": 11981,
+          "backend_argv_sha256": "61845dd7a95ff6f01d0ec7f89f3732435d7ce1dbad8c53d9f29c4ba0a39790d7"
+        }
+      ],
+      "authority_identity_keys": [
+        "unshare",
+        "python3_8",
+        "network_namespace_entry",
+        "ip",
+        "bash",
+        "dedicated_archaeology_runner",
+        "setsid",
+        "sleep",
+        "readlink",
+        "record_vins_env",
+        "wait_for_subscribers",
+        "legacy_ape_evaluator",
+        "vins_node",
+        "vins_library",
+        "vins_camera_models_library",
+        "vins_setup_bash",
+        "vins_setup_sh",
+        "vins_setup_utility",
+        "ros_setup_bash",
+        "ros_setup_sh",
+        "ros_setup_utility",
+        "rosbag_cli",
+        "roscore_cli",
+        "rosmaster_cli",
+        "rosparam_cli",
+        "rosrun_cli",
+        "rosout_node",
+        "raw_bag",
+        "raw_audit",
+        "raw_tar",
+        "ground_truth",
+        "coreutils_cp",
+        "coreutils_realpath",
+        "coreutils_rm",
+        "coreutils_mkdir",
+        "coreutils_cat",
+        "coreutils_basename",
+        "coreutils_dirname",
+        "coreutils_tee",
+        "coreutils_date",
+        "hostname",
+        "rospack_cli",
+        "coreutils_stat",
+        "coreutils_md5sum",
+        "sed",
+        "coreutils_uname",
+        "coreutils_mktemp",
+        "grep",
+        "awk",
+        "rosbash_source",
+        "ros_catkin_marker",
+        "vins_catkin_marker",
+        "dave_catkin_marker",
+        "uuv_catkin_marker",
+        "ros_environment_hook_00",
+        "ros_environment_hook_01",
+        "ros_environment_hook_02",
+        "ros_environment_hook_03",
+        "ros_environment_hook_04",
+        "ros_environment_hook_05",
+        "ros_environment_hook_06",
+        "ros_environment_hook_07",
+        "ros_environment_hook_08",
+        "ros_environment_hook_09",
+        "ros_environment_hook_10",
+        "ros_environment_hook_11",
+        "ros_environment_hook_12",
+        "ros_environment_hook_13",
+        "ros_environment_hook_14",
+        "v3_execution_lock",
+        "v3_aquafe_receipt",
+        "v3_aquafe_claim",
+        "v3_aquafe_log",
+        "v3_aquafe_full_merged_bag",
+        "v3_aquafe_sidecar_bag",
+        "v3_aquafe_stats_csv"
+      ],
+      "dependency_artifacts": {},
+      "external_input_bindings": {
+        "feature_bag": {
+          "identity_key": "v3_aquafe_full_merged_bag",
+          "source_receipt_identity_key": "v3_aquafe_receipt",
+          "source_item_id": "aquafe_build"
+        }
+      }
+    }
+  }
+}

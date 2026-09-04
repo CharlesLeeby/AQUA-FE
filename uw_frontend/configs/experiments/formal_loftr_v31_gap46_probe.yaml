@@ -1,0 +1,6 @@
+extends: formal_loftr_v31_repro_frontend.yaml
+
+hybrid:
+  # Align the second LoFTR proposal with the historical A06 frame-30 burst
+  # by skipping the raw-frame-55 geometry-bad proposal.
+  semidense_fallback_min_frame_gap: 46

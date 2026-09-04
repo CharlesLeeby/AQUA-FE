@@ -1,0 +1,195 @@
+{
+  "schema_version": "aqua-fe-supervins-mh01-full-trajectory-gt-evaluation-execution-lock-v1",
+  "created_at": "2026-08-21T01:07:23+08:00",
+  "status": "LOCKED_PRESTART_AWAITING_SEPARATE_ROOT_EXECUTION_AUTHORITY",
+  "scientific_role": "ONE_SHOT_PURE_GT_EVALUATION_OF_ONE_SEALED_OFFICIAL_MH01_TRAJECTORY",
+  "protocol": {
+    "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_gt_evaluation_freeze_v1.json",
+    "sha256": "0413dc9f5c17036de8cf765cdb13d84c4ef873db3997247f03e75d860b4298c6",
+    "size_bytes": 19442
+  },
+  "runner": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_published_supervins_v1_official_euroc_mh01_full_trajectory_gt_v1.py",
+    "sha256": "1d94fe884c4221199d32fabb2066c5dbb8fdaf0fbf59e926eb1123d9a9ae68c3",
+    "size_bytes": 86702
+  },
+  "tests": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_evaluate_published_supervins_v1_official_euroc_mh01_full_trajectory_gt_v1.py",
+    "sha256": "13df8f776de69f85eb85e1580cfe221e45aaee70928b64087ba91d42b5b56514",
+    "size_bytes": 21140,
+    "synthetic_and_contract_test_count": 36,
+    "test_receipt": {
+      "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_gt_evaluation_test_receipt_v1.json",
+      "sha256": "f000dee309b1071ecddedf9d2912d6a3f724efe8f121c6f0877482de5683bf79",
+      "size_bytes": 2721
+    }
+  },
+  "reference_core": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/trajectory_eval_core.py",
+    "sha256": "aa9ac4da81df7298d1f1c369548ca98a57235916004337cad66f4cf331560635",
+    "size_bytes": 27945
+  },
+  "reference_core_tests": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_trajectory_eval_core.py",
+    "sha256": "e53f136b47e97fc2a391f23d42af208a669f4ead77483474d2cdf085102c1663",
+    "size_bytes": 9527
+  },
+  "runtime": {
+    "python_version": "3.8.10",
+    "numpy_version": "1.24.4",
+    "python_command_path": "/usr/bin/python3",
+    "resolved_python_binary": "/usr/bin/python3.8",
+    "native_linear_algebra_files_are_in_pinned_files": true,
+    "network_required": false
+  },
+  "controller_command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/ma/AQUA-FE_WS/scripts/evaluate_published_supervins_v1_official_euroc_mh01_full_trajectory_gt_v1.py",
+    "--action",
+    "run",
+    "--authorization-token",
+    "SUPERVINS_STAGE5_MH01_GT_EVALUATION_ATTEMPT_001_START_ONCE"
+  ],
+  "authorization_token": "SUPERVINS_STAGE5_MH01_GT_EVALUATION_ATTEMPT_001_START_ONCE",
+  "authorization_token_sha256": "0adea3dcd41360cd9e6d7eff4380a648dc09e5f970a62b39cf8585fc4c6b5c69",
+  "fresh_evidence_root": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_gt_evaluation_20260821_r1",
+  "attempt": "attempt_001",
+  "maximum_evaluator_starts": 1,
+  "retry_authorized": false,
+  "authority_contract": {
+    "path": "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_gt_evaluation_execution_authority_v1.json",
+    "required_schema": "aqua-fe-supervins-mh01-full-trajectory-gt-evaluation-root-authority-v1",
+    "required_status": "AUTHORIZED_EXACTLY_ONE_PURE_GT_EVALUATION_ATTEMPT_001_START",
+    "must_be_created_separately_after_prestart_review": true,
+    "must_pin_this_lock_and_final_protocol_runner_tests": true,
+    "currently_required_absent": true
+  },
+  "pinned_file_count": 27,
+  "pinned_files_canonical_sha256": "532007ec46267f3e0e050acce2eea1fa07ca71f55ca7fdfef0318c7c6c86c896",
+  "pinned_files": {
+    "/home/ma/.local/lib/python3.8/site-packages/numpy.libs/libgfortran-040039e1.so.5.0.0": {
+      "sha256": "47ab3b68295b0a3ce8990a448de7fab11abddbc160f8895972ca9aa712cf86d0",
+      "size_bytes": 2686064
+    },
+    "/home/ma/.local/lib/python3.8/site-packages/numpy.libs/libopenblas64_p-r0-15028c96.3.21.so": {
+      "sha256": "554bde1d8a0c71d8dc21ae74de05c44da4fff5dbc6791a819f6acf5adfe90bd9",
+      "size_bytes": 32955056
+    },
+    "/home/ma/.local/lib/python3.8/site-packages/numpy.libs/libquadmath-96973f99.so.0.0.0": {
+      "sha256": "97cda85ddb5163e2da6e1edb4e1d6b557833a99a40eda079ae37e5039465b65d",
+      "size_bytes": 247608
+    },
+    "/home/ma/.local/lib/python3.8/site-packages/numpy/__init__.py": {
+      "sha256": "edd18feff93348beb02f392959e80b9fda1875a842d7f9760847f32386fdfd48",
+      "size_bytes": 16174
+    },
+    "/home/ma/.local/lib/python3.8/site-packages/numpy/core/_multiarray_umath.cpython-38-x86_64-linux-gnu.so": {
+      "sha256": "190fed599b26cf689e22f198faf97d632f1d19b8aa75fdf5ca7fb96d37d97e37",
+      "size_bytes": 6311424
+    },
+    "/home/ma/.local/lib/python3.8/site-packages/numpy/linalg/_umath_linalg.cpython-38-x86_64-linux-gnu.so": {
+      "sha256": "77d989daf30e91b14b657f0a125377d1c5bf49d7d950522baefdce9a7a93f927",
+      "size_bytes": 230272
+    },
+    "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_full_trajectory_20260817_r1/attempt_001/run_result.json": {
+      "sha256": "d8cd8f74e0e7ddfc4bf1d1c61fd43696112e47d184949ce1a209aa926bfec22e",
+      "size_bytes": 66563
+    },
+    "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_full_trajectory_20260817_r1/attempt_001/trajectory_output/vio.csv": {
+      "sha256": "df2f194453a85c4d6938edbfe45fe48fc67a547e0efb9f2db4c7b1d4a4bfe22d",
+      "size_bytes": 152099
+    },
+    "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_config_v1/euroc_mono_imu_config.yaml": {
+      "sha256": "bf0d2500e60a96b09f50defbd1299b12d62cf85ce581f6a3b8da743f1b84b32b",
+      "size_bytes": 3520
+    },
+    "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_execution_authority_v1.json": {
+      "sha256": "de46a37159d896bafd801d06cf6ba9abe49f5530d678fd6bc333e8079a4a9036",
+      "size_bytes": 1812
+    },
+    "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_execution_lock_v1.json": {
+      "sha256": "889d7a98e5f3885d64dcb936650657f1bd312a5d6b59a1a0dfd91439482eb93a",
+      "size_bytes": 2896
+    },
+    "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_gt_evaluation_freeze_v1.json": {
+      "sha256": "0413dc9f5c17036de8cf765cdb13d84c4ef873db3997247f03e75d860b4298c6",
+      "size_bytes": 19442
+    },
+    "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_gt_evaluation_test_receipt_v1.json": {
+      "sha256": "f000dee309b1071ecddedf9d2912d6a3f724efe8f121c6f0877482de5683bf79",
+      "size_bytes": 2721
+    },
+    "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_prestart_freeze_v1.json": {
+      "sha256": "0393ce030ee862f0d0448f7d96e7e3283552a1d3d010cb2d8c78f74e763b5a68",
+      "size_bytes": 18387
+    },
+    "/home/ma/AQUA-FE_WS/scripts/evaluate_published_supervins_v1_official_euroc_mh01_full_trajectory_gt_v1.py": {
+      "sha256": "1d94fe884c4221199d32fabb2066c5dbb8fdaf0fbf59e926eb1123d9a9ae68c3",
+      "size_bytes": 86702
+    },
+    "/home/ma/AQUA-FE_WS/scripts/tests/test_evaluate_published_supervins_v1_official_euroc_mh01_full_trajectory_gt_v1.py": {
+      "sha256": "13df8f776de69f85eb85e1580cfe221e45aaee70928b64087ba91d42b5b56514",
+      "size_bytes": 21140
+    },
+    "/home/ma/AQUA-FE_WS/scripts/tests/test_trajectory_eval_core.py": {
+      "sha256": "e53f136b47e97fc2a391f23d42af208a669f4ead77483474d2cdf085102c1663",
+      "size_bytes": 9527
+    },
+    "/home/ma/AQUA-FE_WS/scripts/trajectory_eval_core.py": {
+      "sha256": "aa9ac4da81df7298d1f1c369548ca98a57235916004337cad66f4cf331560635",
+      "size_bytes": 27945
+    },
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/src/SuperVINS/supervins_estimator/src/utility/visualization.cpp": {
+      "sha256": "a82c242b237390c0a026bedc5deb719b3d824c22e6f58c215b07bb6d392871ef",
+      "size_bytes": 17611
+    },
+    "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy/mav0/cam0/data.csv": {
+      "sha256": "62db628a8e6358f43df81e66ddb4597ab40b19a10f3d6cd80cc04d590b5adb12",
+      "size_bytes": 165716
+    },
+    "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy/mav0/imu0/sensor.yaml": {
+      "sha256": "91e6c408416f549f87e7405830b83849cca10521f3d3fc8bb3de862c2bc882d0",
+      "size_bytes": 695
+    },
+    "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy/mav0/state_groundtruth_estimate0/data.csv": {
+      "sha256": "aae2d7c5684724c8afe364d2fd8499a6ed77a9169adf03736531f67d8e7b2117",
+      "size_bytes": 6225269
+    },
+    "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy/mav0/state_groundtruth_estimate0/sensor.yaml": {
+      "sha256": "e02cacbad1b654908f1fad9f8997672a2928ec348840225919259f73f1084a95",
+      "size_bytes": 489
+    },
+    "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/MH01/MH_01_easy_input_inventory_v1.json": {
+      "sha256": "a6009f56146fc675131f44fd2d355092b37035958e6d1e73b87ce21130427ff6",
+      "size_bytes": 664378
+    },
+    "/mnt/data/AQUA-FE_WS/datasets/official_euroc_v1/downloads/MH_01_easy_download_manifest_v1.json": {
+      "sha256": "3cbf9f91c286fee760eb620cb6ee97f6461e5df5a7f1700a6c17514a0ea71d4b",
+      "size_bytes": 726
+    },
+    "/usr/bin/python3": {
+      "sha256": "298a9e830ed52f36c299427565485d717d1ce0179c0597cc16560513eb780b06",
+      "size_bytes": 5490456
+    },
+    "/usr/bin/python3.8": {
+      "sha256": "298a9e830ed52f36c299427565485d717d1ce0179c0597cc16560513eb780b06",
+      "size_bytes": 5490456
+    }
+  },
+  "prestart_freshness": {
+    "evidence_root_required_absent": true,
+    "authority_required_absent_until_separate_root_confirmation": true,
+    "evaluation_start_claim_required_absent": true,
+    "stage4_ros_or_model_processes_required_absent": true
+  },
+  "claim_boundary": {
+    "pure_gt_computation_only": true,
+    "model_or_ros_rerun_authorized": false,
+    "cross_system_comparison_authorized": false,
+    "superiority_claim_authorized": false,
+    "statistical_inference_authorized": false,
+    "sim3_may_replace_primary": false,
+    "next_stage_automatically_authorized": false
+  }
+}

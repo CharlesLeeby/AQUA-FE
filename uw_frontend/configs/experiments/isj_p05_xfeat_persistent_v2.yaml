@@ -1,0 +1,10 @@
+extends: isj_p05_xfeat_pairwise_nativeq.yaml
+
+# Additive repair of the pure pairwise XFeat baseline.  The original P05/P07 M
+# artifacts remain unchanged and retain their initialization-failure meaning.
+pairwise:
+  persistent_id_mode: continuity_first_v2
+
+xfeat:
+  confidence_mode: cosine
+  cache_sparse_features: true

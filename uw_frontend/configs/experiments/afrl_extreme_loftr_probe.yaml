@@ -1,0 +1,65 @@
+extends: loftr_extreme_only_frontend.yaml
+
+hybrid:
+  # Probe for AFRL low-coverage/high-dropout underwater windows.
+  #
+  # The default LoFTR-extreme profile is calibrated for A06 planar textureless
+  # walls. AFRL cemetery FL has severe KLT churn after adaptive CLAHE, but the
+  # local texture score is not always low enough to pass that wall-specific
+  # gate. This probe lets LoFTR try on low-texture/high-dropout mode while
+  # keeping the acceptance side strict: LoFTR must add grid coverage and remain
+  # neutral under F/H residual checks.
+  source_aware_loftr_modes:
+    - low_texture
+    - low_coverage_recovery
+    - planar_near_wall
+    - extreme_textureless
+
+  # Allow degraded/high-dropout frames whose raw flat-region score is not
+  # A06-wall-like after CLAHE, but still require low-to-moderate grid texture.
+  loftr_extreme_max_grid_texture_score: 1.01
+  loftr_extreme_min_flat_region_ratio: 0.00
+  loftr_extreme_min_degradation: 0.00
+  three_layer_extreme_max_grid_texture_score: 1.01
+  three_layer_extreme_min_flat_region_ratio: 0.00
+  three_layer_extreme_max_grid_coverage: 0.82
+  three_layer_low_texture_max_grid_texture_score: 1.01
+  three_layer_low_texture_min_flat_region_ratio: 0.00
+  three_layer_low_texture_min_degradation: 0.00
+
+  # AFRL windows have very short track ages during KLT churn, so the mature
+  # sparse-homography shortcut should not be required before a LoFTR proposal.
+  loftr_sparse_min_median_track_age: 2.0
+  loftr_sparse_min_h_inlier_ratio: 0.80
+  loftr_sparse_min_planar_score: 0.65
+  loftr_sparse_max_homography_error: 4.0
+
+  # Keep accepted LoFTR batches small and geometry-neutral.
+  semidense_fallback_min_grid_coverage: 0.82
+  semidense_fallback_min_degradation: 0.00
+  semidense_fallback_min_flat_region_ratio: 0.00
+  semidense_fallback_min_grid_texture_score: 1.01
+  semidense_fallback_min_frame_gap: 6
+  semidense_fallback_max_new: 36
+  semidense_fallback_sidecar_max_extra: 36
+  semidense_fallback_max_fraction: 0.12
+  semidense_fallback_reserve_gftt_features: 40
+  semidense_acceptance_min_new_tracks: 3
+  semidense_acceptance_min_grid_gain: 0.020
+  semidense_acceptance_min_new_cell_ratio: 0.25
+  semidense_acceptance_max_f_inlier_drop: 0.02
+  semidense_acceptance_max_h_inlier_drop: 0.02
+  semidense_acceptance_max_epipolar_error_ratio: 1.03
+  semidense_acceptance_max_homography_error_ratio: 1.06
+  semidense_candidate_min_quality: 0.20
+  semidense_candidate_min_ncc: 0.55
+  semidense_candidate_max_fb_error: 0.80
+  semidense_candidate_max_epipolar_error: 1.20
+  semidense_candidate_max_homography_error: 2.20
+
+  promotion_loftr_min_quality: 0.24
+  promotion_loftr_max_fb_error: 0.80
+  promotion_loftr_min_ncc: 0.55
+  promotion_loftr_max_grid_texture_score: 1.01
+  promotion_loftr_min_flat_region_ratio: 0.00
+  promotion_loftr_min_h_inlier_ratio: 0.80

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support_dual_scale.py", line 306, in <module>
+    raise SystemExit(main())
+  File "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support_dual_scale.py", line 222, in main
+    body.positions, body.quaternions_xyzw, base.load_body_t_sensor(arm_configs[name])
+  File "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support.py", line 184, in load_body_t_sensor
+    raise ValueError(f"could not open OpenCV YAML: {config_path}")
+ValueError: could not open OpenCV YAML: /home/ma/AQUA-FE_WS/artifacts/frontend_persistence_singlechain_v2/backend_canonical/h07_s000_d050/vins_same_backend.yaml

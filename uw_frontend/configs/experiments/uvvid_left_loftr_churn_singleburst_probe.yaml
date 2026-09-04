@@ -1,0 +1,6 @@
+extends: uvvid_left_loftr_churn_light_probe.yaml
+
+hybrid:
+  # Native-640 long-window probe: let one early LoFTR burst enter and then
+  # keep later frames classical so export remains cheap enough for VINS tests.
+  semidense_fallback_min_frame_gap: 999

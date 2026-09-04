@@ -1,0 +1,5 @@
+comparator,metric,n_windows,wins,ties,losses,median_ratio,median_percent_change,bootstrap95_ratio_low,bootstrap95_ratio_high,sign_test_two_sided_p,holm_adjusted_p
+klt,ape,0,0,0,0,nan,nan,nan,nan,nan,1.0
+klt,rpe,0,0,0,0,nan,nan,nan,nan,nan,nan
+splg,ape,0,0,0,0,nan,nan,nan,nan,nan,1.0
+splg,rpe,0,0,0,0,nan,nan,nan,nan,nan,nan

@@ -1,0 +1,6 @@
+extends: formal_loftr_v31_repro_frontend.yaml
+
+hybrid:
+  # Probe a sparser LoFTR schedule: keep the early support burst, then avoid
+  # mid-initialization candidate churn until the old frame-30 neighborhood.
+  semidense_fallback_min_frame_gap: 40

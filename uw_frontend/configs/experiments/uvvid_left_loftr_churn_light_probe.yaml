@@ -1,0 +1,16 @@
+extends: uvvid_left_loftr_churn_probe.yaml
+
+hybrid:
+  # Lighter native-640 sweep profile: fewer LoFTR attempts and smaller batches,
+  # while skipped frames may still advance LK confirmation between exports.
+  semidense_fallback_min_frame_gap: 10
+  semidense_fallback_min_grid_coverage: 1.01
+  semidense_fallback_max_new: 12
+  semidense_fallback_sidecar_max_extra: 12
+  semidense_acceptance_subset_max_count: 3
+  learned_confirmation_max_pending: 180
+  learned_confirmation_max_confirmed: 24
+
+  # UVVID native 640 often reports the same degeneracy evidence at a 1/3
+  # history ratio; treat that as persistent enough for this screening probe.
+  klt_degeneracy_loftr_min_bad_history_ratio: 0.30

@@ -1,0 +1,72 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-phase-d-prestart-incident-v1",
+  "created_at": "2026-08-16T21:57:37+08:00",
+  "updated_at": "2026-08-16T22:00:46+08:00",
+  "status": "RECORDED_PRESTART_REPREPARATION_ATTEMPT_001_CURRENT_FINAL",
+  "scope": {
+    "phase": "D_OFFICIAL_EUROC_MH01_DEVELOPMENT_RUNABILITY",
+    "parent_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_two_stage_runability_freeze_v1.json",
+      "sha256": "46d599746696ce492bb7029db82778f1bf0d59b803939ec61f54db8a847dae30",
+      "size_bytes": 4621
+    },
+    "final_input_adoption": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_mh01_input_adoption_v1.json",
+      "sha256": "cd45e7c39f322bc60d840ae18816584fce024d8220e89ef0698915af51c4437d",
+      "size_bytes": 6622
+    }
+  },
+  "attempt_001": {
+    "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/dev_euroc_mh01/attempt_001",
+    "prepared_manifest": {
+      "sha256": "c0932a6f97794920681343b8a0fefdd015cf045e5e9494e21c0dbefb96204b85",
+      "size_bytes": 124158
+    },
+    "derived_config": {
+      "sha256": "0ba113fe440ed4bd5d4205457e0667e2c8ce987a327978e02b0c19f424870aec",
+      "size_bytes": 2675
+    },
+    "run_local_onnx": {
+      "sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5",
+      "size_bytes": 132238602
+    },
+    "run_local_cache_seed": {
+      "sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7",
+      "size_bytes": 853319
+    },
+    "prepared_at_utc": "2026-08-16T13:57:51+00:00",
+    "frozen_profile_sha256": "9030e692fcfa3fe881c9af82ae41dae7adeec9c849fa310e188c8157cbebaa18",
+    "prepared_against_final_input_adoption_and_runner_crossbind": true,
+    "process_start_claim_absent": true,
+    "run_result_absent": true,
+    "stdout_log_absent": true,
+    "stderr_log_absent": true,
+    "result_directory_absent": true,
+    "hfnet_process_start_count": 0,
+    "scientific_output_observed": false,
+    "disposition": "CURRENT_PREPARED_NAMESPACE_MAY_START_EXACTLY_ONCE_AFTER_FINAL_CHECK"
+  },
+  "prior_preparation_observation": {
+    "prepared_manifest_sha256": "cb1832b2b2fa66932d9ffee08d2ad05db96bd4767db9b9186dcbf496ffea04ad",
+    "prepared_manifest_size_bytes": 121192,
+    "observation_was_not_retained_on_disk": true,
+    "reason": "A prestart cleanup and reprepare completed before the preserve instruction reached the runner worker.",
+    "hfnet_process_start_count_before_reprepare": 0,
+    "scientific_output_observed": false,
+    "reconstruction_or_republication_authorized": false
+  },
+  "continuation": {
+    "attempt_001_current_preparation_may_start_after_exact_check": true,
+    "attempt_001_maximum_hfnet_process_starts": 1,
+    "attempt_001_exact_start_token": "PHASE_D_MH01_ATTEMPT_001_START_ONCE",
+    "attempt_002_reserved_or_authorized": false,
+    "algorithm_or_threshold_change_authorized": false,
+    "phase_f_underwater_execution_authorized": false,
+    "further_attempt_001_deletion_or_mutation_before_start_authorized": false
+  },
+  "claim_boundary": {
+    "this_incident_is_not_a_scientific_result": true,
+    "this_incident_does_not_authorize_formal_adoption": true,
+    "this_incident_only_adopts_the_current_prestart_development_preparation": true
+  }
+}

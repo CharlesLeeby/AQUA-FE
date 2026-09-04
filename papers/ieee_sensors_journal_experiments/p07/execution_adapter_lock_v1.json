@@ -1,0 +1,145 @@
+{
+  "adapter_lock_hash": "8db890ed77885e3359e29ec8d22edb7c9ef07d422ef1e4254b0ee01a2be494be",
+  "artifacts": [
+    {
+      "path": "papers/ieee_sensors_journal_experiments/method_lock.json",
+      "sha256": "eae7a0fc6e94766a119be6abe5763fbfba8f64d9663f45f2f48ee591cf62a3cf",
+      "size_bytes": 9634
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/protocol_v1_nativeq_v3.md",
+      "sha256": "4466cff65d9df2be4dab97350041c2c79f687e624e6b658fb734a70459222bda",
+      "size_bytes": 2978
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/arm_order.csv",
+      "sha256": "1afc17e256274d86725b146728cca51fd59df1a630e23c2c109a1cec2137c9f4",
+      "size_bytes": 34303
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/dataset_manifest_v4.csv",
+      "sha256": "aae68a271e2b9b258a3f91ba18a79eea1f37ab2dc373221be93cac814a493a00",
+      "size_bytes": 7348
+    },
+    {
+      "path": "papers/ieee_sensors_journal_experiments/environment_manifest_nativeq_v5_final.txt",
+      "sha256": "3a541136b7b112d5c480139383edd575558e54da61393079ac63260e90a6386b",
+      "size_bytes": 1484
+    },
+    {
+      "path": "scripts/check_b0_vins_origin_identity_v1.py",
+      "sha256": "1fb5f2f3d34e591d2b9988a6e4523f6ec681696f712590f5cb776b3463567840",
+      "size_bytes": 5374
+    },
+    {
+      "path": "scripts/check_b1_klt_nativeq_contract_v1.py",
+      "sha256": "8dafcb3e40278210e4fb545c5e19e347b69898cd45e5af3ec7736ceb682bad15",
+      "size_bytes": 3480
+    },
+    {
+      "path": "scripts/run_isj_b0_native_vins_guarded_v1.sh",
+      "sha256": "9603dbbb9c0b66dc6faaf86359035dfdbc3e51ad5f87f9c349c90bc8118f74ce",
+      "size_bytes": 4676
+    },
+    {
+      "path": "scripts/run_isj_b1_klt_nativeq_guarded_v1.sh",
+      "sha256": "6c112ebdb916becf615b0772c4474a119bf774a17b4f85391ceb88d46d0505d1",
+      "size_bytes": 5604
+    },
+    {
+      "path": "scripts/run_isj_nativeq_contract_guarded_v4.sh",
+      "sha256": "f4bffa30037261c0896bb4fd4f14929bc4445f854ca409ac82b6240ac4706373",
+      "size_bytes": 2217
+    },
+    {
+      "path": "scripts/run_p05_modern_xfeat_baseline_guarded_v2.sh",
+      "sha256": "6af0f33684a717fa8403cf668b03e5f3040592f11e1ccb2e6173cc86742945df",
+      "size_bytes": 4659
+    },
+    {
+      "path": "scripts/audit_whole_lineage_exact_drop_v1.py",
+      "sha256": "bf6ccbf47d3b6b1e4fdad8b9e8b49d17f9545b312ce64970b61ed6c56cdf71b4",
+      "size_bytes": 27756
+    },
+    {
+      "path": "scripts/run_ntnu_vins_eval.sh",
+      "sha256": "9f9c6f36b947185666d438309098a592c3675b93bf0ee1d5bc84357bae8ba422",
+      "size_bytes": 50834
+    },
+    {
+      "path": "scripts/run_aqualoc_archaeo_vins_eval.sh",
+      "sha256": "4ed3612d7a105ac0f1dab69a44f982381808d21cd93f25984dadb390b431cdfe",
+      "size_bytes": 52310
+    },
+    {
+      "path": "scripts/run_aqualoc_real_vins_eval.sh",
+      "sha256": "400d3287b3d0f168b89a05643587d19c353086c5821b94b4e738487025dd3e5a",
+      "size_bytes": 51054
+    },
+    {
+      "path": "scripts/run_afrl_cave_vins_eval.sh",
+      "sha256": "16966ce2663cf4dff5eb1bdc36c8c975a912dd3089da8dae9ae376799bd547da",
+      "size_bytes": 59481
+    },
+    {
+      "path": "scripts/build_p07_execution_adapter_lock_v1.py",
+      "sha256": "67be3b720bd5db118140c807686e6c6862081d80e509d9cb1c954aa9aece295a",
+      "size_bytes": 7425
+    },
+    {
+      "path": "scripts/tests/test_p07_b0_b1_execution_guards.py",
+      "sha256": "95ff6f7d2663eb7500a0a4f57db93d25373e3c7607b202b2baed65664dcf7b3c",
+      "size_bytes": 3281
+    },
+    {
+      "path": "scripts/tests/test_p07_execution_adapter_lock_v1.py",
+      "sha256": "03180058de26cb9b351b7309ba2755a68edc9de982676ee9031ac64ce8ec01cb",
+      "size_bytes": 961
+    }
+  ],
+  "entrypoints": {
+    "B0_native_vins_origin_v1": "scripts/run_isj_b0_native_vins_guarded_v1.sh",
+    "B1_klt_nativeq_v3": "scripts/run_isj_b1_klt_nativeq_guarded_v1.sh",
+    "D_legacy_exact_lineage_drop_v3": "scripts/audit_whole_lineage_exact_drop_v1.py",
+    "M_xfeat_pairwise_nativeq_v1": "scripts/run_p05_modern_xfeat_baseline_guarded_v2.sh",
+    "P_legacy_nativeq_xfeat_seedchain_v3": "scripts/run_isj_nativeq_contract_guarded_v4.sh"
+  },
+  "execution_boundary": {
+    "B0": "native VINS-origin path; no external feature export",
+    "B1": "fresh KLT export or hash-attested reuse under native-q",
+    "P_M": "existing final guarded entrypoints unchanged",
+    "mismatch": "reject arm; no mislabeled fallback result"
+  },
+  "final_method_lock_hash": "1d032e4d43b2a647626b40cef906144dcceab523126bfee3b345b05b4efb578d",
+  "guard_decisions": {
+    "B0_native_vins_origin_v1": {
+      "action": "ALLOW_B0_NATIVE",
+      "contract_hash": "39eaea6d26e6f5a881ef2b17b898cbda75c7aba8087ce447fe897e2fe0bdfce0",
+      "schema": "aqua-fe-b0-vins-origin-identity-decision-v1"
+    },
+    "B1_klt_nativeq_v3": {
+      "action": "ALLOW_B1_KLT_NATIVEQ",
+      "contract_hash": "39eaea6d26e6f5a881ef2b17b898cbda75c7aba8087ce447fe897e2fe0bdfce0",
+      "schema": "aqua-fe-b1-klt-nativeq-guard-decision-v1"
+    }
+  },
+  "held_out_learned_outcome_read": false,
+  "held_out_trajectory_outcome_read": false,
+  "next_stage": "P07_FRONTEND_EXPORT_QUEUE_FREEZE",
+  "outcome_boundary": "EXECUTION_ADAPTER_ONLY_NO_HELD_OUT_FRONTEND_OR_TRAJECTORY_OUTCOME",
+  "schema_version": "isj-p07-execution-adapter-lock-v1",
+  "scientific_identity_change": "NONE_ADDITIVE_EXECUTION_PROVENANCE_ONLY",
+  "standard_family_api": {
+    "afrl": "FAMILY DATASET START_S DURATION_S EVERY_N",
+    "aqualoc_archaeology": "FAMILY SEQUENCE START_FRAME END_FRAME EVERY_N",
+    "aqualoc_harbor": "FAMILY SEQUENCE START_FRAME END_FRAME EVERY_N",
+    "ntnu": "FAMILY DATASET START_S DURATION_S EVERY_N"
+  },
+  "status": "FROZEN_FOR_FRONTEND_EXPORT_QUEUE",
+  "window_conversion": {
+    "afrl": "start_seconds=relative_window_start; duration_seconds=45",
+    "aqualoc_archaeology": "frame=round(relative_seconds*20)",
+    "aqualoc_harbor": "frame=round(relative_seconds*20)",
+    "ntnu": "start_seconds=relative_window_start; duration_seconds=45"
+  }
+}

@@ -1,0 +1,5 @@
+extends: cirs_xfeat_seedchain_klt_probe.yaml
+
+hybrid:
+  # Stricter variant: XFeat seeds must survive five LK steps before promotion.
+  learned_confirmation_min_frames: 5

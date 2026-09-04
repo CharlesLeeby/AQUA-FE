@@ -1,0 +1,41 @@
+# Read-only diagnostic reproduction. Set OUT to a new, empty directory.
+# This compiles an external audit executable and does not build or run bin/mono.
+
+OUT=/tmp/anyfeature_orb_init_audit_reproduction
+REPO=/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3
+ENV=/mnt/data/opt/anyfeature-paper-2024-r3/env
+SEQ=/mnt/data/AQUA-FE_WS/anyfeature_adapter/aqualoc_a02_0005_full_r1
+CXX=$ENV/bin/x86_64-conda-linux-gnu-c++
+PKG=$ENV/bin/pkg-config
+
+test ! -e "$OUT"
+mkdir -p "$OUT"
+
+$CXX -std=gnu++17 -O3 -march=native -DNDEBUG \
+  -DHAVE_EIGEN -DHAVE_EPOXY -DHAVE_PYTHON -D_LINUX_ \
+  -I"$REPO" -I"$REPO/include" -I"$REPO/Thirdparty/DBoW2/include" \
+  -I"$ENV/include/eigen3" $($PKG --cflags opencv4) \
+  scripts/diagnostics/anyfeature_orb_init_audit_v1.cpp \
+  -o "$OUT/anyfeature_orb_init_audit_v1" \
+  -L"$REPO/lib" -lAnyFeature-VSLAM \
+  -L"$REPO/Thirdparty/DBoW2/lib" -lDBoW2 \
+  $($PKG --libs opencv4) \
+  -Wl,-rpath,"$REPO/lib:$REPO/Thirdparty/DBoW2/lib:$ENV/lib" \
+  -Wl,-rpath-link,"$ENV/lib"
+
+env LD_LIBRARY_PATH="$ENV/lib:$REPO/lib:$REPO/Thirdparty/DBoW2/lib" \
+  "$OUT/anyfeature_orb_init_audit_v1" \
+  "$SEQ" "$REPO/settings/orb32_settings.yaml" \
+  "$OUT/exact_state_machine.csv" \
+  >"$OUT/runtime.stdout.log" 2>"$OUT/runtime.stderr.log"
+
+python3 scripts/diagnostics/summarize_anyfeature_orb_init_audit_v1.py \
+  --csv "$OUT/exact_state_machine.csv" \
+  --output "$OUT/summary.json" \
+  --harness scripts/diagnostics/anyfeature_orb_init_audit_v1.cpp \
+  --repo "$REPO" --sequence "$SEQ" \
+  --settings "$REPO/settings/orb32_settings.yaml" \
+  --library "$REPO/lib/libAnyFeature-VSLAM.so"
+
+# The official RANSAC RNG is seeded from random_device. Structural assertions
+# are fail-closed, but the diagnostic F-counterfactual row count can vary.

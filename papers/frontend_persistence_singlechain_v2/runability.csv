@@ -1,0 +1,9 @@
+window,arm,status,repeats_passed,repeats_required
+a06_s000_d045,klt,PASS,3,3
+a06_s000_d045,singlechain,PASS,3,3
+a09_6000_6800,klt,PASS,3,3
+a09_6000_6800,singlechain,PASS,3,3
+a06_s045_d045,klt,PASS,3,3
+a06_s045_d045,singlechain,PASS,3,3
+h07_s000_d050,klt,PASS,3,3
+h07_s000_d050,singlechain,PASS,3,3

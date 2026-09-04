@@ -1,0 +1,8 @@
+extends: a05_hybrid_no_recovery_probe.yaml
+
+hybrid:
+  enable_classical_recovery: true
+  enable_lk_recovery: true
+  enable_learned_recovery: false
+  enable_learned_initialization: false
+  enable_semidense_fallback_initialization: false

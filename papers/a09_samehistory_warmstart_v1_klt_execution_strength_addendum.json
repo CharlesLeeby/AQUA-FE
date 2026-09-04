@@ -1,0 +1,112 @@
+{
+  "auditor_identity": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/build_a09_samehistory_warmstart_v1_klt_execution_addendum.py",
+    "sha256": "6a7a4d40e75ecf0ae14a74e5e0c069a1ca7db864a17722ccdbf0bfc220c6844b",
+    "size_bytes": 18308
+  },
+  "bindings": {
+    "klt_camera": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/frontends/klt_export/aqualoc_archaeo09_pinhole.yaml",
+      "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+      "size_bytes": 357
+    },
+    "klt_claim": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/frontends/klt_export/process_start_claim_v1.json",
+      "sha256": "c4928e52cd32fe58d530475f65193f48af5dcf8eb535b2fb4b1b45931fe71efb",
+      "size_bytes": 5783
+    },
+    "klt_features": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/frontends/klt_export/features.bag",
+      "sha256": "cce64be73ddd545ad469e42adddf9cf8f9592f8316adda69399ec27d0b71494f",
+      "size_bytes": 66859585
+    },
+    "klt_log": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/frontends/klt_export/supervisor_process.log",
+      "sha256": "89ac65250531226c1f6f8d97650ca1eb2b24e0386be0657562edae5485359bf8",
+      "size_bytes": 829
+    },
+    "klt_metrics": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/frontends/klt_export/frontend_metrics.csv",
+      "sha256": "68e9d08448cc6377a187d6955380b6658c93c0facdac6dfe7451047fa873f855",
+      "size_bytes": 1573397
+    },
+    "klt_receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/frontends/klt_export/formal_run_receipt_v1.json",
+      "sha256": "a664d5459e4ac91f80806b9b7dcca4f117177b405162866e10caeb674dce86c7",
+      "size_bytes": 12295
+    }
+  },
+  "claim_boundary": {
+    "formal_paper_accuracy_evidence_permitted": false,
+    "frontend_artifact_only": true,
+    "runtime_or_throughput_claim_permitted": false,
+    "trajectory_or_accuracy_result_available": false,
+    "vins_or_slam_executed": false
+  },
+  "limitations": {
+    "addendum_is_posthoc_evidence_only": true,
+    "cannot_retroactively_prove_descendants_empty_at_leader_exit": true,
+    "exactly_once_execution_not_proven": true,
+    "full_effective_environment_not_proven": true,
+    "old_claim_was_plain_write_not_durable_or_exclusive": true,
+    "old_receipt_environment_records_overrides_only": true,
+    "old_receipt_process_group_claim_is_not_strong_proof": true,
+    "old_receipt_waited_session_leader_only": true,
+    "runtime_or_paper_performance_claim_permitted": false
+  },
+  "observed_at_utc": "2026-08-26T11:11:23.342438+00:00",
+  "path_state": {
+    "canonical": {
+      "device": 2050,
+      "inode": 88948,
+      "is_real_directory": true,
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/frontends/klt_export"
+    },
+    "workspace": {
+      "is_symlink": true,
+      "path": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_systemfair_a09_warmstart_v1_feed0000_4400_klt_export",
+      "resolves_canonical_inode": true,
+      "target": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/frontends/klt_export"
+    }
+  },
+  "postcommit_external_rehash": {
+    "all_six_rehashed_after_commit": true,
+    "bindings_sha256": "24c197fe47a33f2ffe4dfd4b178f1f35a2fb8715c4e3358fd4eb9c9ff9cd42cc",
+    "canonical_is_real_directory": true,
+    "receipt_output_binding_equal": true,
+    "workspace_resolves_canonical_inode": true
+  },
+  "posthoc_process_tree": {
+    "evidence_scope": "POSTHOC_SNAPSHOT_NOT_CONTINUOUS_OWNERSHIP_PROOF",
+    "identifier_provenance": "EXTERNAL_ORCHESTRATOR_LIVE_PROC_OBSERVATION_DURING_EXECUTION_NOT_BOUND_BY_ORIGINAL_V1_RECEIPT",
+    "identifier_provenance_is_original_receipt_bound": false,
+    "matching_processes": [],
+    "observed_process_group_id": 1508785,
+    "observed_process_identifiers": [
+      {
+        "pid": 1508785,
+        "role": "group_leader"
+      },
+      {
+        "pid": 1508829,
+        "role": "science_child"
+      },
+      {
+        "pid": 1508316,
+        "role": "supervisor"
+      }
+    ],
+    "observed_process_markers": [
+      "run_a09_samehistory_warmstart_v1_frontends.py run-klt",
+      "run_paper_sidecar_profiles.sh aqualoc_archaeo_loftr_mirror_klt 9 0 4400",
+      "run_aqualoc_archaeo_vins_eval.sh external 9 0 4400 klt 2",
+      "uw_frontend.ros.export_vins_features --bag /mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/raw/archaeo09_0000_4400.bag"
+    ],
+    "owned_descendants_empty": true,
+    "owned_descendants_interpretation": "No original-PGID member, observed PID, or known A09 KLT command marker was present at this post-hoc snapshot; this is not a contemporaneous proof of descendant emptiness when the leader exited.",
+    "process_group_empty": true,
+    "status": "PASS_POSTHOC_EMPTY_SNAPSHOT"
+  },
+  "schema_version": "aqua-fe-a09-samehistory-warmstart-klt-execution-strength-addendum-v1",
+  "status": "PASS_POSTHOC_KLT_EXECUTION_STRENGTH_AUDIT"
+}

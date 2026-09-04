@@ -1,0 +1,39 @@
+{
+  "arms": {
+    "full": {
+      "ape_abs_diff_m": 2.8803731372609165e-07,
+      "evo_ape_rmse_m": 0.03123,
+      "evo_segmented_rpe_rmse_m": 0.013638,
+      "primary_ape_rmse_m": 0.031230288037313727,
+      "primary_rpe_rmse_m": 0.013637738645264385,
+      "rpe_abs_diff_m": 2.61354735615546e-07,
+      "rpe_pair_count": 9,
+      "segments": [
+        {
+          "pair_count": 9,
+          "rmse_m": 0.013638,
+          "segment_id": 0
+        }
+      ]
+    },
+    "klt": {
+      "ape_abs_diff_m": 3.3964559434385144e-07,
+      "evo_ape_rmse_m": 0.242679,
+      "evo_segmented_rpe_rmse_m": 0.087344,
+      "primary_ape_rmse_m": 0.24267866035440566,
+      "primary_rpe_rmse_m": 0.08734398822005096,
+      "rpe_abs_diff_m": 1.1779949043999594e-08,
+      "rpe_pair_count": 9,
+      "segments": [
+        {
+          "pair_count": 9,
+          "rmse_m": 0.087344,
+          "segment_id": 0
+        }
+      ]
+    }
+  },
+  "evo_version": "1.31.1",
+  "rpe_delta_frames": 1,
+  "rpe_semantics": "aligned_global_frame_positional_delta"
+}

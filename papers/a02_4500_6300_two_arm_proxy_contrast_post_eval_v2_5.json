@@ -1,0 +1,227 @@
+{
+  "active_freeze": {
+    "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_two_arm_adoption_analysis_freeze_v2_5.json",
+    "sha256": "55f8c160526ada70c8ff8c928a286e7df60c32c1656dd9caebc91a22365b15fd",
+    "size_bytes": 40644
+  },
+  "auxiliary_csv_role": "BOUND_AUDIT_EXPORTS_PRIMARY_RESULT_IS_RECOMPUTED_JSON",
+  "common_support_summary": {
+    "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/b1_constq_vs_xfeatbirth_adopted_v2_5_r1/common_support_summary.json",
+    "sha256": "4641d2498fed5be8188f25d153fa11b76289de18afd7c8aeedea5106f1567d65",
+    "size_bytes": 3738
+  },
+  "descriptive_two_arm_proxy_contrast_valid": true,
+  "evaluation_output_tree": {
+    "entries": [
+      {
+        "relative_path": ".",
+        "type": "directory"
+      },
+      {
+        "relative_path": "common_grid_audit.csv",
+        "sha256": "2538bb5710f8c9c3424192218be34b802b6c2a37da145f5bea894530c5ad4304",
+        "size_bytes": 1440,
+        "type": "regular"
+      },
+      {
+        "relative_path": "common_support_metrics.csv",
+        "sha256": "7217b9e121d75c80b0ebb493c9db3ddb6135635cdf0790c25c665e42e6be196d",
+        "size_bytes": 998,
+        "type": "regular"
+      },
+      {
+        "relative_path": "common_support_summary.json",
+        "sha256": "4641d2498fed5be8188f25d153fa11b76289de18afd7c8aeedea5106f1567d65",
+        "size_bytes": 3738,
+        "type": "regular"
+      },
+      {
+        "relative_path": "evaluator_process_receipt_v2_5.json",
+        "sha256": "5637e2ad33e3bfaf00ffff9b8f18d7a5a609f826f60eaa824cf9f92f49618778",
+        "size_bytes": 1702,
+        "type": "regular"
+      },
+      {
+        "relative_path": "evo_crosscheck",
+        "type": "directory"
+      },
+      {
+        "relative_path": "evo_crosscheck.json",
+        "sha256": "ac9c18ecdb15338d0b6d4600d5787b65dccf9835c9fce1f7fcb5a04336dd2d8b",
+        "size_bytes": 1051,
+        "type": "regular"
+      },
+      {
+        "relative_path": "evo_crosscheck/B1_CONSTQ_common_aligned.tum",
+        "sha256": "53fd1b3e8611c034779ff750c7e0ed7be732afbb43bfbc3e7290b2a323e86c9f",
+        "size_bytes": 3900,
+        "type": "regular"
+      },
+      {
+        "relative_path": "evo_crosscheck/B1_CONSTQ_evo_ape.log",
+        "sha256": "47671bb486054630454cd315e7da72da4573a8389cdb1794292e709931a85b80",
+        "size_bytes": 522,
+        "type": "regular"
+      },
+      {
+        "relative_path": "evo_crosscheck/B1_CONSTQ_evo_rpe_segment_000.log",
+        "sha256": "6952818bb36be3d4535c17908d3e8891e97e982dfb09f9bf7f360684fe4007a1",
+        "size_bytes": 588,
+        "type": "regular"
+      },
+      {
+        "relative_path": "evo_crosscheck/B1_CONSTQ_segment_000.tum",
+        "sha256": "53fd1b3e8611c034779ff750c7e0ed7be732afbb43bfbc3e7290b2a323e86c9f",
+        "size_bytes": 3900,
+        "type": "regular"
+      },
+      {
+        "relative_path": "evo_crosscheck/XFEATBIRTH_RAWLK_common_aligned.tum",
+        "sha256": "a4703e2afe029b703e41dc7225baf78c0ca9fdd287a3b6eb5b1dcda9faa7dd2f",
+        "size_bytes": 3895,
+        "type": "regular"
+      },
+      {
+        "relative_path": "evo_crosscheck/XFEATBIRTH_RAWLK_evo_ape.log",
+        "sha256": "0f53d81790f518b8e7fbad6562c6470932354a2ed1245881d1307239ec4c4082",
+        "size_bytes": 529,
+        "type": "regular"
+      },
+      {
+        "relative_path": "evo_crosscheck/XFEATBIRTH_RAWLK_evo_rpe_segment_000.log",
+        "sha256": "adeb78318f7f4a129f1ab9eee34ed9c068a43211a9d6409cc44125faeb0ae542",
+        "size_bytes": 595,
+        "type": "regular"
+      },
+      {
+        "relative_path": "evo_crosscheck/XFEATBIRTH_RAWLK_segment_000.tum",
+        "sha256": "a4703e2afe029b703e41dc7225baf78c0ca9fdd287a3b6eb5b1dcda9faa7dd2f",
+        "size_bytes": 3895,
+        "type": "regular"
+      },
+      {
+        "relative_path": "evo_crosscheck/reference_common.tum",
+        "sha256": "1003b760d1bfde42a3a5ba304b0b6c7703c17c8fe8722d98701ca9eb46ee6b16",
+        "size_bytes": 3906,
+        "type": "regular"
+      },
+      {
+        "relative_path": "evo_crosscheck/reference_segment_000.tum",
+        "sha256": "1003b760d1bfde42a3a5ba304b0b6c7703c17c8fe8722d98701ca9eb46ee6b16",
+        "size_bytes": 3906,
+        "type": "regular"
+      }
+    ],
+    "root": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/b1_constq_vs_xfeatbirth_adopted_v2_5_r1",
+    "summary": {
+      "directory_count": 2,
+      "inventory_sha256": "f937d7a079ee6fbe7c6c788788c1a6aeff26194d6100d1b84a458682e7c3703a",
+      "regular_file_count": 15,
+      "total_regular_bytes": 34565
+    }
+  },
+  "evaluator_process_receipt": {
+    "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/b1_constq_vs_xfeatbirth_adopted_v2_5_r1/evaluator_process_receipt_v2_5.json",
+    "sha256": "5637e2ad33e3bfaf00ffff9b8f18d7a5a609f826f60eaa824cf9f92f49618778",
+    "size_bytes": 1702
+  },
+  "evo_crosscheck_diagnostic": {
+    "path": "/home/ma/AQUA-FE_WS/papers/litcmp_a02_4500_6300_common_support/b1_constq_vs_xfeatbirth_adopted_v2_5_r1/evo_crosscheck.json",
+    "sha256": "ac9c18ecdb15338d0b6d4600d5787b65dccf9835c9fce1f7fcb5a04336dd2d8b",
+    "size_bytes": 1051
+  },
+  "evo_crosscheck_role": "DIAGNOSTIC_ONLY_NOT_PRIMARY_RESULT_OR_RANKING",
+  "failure_reasons": [],
+  "hfnet_excluded": true,
+  "pre_eval_adoption_evidence": {
+    "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_two_arm_pre_eval_adoption_v2_5.json",
+    "sha256": "7f131982e666665005447b9eef95b164de833f5e7bfa4ea3a12f0055bada5c50",
+    "size_bytes": 23460
+  },
+  "proxy_reference_is_independent_ground_truth": false,
+  "ranking_claim": false,
+  "result_metrics": {
+    "B1_CONSTQ": {
+      "ape_max_m": 0.4076455521871205,
+      "ape_median_m": 0.18338926996927643,
+      "ape_rmse_m": 0.22134522294426967,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 888,
+        "raw_count": 888,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 888
+      },
+      "bracket_gap_max_s": 0.10240768000949174,
+      "bracket_gap_p50_s": 0.09988761600106955,
+      "bracket_gap_p95_s": 0.10146309116389603,
+      "legacy_max_reference_reuse": 10,
+      "legacy_pair_count": 450,
+      "legacy_timestamp_error_max_s": 0.45278496004175395,
+      "legacy_timestamp_error_p95_s": 0.45064454564708284,
+      "legacy_unique_assignment_error_max_s": 0.05190611199941486,
+      "legacy_unique_assignment_error_p95_s": 0.050393407989759,
+      "legacy_unique_assignment_pair_count": 46,
+      "legacy_unique_reference_used": 46,
+      "matched_count": 45,
+      "rejection_histogram": {
+        "INTERPOLATED": 45
+      },
+      "rpe_max_m": 0.04964888514924431,
+      "rpe_median_m": 0.023536537756107354,
+      "rpe_pairs": 44,
+      "rpe_rmse_m": 0.027078027429135693,
+      "valid_grid_count": 45
+    },
+    "XFEATBIRTH_RAWLK": {
+      "ape_max_m": 0.2903466198737011,
+      "ape_median_m": 0.12942773686686848,
+      "ape_rmse_m": 0.1549902959667037,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 872,
+        "raw_count": 872,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 872
+      },
+      "bracket_gap_max_s": 0.10240768000949174,
+      "bracket_gap_p50_s": 0.09988761600106955,
+      "bracket_gap_p95_s": 0.10146309116389603,
+      "legacy_max_reference_reuse": 10,
+      "legacy_pair_count": 450,
+      "legacy_timestamp_error_max_s": 0.45278496004175395,
+      "legacy_timestamp_error_p95_s": 0.45064454564708284,
+      "legacy_unique_assignment_error_max_s": 0.05190611199941486,
+      "legacy_unique_assignment_error_p95_s": 0.050393407989759,
+      "legacy_unique_assignment_pair_count": 46,
+      "legacy_unique_reference_used": 46,
+      "matched_count": 45,
+      "rejection_histogram": {
+        "INTERPOLATED": 45
+      },
+      "rpe_max_m": 0.0339653637316651,
+      "rpe_median_m": 0.014440603615801451,
+      "rpe_pairs": 44,
+      "rpe_rmse_m": 0.01795168221106587,
+      "valid_grid_count": 45
+    }
+  },
+  "schema_version": "aqua-fe-a02-two-arm-proxy-contrast-post-eval-v2-5",
+  "scientific_role": "POST_INCIDENT_RESULT_INFORMED_EXPLORATORY_TWO_COMPONENT_COMMON_SUPPORT_PROXY_CONTRAST_NOT_CONFIRMATORY_NO_SIGNIFICANCE_NO_SUPERIORITY",
+  "statistical_significance_test_performed": false,
+  "status": "PASS_STRICT_TWO_ARM_COMMON_SUPPORT_PROXY_CONTRAST",
+  "strict_gates": {
+    "ape_valid": true,
+    "arm_labels": [
+      "B1_CONSTQ",
+      "XFEATBIRTH_RAWLK"
+    ],
+    "evaluator_rc0": true,
+    "evo_diagnostic_bound_and_primary_values_crosschecked": true,
+    "grid_count": 45,
+    "rpe_valid": true,
+    "summary_recomputed_from_current_sealed_inputs": true
+  },
+  "superiority_claim": false,
+  "three_arm_evaluation_performed": false
+}

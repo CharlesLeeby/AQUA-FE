@@ -1,0 +1,10 @@
+extends: low_texture_xfeat_seedchain_frontend.yaml
+
+# Diagnostic-only structural ablation for the real-pool lifetime audit.
+# It changes no detector, LK, FB, NCC, or export thresholds.  GFTT proposals
+# must instead survive the existing one-transition confirmation path before
+# receiving a public track ID.  Track count/coverage must be audited alongside
+# lifetime so that filtering short proposals cannot masquerade as a repair.
+hybrid:
+  preserve_klt_replenish: false
+  enable_gftt_confirmation: true

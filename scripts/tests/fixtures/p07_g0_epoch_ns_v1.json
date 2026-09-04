@@ -1,0 +1,11 @@
+{
+  "schema_version": "isj-p07-g0-epoch-ns-regression-fixture-v1",
+  "window_id": "ntnu:production-shaped:0000",
+  "window_start_ns": 1542883756512375400,
+  "window_end_ns": 1542883786508675400,
+  "window_start_s_exact": "1542883756.512375400",
+  "window_end_s_exact": "1542883786.508675400",
+  "sub_float64_ulp_timestamp_ns": 1542883756512375401,
+  "expected_span_ns": 29996300000,
+  "queue_telemetry_policy": "NOT_INSTRUMENTED_NO_ZERO_IMPUTATION"
+}

@@ -1,0 +1,201 @@
+{
+  "contract": {
+    "backend_quality": "native_vins_safe",
+    "expected_source_code": 20,
+    "feature_topic": "/feature_tracker/feature",
+    "max_features": 350,
+    "q_floor": 0.8,
+    "scientific_role": "controlled_same_backend_modern_baseline"
+  },
+  "determinism": [
+    {
+      "bag_byte_identical": true,
+      "left": "ntnu_r1",
+      "metrics_byte_identical": true,
+      "pass": true,
+      "right": "ntnu_r2"
+    }
+  ],
+  "probes": [
+    {
+      "bag_path": "/mnt/data/AQUA-FE_WS/logs/ntnu_vins/external_xfeat_every2_validation_20260804_p05_m_xfeat_fjord1_s83_d10_export/features.bag",
+      "bag_sha256": "210ad894b16de75b10ce374f129f946d41ae5a04ab1f986442fc4d64be2f13de",
+      "copied_sensor_messages": 2002,
+      "duplicate_id_frames": 0,
+      "feature_frames": 100,
+      "feature_span_s": 9.899892330169678,
+      "invalid_camera_id_frames": 0,
+      "invalid_channel_frames": 0,
+      "invalid_learned_flag_frames": 0,
+      "issues": [],
+      "label": "ntnu_r1",
+      "max_features_per_frame": 278,
+      "median_features_per_frame": 251.0,
+      "metrics_path": "/mnt/data/AQUA-FE_WS/logs/ntnu_vins/external_xfeat_every2_validation_20260804_p05_m_xfeat_fjord1_s83_d10_export/frontend_metrics.csv",
+      "metrics_sha256": "13e04fef7565327bb3af26fc25189c8705414a578c58019a4c193f05a78715ea",
+      "min_features_per_frame": 221,
+      "nonfinite_channel_geometry_frames": 0,
+      "noninitial_zero_feature_frames": 0,
+      "observation_count": 25013,
+      "q_max": 0.9004404544830322,
+      "q_min": 0.8278652429580688,
+      "run_dir": "/mnt/data/AQUA-FE_WS/logs/ntnu_vins/external_xfeat_every2_validation_20260804_p05_m_xfeat_fjord1_s83_d10_export",
+      "sigma_max": 1.0990568399429321,
+      "sigma_min": 1.0538346767425537,
+      "source_codes": {
+        "20": 25013
+      },
+      "status": "PASS",
+      "topic_counts": {
+        "/alphasense_driver_ros/imu": 2002,
+        "/feature_tracker/feature": 100
+      },
+      "zero_feature_frames": 0
+    },
+    {
+      "bag_path": "/mnt/data/AQUA-FE_WS/logs/ntnu_vins/external_xfeat_every2_validation_20260804_p05_m_xfeat_fjord1_s83_d10_export_r2/features.bag",
+      "bag_sha256": "210ad894b16de75b10ce374f129f946d41ae5a04ab1f986442fc4d64be2f13de",
+      "copied_sensor_messages": 2002,
+      "duplicate_id_frames": 0,
+      "feature_frames": 100,
+      "feature_span_s": 9.899892330169678,
+      "invalid_camera_id_frames": 0,
+      "invalid_channel_frames": 0,
+      "invalid_learned_flag_frames": 0,
+      "issues": [],
+      "label": "ntnu_r2",
+      "max_features_per_frame": 278,
+      "median_features_per_frame": 251.0,
+      "metrics_path": "/mnt/data/AQUA-FE_WS/logs/ntnu_vins/external_xfeat_every2_validation_20260804_p05_m_xfeat_fjord1_s83_d10_export_r2/frontend_metrics.csv",
+      "metrics_sha256": "13e04fef7565327bb3af26fc25189c8705414a578c58019a4c193f05a78715ea",
+      "min_features_per_frame": 221,
+      "nonfinite_channel_geometry_frames": 0,
+      "noninitial_zero_feature_frames": 0,
+      "observation_count": 25013,
+      "q_max": 0.9004404544830322,
+      "q_min": 0.8278652429580688,
+      "run_dir": "/mnt/data/AQUA-FE_WS/logs/ntnu_vins/external_xfeat_every2_validation_20260804_p05_m_xfeat_fjord1_s83_d10_export_r2",
+      "sigma_max": 1.0990568399429321,
+      "sigma_min": 1.0538346767425537,
+      "source_codes": {
+        "20": 25013
+      },
+      "status": "PASS",
+      "topic_counts": {
+        "/alphasense_driver_ros/imu": 2002,
+        "/feature_tracker/feature": 100
+      },
+      "zero_feature_frames": 0
+    },
+    {
+      "bag_path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_every2_validation_20260804_p05_m_xfeat_a06_2210_2280_export/features.bag",
+      "bag_sha256": "cfc9dd323649746504b236c54d158cd9693e560049435e52fa4edbf5285c28b8",
+      "copied_sensor_messages": 803,
+      "duplicate_id_frames": 0,
+      "feature_frames": 35,
+      "feature_span_s": 3.4037625789642334,
+      "invalid_camera_id_frames": 0,
+      "invalid_channel_frames": 0,
+      "invalid_learned_flag_frames": 0,
+      "issues": [],
+      "label": "aqualoc_a06",
+      "max_features_per_frame": 284,
+      "median_features_per_frame": 261,
+      "metrics_path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_every2_validation_20260804_p05_m_xfeat_a06_2210_2280_export/frontend_metrics.csv",
+      "metrics_sha256": "ae71c2fa0c339948e40fa02eac0836b0af6e87548e0c96828f82f1b0e8e09027",
+      "min_features_per_frame": 235,
+      "nonfinite_channel_geometry_frames": 0,
+      "noninitial_zero_feature_frames": 0,
+      "observation_count": 9087,
+      "q_max": 0.8997542858123779,
+      "q_min": 0.8266298770904541,
+      "run_dir": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_every2_validation_20260804_p05_m_xfeat_a06_2210_2280_export",
+      "sigma_max": 1.0998778343200684,
+      "sigma_min": 1.0542365312576294,
+      "source_codes": {
+        "20": 9087
+      },
+      "status": "PASS",
+      "topic_counts": {
+        "/aqualoc/colmap_gt": 4,
+        "/feature_tracker/feature": 35,
+        "/rtimulib_node/imu": 799
+      },
+      "zero_feature_frames": 0
+    },
+    {
+      "bag_path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_real_vins/external_xfeat_every2_validation_20260804_p05_m_xfeat_h07_1660_1720_export/features.bag",
+      "bag_sha256": "432de02cef18a8d06261d5f41096e4e85136f26dab3564717dcb1dbbb3db3da9",
+      "copied_sensor_messages": 713,
+      "duplicate_id_frames": 0,
+      "feature_frames": 30,
+      "feature_span_s": 2.9042515754699707,
+      "invalid_camera_id_frames": 0,
+      "invalid_channel_frames": 0,
+      "invalid_learned_flag_frames": 0,
+      "issues": [],
+      "label": "aqualoc_h07",
+      "max_features_per_frame": 296,
+      "median_features_per_frame": 258.0,
+      "metrics_path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_real_vins/external_xfeat_every2_validation_20260804_p05_m_xfeat_h07_1660_1720_export/frontend_metrics.csv",
+      "metrics_sha256": "3d4f73fdd7afc4ace1eae26bc7c081764d58b69bfe14f9935341cdeb718be569",
+      "min_features_per_frame": 192,
+      "nonfinite_channel_geometry_frames": 0,
+      "noninitial_zero_feature_frames": 0,
+      "observation_count": 7554,
+      "q_max": 0.907187819480896,
+      "q_min": 0.8278530836105347,
+      "run_dir": "/mnt/data/AQUA-FE_WS/logs/aqualoc_real_vins/external_xfeat_every2_validation_20260804_p05_m_xfeat_h07_1660_1720_export",
+      "sigma_max": 1.0990649461746216,
+      "sigma_min": 1.0499083995819092,
+      "source_codes": {
+        "20": 7554
+      },
+      "status": "PASS",
+      "topic_counts": {
+        "/aqualoc/colmap_gt": 13,
+        "/feature_tracker/feature": 30,
+        "/rtimulib_node/imu": 700
+      },
+      "zero_feature_frames": 0
+    },
+    {
+      "bag_path": "/mnt/data/AQUA-FE_WS/logs/afrl_cave_v31/external_xfeat_every2_validation_20260804_p05_m_xfeat_afrl_cemetery_s0_d10_export/features.bag",
+      "bag_sha256": "39ef071b5e163931565dcdc490e29e79085df94c83306aec91fffddaaeb799a2",
+      "copied_sensor_messages": 1150,
+      "duplicate_id_frames": 0,
+      "feature_frames": 75,
+      "feature_span_s": 9.915795803070068,
+      "invalid_camera_id_frames": 0,
+      "invalid_channel_frames": 0,
+      "invalid_learned_flag_frames": 0,
+      "issues": [],
+      "label": "afrl_cemetery",
+      "max_features_per_frame": 342,
+      "median_features_per_frame": 334,
+      "metrics_path": "/mnt/data/AQUA-FE_WS/logs/afrl_cave_v31/external_xfeat_every2_validation_20260804_p05_m_xfeat_afrl_cemetery_s0_d10_export/frontend_metrics.csv",
+      "metrics_sha256": "1ed6f6a74fcc9bac37c46b300bc1a7ea24bc178c47a10c46e6ecd9378fd6e677",
+      "min_features_per_frame": 0,
+      "nonfinite_channel_geometry_frames": 0,
+      "noninitial_zero_feature_frames": 0,
+      "observation_count": 24715,
+      "q_max": 0.9200000166893005,
+      "q_min": 0.8323162794113159,
+      "run_dir": "/mnt/data/AQUA-FE_WS/logs/afrl_cave_v31/external_xfeat_every2_validation_20260804_p05_m_xfeat_afrl_cemetery_s0_d10_export",
+      "sigma_max": 1.096114158630371,
+      "sigma_min": 1.042572021484375,
+      "source_codes": {
+        "20": 24715
+      },
+      "status": "PASS",
+      "topic_counts": {
+        "/afrl/colmap_gt": 149,
+        "/feature_tracker/feature": 75,
+        "/imu/imu": 1001
+      },
+      "zero_feature_frames": 1
+    }
+  ],
+  "schema_version": "isj-p05-xfeat-fairness-audit-v1",
+  "status": "PASS"
+}

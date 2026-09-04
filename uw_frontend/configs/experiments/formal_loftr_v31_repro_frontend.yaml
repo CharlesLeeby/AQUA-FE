@@ -1,0 +1,29 @@
+extends: formal_loftr_positive_vins_frontend.yaml
+
+hybrid:
+  # Reproduce the validated A06 v31 LoFTR behavior. LoFTR is not a general
+  # replacement frontend: it proposes only in extreme low-texture spans, then
+  # confirmed residual-stable sidecars are injected into the KLT mirror
+  # backbone by the formal export profile.
+  preserve_klt_replenish: false
+  enable_source_provenance_memory: false
+  semidense_fallback_max_new: 40
+  semidense_fallback_sidecar_max_extra: 40
+  semidense_fallback_max_fraction: 0.12
+  # Keep the early rescue burst, then avoid proposal churn until the next
+  # near-planar low-texture support window.
+  semidense_fallback_start_frame: 0
+  semidense_fallback_min_frame_gap: 46
+  # In near-planar underwater wall/seabed views, a small LoFTR subset can keep
+  # homography support stable while increasing median epipolar residual. The
+  # export side still requires LK/NCC/FB confirmation and F/E/H residual gates.
+  semidense_acceptance_max_epipolar_error_ratio: 1.75
+  semidense_acceptance_max_epipolar_error_abs_increase: 0.08
+  learned_confirmation_max_confirmed: 26
+
+measurement_selection:
+  # Keep the tracker itself at the inherited 350-track cap for VINS
+  # initialization, then let the export-side measurement selector expose a
+  # sparse post-warmup backbone through MEASUREMENT_SELECTION_MAX_FEATURES.
+  enabled: true
+  max_features: 220

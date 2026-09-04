@@ -1,0 +1,33 @@
+{
+  "after": {
+    "arm_applicability_sha256": "b106ad71981ca8d264d18f822c671f3dd1edf1eb19ba9e69b650fdabd568aae3",
+    "run_registry_sha256": "5b2cda76acc7ab74b8960d5ef7ec76035bf5bc0c32cd15baab7fa62b829948ff"
+  },
+  "allocation": {
+    "path": "papers/ieee_sensors_journal_experiments/p07/frontend_run_allocation_v1.csv",
+    "sha256": "05b706010ce5fc1d5032bf680dc286d2b69fc98c190a25fdf4e1ceee84df84ec",
+    "size_bytes": 40388
+  },
+  "before": {
+    "arm_applicability_sha256": "522e0239af24c1cf23710e19e38b829abd181e301aa535a295fbf37c032d588f",
+    "run_registry_sha256": "25e1055c4a24d4ae5fb25f4dad58839855c4e78b8877cadf2c0a7411fb3027dc"
+  },
+  "d_queue": {
+    "path": "papers/ieee_sensors_journal_experiments/p07/d_applicability_queue_v1.csv",
+    "sha256": "5b177636673db2a3198638a5bdca42d8e53de024b91081ac206f939f367ce45c",
+    "size_bytes": 8914
+  },
+  "held_out_frontend_outcome_read": false,
+  "held_out_trajectory_outcome_read": false,
+  "outcome_boundary": "FROZEN_BEFORE_P07_FRONTEND_OR_TRAJECTORY_OUTCOME",
+  "pending_D_rows_appended": 20,
+  "queue_lock_hash": "23095fffe3474d3c85fd809c94b0bf4cd0094aa8bbc083b65dd1a4cc950144eb",
+  "recorded_at": "2026-08-06T16:45:00+08:00",
+  "registry_rows_appended": 60,
+  "schema_version": "isj-p07-preoutcome-registration-v1",
+  "status": "PASS",
+  "validation": {
+    "pending_D_rows_present": 20,
+    "registry_allocations_present": 60
+  }
+}

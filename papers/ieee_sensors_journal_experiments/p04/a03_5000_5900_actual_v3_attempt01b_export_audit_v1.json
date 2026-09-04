@@ -1,0 +1,74 @@
+{
+  "arbitration_summary": {
+    "oldcontract_fail_reasons": "first_frame,min_strength,min_support,frame_spread,classical_grid",
+    "path": "logs/aqualoc_archaeo_vins/external_klt_every2_p04_actualv3_a03_5000_5900_attempt01b_20260806_klt_safe_fallback/arbitration_summary.txt",
+    "profile": "klt_safe_fallback",
+    "sha256": "50e72dee710a163fc1f14843b10843e7c7c233ef05eb6cdeb6dc3a2312b454f1"
+  },
+  "checks": {
+    "actual_v3_early_seed_arbitration_identity": true,
+    "nativeq_backend_guard_exact_pass": true,
+    "no_trajectory_outcome_artifacts": true,
+    "probe_and_final_feature_bags_byte_identical": true,
+    "zero_published_learned_observations": true
+  },
+  "contract_pass": true,
+  "decision": "PASS_ACTUAL_V3_ZERO_ACTION_KLT_FALLBACK",
+  "final": {
+    "exported_xfeat_observations": 0,
+    "feature_frames": 450,
+    "feature_observations": 157500,
+    "feature_span_s": 44.89243197441101,
+    "is_learned_histogram": {
+      "0": 157500
+    },
+    "metrics_path": "logs/aqualoc_archaeo_vins/external_klt_every2_p04_actualv3_a03_5000_5900_attempt01b_20260806_klt_safe_fallback/frontend_metrics.csv",
+    "metrics_sha256": "99921cbaff575e0cea86e7e0a08dd98621edf73c4790714de1205a55d98ce470",
+    "path": "logs/aqualoc_archaeo_vins/external_klt_every2_p04_actualv3_a03_5000_5900_attempt01b_20260806_klt_safe_fallback/features.bag",
+    "sha256": "d34d9730d7496b03ccff18c58cc6e6badce748ca11a61d0042797a3532a1c6be",
+    "size_bytes": 13724284,
+    "source_code_histogram": {
+      "1": 135550,
+      "2": 21950
+    },
+    "topic_counts": {
+      "/aqualoc/colmap_gt": 40,
+      "/feature_tracker/feature": 450,
+      "/rtimulib_node/imu": 9092
+    }
+  },
+  "forbidden_outcomes_accessed": [],
+  "guard": {
+    "backend_contract_hash": "39eaea6d26e6f5a881ef2b17b898cbda75c7aba8087ce447fe897e2fe0bdfce0",
+    "path": "logs/backend_contract_decisions/nativeq_guard_20260805T170050Z_4186003_decision.json",
+    "sha256": "58876a9cb0739112038315aab1df55037d95749693b4bd1eac715ee3c792aaa5"
+  },
+  "interpretation_boundary": "Development zero-action parity diagnostic only; not a learned-positive, classical-control, trajectory, or confirmatory result.",
+  "outcome_boundary": "FRONTEND_EXPORT_ONLY_NO_VINS_APE_RPE_TRAJECTORY",
+  "probe": {
+    "exported_xfeat_observations": 0,
+    "feature_frames": 450,
+    "feature_observations": 157500,
+    "feature_span_s": 44.89243197441101,
+    "is_learned_histogram": {
+      "0": 157500
+    },
+    "learned_candidate_count_sum": 282,
+    "learned_confirmed_count_sum": 126,
+    "metrics_path": "logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_p04_actualv3_a03_5000_5900_attempt01b_20260806_probe_oldcontract_densecap/frontend_metrics.csv",
+    "metrics_sha256": "3a1284c77a5c137b02a95ec20ee77906a06369f4db0c26d59eaa68efbb99348f",
+    "path": "logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_p04_actualv3_a03_5000_5900_attempt01b_20260806_probe_oldcontract_densecap/features.bag",
+    "sha256": "d34d9730d7496b03ccff18c58cc6e6badce748ca11a61d0042797a3532a1c6be",
+    "size_bytes": 13724284,
+    "source_code_histogram": {
+      "1": 135550,
+      "2": 21950
+    },
+    "topic_counts": {
+      "/aqualoc/colmap_gt": 40,
+      "/feature_tracker/feature": 450,
+      "/rtimulib_node/imu": 9092
+    }
+  },
+  "schema_version": "aqua-fe-p04-actual-v3-export-audit-v1"
+}

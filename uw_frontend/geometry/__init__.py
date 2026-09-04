@@ -1,0 +1,2 @@
+"""Geometric validation utilities."""
+

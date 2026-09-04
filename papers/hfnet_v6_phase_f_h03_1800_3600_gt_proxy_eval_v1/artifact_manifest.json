@@ -1,0 +1,77 @@
+{
+  "evaluator": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_hfnet_v6_phase_f_h03_1800_3600_gt_proxy_v1.py",
+    "sha256": "40922d938c5bfe8b068bd696026c21a21642ba71752c01811c40ffb35cd9e66d",
+    "size_bytes": 46261
+  },
+  "file_count_excluding_manifest": 9,
+  "files_excluding_manifest": [
+    {
+      "path": "analysis-output/analysis-report.md",
+      "sha256": "74710a48ae31a8d2d20797db20a934eb47f4d7883b8a136e95e37ca872c66563",
+      "size_bytes": 1973
+    },
+    {
+      "path": "analysis-output/figure-catalog.md",
+      "sha256": "405c1cb026660783a40450e373a2a427f89b879dc3b9831c3b712cb286f66f51",
+      "size_bytes": 939
+    },
+    {
+      "path": "analysis-output/figures/figure-01-trajectory-xy.svg",
+      "sha256": "448923019582d53d4176665d4575ba26c472bd92d71baed9abda63789ed1b718",
+      "size_bytes": 7311
+    },
+    {
+      "path": "analysis-output/figures/figure-02-errors-over-time.svg",
+      "sha256": "3d0a3c2ffd66f08b68065c1754692be851faebbb0caa8ab4f10f7894cfa6785d",
+      "size_bytes": 8765
+    },
+    {
+      "path": "analysis-output/stats-appendix.md",
+      "sha256": "7e8b0d838ae9e6e0d300f264fdb5d926c5d57e724315aedc7ec290a331e0bc80",
+      "size_bytes": 789
+    },
+    {
+      "path": "evaluation_result.json",
+      "sha256": "fa2a6d7283ddca4f3e2f2f42e372319ab487f6eea50f889c7ee77d50e02408fe",
+      "size_bytes": 11449
+    },
+    {
+      "path": "evaluation_start_claim.json",
+      "sha256": "85b7b698f00f2658402211e4669582c2a41fad69d1f0fdf1ea90c6af79c6d2c1",
+      "size_bytes": 785
+    },
+    {
+      "path": "grid_metrics.csv",
+      "sha256": "ffa1d824a24f89e73699a6723ad830acf3857cbb3721e94ebd50fb6aa5a3ad3e",
+      "size_bytes": 31202
+    },
+    {
+      "path": "rpe_pairs.csv",
+      "sha256": "086c9868b46aafe5550cd19a56217a9e02aaa160abe9cff992f6fe59fdb14f03",
+      "size_bytes": 8486
+    }
+  ],
+  "freeze": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_phase_f_h03_1800_3600_gt_proxy_eval_freeze_v1.json",
+    "sha256": "45522b1714f82590bd83b442ba9812577bc103ece3f9a045c0e040110a8a9412",
+    "size_bytes": 6889
+  },
+  "inferential_statistics": false,
+  "process_starts": {
+    "detector": 0,
+    "hfnet": 0,
+    "ros": 0,
+    "vins": 0
+  },
+  "reference_sensor_independent": false,
+  "result": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_phase_f_h03_1800_3600_gt_proxy_eval_v1/evaluation_result.json",
+    "sha256": "fa2a6d7283ddca4f3e2f2f42e372319ab487f6eea50f889c7ee77d50e02408fe",
+    "size_bytes": 11449
+  },
+  "schema_version": "aqua-fe-hfnet-v6-phase-f-h03-gt-proxy-eval-manifest-v1",
+  "status": "SEALED_DESCRIPTIVE_PROXY_EVALUATION_BUNDLE",
+  "total_bytes_excluding_manifest": 71699,
+  "tree_sha256_excluding_manifest": "34e3aabe1155b4408d3202aa8de6a7bef0b37689e336880d0dd067f2ae28613e"
+}

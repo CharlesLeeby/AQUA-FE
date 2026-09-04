@@ -1,0 +1,22 @@
+case_id,cohort,independent_cluster,dataset_family,window,profile,fresh_export,notes
+a02_2800_3200,main,AQUALOC_A02_2800,aqualoc_archaeo,A02_2800-3200,degraded_early_long,1,strong main positive
+a05_3300_3700,main,AQUALOC_A05_3300,aqualoc_archaeo,A05_3300-3700,degraded_early_dense,1,KLT-empty rescue main positive
+a07_10800_11200,main,AQUALOC_A07_10800,aqualoc_archaeo,A07_10800-11200,degraded_mature_dense,1,recovery profile with fixed td
+a08_4500_4660,main,AQUALOC_A08_4500,aqualoc_archaeo,A08_4500-4660,oldcontract_microburst_postqcap2,1,one representative of overlapping A08 cluster
+a09_6000_6200,main,AQUALOC_A09_6000,aqualoc_archaeo,A09_6000-6200,oldcontract_microburst,1,one representative of A09 6000 cluster
+fjord1_s83_d10,main,NTNU_fjord1_s83,ntnu,fjord_1_s83_d10,oldcontract_microburst,1,one representative of overlapping s83-s85 cluster
+mclab1_s60_d15,main,NTNU_mclab1_s60,ntnu,mclab1_s60_d15,mature_lineage,1,one representative of d10-d20 cluster
+cirs_s575_d30,main,CIRS_s575_s600,cirs,s575_d30,mirror_densecap,1,s575 representative; overlapping s600 excluded
+cirs_s900_d30,main,CIRS_s900,cirs,s900_d30,oldcontract_microburst,1,non-overlapping CIRS main positive
+a09_5000_5400,secondary,AQUALOC_A09_5000,aqualoc_archaeo,A09_5000-5400,low_grid_rejected_rich,1,weak positive with KLT empty
+a02_7600_8000,secondary,AQUALOC_A02_7600,aqualoc_archaeo,A02_7600-8000,low_grid_rejected_rich,1,weak APE positive
+mclab2_s110_d10,secondary,NTNU_mclab2_s110,ntnu,mclab2_s110_d10,late_dense_normal,1,weak positive with solver risk
+h02_2400_2800,stress,AQUALOC_H02_2400,aqualoc_real,H02_2400-2800,klt_safe_or_no_trigger,1,ordinary no-trigger control
+a09_4000_4400,stress,AQUALOC_A09_4000,aqualoc_archaeo,A09_4000-4400,current_arbitration,1,historical learned-pollution pressure window
+a02_8600_9000,stress,AQUALOC_A02_8600,aqualoc_archaeo,A02_8600-9000,current_arbitration,1,learned attribution but KLT-better pressure window
+a08_4480_4680,stress,AQUALOC_A08_4480,aqualoc_archaeo,A08_4480-4680,klt_safe_fallback,1,over-dense five-frame burst
+fjord5_s110_d10,stress,NTNU_fjord5_s110,ntnu,fjord_5_s110_d10,klt_safe_fallback,1,early burst no-harm pressure window
+cirs_s450_d30,stress,CIRS_s450,cirs,s450_d30,klt_safe_fallback,1,late burst pressure window
+cirs_s840_d30,stress,CIRS_s840,cirs,s840_d30,klt_safe_fallback,1,two-frame dense burst pressure window
+cirs_s960_d30,stress,CIRS_s960,cirs,s960_d30,klt_safe_fallback,1,early initialization-pollution pressure window
+afrl_fr70_100,stress,AFRL_FR70,afrl,FR70-100,adaptivewarmup_existing_bag,0,raw unavailable; existing-bag replay only

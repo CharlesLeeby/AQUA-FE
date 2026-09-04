@@ -1,0 +1,5 @@
+window,decision,reason
+a09_6000_6800,WIN,both fixed-scale APE and RPE medians are lower than KLT
+a06_s045_d045,WIN,both fixed-scale APE and RPE medians are lower than KLT
+a06_s000_d045,REGRESSION,both fixed-scale medians worsen outside KLT repeat ranges
+h07_s000_d050,NO_HARM_INPUT,new feature bag is byte-identical to KLT

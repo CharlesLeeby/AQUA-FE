@@ -1,0 +1,7 @@
+In file included from /mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/include/MapPoint.h:24,
+                 from /mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/include/FeatureMatcher.h:28,
+                 from scripts/diagnostics/anyfeature_r2d2_init_audit_v1.cpp:13:
+/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/include/KeyFrame.h:25:10: fatal error: DBoW2/BowVector.h: No such file or directory
+   25 | #include "DBoW2/BowVector.h"
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.

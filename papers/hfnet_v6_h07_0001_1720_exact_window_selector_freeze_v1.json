@@ -1,0 +1,162 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-h07-exact-window-selector-freeze-v1",
+  "created_at_local": "2026-08-22T21:05:00+08:00",
+  "status": "FROZEN_BEFORE_HFNET_START",
+  "scientific_role": "external learned SLAM system on an existing AQUA-FE development window",
+  "selection": {
+    "dataset_family": "aqualoc_harbor",
+    "sequence_id": "H07",
+    "canonical_source_frame_domain_inclusive": [
+      0,
+      2260
+    ],
+    "camera_indices_inclusive_for_feed": [
+      1,
+      1720
+    ],
+    "camera_count_for_feed": 1720,
+    "score_camera_indices_inclusive": [
+      1660,
+      1720
+    ],
+    "score_camera_count": 61,
+    "score_relative_indices_inclusive": [
+      1659,
+      1719
+    ],
+    "preroll_source_indices_inclusive": [
+      1,
+      1659
+    ],
+    "preroll_camera_count": 1659,
+    "selection_timing": "frozen before input materialization and before any H07 HFNet process start",
+    "development_result_conditioned_selection": true,
+    "confirmatory_sequence_unit": false
+  },
+  "source_archive": {
+    "path": "datasets/aqualoc/samples/harbor_sequence_07_raw_data.tar.gz",
+    "size_bytes": 357408690,
+    "sha256": "1ddcd260625ff6d69e1788c37f44cbc6a53495a7240475e46372ed9f2689961e",
+    "gzip_footer_crc32": "72f3d160",
+    "gzip_footer_isize_mod_2_32": 361728000,
+    "gzip_test": "PASS",
+    "source_camera_count": 2261,
+    "source_imu_count": 22601,
+    "camera_members_contiguous_inclusive": [
+      0,
+      2260
+    ],
+    "damaged_placeholder_forbidden": "datasets/full_downloads/aqualoc/Harbor_sites_sequences/harbor_sequence_07_raw_data.tar.gz",
+    "damaged_placeholder_size_bytes": 2710864,
+    "damaged_placeholder_sha256": "13a1e7898d1175de2b128cd4cf7246e3036c34ddb2611660bebbf6db76e8aefb"
+  },
+  "source_members": {
+    "camera_csv": {
+      "member": "raw_data/harbor_img_sequence_07.csv",
+      "size_bytes": 81422,
+      "sha256": "fd44bcbb02f713454e7fee672eb6702cfa5f50d6797ac35251080d62a7750a90",
+      "crc32": "abfdb882"
+    },
+    "imu_csv": {
+      "member": "raw_data/harbor_imu_sequence_07.csv",
+      "size_bytes": 2567655,
+      "sha256": "bcfd23d3cb643a64ac962c51f060ea4841eff5fb64677f5f4101d6be21b0ee74",
+      "crc32": "9bd7f1d4"
+    },
+    "image_member_prefix": "raw_data/harbor_images_sequence_07/"
+  },
+  "calibration": {
+    "camera_yaml": {
+      "path": "datasets/full_downloads/aqualoc/Harbor_sites_sequences/harbor_calibration_files/harbor_camera_calib.yaml",
+      "size_bytes": 347,
+      "sha256": "ae329d1599c323e324ff8d375f6aea380b7eead6503a8b46762ca4e06756d6ff"
+    },
+    "imu_camera_yaml": {
+      "path": "datasets/full_downloads/aqualoc/Harbor_sites_sequences/harbor_calibration_files/harbor_imu_camera_calib.yaml",
+      "size_bytes": 796,
+      "sha256": "4d2a58ab9b66e61ac30ad23937c694a3459a8d0876fc0665961b531667aed973"
+    },
+    "imu_noise_yaml": {
+      "path": "datasets/full_downloads/aqualoc/Harbor_sites_sequences/harbor_calibration_files/harbor_imu_noises.yaml",
+      "size_bytes": 343,
+      "sha256": "c16e413f06dfe0a889d29b477917acedc6931675e9390c7fd81068b1118204ae"
+    },
+    "kalibr_timeshift_cam_imu_s": -0.0403806549886,
+    "materialized_imu_shift_ns": 40380655,
+    "time_transform": "output_ns=raw_ns+40380655"
+  },
+  "synchronization_boundary": {
+    "camera0_timestamp_ns": 1523387546122930336,
+    "camera1_timestamp_ns": 1523387546173556704,
+    "earliest_raw_imu_timestamp_ns": 1523387546113213440,
+    "earliest_shifted_imu_timestamp_ns": 1523387546153594095,
+    "camera0_has_shifted_imu_predecessor": false,
+    "camera1_has_shifted_imu_predecessor": true,
+    "official_entry_path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Examples/Monocular-Inertial/mono_inertial_euroc.cc",
+    "official_entry_rule": "while imu[first_imu] <= cam0: first_imu++; then first_imu--",
+    "camera0_risk": "with no shifted IMU predecessor, first_imu becomes -1 and later access is out of bounds",
+    "frozen_resolution": "exclude source frame 0; feed begins at source frame 1",
+    "synthetic_or_extrapolated_imu_permitted": false,
+    "post_result_window_change_permitted": false
+  },
+  "reference": {
+    "path": "datasets/full_downloads/aqualoc/Harbor_sites_sequences/harbor_groundtruth_files/new_harbor_colmap_traj_sequence_07.txt",
+    "size_bytes": 64881,
+    "sha256": "ed35d0825c3db3d992c783ccfa23963a41687f220de2554496f3ed583ac0a0f4",
+    "reference_type": "updated offline COLMAP world_T_camera, scale corrected with depth metadata",
+    "independent_sensor_ground_truth": false,
+    "score_native_reference_pose_count": 13,
+    "score_native_reference_frame_indices": [
+      1660,
+      1665,
+      1670,
+      1675,
+      1680,
+      1685,
+      1690,
+      1695,
+      1700,
+      1705,
+      1710,
+      1715,
+      1720
+    ],
+    "formal_minimum_30_native_pose_accuracy_ranking_met": false
+  },
+  "existing_development_evidence": {
+    "klt_run": "logs/aqualoc_real_vins/external_klt_every2_may22_mirrorinject_h07_1660_1720_klt",
+    "klt_ape_rpe_rmse_m": [
+      0.050207,
+      0.113417
+    ],
+    "proposed_run": "logs/aqualoc_real_vins/external_hybrid_superpoint_lightglue_every2_may22_mirrorinject_h07_1660_1720_loftr",
+    "proposed_ape_rpe_rmse_m": [
+      0.050207,
+      0.113416
+    ],
+    "existing_feature_bags_sha256": "e53efe98f49724a8d285ebe2aa13da865c1e64a217b6024bcc1cc61ed65c2f22",
+    "learned_or_loftr_observations_exported": 0,
+    "interpretation": "development-exposed normal/no-harm window; old metrics are not assumed protocol-identical to the HFNet evaluation"
+  },
+  "execution_policy": {
+    "fresh_attempt": "attempt_001",
+    "maximum_hfnet_elf_starts": 1,
+    "retry_authorized": false,
+    "minimum_gpu_free_mib": 3072,
+    "require_zero_nvidia_compute_applications": true,
+    "require_no_hfnet_vins_orb_detector_evaluator_process": true,
+    "do_not_modify_namespaces": [
+      "A06",
+      "H03",
+      "P07"
+    ]
+  },
+  "claims": {
+    "hfnet_started": false,
+    "trajectory_produced": false,
+    "accuracy_measured": false,
+    "superiority_claimed": false,
+    "confirmatory_claimed": false,
+    "comparison_protocol_equivalence_claimed": false
+  }
+}

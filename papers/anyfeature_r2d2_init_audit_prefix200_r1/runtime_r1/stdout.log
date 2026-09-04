@@ -1,0 +1,8 @@
+
+Loading Feature Matcher Settings from : /home/ma/AQUA-FE_WS/configs/published_baselines/anyfeature_vslam_r2d2_128_artifact_repaired_r1.yaml
+- matchingTh: 0.38
+
+Loading Feature Extractor Settings from : /home/ma/AQUA-FE_WS/configs/published_baselines/anyfeature_vslam_r2d2_128_artifact_repaired_r1.yaml
+- numOctaves: 1
+- scaleFactor: 2
+- detectionTh: 1

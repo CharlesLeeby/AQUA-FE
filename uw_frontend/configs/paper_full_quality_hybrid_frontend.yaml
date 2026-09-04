@@ -1,0 +1,80 @@
+extends: paper_normal_safe_frontend.yaml
+
+hybrid:
+  # Full paper candidate.
+  #
+  # Normal/moderate texture: behaves like paper_normal_safe_frontend.
+  # Low-texture / low-coverage / planar: allows stronger sparse-cell refill
+  # through a semi-dense fallback matcher. Use with:
+  #   --method hybrid_superpoint_lightglue --semidense-fallback-method loftr
+  # or:
+  #   --method hybrid_xfeat --semidense-fallback-method loftr
+  enable_homography_recovery: true
+  homography_recovery_min_tracks: 35
+  homography_recovery_min_median_track_age: 4.0
+  homography_recovery_max_error: 3.5
+  homography_recovery_min_ncc: 0.48
+  homography_recovery_max_fb_error: 1.8
+  homography_recovery_max_recovered: 80
+
+  enable_semidense_fallback_initialization: true
+  semidense_fallback_requires_degradation: true
+  semidense_fallback_min_grid_coverage: 0.86
+  semidense_fallback_min_coverage_score: 0.00
+  semidense_fallback_max_new: 90
+  semidense_fallback_sidecar_max_extra: 80
+  semidense_fallback_max_fraction: 0.25
+  semidense_fallback_reserve_gftt_features: 0
+  semidense_fallback_min_degradation: 0.42
+  semidense_fallback_min_flat_region_ratio: 0.62
+  semidense_fallback_min_grid_texture_score: 0.35
+  semidense_fallback_min_frame_gap: 2
+  semidense_acceptance_enable: true
+  semidense_acceptance_min_new_tracks: 3
+  semidense_acceptance_min_grid_gain: 0.005
+  semidense_acceptance_min_new_cell_ratio: 0.12
+  semidense_candidate_min_quality: 0.08
+  semidense_candidate_min_ncc: 0.35
+  semidense_candidate_max_fb_error: 1.50
+  semidense_candidate_max_epipolar_error: 2.50
+  semidense_candidate_max_homography_error: 4.00
+  semidense_candidate_allow_low_occupancy_cell: true
+  semidense_acceptance_max_f_inlier_drop: 0.08
+  semidense_acceptance_max_h_inlier_drop: 0.08
+  semidense_acceptance_max_epipolar_error_ratio: 1.25
+  semidense_acceptance_max_homography_error_ratio: 1.25
+
+  loftr_requires_planar_severe: true
+  loftr_planar_min_h_inlier_ratio: 0.65
+  loftr_planar_min_confidence: 0.50
+  loftr_allow_sparse_homography: true
+  loftr_sparse_max_grid_coverage: 0.86
+  loftr_sparse_min_h_inlier_ratio: 0.97
+  loftr_sparse_min_planar_score: 0.98
+  loftr_sparse_max_homography_error: 2.50
+  loftr_sparse_min_median_track_age: 12.0
+  loftr_max_epipolar_error: 2.5
+  loftr_max_homography_error: 4.0
+  promotion_loftr_min_quality: 0.16
+  promotion_loftr_max_fb_error: 1.20
+  promotion_loftr_min_ncc: 0.40
+  promotion_loftr_max_grid_texture_score: 0.45
+  promotion_loftr_min_flat_region_ratio: 0.60
+  promotion_loftr_min_h_inlier_ratio: 0.65
+
+  # Learned sidecar remains conservative; low-texture gains should come from
+  # coverage-aware, geometry-accepted refill rather than flooding VINS with
+  # short-lived pairwise matches.
+  learned_init_on_track_churn: false
+  learned_init_churn_min_dropout_ratio: 0.60
+  learned_init_churn_max_median_age: 2.0
+  learned_init_min_grid_coverage: 0.88
+  learned_init_critical_grid_coverage: 0.76
+  learned_init_min_flat_region_ratio: 0.68
+  learned_sidecar_max_extra: 80
+  learned_confirmation_max_confirmed: 50
+  learned_init_acceptance_weak_max_new: 22
+  learned_init_acceptance_weak_max_fraction: 0.07
+
+measurement_selection:
+  enabled: false

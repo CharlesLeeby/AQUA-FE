@@ -1,0 +1,22 @@
+{
+  "authorization_token": "HFNET_PHASE_F_H03_GT_PROXY_EVAL_V1_ONCE",
+  "evaluator": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_hfnet_v6_phase_f_h03_1800_3600_gt_proxy_v1.py",
+    "sha256": "40922d938c5bfe8b068bd696026c21a21642ba71752c01811c40ffb35cd9e66d",
+    "size_bytes": 46261
+  },
+  "freeze": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_phase_f_h03_1800_3600_gt_proxy_eval_freeze_v1.json",
+    "sha256": "45522b1714f82590bd83b442ba9812577bc103ece3f9a045c0e040110a8a9412",
+    "size_bytes": 6889
+  },
+  "process_starts": {
+    "detector": 0,
+    "hfnet": 0,
+    "ros": 0,
+    "vins": 0
+  },
+  "retry": false,
+  "schema_version": "aqua-fe-hfnet-v6-phase-f-h03-gt-proxy-eval-result-v1-start-claim-v1",
+  "status": "O_EXCL_CLAIM_BEFORE_PURE_EVALUATION_PUBLICATION"
+}

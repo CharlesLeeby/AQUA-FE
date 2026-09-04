@@ -1,0 +1,49 @@
+{
+  "checks": {
+    "finite": true,
+    "in_bounds": true,
+    "matcher_calls_zero": true,
+    "nonempty_and_within_budget": true,
+    "positive_scores": true,
+    "shape": true
+  },
+  "forbidden_matcher_calls": {
+    "count": 0,
+    "names": []
+  },
+  "input": {
+    "adaptive_clahe_applied": true,
+    "header_stamp_ns": 1542829016700435392,
+    "raw_bag": "/mnt/data/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_5400.bag",
+    "raw_bag_sha256": "8cceb4c76065f3862e60428b14ba10f9a26fc7249e11e9e9d090fed2437238a8",
+    "raw_image_index": 0,
+    "record_stamp_ns": 1542829016700435392,
+    "shape_hw": [608, 968],
+    "topic": "/camera/image_raw"
+  },
+  "method": {
+    "algorithm_config_sha256": "98a8e674f19bfdc2e965a8ea5f27254d837da7f7f4d1254fcbeaa01665c7c1a8",
+    "export_xfeat_lk_carrier_sha256": "d7b6a698b784e0cee1c432308eb6f7546251503f0b47f4eeed9651b8fe401aba",
+    "preregistration_sha256": "ad571ca867ff29d144f9bf98ac8d8e8d9bb2e1ba1c5cfab33f7345df606662a5",
+    "repository_commit": "e92685f57f8318b18725c5c8c0bd28c7fe188d9a",
+    "repository_dirty_classification": "mode_bits_only",
+    "weight_sha256": "0f5187fd7bedd26c7fe6acc9685444493a165a35ecc087b33c2db3627f3ea10b"
+  },
+  "output": {
+    "proposal_count": 2048,
+    "score_max": 0.4417228102684021,
+    "score_median": 0.08812469989061356,
+    "score_min": 0.05564843863248825,
+    "x_range": [44.36666488647461, 962.9583129882812],
+    "y_range": [14.0, 603.0]
+  },
+  "runtime": {
+    "detect_calls": 1,
+    "device": "cpu",
+    "first_call_detect_ms": 133.49708102759905,
+    "numpy_version": "1.24.4",
+    "opencv_version": "4.2.0",
+    "torch_version": "2.2.2+cpu"
+  },
+  "status": "PASS_NONSCIENTIFIC_SINGLE_IMAGE_SMOKE"
+}

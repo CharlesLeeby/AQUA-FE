@@ -1,0 +1,48 @@
+{
+  "schema_version": "aqua-fe-hfnet-supervins-mh01-common-support-root-authority-v1",
+  "created_at": "2026-08-21T02:36:22+08:00",
+  "status": "AUTHORIZED_EXACTLY_ONE_PURE_COMMON_SUPPORT_EVALUATION_ATTEMPT_001_START",
+  "authorization_token_sha256": "e3cefdf280877ffd4312720b24cdd5b1b2796f2588e60fa90f40d847073f2698",
+  "controller_command": [
+    "/usr/bin/python3.8",
+    "-B",
+    "/home/ma/AQUA-FE_WS/scripts/evaluate_hfnet_supervins_v1_official_euroc_mh01_common_support_v1.py",
+    "--action",
+    "run",
+    "--authorization-token",
+    "HFNET_SUPERVINS_STAGE6_MH01_COMMON_SUPPORT_ATTEMPT_001_START_ONCE"
+  ],
+  "fresh_evidence_root": "/home/ma/AQUA-FE_WS/experiments/published_hfnet_supervins_v1_official_euroc_mh01_common_support_descriptive_20260821_r1",
+  "attempt": "attempt_001",
+  "maximum_evaluator_starts": 1,
+  "retry_authorized": false,
+  "root_confirmation": "ROOT_CONFIRMED_STAGE6_EXACTLY_ONE_PURE_COMMON_SUPPORT_EVALUATION",
+  "claim_boundary": {
+    "pure_existing_artifact_computation_only": true,
+    "model_ros_publisher_or_trajectory_generation_authorized": false,
+    "cross_system_metric_contrast_authorized": false,
+    "performance_ordering_authorized": false,
+    "inferential_statistics_authorized": false,
+    "next_stage_automatically_authorized": false
+  },
+  "lock": {
+    "sha256": "b112c027b6569a2912726986fd02d75db55c98283cb4c00d181c4c1ff6479566",
+    "size_bytes": 14051
+  },
+  "protocol": {
+    "sha256": "63712f50e2ad21e802066930fd751394249abeb33f76104b33cbbb3c48d8056a",
+    "size_bytes": 22291
+  },
+  "runner": {
+    "sha256": "f42ad63159e4cfc292540fc0b137eb211aa15569de765e8d478b6eb67d4ed9a2",
+    "size_bytes": 87654
+  },
+  "tests": {
+    "sha256": "a4d977347a9633884bfb48ed5abb813beb56c7067b68b7dfe5c0cdb0b61e94ac",
+    "size_bytes": 39542
+  },
+  "test_receipt": {
+    "sha256": "ed3c992f936063c236d5d7215b0461bb849df767a9c777daca32ed853939a4ee",
+    "size_bytes": 3667
+  }
+}

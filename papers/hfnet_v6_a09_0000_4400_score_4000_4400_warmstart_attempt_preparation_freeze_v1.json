@@ -1,0 +1,120 @@
+{
+  "authority_consumption": {
+    "attempt_preparation_authority": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_attempt_preparation_authority_v1.json",
+      "sha256": "aee3a118361114be8c3abfe5571392883c6143dd6b6e4cb4dd4de72ad44541b2",
+      "size_bytes": 4429
+    },
+    "authorized_invocation_count": 1,
+    "consumed_invocation_count": 1,
+    "no_reprepare_authorized": true,
+    "status": "CONSUMED_BY_THE_SOLE_AUTHORIZED_PREPARE_INVOCATION"
+  },
+  "claims": {
+    "accuracy_measured": false,
+    "attempt_prepared": true,
+    "execution_authorized": false,
+    "gpu_workload_started": false,
+    "hfnet_started": false,
+    "process_claim_created": false,
+    "process_launch_authorized": false,
+    "ros_started_by_this_attempt": false,
+    "scientific_comparison_produced": false,
+    "trajectory_produced": false,
+    "vins_started_by_this_attempt": false
+  },
+  "frozen_attempt": {
+    "namespace": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001",
+    "prepared_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/prepared_manifest.json",
+      "schema_version": "aqua-fe-hfnet-v6-a09-0000-4400-score-4000-4400-warmstart-prepared-v1",
+      "sha256": "9687bfd79147778afe4108b4c74281c7f4d639b82b2312fb48b2a64ef18733a4",
+      "size_bytes": 8917,
+      "status": "PREPARED_NOT_STARTED"
+    },
+    "prepared_at_utc": "2026-08-24T17:55:38+00:00",
+    "tree": {
+      "directory_count_including_attempt_root": 4,
+      "file_count": 5,
+      "non_regular_non_directory_count": 0,
+      "result_directory_entry_count": 0,
+      "symlink_count": 0
+    }
+  },
+  "frozen_derived_files": {
+    "local_cache_pre": {
+      "dev_inode": "2050:373745",
+      "isolated_from_shared_seed_dev_inode": true,
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/run_local_model/HFNet-RT/HF-Net.cache",
+      "sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7",
+      "size_bytes": 853319
+    },
+    "local_onnx": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/run_local_model/HFNet-RT/HF-Net.onnx",
+      "sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5",
+      "size_bytes": 132238602
+    },
+    "runtime_config": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/runtime_config_model_path_only.yaml",
+      "sha256": "448176bb0cfbaa38f6dd9faf632081464edb0234706353329d338a535f30e930",
+      "size_bytes": 2126
+    },
+    "shared_cache_seed_dev_inode": "66312:6189087",
+    "subset_times": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/cam0_times_0000_4400.txt",
+      "sha256": "c8b9bb58e1692ae570cfc855e2069bda734110c2866004093c8eefa4293f16a8",
+      "size_bytes": 88020
+    }
+  },
+  "prepare_execution": {
+    "elapsed_seconds": 15.7,
+    "exit_code": 0,
+    "exact_command_matched_authority": true,
+    "status": "PASS_PREPARED_NOT_STARTED"
+  },
+  "prohibited_artifacts_absent": {
+    "headless_stderr_log": true,
+    "headless_stdout_log": true,
+    "process_start_claim": true,
+    "run_result": true,
+    "score_trajectory": true
+  },
+  "read_only_check_observation": {
+    "checked_at_utc": "2026-08-24T17:56:11+00:00",
+    "errors": [
+      "GPU_COMPUTE_APPLICATION_PRESENT",
+      "CONFLICTING_SLAM_OR_ROS_PROCESS_PRESENT"
+    ],
+    "free_mib": 3324,
+    "minimum_free_mib": 3072,
+    "ready": false,
+    "reason": "Unrelated host VINS/ROS work is active; it was neither started nor stopped by this attempt. This expected not-ready observation does not consume or fail the prepared attempt."
+  },
+  "runner_authority": {
+    "runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_v1.py",
+      "sha256": "21981cc560458fd7d47d1d5b8d752a3ad208f499475e0721dd9f758b008a9093",
+      "size_bytes": 69666
+    },
+    "runner_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_runner_freeze_v1.json",
+      "sha256": "39d83f056ebc02d059a8cd1b1ea5db6c3bca1a2909353fe244e1eedd34dc9a3e",
+      "size_bytes": 4079
+    }
+  },
+  "stage_boundary": {
+    "next_required_gates": [
+      "independent read-only audit of this prepared namespace and freeze",
+      "a fresh check with ready=true after all unrelated ROS/VINS/GPU work exits naturally",
+      "a separate byte-pinned one-shot execution lock and exact launch authority"
+    ],
+    "not_permitted": [
+      "reprepare, retry, replacement, or mutation of the frozen pre-run attempt",
+      "process_start_claim creation or HFNet launch before all next gates pass",
+      "trajectory evaluation, APE, RPE, ranking, significance, or paper claims"
+    ],
+    "read_only_check_may_be_repeated": true
+  },
+  "schema_version": "aqua-fe-hfnet-v6-a09-warmstart-attempt-preparation-freeze-v1",
+  "status": "FROZEN_PREPARED_NOT_STARTED_RESOURCE_GATE_PENDING"
+}

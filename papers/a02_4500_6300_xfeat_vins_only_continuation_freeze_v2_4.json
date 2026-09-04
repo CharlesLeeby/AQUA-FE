@@ -1,0 +1,421 @@
+{
+  "command_labels": [
+    "38R4",
+    "39C4",
+    "40C4",
+    "41C4"
+  ],
+  "commands": [
+    "test ! -e /tmp/aqua-fe-a02-long-eval-empty-pycache-v1 && /usr/bin/env -i HOME=/home/ma USER=ma LOGNAME=ma SHELL=/bin/bash PATH=/home/ma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 LC_ALL=C.UTF-8 PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPYCACHEPREFIX=/tmp/aqua-fe-a02-long-eval-empty-pycache-v1 PYTHONPATH=/home/ma/AQUA-FE_WS:/home/ma/.local/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages /usr/bin/python3.8 -B scripts/build_a02_xfeat_vins_continuation_freeze_v2_4.py --action check && test ! -e /tmp/aqua-fe-a02-long-eval-empty-pycache-v1 && /usr/bin/env -i HOME=/home/ma USER=ma LOGNAME=ma SHELL=/bin/bash PATH=/home/ma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 LC_ALL=C.UTF-8 PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPYCACHEPREFIX=/tmp/aqua-fe-a02-long-eval-empty-pycache-v1 PYTHONPATH=/home/ma/AQUA-FE_WS:/home/ma/.local/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages /usr/bin/python3.8 -B scripts/verify_a02_xfeat_vins_continuation_v2_4.py --revision-freeze /home/ma/AQUA-FE_WS/papers/a02_4500_6300_xfeat_vins_only_continuation_freeze_v2_4.json --action check-continuation-start || exit 42",
+    "test ! -e /tmp/aqua-fe-a02-long-eval-empty-pycache-v1 && /usr/bin/env -i HOME=/home/ma USER=ma LOGNAME=ma SHELL=/bin/bash PATH=/home/ma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 LC_ALL=C.UTF-8 PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPYCACHEPREFIX=/tmp/aqua-fe-a02-long-eval-empty-pycache-v1 PYTHONPATH=/home/ma/AQUA-FE_WS:/home/ma/.local/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages /usr/bin/python3.8 -B scripts/verify_a02_xfeat_vins_continuation_v2_4.py --revision-freeze /home/ma/AQUA-FE_WS/papers/a02_4500_6300_xfeat_vins_only_continuation_freeze_v2_4.json --action check-static && test ! -e /tmp/aqua-fe-a02-long-eval-empty-pycache-v1 && /usr/bin/env -i HOME=/home/ma USER=ma LOGNAME=ma SHELL=/bin/bash PATH=/home/ma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 LC_ALL=C.UTF-8 PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPYCACHEPREFIX=/tmp/aqua-fe-a02-long-eval-empty-pycache-v1 PYTHONPATH=/home/ma/AQUA-FE_WS:/home/ma/.local/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages /usr/bin/python3.8 -B scripts/verify_a02_xfeat_vins_continuation_v2_4.py --revision-freeze /home/ma/AQUA-FE_WS/papers/a02_4500_6300_xfeat_vins_only_continuation_freeze_v2_4.json --action check-xfeat-input || exit 42",
+    "gate_rc=0; test ! -e /tmp/aqua-fe-a02-long-eval-empty-pycache-v1 && /usr/bin/env -i HOME=/home/ma USER=ma LOGNAME=ma SHELL=/bin/bash PATH=/home/ma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 LC_ALL=C.UTF-8 PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPYCACHEPREFIX=/tmp/aqua-fe-a02-long-eval-empty-pycache-v1 PYTHONPATH=/home/ma/AQUA-FE_WS:/home/ma/.local/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages /usr/bin/python3.8 -B scripts/verify_a02_xfeat_vins_continuation_v2_4.py --revision-freeze /home/ma/AQUA-FE_WS/papers/a02_4500_6300_xfeat_vins_only_continuation_freeze_v2_4.json --action check-static && test ! -e /tmp/aqua-fe-a02-long-eval-empty-pycache-v1 && /usr/bin/env -i HOME=/home/ma USER=ma LOGNAME=ma SHELL=/bin/bash PATH=/home/ma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 LC_ALL=C.UTF-8 PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPYCACHEPREFIX=/tmp/aqua-fe-a02-long-eval-empty-pycache-v1 PYTHONPATH=/home/ma/AQUA-FE_WS:/home/ma/.local/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages /usr/bin/python3.8 -B scripts/verify_a02_xfeat_vins_continuation_v2_4.py --revision-freeze /home/ma/AQUA-FE_WS/papers/a02_4500_6300_xfeat_vins_only_continuation_freeze_v2_4.json --action check-xfeat-input || gate_rc=$?; if [ \"$gate_rc\" -ne 0 ]; then exit 42; fi; xfeat_vins_rc=73; xfeat_started=0; if [ ! -e /home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_vins_post_incident_v2_4_r1 ]; then /usr/bin/mkdir /home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_vins_post_incident_v2_4_r1 || exit 73; xfeat_started=1; xfeat_vins_rc=0; /usr/bin/env -i HOME=/home/ma USER=ma LOGNAME=ma SHELL=/bin/bash PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 LC_ALL=C.UTF-8 ROS_DISTRO=noetic ROS_MASTER_URI=http://localhost:11532 PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 CMAKE_PREFIX_PATH=/home/ma/SLAM/VINS-Fusion-origin/devel CATKIN_SETUP_UTIL_ARGS='--local --extend' ROOT=/home/ma/AQUA-FE_WS VINS_WS=/home/ma/SLAM/VINS-Fusion-origin AQUALOC_ROOT=/home/ma/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences RAW_TAR=/home/ma/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_2_raw_data.tar.gz RAW_ROOT=raw_data GT_TXT=/home/ma/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_groundtruth_files/new_archaeo_colmap_traj_sequence_02.txt RAW_BAG=/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_6300.bag FEATURE_BAG_OVERRIDE=/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_post_incident_v2_3_r1/features.bag FRONTEND_CONFIG=/home/ma/AQUA-FE_WS/uw_frontend/configs/experiments/low_texture_xfeat_seedchain_frontend.yaml BACKEND_REPLAY_ONLY=0 RUN_VINS=1 FORCE_RAW=0 FORCE_EXPORT=0 EXPORT_FEATURES=0 VINS_MULTIPLE_THREAD=0 VINS_TD=-0.053694112369382575 VINS_ESTIMATE_TD=0 VINS_MAX_SOLVER_TIME=0.04 VINS_MAX_NUM_ITERATIONS=8 AQUALOC_BODY_T_CAM0_MODE=imu_cam PLAY_RATE=1.0 POST_PLAY_SLEEP=8 ROSBAG_PLAY_DELAY=3 ROSBAG_WAIT_FOR_SUBSCRIBERS=0 ROSBAG_PLAY_TOPICS= WAIT_FOR_VINS_SUBSCRIBERS=0 WAIT_FOR_VINS_SUBSCRIBERS_TIMEOUT=20 PORT=11532 TAG=litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_vins_post_incident_v2_4_r1 /bin/bash --noprofile --norc /home/ma/AQUA-FE_WS/scripts/run_aqualoc_archaeo_vins_eval.sh external 2 4500 6300 klt 2 || xfeat_vins_rc=$?; fi; receipt_rc=0; test ! -e /tmp/aqua-fe-a02-long-eval-empty-pycache-v1 && /usr/bin/env -i HOME=/home/ma USER=ma LOGNAME=ma SHELL=/bin/bash PATH=/home/ma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 LC_ALL=C.UTF-8 PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPYCACHEPREFIX=/tmp/aqua-fe-a02-long-eval-empty-pycache-v1 PYTHONPATH=/home/ma/AQUA-FE_WS:/home/ma/.local/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages /usr/bin/python3.8 -B scripts/verify_a02_xfeat_vins_continuation_v2_4.py --revision-freeze /home/ma/AQUA-FE_WS/papers/a02_4500_6300_xfeat_vins_only_continuation_freeze_v2_4.json --action seal-arm-rc --return-code \"$xfeat_vins_rc\" --started \"$xfeat_started\" || receipt_rc=$?; printf 'V2_4_XFEAT_VINS_RC=%s\\n' \"$xfeat_vins_rc\"; printf 'V2_4_XFEAT_RECEIPT_RC=%s\\n' \"$receipt_rc\"; if [ \"$receipt_rc\" -ne 0 ]; then exit \"$receipt_rc\"; fi; exit \"$xfeat_vins_rc\"",
+    "terminal_seal_rc=0; test ! -e /tmp/aqua-fe-a02-long-eval-empty-pycache-v1 && /usr/bin/env -i HOME=/home/ma USER=ma LOGNAME=ma SHELL=/bin/bash PATH=/home/ma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 LC_ALL=C.UTF-8 PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPYCACHEPREFIX=/tmp/aqua-fe-a02-long-eval-empty-pycache-v1 PYTHONPATH=/home/ma/AQUA-FE_WS:/home/ma/.local/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages /usr/bin/python3.8 -B scripts/verify_a02_xfeat_vins_continuation_v2_4.py --revision-freeze /home/ma/AQUA-FE_WS/papers/a02_4500_6300_xfeat_vins_only_continuation_freeze_v2_4.json --action seal-terminal || terminal_seal_rc=$?; terminal_check_rc=2; if [ -e /home/ma/AQUA-FE_WS/papers/a02_4500_6300_xfeat_vins_terminal_v2_4_post_incident.json ]; then terminal_check_rc=0; test ! -e /tmp/aqua-fe-a02-long-eval-empty-pycache-v1 && /usr/bin/env -i HOME=/home/ma USER=ma LOGNAME=ma SHELL=/bin/bash PATH=/home/ma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 LC_ALL=C.UTF-8 PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPYCACHEPREFIX=/tmp/aqua-fe-a02-long-eval-empty-pycache-v1 PYTHONPATH=/home/ma/AQUA-FE_WS:/home/ma/.local/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages /usr/bin/python3.8 -B scripts/verify_a02_xfeat_vins_continuation_v2_4.py --revision-freeze /home/ma/AQUA-FE_WS/papers/a02_4500_6300_xfeat_vins_only_continuation_freeze_v2_4.json --action check-terminal || terminal_check_rc=$?; fi; printf 'V2_4_TERMINAL_SEAL_RC=%s\\n' \"$terminal_seal_rc\"; printf 'V2_4_TERMINAL_CHECK_RC=%s\\n' \"$terminal_check_rc\"; if [ \"$terminal_seal_rc\" -eq 0 ] && [ \"$terminal_check_rc\" -eq 0 ]; then echo V2_4_XFEAT_VINS_EVIDENCE_SEALED_STATUS_IN_JSON_NO_RANKING; exit 0; else echo V2_4_XFEAT_VINS_TERMINAL_GATE_FAILED; exit 2; fi"
+  ],
+  "compatibility_contract": {
+    "actual_detect_calls": 1562,
+    "actual_detect_calls_derivation_fields": [
+      "code_artifacts.detector.runtime.detect_calls",
+      "runtime_profile.stages.detect.count",
+      "code_artifacts.detector.runtime.detect_ms.all.count",
+      "code_artifacts.detector.runtime.detect_ms.warmup.count + steady_state.count",
+      "count(raw_frame_diagnostics.tracked_after < 350)",
+      "count(raw_frame_diagnostics.detector_candidates > 0)"
+    ],
+    "all_nonprojected_legacy_checks_preserved": true,
+    "exact_manifest_sha256": "49ab1814a84222167a173f9e01a9ff9a70b33df9974a131d4b32e026f436da99",
+    "in_memory_projection_leaf_count": 6,
+    "manifest_bag_or_audit_modified": false,
+    "projection_written_to_disk": false,
+    "resolved_path_alias_leaf_count": 5
+  },
+  "execution_policy": {
+    "fixed_order": true,
+    "formal_commands_executed_by_builder": false,
+    "global_identity_or_input_gate_failure_stops_before_xfeat_vins": true,
+    "new_xfeat_vins_actual_process_start_limit": 1,
+    "no_retry": true,
+    "producer_auditor_b1_hfnet_bridge_common_support_evaluator_forbidden": true,
+    "ranking_performed": false,
+    "runner_native_single_arm_descriptive_report_allowed": true,
+    "single_writer_working_directory": "/home/ma/AQUA-FE_WS",
+    "xfeat_vins_scientific_failure_is_terminal_and_not_retried": true
+  },
+  "incident": {
+    "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_v2_3_xfeat_manifest_false_negative_incident_v1.json",
+    "sha256": "6854dd3df40426f83fa78023380d056beab49b669235e3d61e74e161e7e5d58a",
+    "size_bytes": 6238
+  },
+  "protocol_history": [
+    {
+      "freeze": {
+        "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_component_only_continuation_freeze_v2_3.json",
+        "sha256": "0d008cb6b18ae2d4fada2f84dfd444b16e54abf0fdf54c7a9ad80b1f352e4609",
+        "size_bytes": 916846
+      },
+      "protocol": "v2.3",
+      "status": "FIXED_ORDER_COMPLETED_TERMINAL_NOT_RESUMED",
+      "terminal": {
+        "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_component_outcomes_terminal_v2_3_post_incident.json",
+        "sha256": "533c2c58f07ccaff7e513bed098178764b026334b362dafc889dc616f232ac2b",
+        "size_bytes": 84391
+      }
+    },
+    {
+      "incident": {
+        "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_v2_3_xfeat_manifest_false_negative_incident_v1.json",
+        "sha256": "6854dd3df40426f83fa78023380d056beab49b669235e3d61e74e161e7e5d58a",
+        "size_bytes": 6238
+      },
+      "protocol": "v2.4",
+      "status": "FROZEN_NOT_EXECUTED"
+    }
+  ],
+  "required_static_identities": {
+    "v2_3_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_component_only_continuation_freeze_v2_3.json",
+      "sha256": "0d008cb6b18ae2d4fada2f84dfd444b16e54abf0fdf54c7a9ad80b1f352e4609",
+      "size_bytes": 916846
+    },
+    "v2_3_incident_v1": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_command9_infrastructure_false_negative_incident_v1.json",
+      "sha256": "5b19c46b06563250b4e54799608893e509269b85748de2213feb531df3694b07",
+      "size_bytes": 3901
+    },
+    "v2_3_incident_v2_1": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_v2_1_9r_infrastructure_false_negative_incident_v1.json",
+      "sha256": "ed71ba881409786292b1c741a8d925bf0fd13574745e7806d23d29ef48b42aea",
+      "size_bytes": 6337
+    },
+    "v2_3_incident_v2_2": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_v2_2_terminal_incident_v1.json",
+      "sha256": "0de6c739ab40d27ff07bf509ff7002d45b533aeb4b8c6174a96ee941f55305b8",
+      "size_bytes": 16456
+    },
+    "v2_3_quality_auditor": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/audit_quality_partition.py",
+      "sha256": "9ba78f3fa3ae9ea87109bed10b58233afef85d003f5ae996404eabee0f765c0b",
+      "size_bytes": 7963
+    },
+    "v2_3_terminal": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_component_outcomes_terminal_v2_3_post_incident.json",
+      "sha256": "533c2c58f07ccaff7e513bed098178764b026334b362dafc889dc616f232ac2b",
+      "size_bytes": 84391
+    },
+    "v2_3_v1_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_post_stop_long_window_comparison_freeze_v1.json",
+      "sha256": "dfcae748385766f5585e1799603f737abe9223cb30d1a9bcc43fe84476abf9be",
+      "size_bytes": 63541
+    },
+    "v2_3_v1_verifier": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/verify_a02_long_three_arm_eval_inputs_v1.py",
+      "sha256": "d5316e505d6d4337e3743a38c300d963fbede9702c037eaccd501813a0683cef",
+      "size_bytes": 166821
+    },
+    "v2_3_v2_1_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_post_incident_continuation_freeze_v2.json",
+      "sha256": "b86da0e0015076960a9aeb9cf3766b50d6d2342438769866b7b84b4a5d55a355",
+      "size_bytes": 920795
+    },
+    "v2_3_v2_1_verifier": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/verify_a02_long_three_arm_eval_inputs_v2.py",
+      "sha256": "842574d8abc1a0041bee0aaa0085029d63157db480ef1fac4a13656dc51dc560",
+      "size_bytes": 28916
+    },
+    "v2_3_v2_2_addendum": {
+      "path": "/home/ma/AQUA-FE_WS/papers/2026-08-12--a02-4500-6300-second-post-incident-continuation-v2-2.md",
+      "sha256": "e9af312a598606b0304511b84920731a066bb2d57ca8685a9f0f1e7f9be95634",
+      "size_bytes": 7197
+    },
+    "v2_3_v2_2_builder": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/build_a02_long_post_incident_continuation_freeze_v2_2.py",
+      "sha256": "7adb0bd85d3a78e007f02fcfd0dc1de66b405495c36b77b6fd393d799f6199f8",
+      "size_bytes": 7070
+    },
+    "v2_3_v2_2_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_post_incident_continuation_freeze_v2_2.json",
+      "sha256": "6ff86836f3331fdf8618c82ec9d8cf4efaa383893a14a2e335bed81344c37527",
+      "size_bytes": 924221
+    },
+    "v2_3_v2_2_preseal": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_three_arm_pre_eval_verification_v2_2_post_incident.json",
+      "sha256": "1cff9e454466673902f26f09811ad46a60122b1fe0b174b3b2b2c71af906cd7e",
+      "size_bytes": 71424
+    },
+    "v2_3_v2_2_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_verify_a02_long_three_arm_eval_inputs_v2_2.py",
+      "sha256": "f20dd6fb460dedbc7b56d3ff467df93ebdc827040ea0c564dbeace811e859896",
+      "size_bytes": 12499
+    },
+    "v2_3_v2_2_verifier": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/verify_a02_long_three_arm_eval_inputs_v2_2.py",
+      "sha256": "9cf81c5e88d1423b599dda48f66142fc188ed1f483b5062f7ad5c24769a69cd8",
+      "size_bytes": 23917
+    },
+    "v2_3_v2_3_addendum": {
+      "path": "/home/ma/AQUA-FE_WS/papers/2026-08-12--a02-4500-6300-component-only-continuation-v2-3.md",
+      "sha256": "5ce747a0027206e19945a59a3314d98521b0cd258443486903f4d64ab21eb676",
+      "size_bytes": 7943
+    },
+    "v2_3_v2_3_builder": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/build_a02_long_component_continuation_freeze_v2_3.py",
+      "sha256": "b04ba2f3969acefb133554dc3c36ef85cceedbff1a8a5bd57dde17ea906a3dc7",
+      "size_bytes": 7579
+    },
+    "v2_3_v2_3_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_verify_a02_long_component_continuation_v2_3.py",
+      "sha256": "8d9178106803de3b50aaa7506544348722116df69723e6b346c335a96bc2aa1d",
+      "size_bytes": 18941
+    },
+    "v2_3_v2_3_verifier": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/verify_a02_long_component_continuation_v2_3.py",
+      "sha256": "f90b1d552b621202f99c471c94cc6b6a9a6c4750668df05163ffda605a8bfef0",
+      "size_bytes": 51388
+    },
+    "v2_4_addendum": {
+      "path": "/home/ma/AQUA-FE_WS/papers/2026-08-12--a02-4500-6300-xfeat-vins-only-continuation-v2-4.md",
+      "sha256": "3f2c301453473745ad5c7fe1bc4567cd5e5e31445e24bb52720bef5da8c3f820",
+      "size_bytes": 4230
+    },
+    "v2_4_builder": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/build_a02_xfeat_vins_continuation_freeze_v2_4.py",
+      "sha256": "22642bf6a625b997127c683740a051a2fda0cb5862aee997b30cc243558d9f9c",
+      "size_bytes": 5788
+    },
+    "v2_4_incident": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_v2_3_xfeat_manifest_false_negative_incident_v1.json",
+      "sha256": "6854dd3df40426f83fa78023380d056beab49b669235e3d61e74e161e7e5d58a",
+      "size_bytes": 6238
+    },
+    "v2_4_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_verify_a02_xfeat_vins_continuation_v2_4.py",
+      "sha256": "3064faa08a9beccc8dbfb805b4d20d7ad449fe4e3a5cd9cb3b61afadcbc179ee",
+      "size_bytes": 17123
+    },
+    "v2_4_verifier": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/verify_a02_xfeat_vins_continuation_v2_4.py",
+      "sha256": "1bf1c838e01b43b1b42effd8f157f1b45a00ee88fedec2337b39cbb67abbd294",
+      "size_bytes": 42524
+    }
+  },
+  "reserved_paths_absent_at_freeze": [
+    "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_vins_post_incident_v2_4_r1",
+    "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_xfeat_vins_terminal_v2_4_post_incident.json"
+  ],
+  "schema_version": "aqua-fe-a02-4500-6300-xfeat-vins-only-continuation-freeze-v2-4",
+  "scientific_role": "FOURTH_POST_INCIDENT_DEVELOPMENT_EXPLORATORY_XFEAT_VINS_USABILITY_NOT_CONFIRMATORY_NOT_A_RANKING_RESULT",
+  "status": "FROZEN_FOURTH_POST_INCIDENT_XFEAT_VINS_ONLY_CONTINUATION",
+  "terminal_contract": {
+    "b1_is_immutable_pass_carry_forward": true,
+    "common_support_evaluator_run": false,
+    "descriptive_two_component_comparison_eligible_requires_both_vins_usable": true,
+    "evidence_path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_xfeat_vins_terminal_v2_4_post_incident.json",
+    "hfnet_is_immutable_unusable_excluded": true,
+    "only_xfeat_vins_may_be_newly_executed": true,
+    "ranking_performed": false,
+    "schema_version": "aqua-fe-a02-xfeat-vins-terminal-v2-4-post-incident-continuation",
+    "superiority_claim_allowed": false
+  },
+  "v2_3_terminal_carry_forward": {
+    "b1_log": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/vins.log",
+      "sha256": "454d828f9eec6884c680d079e0664db0e4de2dcacc6bef62ad2ddddb8842281e",
+      "size_bytes": 87615
+    },
+    "b1_receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/process_rc_receipt.json",
+      "sha256": "545219acf1fe53422e27c6b0cf1def9d0f83603e1697922ae41dd6122eb43023",
+      "size_bytes": 867
+    },
+    "b1_run_tree": {
+      "entries": [
+        {
+          "relative_path": ".",
+          "type": "directory"
+        },
+        {
+          "relative_path": "ape.txt",
+          "sha256": "6a6882e8935efaa0e9d96cf39626874c8f7cfcefc9789fef6aec663d9e019230",
+          "size_bytes": 643,
+          "type": "regular"
+        },
+        {
+          "relative_path": "aqualoc_archaeo02_pinhole.yaml",
+          "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+          "size_bytes": 357,
+          "type": "regular"
+        },
+        {
+          "relative_path": "process_rc_receipt.json",
+          "sha256": "545219acf1fe53422e27c6b0cf1def9d0f83603e1697922ae41dd6122eb43023",
+          "size_bytes": 867,
+          "type": "regular"
+        },
+        {
+          "relative_path": "replay_manifest.txt",
+          "sha256": "a639237629d44c99bf987cbd0148290750bd2f73e709a10e6b5411519410d208",
+          "size_bytes": 508,
+          "type": "regular"
+        },
+        {
+          "relative_path": "roscore.log",
+          "sha256": "e3324482ce39f05d9c36201a93d9809852d40a2494ab86c273b5097ebe131b5e",
+          "size_bytes": 869,
+          "type": "regular"
+        },
+        {
+          "relative_path": "vins.log",
+          "sha256": "454d828f9eec6884c680d079e0664db0e4de2dcacc6bef62ad2ddddb8842281e",
+          "size_bytes": 87615,
+          "type": "regular"
+        },
+        {
+          "relative_path": "vins_aqualoc_archaeo_external.yaml",
+          "sha256": "17113798c7c20253ecf921ad4a3e709d9060f407ad0070f23fbb9099ac044210",
+          "size_bytes": 982,
+          "type": "regular"
+        },
+        {
+          "relative_path": "vins_env_manifest.txt",
+          "sha256": "2345a6e6b9a96963f0bc5b8501ef4b4179d93b8bffa81dc764f5f06fefe40824",
+          "size_bytes": 2278,
+          "type": "regular"
+        },
+        {
+          "relative_path": "vins_output",
+          "type": "directory"
+        },
+        {
+          "relative_path": "vins_output/vio.csv",
+          "sha256": "59c505704e9e82c050abe2c3e2edb83517b7044828beb694780646ff7a2bea92",
+          "size_bytes": 93578,
+          "type": "regular"
+        }
+      ],
+      "root": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1",
+      "summary": {
+        "directory_count": 2,
+        "inventory_sha256": "9e11cfd3471ebc3710f2b44f9356c36ddb6a0361d8e6c8b51b3654200e921201",
+        "regular_file_count": 9,
+        "total_regular_bytes": 187697
+      }
+    },
+    "b1_vio": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_klt_every2_litcmp_a02_4500_6300_preroll_b1_constq_vins_post_incident_v2_3_r1/vins_output/vio.csv",
+      "sha256": "59c505704e9e82c050abe2c3e2edb83517b7044828beb694780646ff7a2bea92",
+      "size_bytes": 93578
+    },
+    "corrected_quality_audit": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_constq_quality_partition_audit_v2_3_post_incident.json",
+      "sha256": "f1070aa2d0b5972de4530a7645d7b328b239300e249b6d976f4c4adee3bf339b",
+      "size_bytes": 851
+    },
+    "old_xfeat_dependency_skip_tree": {
+      "entries": [
+        {
+          "relative_path": ".",
+          "type": "directory"
+        },
+        {
+          "relative_path": "process_rc_receipt.json",
+          "sha256": "20b5417f9553f8e9e93c538124d2ed7d1e8354e6d0e187bec2720ed3bb06dd9f",
+          "size_bytes": 969,
+          "type": "regular"
+        }
+      ],
+      "receipt_identity": {
+        "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_vins_post_incident_v2_3_r1/process_rc_receipt.json",
+        "sha256": "20b5417f9553f8e9e93c538124d2ed7d1e8354e6d0e187bec2720ed3bb06dd9f",
+        "size_bytes": 969
+      },
+      "receipt_record": {
+        "actual_process_start_count": 0,
+        "algorithm_started": false,
+        "arm": "XFEATBIRTH_RAWLK",
+        "attempt_count": 0,
+        "continuation_generation": "v2.3_component_only",
+        "feature_bag": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_post_incident_v2_3_r1/features.bag",
+        "no_retry": true,
+        "port": 11532,
+        "return_code": 125,
+        "run_dir": "/home/ma/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_vins_post_incident_v2_3_r1",
+        "runner": {
+          "path": "/home/ma/AQUA-FE_WS/scripts/run_aqualoc_archaeo_vins_eval.sh",
+          "sha256": "c3bdb181fb4a0f9ef457f9dd0f7cffd4b1a79c8ed8dc2e529d62f02c9f98a1cc"
+        },
+        "schema_version": "aqua-fe-a02-vins-arm-process-receipt-v2-3",
+        "status": "DEPENDENCY_SKIP_PROCESS_NOT_STARTED",
+        "tag": "litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_vins_post_incident_v2_3_r1"
+      },
+      "root": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_vins_post_incident_v2_3_r1",
+      "semantic_interpretation": {
+        "algorithm_process_start_count": 0,
+        "classification": "DEPENDENCY_SKIP_NOT_ALGORITHM_ATTEMPT"
+      },
+      "summary": {
+        "directory_count": 1,
+        "inventory_sha256": "a32d567bc0561164c2873f77b8a3ca0e338138d48e0bfb1dd5ab4acb738a2d64",
+        "regular_file_count": 1,
+        "total_regular_bytes": 969
+      }
+    },
+    "v2_3_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_component_only_continuation_freeze_v2_3.json",
+      "sha256": "0d008cb6b18ae2d4fada2f84dfd444b16e54abf0fdf54c7a9ad80b1f352e4609",
+      "size_bytes": 916846
+    },
+    "v2_3_terminal": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_component_outcomes_terminal_v2_3_post_incident.json",
+      "sha256": "533c2c58f07ccaff7e513bed098178764b026334b362dafc889dc616f232ac2b",
+      "size_bytes": 84391
+    },
+    "xfeat_audit": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_post_incident_v2_3_r1/audit.json",
+      "sha256": "d2bc2d8be0c5daf5700a89e1e68ebbc6f9c479ebf260eb80fac10c01031901b5",
+      "size_bytes": 6053
+    },
+    "xfeat_bag": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_post_incident_v2_3_r1/features.bag",
+      "sha256": "13d0daf45e81560506cc44927318d91821ffc40564ded4529ce1466ed70700c0",
+      "size_bytes": 27396366
+    },
+    "xfeat_export_tree": {
+      "entries": [
+        {
+          "relative_path": ".",
+          "type": "directory"
+        },
+        {
+          "relative_path": "audit.json",
+          "sha256": "d2bc2d8be0c5daf5700a89e1e68ebbc6f9c479ebf260eb80fac10c01031901b5",
+          "size_bytes": 6053,
+          "type": "regular"
+        },
+        {
+          "relative_path": "export_manifest.json",
+          "sha256": "49ab1814a84222167a173f9e01a9ff9a70b33df9974a131d4b32e026f436da99",
+          "size_bytes": 812038,
+          "type": "regular"
+        },
+        {
+          "relative_path": "features.bag",
+          "sha256": "13d0daf45e81560506cc44927318d91821ffc40564ded4529ce1466ed70700c0",
+          "size_bytes": 27396366,
+          "type": "regular"
+        }
+      ],
+      "root": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_post_incident_v2_3_r1",
+      "summary": {
+        "directory_count": 1,
+        "inventory_sha256": "72cc3aeee06575bf6c16a13f27c1f3649cb85b19e45299d841191ea56eda84d2",
+        "regular_file_count": 3,
+        "total_regular_bytes": 28214457
+      }
+    },
+    "xfeat_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/aqualoc_archaeo_vins/external_xfeat_lk_every2_litcmp_a02_4500_6300_preroll_xfeatbirth_rawlkcarrier_v1_post_incident_v2_3_r1/export_manifest.json",
+      "sha256": "49ab1814a84222167a173f9e01a9ff9a70b33df9974a131d4b32e026f436da99",
+      "size_bytes": 812038
+    }
+  },
+  "working_directory": "/home/ma/AQUA-FE_WS"
+}

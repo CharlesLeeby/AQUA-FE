@@ -1,0 +1,233 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a09-0000-6200-score-6000-6200-input-freeze-v1",
+  "status": "FROZEN_PASS_PREPARATION_ONLY_HFNET_NOT_STARTED",
+  "created_at_local": "2026-08-28T02:04:58+08:00",
+  "scientific_role": "DEVELOPMENT_ONLY_INPUT_FOR_EXTERNAL_HFNET_RUNABILITY_ON_A_JULY14_OLD_FROZEN_POSITIVE_WINDOW",
+  "selection": {
+    "dataset_family": "aqualoc_archaeology",
+    "sequence_id": "A09",
+    "feed_source_indices_inclusive": [
+      0,
+      6200
+    ],
+    "feed_local_indices_inclusive": [
+      0,
+      6200
+    ],
+    "feed_camera_count": 6201,
+    "feed_timestamp_ns_inclusive": [
+      1542888746071008208,
+      1542889056019958896
+    ],
+    "preroll_source_indices_inclusive": [
+      0,
+      5999
+    ],
+    "preroll_last_timestamp_ns": 1542889045971818320,
+    "score_source_indices_inclusive": [
+      6000,
+      6200
+    ],
+    "score_local_indices_inclusive": [
+      6000,
+      6200
+    ],
+    "score_timestamp_ns_inclusive": [
+      1542889046021625712,
+      1542889056019958896
+    ],
+    "score_camera_count": 201,
+    "camera_zero_included_after_input_legality_proved_before_any_hfnet_result": true,
+    "synthetic_or_extrapolated_imu_used": false
+  },
+  "canonical_artifacts": {
+    "materialized_input_root": "/mnt/data/AQUA-FE_WS/datasets/hfnet_old_frozen_positive_windows_v1/a09_0000_6200_score_6000_6200_warmstart",
+    "materialization_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_old_frozen_positive_windows_v1/a09_0000_6200_score_6000_6200_warmstart/materialization_manifest.json",
+      "size_bytes": 4072785,
+      "sha256": "e6bf409e46d9cc1e5590ba6f629638a8d3fd19763a1c063029b7ccab3d3b72d2",
+      "schema_version": "aqua-fe-hfnet-v6-a09-0000-6200-score-6000-6200-input-materialization-v1",
+      "status": "PASS_PREPARATION_ONLY"
+    },
+    "independent_audit_receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_old_frozen_positive_windows_v1/a09_0000_6200_score_6000_6200_warmstart.independent_audit_v1.json",
+      "size_bytes": 6400,
+      "sha256": "6e094706bdc306d9cc7fc306e47634aff2cb3c0725e4a8c37900e0181c08aff0",
+      "schema_version": "aqua-fe-hfnet-v6-a09-0000-6200-score-6000-6200-independent-input-audit-v1",
+      "status": "PASS_PREPARATION_ONLY_INDEPENDENT_AUDIT"
+    }
+  },
+  "frozen_content": {
+    "canonical_source": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_9_raw_data.tar.gz",
+      "size_bytes": 1722658380,
+      "sha256": "4d20237571928067cfe4dbb813224cfd2277270c424a6ef97ef50d2933da2901",
+      "gzip_crc32": "b2f3021d",
+      "gzip_isize": 1742161920,
+      "camera_csv": {
+        "member": "raw_data/img_sequence_9.csv",
+        "size_bytes": 251738,
+        "sha256": "29dc7cc3e67df003081070c6191107c8d8d6b5183fc62df965bd0fe5b685d03a",
+        "crc32": "6ab5e1f7",
+        "row_count": 6992
+      },
+      "imu_csv": {
+        "member": "raw_data/imu_sequence_9.csv",
+        "size_bytes": 7806649,
+        "sha256": "9334097f6311c5fcfe15dae581b18f479dbe9377f78da0b2ba08f4e5a36c83b3",
+        "crc32": "cc6033a9",
+        "row_count": 69861
+      }
+    },
+    "camera": {
+      "count": 6201,
+      "timestamp_ns_inclusive": [
+        1542888746071008208,
+        1542889056019958896
+      ],
+      "all_png_bytes_identical_to_canonical_source_members": true,
+      "all_png_crc_and_idat_checks_passed": true,
+      "total_png_bytes": 1523345291,
+      "source_inventory_sha256": "f6a010a370a1f96d4180d6caaa31bae201993c7c3bb7d728a73ec752adb808d9",
+      "source_inventory_crc32": "87d0105f",
+      "renamed_inventory_sha256": "77dd65cc8f258e081ee127506bec78a00dfda7077262fd012178d3c68449fafd",
+      "renamed_inventory_crc32": "52749daf"
+    },
+    "imu": {
+      "count": 61943,
+      "source_indices_inclusive_zero_based": [
+        5,
+        61947
+      ],
+      "time_transform": "output_ns=raw_ns+53694112",
+      "strictly_monotonic": true,
+      "every_camera_has_predecessor_and_successor": true,
+      "first_second_penultimate_last_raw_ns": [
+        1542888746014492144,
+        1542888746019782672,
+        1542889055963729040,
+        1542889055968943952
+      ],
+      "first_second_penultimate_last_output_ns": [
+        1542888746068186256,
+        1542888746073476784,
+        1542889056017423152,
+        1542889056022638064
+      ]
+    },
+    "generated_files": {
+      "cam0_times.txt": {
+        "size_bytes": 124020,
+        "sha256": "c552e3038595940518ec64e3e8c3a1e0918fb3bdb61c61df33dfd38953b19f3d",
+        "crc32": "5056b9e7"
+      },
+      "mav0/cam0/data.csv": {
+        "size_bytes": 272869,
+        "sha256": "95f24b5a55ecf1707488db9bce74312978efc4135a34f2c9b17c46cc780a531c",
+        "crc32": "974b684e"
+      },
+      "mav0/imu0/data.csv": {
+        "size_bytes": 6915052,
+        "sha256": "b4aa90d41eab066cf7b7132378f0b7c8735a47ada45342cd7083c0cc1e6dbc57",
+        "crc32": "c2bab267"
+      }
+    },
+    "payload_excluding_manifest": {
+      "file_count": 6204,
+      "total_size_bytes": 1530657232,
+      "sha256": "a186160594fe6e0fc46ed2e363d6171e22a5ee8abd549467635a4f3833151c1c",
+      "crc32": "6ea95711"
+    },
+    "tree_closure": {
+      "file_count_including_manifest": 6205,
+      "directory_count_including_root": 5,
+      "exact_file_and_directory_sets": true,
+      "symlink_count": 0,
+      "unchanged_during_independent_audit": true
+    }
+  },
+  "immutable_provenance": {
+    "selector_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_6200_score_6000_6200_selector_freeze_v1.json",
+      "size_bytes": 4673,
+      "sha256": "2d9bea353a09dfc806cd9764de86d19aa759ee6e640696e33380dc2d9a120883"
+    },
+    "runability_protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_6200_score_6000_6200_runability_protocol_v1.md",
+      "size_bytes": 4997,
+      "sha256": "1e63981a3e5d064f80d72988535b8eec13ad2a778b93fd09146be693bd2445ef"
+    },
+    "materializer": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/materialize_hfnet_v6_a09_0000_6200_score_6000_6200_v1.py",
+      "size_bytes": 13326,
+      "sha256": "61ad14942e19380dd93bc6812fdaead9b61b3f15cbaae683443e16bd49eb413a"
+    },
+    "materializer_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_materialize_hfnet_v6_a09_0000_6200_score_6000_6200_v1.py",
+      "size_bytes": 7145,
+      "sha256": "b7a5917b834982cc706ad2e558874638511d77da7c9c20878228b1016312c4fb"
+    },
+    "independent_auditor": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/audit_hfnet_v6_a09_0000_6200_score_6000_6200_input_v1.py",
+      "size_bytes": 14303,
+      "sha256": "837656d031234476e246356c3e27acc2447844bb9fb013c46f9d68af2353386a"
+    },
+    "independent_auditor_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_audit_hfnet_v6_a09_0000_6200_score_6000_6200_input_v1.py",
+      "size_bytes": 3565,
+      "sha256": "dc1751f96066da4706edde4c5e1db4308f145fd24d15ea8fd023c536d2471fbc"
+    },
+    "reused_a08_materializer": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/materialize_hfnet_v6_a08_0000_4660_score_4500_4660_v1.py",
+      "size_bytes": 13342,
+      "sha256": "67043bfb2e9f57d0b2f83a5471d9f8f365f3222753d766cd1e5df9eca4d6826d"
+    },
+    "reused_a08_auditor": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/audit_hfnet_v6_a08_0000_4660_score_4500_4660_input_v1.py",
+      "size_bytes": 14409,
+      "sha256": "684cf14d7d38b186548837a518caff3782939ae0a452a68ec4f09048da3c7d75"
+    }
+  },
+  "process_free_tests": {
+    "distinct_test_count": 8,
+    "materializer_test_count": 3,
+    "independent_auditor_test_count": 5,
+    "terminal_combined_run_test_count": 8,
+    "terminal_combined_run_failures": 0,
+    "terminal_combined_run_errors": 0,
+    "subprocess_or_hfnet_launches_from_tests": 0
+  },
+  "observed_preparation": {
+    "read_only_payload_pin_derivation_invocations": 2,
+    "read_only_payload_pin_derivation_first_failure": "tar-member lookup omitted the canonical image prefix and therefore selected zero images; no canonical output or receipt was written",
+    "read_only_payload_pin_derivation_terminal_exit_code": 0,
+    "read_only_payload_pin_derivation_terminal_elapsed_seconds": 46.7,
+    "materialization_process_invocations": 1,
+    "materialization_exit_code": 0,
+    "materialization_elapsed_seconds": 113.91,
+    "independent_audit_process_invocations": 1,
+    "independent_audit_terminal_exit_code": 0,
+    "independent_audit_terminal_elapsed_seconds": 31.26,
+    "independent_audit_receipts_created": 1,
+    "hfnet_process_invocations": 0
+  },
+  "claims": {
+    "input_preparation_passed": true,
+    "hfnet_started": false,
+    "trajectory_produced": false,
+    "runability_passed": false,
+    "accuracy_evaluated": false,
+    "system_ranking_supported": false,
+    "superiority_supported": false,
+    "confirmatory_evidence": false
+  },
+  "next_stage_boundary": {
+    "permitted": "reviewed process-free runner tests, runner freeze, attempt preparation, and a separately frozen exactly-once execution lock",
+    "prohibited": [
+      "editing or replacing the canonical input, manifest, or audit receipt",
+      "another materialization or independent audit invocation",
+      "starting HFNet before the runner and execution lock are frozen",
+      "computing APE, RPE, a winner, ranking, significance, or paper claim without history-matched comparators and common-support gates"
+    ]
+  }
+}

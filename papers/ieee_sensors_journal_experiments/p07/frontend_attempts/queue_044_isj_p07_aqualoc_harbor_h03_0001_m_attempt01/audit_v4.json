@@ -1,0 +1,82 @@
+{
+  "afrl_replay_manifest": null,
+  "arbitration_summary": null,
+  "arm": "M_xfeat_pairwise_nativeq_v1",
+  "attestation": {
+    "path": "logs/aqualoc_real_vins/external_xfeat_every2_isj_p07_aqualoc_harbor_h03_0001_m_attempt01/features.bag.p05-xfeat-contract.json",
+    "schema_version": "aqua-fe-p05-xfeat-bag-attestation-v1",
+    "sha256": "49e9e4fdcbb3ac6a5869ba6cb20ed30498cbc3c23a661862bfbd53d6ed06918c"
+  },
+  "checks": {
+    "arm_attestation_bound": true,
+    "complete_13_channel_schema": true,
+    "feature_cap_and_native_q_pass": true,
+    "guard_exact_nonfallback_pass": true,
+    "metrics_match_bag": true,
+    "no_trajectory_outcome_artifacts": true,
+    "p_final_run_summary_bound": false,
+    "queue_allocation_exact": true,
+    "required_sensor_reference_topics_present": true,
+    "zero_action_identity_terminal_or_deferred": true
+  },
+  "command_sha256": "3996da7b7735cfbd8ac808c279e18a7824f14c503ad62f29811afcea03a44de3",
+  "dataset_family": "aqualoc_harbor",
+  "feature_bag": {
+    "feature_end_stamp": 1523966922.5929668,
+    "feature_frames": 450,
+    "feature_observations": 115679,
+    "feature_start_stamp": 1523966877.6754165,
+    "is_learned_counts": {
+      "1": 115679
+    },
+    "max_features_per_frame": 294,
+    "min_features_per_frame": 220,
+    "path": "logs/aqualoc_real_vins/external_xfeat_every2_isj_p07_aqualoc_harbor_h03_0001_m_attempt01/features.bag",
+    "quality_max": 0.9144880771636963,
+    "quality_min": 0.8309264779090881,
+    "required_sensor_reference_topics": [
+      "/rtimulib_node/imu",
+      "/aqualoc/colmap_gt"
+    ],
+    "sha256": "3d76697c1c9f6493a03077141676e58a770a7e13a60d528b85c6b67d72184849",
+    "sigma_max": 1.097030520439148,
+    "sigma_min": 1.0457093715667725,
+    "size_bytes": 11159771,
+    "source_counts": {
+      "20": 115679
+    },
+    "topic_counts": {
+      "/aqualoc/colmap_gt": 181,
+      "/feature_tracker/feature": 450,
+      "/rtimulib_node/imu": 9099
+    },
+    "zero_feature_frames": 0
+  },
+  "forbidden_outcome_artifacts": [],
+  "frontend_metrics": {
+    "exported_feature_observations": 115679,
+    "path": "logs/aqualoc_real_vins/external_xfeat_every2_isj_p07_aqualoc_harbor_h03_0001_m_attempt01/frontend_metrics.csv",
+    "rows": 450,
+    "sha256": "964aad9e1d117931198d4f6adafff00ea8c8c19c3758d78b68587f73765035dc",
+    "size_bytes": 276762
+  },
+  "guard": {
+    "action": "ALLOW_M_XFEAT",
+    "contract_hash": "4e31a9a29e8ee2198535de6b0bce01550b17077434e8e01ed68057822d4eace4",
+    "path": "logs/backend_contract_decisions/p05/p05_xfeat_guard_20260807T122409Z_814507_decision.json",
+    "schema_version": "aqua-fe-p05-xfeat-backend-guard-decision-v1",
+    "sha256": "1bd96ef1994897581116b74b855c2ca3f5cbd16d0a717aef3fe30520a17ff16a"
+  },
+  "held_out_frontend_outcome_read": true,
+  "held_out_trajectory_outcome_read": false,
+  "learned_lineages": null,
+  "outcome_boundary": "FRONTEND_EXPORT_ONLY_NO_VINS_APE_RPE_TRAJECTORY",
+  "probe_run": null,
+  "queue_index": 44,
+  "run_dir": "logs/aqualoc_real_vins/external_xfeat_every2_isj_p07_aqualoc_harbor_h03_0001_m_attempt01",
+  "run_id": "isj-nativeq-v3_P07_aqualoc_harbor-H03_900-1800_M_f0_b00_20260806T084500Z",
+  "schema_version": "isj-p07-frontend-export-audit-v4",
+  "status": "PASS",
+  "window_id": "aqualoc_harbor:H03:0001",
+  "zero_action_identity": null
+}

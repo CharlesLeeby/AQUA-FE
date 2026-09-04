@@ -1,0 +1,69 @@
+{
+  "schema_version": "aqua-fe-hfnet-supervins-mh01-common-support-attempt-002-root-controller-receipt-v1",
+  "status": "RECORDED_ROOT_CONTROLLER_OBSERVATION_ATTEMPT_002",
+  "controller_command": [
+    "/usr/bin/python3.8",
+    "-B",
+    "/home/ma/AQUA-FE_WS/scripts/evaluate_hfnet_supervins_v1_official_euroc_mh01_common_support_attempt_002_v1.py",
+    "--action",
+    "run",
+    "--authorization-token",
+    "HFNET_SUPERVINS_STAGE6_MH01_COMMON_SUPPORT_ATTEMPT_002_CORRECTIVE_START_ONCE"
+  ],
+  "observed_process_return_code": 0,
+  "observed_stdout_exact_line": "{\"return_code\": 0, \"run_result_identity\": {\"mode\": \"0444\", \"nlink\": 1, \"sha256\": \"90fa85570d9655548067c784cf5f0471472b3c7548f27f8a7c1d962b1d69a5b3\", \"size_bytes\": 74508}, \"status\": \"PASS_DEVELOPMENT_OFFICIAL_MH01_EXACT_COMMON_SUPPORT_DESCRIPTIVE_ANALYSIS_ATTEMPT_002_CORRECTIVE\", \"terminal_commit_audit\": {\"directory_durability_confirmed\": true, \"embedded_ownership_token_matches_final\": true, \"owned_final_inode_match\": true, \"parent_directory_fsync\": {\"attempts\": 1, \"confirmed\": true, \"errors\": [], \"maximum_attempts\": 3}, \"post_commit_observation_confirmed\": true, \"post_commit_staging_absent\": true, \"reconciled_after_publish_exception\": false, \"semantic_commit_point_reached\": true, \"staging_absent\": true}}",
+  "observed_stdout_json": {
+    "return_code": 0,
+    "run_result_identity": {
+      "mode": "0444",
+      "nlink": 1,
+      "sha256": "90fa85570d9655548067c784cf5f0471472b3c7548f27f8a7c1d962b1d69a5b3",
+      "size_bytes": 74508
+    },
+    "status": "PASS_DEVELOPMENT_OFFICIAL_MH01_EXACT_COMMON_SUPPORT_DESCRIPTIVE_ANALYSIS_ATTEMPT_002_CORRECTIVE",
+    "terminal_commit_audit": {
+      "directory_durability_confirmed": true,
+      "embedded_ownership_token_matches_final": true,
+      "owned_final_inode_match": true,
+      "parent_directory_fsync": {
+        "attempts": 1,
+        "confirmed": true,
+        "errors": [],
+        "maximum_attempts": 3
+      },
+      "post_commit_observation_confirmed": true,
+      "post_commit_staging_absent": true,
+      "reconciled_after_publish_exception": false,
+      "semantic_commit_point_reached": true,
+      "staging_absent": true
+    }
+  },
+  "observed_stderr_exact": "",
+  "execution_authority": {
+    "sha256": "656f463513d9f6cea5307a2174c6ac83058a520cbced125d33a0a44296994173",
+    "size_bytes": 2350,
+    "mode": "0444",
+    "nlink": 1
+  },
+  "run_result": {
+    "path": "/home/ma/AQUA-FE_WS/experiments/published_hfnet_supervins_v1_official_euroc_mh01_common_support_descriptive_20260821_r2/attempt_002/run_result.json",
+    "sha256": "90fa85570d9655548067c784cf5f0471472b3c7548f27f8a7c1d962b1d69a5b3",
+    "size_bytes": 74508,
+    "mode": "0444",
+    "nlink": 1
+  },
+  "claim_boundary": {
+    "receipt_is_scientific_adoption": false,
+    "independent_postrun_audit_required": true,
+    "model_ros_publisher_or_trajectory_generation_observed": false,
+    "cross_system_metric_contrast_authorized": false,
+    "performance_ordering_authorized": false,
+    "inferential_statistics_authorized": false,
+    "attempt_003_authorized": false,
+    "next_stage_automatically_authorized": false
+  },
+  "self_hash": {
+    "algorithm": "sha256_of_canonical_json_with_self_hash_value_zeroed",
+    "value": "93d05ee907caaf3d9bbf14ae80fd947323f5472080cb357ebd6e67e59bd342b3"
+  }
+}

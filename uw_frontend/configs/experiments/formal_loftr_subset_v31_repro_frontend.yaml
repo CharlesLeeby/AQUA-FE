@@ -1,0 +1,10 @@
+extends: formal_loftr_v31_repro_frontend.yaml
+
+hybrid:
+  # When the full LoFTR proposal batch perturbs F/H statistics, try only a tiny
+  # grid-balanced subset. The subset is still queued as pending and must pass
+  # multi-frame LK/NCC/FB/geometric confirmation before VINS export.
+  semidense_acceptance_subset_on_geometry_fail: true
+  semidense_acceptance_subset_max_count: 4
+  semidense_acceptance_subset_min_count: 1
+  semidense_acceptance_subset_max_per_cell: 1

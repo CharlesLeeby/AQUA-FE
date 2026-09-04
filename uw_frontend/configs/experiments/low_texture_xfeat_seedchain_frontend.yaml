@@ -1,0 +1,41 @@
+extends: low_texture_active_xfeat_sidecar.yaml
+
+hybrid:
+  # Dataset-neutral XFeat seed-chain profile.
+  #
+  # Learned matches are not exported as pairwise backend observations. They are
+  # used as birth seeds, must survive LK/KLT confirmation, then enter the KLT
+  # state with source provenance preserved for ablation.
+  enable_three_layer_source_aware: true
+  learned_init_on_track_churn: true
+  learned_init_rolling_churn: true
+  learned_init_rolling_churn_window: 3
+  learned_init_rolling_churn_min_bad_frames: 2
+  learned_init_rolling_churn_min_grid_coverage: 0.88
+  learned_init_rolling_churn_max_long_track_ratio: 0.30
+  source_aware_xfeat_modes:
+    - low_texture
+    - low_coverage_recovery
+    - identity_churn
+
+  learned_init_requires_klt_confirmation: true
+  learned_confirmation_min_frames: 3
+  learned_confirmation_preserve_new_pending: true
+  learned_confirmation_geometry_safe: true
+  learned_confirmation_max_pending: 800
+  learned_confirmation_max_confirmed: 80
+
+  # Keep XFeat available in high nominal coverage cases where KLT identities
+  # churn. Export-time online seed gates still dose-limit backend exposure.
+  promotion_xfeat_min_grid_coverage: 1.01
+  promotion_xfeat_max_confirmed: 12
+  promotion_xfeat_min_quality: 0.10
+  promotion_xfeat_max_fb_error: 1.20
+  promotion_xfeat_min_ncc: 0.42
+
+  enable_source_provenance_memory: true
+  source_provenance_learned_hold_frames: 120
+  source_provenance_quality_scale_learned: 0.88
+
+measurement_selection:
+  enabled: false

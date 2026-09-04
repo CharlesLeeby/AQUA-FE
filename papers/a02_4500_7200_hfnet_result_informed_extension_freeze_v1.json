@@ -1,0 +1,313 @@
+{
+  "authoritative_commands": [
+    {
+      "action": "synthetic_tests_only",
+      "argv": [
+        "/usr/bin/python3.8",
+        "-B",
+        "-m",
+        "unittest",
+        "scripts.tests.test_a02_hfnet_result_informed_extension_v1"
+      ],
+      "executed_during_implementation": true,
+      "may_start_slam": false,
+      "ordinal": 0
+    },
+    {
+      "action": "source_window_preflight",
+      "argv": [
+        "/usr/bin/python3.8",
+        "-B",
+        "scripts/materialize_aqualoc_a02_4500_7200_result_informed_v1.py",
+        "--action",
+        "preflight"
+      ],
+      "executed_during_implementation": false,
+      "may_start_slam": false,
+      "ordinal": 1
+    },
+    {
+      "action": "source_window_export_once",
+      "argv": [
+        "/usr/bin/python3.8",
+        "-B",
+        "scripts/materialize_aqualoc_a02_4500_7200_result_informed_v1.py",
+        "--action",
+        "export"
+      ],
+      "executed_during_implementation": false,
+      "may_start_slam": false,
+      "ordinal": 2
+    },
+    {
+      "action": "shared_input_preflight",
+      "argv": [
+        "/usr/bin/python3.8",
+        "-B",
+        "scripts/export_aqualoc_a02_shared_4500_7200_result_informed_v1.py",
+        "--action",
+        "preflight"
+      ],
+      "executed_during_implementation": false,
+      "may_start_slam": false,
+      "ordinal": 3
+    },
+    {
+      "action": "shared_input_export_once",
+      "argv": [
+        "/usr/bin/python3.8",
+        "-B",
+        "scripts/export_aqualoc_a02_shared_4500_7200_result_informed_v1.py",
+        "--action",
+        "export"
+      ],
+      "executed_during_implementation": false,
+      "may_start_slam": false,
+      "ordinal": 4
+    },
+    {
+      "action": "shared_input_post_export_audit",
+      "argv": [
+        "/usr/bin/python3.8",
+        "-B",
+        "scripts/export_aqualoc_a02_shared_4500_7200_result_informed_v1.py",
+        "--action",
+        "audit"
+      ],
+      "executed_during_implementation": false,
+      "may_start_slam": false,
+      "ordinal": 5
+    },
+    {
+      "action": "hfnet_preflight",
+      "argv": [
+        "/usr/bin/python3.8",
+        "-B",
+        "scripts/run_hfnet_slam_a02_4500_7200_result_informed_headless_v5.py",
+        "--action",
+        "preflight"
+      ],
+      "executed_during_implementation": false,
+      "may_start_slam": false,
+      "ordinal": 6
+    },
+    {
+      "action": "hfnet_dynamic_contract_freeze",
+      "argv": [
+        "/usr/bin/python3.8",
+        "-B",
+        "scripts/run_hfnet_slam_a02_4500_7200_result_informed_headless_v5.py",
+        "--action",
+        "freeze"
+      ],
+      "executed_during_implementation": false,
+      "may_start_slam": false,
+      "ordinal": 7
+    },
+    {
+      "action": "hfnet_one_shot_run",
+      "argv": [
+        "/usr/bin/python3.8",
+        "-B",
+        "scripts/run_hfnet_slam_a02_4500_7200_result_informed_headless_v5.py",
+        "--action",
+        "run"
+      ],
+      "executed_during_implementation": false,
+      "may_start_slam": true,
+      "ordinal": 8
+    }
+  ],
+  "code_identities": {
+    "prior_hfnet_runner_v4": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_slam_a02_long1801_headless_v4.py",
+      "sha256": "3cbf73588be58da7cd550b2deba42e0082968924bb9ed756684181720a38f41f",
+      "size_bytes": 42063
+    },
+    "prior_shared_exporter_v1": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/export_aqualoc_a02_shared_4500_6300_v1.py",
+      "sha256": "c3c79bef0e96a54dca7fe559e4f5a4d4646ad4e4e73828a13ca5aa603e5e361f",
+      "size_bytes": 36414
+    },
+    "result_informed_materializer": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/materialize_aqualoc_a02_4500_7200_result_informed_v1.py",
+      "sha256": "6c5279348402d01db815c7a7c9689fdd35df070cd18f4d959c777f2d5ea6a29c",
+      "size_bytes": 16781
+    },
+    "result_informed_profile": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/a02_hfnet_result_informed_extension_v1.py",
+      "sha256": "f0b45b40243fa7f337fc9037d12b9b799aad30da5fb85b180a0664039a96e1aa",
+      "size_bytes": 10319
+    },
+    "result_informed_shared_exporter": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/export_aqualoc_a02_shared_4500_7200_result_informed_v1.py",
+      "sha256": "201baa49a919c48826b5fceae0afa0e74a6cb7a82a5c7b92540b946554a92370",
+      "size_bytes": 48690
+    },
+    "result_informed_synthetic_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_a02_hfnet_result_informed_extension_v1.py",
+      "sha256": "e05f91cb6c555b1b73763ba5cec737e9c608e319287fc41db054bb9130094d20",
+      "size_bytes": 19087
+    },
+    "result_informed_v5_runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_slam_a02_4500_7200_result_informed_headless_v5.py",
+      "sha256": "5d81db17914fe9a46628c8449537a8f465c3676c9d42bdb098257a9013f0e3c0",
+      "size_bytes": 33953
+    }
+  },
+  "design": {
+    "algorithm_or_threshold_modified": false,
+    "atlas_resume": false,
+    "failure_triggered_extension_to_8100": false,
+    "feed_camera_count": 2701,
+    "feed_global_camera_indices_inclusive": [
+      4500,
+      7200
+    ],
+    "maximum_shared_export_attempts": 1,
+    "maximum_source_window_export_attempts": 1,
+    "new_camera_count": 900,
+    "new_global_camera_indices_inclusive": [
+      6301,
+      7200
+    ],
+    "retry": false,
+    "same_prefix_global_camera_indices_inclusive": [
+      4500,
+      6300
+    ],
+    "score_evaluation_grid_count": 45,
+    "score_global_camera_indices_inclusive": [
+      6300,
+      7200
+    ],
+    "score_reference_pose_count": 46,
+    "score_span_ns": 44989672064,
+    "start_from_scratch": true
+  },
+  "disk_feasibility_snapshot": {
+    "available_bytes_mnt_data": 12906319872,
+    "estimated_new_4500_7200_bag_bytes": 673460138,
+    "estimated_new_png_physical_bytes_when_prefix_hardlinked": 212881732,
+    "estimated_run_local_model_and_cache_bytes": 133091921,
+    "policy": "old 1801 PNG payloads must be hard-linked or byte-copied only after exact audit; no duplicate AnyFeature descriptor tree is authorized by this freeze"
+  },
+  "execution_environment": {
+    "clear_parent_environment": true,
+    "cwd": "/home/ma/AQUA-FE_WS",
+    "interpreter": "/usr/bin/python3.8",
+    "required_environment": {
+      "HOME": "/home/ma",
+      "LANG": "C.UTF-8",
+      "LC_ALL": "C.UTF-8",
+      "LOGNAME": "ma",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "PATH": "/home/ma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONHASHSEED": "0",
+      "PYTHONNOUSERSITE": "1",
+      "PYTHONPATH": "/home/ma/AQUA-FE_WS:/home/ma/.local/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages",
+      "PYTHONPYCACHEPREFIX": "/tmp/aqua-fe-a02-hfnet-extension-empty-pycache-v1",
+      "SHELL": "/bin/bash",
+      "USER": "ma"
+    },
+    "required_pycache_prefix_initial_state": "ABSENT"
+  },
+  "feasibility_observations_not_success_guarantees": {
+    "score_6300_7200_accumulated_gt_rotation_deg": 125.916,
+    "score_6300_7200_gt_path_length_m": 4.4028,
+    "score_6300_7200_gt_pose_count": 46,
+    "score_6300_7200_span_s": 44.989672064,
+    "score_first_approximately_10s_gt_path_length_m": 1.1451,
+    "score_first_approximately_10s_gt_rotation_deg": 8.914,
+    "warning": "the final prior map had not emitted a final-map Imu initialized marker and followed 13 resets; data support does not guarantee HFNet usability"
+  },
+  "paths": {
+    "bridge_output": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v5/result_informed_a02_4500_7200/bridges/aqualoc_a02_6300_7200_hfnet_world_T_body_v1.csv",
+    "evidence": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v5/result_informed_a02_4500_7200/drivers/aqualoc_a02_4500_7200_headless_r1",
+    "result": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v5/result_informed_a02_4500_7200/runs/aqualoc_a02_4500_7200_headless_r1",
+    "run_contract": "/home/ma/AQUA-FE_WS/papers/hfnet_slam_a02_4500_7200_result_informed_run_contract_v5.json",
+    "shared_attempt": "/mnt/data/AQUA-FE_WS/logs/published_shared_baselines_v1/a02_4500_7200_result_informed_hfnet_r1.attempt.json",
+    "shared_root": "/mnt/data/AQUA-FE_WS/logs/published_shared_baselines_v1/a02_4500_7200_result_informed_hfnet_r1",
+    "window_attempt": "/mnt/data/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_7200_hfnet_result_informed_v1.bag.attempt.json",
+    "window_bag": "/mnt/data/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_7200_hfnet_result_informed_v1.bag",
+    "window_manifest": "/mnt/data/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_7200_hfnet_result_informed_v1.bag.manifest.json"
+  },
+  "preregistration": {
+    "path": "/home/ma/AQUA-FE_WS/papers/2026-08-12--a02-hfnet-result-informed-extension-4500-7200-v1.md",
+    "purpose": "transparent post-failure exploratory continuation; cannot amend or rescue the prior confirmatory comparison"
+  },
+  "prior_observation": {
+    "associated_first_global_camera_index": 6279,
+    "associated_last_global_camera_index": 6300,
+    "final_keyframe_count": 6,
+    "interpretation": "used_only_to motivate a separately frozen exploratory continuation; not confirmatory and not a retry",
+    "raw_child_return_code": 0,
+    "reset_due_to_insufficient_motion_count": 13,
+    "result_evaluable": false,
+    "result_return_code": 1,
+    "result_status": "HEADLESS_RUN_FAILED_OR_UNUSABLE",
+    "score_pose_count": 22,
+    "score_span_seconds": 1.051619328
+  },
+  "reserved_path_initial_state": {
+    "all_absent": true,
+    "bridge_manifest_absent": true,
+    "bridge_output_absent": true,
+    "evidence_absent": true,
+    "observed_at_local_date": "2026-08-12",
+    "result_absent": true,
+    "run_contract_absent": true,
+    "shared_attempt_absent": true,
+    "shared_root_absent": true,
+    "window_attempt_absent": true,
+    "window_bag_absent": true,
+    "window_manifest_absent": true
+  },
+  "schema_version": "aqua-fe-a02-hfnet-result-informed-extension-freeze-v1",
+  "scientific_role": "POST-FAILURE_RESULT-INFORMED_EXPLORATORY_INITIALIZATION_CONTINUATION",
+  "source_identities": {
+    "converter": {
+      "path": "/home/ma/AQUA-FE_WS/uw_frontend/datasets/aqualoc_raw_to_rosbag.py",
+      "sha256": "b0c4b7ce7f3e29dcb18cb1604190cc8690cae370fc222246c8dfeb4fc79ffbec",
+      "size_bytes": 8310
+    },
+    "ground_truth": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_groundtruth_files/new_archaeo_colmap_traj_sequence_02.txt",
+      "sha256": "1122b753372545966026df10f1899e751cdaa3359a6938be251cd8e22b6e4379",
+      "size_bytes": 64318
+    },
+    "prior_hfnet_contract": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_slam_a02_long1801_headless_run_contract_v4.json",
+      "sha256": "f084994e70480d71c939fe60827aa5380a89d1434d6876058b89e26871632c8e",
+      "size_bytes": 61550
+    },
+    "prior_hfnet_unusable_result": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v4/post_stop_a02_long1801_headless/drivers/aqualoc_a02_4500_6300_headless_r1/run_result.json",
+      "sha256": "b7c911ca364a9d9233fa9b7cf0c6f245b83e89b129882628075fd8e759c6cb73",
+      "size_bytes": 4966
+    },
+    "prior_shared_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_shared_baselines_v1/a02_4500_6300_shared_r1/conversion_manifest.json",
+      "sha256": "f2931e451e9542a3801209e88fd47519b881d6713ac829c9871a1f9366bc9d93",
+      "size_bytes": 682952
+    },
+    "prior_window_bag": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_6300.bag",
+      "sha256": "eebd45439e76c461e58a2a1d6321f3fcb82dbcf57ea4093929548c9620e63a83",
+      "size_bytes": 449056538
+    },
+    "prior_window_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo02_4500_6300.bag.manifest.json",
+      "sha256": "41667ae9fd00dc6baf261cb2c519642b0ff9c2123ba154421780bc41bcf4de8e",
+      "size_bytes": 4502
+    },
+    "raw_tar": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_2_raw_data.tar.gz",
+      "sha256": "8f6203e0b46068a9d237f03e469acecb5f51eedbd6b7c1dc7c1f980ea6ea6d69",
+      "size_bytes": 2195786266
+    }
+  },
+  "status": "FROZEN_NO_EXTENSION_ARTIFACTS_OR_SLAM_STARTED"
+}

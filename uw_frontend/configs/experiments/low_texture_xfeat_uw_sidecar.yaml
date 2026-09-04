@@ -1,0 +1,9 @@
+# UW-adapted XFeat variant of low_texture_active_xfeat_sidecar for the closed-loop
+# trajectory A/B. IDENTICAL to the stock profile except the XFeat weights are the
+# underwater domain-adapted checkpoint. Only the learned-sidecar descriptors change;
+# all gates / selection / backend shaping are unchanged so any APE/RPE delta is
+# attributable to the weights alone.
+extends: low_texture_active_xfeat_sidecar.yaml
+
+xfeat:
+  weights: weights/xfeat_uw_expanded.pt

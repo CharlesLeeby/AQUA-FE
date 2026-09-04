@@ -1,0 +1,101 @@
+{
+  "schema_version": "aqua-fe-a06-samehistory-harmonized-common-support-diagnostic-freeze-v1",
+  "frozen_at_utc": "2026-08-26T09:20:38Z",
+  "status": "PASS_DEVELOPMENT_ONLY_HARMONIZED_DIAGNOSTIC",
+  "scope": "A06 natural-history prefix 0000-2460, score window 2210-2460",
+  "protocol": {
+    "path": "papers/a06_samehistory_harmonized_common_support_diagnostic_v1_protocol.md",
+    "size_bytes": 6542,
+    "sha256": "525efb7afa3f5a2752206dfe48c10efa4d4a5886066ca038139c5db933c6d497"
+  },
+  "runner": {
+    "path": "scripts/run_a06_samehistory_harmonized_common_support_diagnostic_v1.py",
+    "size_bytes": 25466,
+    "sha256": "e692cf8c09a9c8f3fb01bce03984161d0adf70ab4bb1625225a761ac9d344267"
+  },
+  "output": {
+    "root": "/mnt/data/AQUA-FE_WS/experiments/a06_samehistory_harmonized_diagnostic_v1",
+    "result_manifest": {
+      "size_bytes": 5661,
+      "sha256": "9fb04609b378734df87c2590afd35db2a09a46cbd82a75f8214d22eee521e49b"
+    },
+    "registered_artifact_count": 30,
+    "registered_artifact_hash_mismatch_count": 0,
+    "unexpected_artifact_count": 0,
+    "symlink_count": 0,
+    "residual_staging_directory_count": 0
+  },
+  "support": {
+    "uniform_grid_count": 13,
+    "jointly_matched_count": 13,
+    "common_coverage": 1.0,
+    "segment_count": 1,
+    "exact_1s_rpe_pair_count": 12,
+    "native_proxy_rows_in_window": 13,
+    "grid_reference_status": "13/13 interpolated from native proxy rows",
+    "formal_ape_gate_open": false,
+    "descriptive_rpe_gate_open": true
+  },
+  "fixed_order_metrics_m": {
+    "VANILLA_ORIGIN_NATIVE_IMAGE_CONTEXT": {
+      "ape_rmse": 0.16325470697302533,
+      "rpe_1s_rmse": 0.05001001234924945
+    },
+    "EXTERNAL_KLT_CORRECTIVE_REPLAY": {
+      "ape_rmse": 0.16777114932456025,
+      "rpe_1s_rmse": 0.050465136584716554
+    },
+    "AQUAFE_PROPOSED_SAFE_NO_LEARNED_ACTION": {
+      "ape_rmse": 0.1644081984841774,
+      "rpe_1s_rmse": 0.0495977268458025
+    },
+    "HFNET_SLAM_NATURAL_HISTORY": {
+      "ape_rmse": 0.4954220003557874,
+      "rpe_1s_rmse": 0.14519567667454505
+    }
+  },
+  "crosscheck": {
+    "tool": "evo 1.31.1",
+    "maximum_ape_absolute_difference_m": 2.9302697468480687e-7,
+    "maximum_rpe_absolute_difference_m": 3.233254549372955e-7,
+    "frozen_tolerance_m": 1e-5,
+    "status": "PASS"
+  },
+  "alignment": {
+    "primary": "fixed-scale SE(3)",
+    "body_to_camera_applied": true,
+    "sim3_or_scale_correction_used": false
+  },
+  "receipt_boundary": {
+    "vanilla_status": "TERMINAL_PROCESS_RC0",
+    "klt_corrective_status": "TERMINAL_PROCESS_RC0_ADDITIVE_INFRASTRUCTURE_CORRECTIVE",
+    "klt_original_status": "INFRASTRUCTURE_CENSORED_SUPERVISOR_TIMEOUT_DURING_REPLAY",
+    "klt_original_namespace_modified": false,
+    "klt_frontend_recomputed": false,
+    "aquafe_status": "TERMINAL_PROCESS_RC0",
+    "prior_receipts_relabelled": false
+  },
+  "learned_action_boundary": {
+    "klt_and_aquafe_feature_payloads_byte_identical": true,
+    "shared_payload_sha256": "0779bb8a71e4d81ddf02ba933b7428e548534ab580fd4483754f08e26e9bbeb6",
+    "full_exported_learned_observations": 0,
+    "score_exported_learned_observations": 0,
+    "classification": "NO_LEARNED_ACTION_NO_HARM_ONLY",
+    "learned_benefit_attribution_permitted": false
+  },
+  "claim_boundary": {
+    "reference": "same-image COLMAP/depth-scale proxy, not independent ground truth",
+    "independent_run_count_for_inference": 1,
+    "development_only": true,
+    "primary_paper_evidence_permitted": false,
+    "ranking_or_winner_permitted": false,
+    "significance_or_confidence_interval_permitted": false,
+    "superiority_claim_permitted": false
+  },
+  "independent_read_only_audit": {
+    "status": "PASS",
+    "maximum_recompute_difference_m": 5.56e-17,
+    "completed_after_generation": true,
+    "files_modified_by_audit": 0
+  }
+}

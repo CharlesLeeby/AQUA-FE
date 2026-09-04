@@ -1,0 +1,94 @@
+extends: loftr_extreme_only_frontend.yaml
+
+hybrid:
+  # Formal proposal path:
+  # KLT degeneracy -> LoFTR proposal -> strict geometry acceptance -> pending
+  # LK/NCC/FB confirmation. LoFTR remains a sparse sidecar, not a replacement.
+  enable_klt_degeneracy_loftr_gate: true
+  klt_degeneracy_loftr_max_grid_coverage: 0.82
+  klt_degeneracy_loftr_min_dropout_ratio: 0.45
+  klt_degeneracy_loftr_max_median_track_age: 2.0
+  klt_degeneracy_loftr_max_long_track_ratio: 0.20
+  klt_degeneracy_loftr_max_frontend_state: 0.82
+  klt_degeneracy_loftr_min_bad_signals: 2
+  klt_degeneracy_loftr_history_size: 4
+  klt_degeneracy_loftr_min_bad_history_ratio: 0.50
+  klt_degeneracy_loftr_allow_degraded_texture: true
+  klt_degeneracy_loftr_reserve_budget: 12
+
+  source_aware_loftr_modes:
+    - planar_near_wall
+    - extreme_textureless
+
+  # Let the KLT-degeneracy gate handle non-wall low-texture frames; image
+  # texture alone remains permissive only inside this guarded proposal path.
+  loftr_extreme_max_grid_texture_score: 1.01
+  loftr_extreme_min_flat_region_ratio: 0.00
+  loftr_extreme_min_degradation: 0.00
+  three_layer_extreme_max_grid_texture_score: 1.01
+  three_layer_extreme_min_flat_region_ratio: 0.00
+  three_layer_extreme_max_grid_coverage: 0.82
+
+  # Proposal budget: small bursts only, with room left for KLT/GFTT.
+  semidense_fallback_min_grid_coverage: 0.82
+  semidense_fallback_min_degradation: 0.00
+  semidense_fallback_min_flat_region_ratio: 0.00
+  semidense_fallback_min_grid_texture_score: 1.01
+  semidense_fallback_min_frame_gap: 6
+  semidense_fallback_max_new: 36
+  semidense_fallback_sidecar_max_extra: 36
+  semidense_fallback_max_fraction: 0.12
+  semidense_fallback_reserve_gftt_features: 40
+
+  # Strict acceptance: LoFTR must add coverage and remain residual-neutral.
+  semidense_acceptance_min_new_tracks: 3
+  semidense_acceptance_min_grid_gain: 0.020
+  semidense_acceptance_min_new_cells: 1
+  semidense_acceptance_min_new_cell_ratio: 0.25
+  semidense_acceptance_max_f_inlier_drop: 0.02
+  semidense_acceptance_max_h_inlier_drop: 0.02
+  semidense_acceptance_max_epipolar_error_ratio: 1.03
+  semidense_acceptance_max_homography_error_ratio: 1.06
+  semidense_acceptance_residual_neutral: true
+  semidense_acceptance_max_epipolar_error_abs_increase: 0.015
+  semidense_acceptance_max_homography_error_abs_increase: 0.050
+  source_aware_loftr_min_grid_gain: 0.020
+  source_aware_loftr_min_new_cells: 1
+  source_aware_loftr_min_new_cell_ratio: 0.25
+  source_aware_loftr_max_epipolar_error: 1.20
+  source_aware_loftr_max_homography_error: 2.20
+  source_aware_loftr_min_h_inlier_ratio: 0.80
+  source_aware_loftr_geometry_filter_mode: all
+
+  semidense_candidate_min_quality: 0.20
+  semidense_candidate_min_ncc: 0.55
+  semidense_candidate_max_fb_error: 0.80
+  semidense_candidate_max_epipolar_error: 1.20
+  semidense_candidate_max_homography_error: 2.20
+
+  # Backend safety path: LoFTR candidates must survive several frames before
+  # becoming normal output tracks.
+  source_aware_loftr_requires_confirmation: true
+  source_aware_loftr_min_confirmation_frames: 3
+  learned_confirmation_geometry_safe: true
+  learned_confirmation_max_pending: 400
+  learned_confirmation_max_confirmed: 24
+  learned_confirmation_preserve_new_pending: true
+  learned_sidecar_max_extra: 36
+
+  promotion_loftr_min_quality: 0.24
+  promotion_loftr_max_fb_error: 0.80
+  promotion_loftr_min_ncc: 0.55
+  promotion_loftr_quality_scale: 0.55
+  promotion_loftr_max_confirmed: 6
+  promotion_loftr_max_grid_texture_score: 1.01
+  promotion_loftr_min_flat_region_ratio: 0.00
+  promotion_loftr_min_h_inlier_ratio: 0.80
+
+backend_quality:
+  mode: vins_safe
+  floor: null
+  alpha: 0.65
+
+measurement_selection:
+  enabled: false

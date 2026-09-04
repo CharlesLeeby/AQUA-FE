@@ -1,0 +1,42 @@
+{
+  "baseline": "HFNet-SLAM (Sensors 2023; official author build-repair commit c354c72588a97bb6f6a9c7c8317530795956ec80)",
+  "binary": {
+    "path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Examples/Monocular-Inertial/mono_inertial_euroc",
+    "sha256": "4029c6ba8ecdc76c98f2c190c1a1151493ed2553da087c1a4f077fc036e143a3"
+  },
+  "command_argv": [
+    "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Examples/Monocular-Inertial/mono_inertial_euroc",
+    "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_a02_0005.yaml",
+    "/home/ma/AQUA-FE_WS/logs/published_hfnet_slam_v1/prefix_runs/aqualoc_a02_0005_prefix200_r1/",
+    "/home/ma/AQUA-FE_WS/logs/hfnet_slam_adapter/aqualoc_a02_0005_prefix200_euroc_v1",
+    "/home/ma/AQUA-FE_WS/logs/hfnet_slam_adapter/aqualoc_a02_0005_prefix200_euroc_v1/cam0_times.txt"
+  ],
+  "config": {
+    "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_a02_0005.yaml",
+    "sha256": "7e6482653e55b2fcf86a9e5418fd87747677a88eb9c06443d505cda311b80569"
+  },
+  "input_manifest": {
+    "path": "/home/ma/AQUA-FE_WS/logs/hfnet_slam_adapter/aqualoc_a02_0005_prefix200_euroc_v1/conversion_manifest.json",
+    "sha256": "9905ba2249e062f02f9be4743acb56d51ada514f97e2f62b766e5e218fca3158"
+  },
+  "model": {
+    "cache_sha256": "40f8e09f6c47bbb389bf2437d882dc12e464a04d3dfae9594cf1d4607688ee5e",
+    "onnx_sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5"
+  },
+  "model_smoke_result": {
+    "path": "/home/ma/AQUA-FE_WS/logs/published_hfnet_slam_v1/model_smokes/aqualoc_a02_0005_frame000_r1/result.json",
+    "sha256": "ca0e83101d8e0c0bb1cde79d31efb0c4f85d4dc9684abc35d00334de37e1495b",
+    "status": "PASS_MODEL_DETECT_SMOKE"
+  },
+  "profile": "aqualoc_a02_0005_prefix200",
+  "scientific_gate": {
+    "binary_return_code": 0,
+    "finite_pose_fields_only": true,
+    "minimum_pose_count": 30,
+    "minimum_timestamp_span_seconds": 3.0,
+    "strictly_increasing_timestamps": true
+  },
+  "scope": "INITIALIZATION_AND_TRAJECTORY_SMOKE_ONLY",
+  "stopping_rule": "Any failed gate stops HFNet-SLAM before full-window export/run; no tuning or accuracy-dependent retry.",
+  "trajectory_accuracy_evaluable": false
+}

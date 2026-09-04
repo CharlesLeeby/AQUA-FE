@@ -1,0 +1,232 @@
+{
+  "authority_chain": {
+    "attempt_preparation_authority": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_attempt_preparation_authority_v1.json",
+      "sha256": "aee3a118361114be8c3abfe5571392883c6143dd6b6e4cb4dd4de72ad44541b2",
+      "size_bytes": 4429
+    },
+    "attempt_preparation_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_attempt_preparation_freeze_v1.json",
+      "sha256": "055168bb20b86a6f6eebc452f03eada37e888212067f9fe027264e721a5aea06",
+      "size_bytes": 5313
+    },
+    "materialization_authority": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_materialization_authority_v1.json",
+      "sha256": "d812b82a483e7b2b6ea73fa8b6b8e776e9e3cec8be0beb85c0ce20f419a49aee",
+      "size_bytes": 6894
+    },
+    "materialization_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_materialization_freeze_v1.json",
+      "sha256": "b1ed3f0f27cd74667fca20b1e653268ec723e66e490a3a41ac5515effa9b52e9",
+      "size_bytes": 6648
+    },
+    "payload_pin_derivation_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_payload_pin_derivation_freeze_v1.json",
+      "sha256": "e4c64167c70e326237e7835a8b41140ed1c9a8a55eb9b9490b72f73b3de0e857",
+      "size_bytes": 11763
+    },
+    "runability_protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_runability_rescue_protocol_v1.md",
+      "sha256": "090e3458e7a281dd694c6d31582e729ec93a3a2927521cc7783e338e66f6fb12",
+      "size_bytes": 10944
+    },
+    "runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_v1.py",
+      "sha256": "21981cc560458fd7d47d1d5b8d752a3ad208f499475e0721dd9f758b008a9093",
+      "size_bytes": 69666
+    },
+    "runner_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_runner_freeze_v1.json",
+      "sha256": "39d83f056ebc02d059a8cd1b1ea5db6c3bca1a2909353fe244e1eedd34dc9a3e",
+      "size_bytes": 4079
+    },
+    "runner_test": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_v1.py",
+      "sha256": "b00d12fe162874cefa4c73e15e68a29f24dcf502bc7e7b6e5499689e2d92b3d3",
+      "size_bytes": 35626
+    },
+    "selector": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_selector_freeze_v1.json",
+      "sha256": "bfec892d6f58f751c12302e93dfbdcd1132d326dad2506066d4fe8e2e87fd51c",
+      "size_bytes": 5743
+    }
+  },
+  "canonical_input": {
+    "audit_receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_positive_windows_v1/a09_0000_4400_score_4000_4400_warmstart.audit.json",
+      "sha256": "1e36452d2613e2b8a387f6e56e1f6ea8ef0acdb4d774f6de994981777a2ff2b4",
+      "size_bytes": 3071159
+    },
+    "manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_positive_windows_v1/a09_0000_4400_score_4000_4400_warmstart/materialization_manifest.json",
+      "sha256": "fb54d28425a0eeea3ec7dec42ff2f433cac0a6303da96a0be1265b841fb36c8d",
+      "size_bytes": 2895623
+    },
+    "payload_sha256_excluding_manifest": "845bc56b0de8df58f0dedde3d22e7a6019ba3b02fa4edc7b6ceec395fdee5f52"
+  },
+  "claim_and_consumption_contract": {
+    "authority_consumed_on_exact_supervisor_invocation": true,
+    "claim_must_precede_only_popen": true,
+    "claim_path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/process_start_claim.json",
+    "claim_publication": "O_EXCL_ATOMIC_BEFORE_ONLY_HFNET_POPEN",
+    "maximum_hfnet_elf_starts": 1,
+    "maximum_supervisor_invocations_if_later_authorized": 1,
+    "retry_permitted": false,
+    "runner_internal_precheck_required_immediately_before_claim": true
+  },
+  "current_resource_blocker": {
+    "compute_application": "unrelated VINS-Fusion vins_node using 48 MiB",
+    "observed_at_local": "2026-08-25T02:00:14+08:00",
+    "ready": false,
+    "reasons": [
+      "GPU_COMPUTE_APPLICATION_PRESENT",
+      "CONFLICTING_SLAM_OR_ROS_PROCESS_PRESENT"
+    ],
+    "resolution_policy": "Wait for the unrelated B1_on ROS/VINS workflow to exit naturally; do not terminate it."
+  },
+  "fresh_ready_snapshot": {
+    "present": false,
+    "required_before_final_lock": true,
+    "required_check_command": "PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 /home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_v1.py check",
+    "required_conditions": [
+      "return_code=0, ready=true, errors=[]",
+      "resource_gate.ready=true and free_mib>=3072",
+      "compute_applications=[] and conflicting_executables=[]",
+      "all HFNet/VINS/ORB/ROS processes absent without termination",
+      "prepared/input/runtime identities unchanged, empty result, and no claim/result/log/crop",
+      "attempt-local cache still seed-identical and inode-isolated",
+      "exact-environment ldd not_found=[]"
+    ]
+  },
+  "launch_contract": {
+    "authorization_created": false,
+    "child_argv": [
+      "/home/ma/AQUA-FE_WS/build/published_baselines/hfnet_slam_headless_entry_v3/mono_inertial_euroc_headless_v3",
+      "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/runtime_config_model_path_only.yaml",
+      "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/result/",
+      "/mnt/data/AQUA-FE_WS/datasets/hfnet_positive_windows_v1/a09_0000_4400_score_4000_4400_warmstart",
+      "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001/cam0_times_0000_4400.txt"
+    ],
+    "child_cwd": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001",
+    "exact_supervisor_command": "PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 /home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_v1.py run --authorization-token HFNET_V6_A09_0000_4400_SCORE_4000_4400_WARMSTART_ATTEMPT_001_START_EXACTLY_ONCE",
+    "start_new_session": true,
+    "timeout_seconds": 600,
+    "token": "HFNET_V6_A09_0000_4400_SCORE_4000_4400_WARMSTART_ATTEMPT_001_START_EXACTLY_ONCE"
+  },
+  "prepared_attempt": {
+    "local_cache_pre": {
+      "dev_inode": "2050:373745",
+      "isolated_from_shared_seed": true,
+      "sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7",
+      "size_bytes": 853319
+    },
+    "local_onnx": {
+      "sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5",
+      "size_bytes": 132238602
+    },
+    "namespace": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001",
+    "prepared_manifest": {
+      "sha256": "9687bfd79147778afe4108b4c74281c7f4d639b82b2312fb48b2a64ef18733a4",
+      "size_bytes": 8917,
+      "status": "PREPARED_NOT_STARTED"
+    },
+    "runtime_config": {
+      "sha256": "448176bb0cfbaa38f6dd9faf632081464edb0234706353329d338a535f30e930",
+      "size_bytes": 2126
+    },
+    "subset_times": {
+      "sha256": "c8b9bb58e1692ae570cfc855e2069bda734110c2866004093c8eefa4293f16a8",
+      "size_bytes": 88020
+    },
+    "tree_before_launch": "5 regular files, 4 directories, empty result, no claim/result/stdout/stderr/crop"
+  },
+  "prohibited_actions": [
+    "using this candidate as launch authority",
+    "running the supervisor or creating the process claim before a new final lock",
+    "terminating unrelated ROS/VINS work to satisfy the resource gate",
+    "reprepare, retry, mutation of frozen inputs, trajectory scoring, ranking, or paper claims"
+  ],
+  "runtime_stack": {
+    "base_config": {
+      "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_a06_0000_2460_exact_window_v1.yaml",
+      "sha256": "37ec8f0f274818b3a8f952a535d9be87dae0f8d0436ce05503381791ace69db6",
+      "size_bytes": 2037
+    },
+    "binary": {
+      "path": "/home/ma/AQUA-FE_WS/build/published_baselines/hfnet_slam_headless_entry_v3/mono_inertial_euroc_headless_v3",
+      "sha256": "4d17eecc74ec8f4bcbe4381d579d2bb48160cf63f6dc948f7857d92e681affeb",
+      "size_bytes": 118280
+    },
+    "child_env": {
+      "CUDA_VISIBLE_DEVICES": "0",
+      "HOME": "/home/ma",
+      "LANG": "C",
+      "LC_ALL": "C",
+      "LD_LIBRARY_PATH": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/lib:/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Thirdparty/g2o/lib:/home/ma/SLAM/aqua_deps/install/lib:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.6/targets/x86_64-linux/lib:/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.8/targets/x86_64-linux/lib",
+      "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+      "USER": "ma"
+    },
+    "dynamic_libraries": [
+      ["/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/lib/libHFNet_SLAM.so", 4807712, "a56dfd1b48dee4af5be4e55b076d32eac2cf8fb463da8ab943b690377f193717"],
+      ["/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/Thirdparty/g2o/lib/libg2o.so", 738160, "0fe8e5410ff0a37b4cfcbdba16223f7a401f6e7b0eb2d36f403a9a28e6c9acb7"],
+      ["/home/ma/SLAM/aqua_deps/install/lib/libpango_display.so", 839576, "90a61a96eca1578b9315047323ba2d73a5c740a83d650a1fa3bd138cdeaa97c2"],
+      ["/home/ma/SLAM/aqua_deps/install/lib/libpango_opengl.so", 275544, "bb8485c11c2f78adc069ce94a61b90a46182e8c0498543db873634ce16583708"],
+      ["/home/ma/SLAM/aqua_deps/install/lib/libpango_vars.so", 160512, "fcea96fcf6f01facc0a90401c7dbe154ab4b27ded805281b2b6a299667a23869"],
+      ["/home/ma/SLAM/aqua_deps/install/lib/libpango_core.so", 365720, "3c21f42088a6b4da79ec373864027b26a9cfde1380108b0b4d2d868d1759c1c0"],
+      ["/home/ma/SLAM/aqua_deps/install/lib/libpango_windowing.so", 239896, "acbd9a640f9a07f0c30439b91de8a19ecbf1d10ca544d193fd37bb1efc267490"],
+      ["/home/ma/SLAM/aqua_deps/install/lib/libpango_image.so", 128088, "1f31fd0e45cce7f8d264a23b9469c018ddc14d4182880f1f16cdfe787f9c9a7d"],
+      ["/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libnvinfer.so.8.5.1", 487512744, "f458db65fba6f1c3012c44db701b43abc838f7330f9472c91c6b198cfc4a26ab"],
+      ["/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libnvonnxparser.so.8.5.1", 2838832, "545821890b69327a02edaf79bac88af3792b897af40c6d9a9a121390505496c9"],
+      ["/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libnvinfer_plugin.so.8.5.1", 43399840, "a4b4390214ff62de0fecfc8937394a53ca8dd4e0f4f30a3e178f525c25b8e0ce"],
+      ["/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.6/targets/x86_64-linux/lib/libcudart.so.11.6.55", 666976, "45da57e39bb0009af905c2ba531fb687ac9d6d4504c7800ed394c2ca0add1c6e"],
+      ["/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.8/targets/x86_64-linux/lib/libcublas.so.11.11.3.6", 94729912, "3b81d170cd613cf9ee24d30b483f7b6d8170d6d32a0354fc207d09c943ae3f62"],
+      ["/home/ma/opt/hfnet_cuda116_trt851_r1/usr/local/cuda-11.8/targets/x86_64-linux/lib/libcublasLt.so.11.11.3.6", 574565016, "b6d14a7461b3ec1995427fd179b98b915c9fc81057366ab7bfa4681451b0d308"],
+      ["/home/ma/opt/hfnet_cuda116_trt851_r1/usr/lib/x86_64-linux-gnu/libcudnn.so.8.4.1", 150200, "f8580e8d01284e724527ed4bd90938208aa4675cfe6bd0ca2a4a76e49f4f5fdb"],
+      ["/usr/lib/x86_64-linux-gnu/libcuda.so.535.183.01", 29380816, "b7759e577409c86949f455f18fcc044d72b466be5e2982b6ba9e20348e86fa97"],
+      ["/usr/lib/x86_64-linux-gnu/libnvidia-ml.so.535.183.01", 1942744, "67185f510159acdc8f38b768b059bfb0f3ec5869baaffd1dc1c949e52012b18f"]
+    ],
+    "gpu_platform": {
+      "compute_capability": "7.5",
+      "driver_version": "535.183.01",
+      "memory_total_mib": 4096,
+      "model": "NVIDIA GeForce GTX 1650",
+      "pci_bus_id": "00000000:26:00.0",
+      "uuid": "GPU-e119bd1b-928b-f3de-c4fa-052b7d164f78"
+    },
+    "model": {
+      "path": "/home/ma/SLAM/HFNet-SLAM-runtime-model-a02-r1/HFNet-RT/HF-Net.onnx",
+      "sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5",
+      "size_bytes": 132238602
+    },
+    "python": {
+      "resolved_path": "/usr/bin/python3.8",
+      "sha256": "298a9e830ed52f36c299427565485d717d1ce0179c0597cc16560513eb780b06",
+      "size_bytes": 5490456,
+      "supervisor_path": "/usr/bin/python3"
+    },
+    "shared_cache_seed": {
+      "dev_inode": "66312:6189087",
+      "path": "/home/ma/SLAM/HFNet-SLAM-runtime-model-a02-r1/HFNet-RT/HF-Net.cache",
+      "sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7",
+      "size_bytes": 853319
+    },
+    "vocabulary": {
+      "applicable": false,
+      "reason": "This HFNet fork initializes learned models directly and KeyFrameDatabase takes no external vocabulary path."
+    }
+  },
+  "schema_version": "aqua-fe-hfnet-v6-a09-warmstart-execution-lock-candidate-v1",
+  "scientific_boundary": {
+    "accuracy_comparison_authorized": false,
+    "development_result_conditioned": true,
+    "role": "HFNet natural-history runability rescue on prior KLT-positive A09 window; score only frames 4000..4400"
+  },
+  "status": "BLOCKED_RESOURCE_GATE_PENDING_NO_LAUNCH_AUTHORITY",
+  "terminal_contract": {
+    "crop_only_after_all_runability_gates_pass": true,
+    "failure_is_not_zero_accuracy": true,
+    "result_and_crop_publication": "O_EXCL_ATOMIC",
+    "score_support_required": "401/401 exact contiguous poses, pre-score initialization, score keyframe, and zero score-boundary reset/reinit",
+    "terminal_result_required_after_claim_even_on_exception": true
+  }
+}

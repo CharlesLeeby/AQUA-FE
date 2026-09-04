@@ -1,0 +1,34 @@
+{
+  "schema_version": "aqua-fe-anyfeature-a02-prefix-camera-contract-result-v1",
+  "recorded_at": "2026-08-11T19:18:00+08:00",
+  "status": "PASS_INPUT_CONTRACT",
+  "profile": "a02-prefix200",
+  "scope": "CAMERA_SERIALIZATION_ONLY_NO_MODEL_NO_SLAM",
+  "sequence_root": "/mnt/data/AQUA-FE_WS/anyfeature_adapter/aqualoc_a02_0005_prefix200_r1",
+  "source": {
+    "bag_sha256": "8cceb4c76065f3862e60428b14ba10f9a26fc7249e11e9e9d090fed2437238a8",
+    "camera_calibration_sha256": "e8ce9ad65d82ae563c676689444abd210f81c362586473c5752ee5f9bf2c32e2"
+  },
+  "adapter_sha256": "2dccbe93f68df3ec18f4bbae20ee2fcf24bf3a5e4d857313d23bd2a77690f09e",
+  "conversion_manifest_sha256": "8bc895a75468d045b76cd1cddfc1c16cd487e29e884be13e43c0443fd64b83ef",
+  "export_report_sha256": "8bc895a75468d045b76cd1cddfc1c16cd487e29e884be13e43c0443fd64b83ef",
+  "rgb_txt_sha256": "285fc383ecd8621252abecc62e888c2954f6ab8029174f36a19860c7d224ccb9",
+  "output_calibration_sha256": "656455cc1235e197108b841a17ace07835f892df15053fcbfd188b7c9cc7ffdf",
+  "camera": {
+    "count": 200,
+    "source_indices_inclusive": [0, 199],
+    "header_ns_inclusive": [1542829016700435392, 1542829026649564544],
+    "rgb_txt_rows": 200,
+    "png_count": 200,
+    "all_png_pixel_identity_verified": true,
+    "strictly_increasing_timestamps": true,
+    "reused_from_prefix_count": 0,
+    "unexpected_rgb_files": 0
+  },
+  "claims": {
+    "r2d2_inference_started": false,
+    "anyfeature_started": false,
+    "trajectory_generated": false,
+    "accuracy_evaluated": false
+  }
+}

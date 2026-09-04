@@ -1,0 +1,30 @@
+{
+  "audit": {
+    "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_028_isj_p07_afrl_bus_outside_0001_b1_attempt01/audit_v4.json",
+    "sha256": "ae38adfc2a065132ba1777ace72f8d439648f743923b36cc6989428dbd08aea5",
+    "size_bytes": 3649
+  },
+  "completion_registry_event": "isj-nativeq-v3_P07_afrl-bus_outside_45-90_B1_f0_b00_20260806T084500Z_e03",
+  "correction_lock": {
+    "path": "papers/ieee_sensors_journal_experiments/p07/afrl_replay_manifest_auditor_correction_lock_v4.json",
+    "sha256": "a1cd0191611759b2c72a830ccaa1e1a83794e3ea122b18168c2743ecb0353708",
+    "size_bytes": 6069
+  },
+  "feature_bag_sha256": "6c929c3f172fa908cafc7f25b6e72f8ef960ab9b4a70fe1eea0571d89e7aadab",
+  "feature_frames": 283,
+  "feature_observations": 99050,
+  "held_out_frontend_outcome_read": true,
+  "held_out_trajectory_outcome_read": false,
+  "outcome_boundary": "FRONTEND_EXPORT_ONLY_NO_VINS_APE_RPE_TRAJECTORY",
+  "output_hash_manifest": {
+    "path": "papers/ieee_sensors_journal_experiments/p07/frontend_attempts/queue_028_isj_p07_afrl_bus_outside_0001_b1_attempt01/output_hash_manifest_v4.sha256",
+    "sha256": "8e2a95b34831a3bec72d8b91eee505db202c3ca9ee4f7c76f9e7f77d5cab37db",
+    "size_bytes": 3162
+  },
+  "physical_frontend_rerun": false,
+  "queue_index": 28,
+  "run_id": "isj-nativeq-v3_P07_afrl-bus_outside_45-90_B1_f0_b00_20260806T084500Z",
+  "schema_version": "isj-p07-afrl-auditor-correction-closeout-v4",
+  "status": "PASS_COMPLETED_WITH_PRESERVED_AUDITOR_FAILURE",
+  "superseded_registry_event": "isj-nativeq-v3_P07_afrl-bus_outside_45-90_B1_f0_b00_20260806T084500Z_e02"
+}

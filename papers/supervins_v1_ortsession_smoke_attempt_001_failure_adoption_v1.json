@@ -1,0 +1,73 @@
+{
+  "schema_version": "aqua-fe-published-supervins-v1-ortsession-smoke-attempt-001-failure-adoption-v1",
+  "created_at": "2026-08-16T22:33:00+08:00",
+  "status": "ADOPTED_TERMINAL_FAIL_CLOSED_NO_RETRY",
+  "attempt": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_ortsession_smoke_20260816_r1/attempt_001",
+  "formal_verdict": {
+    "status": "FAIL_DEVELOPMENT_ORTSESSION_CONSTRUCTION_NO_RETRY",
+    "reason": "The frozen required marker was not present in persisted stdout/stderr within 45 seconds.",
+    "namespace_reuse_or_retry_authorized": false
+  },
+  "immutable_artifacts": {
+    "preflight_result.json": {
+      "sha256": "5e1465ebb5c84c7a3a73a2aa84bba264fce7a59cd37fdb7af0f1c77c00375c2d",
+      "size_bytes": 11234
+    },
+    "node_start_claim.json": {
+      "sha256": "8a71a10d60d0aa5adcec0b22aa2f02c774fa6d7aeff0a8b7ed3094e2af0d732f",
+      "size_bytes": 727
+    },
+    "node_process_started.json": {
+      "sha256": "633683d4a363523af74f1650302dc5efaf07b745324cb4f25d4dbb35ab356a4a",
+      "size_bytes": 459
+    },
+    "node.stdout.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    "node.stderr.log": {
+      "sha256": "d3ac2c7baac4a84f0ec4cf1ff46026679fbf5567bc5c3b58cfab2a32a9eee340",
+      "size_bytes": 121
+    },
+    "run_result.json": {
+      "sha256": "1ee7765b0fc1acf4f3d52d20a562c1dc564da708c54afce3fe0ba8d8289ca69a",
+      "size_bytes": 10191
+    }
+  },
+  "observed_runtime_facts": {
+    "node_start_count": 1,
+    "elapsed_seconds": 45.03926600200066,
+    "termination_returncode": -15,
+    "node_reaped": true,
+    "post_supervins_processes": [],
+    "inference_markers_found": [],
+    "dataset_or_bag_fd_targets": [],
+    "pinned_artifacts_changed": [],
+    "stderr_exact_semantic_event": "[registerPublisher] Failed to contact master at [127.0.0.1:11551]. Retrying..."
+  },
+  "causal_audit": {
+    "binary_contains_required_marker": true,
+    "pinned_source_order": [
+      "supervins_main.cpp:296 estimator.setParameter()",
+      "estimator.cpp:117 featureTracker.initializeExtractorMatcher(...) returns",
+      "feature_tracker_dpl.cpp:25 extractor initialize returns",
+      "feature_tracker_dpl.cpp:28 matcher initialize returns",
+      "supervins_main.cpp:302 ROS_WARN waiting marker invocation",
+      "supervins_main.cpp:304 registerPub(n)"
+    ],
+    "interpretation": "The observed registerPublisher error is downstream of both configured OrtSession constructors in the pinned source, so the process did reach the post-construction publisher-registration path. The formal attempt remains failed because its declared success witness was the persisted warning marker, which was not captured.",
+    "most_likely_observation_failure": "ROS_WARN is emitted on stdout; when stdout is a regular file it is block-buffered, and the process was terminated before that buffer was flushed. ROS_ERROR from registerPublisher was emitted on stderr and persisted.",
+    "stack_failure_claim_authorized": false,
+    "formal_pass_reinterpretation_authorized": false
+  },
+  "attempt_002_correction": {
+    "fresh_namespace_required": true,
+    "isolated_ros_master_required": true,
+    "master_must_have_zero_external_publishers": true,
+    "exact_node_command_required": true,
+    "pseudo_terminal_capture_required": true,
+    "reason_for_pseudo_terminal": "Preserve the exact executable and argv while making C/C++ console streams line-buffered and persistently mirrored by the controller.",
+    "rosbag_or_input_publisher_authorized": false,
+    "model_inference_authorized": false
+  }
+}

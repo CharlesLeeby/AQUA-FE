@@ -1,0 +1,70 @@
+{
+  "schema_version": "aqua-fe-a08-attempt002-post-tool-deadline-process-snapshot-v1",
+  "status": "SAME_EXPORTER_SESSION_ALIVE_AFTER_ORIGINAL_SUPERVISOR_LOSS",
+  "observed_at_utc": "2026-08-28T08:20:34+00:00",
+  "boot_id": "e7671334-d8c1-4a8f-83d2-9f78b3bde406",
+  "pre_deadline_anchor": {
+    "path": "/mnt/data/AQUA-FE_WS/experiments/a08_history_matched_controls_v1/frontends_v1/klt_attempt002_same_exporter_continuation_anchor_v1.json",
+    "size_bytes": 12247,
+    "sha256": "5af0cac668adb9ac051dc0bfb68e93ded76ad043ea98cf358f77f253b2081bf8"
+  },
+  "original_outer_processes": {
+    "2478165_outer_tool_shell": "absent",
+    "2478166_original_python_supervisor": "absent",
+    "2478167_original_output_summarizer": "absent"
+  },
+  "same_export_session": {
+    "session_leader": {
+      "pid": 2478925,
+      "ppid": 3131,
+      "pgid": 2478925,
+      "sid": 2478925,
+      "starttime_ticks": 51651095,
+      "command_role": "run_learned_seedchain_eval.sh aqualoc_archaeo 8 0 4660 klt 2",
+      "pid_starttime_pgid_sid_match_pre_deadline_anchor": true,
+      "reparented_after_original_supervisor_loss": true
+    },
+    "dataset_runner_shell": {
+      "pid": 2478926,
+      "ppid": 2478925,
+      "pgid": 2478925,
+      "sid": 2478925,
+      "starttime_ticks": 51651096,
+      "command_role": "run_aqualoc_archaeo_vins_eval.sh external 8 0 4660 klt 2",
+      "pid_starttime_pgid_sid_match_pre_deadline_anchor": true
+    },
+    "exporter": {
+      "pid": 2478973,
+      "ppid": 2478926,
+      "pgid": 2478925,
+      "sid": 2478925,
+      "starttime_ticks": 51651122,
+      "command_role": "python3 -m uw_frontend.ros.export_vins_features --method klt --every-n 2 --frame-offset 1 --process-skipped-frames",
+      "pid_starttime_pgid_sid_match_pre_deadline_anchor": true
+    }
+  },
+  "audit_only_continuation": {
+    "pid": 2483761,
+    "ppid": 3131,
+    "pgid": 2483761,
+    "sid": 2483761,
+    "starttime_ticks": 51747540,
+    "script": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/continue_a08_attempt002_after_tool_timeout_v1.py",
+      "size_bytes": 17110,
+      "sha256": "5b2f086dc3331d02c771be8497048918085a02e8fdd606bb0dbf7cca72cf5bd0"
+    }
+  },
+  "terminal_files_at_observation": {
+    "klt_attempt002_export_receipt_v1.json": "absent",
+    "klt_attempt002_export_failure_v1.json": "absent",
+    "klt_attempt002_same_exporter_continuation_outcome_v1.json": "absent"
+  },
+  "claims": {
+    "same_exporter_invocation_observed_after_deadline": true,
+    "exporter_restart_observed": false,
+    "additional_exporter_popen_observed": false,
+    "vins_or_accuracy_executed": false,
+    "runtime_or_throughput_claim_permitted": false
+  }
+}

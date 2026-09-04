@@ -1,0 +1,92 @@
+{
+  "carry_forward_governance_identities": {
+    "incident_v1": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_command9_infrastructure_false_negative_incident_v1.json",
+      "sha256": "5b19c46b06563250b4e54799608893e509269b85748de2213feb531df3694b07",
+      "size_bytes": 3901
+    },
+    "old_freeze_v1": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_post_stop_long_window_comparison_freeze_v1.json",
+      "sha256": "dfcae748385766f5585e1799603f737abe9223cb30d1a9bcc43fe84476abf9be",
+      "size_bytes": 63541
+    },
+    "old_verifier_v1": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/verify_a02_long_three_arm_eval_inputs_v1.py",
+      "sha256": "d5316e505d6d4337e3743a38c300d963fbede9702c037eaccd501813a0683cef",
+      "size_bytes": 166821
+    },
+    "v2_1_addendum": {
+      "path": "/home/ma/AQUA-FE_WS/papers/2026-08-12--a02-4500-6300-post-incident-continuation-v2.md",
+      "sha256": "bf29b5bccbafbe6b61601f417b65d821712b8c68d800d9518cc9affb99542a96",
+      "size_bytes": 8848
+    },
+    "v2_1_builder": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/build_a02_long_post_incident_continuation_freeze_v2.py",
+      "sha256": "c7efd86e1a95464f99915f890d1fa1529651e4604fd2d696a90155896e846d56",
+      "size_bytes": 11334
+    },
+    "v2_1_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a02_4500_6300_post_incident_continuation_freeze_v2.json",
+      "sha256": "b86da0e0015076960a9aeb9cf3766b50d6d2342438769866b7b84b4a5d55a355",
+      "size_bytes": 920795
+    },
+    "v2_1_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_verify_a02_long_three_arm_eval_inputs_v2.py",
+      "sha256": "8def7cb72c5c7d4e95c5bc9f484def0363783e295ce19498d6aaf078eb700e04",
+      "size_bytes": 23867
+    },
+    "v2_1_verifier": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/verify_a02_long_three_arm_eval_inputs_v2.py",
+      "sha256": "842574d8abc1a0041bee0aaa0085029d63157db480ef1fac4a13656dc51dc560",
+      "size_bytes": 28916
+    }
+  },
+  "failure_observation": {
+    "command_label": "9R",
+    "command_sha256_utf8": "8694509f7cd1c31f51797d124c1afa3f7566930e22699647d32db49e24adcd09",
+    "exact_command": "test ! -e /tmp/aqua-fe-a02-long-eval-empty-pycache-v1 && /usr/bin/env -i HOME=/home/ma USER=ma LOGNAME=ma SHELL=/bin/bash PATH=/home/ma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 LC_ALL=C.UTF-8 PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPYCACHEPREFIX=/tmp/aqua-fe-a02-long-eval-empty-pycache-v1 PYTHONPATH=/home/ma/AQUA-FE_WS:/home/ma/.local/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages /usr/bin/python3.8 -B scripts/build_a02_long_post_incident_continuation_freeze_v2.py --action check && test ! -e /tmp/aqua-fe-a02-long-eval-empty-pycache-v1 && /usr/bin/env -i HOME=/home/ma USER=ma LOGNAME=ma SHELL=/bin/bash PATH=/home/ma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 LC_ALL=C.UTF-8 PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPYCACHEPREFIX=/tmp/aqua-fe-a02-long-eval-empty-pycache-v1 PYTHONPATH=/home/ma/AQUA-FE_WS:/home/ma/.local/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages /usr/bin/python3.8 -B scripts/verify_a02_long_three_arm_eval_inputs_v2.py --revision-freeze /home/ma/AQUA-FE_WS/papers/a02_4500_6300_post_incident_continuation_freeze_v2.json --action check-continuation-start && test ! -e /tmp/aqua-fe-a02-long-eval-empty-pycache-v1 && /usr/bin/env -i HOME=/home/ma USER=ma LOGNAME=ma SHELL=/bin/bash PATH=/home/ma/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LANG=C.UTF-8 LC_ALL=C.UTF-8 PYTHONNOUSERSITE=1 PYTHONHASHSEED=0 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 PYTHONPYCACHEPREFIX=/tmp/aqua-fe-a02-long-eval-empty-pycache-v1 PYTHONPATH=/home/ma/AQUA-FE_WS:/home/ma/.local/lib/python3.8/site-packages:/opt/ros/noetic/lib/python3/dist-packages /usr/bin/python3.8 -B scripts/verify_a02_long_three_arm_eval_inputs_v2.py --revision-freeze /home/ma/AQUA-FE_WS/papers/a02_4500_6300_post_incident_continuation_freeze_v2.json --action check-b1-decision || exit 42",
+    "persistent_raw_stream_artifact": false,
+    "stages": {
+      "builder_exact_rebuild": {
+        "observed_stdout_line": "{\"sha256\": \"b86da0e0015076960a9aeb9cf3766b50d6d2342438769866b7b84b4a5d55a355\", \"size_bytes\": 920795, \"status\": \"PASS_EXACT_REBUILD\"}",
+        "status": "PASS_EXACT_REBUILD"
+      },
+      "continuation_start": {
+        "parsed_record": {
+          "b1_guard_decision_inventory_sha256": "681507ddb004761d994e25984549f494c69eb90c5bcb8039150cdc9488b627f8",
+          "b1_guard_decision_regular_file_count": 1,
+          "b1_native_inventory_sha256": "3902497f72d11c77a9d9979f1a858e085d838cd592727690ae03ad022c3e2e44",
+          "b1_native_regular_file_count": 3,
+          "remaining_reserved_count": 13,
+          "revision_freeze_sha256": "b86da0e0015076960a9aeb9cf3766b50d6d2342438769866b7b84b4a5d55a355",
+          "shared_inventory_sha256": "f135192579f68e6792dcf1d36f5dc66ea63e62a8433b46d307a2f010fe6afbd5",
+          "shared_regular_file_count": 3609,
+          "status": "PASS_POST_INCIDENT_CONTINUATION_START"
+        },
+        "raw_stdout_line_persisted": false
+      },
+      "decision": {
+        "observed_stderr_lines": [
+          "VERIFICATION_BLOCKED:STATIC_COMMAND_PROTOCOL_EXACT_MISMATCH_AT_25"
+        ],
+        "status": "BLOCKED_BEFORE_B1_DECISION_SEMANTIC_CHECK"
+      }
+    },
+    "whole_command_return_code": 42
+  },
+  "root_agent_confirmation": {
+    "captured_from_orchestrator_transcript": true,
+    "confirmed": true,
+    "persistent_stdout_or_stderr_file_was_created": false
+  },
+  "schema_version": "aqua-fe-a02-long-v2-1-9r-infrastructure-false-negative-incident-v1",
+  "status": "CONFIRMED_INFRASTRUCTURE_FALSE_NEGATIVE_V2_1_PROTOCOL_TERMINATED_RC42",
+  "v2_1_protocol_boundary": {
+    "builder_and_start_gate_consumed_once": true,
+    "command_9r_must_not_be_reexecuted": true,
+    "command_9r_terminated_v2_1_protocol": true,
+    "continuation_is_not_v2_1_resume": true,
+    "downstream_scientific_commands_executed": false,
+    "producer_or_b1_commands_executed_by_v2_1": false
+  }
+}

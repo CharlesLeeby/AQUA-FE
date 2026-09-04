@@ -1,0 +1,5 @@
+wrote 12760 feature frames to /mnt/data/AQUA-FE_WS/p06_screening_work/ntnu/fjord_6/features.bag
+feature span: 637.943s
+backend quality: mode=default floor=0.800 alpha=0.650
+run_dir=/mnt/data/AQUA-FE_WS/p06_screening_work/ntnu/fjord_6
+P06_ROS_PASS sequence=fjord_6 rows=12760 output=papers/ieee_sensors_journal_experiments/p06/screening_runs/ntnu/fjord_6

@@ -1,0 +1,55 @@
+{
+  "arms": {
+    "full": {
+      "ape_abs_diff_m": 1.586567464073596e-07,
+      "evo_ape_rmse_m": 346.597367,
+      "evo_segmented_rpe_rmse_m": 62.260175,
+      "primary_ape_rmse_m": 346.59736715865677,
+      "primary_rpe_rmse_m": 62.26017466891584,
+      "rpe_abs_diff_m": 3.310841591996905e-07,
+      "rpe_pair_count": 235,
+      "segments": [
+        {
+          "pair_count": 235,
+          "rmse_m": 62.260175,
+          "segment_id": 0
+        }
+      ]
+    },
+    "klt": {
+      "ape_abs_diff_m": 1.974517545022536e-07,
+      "evo_ape_rmse_m": 328.911301,
+      "evo_segmented_rpe_rmse_m": 57.24299,
+      "primary_ape_rmse_m": 328.9113008025482,
+      "primary_rpe_rmse_m": 57.242990286436545,
+      "rpe_abs_diff_m": 2.864365455934603e-07,
+      "rpe_pair_count": 235,
+      "segments": [
+        {
+          "pair_count": 235,
+          "rmse_m": 57.24299,
+          "segment_id": 0
+        }
+      ]
+    },
+    "protected": {
+      "ape_abs_diff_m": 2.771412255242467e-08,
+      "evo_ape_rmse_m": 411.56495,
+      "evo_segmented_rpe_rmse_m": 120.193488,
+      "primary_ape_rmse_m": 411.5649499722859,
+      "primary_rpe_rmse_m": 120.19348777871382,
+      "rpe_abs_diff_m": 2.212861858197357e-07,
+      "rpe_pair_count": 235,
+      "segments": [
+        {
+          "pair_count": 235,
+          "rmse_m": 120.193488,
+          "segment_id": 0
+        }
+      ]
+    }
+  },
+  "evo_version": "1.31.1",
+  "rpe_delta_frames": 10,
+  "rpe_semantics": "aligned_global_frame_positional_delta"
+}

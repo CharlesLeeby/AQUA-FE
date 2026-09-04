@@ -1,0 +1,98 @@
+{
+  "corrected_implementation_binding": {
+    "adapter_scope": "ROS_BAG_HEADER_STAMP_INTEGER_SECS_NSECS_TO_LONGDOUBLE_ONLY",
+    "base_evaluator_sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110",
+    "base_loader_restored_in_finally": true,
+    "base_main_called": true,
+    "entrypoint": "scripts/evaluate_vins_common_support_epoch_v2.py",
+    "files": [
+      {
+        "path": "scripts/evaluate_vins_common_support.py",
+        "sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110",
+        "size_bytes": 27933
+      },
+      {
+        "path": "scripts/trajectory_eval_core.py",
+        "sha256": "aa9ac4da81df7298d1f1c369548ca98a57235916004337cad66f4cf331560635",
+        "size_bytes": 27945
+      },
+      {
+        "path": "scripts/evaluate_vins_common_support_epoch_v2.py",
+        "sha256": "3c455299b23157cc749b474b9460ca4a408b3bee516e9d1bf2109f253cf89f91",
+        "size_bytes": 5447
+      }
+    ],
+    "implementation_bundle_sha256": "b53bd0e02dcedb945413367d607da5200b2bc01197e93f004d0e16a0e7ffab5a",
+    "required_for_all_new_p07_g0_evaluation": true,
+    "sealed_base_core_procfd_required_at_formal_execution": true,
+    "sealed_module_environment": {
+      "base": "AQUAFE_P07_SEALED_EVALUATOR_BASE",
+      "core": "AQUAFE_P07_SEALED_EVALUATOR_CORE"
+    }
+  },
+  "correction_kind": "ADDITIVE_ROS_BAG_TIMESTAMP_REPRESENTATION_CORRECTION",
+  "epoch_ns_correction": {
+    "bool_rejected": true,
+    "metric_protocol_changed": false,
+    "new_ros_bag_conversion": "np.longdouble(secs)+np.longdouble(nsecs)/1e9",
+    "nsecs_range": "0<=nsecs<1000000000",
+    "old_ros_bag_conversion": "float(message.header.stamp.to_sec())",
+    "real_outcome_equivalence_claimed": false,
+    "secs_nsecs_must_be_exact_python_ints": true
+  },
+  "epoch_ns_correction_lock_hash": "f0485ff55f6700f1b201da9e3b9cc1859686b559b58ca4a05792838b18a4bcde",
+  "frozen_at": "2026-08-08T11:53:00+08:00",
+  "governance_artifacts": [
+    {
+      "path": "scripts/build_p07_evaluator_epoch_ns_correction_lock_v1.py",
+      "sha256": "058821ff9c341853789c8a8f50715e8ca14b242134e7bb8061895c88d4194d30",
+      "size_bytes": 18792
+    },
+    {
+      "path": "scripts/tests/test_p07_evaluator_epoch_ns_correction_v1.py",
+      "sha256": "a4dbfa40be3c951aad4cea24192c9e8d1313ef81eb6ec55a530420cb7478dbf4",
+      "size_bytes": 12180
+    }
+  ],
+  "next_action": "FREEZE_THIS_LOCK_BEFORE_BACKEND_QUEUE_AND_G0_LOCK",
+  "outcome_blind_audit": {
+    "ape_artifact_read": false,
+    "backend_queue_generated": false,
+    "builder_allowed_read_paths": [
+      "papers/ieee_sensors_journal_experiments/p07/evaluator_precision_correction_lock_v1.json",
+      "papers/ieee_sensors_journal_experiments/evaluator_protocol_v1.md",
+      "scripts/evaluate_vins_common_support.py",
+      "scripts/trajectory_eval_core.py",
+      "scripts/evaluate_vins_common_support_epoch_v2.py",
+      "scripts/build_p07_evaluator_epoch_ns_correction_lock_v1.py",
+      "scripts/tests/test_p07_evaluator_epoch_ns_correction_v1.py"
+    ],
+    "evaluation_plan_generated": false,
+    "evaluator_executed": false,
+    "real_trajectory_artifact_read": false,
+    "result_artifact_read": false,
+    "rpe_artifact_read": false,
+    "vins_executed": false,
+    "workspace_discovery_used": false
+  },
+  "outcome_boundary": "SOURCE_AND_GOVERNANCE_ONLY_NO_REAL_TRAJECTORY_APE_RPE_RESULT_READ",
+  "parent_precision_correction_lock": {
+    "correction_lock_hash": "f46be78c8b0eb00885f5cfa8ec058e926f1600878a17da391c15299c71dd910c",
+    "path": "papers/ieee_sensors_journal_experiments/p07/evaluator_precision_correction_lock_v1.json",
+    "schema_version": "isj-p07-evaluator-precision-correction-lock-v1",
+    "sha256": "9e532c3d5f896f27fafa7c2bf1be425d994b8fd590a5e933710f396132bab995",
+    "size_bytes": 5523,
+    "status": "FROZEN_OUTCOME_BLIND_ADDITIVE_EVALUATOR_PRECISION_CORRECTION"
+  },
+  "protocol_binding": {
+    "parent_sha256": "d3ae583ca799ef423054a5b9ece8b53e0000a8d3bbb1ea8c50121f7a60a40816",
+    "path": "papers/ieee_sensors_journal_experiments/evaluator_protocol_v1.md",
+    "protocol_identity": "isj-evaluator-v1",
+    "sha256": "d3ae583ca799ef423054a5b9ece8b53e0000a8d3bbb1ea8c50121f7a60a40816",
+    "size_bytes": 7036,
+    "unchanged": true
+  },
+  "schema_version": "isj-p07-evaluator-epoch-ns-correction-lock-v1",
+  "scientific_method_identity": "UNCHANGED_FROM_NATIVEQ_V3",
+  "status": "FROZEN_OUTCOME_BLIND_ADDITIVE_ROS_BAG_EPOCH_NS_CORRECTION"
+}

@@ -1,0 +1,214 @@
+{
+  "algorithm_settings": {
+    "backend_quality_alpha": 0.65,
+    "backend_quality_floor": 0.8,
+    "backend_quality_mode": "vins_safe",
+    "constant_quality_to_backend": false,
+    "every_n": 2,
+    "export_max_features": 350,
+    "force_export": false,
+    "force_raw": false,
+    "formal_three_layer_export": false,
+    "frame_offset": 1,
+    "learned_source_quality_scales": {
+      "learned": 1.0,
+      "loftr": 1.0,
+      "sp_lg": 1.0,
+      "xfeat": 1.0
+    },
+    "measurement_selection": false,
+    "method": "klt",
+    "preprocess": "adaptive_clahe",
+    "process_skipped_frames": true,
+    "raw_quality_to_backend": false,
+    "run_vins_during_export": false,
+    "scope": "A02_CAMERA_GLOBAL_4500_6300_INCLUSIVE",
+    "semidense_fallback_method": "none",
+    "settings_sha256": "e8f76fa48a79c00d21b001db7bfa54a201946afabe581603395a2535f3aedf22",
+    "single_thread_backend_setting": true,
+    "vins_safe_source_selection": false
+  },
+  "base_contract_hash": "39eaea6d26e6f5a881ef2b17b898cbda75c7aba8087ce447fe897e2fe0bdfce0",
+  "consumer_files": [
+    {
+      "path": "vins_estimator/src/rosNodeTest.cpp",
+      "sha256": "6606e607df624f7411fcc513e94a42e98b671b8be33a6a4b17052f9ebc99db3a",
+      "size_bytes": 8686
+    },
+    {
+      "path": "vins_estimator/src/estimator/feature_manager.cpp",
+      "sha256": "67b3da5588a49838e1fc8575f6e9ddaa8de45baa21130e1fbf3eda17d50eb9cf",
+      "size_bytes": 19107
+    },
+    {
+      "path": "vins_estimator/src/estimator/feature_manager.h",
+      "sha256": "87aa9951d7779b22fef66ee2c71345c8bf2482f327179347ff4c46479fb2ad00",
+      "size_bytes": 3847
+    },
+    {
+      "path": "vins_estimator/src/estimator/estimator.cpp",
+      "sha256": "9921aa245837dd7dfe5c51a923e03b0bcc69aea525af491a91c173a036985b13",
+      "size_bytes": 58301
+    },
+    {
+      "path": "vins_estimator/src/factor/projectionTwoFrameOneCamFactor.cpp",
+      "sha256": "bccbec8a877f65fbb45f57639d0a023170c09a349409a6381d63586cb2e50945",
+      "size_bytes": 11763
+    },
+    {
+      "path": "vins_estimator/src/factor/projectionTwoFrameOneCamFactor.h",
+      "sha256": "40fd6164bb7846c537b0f61a882788b1168bb1a986c8c89c75678bbb0d0dcc47",
+      "size_bytes": 1363
+    },
+    {
+      "path": "vins_estimator/src/factor/projectionTwoFrameTwoCamFactor.cpp",
+      "sha256": "43f09166e46ba0677059b7799e3174d8fbad8b92eeee5db7976ccca40607528e",
+      "size_bytes": 13191
+    },
+    {
+      "path": "vins_estimator/src/factor/projectionTwoFrameTwoCamFactor.h",
+      "sha256": "0a4a6bf72c0662b402622eb8ba37699e42dd2ee5272a5f160331489051718b65",
+      "size_bytes": 1375
+    },
+    {
+      "path": "vins_estimator/src/factor/projectionOneFrameTwoCamFactor.cpp",
+      "sha256": "4affb44b13bda757fd9425a9eaf3fc41ac5d22f22cc8606144072d115a2be53a",
+      "size_bytes": 10059
+    },
+    {
+      "path": "vins_estimator/src/factor/projectionOneFrameTwoCamFactor.h",
+      "sha256": "1381828bf35a9e8c2031b8f3e1102bbfa521985f16db35e2bfa2788ee4ab7e55",
+      "size_bytes": 1375
+    }
+  ],
+  "contract_hash": "e65f1930be95c5ed8dce02a628dfe681df6f5be3f00405db6dbc4afbf31585d8",
+  "execution_governance": {
+    "decision_directory": "/mnt/data/AQUA-FE_WS/logs/backend_contract_decisions/b1/litcmp_a02_4500_6300_preroll_b1_native_r1",
+    "decision_directory_exclusive_create": true,
+    "decision_file_exclusive_create": true,
+    "decision_filename": "b1_current_exporter_v2_decision.json",
+    "force_export": false,
+    "output_run_directory_must_not_exist": true,
+    "retry_count": 0,
+    "underlying_runner_argv": [
+      "bash",
+      "/home/ma/AQUA-FE_WS/scripts/run_aqualoc_archaeo_vins_eval.sh",
+      "external",
+      "2",
+      "4500",
+      "6300",
+      "klt",
+      "2"
+    ],
+    "wrapper_api": "aqualoc_archaeology A02 4500 6300 2"
+  },
+  "records": {
+    "base_contract_v1": {
+      "path": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/backend_quality_contract_v1.json",
+      "sha256": "14abab7ca7ad0f48af8856372b3cf97470d405c1e20081cdb4247f3c87b64957",
+      "size_bytes": 4893
+    },
+    "canonical_window_materializer": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/materialize_aqualoc_a02_4500_6300_window_v1.py",
+      "sha256": "7d5ca32fea25945fcce454b948c55bc9d883b8dca3f5bf481611ced0395cd7a3",
+      "size_bytes": 14820
+    },
+    "contract_builder": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/build_b1_klt_nativeq_current_exporter_contract_v2.py",
+      "sha256": "cabda6889b1bd4e82607b541104577aa05c42030b20224d36270876b8477be50",
+      "size_bytes": 8739
+    },
+    "contract_checker": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/check_b1_klt_nativeq_current_exporter_contract_v2.py",
+      "sha256": "aa7f0b53049b99ed9dcbc1c511a709f9cc0e492514ac4662c31ca803672f57b6",
+      "size_bytes": 10738
+    },
+    "current_exporter": {
+      "path": "/home/ma/AQUA-FE_WS/uw_frontend/ros/export_vins_features.py",
+      "sha256": "567ccc74989d7fb4ddcb38ac558fecea33033139a0b0db98e61124c6bac5a00d",
+      "size_bytes": 437542
+    },
+    "data_eligibility_manifest": {
+      "path": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/data_eligibility_manifest.csv",
+      "sha256": "510c276c33217706eef11ea53e58de4b37318828f8a6dc793dea9262f0a0a0f5",
+      "size_bytes": 46310
+    },
+    "frontend_config": {
+      "path": "/home/ma/AQUA-FE_WS/uw_frontend/configs/experiments/low_texture_xfeat_seedchain_frontend.yaml",
+      "sha256": "6f89d861cc002dfaf0eaf5f1294b0dbcfab9fe268c5dc0d09082f79811000bf3",
+      "size_bytes": 1493
+    },
+    "guard_wrapper": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_a02_b1_klt_nativeq_current_exporter_guarded_v2.sh",
+      "sha256": "0cccd1c96a4b8fe03dac7365539475b1c8d9c05825207c2ba8e95eb392e0389e",
+      "size_bytes": 3739
+    },
+    "legacy_b1_checker": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/check_b1_klt_nativeq_contract_v1.py",
+      "sha256": "8dafcb3e40278210e4fb545c5e19e347b69898cd45e5af3ec7736ceb682bad15",
+      "size_bytes": 3480
+    },
+    "legacy_b1_wrapper": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_isj_b1_klt_nativeq_guarded_v1.sh",
+      "sha256": "6c112ebdb916becf615b0772c4474a119bf774a17b4f85391ceb88d46d0505d1",
+      "size_bytes": 5604
+    },
+    "legacy_contract_builder": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/build_nativeq_backend_contract.py",
+      "sha256": "0c5bbdf3fd1f0948a94df346d29dc8b26ee66666c51287b933db5e7e79a0decc",
+      "size_bytes": 8544
+    },
+    "original_a02_runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_aqualoc_archaeo_vins_eval.sh",
+      "sha256": "c3bdb181fb4a0f9ef457f9dd0f7cffd4b1a79c8ed8dc2e529d62f02c9f98a1cc",
+      "size_bytes": 53436
+    },
+    "transition_proof": {
+      "path": "/home/ma/AQUA-FE_WS/papers/ieee_sensors_journal_experiments/b1_klt_exporter_7ed_to_567_transition_proof_v2.json",
+      "sha256": "9a149489e1defa790a9ff7a5ec107a75f9c15a506723fea081315c68eaf1dd2a",
+      "size_bytes": 3000
+    },
+    "transition_prover": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/prove_b1_klt_exporter_transition_v2.py",
+      "sha256": "5541d9e211490c5eb0d0ec39c57e5233597514e30729a9cff1f285382118f50b",
+      "size_bytes": 12428
+    },
+    "vins_node": {
+      "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/vins/vins_node",
+      "sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+      "size_bytes": 13104360
+    }
+  },
+  "schema_version": "aqua-fe-b1-klt-nativeq-current-exporter-contract-v2",
+  "scientific_boundary": {
+    "does_not_prove": [
+      "trajectory usability",
+      "accuracy",
+      "learned-frontend benefit",
+      "published-method equivalence"
+    ],
+    "proves": "B1 KLT source/payload-path compatibility under current exporter bytes"
+  },
+  "scope": "B1_KLT_NATIVEQ_A02_4500_6300_EXPORT_COMPATIBILITY_ONLY",
+  "status": "FROZEN_POST_STOP_B1_CURRENT_EXPORTER_CONTRACT",
+  "transition_claim": {
+    "allowed_delta": "DL_VINS_PAIRWISE_CAMERA_AND_METRICS_ONLY",
+    "current_exporter_sha256": "567ccc74989d7fb4ddcb38ac558fecea33033139a0b0db98e61124c6bac5a00d",
+    "exact_patch_count": 4,
+    "klt_factory_ast_equal": true,
+    "old_exporter_sha256": "7ed31890e3a55a528430e912df885830176b3c3432c420860a39d714bceae7cf",
+    "vins_pointcloud_payload_ast_equal": true
+  },
+  "vins_ldd_core": {
+    "libcamera_models.so": {
+      "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/libcamera_models.so",
+      "sha256": "6d7b261f12791b693f95aebea6a762a97bc3501f1f1f3c94a6af6e50f2e6690d",
+      "size_bytes": 2970640
+    },
+    "libvins_lib.so": {
+      "path": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/libvins_lib.so",
+      "sha256": "c1080aefdfd0eb3f011d491041c773649917a77923b97e24503bd90136bab467",
+      "size_bytes": 165207064
+    }
+  }
+}

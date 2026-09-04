@@ -1,0 +1,37 @@
+extends: klt_preserving_learned_frontend.yaml
+
+hybrid:
+  # Safety mode for normal/moderate texture.
+  # KLT remains the temporal backbone. Learned matches are admitted only as
+  # sidecar candidates after degradation/coverage triggers and LK confirmation.
+  preserve_klt_replenish: true
+  enable_geometry_mode_scheduler: true
+  enable_temporal_health_gate: true
+  enable_unified_state_gate: true
+  enable_learned_recovery: false
+  enable_learned_initialization: true
+  learned_init_requires_degradation: true
+  learned_init_min_degradation: 0.44
+  learned_init_min_flat_region_ratio: 0.72
+  learned_init_min_grid_coverage: 0.90
+  learned_init_critical_grid_coverage: 0.80
+  learned_init_requires_klt_confirmation: true
+  learned_confirmation_min_frames: 2
+  learned_confirmation_max_confirmed: 40
+  learned_sidecar_max_extra: 60
+  max_learned_initialized: 50
+  max_learned_init_fraction: 0.16
+  enable_learned_init_acceptance_gate: true
+  learned_init_acceptance_weak_max_new: 18
+  learned_init_acceptance_weak_max_fraction: 0.06
+  learned_init_acceptance_weak_min_grid_gain: 0.02
+  learned_init_acceptance_weak_min_new_cell_ratio: 0.25
+  enable_candidate_geometry_filter: true
+  candidate_geometry_apply_to_learned: true
+  enable_local_quality_map: true
+  local_quality_apply_to_candidate_scoring: false
+  local_quality_apply_to_output_q: true
+  local_quality_weight: 0.35
+
+measurement_selection:
+  enabled: false

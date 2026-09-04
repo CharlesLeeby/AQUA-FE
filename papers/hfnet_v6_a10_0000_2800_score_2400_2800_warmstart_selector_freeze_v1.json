@@ -1,0 +1,82 @@
+{
+  "claims": {
+    "accuracy_measured": false,
+    "hfnet_started": false,
+    "scientific_comparison_produced": false,
+    "trajectory_produced": false
+  },
+  "knowledge_boundary": {
+    "development_result_conditioned_selection": true,
+    "held_out_confirmatory_claim_permitted": false,
+    "note": "A10 2400..2800 was selected from prior project development evidence; the warm-start feed is an additive usability diagnostic, not a held-out accuracy experiment."
+  },
+  "protocol": {
+    "history_policy": "feed canonical source frames 0..2399 before the score window without resetting the backend",
+    "initialization_and_preroll_excluded_from_score": true,
+    "method_native_processing_rate_permitted": true,
+    "score_policy": "score only camera frames 2400..2800 if a usable trajectory is produced",
+    "synthetic_or_extrapolated_imu_permitted": false
+  },
+  "schema_version": "aqua-fe-hfnet-v6-a10-warmstart-selector-freeze-v1",
+  "selection": {
+    "camera_count_for_feed": 2801,
+    "camera_header_ns_inclusive_for_feed": [
+      1542888796062978800,
+      1542888936039921424
+    ],
+    "camera_indices_inclusive_for_feed": [
+      0,
+      2800
+    ],
+    "dataset_family": "aqualoc_archaeology",
+    "preroll_camera_count": 2400,
+    "preroll_camera_indices_half_open": [
+      0,
+      2400
+    ],
+    "score_camera_count": 401,
+    "score_camera_header_ns_inclusive": [
+      1542888916043622160,
+      1542888936039921424
+    ],
+    "score_camera_indices_inclusive": [
+      2400,
+      2800
+    ],
+    "sequence_id": "A10",
+    "warm_start": true,
+    "window_id": "A10_2400_2800"
+  },
+  "selection_evidence": {
+    "development_baseline": {
+      "ape_rmse_m": 1.042609,
+      "method": "project KLT baseline",
+      "rpe_translation_rmse_m": 0.26411
+    },
+    "development_proposed": {
+      "ape_rmse_m": 0.63908,
+      "learned_observation_count": 97,
+      "method": "project proposed learned-active frontend",
+      "rpe_translation_rmse_m": 0.180777
+    },
+    "short_window_bag": {
+      "path": "/home/ma/AQUA-FE_WS/datasets/aqualoc/rosbags/archaeo10_2400_2800.bag",
+      "sha256": "b1989048c7b357958bc351569995275a5f2f71aa873920316733700acd21b6ca",
+      "size_bytes": 108379060
+    }
+  },
+  "source_authority": {
+    "archive": {
+      "gzip_footer_crc32": "f35c87a1",
+      "gzip_footer_isize_mod_2_32": 3798589440,
+      "path": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_10_raw_data.tar.gz",
+      "sha256": "e8bde74e147236c15fe70d0385c618a75b2fc6e18e6f369dc12e355b49faceee",
+      "size_bytes": 3761302356
+    },
+    "camera_member": "raw_data/img_sequence_10.csv",
+    "image_member_prefix": "raw_data/images_sequence_10/",
+    "imu_clock_transform": "output_ns=raw_ns+53694112",
+    "imu_member": "raw_data/imu_sequence_10.csv"
+  },
+  "status": "FROZEN_PREPARATION_ONLY"
+}

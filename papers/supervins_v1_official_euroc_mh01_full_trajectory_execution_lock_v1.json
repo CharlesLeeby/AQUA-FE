@@ -1,0 +1,74 @@
+{
+  "schema_version": "aqua-fe-published-supervins-v1-official-euroc-mh01-full-trajectory-execution-lock-v1",
+  "created_at": "2026-08-17T04:08:00+08:00",
+  "status": "LOCKED_PRESTART_AWAITING_SEPARATE_ROOT_EXECUTION_AUTHORITY",
+  "scientific_role": "DEVELOPMENT_ONLY_OFFICIAL_MH01_FULL_TRAJECTORY_PRESTART_LOCK",
+  "master_uri": "http://127.0.0.1:11555",
+  "master_command": [
+    "/opt/ros/noetic/bin/roscore",
+    "-p",
+    "11555"
+  ],
+  "node_command": [
+    "/home/ma/SLAM/SuperVINS-v1-devrepair-ws-20260816-r1/devel/lib/supervins/supervins_node",
+    "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_config_v1/euroc_mono_imu_config.yaml"
+  ],
+  "publisher_command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/ma/AQUA-FE_WS/scripts/publish_supervins_euroc_mh01_full_v1.py",
+    "--action",
+    "run",
+    "--authorization-token",
+    "SUPERVINS_STAGE4_MH01_FULL_PUBLISH_ONCE"
+  ],
+  "controller_command": [
+    "/usr/bin/python3",
+    "-B",
+    "/home/ma/AQUA-FE_WS/scripts/run_published_supervins_v1_official_euroc_mh01_full_trajectory_v1.py",
+    "--action",
+    "run",
+    "--authorization-token",
+    "SUPERVINS_STAGE4_MH01_FULL_TRAJECTORY_ATTEMPT_001_START_ONCE"
+  ],
+  "authorization_token": "SUPERVINS_STAGE4_MH01_FULL_TRAJECTORY_ATTEMPT_001_START_ONCE",
+  "maximum_roscore_starts": 1,
+  "maximum_node_starts": 1,
+  "maximum_publisher_starts": 1,
+  "retry_authorized": false,
+  "protocol": {
+    "sha256": "0393ce030ee862f0d0448f7d96e7e3283552a1d3d010cb2d8c78f74e763b5a68",
+    "size_bytes": 18387
+  },
+  "runner": {
+    "sha256": "d406011a6e2c6cd45c59019d70c3c4e853b75d5d299c8ac083432ac457a6798f",
+    "size_bytes": 83184
+  },
+  "tests": {
+    "sha256": "1d554a895b05be031acdf935d3df1736602cf6836e81679fa1d0ba14ee21ab85",
+    "size_bytes": 27744
+  },
+  "publisher": {
+    "sha256": "2ec8b7c7457f933206e61c4a79ec782664849fd201d6a459bb0a19edab4d1371",
+    "size_bytes": 14026
+  },
+  "input_manifest": {
+    "sha256": "31fbc4a8d968f6eda7fb013b4ea830c9226459986a4917b786bfb86f0ced2a44",
+    "size_bytes": 7142
+  },
+  "adapted_config": {
+    "sha256": "bf0d2500e60a96b09f50defbd1299b12d62cf85ce581f6a3b8da743f1b84b32b",
+    "size_bytes": 3520
+  },
+  "adapted_calibration": {
+    "sha256": "cf80ecac499664460eb52159de38786058c7cfb5eee81ab6489dea37a5d64059",
+    "size_bytes": 429
+  },
+  "pinned_file_count": 76,
+  "pinned_files_canonical_sha256": "53ebe8d0973758a7b5576c4730bc961e8f28f2de807bdf494db1b123b6182e6e",
+  "fresh_evidence_root": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_full_trajectory_20260817_r1",
+  "execution_authority_file": "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_full_trajectory_execution_authority_v1.json",
+  "execution_authority_present_at_lock": false,
+  "complete_run_authorized_by_this_lock_alone": false,
+  "groundtruth_ape_rpe_loop_fusion_or_comparison_authorized": false
+}

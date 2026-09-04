@@ -1,0 +1,162 @@
+{
+  "bound_summary_hash": "3cfc5f82af1eff32c78dea026a8315467729d1456ff0c67e2e3240c6436967e9",
+  "failure_reasons": [],
+  "freeze": {
+    "path": "papers/a02_4500_6300_matched_birth_formal900_r4_vins_eval_freeze_v3.json",
+    "sha256": "9256c648d462968f5b35f6fa6c94dc409b25a8162f3ee4832dfa24f3611c4bd7",
+    "size_bytes": 2357610
+  },
+  "freeze_hash": "d283b482f820c4ace70a5b362907132cbfd674bb5276604dd8846541b5703c4d",
+  "outcome_boundary": {
+    "confirmatory": false,
+    "cross_window_generalization": false,
+    "outcome_blind": false,
+    "reference_is_image_derived_colmap_not_independent_ground_truth": true,
+    "runner_local_ape_results_visible_before_freeze": true,
+    "statistical_significance": false,
+    "whole_slam_superiority": false
+  },
+  "pass": true,
+  "post_hash": "674dba2493813637ff5820a3c97b07993eaf3144eb1bf0a4b31ec1613b48d1dd",
+  "post_process_start_count": 0,
+  "publication_closeout_hash": "ef55d261bede3e6b35c8181eecdaf5a664b060c80854ff6648fff59dce563805",
+  "publication_intent_hash": "277a31d3de462adb559f49be2ab6b003779c269775d10b3f317f0988e8429547",
+  "published_payload_records": [
+    {
+      "path": "bound_summary_v1.json",
+      "sha256": "9605a1c23354e05322d96338a2f8a36e47cc30c9e027519b5c44db6d40831629",
+      "size_bytes": 31909
+    },
+    {
+      "path": "primary/common_grid_audit.csv",
+      "sha256": "88cc1664c651585f51728af66543c2a6a82772a70b3aceeca2460793ae23f2fc",
+      "size_bytes": 2802
+    },
+    {
+      "path": "primary/common_support_metrics.csv",
+      "sha256": "a0be6693826227d6a07935dc7413b4f3799419a9551a14f0552c9671916a702c",
+      "size_bytes": 996
+    },
+    {
+      "path": "primary/common_support_summary.json",
+      "sha256": "4b4f6f9ea2d90e30bc6e9ba2c4a5087f814e369826a5c23bf9c3d96d43cb8cc1",
+      "size_bytes": 3760
+    },
+    {
+      "path": "primary/runtime_receipt.json",
+      "sha256": "b821b7f0d88256b8264b5fd87d33b5f96459a57b43fef32603cbbd9e09350bc9",
+      "size_bytes": 2109896
+    },
+    {
+      "path": "primary_launch_intent.json",
+      "sha256": "a272e11b1741514aa841e90c798d26cd28d2bff7a0f4fc9956ac44451a58aae3",
+      "size_bytes": 9966
+    },
+    {
+      "path": "verification/common_grid_audit.csv",
+      "sha256": "88cc1664c651585f51728af66543c2a6a82772a70b3aceeca2460793ae23f2fc",
+      "size_bytes": 2802
+    },
+    {
+      "path": "verification/common_support_metrics.csv",
+      "sha256": "a0be6693826227d6a07935dc7413b4f3799419a9551a14f0552c9671916a702c",
+      "size_bytes": 996
+    },
+    {
+      "path": "verification/common_support_summary.json",
+      "sha256": "4b4f6f9ea2d90e30bc6e9ba2c4a5087f814e369826a5c23bf9c3d96d43cb8cc1",
+      "size_bytes": 3760
+    },
+    {
+      "path": "verification/runtime_receipt.json",
+      "sha256": "7834bf617e52f6f1e3e6756b5deb9bb756378f6a5c193ab61528fe20654b6d05",
+      "size_bytes": 2109906
+    },
+    {
+      "path": "verification_launch_intent.json",
+      "sha256": "91cf48f7540d1c714acb9a2d6efb072996ead28acea0b60a916d3d250c3d2ad7",
+      "size_bytes": 10011
+    }
+  ],
+  "result_metrics": {
+    "GFTTBIRTH_RAWLK": {
+      "ape_max_m": 2.433710810023551,
+      "ape_median_m": 0.5630787772086008,
+      "ape_rmse_m": 1.0426930765948286,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 854,
+        "raw_count": 854,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 854
+      },
+      "bracket_gap_max_s": 0.10345855995547026,
+      "bracket_gap_p50_s": 0.10001484805252403,
+      "bracket_gap_p95_s": 0.10168893442023545,
+      "legacy_max_reference_reuse": 10,
+      "legacy_pair_count": 854,
+      "legacy_timestamp_error_max_s": 0.4534190079430118,
+      "legacy_timestamp_error_p95_s": 0.45068994556204417,
+      "legacy_unique_assignment_error_max_s": 0.6497444800334051,
+      "legacy_unique_assignment_error_p95_s": 0.05048241917975247,
+      "legacy_unique_assignment_pair_count": 87,
+      "legacy_unique_reference_used": 86,
+      "matched_count": 84,
+      "rejection_histogram": {
+        "INTERPOLATED": 85,
+        "OUT_OF_RANGE": 5
+      },
+      "rpe_max_m": 0.8813442232961177,
+      "rpe_median_m": 0.09218042377954574,
+      "rpe_pairs": 83,
+      "rpe_rmse_m": 0.22902664680271478,
+      "valid_grid_count": 85
+    },
+    "XFEATBIRTH_RAWLK": {
+      "ape_max_m": 1.312976152026489,
+      "ape_median_m": 0.6751966453952849,
+      "ape_rmse_m": 0.7413695191864242,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 845,
+        "raw_count": 845,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 845
+      },
+      "bracket_gap_max_s": 0.10345855995547026,
+      "bracket_gap_p50_s": 0.10002099204575643,
+      "bracket_gap_p95_s": 0.10170286082429811,
+      "legacy_max_reference_reuse": 10,
+      "legacy_pair_count": 845,
+      "legacy_timestamp_error_max_s": 0.4534190079430118,
+      "legacy_timestamp_error_p95_s": 0.4506900607608259,
+      "legacy_unique_assignment_error_max_s": 0.5504080960527062,
+      "legacy_unique_assignment_error_p95_s": 0.05048459197860211,
+      "legacy_unique_assignment_pair_count": 86,
+      "legacy_unique_reference_used": 85,
+      "matched_count": 84,
+      "rejection_histogram": {
+        "INTERPOLATED": 84,
+        "OUT_OF_RANGE": 6
+      },
+      "rpe_max_m": 0.10732670334867485,
+      "rpe_median_m": 0.03245161485441199,
+      "rpe_pairs": 83,
+      "rpe_rmse_m": 0.042378701545324755,
+      "valid_grid_count": 84
+    }
+  },
+  "result_receipt_hash": "227ce451fcc0e195ca52929fb41f191eff9f392085f0afd7503f87f753e52172",
+  "schema_version": "aqua-fe-matched-birth-r4-vins-g0-post-seal-v4",
+  "status": "PASS_STRICT_FULL_REFERENCE_COMMON_SUPPORT",
+  "strict_gates": {
+    "actual_runtime_semantics_equal": true,
+    "ape_valid": true,
+    "grid_count": 90,
+    "grid_csv_bytes_equal": true,
+    "metrics_csv_bytes_equal": true,
+    "primary_and_verification_process_rc0_once_no_retry": true,
+    "rpe_valid": true,
+    "summary_equal_after_reference_only_typed_normalization": true
+  }
+}

@@ -1,0 +1,8 @@
+
+Loading Feature Matcher Settings from : /mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/settings/orb32_settings.yaml
+- matchingTh: 75
+
+Loading Feature Extractor Settings from : /mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/settings/orb32_settings.yaml
+- numOctaves: 8
+- scaleFactor: 1.2
+- detectionTh: 20

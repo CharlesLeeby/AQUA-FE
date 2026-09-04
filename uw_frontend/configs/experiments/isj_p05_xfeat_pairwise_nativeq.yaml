@@ -1,0 +1,25 @@
+extends: ../klt_frontend.yaml
+
+# Controlled same-backend modern learned baseline for the ISJ matrix.
+# This is the official XFeat sparse matcher wrapped by the local pairwise
+# persistent-ID adapter. It is independent of the proposed KLT seed-chain path.
+pairwise:
+  max_features: 350
+  association_radius: 8.0
+  min_ncc: 0.35
+  min_confidence: 0.0
+  q_min: 0.05
+
+xfeat:
+  repo_path: external_tools/accelerated_features
+  top_k: 2048
+  semi_dense: false
+  min_cossim: 0.82
+
+measurement_selection:
+  enabled: false
+
+backend_quality:
+  mode: vins_safe
+  floor: 0.80
+  alpha: 0.65

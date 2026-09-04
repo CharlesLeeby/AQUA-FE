@@ -1,0 +1,177 @@
+{
+  "added_windows": 1,
+  "date": "2026-08-06",
+  "excluded_formal_windows": 1,
+  "no_go_windows": {
+    "A03_3200_3600": {
+      "action_positive": false,
+      "decision": "formal_nondeterministic_no_go",
+      "formal_root": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/postinit_candidate_search_20260806/aqualoc_a03_3200_3600/formal_n3_d14_min8_ignore0_clean_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09",
+      "formal_runs": 20,
+      "formal_runs_ok": 20,
+      "full_modes": {
+        "r1_r2": {
+          "action": {
+            "assisted_matches": 56,
+            "assisted_outliers": 17,
+            "distinct_mappoints": 22,
+            "map_point_lineages": 3,
+            "post_init_accepted": 223,
+            "post_init_attempted": 223,
+            "pre_init_attempted": 0,
+            "pre_kf_observed": 9,
+            "pre_kf_purged": 9,
+            "pre_kf_scans": 175
+          },
+          "keyframe_sha256": "0507152f5ff5fc429bc1765e6a18a030dfbff5771a3698b3809f2dee2710cb4c",
+          "online_ape_m": 0.011838,
+          "online_rpe_m": 0.013305,
+          "online_sha256": "7b2aa37ebef12877df2f8c335b79ee96779bf67ddd1c35bed98597a821b7253e",
+          "reconstructed_ape_m": 0.009282,
+          "reconstructed_rpe_m": 0.012957,
+          "reconstructed_sha256": "530a095728f7be5f2a2c59cb1197168a4a716dabcf03b251d18db738f9bdb58d",
+          "repeats": "1,2"
+        },
+        "r3_r4": {
+          "action": {
+            "assisted_matches": 57,
+            "assisted_outliers": 15,
+            "distinct_mappoints": 33,
+            "map_point_lineages": 2,
+            "post_init_accepted": 223,
+            "post_init_attempted": 223,
+            "pre_init_attempted": 0,
+            "pre_kf_observed": 10,
+            "pre_kf_purged": 10,
+            "pre_kf_scans": 175
+          },
+          "keyframe_sha256": "a80fdbc1bb1bfeb72171d6f82a19c8096c114578d83dc018c6a641bcd65e5bff",
+          "online_ape_m": 0.010269,
+          "online_rpe_m": 0.012511,
+          "online_sha256": "44e6bc3a721a9422cc29e7f24a6a0b36b0946167bdf39b9de70ee7c888c32620",
+          "reconstructed_ape_m": 0.008764,
+          "reconstructed_rpe_m": 0.011985,
+          "reconstructed_sha256": "22cd4cc4f0e6319e52422df5a7e9fcf0d9cef3a41cc9df29e1fb4d1f0876384a",
+          "repeats": "3,4"
+        }
+      },
+      "included_in_roster": false,
+      "repeat4_order_swapped": true,
+      "role_counter_signatures": {
+        "drop": 1,
+        "full": 2,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_keyframe_hashes": {
+        "drop": 1,
+        "full": 2,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_online_hashes": {
+        "drop": 1,
+        "full": 2,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_online_metric_signatures": {
+        "drop": 1,
+        "full": 2,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_reconstructed_hashes": {
+        "drop": 1,
+        "full": 2,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_reconstructed_metric_signatures": {
+        "drop": 1,
+        "full": 2,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "snapshot_entries": 576,
+      "snapshot_entries_verified": 576,
+      "snapshot_manifests": 20,
+      "snapshot_manifests_verified": 20,
+      "window_id": "A03_3200_3600"
+    }
+  },
+  "roster_rows": 16,
+  "roster_unique_windows": 16,
+  "schema_version": 4,
+  "snapshot_entries": 1152,
+  "snapshot_entries_verified": 1152,
+  "snapshot_manifests": 40,
+  "snapshot_manifests_verified": 40,
+  "updated_counts": {
+    "action_positive": 16,
+    "all_control_strict": 2,
+    "operational_low_grid": 9,
+    "project_strict": 5,
+    "sparse_base_klt": 0,
+    "strict_operational_low_grid": 3
+  },
+  "windows": {
+    "A01_6800_7200": {
+      "action_positive": true,
+      "all_control_strict": false,
+      "formal_root": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/postinit_candidate_search_20260806/aqualoc_a01_6800_7200/formal_n3_d14_min8_ignore0_clean_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09",
+      "formal_runs": 20,
+      "formal_runs_ok": 20,
+      "frontend_frames": 200,
+      "full_vs_bridge_off_improvements": 0,
+      "full_vs_native_improvements": 0,
+      "full_vs_unbounded_improvements": 0,
+      "level": "action_positive_metric_negative_native_negative_non_strict",
+      "low_grid_frames_le_0p80": 177,
+      "native_negative": true,
+      "non_strict": true,
+      "operational_low_grid": true,
+      "project_strict": false,
+      "repeat4_order_swapped": true,
+      "role_counter_signatures": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_keyframe_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_online_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "role_reconstructed_hashes": {
+        "drop": 1,
+        "full": 1,
+        "full_bridge_off": 1,
+        "full_unbounded": 1,
+        "orb_only": 1
+      },
+      "snapshot_entries": 576,
+      "snapshot_entries_verified": 576,
+      "snapshot_manifests": 20,
+      "snapshot_manifests_verified": 20,
+      "sparse_base_klt": false
+    }
+  }
+}

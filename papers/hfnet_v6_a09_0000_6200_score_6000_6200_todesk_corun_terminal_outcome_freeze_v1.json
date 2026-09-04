@@ -1,0 +1,150 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a09-0000-6200-score-6000-6200-todesk-corun-terminal-outcome-freeze-v1",
+  "status": "SEALED_TERMINAL_FAIL_NO_RETRY",
+  "created_at_local": "2026-08-28T02:46:57+08:00",
+  "scientific_role": "TODESK_CORUN_DEVELOPMENT_ONLY_HFNET_NATURAL_HISTORY_RUNABILITY_ON_JULY14_A09_OLD_FROZEN_POSITIVE_WINDOW",
+  "attempt": {
+    "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/corun/old_frozen_positive_windows/a09_0000_6200_score_6000_6200_todesk_corun_development_only/attempt_001",
+    "terminal_result": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/corun/old_frozen_positive_windows/a09_0000_6200_score_6000_6200_todesk_corun_development_only/attempt_001/run_result.json",
+      "size_bytes": 29278,
+      "sha256": "e25ab2805958ee43acb2992ee054f7861f8593944def5291be327b2d574ee750",
+      "schema_version": "aqua-fe-hfnet-v6-a09-0000-6200-score-6000-6200-todesk-corun-development-only-result-v1",
+      "status": "FAIL_DEVELOPMENT_RUNABILITY"
+    },
+    "process_start_claim": {
+      "size_bytes": 10986,
+      "sha256": "ff22d7156ffd28e5f8dd0968ff8480e8757388c309c4c8bc3bc9893356092aa3"
+    },
+    "prepared_manifest": {
+      "size_bytes": 14192,
+      "sha256": "fe8a996677a6cf648e237487cdaf6c990d162bff85afe7d00d63f07cf3aac91a"
+    }
+  },
+  "execution": {
+    "supervisor_invocations": 1,
+    "official_hfnet_elf_popen_invocations": 1,
+    "child_pid": 2216973,
+    "started_at_utc": "2026-08-27T18:40:31+00:00",
+    "ended_at_utc": "2026-08-27T18:46:12+00:00",
+    "duration_seconds_for_audit_only": 341.44906534301117,
+    "raw_returncode": -6,
+    "signal_interpretation": "SIGABRT",
+    "timed_out": false,
+    "supervisor_error": null,
+    "retry_performed": false,
+    "retry_permitted": false,
+    "child_reaped_before_post_audit": true,
+    "watchdog_triggered": false,
+    "runtime_or_realtime_claim_permitted": false
+  },
+  "observed_abort": {
+    "exception_family": "cv::Exception",
+    "library": "OpenCV 4.2.0",
+    "source_location": "modules/core/src/batch_distance.cpp:303",
+    "assertion": "K == 1 && update == 0 && mask.empty()",
+    "function": "batchDistance",
+    "causal_scope": "observed terminal exception; exact triggering source frame and upstream descriptor state are not proven by the available logs",
+    "retuning_or_retry_authorized": false
+  },
+  "failure_codes": [
+    "HFNET_PROCESS_NONZERO_OR_MISSING_RETURN",
+    "EXECUTION_NOT_CLEAN",
+    "TRAJECTORY_INVALID",
+    "SCORE_TRAJECTORY_NOT_201_OF_201_CONTIGUOUS",
+    "PREROLL_TO_SCORE_BOUNDARY_NOT_CONTINUOUS",
+    "NO_VALID_SCORE_KEYFRAME",
+    "FINAL_ATLAS_EMPTY_OR_UNPARSEABLE"
+  ],
+  "integrity": {
+    "selected_input_unchanged": true,
+    "local_onnx_unchanged": true,
+    "runtime_authority_unchanged": true,
+    "runtime_authority_drift_keys": [],
+    "local_cache_contract_valid": true,
+    "local_cache_mutated_only_in_attempt_local_copy": true,
+    "all_post_audits_complete": true,
+    "terminal_json_published_o_excl": true,
+    "attempt_consumed": true
+  },
+  "score_adjudication": {
+    "passed": false,
+    "feed_source_indices_inclusive": [0, 6200],
+    "feed_local_indices_inclusive": [0, 6200],
+    "feed_camera_count": 6201,
+    "score_source_indices_inclusive": [6000, 6200],
+    "score_local_indices_inclusive": [6000, 6200],
+    "score_camera_count": 201,
+    "score_pose_count": 0,
+    "exact_201_of_201_contiguous": false,
+    "preroll_to_score_boundary_continuous": false,
+    "score_keyframe_count": 0,
+    "trajectory_written": false,
+    "keyframe_trajectory_written": false,
+    "final_atlas_nonempty": false,
+    "official_trajectory_save_completed": false,
+    "accuracy_state": "NA_NOT_ZERO"
+  },
+  "runtime_log_state": {
+    "parsed_init_frame_ids": [0, 111, 199],
+    "parsed_reset_events": [
+      {"init_frame_id": 0, "next_first_frame_id": 5},
+      {"init_frame_id": 111, "next_first_frame_id": 121}
+    ],
+    "reset_parse_complete": true,
+    "score_window_init_frame_ids": [],
+    "score_window_reset_events": [],
+    "unresolved_reset_events": [],
+    "interpretation_boundary": "The abort and missing trajectory already determine FAIL; absence of parsed score-window reset lines does not prove the score window was successfully reached."
+  },
+  "log_artifacts": {
+    "stdout": {
+      "size_bytes": 13556,
+      "sha256": "f2d98007f32500e2e2b332130ead4db3b546ea23f0011598e5ca5ac961a31738"
+    },
+    "stderr": {
+      "size_bytes": 6664,
+      "sha256": "b3fb9482528fa3c5ea56cbd75000808a40c1d37aa7f622668e6bfff22e07aef9"
+    }
+  },
+  "authority_chain": {
+    "input_freeze": {
+      "size_bytes": 9353,
+      "sha256": "582ce029d7b77f13530b4303cff1320e2df159e4f88e204378f8f1a441c49c6b"
+    },
+    "formal_runner_freeze": {
+      "size_bytes": 6771,
+      "sha256": "6d7bb6ce45d1f83a45ddd40051d96790500fdee6ba8d27bec87fe9778c2cb3aa"
+    },
+    "corun_overlay_freeze": {
+      "size_bytes": 5773,
+      "sha256": "440f5abd8db1693cd67be5f75c3e1a674ded998600a38452b943c089763a71a3"
+    },
+    "attempt_preparation_freeze": {
+      "size_bytes": 5673,
+      "sha256": "6d5f4f0c26928e94de9f78ff39bf0083c0ecf05bb2bef32ed2b0b15f11e87c38"
+    },
+    "execution_lock": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_6200_score_6000_6200_todesk_corun_execution_lock_v1.json",
+      "size_bytes": 5382,
+      "sha256": "923775789e52b978ff0af44cb0034ebde176e8e85f89395539af706e1d9be541"
+    }
+  },
+  "claim_boundary": {
+    "runability_supported_on_frozen_score_window": false,
+    "accuracy_state": "NA_NOT_EVALUATED",
+    "accuracy_gate_open": false,
+    "fair_head_to_head": false,
+    "runtime_or_realtime_claim_supported": false,
+    "system_ranking_supported": false,
+    "superiority_supported": false,
+    "confirmatory_evidence": false,
+    "failure_is_not_a_numeric_accuracy_penalty": true
+  },
+  "terminal_contract": {
+    "no_retry": true,
+    "no_second_supervisor_invocation": true,
+    "no_post_hoc_gate_relaxation": true,
+    "next_permitted_action": "Summarize A05/A08/A09 runability outcomes and, if accuracy comparison is desired, design separate history-matched controls and a frozen common-support evaluator."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "arms": {
+    "B1": {
+      "ape_abs_diff_m": 9.008014911771056e-08,
+      "evo_ape_rmse_m": 0.462564,
+      "evo_segmented_rpe_rmse_m": 0.047281,
+      "primary_ape_rmse_m": 0.4625640900801491,
+      "primary_rpe_rmse_m": 0.04728050098526404,
+      "rpe_abs_diff_m": 4.990147359565378e-07,
+      "rpe_pair_count": 42,
+      "segments": [
+        {
+          "pair_count": 42,
+          "rmse_m": 0.047281,
+          "segment_id": 0
+        }
+      ]
+    },
+    "B1_CONSTQ": {
+      "ape_abs_diff_m": 4.910111044420518e-07,
+      "evo_ape_rmse_m": 0.377598,
+      "evo_segmented_rpe_rmse_m": 0.03763,
+      "primary_ape_rmse_m": 0.37759849101110443,
+      "primary_rpe_rmse_m": 0.037629952312128956,
+      "rpe_abs_diff_m": 4.7687871040924534e-08,
+      "rpe_pair_count": 42,
+      "segments": [
+        {
+          "pair_count": 42,
+          "rmse_m": 0.03763,
+          "segment_id": 0
+        }
+      ]
+    }
+  },
+  "evo_version": "1.31.1",
+  "rpe_delta_frames": 1,
+  "rpe_semantics": "aligned_global_frame_positional_delta"
+}

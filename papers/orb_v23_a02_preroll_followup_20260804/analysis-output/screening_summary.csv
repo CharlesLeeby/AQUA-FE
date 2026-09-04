@@ -1,0 +1,7 @@
+candidate_id,selector,attempted,pre_init_accepted,post_init_accepted,map_point_lineages,distinct_mappoints,assisted_matches,assisted_outliers,pre_kf_outliers,purged,decision
+A03_5000_5400,n3_d14_min8_ignore0,79,59,18,0,0,0,0,0,0,exclude_mixed_phase_no_mappoint
+A07_10800_11200,n3_d14_min8_ignore0,263,36,226,2,8,36,4,0,0,exclude_mixed_phase_action_null
+A10_400_800_n3,n3_d14_min8_ignore0,115,0,115,3,8,43,2,0,0,existing_window_action_null_selector_variant
+AFRL_Bus_s320_d20,n3_d14_min8_ignore0,234,195,39,1,1,16,0,0,0,exclude_mixed_phase_action_null
+A02_8600_9000,n3_d14_min8_ignore0,375,21,354,2,8,261,17,12,12,same_cluster_precursor_exclude_mixed_phase
+A02_8520_9000,n3_d14_min8_ignore0_preroll40,375,0,375,2,8,279,22,10,10,promote_action_positive_metric_mixed_phase_aligned_extension

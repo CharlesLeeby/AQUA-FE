@@ -1,0 +1,45 @@
+{
+  "code": [
+    {
+      "path": "uw_frontend/configs/klt_frontend.yaml",
+      "sha256": "73fd335a18ed77c821d8bc19b653f26b544acfa90fbb75a53d65d285888fd653",
+      "size_bytes": 2878
+    },
+    {
+      "path": "uw_frontend/ros/export_vins_features.py",
+      "sha256": "7ed31890e3a55a528430e912df885830176b3c3432c420860a39d714bceae7cf",
+      "size_bytes": 435551
+    },
+    {
+      "path": "scripts/run_afrl_cave_vins_eval.sh",
+      "sha256": "16966ce2663cf4dff5eb1bdc36c8c975a912dd3089da8dae9ae376799bd547da",
+      "size_bytes": 59481
+    },
+    {
+      "path": "scripts/p06_window_selection_v2.py",
+      "sha256": "c50f7e93855e21214ac46a50e38a23e35224826a71cc56f0ed95178874c77c2b",
+      "size_bytes": 2798
+    }
+  ],
+  "command": "BACKEND_QUALITY_MODE=default CAMCHAIN=/home/ma/AQUA-FE_WS/datasets/full_downloads/afrl_hf/camera_imu_parameters/camchain_cave_gennie.yaml CAMERA_KEY=cam0 EXPORT_MAX_FEATURES=350 EXPORT_MIN_AGE=0 FORCE_EXPORT=1 FORCE_RAW=1 FORMAL_THREE_LAYER_EXPORT=0 FRAME_OFFSET=0 FRONTEND_CONFIG=/home/ma/AQUA-FE_WS/uw_frontend/configs/klt_frontend.yaml GT_TXT=/home/ma/AQUA-FE_WS/datasets/full_downloads/afrl_hf/colmap_groundtruth/cave_gennie.txt IMAGE_SCALE=1.0 MEASUREMENT_SELECTION=0 PREPARE_BAG=1 PREPROCESS=adaptive_clahe PROCESS_SKIPPED_FRAMES=0 RAW_BAG=/home/ma/AQUA-FE_WS/datasets/full_downloads/afrl_hf/ros1_bags/cave_gennie.bag ROOT=/home/ma/AQUA-FE_WS RUN_DIR=/mnt/data/AQUA-FE_WS/p06_screening_work/afrl/cave_gennie RUN_VINS=0 SEMIDENSE_FALLBACK_METHOD=none SRC_IMAGE_TOPIC=/slave1/image_raw/compressed VINS_SAFE_SOURCE_SELECTION=0 bash scripts/run_afrl_cave_vins_eval.sh external klt 0 709.601295 1",
+  "dataset_family": "afrl",
+  "generated_at_utc": "2026-08-04T13:55:59+00:00",
+  "metrics_path": "papers/ieee_sensors_journal_experiments/p06/screening_runs/afrl/cave_gennie/metrics.csv",
+  "outcome_boundary": "KLT_AND_IMAGE_QUALITY_ONLY_NO_LEARNED_OR_VINS_OUTCOME",
+  "protocol_version": "isj-window-selection-v2",
+  "raw_input": {
+    "path": "datasets/full_downloads/afrl_hf/ros1_bags/cave_gennie.bag",
+    "registered_sha256": "4b7b3831b9b1b367c29c15b3f3639f614eef9e5de2fe72e1cae2b4ca6e1c79e2",
+    "size_bytes": 8435218703
+  },
+  "returncode": 143,
+  "run_dir": "papers/ieee_sensors_journal_experiments/p06/screening_runs/afrl/cave_gennie",
+  "schema_version": "isj-p06-screening-run-v1",
+  "sequence": "cave_gennie",
+  "split_role": "SEQUENCE_HELD_OUT_WINDOW_CANDIDATE",
+  "status": "FAILED",
+  "temporary_artifacts_preserved_after_failure": [
+    "/mnt/data/AQUA-FE_WS/p06_screening_work/afrl/cave_gennie/cave_gennie_short.bag"
+  ],
+  "work_dir": "/mnt/data/AQUA-FE_WS/p06_screening_work/afrl/cave_gennie"
+}

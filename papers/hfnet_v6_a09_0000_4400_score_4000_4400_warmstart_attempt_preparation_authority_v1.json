@@ -1,0 +1,90 @@
+{
+  "authority_scope": {
+    "authorized_action": "exactly one no-clobber attempt preparation invocation",
+    "authorized_invocation_count": 1,
+    "authorized_namespace": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/positive_windows/a09_0000_4400_score_4000_4400_warmstart/attempt_001",
+    "consumption_rule": "Authority is consumed when the exact prepare command is invoked, regardless of return code, interruption, or partial namespace visibility. Never prepare a second time; inspect and adjudicate any existing namespace without retry.",
+    "process_launch_authorized": false
+  },
+  "claims": {
+    "accuracy_measured": false,
+    "execution_authorized": false,
+    "gpu_workload_started": false,
+    "hfnet_started": false,
+    "process_claim_authorized": false,
+    "process_launch_authorized": false,
+    "ros_started": false,
+    "scientific_comparison_produced": false,
+    "trajectory_produced": false,
+    "vins_started": false
+  },
+  "exact_prepare_command": "PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 /home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_v1.py prepare",
+  "expected_prepared_outputs": {
+    "local_cache_pre": {
+      "expected_sha256": "6798ef896e4f503d4d81827a81fc9dad99d40c5e10352abbe974ed309bd0c0e7",
+      "expected_size_bytes": 853319,
+      "must_be_inode_isolated_from_shared_seed": true
+    },
+    "local_onnx": {
+      "expected_sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5",
+      "expected_size_bytes": 132238602
+    },
+    "runtime_config": {
+      "expected_sha256_before_actual_verification": "448176bb0cfbaa38f6dd9faf632081464edb0234706353329d338a535f30e930",
+      "expected_size_bytes_before_actual_verification": 2126
+    },
+    "subset_times": {
+      "expected_sha256": "c8b9bb58e1692ae570cfc855e2069bda734110c2866004093c8eefa4293f16a8",
+      "expected_size_bytes": 88020,
+      "path": "cam0_times_0000_4400.txt"
+    }
+  },
+  "frozen_authority_chain": {
+    "independent_audit_receipt": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_positive_windows_v1/a09_0000_4400_score_4000_4400_warmstart.audit.json",
+      "sha256": "1e36452d2613e2b8a387f6e56e1f6ea8ef0acdb4d774f6de994981777a2ff2b4",
+      "size_bytes": 3071159
+    },
+    "materialization_manifest": {
+      "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_positive_windows_v1/a09_0000_4400_score_4000_4400_warmstart/materialization_manifest.json",
+      "sha256": "fb54d28425a0eeea3ec7dec42ff2f433cac0a6303da96a0be1265b841fb36c8d",
+      "size_bytes": 2895623
+    },
+    "runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_v1.py",
+      "sha256": "21981cc560458fd7d47d1d5b8d752a3ad208f499475e0721dd9f758b008a9093",
+      "size_bytes": 69666
+    },
+    "runner_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_runner_freeze_v1.json",
+      "sha256": "39d83f056ebc02d059a8cd1b1ea5db6c3bca1a2909353fe244e1eedd34dc9a3e",
+      "size_bytes": 4079
+    },
+    "runner_test": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_v1.py",
+      "sha256": "b00d12fe162874cefa4c73e15e68a29f24dcf502bc7e7b6e5499689e2d92b3d3",
+      "size_bytes": 35626
+    }
+  },
+  "preconditions_observed": {
+    "attempt_base_absent": true,
+    "attempt_001_absent": true,
+    "canonical_input_contract_passed": true,
+    "combined_process_free_tests_passed": 37,
+    "independent_runner_review": "GO",
+    "observed_at": "2026-08-25T01:50:27+08:00"
+  },
+  "prohibited_actions": [
+    "creating process_start_claim.json",
+    "starting HFNet, ROS, VINS-Fusion, a detector, an evaluator, or any GPU workload",
+    "a second prepare or recovery invocation",
+    "modifying frozen code, canonical input, prior evidence, or shared model/cache seed",
+    "trajectory cropping or any accuracy/comparison claim"
+  ],
+  "read_only_followup": {
+    "check_command": "PYTHONDONTWRITEBYTECODE=1 /usr/bin/python3 /home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_v1.py check",
+    "note": "A failing resource gate while unrelated ROS/VINS work is active is expected and does not authorize launch, mutation, or re-prepare."
+  },
+  "schema_version": "aqua-fe-hfnet-v6-a09-warmstart-attempt-preparation-authority-v1",
+  "status": "AUTHORIZED_EXACTLY_ONE_NO_CLOBBER_PREPARE_NO_PROCESS_LAUNCH"
+}

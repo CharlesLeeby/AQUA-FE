@@ -1,0 +1,110 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a05-0001-3700-score-3300-3700-todesk-corun-overlay-freeze-v1",
+  "status": "FROZEN_PROCESS_FREE_TESTS_PASS_ATTEMPT_NOT_PREPARED_HFNET_NOT_STARTED",
+  "created_at_local": "2026-08-28T01:09:40+08:00",
+  "scientific_role": "TODESK_CORUN_DEVELOPMENT_ONLY_HFNET_NATURAL_HISTORY_RUNABILITY_ON_JULY14_OLD_FROZEN_POSITIVE_WINDOW",
+  "user_scope": {
+    "authorization_basis": "The user explicitly allowed ignoring project-local exclusivity requirements and running with ToDesk when the restriction is ours rather than HFNet's method requirement.",
+    "does_not_authorize": [
+      "starting when the proven GPU memory floor is not met",
+      "starting alongside another HFNet, ORB-SLAM, or learned-baseline GPU process",
+      "changing HFNet configuration, model, input, score window, or timeout",
+      "retry after a process-start claim",
+      "accuracy, ranking, runtime, realtime, superiority, or paper claims"
+    ]
+  },
+  "overlay": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a05_0001_3700_score_3300_3700_todesk_corun_development_only_v1.py",
+    "size_bytes": 21293,
+    "sha256": "d6c2a685c334247e0169118f88640af950c968fc4246bfd34d3f02d7c6b385f5"
+  },
+  "overlay_tests": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_hfnet_v6_a05_0001_3700_score_3300_3700_todesk_corun_development_only_v1.py",
+    "size_bytes": 11348,
+    "sha256": "b0a67850f2c744a4ed745dbf0b4a0ccf7d273a9305c7257bb58cd50389cbd691"
+  },
+  "frozen_parent": {
+    "runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_hfnet_v6_a05_0001_3700_score_3300_3700_warmstart_v1.py",
+      "size_bytes": 69153,
+      "sha256": "240e4f219c1ef86f9ebb78077ec14ede3cb09002773f00f26747745ad10eab3d"
+    },
+    "runner_freeze": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a05_0001_3700_score_3300_3700_runner_freeze_v1.json",
+      "size_bytes": 5006,
+      "sha256": "ae8d65c0991a47df960e29141d0074e5213477f17e2da0d04f3e94601c76ce5e"
+    }
+  },
+  "resource_policy_delta_only": {
+    "resource_isolation": false,
+    "todesk_corun": true,
+    "unrelated_cpu_ros_vins_processes_permitted": true,
+    "unrelated_nonbaseline_compute_applications_permitted_only_if_memory_floor_met": true,
+    "competing_hfnet_orb_or_learned_baseline_process_permitted": false,
+    "expected_gpu_model_token": "GTX 1650",
+    "expected_gpu_total_mib": 4096,
+    "minimum_prestart_free_gpu_mib": 3072,
+    "gpu_floor_basis": {
+      "formal_a09_success_lock": {
+        "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_execution_lock_v2.json",
+        "size_bytes": 5203,
+        "sha256": "7200df40e0e28eec0a50f2e46efd45d3076c94ea31258105b870904e793f4217",
+        "minimum_free_mib": 3072,
+        "observed_free_mib": 3204
+      },
+      "formal_a09_terminal_pass": {
+        "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a09_0000_4400_score_4000_4400_warmstart_terminal_outcome_freeze_v1.json",
+        "size_bytes": 6762,
+        "sha256": "0645080a46e0e6110210cc387693c98b23dc0860c853cbef3d2c6c98ce589d69",
+        "status": "SEALED_TERMINAL_PASS_NO_RETRY"
+      }
+    }
+  },
+  "unchanged_scientific_and_execution_contract": {
+    "input_and_payload": true,
+    "hfnet_binary_library_model_cache_and_configuration": true,
+    "feed_source_indices_inclusive": [
+      1,
+      3700
+    ],
+    "score_source_indices_inclusive": [
+      3300,
+      3700
+    ],
+    "score_local_indices_inclusive": [
+      3299,
+      3699
+    ],
+    "score_camera_count": 401,
+    "timeout_seconds": 600,
+    "maximum_hfnet_popen_invocations": 1,
+    "retry_permitted": false,
+    "process_start_claim_o_excl": true,
+    "post_claim_terminal_seal_required": true,
+    "accuracy_gate_open": false
+  },
+  "attempt_contract": {
+    "namespace": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/corun/old_frozen_positive_windows/a05_0001_3700_score_3300_3700_todesk_corun_development_only/attempt_001",
+    "authorization_token": "HFNET_V6_A05_0001_3700_SCORE_3300_3700_TODESK_CORUN_DEVELOPMENT_ONLY_ATTEMPT_001_START_EXACTLY_ONCE",
+    "exists_at_freeze": false
+  },
+  "verification": {
+    "python_compile_exit_code": 0,
+    "process_free_unit_test_count": 13,
+    "process_free_unit_test_failures": 0,
+    "hfnet_process_invocations": 0,
+    "attempt_prepared": false
+  },
+  "claims": {
+    "overlay_implemented_and_frozen": true,
+    "attempt_prepared": false,
+    "hfnet_started": false,
+    "trajectory_produced": false,
+    "runability_passed": false,
+    "accuracy_evaluated": false,
+    "runtime_or_realtime_claim_supported": false,
+    "system_ranking_supported": false,
+    "superiority_supported": false,
+    "confirmatory_evidence": false
+  }
+}

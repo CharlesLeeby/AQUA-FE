@@ -1,0 +1,12 @@
+$ evo_ape tum /home/ma/AQUA-FE_WS/papers/p07_b1_vs_m2_common_support/aqualoc_archaeology_A02_0005_r2/evo_crosscheck/reference_common.tum /home/ma/AQUA-FE_WS/papers/p07_b1_vs_m2_common_support/aqualoc_archaeology_A02_0005_r2/evo_crosscheck/B1_common_aligned.tum -a -r trans_part
+APE w.r.t. translation part (m)
+(with SE(3) Umeyama alignment)
+
+       max	0.725414
+      mean	0.407579
+    median	0.446091
+       min	0.077273
+      rmse	0.441820
+       sse	7.612995
+       std	0.170542
+

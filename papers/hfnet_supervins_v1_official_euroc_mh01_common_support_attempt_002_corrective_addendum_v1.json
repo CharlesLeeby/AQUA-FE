@@ -1,0 +1,300 @@
+{
+  "schema_version": "aqua-fe-hfnet-supervins-mh01-common-support-attempt-002-corrective-addendum-v1",
+  "created_at": "2026-08-21T03:47:49+08:00",
+  "status": "FROZEN_DEVELOPMENT_ONLY_AWAITING_EXECUTION_LOCK_AND_AUTHORITY",
+  "purpose": "Additive corrective control chain for the attempt_001 whole-substring report-lexer false positive; no old artifact is changed and no scientific contract is broadened.",
+  "attempt_001_failure_adoption": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_supervins_v1_official_euroc_mh01_common_support_attempt_001_failure_adoption_v1.json",
+    "sha256": "dead672758a5bd573291d804f817b3c234bcdc474b5eb6600d6033fe4536ffbb",
+    "size_bytes": 6814,
+    "required_mode": "0444",
+    "required_nlink": 1,
+    "required_status": "ADOPTED_IMMUTABLE_TERMINAL_FAIL_ATTEMPT_001"
+  },
+  "immutable_attempt_001_evidence": {
+    "root": "/home/ma/AQUA-FE_WS/experiments/published_hfnet_supervins_v1_official_euroc_mh01_common_support_descriptive_20260821_r1",
+    "exact_regular_file_set": [
+      "attempt_001/evaluation_start_claim.json",
+      "attempt_001/preflight_result.json",
+      "attempt_001/run_result.json"
+    ],
+    "exact_directory_identities": {
+      ".": {
+        "device": 66312,
+        "inode": 6599892,
+        "mode": "0755",
+        "nlink": 3
+      },
+      "attempt_001": {
+        "device": 66312,
+        "inode": 6599893,
+        "mode": "0755",
+        "nlink": 3
+      },
+      "attempt_001/analysis-output": {
+        "device": 66312,
+        "inode": 6599896,
+        "mode": "0755",
+        "nlink": 3
+      },
+      "attempt_001/analysis-output/figures": {
+        "device": 66312,
+        "inode": 6599897,
+        "mode": "0755",
+        "nlink": 2
+      }
+    },
+    "evaluation_start_claim": {
+      "path": "/home/ma/AQUA-FE_WS/experiments/published_hfnet_supervins_v1_official_euroc_mh01_common_support_descriptive_20260821_r1/attempt_001/evaluation_start_claim.json",
+      "sha256": "9b9651f47e28b09374e48d897109b2f8694ae1b63e0a2a93704999f4dd8099ae",
+      "size_bytes": 1575,
+      "required_mode": "0444",
+      "required_nlink": 1
+    },
+    "preflight_result": {
+      "path": "/home/ma/AQUA-FE_WS/experiments/published_hfnet_supervins_v1_official_euroc_mh01_common_support_descriptive_20260821_r1/attempt_001/preflight_result.json",
+      "sha256": "8a23929d653de71b35ffd4df6211b57ba469d10e1014b583e9a0798348eace74",
+      "size_bytes": 20449,
+      "required_mode": "0444",
+      "required_nlink": 1
+    },
+    "run_result": {
+      "path": "/home/ma/AQUA-FE_WS/experiments/published_hfnet_supervins_v1_official_euroc_mh01_common_support_descriptive_20260821_r1/attempt_001/run_result.json",
+      "sha256": "a1917adb5a217e96b2bdcbfa8bdcce5025578b3d903fd07437791d38e83d9b82",
+      "size_bytes": 45422,
+      "required_mode": "0444",
+      "required_nlink": 1,
+      "required_status": "FAIL_DEVELOPMENT_OFFICIAL_MH01_EXACT_COMMON_SUPPORT_DESCRIPTIVE_ANALYSIS",
+      "required_return_code": 1
+    },
+    "burned_execution_authority": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_supervins_v1_official_euroc_mh01_common_support_execution_authority_v1.json",
+      "sha256": "980abb2ccd86f1268161bbf73b6409da80c42cbbac677d68139f08cf7213cee9",
+      "size_bytes": 1924,
+      "required_mode": "0444",
+      "required_nlink": 1,
+      "must_not_be_reused": true
+    }
+  },
+  "attempt_001_control_pins": {
+    "protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_supervins_v1_official_euroc_mh01_common_support_descriptive_freeze_v1.json",
+      "sha256": "63712f50e2ad21e802066930fd751394249abeb33f76104b33cbbb3c48d8056a",
+      "size_bytes": 22291,
+      "required_mode": "0444",
+      "required_nlink": 1
+    },
+    "runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_hfnet_supervins_v1_official_euroc_mh01_common_support_v1.py",
+      "sha256": "f42ad63159e4cfc292540fc0b137eb211aa15569de765e8d478b6eb67d4ed9a2",
+      "size_bytes": 87654,
+      "required_mode": "0444",
+      "required_nlink": 1
+    },
+    "tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_evaluate_hfnet_supervins_v1_official_euroc_mh01_common_support_v1.py",
+      "sha256": "a4d977347a9633884bfb48ed5abb813beb56c7067b68b7dfe5c0cdb0b61e94ac",
+      "size_bytes": 39542,
+      "required_mode": "0444",
+      "required_nlink": 1
+    },
+    "test_receipt": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_supervins_v1_official_euroc_mh01_common_support_test_receipt_v1.json",
+      "sha256": "ed3c992f936063c236d5d7215b0461bb849df767a9c777daca32ed853939a4ee",
+      "size_bytes": 3667,
+      "required_mode": "0444",
+      "required_nlink": 1
+    },
+    "execution_lock": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_supervins_v1_official_euroc_mh01_common_support_execution_lock_v1.json",
+      "sha256": "b112c027b6569a2912726986fd02d75db55c98283cb4c00d181c4c1ff6479566",
+      "size_bytes": 14051,
+      "required_mode": "0444",
+      "required_nlink": 1,
+      "inherited_scientific_pin_count": 31,
+      "inherited_pin_digest": "9a9de036e3af55db187ff8d38f7b349e1969101525dc4b8b24864bee9ef07eee"
+    }
+  },
+  "corrective_delta": {
+    "only_scientific_or_report_functional_change": "Replace report substring membership with explicit whole-token and whole-phrase lexical matching; all parsed inputs, support, alignments, metrics, tables, and figures still execute directly from the sealed attempt_001 runner.",
+    "additive_control_plane_changes": "Adopt terminal FAIL attempt_001, govern one fresh attempt_002 with a new authority, and harden terminal publication against partial-final and return-code divergence faults.",
+    "forbidden_lexemes": [
+      "difference",
+      "differences",
+      "delta",
+      "deltas",
+      "ratio",
+      "ratios",
+      "better",
+      "outperform",
+      "outperforms",
+      "outperformed",
+      "outperforming",
+      "winner",
+      "winners",
+      "best",
+      "superior",
+      "superiority",
+      "rank",
+      "ranks",
+      "ranked",
+      "ranking",
+      "rankings",
+      "percent",
+      "percentage",
+      "percentages",
+      "improvement",
+      "improvements"
+    ],
+    "forbidden_phrases": [
+      "p value",
+      "p values",
+      "confidence interval",
+      "confidence intervals",
+      "effect size",
+      "effect sizes"
+    ],
+    "forbidden_symbol": "%",
+    "tokenization": "lowercase maximal ASCII alphanumeric tokens; underscore, hyphen, whitespace, and punctuation are separators; matching never searches inside a token",
+    "required_allowed_regressions": [
+      "generation",
+      "operation",
+      "restoration"
+    ],
+    "required_rejected_regressions": [
+      "ratio",
+      "metric_ratio",
+      "cross-system ratio"
+    ],
+    "actual_rendered_report_gate": "The exact analysis-report, stats-appendix, and figure-catalog templates rendered with synthetic metrics must pass before lock.",
+    "no_report_wording_waiver": true,
+    "no_scientific_value_exception": true
+  },
+  "inherited_scientific_contract": {
+    "normative_source": "attempt_001 protocol and its exact 31 pinned scientific/runtime files",
+    "official_sequence": "EuRoC MH_01_easy",
+    "common_camera_rows": "945..3659 inclusive step 2",
+    "common_pose_count_per_system": 1358,
+    "common_span_seconds": 135.7,
+    "exact_gt_join_without_interpolation": true,
+    "rpe_pair_rule": "row i to i+10, camera-row difference 20, timestamp difference exactly 1000000000 ns",
+    "rpe_pair_count_per_system": 1348,
+    "frame_contract": "world_T_body estimates and official world_T_body GT; GT and IMU T_BS identity; no camera extrinsic",
+    "primary_alignment": "independent proper fixed-scale SE(3) per system on the identical 1358 points",
+    "secondary_alignment": "independent proper positive-scale Sim(3) diagnostic on the identical points; cannot replace primary",
+    "cross_system_metric_contrast": false,
+    "performance_ordering": false,
+    "inferential_statistics": false,
+    "bundle_file_set_and_schema_unchanged": true,
+    "trajectory_figure_equal_metric_aspect_and_shared_domain": true,
+    "error_figure_axis_lower_bounds_zero": true,
+    "scientific_functions_execute_directly_from_sealed_attempt_001_runner": true,
+    "network_model_ros_publisher_or_trajectory_generation": false
+  },
+  "semantic_disclosure_inherited": {
+    "hfnet_first_final_saved_pose_camera_row": 945,
+    "hfnet_first_final_saved_pose_delay_seconds": 47.249999872,
+    "hfnet_failed_reset_lost_prefix_is_excluded": true,
+    "must_not_call_this_one_initialization_delay": true,
+    "supervins_first_output_camera_row": 63,
+    "supervins_first_output_delay_seconds": 3.149999872,
+    "common_window_starts_after_supervins_first_output_seconds": 44.1,
+    "hfnet_semantics": "final-map reconstructed largest-map trajectory with lost frames skipped",
+    "supervins_semantics": "online-published estimator-state trajectory",
+    "semantics_are_not_equivalent": true
+  },
+  "attempt_002_lifecycle": {
+    "fresh_evidence_root": "/home/ma/AQUA-FE_WS/experiments/published_hfnet_supervins_v1_official_euroc_mh01_common_support_descriptive_20260821_r2",
+    "attempt": "attempt_002",
+    "old_global_start_count": 1,
+    "new_attempt_start_count_before": 0,
+    "new_attempt_start_count_after": 1,
+    "global_start_count_after": 2,
+    "maximum_new_evaluator_starts": 1,
+    "retry_authorized_under_new_authority": false,
+    "further_attempt_automatically_authorized": false,
+    "attempt_003_authorized": false,
+    "fresh_root_must_be_absent_at_prestart": true,
+    "fresh_start_claim_must_be_absent_at_prestart": true,
+    "root_creation": "O_EXCL-equivalent os.mkdir; ownership recorded immediately after mkdir and before parent fsync",
+    "start_claim_creation": "O_CREAT|O_EXCL",
+    "terminal_result_creation": "Create hidden same-directory staging with O_RDWR|O_CREAT|O_EXCL mode0600; capture dev/inode immediately and keep that fd open through rename and the first bound final audit; embed that ownership token in the canonical terminal JSON; write completely; fchmod0444; file fsync; re-fstat the held fd; exact nofollow content/seal/path-to-held-inode audit; atomically publish with Linux renameat2(RENAME_NOREPLACE); require one path-bound nofollow final read to report that same dev/inode, regular nlink1, exact embedded token, and staging absent; terminal-last.",
+    "terminal_semantic_commit_point": "The exact sealed final is read and path-bound through one nofollow descriptor audit, its dev/inode equals the O_EXCL-opened staging ownership token, nlink is one, and the staging pathname is absent.",
+    "terminal_parent_directory_durability": "After the semantic commit point, attempt parent-directory fsync three times. The stdout terminal_commit_audit records confirmed or unconfirmed when stdout is writable. Persistent fsync failure cannot invert the already committed JSON return_code; the terminal JSON explicitly makes no claim of parent-directory crash durability.",
+    "terminal_publish_after_success_exception_reconciliation": "A structured rename-success marker is set only after terminal_publish_noreplace returns. Reconcile a later post-publish exception only when that marker is set, renameat2 removed staging, and one bound nofollow final read proves exact bytes/mode/nlink plus the original held staging dev/inode. EEXIST/ENOENT and same-byte foreign or hardlink paths never set the marker and are not reconciled.",
+    "terminal_transient_diagnostic_and_cleanup_policy": "Before semantic commit, final ownership/content audits and staging cleanup retry at most three times. An exception reclaims all uncommitted final/staging names by lstat and nofollow unlink inside the owned attempt, then atomically writes formal FAIL. After the first owned exact final audit, TERMINAL_COMMITTED and JSON return_code are cached; all later directory durability, audit, embedded-token, and foreign-staging cleanup work is best-effort and cannot invert the committed return code.",
+    "post_terminal_finalizers": "Held snapshot close and signal-handler restoration are individually BaseException-safe. Their diagnostic failures are emitted after the terminal when stdout is writable and can never override either a committed PASS rc0 or committed FAIL rc1.",
+    "terminal_adoption_gate": "A terminal is admissible only when its embedded dev/inode token matches the same path-bound nofollow read, JSON return_code equals the observed controller process return code, and controller stdout reports semantic_commit_point_reached, owned_final_inode_match, staging absence, post-commit observation state, and directory durability state. Active malicious same-UID namespace races remain outside the cooperative execution threat model, but tested same-byte EEXIST, hardlink EEXIST, and staging replacement all fail closed.",
+    "attempt_001_tree_must_match_adoption_pre_and_post": true
+  },
+  "new_authority_contract": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_supervins_v1_official_euroc_mh01_common_support_attempt_002_execution_authority_v1.json",
+    "required_absent_until_separate_root_confirmation": true,
+    "schema_version": "aqua-fe-hfnet-supervins-mh01-common-support-attempt-002-root-authority-v1",
+    "status": "AUTHORIZED_EXACTLY_ONE_CORRECTIVE_PURE_COMMON_SUPPORT_EVALUATION_ATTEMPT_002_START",
+    "root_confirmation": "ROOT_CONFIRMED_STAGE6_CORRECTIVE_ATTEMPT_002_EXACTLY_ONE_PURE_COMMON_SUPPORT_EVALUATION",
+    "authorization_token_sha256": "871b6d0885aba28e476459320596bc0a45a237baeb4bac97a72b45ee6d7280c2",
+    "must_pin_final_addendum_runner_tests_receipt_lock_adoption_and_attempt_001_terminal": true,
+    "must_be_stable_pre_to_post": true,
+    "claim_boundary": {
+      "pure_existing_artifact_computation_only": true,
+      "model_ros_publisher_or_trajectory_generation_authorized": false,
+      "cross_system_metric_contrast_authorized": false,
+      "performance_ordering_authorized": false,
+      "inferential_statistics_authorized": false,
+      "attempt_003_authorized": false,
+      "next_stage_automatically_authorized": false
+    }
+  },
+  "prestart_contract": {
+    "timestamp_only_support_audit": true,
+    "real_positions_parsed": false,
+    "alignment_ape_or_rpe_computed": false,
+    "all_inherited_31_pins_exactly_preserved": true,
+    "all_additive_control_and_adoption_pins_match": true,
+    "attempt_001_exact_tree_and_authority_unchanged": true,
+    "fresh_attempt_002_root_and_claim_absent": true,
+    "new_authority_absent_before_root_confirmation": true,
+    "relevant_generator_or_ros_processes_absent": true,
+    "unrelated_processes_must_not_be_terminated": true
+  },
+  "test_contract": {
+    "run_all_attempt_001_synthetic_and_timestamp_only_tests": true,
+    "run_attempt_002_lexer_lifecycle_adoption_and_rendered-report_tests": true,
+    "real_positions_alignment_ape_rpe_not_allowed_in_tests": true,
+    "synthetic_positions_and_errors_allowed": true,
+    "failure_closeout_and_O_EXCL_negatives_required": true,
+    "atomic_terminal_fault_negatives_required": "partial body write, post-fchmod, post-file-fsync, confirmed-rename-success then post-publish exception, exact-same-byte foreign EEXIST, hardlink EEXIST with staging present or removed, exact-same-byte staging replacement while original fd remains held, transient and persistent post-commit audit, post-commit diagnostic exception, post-commit foreign staging cleanup, transient precommit cleanup unlink, PASS and FAIL post-terminal finalizer exceptions, no-replace collision, transient and persistent parent-directory fsync"
+  },
+  "failure_closeout": {
+    "any_pre_semantic_commit_exception_after_fresh_root_exists_requires_one_terminal_fail_result": true,
+    "post_semantic_commit_exception_rule": "The cached owned PASS or FAIL terminal is the only outcome; no second terminal is created and process return_code remains the cached JSON return_code.",
+    "commit_assignment_order": "Cache committed JSON return_code and status first, then set TERMINAL_COMMITTED as the final non-fallible governance assignment before best-effort diagnostics.",
+    "pending_signal_boundary": "run_once performs its last raise_if_pending immediately before entering the non-interrupting atomic-publisher critical section. The installed handler only records while that section is active; a signal recorded after rename, whether before or after the owned semantic-commit assignment, cannot invert the terminal outcome.",
+    "partial_outputs_are_invalid": true,
+    "partial_or_unsealed_terminal_staging_is_removed_before_formal_fail_commit": true,
+    "final_terminal_path_never_exposes_partial_or_mode0600_bytes": true,
+    "pass_or_fail_document_return_code_must_equal_process_return_code_after_atomic_commit": true,
+    "preflight_pin_snapshot_held_snapshot_postflight_post_pin_audit_attempt_001_adoption_postflight_and_artifact_inventory_are_persisted_when_available": true,
+    "no_retry": true
+  },
+  "success_contract": {
+    "same_exact_12_file_analysis_bundle_as_attempt_001": true,
+    "manifest_tree_and_self_hash": true,
+    "all_metrics_finite_nonnegative_and_counts_exact": true,
+    "whole_token_report_boundary_audit_passes": true,
+    "metrics_schema_contrast_audit_passes": true,
+    "attempt_001_adoption_and_all_pins_unchanged": true,
+    "new_authority_unchanged_and_valid": true,
+    "no_cross_system_metric_contrast_ordering_or_inference": true,
+    "no_model_ros_publisher_or_trajectory_generation": true
+  },
+  "claim_boundary": {
+    "allowed": "Artifact-level exact-common-tail descriptive values only, conditional on the two pinned artifacts and their non-equivalent output semantics.",
+    "forbidden": "Any winner, superiority, difference, ratio, percentage improvement, inferential, initialization-equivalence, V2_01, underwater, or generalization claim.",
+    "attempt_001_scientific_values_may_be_used": false,
+    "attempt_002_scientific_values_may_be_used_before_terminal_pass": false,
+    "attempt_003_authorized": false,
+    "next_stage_automatically_authorized": false
+  }
+}

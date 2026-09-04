@@ -1,0 +1,153 @@
+{
+  "claim_boundary": {
+    "ape_or_rpe_computed": false,
+    "backend_final_lock_present": false,
+    "backend_terminal_receipts_opened": false,
+    "final_dynamic_analysis_lock_built": false,
+    "ros_or_vins_started": false
+  },
+  "created_at_utc": "2026-08-28T10:22:22+00:00",
+  "design_contract": {
+    "execution_rules": {
+      "accuracy_before_final_dynamic_lock_permitted": false,
+      "automatic_retry_count": 0,
+      "final_dynamic_lock_required": true,
+      "single_analysis_allowance": true
+    },
+    "failure_and_summary_rules": {
+      "any_formal_gate_or_integrity_failure_sets_all_ranking_metrics_na": true,
+      "arm_summary_is_median_over_all_valid_planned_repeats": true,
+      "backend_integrity_failure_blocks": true,
+      "best_run_selection_permitted": false,
+      "failed_repeat_replacement_permitted": false,
+      "planned_count_per_control_arm": 5,
+      "scientific_failure_is_planned_repeat_na": true,
+      "technical_repeats_are_independent_samples": false,
+      "xfeat_klt_safe_fallback_is_learning_contribution": false
+    },
+    "grid": {
+      "float_serialization_is_not_timestamp_authority": true,
+      "grid_count": 33,
+      "grid_last_ns": 1542885193111831216,
+      "grid_step_ns": 1000000000,
+      "schema_version": "aqua-fe-a08-exact-integer-ns-grid-v1",
+      "timestamps_ns": [
+        1542885161111831216,
+        1542885162111831216,
+        1542885163111831216,
+        1542885164111831216,
+        1542885165111831216,
+        1542885166111831216,
+        1542885167111831216,
+        1542885168111831216,
+        1542885169111831216,
+        1542885170111831216,
+        1542885171111831216,
+        1542885172111831216,
+        1542885173111831216,
+        1542885174111831216,
+        1542885175111831216,
+        1542885176111831216,
+        1542885177111831216,
+        1542885178111831216,
+        1542885179111831216,
+        1542885180111831216,
+        1542885181111831216,
+        1542885182111831216,
+        1542885183111831216,
+        1542885184111831216,
+        1542885185111831216,
+        1542885186111831216,
+        1542885187111831216,
+        1542885188111831216,
+        1542885189111831216,
+        1542885190111831216,
+        1542885191111831216,
+        1542885192111831216,
+        1542885193111831216
+      ],
+      "window_end_minus_grid_last_ns": 994391456,
+      "window_end_ns_inclusive": 1542885194106222672,
+      "window_start_ns": 1542885161111831216
+    },
+    "numeric_rules": {
+      "all_time_offsets_s": 0.0,
+      "estimate_rate_hz": 10.0,
+      "evaluation_rate_hz": 1.0,
+      "evo_abs_tolerance_m": 1e-05,
+      "fixed_denominator": 33,
+      "max_estimate_gap_s": 0.25,
+      "max_reference_gap_s": 2.5,
+      "min_ape_poses": 30,
+      "min_ape_span_s": 10.0,
+      "min_common_coverage": 0.7,
+      "min_rpe_pairs": 10,
+      "proper_fixed_scale_se3": true,
+      "reference_rate_hz": 1.0,
+      "rpe_delta_s": 1.0,
+      "shared_full_precision_body_T_cam0_for_every_arm": true,
+      "sim3_or_scale_fit": false,
+      "single_joint_mask_across_hfnet_and_all_accepted_repeats": true
+    }
+  },
+  "evo_authority": {
+    "distribution": "evo",
+    "entrypoints": {
+      "evo_ape": {
+        "path": "/home/ma/.local/bin/evo_ape",
+        "sha256": "6bee25dc5bfdab0ead8988ab4014a72511339e94697ec61699f66f68f5f24d15",
+        "size_bytes": 213
+      },
+      "evo_rpe": {
+        "path": "/home/ma/.local/bin/evo_rpe",
+        "sha256": "9e07d0bd4566aa680d5e39e58589176a286f4f8a22ba9107a5834ddb278e2bd1",
+        "size_bytes": 213
+      }
+    },
+    "version": "1.31.1"
+  },
+  "schema_version": "aqua-fe-a08-recovered-july-joint-common-support-design-freeze-v1",
+  "static_identities": {
+    "backend_replay_authority_runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_a08_recovered_july_history_matched_backend_replays_v1.py",
+      "sha256": "4ca198cd678ba5df2e2b82a0468cbca3c23fbc5608302019d6540775ca58d3a0",
+      "size_bytes": 84455
+    },
+    "backend_replay_protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a08_recovered_july_history_matched_backend_replays_v1_protocol.md",
+      "sha256": "a8fb2b84fe9340e4ef6a04fb00c3137793b1312db6fa40d769de7cb2e8e72eb2",
+      "size_bytes": 10363
+    },
+    "epoch_nanosecond_adapter": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support_epoch_v2.py",
+      "sha256": "3c455299b23157cc749b474b9460ca4a408b3bee516e9d1bf2109f253cf89f91",
+      "size_bytes": 5447
+    },
+    "primary_evaluator": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support.py",
+      "sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110",
+      "size_bytes": 27933
+    },
+    "process_free_tests": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_run_a08_recovered_july_joint_common_support_v1.py",
+      "sha256": "24a2b8d4d7eae33c4117813b57124fef7a76ab20ab5f4580b3e6d1e7354e059e",
+      "size_bytes": 20418
+    },
+    "protocol": {
+      "path": "/home/ma/AQUA-FE_WS/papers/a08_recovered_july_joint_common_support_v1_protocol.md",
+      "sha256": "f9422d072493519ceb5b9addabe77a6d7a1ebadf6fe440275b9c5c2045ae3250",
+      "size_bytes": 10569
+    },
+    "runner": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_a08_recovered_july_joint_common_support_v1.py",
+      "sha256": "7e32066f00b8723158ca4582cb896e6cd06a286686f4ce4eb967e626a0e8bae6",
+      "size_bytes": 83209
+    },
+    "trajectory_eval_core": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/trajectory_eval_core.py",
+      "sha256": "aa9ac4da81df7298d1f1c369548ca98a57235916004337cad66f4cf331560635",
+      "size_bytes": 27945
+    }
+  },
+  "status": "FROZEN_BEFORE_BACKEND_TERMINAL_RESULTS_AND_BEFORE_ACCURACY"
+}

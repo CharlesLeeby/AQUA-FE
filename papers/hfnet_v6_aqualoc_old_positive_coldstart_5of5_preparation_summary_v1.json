@@ -1,0 +1,137 @@
+{
+  "artifacts": {
+    "auditor": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/audit_hfnet_v6_aqualoc_old_positive_coldstart_input_v1.py",
+      "sha256": "41757c521785517d9414a14d0af1072c7181e5b76555b9dc16a20ab70239377c",
+      "size_bytes": 15761
+    },
+    "base_config": {
+      "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_slam_aqualoc_archaeology_coldstart_roster_v1.yaml",
+      "sha256": "d0cbe8e575c2b8234d1d617baabc27560118625398fd588ec83c3e93b4ce6177",
+      "size_bytes": 1864
+    },
+    "materializer": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/materialize_hfnet_v6_aqualoc_old_positive_coldstart_roster_v1.py",
+      "sha256": "c669a725057ae33ea256aa0400fc2bd8c8bd53e0f9d0b3e1f61a0f2c5b1299df",
+      "size_bytes": 34001
+    },
+    "roster": {
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_aqualoc_old_positive_coldstart_roster_v1.json",
+      "sha256": "92317c930443c140ec9b6a8fe61ac4c0b97d9572eec07c4833f0ea4d0b06821d",
+      "size_bytes": 2064
+    },
+    "tests": {
+      "command": "python3 -m unittest -v scripts.tests.test_hfnet_v6_aqualoc_old_positive_coldstart_roster_v1",
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_hfnet_v6_aqualoc_old_positive_coldstart_roster_v1.py",
+      "result": "PASS_5_OF_5",
+      "sha256": "6cc7e84fb8ab2182cadf003edef143bed314fc1291c7773c688bae63ea3f4628",
+      "size_bytes": 11045
+    }
+  },
+  "cases": {
+    "a02_7600_8000": {
+      "audit_receipt_v3": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_aqualoc_old_positive_coldstart_roster_v1/a02_7600_8000.independent_audit_v3.json",
+        "sha256": "b5cb0648106b2417dfb8d37e8b5c1700fbb269426588a738912ff497786b2fd0",
+        "size_bytes": 6130
+      },
+      "camera_count": 401,
+      "camera_header_ns_inclusive": [1542829171674622016, 1542829191671578400],
+      "historical_every2_feature_count": 200,
+      "imu_count": 3999,
+      "input_manifest": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_aqualoc_old_positive_coldstart_roster_v1/a02_7600_8000/materialization_manifest.json",
+        "sha256": "1ae6a3dff928116afb941ba80756207bce35509f9ed8013182d4f96116656770",
+        "size_bytes": 269649
+      },
+      "payload_sha256": "3fe6850c3ac50886c8388ffd83a1721256869b1855d73721b8859cacd449433c"
+    },
+    "a05_3300_3700": {
+      "audit_receipt_v3": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_aqualoc_old_positive_coldstart_roster_v1/a05_3300_3700.independent_audit_v3.json",
+        "sha256": "f897fe63f53c893955a41b1a311363dca59da3abb07ff718d400cf8689f26d50",
+        "size_bytes": 5954
+      },
+      "camera_count": 401,
+      "camera_header_ns_inclusive": [1455214343539451680, 1455214363536846272],
+      "historical_every2_feature_count": 200,
+      "imu_count": 3998,
+      "input_manifest": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_aqualoc_old_positive_coldstart_roster_v1/a05_3300_3700/materialization_manifest.json",
+        "sha256": "da03145d53e3c734dd9b1c4d017d1cf5c2d8efee1418655d8c9d23ac517c2109",
+        "size_bytes": 269470
+      },
+      "payload_sha256": "a2c402068aec6a0f05d8c495bef09da4f3888a38870d062e7674ab9fcdf3f1cd"
+    },
+    "a07_10800_11200": {
+      "audit_receipt_v3": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_aqualoc_old_positive_coldstart_roster_v1/a07_10800_11200.independent_audit_v3.json",
+        "sha256": "e087137362549caebe2a874b2791931185b208d83fcb507f3ea98c2f429e6450",
+        "size_bytes": 6101
+      },
+      "camera_count": 401,
+      "camera_header_ns_inclusive": [1542884252125312224, 1542884272123384448],
+      "historical_every2_feature_count": 200,
+      "imu_count": 3999,
+      "input_manifest": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_aqualoc_old_positive_coldstart_roster_v1/a07_10800_11200/materialization_manifest.json",
+        "sha256": "7b31ee1f12ef0cb52ba8ad2cd5c7dea77cebceb144025e441c6f17e07438ebce",
+        "size_bytes": 270017
+      },
+      "payload_sha256": "f1c2846614f8b6268b3ad84179d666ad1f31e981af024e4dd6cddf8b047d8909"
+    },
+    "a08_4500_4660": {
+      "audit_receipt_v3": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_aqualoc_old_positive_coldstart_roster_v1/a08_4500_4660.independent_audit_v3.json",
+        "sha256": "5669d07b271690d64d3ac24569c61902dce6f80794f63a30c6ef17eb1419c36e",
+        "size_bytes": 6074
+      },
+      "camera_count": 161,
+      "camera_header_ns_inclusive": [1542885186107583632, 1542885194106222672],
+      "historical_every2_feature_count": 80,
+      "imu_count": 1600,
+      "input_manifest": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_aqualoc_old_positive_coldstart_roster_v1/a08_4500_4660/materialization_manifest.json",
+        "sha256": "e0ba149462eda287a06677c7f9da9c87e8029a4c890e707a4693ce17ead2b572",
+        "size_bytes": 112153
+      },
+      "payload_sha256": "01d17102db0a48befb503178d055b3d65bdb1cbf9de6491735cc44fda0944b56"
+    },
+    "a09_6000_6200": {
+      "audit_receipt_v3": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_aqualoc_old_positive_coldstart_roster_v1/a09_6000_6200.independent_audit_v3.json",
+        "sha256": "346e0c902278e9b37c947765791f758903e5e1516e7e762b293a33f833803ae3",
+        "size_bytes": 6075
+      },
+      "camera_count": 201,
+      "camera_header_ns_inclusive": [1542889046021625712, 1542889056019958896],
+      "historical_every2_feature_count": 100,
+      "imu_count": 2000,
+      "input_manifest": {
+        "path": "/mnt/data/AQUA-FE_WS/datasets/hfnet_v6_aqualoc_old_positive_coldstart_roster_v1/a09_6000_6200/materialization_manifest.json",
+        "sha256": "c543ff78aef64122e1724cafa8e44b3a57221b3d8c34346e6b695e3f68b79446",
+        "size_bytes": 138393
+      },
+      "payload_sha256": "acb17fe3c3f0e8c9b0345e2a2f8bcf6371f42dc41973f197086ffefc555ecd40"
+    }
+  },
+  "claims": {
+    "accuracy_measured": false,
+    "hfnet_started": false,
+    "runability_measured": false,
+    "system_ranking_supported": false,
+    "trajectory_produced": false
+  },
+  "receipt_usage_boundary": {
+    "runner_eligible_receipt_version": "v3",
+    "v1_receipts": "read-only; predate runner_binding",
+    "v2_receipts": "read-only; binding used config instead of runner-required base_config"
+  },
+  "runner_binding": {
+    "base_config_and_input_manifest_exact_identity_key_set": ["path", "sha256", "size_bytes"],
+    "history": "EXACT_WINDOW_COLD_START_NO_PRIOR_CAMERA_HISTORY",
+    "schema_version": "aqua-fe-hfnet-v6-samehistory-input-audit-binding-v1"
+  },
+  "schema_version": "aqua-fe-hfnet-v6-aqualoc-old-positive-coldstart-5of5-preparation-summary-v1",
+  "status": "PASS_PREPARATION_ONLY_5_OF_5_NO_HFNET_START"
+}

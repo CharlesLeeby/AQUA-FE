@@ -1,0 +1,24 @@
+extends: ../paper_full_quality_hybrid_frontend.yaml
+
+hybrid:
+  # A06 LoFTR residual-neutral probe.
+  # Limit accepted LoFTR birth density so sparse-cell refill improves coverage
+  # without allowing a large batch to steer the frame residual.
+  semidense_fallback_max_new: 36
+  semidense_fallback_sidecar_max_extra: 36
+  semidense_fallback_max_fraction: 0.12
+  semidense_fallback_min_frame_gap: 4
+  learned_init_max_per_cell: 2
+  semidense_acceptance_min_grid_gain: 0.010
+  semidense_acceptance_min_new_cell_ratio: 0.20
+  semidense_acceptance_max_f_inlier_drop: 0.030
+  semidense_acceptance_max_h_inlier_drop: 0.030
+  semidense_acceptance_max_epipolar_error_ratio: 1.08
+  semidense_acceptance_max_homography_error_ratio: 1.12
+  semidense_candidate_min_quality: 0.10
+  semidense_candidate_min_ncc: 0.40
+  semidense_candidate_max_fb_error: 1.20
+  semidense_candidate_max_epipolar_error: 1.80
+  semidense_candidate_max_homography_error: 3.20
+  loftr_max_epipolar_error: 1.80
+  loftr_max_homography_error: 3.20

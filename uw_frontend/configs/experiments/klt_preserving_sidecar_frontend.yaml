@@ -1,0 +1,23 @@
+extends: ../klt_frontend.yaml
+
+hybrid:
+  # Keep the VINS-visible backbone identical to the stable KLT frontend.
+  # H05-style counterexamples showed that classical/LK recovery can inject many
+  # short-lived identities and destabilize VINS even when learned sidecars are
+  # absent. Learned methods should enter only through export-side sidecar gates.
+  preserve_klt_replenish: true
+  enable_classical_recovery: false
+  enable_lk_recovery: false
+  enable_learned_recovery: false
+  enable_gftt_confirmation: false
+  enable_source_provenance_memory: true
+  source_provenance_recovered_hold_frames: 0
+  source_provenance_learned_hold_frames: 10
+
+measurement_selection:
+  enabled: false
+
+backend_quality:
+  mode: source_aware
+  floor: 0.80
+  alpha: 0.85

@@ -1,0 +1,21 @@
+extends: ../paper_full_quality_hybrid_frontend.yaml
+
+hybrid:
+  # Probe only: test whether LoFTR can safely help sparse/planar-looking windows
+  # after adaptive CLAHE has already increased local texture scores.
+  semidense_fallback_requires_degradation: false
+  semidense_fallback_min_grid_coverage: 0.86
+  semidense_fallback_min_frame_gap: 3
+  semidense_fallback_max_new: 50
+  semidense_fallback_sidecar_max_extra: 50
+  semidense_fallback_max_fraction: 0.16
+  semidense_acceptance_min_grid_gain: 0.01
+  semidense_acceptance_min_new_cell_ratio: 0.20
+  semidense_candidate_min_quality: 0.12
+  semidense_candidate_min_ncc: 0.40
+  semidense_candidate_max_fb_error: 1.20
+  semidense_acceptance_max_f_inlier_drop: 0.04
+  semidense_acceptance_max_h_inlier_drop: 0.04
+  semidense_acceptance_max_epipolar_error_ratio: 1.15
+  semidense_acceptance_max_homography_error_ratio: 1.15
+  loftr_requires_planar_severe: false

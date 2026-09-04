@@ -1,0 +1,4 @@
+candidate_id,selector,attempted,pre_init_accepted,post_init_accepted,map_point_lineages,distinct_mappoints,assisted_matches,assisted_outliers,pre_kf_outliers,purged,decision
+H07_720_900,n3_d14_min8_ignore0_clean,0,0,0,0,0,0,0,0,0,exclude_clean_selector_action_null
+UVVID_OrientKaj_s160_d20,n3_d14_min8_ignore0_clean,36,0,36,0,0,0,0,0,0,exclude_post_init_no_mappoint
+H05_900_1240,n3_d14_min8_ignore0_clean,89,0,87,3,11,59,6,4,4,promote_action_positive_metric_mixed_native_negative

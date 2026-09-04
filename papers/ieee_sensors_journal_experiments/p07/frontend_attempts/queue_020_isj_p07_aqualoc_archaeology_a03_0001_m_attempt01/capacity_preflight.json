@@ -1,0 +1,13 @@
+{
+  "batch_d_upper_bound_bytes": 20971520,
+  "batch_window_id": "aqualoc_archaeology:A03:0001",
+  "governance_free_bytes": 3092504576,
+  "governance_minimum_free_bytes": 536870912,
+  "governance_pass": true,
+  "output_free_bytes": 7180472320,
+  "output_minimum_free_bytes": 3221225472,
+  "output_pass": true,
+  "output_root": "logs/aqualoc_archaeo_vins",
+  "remaining_batch_job_count": 2,
+  "remaining_batch_run_bytes": 41943040
+}

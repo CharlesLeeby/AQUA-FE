@@ -1,0 +1,9 @@
+window,arm,status,repeats_passed,repeats_required,reuse_exact_klt_input
+a09_6000_6800,klt,PASS,3,3,False
+a09_6000_6800,persistence_replace,PASS,3,3,False
+a06_s045_d045,klt,PASS,3,3,False
+a06_s045_d045,persistence_replace,PASS,3,3,False
+a06_s000_d045,klt,PASS,3,3,False
+a06_s000_d045,persistence_replace,PASS,3,3,False
+h07_s000_d050,klt,PASS,3,3,False
+h07_s000_d050,persistence_replace,PASS,3,3,True

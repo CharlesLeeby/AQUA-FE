@@ -1,0 +1,120 @@
+{
+  "schema_version": "aqua-fe-samehistory-system-comparison-final-seal-v1",
+  "status": "SEALED_TERMINAL_DESCRIPTIVE_FORMAL_ACCURACY_BLOCKED",
+  "sealed_at_local": "2026-08-23T18:01:47.523876209+08:00",
+  "terminal_counts": {
+    "vins_method_window_arms": 6,
+    "sealed_hfnet_method_window_rows": 2,
+    "usability_pass_rows": 8,
+    "formal_accuracy_open_windows": 0
+  },
+  "terminal_interpretation": {
+    "a06_formal_accuracy": "BLOCKED_FORMAL",
+    "h07_formal_accuracy": "BLOCKED_FORMAL",
+    "a06_proposed_action": "NO_ACTION_BYTE_IDENTICAL_TO_KLT",
+    "h07_proposed_action": "NO_ACTION_BYTE_IDENTICAL_TO_KLT",
+    "learning_improvement_claim_permitted": false,
+    "cross_window_mean_ranking_permitted": false,
+    "significance_test_permitted": false,
+    "backend_run_nondeterminism_observed_on_byte_identical_inputs": true
+  },
+  "governance": {
+    "protocol": {
+      "path": "papers/samehistory_system_comparison_v1_protocol.md",
+      "sha256": "7a4ffa58dbb64eb2ce51be9497c49fbd66db49ca740972e110f96609eb9837b1"
+    },
+    "execution_lock": {
+      "path": "papers/samehistory_system_comparison_v1_execution_lock.json",
+      "sha256": "14f4a6beebd4af78900a53ec79c35a13738319a792a8d42214aeb7cd3420d8aa"
+    },
+    "a06_klt_corrective_protocol": {
+      "path": "papers/samehistory_system_comparison_v1_a06_klt_corrective_replay_protocol.md",
+      "sha256": "4f4c96e435c94331a8e185d1c30899d6d88156a86dc118fce6076f3025016571"
+    },
+    "h07_raw_materialization_receipt": {
+      "path": "papers/samehistory_system_comparison_v1_h07_raw_materialization_receipt.json",
+      "sha256": "985b99d28760a0bcf948364621695143bbc56862d5a6643d16197b845e17cdd3"
+    }
+  },
+  "analysis_tools": {
+    "analyzer": {
+      "path": "scripts/analyze_samehistory_system_comparison_v1.py",
+      "sha256": "0ad53bbe84a67ecfc03321d87baec412237b4919feaf8e693c2a9cb3c52997e7"
+    },
+    "analyzer_tests": {
+      "path": "scripts/tests/test_analyze_samehistory_system_comparison_v1.py",
+      "sha256": "59ced112321d75ca4518b3d54e5202b88f99e7cbaf728b95f5811d39032b5126"
+    },
+    "common_support_evaluator": {
+      "path": "scripts/evaluate_vins_common_support.py",
+      "sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110"
+    },
+    "common_support_evaluator_tests": {
+      "path": "scripts/tests/test_evaluate_vins_common_support.py",
+      "sha256": "f7a11ffc1e820c69cae4ce6724c9163abf42b67005f60fc7f2ca3c6c83c462e5"
+    },
+    "hfnet_v6_bridge": {
+      "path": "scripts/bridge_hfnet_v6_a06_h07_world_body_to_vins_csv_v1.py",
+      "sha256": "b6dab58b100b9eac219a7aadc8a3fd254d110bba937d7e0832fd21a473b5a87f"
+    },
+    "hfnet_v6_bridge_tests": {
+      "path": "scripts/tests/test_bridge_hfnet_v6_a06_h07_world_body_to_vins_csv_v1.py",
+      "sha256": "1ecd2b7835727f6c85e0b64ed54a6aa038099ab503ae778e890e041c270dd06f"
+    },
+    "test_result": "PASS_43_OF_43"
+  },
+  "analysis_outputs": {
+    "bundle": {
+      "path": "papers/samehistory_system_comparison_v1_analysis/samehistory_system_analysis_bundle_v1.json",
+      "sha256": "843f943f252be2f317143ab3984806d8187c311e2d6df4addfce16908360542b"
+    },
+    "rows_csv": {
+      "path": "papers/samehistory_system_comparison_v1_analysis/samehistory_system_rows_v1.csv",
+      "sha256": "7686708d823d0ccc12a7beab14d9f3335f39201a81efc782bec6c5ccd1c73da1"
+    },
+    "report": {
+      "path": "papers/samehistory_system_comparison_v1_analysis/samehistory_system_analysis_report_v1.md",
+      "sha256": "23ba5a95fea1e921a7f3b92ceb0279536cbc1b1accf7a4976b60b3e37710eff3"
+    },
+    "a06_common_support_summary": {
+      "path": "papers/samehistory_system_comparison_v1_analysis/common_support/a06/common_support_summary.json",
+      "sha256": "9ef01e41479eef342b594577ea0674dd5117957d2313e01c7f955d1e8834f497"
+    },
+    "a06_input_manifest": {
+      "path": "papers/samehistory_system_comparison_v1_analysis/common_support/a06/samehistory_evaluator_input_manifest_v1.json",
+      "sha256": "24a603d11b3ff3ad8908106f9042656fc118beade477f29e0dc61c33a3a04da6"
+    },
+    "a06_evaluator_receipt": {
+      "path": "papers/samehistory_system_comparison_v1_analysis/common_support/a06/evaluator_process_receipt_v1.json",
+      "sha256": "1c129a18b3de9938f800a1477a18f8f66e9ee9251692422a4a3a69995762d7c4"
+    },
+    "h07_common_support_summary": {
+      "path": "papers/samehistory_system_comparison_v1_analysis/common_support/h07/common_support_summary.json",
+      "sha256": "d9dd190e1e20ec9e0f81ab78551b3e9b094c2b9857578a24e54b138d8164a4ef"
+    },
+    "h07_input_manifest": {
+      "path": "papers/samehistory_system_comparison_v1_analysis/common_support/h07/samehistory_evaluator_input_manifest_v1.json",
+      "sha256": "7019283e41852825b6dca3efccb0989e030f7d4b5218088f3b0e880cc394a115"
+    },
+    "h07_evaluator_receipt": {
+      "path": "papers/samehistory_system_comparison_v1_analysis/common_support/h07/evaluator_process_receipt_v1.json",
+      "sha256": "a19dd9b45ae2d34cd0d96d4ef5e7cf405cd98dbbadd5b6ed29fa46cfa0d3e527"
+    }
+  },
+  "formal_run_receipts": {
+    "a06_vanilla_origin": "b26ff3648a92379e1120845a2a9538fc72d6dc85c85bf547b5aa36ae58382079",
+    "a06_external_klt_original_infrastructure_censored": "214c854afc5a88c57a04459911919eff103821f1ba2571899e58a1ef83d86a90",
+    "a06_external_klt_corrective_replay": "e4ba54b2e2a09689318d2dcfd25d78f144c60eb2c1bee511bbfaf5f31d66a3bd",
+    "a06_aquafe_proposed_safe": "1b880a85bc60699a32549e41bf4a13c1f6c65ffcf599891010288c6ea4a5de40",
+    "h07_vanilla_origin": "7fc2fc74fc9f4904b7d77d39eefc755f7bc11157d8ae751855a0b5de56fafa92",
+    "h07_external_klt": "28188b091a4c0f6e6fe56aeb08bf246d27e9f9864661707ebc3dd11d4e20b618",
+    "h07_aquafe_proposed_safe": "0baba171ace50952e1a8f625d8863082179e38325f38810daa551c9b9fbc786e"
+  },
+  "claims": {
+    "system_usability_evidence_complete": true,
+    "other_learned_system_hfnet_same_window_comparison_complete": true,
+    "aquafe_learned_frontend_contribution_demonstrated": false,
+    "formal_accuracy_winner_demonstrated": false,
+    "paper_ready_improvement_claim_demonstrated": false
+  }
+}

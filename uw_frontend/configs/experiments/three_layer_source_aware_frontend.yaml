@@ -1,0 +1,136 @@
+extends: ../backend_strict_frontend.yaml
+
+hybrid:
+  # Default-off experiment: KLT/GFTT remains the backbone; learned sources are
+  # admitted only for the per-frame mode they are meant to cover.
+  enable_three_layer_source_aware: true
+  enable_geometry_mode_scheduler: true
+
+  # Layer 1: keep normal frames classical.
+  preserve_klt_replenish: true
+  enable_learned_recovery: true
+  learned_before_lk_on_degradation: false
+
+  # Layer 2: SuperPoint+LightGlue / XFeat recover structured low-texture or
+  # identity-churn frames, then LK-confirms before becoming normal tracks.
+  enable_learned_initialization: true
+  learned_init_requires_degradation: true
+  learned_init_requires_klt_confirmation: true
+  learned_confirmation_min_frames: 2
+  learned_confirmation_max_pending: 500
+  learned_confirmation_max_confirmed: 60
+  learned_confirmation_reserve_capacity: 60
+  learned_confirmation_preserve_new_pending: true
+  learned_confirmation_geometry_safe: true
+  learned_init_min_degradation: 0.42
+  learned_init_min_flat_region_ratio: 0.68
+  learned_init_min_grid_coverage: 0.88
+  learned_init_critical_grid_coverage: 0.76
+  max_learned_initialized: 60
+  max_learned_init_fraction: 0.18
+  learned_sidecar_max_extra: 40
+  reserve_gftt_features: 0
+  enable_learned_init_acceptance_gate: true
+  source_aware_superpoint_lightglue_modes:
+    - low_texture
+    - low_coverage_recovery
+    - identity_churn
+  source_aware_xfeat_modes:
+    - low_texture
+    - low_coverage_recovery
+    - identity_churn
+  promotion_lightglue_min_quality: 0.10
+  promotion_lightglue_max_fb_error: 1.20
+  promotion_lightglue_min_ncc: 0.48
+  promotion_xfeat_min_quality: 0.16
+  promotion_xfeat_max_fb_error: 1.00
+  promotion_xfeat_min_ncc: 0.52
+  promotion_xfeat_min_grid_coverage: 0.82
+  promotion_xfeat_max_confirmed: 2
+
+  # Layer 3: LoFTR is an extreme planar/textureless sparse-cell guarantee, not
+  # a generic fallback. It must improve refill and survive stricter geometry and
+  # 2+ LK-confirmed frames before promotion.
+  enable_semidense_fallback_initialization: true
+  semidense_fallback_requires_degradation: true
+  semidense_fallback_min_grid_coverage: 0.86
+  semidense_fallback_min_coverage_score: 0.02
+  semidense_fallback_max_new: 60
+  semidense_fallback_sidecar_max_extra: 60
+  semidense_fallback_max_fraction: 0.18
+  semidense_fallback_reserve_gftt_features: 20
+  semidense_fallback_min_degradation: 0.45
+  semidense_fallback_min_flat_region_ratio: 0.70
+  semidense_fallback_min_grid_texture_score: 0.28
+  semidense_fallback_min_frame_gap: 3
+  semidense_acceptance_enable: true
+  semidense_acceptance_min_new_tracks: 3
+  semidense_acceptance_min_grid_gain: 0.010
+  semidense_acceptance_min_new_cell_ratio: 0.20
+  semidense_acceptance_max_f_inlier_drop: 0.03
+  semidense_acceptance_max_h_inlier_drop: 0.03
+  semidense_acceptance_max_epipolar_error_ratio: 1.08
+  semidense_acceptance_max_homography_error_ratio: 1.12
+  semidense_candidate_min_quality: 0.14
+  semidense_candidate_min_ncc: 0.48
+  semidense_candidate_max_fb_error: 1.00
+  semidense_candidate_max_epipolar_error: 1.60
+  semidense_candidate_max_homography_error: 3.00
+  loftr_requires_planar_severe: true
+  loftr_planar_min_h_inlier_ratio: 0.80
+  loftr_planar_min_confidence: 0.55
+  loftr_allow_sparse_homography: true
+  loftr_sparse_max_grid_coverage: 0.86
+  loftr_sparse_min_h_inlier_ratio: 0.98
+  loftr_sparse_min_planar_score: 0.98
+  loftr_sparse_max_homography_error: 2.50
+  loftr_sparse_min_median_track_age: 12.0
+  loftr_max_epipolar_error: 1.60
+  loftr_max_homography_error: 3.00
+  source_aware_loftr_modes:
+    # A06 sparse planar windows are labelled normal by the texture classifier;
+    # LoFTR still has to pass the mature sparse-homography gate below.
+    - normal
+    - planar_near_wall
+    - extreme_textureless
+  source_aware_loftr_min_grid_gain: 0.010
+  source_aware_loftr_min_new_cell_ratio: 0.20
+  source_aware_loftr_max_epipolar_error: 1.60
+  source_aware_loftr_max_homography_error: 3.00
+  source_aware_loftr_min_h_inlier_ratio: 0.80
+  source_aware_loftr_geometry_filter_mode: all
+  source_aware_loftr_requires_confirmation: true
+  source_aware_loftr_min_confirmation_frames: 3
+  source_aware_learned_recovery_min_reference_tracks: 24
+  promotion_loftr_min_quality: 0.20
+  promotion_loftr_max_fb_error: 1.00
+  promotion_loftr_min_ncc: 0.48
+  promotion_loftr_max_grid_texture_score: 0.32
+  promotion_loftr_min_flat_region_ratio: 0.70
+  promotion_loftr_min_h_inlier_ratio: 0.80
+
+  # Mode label thresholds.
+  three_layer_low_texture_max_grid_texture_score: 0.35
+  three_layer_low_texture_min_flat_region_ratio: 0.65
+  three_layer_low_texture_min_degradation: 0.42
+  three_layer_extreme_max_grid_texture_score: 0.16
+  three_layer_extreme_min_flat_region_ratio: 0.88
+  three_layer_extreme_max_grid_coverage: 0.55
+
+  enable_candidate_geometry_filter: true
+  candidate_geometry_min_reference_tracks: 16
+  candidate_geometry_min_candidate_tracks: 1
+  candidate_geometry_apply_to_learned: true
+  enable_geometry_safe_recovery: true
+  geometry_safe_apply_to_classical: true
+  geometry_safe_reject_weak_reference_classical: true
+  geometry_safe_min_reference_tracks: 16
+  geometry_safe_min_candidate_tracks: 1
+  geometry_safe_residual_neutral: true
+  geometry_safe_max_epipolar_error_ratio: 1.03
+  geometry_safe_max_homography_error_ratio: 1.06
+  geometry_safe_max_epipolar_error_abs_increase: 0.02
+  geometry_safe_max_homography_error_abs_increase: 0.06
+
+measurement_selection:
+  enabled: false

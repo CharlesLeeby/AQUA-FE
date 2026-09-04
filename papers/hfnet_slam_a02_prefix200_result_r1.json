@@ -1,0 +1,82 @@
+{
+  "artifact_schema": "aqua-fe-published-hfnet-prefix-result-v1",
+  "baseline": "HFNet-SLAM (Sensors 2023; official author build-repair commit c354c72588a97bb6f6a9c7c8317530795956ec80)",
+  "contract": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_slam_a02_prefix200_run_contract_r1.json",
+    "sha256": "5c23bd2d519a76912c69d88cc7b8117b3532f2c70238b7ca59314eae4b4b0639"
+  },
+  "decision": {
+    "accuracy_evaluable": false,
+    "full_window_allowed": false,
+    "reason": "ALGORITHM_INITIALIZATION_FAILED",
+    "status": "STOP"
+  },
+  "execution": {
+    "binary_return_code": 139,
+    "input_duration_seconds": 9.949129152,
+    "input_image_count": 200,
+    "input_imu_count": 1990,
+    "input_timestamp_count": 200,
+    "reached_shutdown": true,
+    "signal": "SIGSEGV"
+  },
+  "gate": {
+    "binary_return_code_zero": false,
+    "finite_pose_fields_only": false,
+    "minimum_pose_count": 30,
+    "minimum_timestamp_span_seconds": 3.0,
+    "observed_pose_count": 0,
+    "observed_timestamp_span_seconds": null,
+    "strictly_increasing_timestamps": false,
+    "trajectory_file_present": false,
+    "trajectory_keyframe_file_present": false
+  },
+  "identity": {
+    "binary_sha256": "4029c6ba8ecdc76c98f2c190c1a1151493ed2553da087c1a4f077fc036e143a3",
+    "config_sha256": "7e6482653e55b2fcf86a9e5418fd87747677a88eb9c06443d505cda311b80569",
+    "input_manifest_sha256": "9905ba2249e062f02f9be4743acb56d51ada514f97e2f62b766e5e218fca3158",
+    "onnx_sha256": "354a23f9c28b75ea9056a8eb5586e3b13191426521fd3f5556e5bfd670fc39b5"
+  },
+  "initialization": {
+    "final_keyframe_count": 0,
+    "first_attempt": {
+      "created_map_points": 101,
+      "frames_set_lost": 49,
+      "init_frame_id": 4,
+      "imu_initialized_marker": true,
+      "not_enough_motion_reset": true
+    },
+    "second_attempt": {
+      "created_map_points": 139,
+      "frames_set_lost": 97,
+      "init_frame_id": 110,
+      "imu_initialized_marker": true,
+      "not_enough_motion_reset": true
+    }
+  },
+  "logs": {
+    "driver_pid_sha256": "4a3ff7a63eecfec4df987bc84bdb31cd3f97e88b5f3ccd8ab2c5e2340d17961e",
+    "driver_rc_path": "/home/ma/AQUA-FE_WS/logs/hfnet_prefix200_driver_r1.rc",
+    "driver_rc_sha256": "690e07064753123c967bbac0180f32da6a753a5bd8b79a47644cef58e776d9f0",
+    "stderr_path": "/home/ma/AQUA-FE_WS/logs/hfnet_prefix200_driver_r1.stderr.log",
+    "stderr_sha256": "ac7a9ab725d0d9303629302a6609aa005fe58a492fdf66741c7e0e85f484d4ca",
+    "stdout_path": "/home/ma/AQUA-FE_WS/logs/hfnet_prefix200_driver_r1.stdout.log",
+    "stdout_sha256": "3dd3f060bfcb52adb80e2c657594f775665fd0c2f44b43582cad2e564460a7c0"
+  },
+  "post_failure_segfault": {
+    "caused_initialization_failure": false,
+    "description": "The official SaveTrajectoryEuRoC path dereferenced an uninitialized pBiggerMap after every atlas map had zero keyframes; the trajectory file is opened only later.",
+    "source_path": "/home/ma/SLAM/HFNet-SLAM-paper-2023-build-r1/src/System.cc",
+    "source_lines": "617-641"
+  },
+  "runtime": {
+    "cache_after_sha256": "a687454ce7dd12cdf73dab66a8e295ee21eb4827f8f7b1f9ca96e7ceef8342bc",
+    "cache_before_sha256": "40f8e09f6c47bbb389bf2437d882dc12e464a04d3dfae9594cf1d4607688ee5e",
+    "cache_size_bytes": 853319,
+    "cudnn_linked_loaded_warning_count": 10,
+    "fp16_warning_block_count": 4,
+    "hfnet_trt_models_loaded": 4,
+    "oom_or_cuda_error": false
+  },
+  "scope": "INITIALIZATION_AND_TRAJECTORY_SMOKE_ONLY"
+}

@@ -1,0 +1,49 @@
+extends: three_layer_source_aware_frontend.yaml
+
+hybrid:
+  # LoFTR is kept as the lowest-texture planar sparse-cell refiller only.
+  # Homography consistency alone is not enough: the frame must also look
+  # texture-poor under the underwater quality model, so normal planar motion
+  # does not activate semi-dense pairwise matches.
+  loftr_extreme_only: true
+  loftr_extreme_max_grid_texture_score: 0.85
+  loftr_extreme_min_flat_region_ratio: 0.15
+  loftr_extreme_min_degradation: 0.24
+
+  source_aware_loftr_modes:
+    - extreme_textureless
+
+  # Align the three-layer scheduler label with the LoFTR hard gate. These
+  # values are calibrated from existing A06/H07/H06/AFRL logs: A06 planar
+  # accepted frames sit around grid_texture 0.71-0.83 and flat_ratio 0.17-0.29,
+  # while H07/H06/AFRL no-effect windows stay near grid_texture 1.0.
+  three_layer_extreme_max_grid_texture_score: 0.85
+  three_layer_extreme_min_flat_region_ratio: 0.15
+  three_layer_extreme_max_grid_coverage: 0.92
+
+  # Keep A06-like sparse planar acceptance, but require positive sparse-cell
+  # utility and strict residual neutrality before candidates are queued.
+  semidense_fallback_max_new: 60
+  semidense_fallback_sidecar_max_extra: 60
+  semidense_fallback_max_fraction: 0.18
+  semidense_fallback_reserve_gftt_features: 20
+  semidense_acceptance_min_grid_gain: 0.010
+  semidense_acceptance_min_new_cell_ratio: 0.20
+  semidense_acceptance_max_f_inlier_drop: 0.030
+  semidense_acceptance_max_h_inlier_drop: 0.030
+  semidense_acceptance_max_epipolar_error_ratio: 1.08
+  semidense_acceptance_max_homography_error_ratio: 1.12
+  semidense_candidate_min_quality: 0.14
+  semidense_candidate_min_ncc: 0.48
+  semidense_candidate_max_fb_error: 1.00
+  semidense_candidate_max_epipolar_error: 1.60
+  semidense_candidate_max_homography_error: 3.00
+
+  loftr_max_epipolar_error: 1.60
+  loftr_max_homography_error: 3.00
+  promotion_loftr_min_quality: 0.20
+  promotion_loftr_max_fb_error: 1.00
+  promotion_loftr_min_ncc: 0.48
+  promotion_loftr_max_grid_texture_score: 0.85
+  promotion_loftr_min_flat_region_ratio: 0.15
+  promotion_loftr_min_h_inlier_ratio: 0.80

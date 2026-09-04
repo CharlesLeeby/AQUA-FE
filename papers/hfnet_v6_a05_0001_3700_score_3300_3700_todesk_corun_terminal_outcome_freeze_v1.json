@@ -1,0 +1,156 @@
+{
+  "schema_version": "aqua-fe-hfnet-v6-a05-0001-3700-score-3300-3700-todesk-corun-terminal-outcome-freeze-v1",
+  "status": "SEALED_TERMINAL_FAIL_NO_RETRY",
+  "created_at_utc": "2026-08-27T17:22:39Z",
+  "scientific_role": "TODESK_CORUN_DEVELOPMENT_ONLY_EXTERNAL_HFNET_RUNABILITY_ON_JULY14_OLD_FROZEN_POSITIVE_WINDOW",
+  "execution_lock": {
+    "path": "/home/ma/AQUA-FE_WS/papers/hfnet_v6_a05_0001_3700_score_3300_3700_todesk_corun_execution_lock_v1.json",
+    "size_bytes": 5057,
+    "sha256": "d57488261cffa154128f1baaf0806745068e4f3b685a5a109f9b654e98116b68"
+  },
+  "terminal_result": {
+    "path": "/mnt/data/AQUA-FE_WS/logs/published_hfnet_slam_v6/corun/old_frozen_positive_windows/a05_0001_3700_score_3300_3700_todesk_corun_development_only/attempt_001/run_result.json",
+    "size_bytes": 28672,
+    "sha256": "3ff93d847a31deeaa58a2679125d8dfeb678391cd9abaeb9a4d5e0e50d509981",
+    "schema_version": "aqua-fe-hfnet-v6-a05-0001-3700-score-3300-3700-todesk-corun-development-only-result-v1",
+    "producer_status": "FAIL_DEVELOPMENT_RUNABILITY",
+    "failure_codes": [
+      "SCORE_TRAJECTORY_NOT_401_OF_401_CONTIGUOUS",
+      "PREROLL_TO_SCORE_BOUNDARY_NOT_CONTINUOUS",
+      "SCORE_WINDOW_REINITIALIZATION",
+      "SCORE_WINDOW_ACTIVE_MAP_RESET"
+    ],
+    "errors": []
+  },
+  "execution": {
+    "official_hfnet_elf_popen_invocations": 1,
+    "raw_returncode": 0,
+    "pid": 2202467,
+    "started_at_utc": "2026-08-27T17:17:24+00:00",
+    "ended_at_utc": "2026-08-27T17:21:36+00:00",
+    "duration_seconds": 252.37695592897944,
+    "timed_out": false,
+    "child_reaped": true,
+    "watchdog_triggered": false,
+    "retry_performed": false,
+    "retry_permitted": false,
+    "authority_and_input_post_audits_complete": true,
+    "runtime_authority_drift_keys": []
+  },
+  "selection": {
+    "sequence": "AQUALOC archaeology_sequence_5",
+    "feed_source_indices_inclusive": [
+      1,
+      3700
+    ],
+    "feed_local_indices_inclusive": [
+      0,
+      3699
+    ],
+    "score_source_indices_inclusive": [
+      3300,
+      3700
+    ],
+    "score_local_indices_inclusive": [
+      3299,
+      3699
+    ],
+    "score_camera_count": 401,
+    "history": "continuous from first legal source frame 1; no intentional reset at the score boundary",
+    "development_result_conditioned_selection": true,
+    "held_out_confirmatory_claim_permitted": false
+  },
+  "score_adjudication": {
+    "passed": false,
+    "expected_pose_count": 401,
+    "observed_pose_count": 4,
+    "observed_source_indices_inclusive": [
+      3697,
+      3700
+    ],
+    "exact_contiguous_coverage": false,
+    "preroll_to_score_boundary_continuous": false,
+    "score_keyframe_count": 2,
+    "pre_score_initialized": true,
+    "score_window_init_local_frame_ids": [
+      3325,
+      3401,
+      3525,
+      3685
+    ],
+    "score_window_reset_events": [
+      {
+        "init_local_frame_id": 3325,
+        "next_first_local_frame_id": 3331
+      },
+      {
+        "init_local_frame_id": 3401,
+        "next_first_local_frame_id": 3406
+      },
+      {
+        "init_local_frame_id": 3525,
+        "next_first_local_frame_id": 3540
+      }
+    ],
+    "reset_parse_complete": true,
+    "ambiguous_or_unresolved_reset_events": [],
+    "final_atlas_map_count": 1,
+    "final_map_keyframe_count": 2,
+    "trajectory_save_completed": true,
+    "trajectory_crop_published": false
+  },
+  "artifacts": {
+    "process_start_claim": {
+      "size_bytes": 9811,
+      "sha256": "e114ea0808852167f9035bdaf698f2da5d105f43f1bc66b2613bdfb60983a65d"
+    },
+    "full_trajectory": {
+      "size_bytes": 451,
+      "sha256": "22f4e01c955ec673498b79b54f0b2a9cf2c73f21244f01e369d86c977dfa297d",
+      "pose_count": 4
+    },
+    "keyframe_trajectory": {
+      "size_bytes": 232,
+      "sha256": "0c4b2b9544232bb815ec0c34294934dbd30462a9b5466dc90b5873e9b363090e",
+      "pose_count": 2
+    },
+    "stdout": {
+      "size_bytes": 11649,
+      "sha256": "2cb580ceb9331cfc0e54f069074061020c91c0abaf57248182bf11f93fd159af"
+    },
+    "stderr": {
+      "size_bytes": 6434,
+      "sha256": "4e5fba4d9d2527954dfd8e59717013596a5b792ff34a0d6abec4e7b1dba25efc"
+    },
+    "isolated_post_run_tensorrt_cache": {
+      "size_bytes": 853319,
+      "sha256": "3ecdb89c1f4f7023315487775fe55d1b8a93818c9c48cdac6b648e4566b2b295",
+      "mutated_from_shared_seed_copy_as_expected": true,
+      "shared_seed_unchanged": true
+    }
+  },
+  "resource_context": {
+    "todesk_corun": true,
+    "resource_isolation": false,
+    "prestart_free_gpu_mib": 3410,
+    "minimum_prestart_free_gpu_mib": 3072,
+    "prestart_compute_applications": [],
+    "runtime_or_realtime_claim_permitted": false
+  },
+  "scientific_interpretation": {
+    "supported": "The unchanged external HFNet-SLAM system executed the full legal A05 feed but failed the frozen score-window runability gate because tracking repeatedly reinitialized/reset inside source 3300..3700 and retained only four score poses.",
+    "not_supported": [
+      "HFNet accuracy on A05",
+      "an APE or RPE value",
+      "a numeric head-to-head comparison with the historical cold-crop learned-plus-KLT or pure-KLT trajectories",
+      "a system winner, ranking, superiority, significance, runtime, realtime, held-out, or confirmatory claim"
+    ],
+    "accuracy_state": "NA_NOT_ZERO"
+  },
+  "terminal_policy": {
+    "attempt_consumed": true,
+    "attempt_namespace_reusable": false,
+    "retry_authorized": false,
+    "post_hoc_gate_relaxation_authorized": false
+  }
+}

@@ -1,0 +1,23 @@
+	Command being timed: "/mnt/data/opt/anyfeature-paper-2024-r3/env/bin/x86_64-conda-linux-gnu-c++ -std=gnu++17 -O3 -march=native -DNDEBUG -DHAVE_EIGEN -DHAVE_EPOXY -DHAVE_PYTHON -D_LINUX_ -I/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3 -I/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/include -I/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/Thirdparty/DBoW2/include -I/mnt/data/opt/anyfeature-paper-2024-r3/env/include/eigen3 -I/mnt/data/opt/anyfeature-paper-2024-r3/env/include/opencv4 scripts/diagnostics/anyfeature_r2d2_init_audit_v1.cpp -o papers/anyfeature_r2d2_init_audit_prefix200_r1/anyfeature_r2d2_init_audit_v1 -L/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/lib -lAnyFeature-VSLAM -L/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/Thirdparty/DBoW2/lib -lDBoW2 -L/mnt/data/opt/anyfeature-paper-2024-r3/env/lib -lopencv_gapi -lopencv_stitching -lopencv_alphamat -lopencv_aruco -lopencv_bgsegm -lopencv_bioinspired -lopencv_ccalib -lopencv_cvv -lopencv_dnn_objdetect -lopencv_dnn_superres -lopencv_dpm -lopencv_face -lopencv_freetype -lopencv_fuzzy -lopencv_hdf -lopencv_hfs -lopencv_img_hash -lopencv_intensity_transform -lopencv_line_descriptor -lopencv_mcc -lopencv_quality -lopencv_rapid -lopencv_reg -lopencv_rgbd -lopencv_saliency -lopencv_stereo -lopencv_structured_light -lopencv_phase_unwrapping -lopencv_superres -lopencv_optflow -lopencv_surface_matching -lopencv_tracking -lopencv_highgui -lopencv_datasets -lopencv_text -lopencv_plot -lopencv_videostab -lopencv_videoio -lopencv_wechat_qrcode -lopencv_xfeatures2d -lopencv_shape -lopencv_ml -lopencv_ximgproc -lopencv_video -lopencv_xobjdetect -lopencv_objdetect -lopencv_calib3d -lopencv_imgcodecs -lopencv_features2d -lopencv_dnn -lopencv_flann -lopencv_xphoto -lopencv_photo -lopencv_imgproc -lopencv_core -Wl,-rpath,/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/lib:/mnt/data/SLAM/AnyFeature-VSLAM-paper-2024-r3/Thirdparty/DBoW2/lib:/mnt/data/opt/anyfeature-paper-2024-r3/env/lib -Wl,-rpath-link,/mnt/data/opt/anyfeature-paper-2024-r3/env/lib"
+	User time (seconds): 5.77
+	System time (seconds): 1.07
+	Percent of CPU this job got: 83%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.16
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 621348
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 185922
+	Voluntary context switches: 140818
+	Involuntary context switches: 892
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 680
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

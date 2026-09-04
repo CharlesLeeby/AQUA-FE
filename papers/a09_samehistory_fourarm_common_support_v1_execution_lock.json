@@ -1,0 +1,129 @@
+{
+  "inputs": {
+    "/home/ma/.local/bin/evo_ape": {
+      "path": "/home/ma/.local/bin/evo_ape",
+      "sha256": "6bee25dc5bfdab0ead8988ab4014a72511339e94697ec61699f66f68f5f24d15",
+      "size_bytes": 213
+    },
+    "/home/ma/.local/bin/evo_rpe": {
+      "path": "/home/ma/.local/bin/evo_rpe",
+      "sha256": "9e07d0bd4566aa680d5e39e58589176a286f4f8a22ba9107a5834ddb278e2bd1",
+      "size_bytes": 213
+    },
+    "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_aqualoc_a02_body_T_cam0_v1.yaml": {
+      "path": "/home/ma/AQUA-FE_WS/configs/published_baselines/hfnet_aqualoc_a02_body_T_cam0_v1.yaml",
+      "sha256": "a76c728b31d47c3a87f54c465fb581007ed2da2b7d7d84df81dbde93e9a886c1",
+      "size_bytes": 415
+    },
+    "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support.py": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support.py",
+      "sha256": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110",
+      "size_bytes": 27933
+    },
+    "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support_epoch_v2.py": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support_epoch_v2.py",
+      "sha256": "3c455299b23157cc749b474b9460ca4a408b3bee516e9d1bf2109f253cf89f91",
+      "size_bytes": 5447
+    },
+    "/home/ma/AQUA-FE_WS/scripts/trajectory_eval_core.py": {
+      "path": "/home/ma/AQUA-FE_WS/scripts/trajectory_eval_core.py",
+      "sha256": "aa9ac4da81df7298d1f1c369548ca98a57235916004337cad66f4cf331560635",
+      "size_bytes": 27945
+    },
+    "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/aquafe_external_feature_context/formal_run_receipt_v1.json": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/aquafe_external_feature_context/formal_run_receipt_v1.json",
+      "sha256": "34833858bddf210de373a8b3fc9c36be78b02168fbeda2274070382d82a89302",
+      "size_bytes": 44279
+    },
+    "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/aquafe_external_feature_context/vins_aqualoc_archaeo_external.yaml": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/aquafe_external_feature_context/vins_aqualoc_archaeo_external.yaml",
+      "sha256": "4b58c2e422fcce4dfecfc6ffbb227fe979e641923a378bbaa227f0baa22894ed",
+      "size_bytes": 1015
+    },
+    "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/aquafe_external_feature_context/vins_output/vio.csv": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/aquafe_external_feature_context/vins_output/vio.csv",
+      "sha256": "92089ada8e065dbb86940f8a5cc96f1850e8a76c4ac42a10b8a45b9a7d8053dd",
+      "size_bytes": 228064
+    },
+    "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/klt_external_feature_context/formal_run_receipt_v1.json": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/klt_external_feature_context/formal_run_receipt_v1.json",
+      "sha256": "8c12b5701309bd79652aa723951fa6f8c866135f744c813c3092ec658c1775fb",
+      "size_bytes": 44131
+    },
+    "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/klt_external_feature_context/vins_aqualoc_archaeo_external.yaml": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/klt_external_feature_context/vins_aqualoc_archaeo_external.yaml",
+      "sha256": "b928b31af629bddd9ff677953c185778a2172a0f946fce71bfa1e08b5d879178",
+      "size_bytes": 986
+    },
+    "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/klt_external_feature_context/vins_output/vio.csv": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/klt_external_feature_context/vins_output/vio.csv",
+      "sha256": "edb75ed45449761c0a79cc72ad2084eb8e45f0508be9aa90641e84361e549b43",
+      "size_bytes": 228066
+    },
+    "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/vanilla_origin_native_image_context/formal_run_receipt_v1.json": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/vanilla_origin_native_image_context/formal_run_receipt_v1.json",
+      "sha256": "18bd02c2a268306a9154e60dffbac326b9320fc55084e62be01bdc0fa500474d",
+      "size_bytes": 41435
+    },
+    "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/vanilla_origin_native_image_context/vins_aqualoc_archaeo_origin.yaml": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/vanilla_origin_native_image_context/vins_aqualoc_archaeo_origin.yaml",
+      "sha256": "eafd7e6f22e573c4e0d7b5e36f2550938029456fc75ad55bd741c1d000016ff7",
+      "size_bytes": 990
+    },
+    "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/vanilla_origin_native_image_context/vins_output/vio.csv": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/backends/vanilla_origin_native_image_context/vins_output/vio.csv",
+      "sha256": "e7f8e06536bd788edc60dd13add6c0d371a41d0351eaa29a7f5c3d1cde9afc2d",
+      "size_bytes": 227239
+    },
+    "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/external_baselines/hfnet_warmstart_bridge_v1/hfnet_world_T_body_source_stamp_canonical_v1.csv": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/external_baselines/hfnet_warmstart_bridge_v1/hfnet_world_T_body_source_stamp_canonical_v1.csv",
+      "sha256": "2b5bd98de228b13c33a79e40b0462d51db57e3280449230d3e1f33f369072d5d",
+      "size_bytes": 42105
+    },
+    "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/external_baselines/hfnet_warmstart_bridge_v1/hfnet_world_T_body_source_stamp_canonical_v1.receipt.json": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/external_baselines/hfnet_warmstart_bridge_v1/hfnet_world_T_body_source_stamp_canonical_v1.receipt.json",
+      "sha256": "dff07d76e1d363846e31a693017df58e580a4482a076507dd1036372c1ce22b4",
+      "size_bytes": 5632
+    },
+    "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/external_baselines/hfnet_warmstart_bridge_v1/hfnet_world_T_body_vins_csv_v1.receipt.json": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/external_baselines/hfnet_warmstart_bridge_v1/hfnet_world_T_body_vins_csv_v1.receipt.json",
+      "sha256": "d03e5cd87ec8e936b2160f1bef43fe8ae3a79f4b53540e9baf24b0e809371483",
+      "size_bytes": 5037
+    },
+    "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/raw/archaeo09_0000_4400.bag": {
+      "path": "/mnt/data/AQUA-FE_WS/experiments/a09_samehistory_system_warmstart_v1/raw/archaeo09_0000_4400.bag",
+      "sha256": "a4a24bd0c2451f4996d39f635e55fd99730698bf704c4e7dc81729070d0dca97",
+      "size_bytes": 1187038470
+    }
+  },
+  "protocol": {
+    "path": "/home/ma/AQUA-FE_WS/papers/a09_samehistory_fourarm_common_support_v1_protocol.md",
+    "sha256": "63a319c7257aaea474bc9534f05f17c6b1f58bdc96520b1c25521003997603d7",
+    "size_bytes": 9254
+  },
+  "protocol_constants": {
+    "alignment": "INDEPENDENT_SE3_PER_ARM_FIXED_SCALE_1",
+    "ape_gate_open": false,
+    "arm_order": [
+      "VANILLA_ORIGIN_NATIVE_IMAGE_CONTEXT",
+      "EXTERNAL_KLT_FINALONLINE_BACKBONE",
+      "AQUAFE_FINALONLINE_XFEAT_LINEAGE",
+      "HFNET_SLAM_WARMSTART"
+    ],
+    "contrast_name": "A09_SAMEHISTORY_FOURARM_COMMON_SUPPORT_V1_SCORE_4000_4400",
+    "evo_max_absolute_disagreement_m": "0.00001",
+    "grid_count": 20,
+    "joint_mask": true,
+    "minimum_rpe_pairs": 10,
+    "score_end_ns": 1542888966034698672,
+    "score_start_ns": 1542888946038630384,
+    "subprocess_policy": "EXACTLY_ONE_EVALUATOR_CALL_NO_RETRY"
+  },
+  "runner": {
+    "path": "/home/ma/AQUA-FE_WS/scripts/run_a09_samehistory_fourarm_common_support_v1.py",
+    "sha256": "05ff0bad4ec449c7545628f71498ce23ca8a09e1331f4e8d79b67854983e3df0",
+    "size_bytes": 38342
+  },
+  "schema_version": "aqua-fe-a09-samehistory-fourarm-common-support-execution-lock-v1",
+  "status": "LOCKED_BEFORE_ANALYSIS"
+}

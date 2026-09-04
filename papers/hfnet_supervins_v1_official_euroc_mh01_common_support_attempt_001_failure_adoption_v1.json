@@ -1,0 +1,158 @@
+{
+  "corrective_scope": {
+    "attempt_002_must_use_new_additive_protocol_lock_token_authority_and_fresh_namespace": true,
+    "automatic_attempt_002_start_authorized": false,
+    "automatic_further_retry_authorized": false,
+    "only_functional_delta_authorized": "whole-token/phrase report lexer plus attempt_002 lifecycle and failure adoption",
+    "scientific_inputs_support_body_alignment_metrics_figures_and_claim_boundary_must_remain_identical": true
+  },
+  "created_at": "2026-08-21T02:46:36+08:00",
+  "creation_contract": {
+    "additive_only": true,
+    "method": "os.open(O_WRONLY|O_CREAT|O_EXCL), fchmod(0444), file fsync, parent fsync",
+    "old_artifacts_modified": false
+  },
+  "failure_classification": {
+    "class": "CONTROL_PLANE_REPORT_LEXER_FALSE_POSITIVE_AFTER_TRANSIENT_SCIENTIFIC_COMPUTATION",
+    "cross_system_ratio_field_or_claim_detected": false,
+    "false_positive_source_text": "generation failures",
+    "forbidden_token_reported": "ratio",
+    "mechanical_proof": {
+      "expression": "'ratio' in 'generation'",
+      "offset": 4,
+      "ratio_is_standalone_lexeme": false,
+      "value": true
+    },
+    "raw_scanner_semantics": "each forbidden string was tested with Python substring membership: token in joined_report_text",
+    "scientific_gate_failure_detected": false
+  },
+  "lifecycle_adoption": {
+    "attempt_001_must_not_be_modified_or_rerun": true,
+    "attempt_001_start_consumed": true,
+    "evaluation_start_count_after": 1,
+    "evaluation_start_count_before": 0,
+    "maximum_starts_under_old_authority": 1,
+    "old_authority_burned_and_must_not_be_reused": true,
+    "retry_authorized_under_old_authority": false
+  },
+  "old_attempt": "attempt_001",
+  "old_attempt_directory_contract": {
+    "analysis_output_exists": true,
+    "analysis_output_regular_file_count": 0,
+    "figures_directory_exists": true
+  },
+  "old_attempt_exact_regular_file_set": [
+    "evaluation_start_claim.json",
+    "preflight_result.json",
+    "run_result.json"
+  ],
+  "old_control_and_evidence_identities": {
+    "evaluation_start_claim": {
+      "mode": "0444",
+      "nlink": 1,
+      "path": "/home/ma/AQUA-FE_WS/experiments/published_hfnet_supervins_v1_official_euroc_mh01_common_support_descriptive_20260821_r1/attempt_001/evaluation_start_claim.json",
+      "sha256": "9b9651f47e28b09374e48d897109b2f8694ae1b63e0a2a93704999f4dd8099ae",
+      "size_bytes": 1575
+    },
+    "execution_authority": {
+      "mode": "0444",
+      "nlink": 1,
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_supervins_v1_official_euroc_mh01_common_support_execution_authority_v1.json",
+      "sha256": "980abb2ccd86f1268161bbf73b6409da80c42cbbac677d68139f08cf7213cee9",
+      "size_bytes": 1924
+    },
+    "execution_lock": {
+      "mode": "0444",
+      "nlink": 1,
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_supervins_v1_official_euroc_mh01_common_support_execution_lock_v1.json",
+      "sha256": "b112c027b6569a2912726986fd02d75db55c98283cb4c00d181c4c1ff6479566",
+      "size_bytes": 14051
+    },
+    "preflight_result": {
+      "mode": "0444",
+      "nlink": 1,
+      "path": "/home/ma/AQUA-FE_WS/experiments/published_hfnet_supervins_v1_official_euroc_mh01_common_support_descriptive_20260821_r1/attempt_001/preflight_result.json",
+      "sha256": "8a23929d653de71b35ffd4df6211b57ba469d10e1014b583e9a0798348eace74",
+      "size_bytes": 20449
+    },
+    "protocol": {
+      "mode": "0444",
+      "nlink": 1,
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_supervins_v1_official_euroc_mh01_common_support_descriptive_freeze_v1.json",
+      "sha256": "63712f50e2ad21e802066930fd751394249abeb33f76104b33cbbb3c48d8056a",
+      "size_bytes": 22291
+    },
+    "run_result": {
+      "mode": "0444",
+      "nlink": 1,
+      "path": "/home/ma/AQUA-FE_WS/experiments/published_hfnet_supervins_v1_official_euroc_mh01_common_support_descriptive_20260821_r1/attempt_001/run_result.json",
+      "sha256": "a1917adb5a217e96b2bdcbfa8bdcce5025578b3d903fd07437791d38e83d9b82",
+      "size_bytes": 45422
+    },
+    "runner": {
+      "mode": "0444",
+      "nlink": 1,
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_hfnet_supervins_v1_official_euroc_mh01_common_support_v1.py",
+      "sha256": "f42ad63159e4cfc292540fc0b137eb211aa15569de765e8d478b6eb67d4ed9a2",
+      "size_bytes": 87654
+    },
+    "test_receipt": {
+      "mode": "0444",
+      "nlink": 1,
+      "path": "/home/ma/AQUA-FE_WS/papers/hfnet_supervins_v1_official_euroc_mh01_common_support_test_receipt_v1.json",
+      "sha256": "ed3c992f936063c236d5d7215b0461bb849df767a9c777daca32ed853939a4ee",
+      "size_bytes": 3667
+    },
+    "tests": {
+      "mode": "0444",
+      "nlink": 1,
+      "path": "/home/ma/AQUA-FE_WS/scripts/tests/test_evaluate_hfnet_supervins_v1_official_euroc_mh01_common_support_v1.py",
+      "sha256": "a4d977347a9633884bfb48ed5abb813beb56c7067b68b7dfe5c0cdb0b61e94ac",
+      "size_bytes": 39542
+    }
+  },
+  "old_evidence_root": "/home/ma/AQUA-FE_WS/experiments/published_hfnet_supervins_v1_official_euroc_mh01_common_support_descriptive_20260821_r1",
+  "preflight_snapshot": {
+    "boundary": {
+      "alignment_computed": false,
+      "ape_computed": false,
+      "positions_parsed": false,
+      "ros_or_model_started": false,
+      "rpe_computed": false,
+      "subprocess_spawned": false
+    },
+    "check_count": 27,
+    "failures": [],
+    "ready": true,
+    "status": "GO_EXACTLY_ONE_PURE_COMMON_SUPPORT_EVALUATION_START"
+  },
+  "schema_version": "aqua-fe-hfnet-supervins-mh01-common-support-attempt-001-failure-adoption-v1",
+  "scientific_result_boundary": {
+    "accuracy_or_performance_claim_authorized": false,
+    "analysis_bundle_file_write_reached": false,
+    "figure_construction_reached": false,
+    "persisted_metric_csv_report_figure_or_manifest_count": 0,
+    "real_positions_alignment_ape_rpe_computed_transiently_in_memory_before_failure": true,
+    "scientific_metrics_may_be_used": false
+  },
+  "self_hash": "47c323a58561ca111e710afc8faf2095f2544214dd99f74fd028d56f44d9b4fe",
+  "self_hash_algorithm": "SHA-256 over compact canonical JSON sort_keys=true,separators comma/colon,allow_nan=false with self_hash set to null",
+  "status": "ADOPTED_IMMUTABLE_TERMINAL_FAIL_ATTEMPT_001",
+  "terminal_adoption": {
+    "completed_at": "2026-08-21T02:38:04+08:00",
+    "error_message": "forbidden comparison wording in reports: ['ratio']",
+    "error_type": "ValueError",
+    "held_snapshot_count": 10,
+    "held_snapshot_postflight_ok": true,
+    "pending_signal": null,
+    "post_pin_count": 31,
+    "post_pins_ok": true,
+    "preflight_pin_count": 31,
+    "preflight_pins_ok": true,
+    "retry_authorized": false,
+    "return_code": 1,
+    "started_at": "2026-08-21T02:38:04+08:00",
+    "status": "FAIL_DEVELOPMENT_OFFICIAL_MH01_EXACT_COMMON_SUPPORT_DESCRIPTIVE_ANALYSIS",
+    "terminal_last": true
+  }
+}

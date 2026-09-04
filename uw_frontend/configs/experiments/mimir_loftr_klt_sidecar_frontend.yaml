@@ -1,0 +1,33 @@
+extends: formal_loftr_mirror_contribution_v33_frontend.yaml
+
+hybrid:
+  # MIMIR's synthetic seafloor keeps a high occupied-cell ratio even when the
+  # KLT track count and temporal support are weak.  The generic profile treats
+  # that high coverage as healthy and never lets LoFTR propose a sidecar.
+  # Admit proposals on degraded/extreme-texture frames, while retaining the
+  # downstream multi-frame confirmation, F/E/H residual checks, new-cell gate,
+  # and sequence-level observation budget from the parent profile.
+  loftr_requires_planar_severe: false
+  semidense_fallback_min_grid_coverage: 1.01
+  # LoFTR is a recovery trigger, not a dense per-second replacement.  MIMIR
+  # runs near 12 Hz; a 60-frame retry interval limits expensive proposals to
+  # roughly one every five seconds while admitted lineages still propagate by
+  # KLT on every intervening frame.
+  semidense_fallback_min_frame_gap: 60
+  # The internal KLT state has about 350 tracks over a 4x6 grid.  The inherited
+  # target of 10 marks most MIMIR cells saturated before LoFTR is evaluated and
+  # leaves only three candidate lineages.  A target of 20 still favors weak
+  # cells but gives initialization enough independent learned correspondences.
+  learned_target_cell_count: 20
+  source_aware_loftr_modes:
+    - low_coverage_recovery
+    - low_texture
+    - planar_near_wall
+    - extreme_textureless
+    - identity_churn
+  # The synthetic seafloor has real 3-D relief, so its valid KLT geometry is
+  # less homography-dominant than the AQUALOC near-wall calibration window.
+  # This threshold only opens the proposer; exported points still face the
+  # stricter per-point F/E/H residual gate in export_vins_features.py.
+  promotion_loftr_min_h_inlier_ratio: 0.65
+  source_aware_loftr_min_h_inlier_ratio: 0.65

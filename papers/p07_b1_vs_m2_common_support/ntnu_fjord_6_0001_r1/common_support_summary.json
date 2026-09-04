@@ -1,0 +1,116 @@
+{
+  "arms": {
+    "B1": {
+      "ape_max_m": 0.2214959283780612,
+      "ape_median_m": 0.12299822319166136,
+      "ape_rmse_m": 0.13395878130757286,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 440,
+        "raw_count": 440,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 440
+      },
+      "bracket_gap_max_s": 0.10001536004710943,
+      "bracket_gap_p50_s": 0.09999897598754615,
+      "bracket_gap_p95_s": 0.09999923198483884,
+      "legacy_max_reference_reuse": 1,
+      "legacy_pair_count": 440,
+      "legacy_timestamp_error_max_s": 0.01870540005620569,
+      "legacy_timestamp_error_p95_s": 0.003436074580531567,
+      "legacy_unique_assignment_error_max_s": 0.01870540005620569,
+      "legacy_unique_assignment_error_p95_s": 0.003436074580531567,
+      "legacy_unique_assignment_pair_count": 440,
+      "legacy_unique_reference_used": 440,
+      "matched_count": 429,
+      "rejection_histogram": {
+        "INTERPOLATED": 439,
+        "OUT_OF_RANGE": 12
+      },
+      "rpe_max_m": 0.09338168466301483,
+      "rpe_median_m": 0.0311021703875746,
+      "rpe_pairs": 419,
+      "rpe_rmse_m": 0.03928200867666561,
+      "valid_grid_count": 439
+    },
+    "M2": {
+      "ape_max_m": 724.1712885426717,
+      "ape_median_m": 456.11487088440316,
+      "ape_rmse_m": 492.8461977016457,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 430,
+        "raw_count": 430,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 430
+      },
+      "bracket_gap_max_s": 0.10001536004710943,
+      "bracket_gap_p50_s": 0.09999897598754615,
+      "bracket_gap_p95_s": 0.09999923198483884,
+      "legacy_max_reference_reuse": 1,
+      "legacy_pair_count": 430,
+      "legacy_timestamp_error_max_s": 0.01870540005620569,
+      "legacy_timestamp_error_p95_s": 0.003412793180905282,
+      "legacy_unique_assignment_error_max_s": 0.01870540005620569,
+      "legacy_unique_assignment_error_p95_s": 0.003412793180905282,
+      "legacy_unique_assignment_pair_count": 430,
+      "legacy_unique_reference_used": 430,
+      "matched_count": 429,
+      "rejection_histogram": {
+        "INTERPOLATED": 429,
+        "OUT_OF_RANGE": 22
+      },
+      "rpe_max_m": 237.7354220908249,
+      "rpe_median_m": 31.127261354619353,
+      "rpe_pairs": 419,
+      "rpe_rmse_m": 67.43919555918663,
+      "valid_grid_count": 429
+    }
+  },
+  "protocol": {
+    "arm_time_offsets_s": {
+      "B1": 0.0,
+      "M2": 0.0
+    },
+    "body_to_camera_applied": true,
+    "contrast_name": "P07_M2_NTNU_FJORD6_0001_B1_VS_M2_PERSISTENT_V2",
+    "evaluation_rate_hz": 10.0,
+    "max_estimate_gap_s": 0.374999998,
+    "max_reference_gap_s": 0.05,
+    "nominal_estimate_rate_hz": 6.6666667,
+    "nominal_reference_rate_hz": 50.0,
+    "reference": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/ntnu_hf/subset-fjord/fjord_6/fjord_6_baseline.tum",
+    "reference_time_offset_s": 0.0,
+    "rpe_delta_s": 1.0,
+    "rpe_semantics": "aligned_global_frame_positional_delta",
+    "window_end_s": 1700603797.8582888,
+    "window_start_s": 1700603752.8582888
+  },
+  "reference": {
+    "audit": {
+      "duplicate_count": 0,
+      "finite_count": 34681,
+      "raw_count": 34681,
+      "rejected_nonfinite_count": 0,
+      "unique_count": 34681
+    },
+    "bracket_gap_max_s": 0.023000002023763955,
+    "bracket_gap_p50_s": 0.019999981042928994,
+    "bracket_gap_p95_s": 0.02200007496867329,
+    "rejection_histogram": {
+      "INTERPOLATED": 451
+    },
+    "valid_grid_count": 451
+  },
+  "support": {
+    "ape_valid": true,
+    "common_coverage": 0.9512195121951219,
+    "common_span_s": 42.800000000046566,
+    "grid_count": 451,
+    "matched_count": 429,
+    "rpe_pairs": 419,
+    "rpe_valid": true,
+    "segment_count": 1,
+    "window_duration_s": 45.0
+  }
+}

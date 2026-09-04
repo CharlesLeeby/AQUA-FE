@@ -1,0 +1,40 @@
+extends: three_layer_frontend.yaml
+
+hybrid:
+  # Keep the original KLT/GFTT backbone intact, then use learned matches only as
+  # a sidecar candidate source for low-coverage or degraded frames.
+  preserve_klt_replenish: true
+  min_tracks_for_recovery: 320
+  min_grid_coverage_for_recovery: 0.88
+  enable_lk_recovery: false
+  learned_init_requires_klt_confirmation: true
+  learned_confirmation_min_frames: 2
+  learned_confirmation_max_confirmed: 40
+  learned_confirmation_reserve_capacity: 0
+  max_learned_initialized: 50
+  learned_sidecar_max_extra: 60
+  max_learned_init_fraction: 0.18
+  reserve_gftt_features: 0
+  learned_init_requires_degradation: true
+  learned_init_min_degradation: 0.42
+  learned_init_min_flat_region_ratio: 0.70
+  learned_init_min_grid_coverage: 0.90
+  learned_init_critical_grid_coverage: 0.82
+  enable_learned_init_acceptance_gate: true
+  learned_init_acceptance_weak_max_new: 18
+  learned_init_acceptance_weak_max_fraction: 0.06
+  learned_init_acceptance_weak_min_grid_gain: 0.02
+  learned_init_acceptance_weak_min_new_cell_ratio: 0.25
+  promotion_lightglue_min_quality: 0.10
+  promotion_lightglue_max_fb_error: 1.20
+  promotion_lightglue_min_ncc: 0.48
+  promotion_xfeat_min_quality: 0.18
+  promotion_xfeat_max_fb_error: 0.95
+  promotion_xfeat_min_ncc: 0.55
+  promotion_xfeat_min_grid_coverage: 0.82
+  promotion_loftr_min_quality: 0.22
+  promotion_loftr_max_fb_error: 0.75
+  promotion_loftr_min_ncc: 0.60
+
+measurement_selection:
+  enabled: false

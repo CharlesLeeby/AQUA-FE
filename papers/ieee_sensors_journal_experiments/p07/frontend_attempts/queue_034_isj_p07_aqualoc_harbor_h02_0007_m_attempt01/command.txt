@@ -1,0 +1,1 @@
+RUN_VINS=0 FORCE_EXPORT=1 TAG=isj_p07_aqualoc_harbor_h02_0007_m_attempt01 bash scripts/run_p05_modern_xfeat_baseline_guarded_v2.sh aqualoc_harbor H02 6300 7200 2

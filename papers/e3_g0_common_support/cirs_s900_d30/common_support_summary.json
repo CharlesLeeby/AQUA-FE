@@ -1,0 +1,151 @@
+{
+  "arms": {
+    "drop": {
+      "ape_max_m": 1.9688168944652866,
+      "ape_median_m": 0.88018522376924,
+      "ape_rmse_m": 1.017331039157686,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 130,
+        "raw_count": 130,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 130
+      },
+      "bracket_gap_max_s": 0.20384883880615234,
+      "bracket_gap_p50_s": 0.20001792907714844,
+      "bracket_gap_p95_s": 0.2019941806793213,
+      "legacy_max_reference_reuse": 1,
+      "legacy_pair_count": 130,
+      "legacy_timestamp_error_max_s": 0.04951739311218262,
+      "legacy_timestamp_error_p95_s": 0.044718921184539795,
+      "legacy_unique_assignment_error_max_s": 0.04951739311218262,
+      "legacy_unique_assignment_error_p95_s": 0.044718921184539795,
+      "legacy_unique_assignment_pair_count": 130,
+      "legacy_unique_reference_used": 130,
+      "matched_count": 258,
+      "rejection_histogram": {
+        "INTERPOLATED": 258,
+        "OUT_OF_RANGE": 51
+      },
+      "rpe_max_m": 0.3175049860817441,
+      "rpe_median_m": 0.16033932497780812,
+      "rpe_pairs": 248,
+      "rpe_rmse_m": 0.16578541422923113,
+      "valid_grid_count": 258
+    },
+    "full": {
+      "ape_max_m": 1.7247130021302393,
+      "ape_median_m": 0.7380893882780811,
+      "ape_rmse_m": 0.869839552586773,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 130,
+        "raw_count": 130,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 130
+      },
+      "bracket_gap_max_s": 0.20384883880615234,
+      "bracket_gap_p50_s": 0.20001792907714844,
+      "bracket_gap_p95_s": 0.2019941806793213,
+      "legacy_max_reference_reuse": 1,
+      "legacy_pair_count": 130,
+      "legacy_timestamp_error_max_s": 0.04951739311218262,
+      "legacy_timestamp_error_p95_s": 0.044718921184539795,
+      "legacy_unique_assignment_error_max_s": 0.04951739311218262,
+      "legacy_unique_assignment_error_p95_s": 0.044718921184539795,
+      "legacy_unique_assignment_pair_count": 130,
+      "legacy_unique_reference_used": 130,
+      "matched_count": 258,
+      "rejection_histogram": {
+        "INTERPOLATED": 258,
+        "OUT_OF_RANGE": 51
+      },
+      "rpe_max_m": 0.3113646232850408,
+      "rpe_median_m": 0.14583899652586912,
+      "rpe_pairs": 248,
+      "rpe_rmse_m": 0.15132989249753367,
+      "valid_grid_count": 258
+    },
+    "klt": {
+      "ape_max_m": 1.8445204564091056,
+      "ape_median_m": 0.826114369476791,
+      "ape_rmse_m": 0.9195051187622566,
+      "audit": {
+        "duplicate_count": 0,
+        "finite_count": 130,
+        "raw_count": 130,
+        "rejected_nonfinite_count": 0,
+        "unique_count": 130
+      },
+      "bracket_gap_max_s": 0.20384883880615234,
+      "bracket_gap_p50_s": 0.20001792907714844,
+      "bracket_gap_p95_s": 0.2019941806793213,
+      "legacy_max_reference_reuse": 1,
+      "legacy_pair_count": 130,
+      "legacy_timestamp_error_max_s": 0.04951739311218262,
+      "legacy_timestamp_error_p95_s": 0.044718921184539795,
+      "legacy_unique_assignment_error_max_s": 0.04951739311218262,
+      "legacy_unique_assignment_error_p95_s": 0.044718921184539795,
+      "legacy_unique_assignment_pair_count": 130,
+      "legacy_unique_reference_used": 130,
+      "matched_count": 258,
+      "rejection_histogram": {
+        "INTERPOLATED": 258,
+        "OUT_OF_RANGE": 51
+      },
+      "rpe_max_m": 0.31419201182524903,
+      "rpe_median_m": 0.1534334832259504,
+      "rpe_pairs": 248,
+      "rpe_rmse_m": 0.15493084977076593,
+      "valid_grid_count": 258
+    }
+  },
+  "protocol": {
+    "arm_time_offsets_s": {
+      "drop": 0.0,
+      "full": 0.0,
+      "klt": 0.0
+    },
+    "body_to_camera_applied": true,
+    "contrast_name": "cirs_s900_d30",
+    "evaluation_rate_hz": 10.0,
+    "max_estimate_gap_s": 0.5,
+    "max_reference_gap_s": 0.25,
+    "nominal_estimate_rate_hz": 5.0,
+    "nominal_reference_rate_hz": 10.0,
+    "reference": "/home/ma/AQUA-FE_WS/logs/cirs_caves_vins/external_hybrid_xfeat_every1_jul14frozen3way_cirs_s900_d30_full/raw_segment.bag:/cirs/odometry_gt",
+    "reference_time_offset_s": 0.0,
+    "rpe_delta_s": 1.0,
+    "rpe_semantics": "aligned_global_frame_positional_delta",
+    "window_end_s": 1372688139.0389848,
+    "window_start_s": 1372688108.2103515
+  },
+  "reference": {
+    "audit": {
+      "duplicate_count": 0,
+      "finite_count": 348,
+      "raw_count": 348,
+      "rejected_nonfinite_count": 0,
+      "unique_count": 348
+    },
+    "bracket_gap_max_s": 0.10000014305114746,
+    "bracket_gap_p50_s": 0.09999990463256836,
+    "bracket_gap_p95_s": 0.10000014305114746,
+    "rejection_histogram": {
+      "EXACT": 1,
+      "INTERPOLATED": 308
+    },
+    "valid_grid_count": 309
+  },
+  "support": {
+    "ape_valid": true,
+    "common_coverage": 0.8349514563106796,
+    "common_span_s": 25.700000047683716,
+    "grid_count": 309,
+    "matched_count": 258,
+    "rpe_pairs": 248,
+    "rpe_valid": true,
+    "segment_count": 1,
+    "window_duration_s": 30.828633308410645
+  }
+}

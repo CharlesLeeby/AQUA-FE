@@ -1,0 +1,49 @@
+{
+  "arms": {
+    "full": {
+      "ape_abs_diff_m": 1.2657801806703617e-07,
+      "evo_ape_rmse_m": 1.373986,
+      "evo_segmented_rpe_rmse_m": 0.20906552864884786,
+      "primary_ape_rmse_m": 1.3739858734219819,
+      "primary_rpe_rmse_m": 0.20906562725700184,
+      "rpe_abs_diff_m": 9.860815397555456e-08,
+      "rpe_pair_count": 90,
+      "segments": [
+        {
+          "pair_count": 70,
+          "rmse_m": 0.079695,
+          "segment_id": 0
+        },
+        {
+          "pair_count": 20,
+          "rmse_m": 0.417682,
+          "segment_id": 1
+        }
+      ]
+    },
+    "klt": {
+      "ape_abs_diff_m": 1.4007668469595558e-07,
+      "evo_ape_rmse_m": 1.255784,
+      "evo_segmented_rpe_rmse_m": 0.20163139355324167,
+      "primary_ape_rmse_m": 1.2557841400766847,
+      "primary_rpe_rmse_m": 0.2016312654774603,
+      "rpe_abs_diff_m": 1.2807578136930786e-07,
+      "rpe_pair_count": 90,
+      "segments": [
+        {
+          "pair_count": 70,
+          "rmse_m": 0.074502,
+          "segment_id": 0
+        },
+        {
+          "pair_count": 20,
+          "rmse_m": 0.404378,
+          "segment_id": 1
+        }
+      ]
+    }
+  },
+  "evo_version": "1.31.1",
+  "rpe_delta_frames": 2,
+  "rpe_semantics": "aligned_global_frame_positional_delta"
+}

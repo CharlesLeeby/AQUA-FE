@@ -1,0 +1,1315 @@
+{
+  "diagnostic_event_boundary": {
+    "candidate_assisted_outlier_events": 3,
+    "first_candidate_assisted_outlier_event_index": 531,
+    "first_differing_event_index": 500
+  },
+  "diagnostic_run_root": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09",
+  "diagnostic_v23_counters": [
+    {
+      "assisted_matches": 19,
+      "assisted_outliers": 1,
+      "complete": true,
+      "events_overflowed": 0,
+      "pre_kf_outliers": 1,
+      "pre_kf_purged": 0,
+      "pre_kf_scans": 89,
+      "related_mappoint_overflowed": 0,
+      "repeat": 1,
+      "role": "full_unbounded",
+      "seed_summary_path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/full_unbounded_r1/instrumentation/seed_summary.json",
+      "seed_summary_sha256": "1c83775479c41f3b335e306de563b47a8eb4561151e78aff29302da74ade034c"
+    },
+    {
+      "assisted_matches": 15,
+      "assisted_outliers": 3,
+      "complete": true,
+      "events_overflowed": 0,
+      "pre_kf_outliers": 1,
+      "pre_kf_purged": 1,
+      "pre_kf_scans": 87,
+      "related_mappoint_overflowed": 0,
+      "repeat": 1,
+      "role": "full",
+      "seed_summary_path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/full_r1/instrumentation/seed_summary.json",
+      "seed_summary_sha256": "931f8eaaa5bd719ca8817c0b272b0f214326997afcb7cfc2e89e8e1cbf2dac50"
+    }
+  ],
+  "frontend_summary": {
+    "low_feature_frames": 100,
+    "low_seed_ids": 1,
+    "low_seed_observations": 8,
+    "normal_feature_frames": 200,
+    "normal_grid_coverage_median": 0.9444444444444444,
+    "normal_healthy_frames": 199,
+    "normal_seed_observations": 0,
+    "normal_selector_injected_observations": 0
+  },
+  "frozen_run_records": {
+    "diagnostic": {
+      "drop_r1": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "4d77d35c290b73157b0db402c185f1750e64409418f1d79d3e2de06b94daa919",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/drop_r1/provenance/snapshot_sha256.txt",
+          "sha256": "c89a56dfbe9e0e57af435fe4504800e9ed4636f8c225a7fecc62691fcdfbbab2"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/drop_r1/run_manifest.txt",
+          "sha256": "563ec81775a2c6bcf482ab85cfe76b24f8bdf6712afd01db3454860e1871998b"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/drop_r1/instrumentation/seed_summary.json",
+          "sha256": "c3b37d0fed560cd5f8817ac97d68c48287e9b85cdaaba61dc68d2e99c0a0d0b2"
+        }
+      },
+      "full_bridge_off_r1": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "dd32b0b74b6b4b3c4d8b3ee1552158c830ceafde3cbac0de95c022d7589c51c1",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/full_bridge_off_r1/provenance/snapshot_sha256.txt",
+          "sha256": "ac48cd6f5fc03cfdc042b5a64707f8ba5b7585024b6d79aaf10145f00c82d78f"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/full_bridge_off_r1/run_manifest.txt",
+          "sha256": "697e4c852aa82a29e1de9931596a4fadcada09c1aefb5986271ea544853b154e"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/full_bridge_off_r1/instrumentation/seed_summary.json",
+          "sha256": "5b13596ffc5dd43a0a95e4d40b9fda0820fcb8734926157689ea70199d9f2ead"
+        }
+      },
+      "full_r1": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "1",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "dd32b0b74b6b4b3c4d8b3ee1552158c830ceafde3cbac0de95c022d7589c51c1",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/full_r1/provenance/snapshot_sha256.txt",
+          "sha256": "ac48cd6f5fc03cfdc042b5a64707f8ba5b7585024b6d79aaf10145f00c82d78f"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/full_r1/run_manifest.txt",
+          "sha256": "86d40ad478c94c87a526ee2e25ba2bafc832617c49f307e4e2f806fee97257d8"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/full_r1/instrumentation/seed_summary.json",
+          "sha256": "931f8eaaa5bd719ca8817c0b272b0f214326997afcb7cfc2e89e8e1cbf2dac50"
+        }
+      },
+      "full_unbounded_r1": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "dd32b0b74b6b4b3c4d8b3ee1552158c830ceafde3cbac0de95c022d7589c51c1",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/full_unbounded_r1/provenance/snapshot_sha256.txt",
+          "sha256": "ac48cd6f5fc03cfdc042b5a64707f8ba5b7585024b6d79aaf10145f00c82d78f"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/full_unbounded_r1/run_manifest.txt",
+          "sha256": "f1d67e9f075b3616f3ea64b0ffc318bff5ceb21fdd52dac8934bee9766e350d5"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/full_unbounded_r1/instrumentation/seed_summary.json",
+          "sha256": "1c83775479c41f3b335e306de563b47a8eb4561151e78aff29302da74ade034c"
+        }
+      },
+      "orb_only_r1": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/orb_only_r1/provenance/snapshot_sha256.txt",
+          "sha256": "9719b7e724484ad8fad7bb43b83b690d0fdbfb0b560a5ff175aa863a214964fa"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/orb_only_r1/run_manifest.txt",
+          "sha256": "a85a756f236fd7e85b6419f9b9016bb44e1890034a03e444d81f0af2eb113982"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/orb_only_r1/instrumentation/seed_summary.json",
+          "sha256": "e3f51c57b8176be35be2ea67074338318dd578ecabde94c1a2ee64e632e533cf"
+        }
+      }
+    },
+    "low_texture": {
+      "drop_r1": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "4d77d35c290b73157b0db402c185f1750e64409418f1d79d3e2de06b94daa919",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/drop_r1/provenance/snapshot_sha256.txt",
+          "sha256": "c89a56dfbe9e0e57af435fe4504800e9ed4636f8c225a7fecc62691fcdfbbab2"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/drop_r1/run_manifest.txt",
+          "sha256": "3f391073bdb8fd5bb0a88452e2830c5b930c67e3a9174b2f31bc3053dea214e1"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/drop_r1/instrumentation/seed_summary.json",
+          "sha256": "b73a32d47007d0d61b2cfb5e58df2a634e1f48ca3fe40f975e099bec63ae20cd"
+        }
+      },
+      "drop_r2": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "4d77d35c290b73157b0db402c185f1750e64409418f1d79d3e2de06b94daa919",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/drop_r2/provenance/snapshot_sha256.txt",
+          "sha256": "c89a56dfbe9e0e57af435fe4504800e9ed4636f8c225a7fecc62691fcdfbbab2"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/drop_r2/run_manifest.txt",
+          "sha256": "e317562fe67d644ff10678ffc38fa36c2b7988578d5b657b58245a65e03117df"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/drop_r2/instrumentation/seed_summary.json",
+          "sha256": "bcc6d0d7bfe75cf29320cb9f83f93d972ac8953864a6c0bdcc2b75da87010250"
+        }
+      },
+      "drop_r3": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "4d77d35c290b73157b0db402c185f1750e64409418f1d79d3e2de06b94daa919",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/drop_r3/provenance/snapshot_sha256.txt",
+          "sha256": "c89a56dfbe9e0e57af435fe4504800e9ed4636f8c225a7fecc62691fcdfbbab2"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/drop_r3/run_manifest.txt",
+          "sha256": "825e2c97d131915ee06bbb7889f508bf4ca8ece97310944823495b6be79bdd63"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/drop_r3/instrumentation/seed_summary.json",
+          "sha256": "7690dc33b5a441d110491e4f0210310e8b6148a6d8968a0886d841356ad12a9d"
+        }
+      },
+      "drop_r4": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full full_unbounded",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "4d77d35c290b73157b0db402c185f1750e64409418f1d79d3e2de06b94daa919",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/drop_r4/provenance/snapshot_sha256.txt",
+          "sha256": "c89a56dfbe9e0e57af435fe4504800e9ed4636f8c225a7fecc62691fcdfbbab2"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/drop_r4/run_manifest.txt",
+          "sha256": "92a1ac1fe6022aa24423fe86b79f12e34ce1a6685bee0b4b60c3e2a8f567df12"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/drop_r4/instrumentation/seed_summary.json",
+          "sha256": "bdec7c9a0f8127d2c0926fb3b9e7144b67923270df51cd4470b10f7513419f7c"
+        }
+      },
+      "full_bridge_off_r1": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "34cd230dfab28cd0050d8b4401815ed57985f4b85a0074748d24942019c31fb0",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_bridge_off_r1/provenance/snapshot_sha256.txt",
+          "sha256": "ae639468be8707769ef486d22eee407030beed756b6c684a8bbab4d252fcbde2"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_bridge_off_r1/run_manifest.txt",
+          "sha256": "7683101e2ace649c643db3853c761de8cb8437495d59ee58b147c043625a06dd"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_bridge_off_r1/instrumentation/seed_summary.json",
+          "sha256": "a48fedad7513b7a748011b3e8dee4362a65bb33e599712f48944556e3584a281"
+        }
+      },
+      "full_bridge_off_r2": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "34cd230dfab28cd0050d8b4401815ed57985f4b85a0074748d24942019c31fb0",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_bridge_off_r2/provenance/snapshot_sha256.txt",
+          "sha256": "ae639468be8707769ef486d22eee407030beed756b6c684a8bbab4d252fcbde2"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_bridge_off_r2/run_manifest.txt",
+          "sha256": "a07be69f4fdcf980e8f7a058a7591da761d9fd51b1aac82cbdc5b91cc5540c61"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_bridge_off_r2/instrumentation/seed_summary.json",
+          "sha256": "036289d965670a55d62df42e6bc5da9b4316f89a5f7dc68cc55ffa57ac332d6f"
+        }
+      },
+      "full_bridge_off_r3": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "34cd230dfab28cd0050d8b4401815ed57985f4b85a0074748d24942019c31fb0",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_bridge_off_r3/provenance/snapshot_sha256.txt",
+          "sha256": "ae639468be8707769ef486d22eee407030beed756b6c684a8bbab4d252fcbde2"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_bridge_off_r3/run_manifest.txt",
+          "sha256": "4538a47a80ab31776608418f35a8ec2ebfb51f16e68d92863587814d3a5a5155"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_bridge_off_r3/instrumentation/seed_summary.json",
+          "sha256": "be5dc1f456fed6e9a5d7a0e2cfeea34de835f81c7a9635e03c352b2fc6c47ecf"
+        }
+      },
+      "full_bridge_off_r4": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full full_unbounded",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "34cd230dfab28cd0050d8b4401815ed57985f4b85a0074748d24942019c31fb0",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_bridge_off_r4/provenance/snapshot_sha256.txt",
+          "sha256": "ae639468be8707769ef486d22eee407030beed756b6c684a8bbab4d252fcbde2"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_bridge_off_r4/run_manifest.txt",
+          "sha256": "9fb236bd5d4f88760736b3333e59e0793cf3bfcccb91d68e8cd198105a308e24"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_bridge_off_r4/instrumentation/seed_summary.json",
+          "sha256": "c2acd773aded287b0d5731d0a68950683b148d8cdfde468bb4ecdb325c087d31"
+        }
+      },
+      "full_r1": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "1",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "34cd230dfab28cd0050d8b4401815ed57985f4b85a0074748d24942019c31fb0",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_r1/provenance/snapshot_sha256.txt",
+          "sha256": "ae639468be8707769ef486d22eee407030beed756b6c684a8bbab4d252fcbde2"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_r1/run_manifest.txt",
+          "sha256": "c1d287902d143bd1ce6f0106939137938c316c6cc47f8e7e0edb2da44d232233"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_r1/instrumentation/seed_summary.json",
+          "sha256": "c605f4bb8da9797f6477b5db5dd88a328edb65a3c126bfc45f4becd436f42322"
+        }
+      },
+      "full_r2": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "1",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "34cd230dfab28cd0050d8b4401815ed57985f4b85a0074748d24942019c31fb0",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_r2/provenance/snapshot_sha256.txt",
+          "sha256": "ae639468be8707769ef486d22eee407030beed756b6c684a8bbab4d252fcbde2"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_r2/run_manifest.txt",
+          "sha256": "a499717f56e4a71648a6b1bd1feb2dbff5fe8c7d30934b5d90fd2fa49abc985a"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_r2/instrumentation/seed_summary.json",
+          "sha256": "13cb9cf62eac84a55413bed4a36569f7c97844efcbdc59e3b0a6c9200ac46c2a"
+        }
+      },
+      "full_r3": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "1",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "34cd230dfab28cd0050d8b4401815ed57985f4b85a0074748d24942019c31fb0",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_r3/provenance/snapshot_sha256.txt",
+          "sha256": "ae639468be8707769ef486d22eee407030beed756b6c684a8bbab4d252fcbde2"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_r3/run_manifest.txt",
+          "sha256": "bb0b6175a7766d6eac4668e9010b02c8ffbbdabf214c092e2da94e8ea10561b4"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_r3/instrumentation/seed_summary.json",
+          "sha256": "d38753fde68c884131b0fabf3610cee1bfe0d867286f20811c8ff030a33cf849"
+        }
+      },
+      "full_r4": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "1",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full full_unbounded",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "34cd230dfab28cd0050d8b4401815ed57985f4b85a0074748d24942019c31fb0",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_r4/provenance/snapshot_sha256.txt",
+          "sha256": "ae639468be8707769ef486d22eee407030beed756b6c684a8bbab4d252fcbde2"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_r4/run_manifest.txt",
+          "sha256": "ffcfa7c31c69d6473f9cf6dceb11345eba5d07b825e381a4916b48f6c53b037a"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_r4/instrumentation/seed_summary.json",
+          "sha256": "bc0347b6ae3c17cc208bec5e6ede6171042f1903c6b1f379c245d01bd272b043"
+        }
+      },
+      "full_unbounded_r1": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "34cd230dfab28cd0050d8b4401815ed57985f4b85a0074748d24942019c31fb0",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_unbounded_r1/provenance/snapshot_sha256.txt",
+          "sha256": "ae639468be8707769ef486d22eee407030beed756b6c684a8bbab4d252fcbde2"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_unbounded_r1/run_manifest.txt",
+          "sha256": "361c963117beea8564cbda3fd11ee0c2f3c527eb0cb17a0e0f4796f8fb906159"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_unbounded_r1/instrumentation/seed_summary.json",
+          "sha256": "3fa7248234bae3e655492373640745009c518862c16fe52433c62942b8cfdb7f"
+        }
+      },
+      "full_unbounded_r2": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "34cd230dfab28cd0050d8b4401815ed57985f4b85a0074748d24942019c31fb0",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_unbounded_r2/provenance/snapshot_sha256.txt",
+          "sha256": "ae639468be8707769ef486d22eee407030beed756b6c684a8bbab4d252fcbde2"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_unbounded_r2/run_manifest.txt",
+          "sha256": "f0aaae906d21f7619f04af48de52c8d14856ab898a623d89c3e06c16abd80b15"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_unbounded_r2/instrumentation/seed_summary.json",
+          "sha256": "dfedef1216ac79dcb0c69a9518ef62fedc8714a8d07e6ca7f4654a0ab9ab1692"
+        }
+      },
+      "full_unbounded_r3": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "34cd230dfab28cd0050d8b4401815ed57985f4b85a0074748d24942019c31fb0",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_unbounded_r3/provenance/snapshot_sha256.txt",
+          "sha256": "ae639468be8707769ef486d22eee407030beed756b6c684a8bbab4d252fcbde2"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_unbounded_r3/run_manifest.txt",
+          "sha256": "23f04e3ede5f67b2cdfaf161ad7280dec2350ab07ff931cabea6693fb18b6252"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_unbounded_r3/instrumentation/seed_summary.json",
+          "sha256": "4b7b5b6f0ef8c59c26680affd416fbbb0589d2148533193fff3c981eaf048c9a"
+        }
+      },
+      "full_unbounded_r4": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full full_unbounded",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "34cd230dfab28cd0050d8b4401815ed57985f4b85a0074748d24942019c31fb0",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_unbounded_r4/provenance/snapshot_sha256.txt",
+          "sha256": "ae639468be8707769ef486d22eee407030beed756b6c684a8bbab4d252fcbde2"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_unbounded_r4/run_manifest.txt",
+          "sha256": "28beabe98222948858ed044eed923c202c73cfb47b8b4d34496ef65399b29710"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_unbounded_r4/instrumentation/seed_summary.json",
+          "sha256": "103a97b40576923ab0d3411066ec8a4a5bf3a29b87cc6cda17b63322f57efab9"
+        }
+      },
+      "orb_only_r1": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/orb_only_r1/provenance/snapshot_sha256.txt",
+          "sha256": "9719b7e724484ad8fad7bb43b83b690d0fdbfb0b560a5ff175aa863a214964fa"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/orb_only_r1/run_manifest.txt",
+          "sha256": "91712828257f569500a3d7f1d0e335a6aedacf542ce8846e70129936129e5087"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/orb_only_r1/instrumentation/seed_summary.json",
+          "sha256": "b8adede19c207c9ff29e78eb102d0490e246469e3803adeb64329dc13505f1f5"
+        }
+      },
+      "orb_only_r2": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/orb_only_r2/provenance/snapshot_sha256.txt",
+          "sha256": "9719b7e724484ad8fad7bb43b83b690d0fdbfb0b560a5ff175aa863a214964fa"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/orb_only_r2/run_manifest.txt",
+          "sha256": "d6f554334090aae627e894b83561fc4e9e3fc20cf33e2d0831cf1d32415e0605"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/orb_only_r2/instrumentation/seed_summary.json",
+          "sha256": "472d50260a753e2f05814499b57f223bc30ceb227b8d67a6e6a5108602aa412e"
+        }
+      },
+      "orb_only_r3": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full_unbounded full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/orb_only_r3/provenance/snapshot_sha256.txt",
+          "sha256": "9719b7e724484ad8fad7bb43b83b690d0fdbfb0b560a5ff175aa863a214964fa"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/orb_only_r3/run_manifest.txt",
+          "sha256": "d5bde879418d1628074a376df0630f404d3a7b9888cff7981278fbeb567f9173"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/orb_only_r3/instrumentation/seed_summary.json",
+          "sha256": "0911bf878d6a684a2b9ab0c3a12d8a0ce6cc9bd032934c02f5f498dbed2989b2"
+        }
+      },
+      "orb_only_r4": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full_bridge_off full full_unbounded",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "",
+          "times_sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/orb_only_r4/provenance/snapshot_sha256.txt",
+          "sha256": "9719b7e724484ad8fad7bb43b83b690d0fdbfb0b560a5ff175aa863a214964fa"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/orb_only_r4/run_manifest.txt",
+          "sha256": "2be9725a52df5f565db30cf7bc0a1d402fd2456d84298fc3c968c0f390414209"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/orb_only_r4/instrumentation/seed_summary.json",
+          "sha256": "f6edd338767a8ce857ca91bd08b97fb3b2391ccbf4d2e8f3858bbcf224891d00"
+        }
+      }
+    },
+    "normal_texture": {
+      "drop_r1": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "4d77d35c290b73157b0db402c185f1750e64409418f1d79d3e2de06b94daa919",
+          "times_sha256": "8fe80352a470597e27be4e1b5753771fa0ece15f25a1d03372f08b437c4263d4"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/drop_r1/provenance/snapshot_sha256.txt",
+          "sha256": "2c34eba6d799c84e00545c8db261f93174ab70f57dcc4865e8743cae1acc0db3"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/drop_r1/run_manifest.txt",
+          "sha256": "b03dcb7d4ebb5cf09dc108c6c5843562193acba482f9b5db7b088cd2cd4bae78"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/drop_r1/instrumentation/seed_summary.json",
+          "sha256": "92d2b3c9f09b5bf80a5115a8d1c9fa87fdc391ecef884e2dd72d4b9b07e23152"
+        }
+      },
+      "drop_r2": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "4d77d35c290b73157b0db402c185f1750e64409418f1d79d3e2de06b94daa919",
+          "times_sha256": "8fe80352a470597e27be4e1b5753771fa0ece15f25a1d03372f08b437c4263d4"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/drop_r2/provenance/snapshot_sha256.txt",
+          "sha256": "2c34eba6d799c84e00545c8db261f93174ab70f57dcc4865e8743cae1acc0db3"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/drop_r2/run_manifest.txt",
+          "sha256": "6f7512f0204a6ab8bd35b2edfb3ec8ab3a68b29addd29fb8af24d1b134c86b33"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/drop_r2/instrumentation/seed_summary.json",
+          "sha256": "975fe60b69868f6de8c239de644ea4cac11e6b7b7c6f5d7e94bde6bf34cacede"
+        }
+      },
+      "drop_r3": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "4d77d35c290b73157b0db402c185f1750e64409418f1d79d3e2de06b94daa919",
+          "times_sha256": "8fe80352a470597e27be4e1b5753771fa0ece15f25a1d03372f08b437c4263d4"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/drop_r3/provenance/snapshot_sha256.txt",
+          "sha256": "2c34eba6d799c84e00545c8db261f93174ab70f57dcc4865e8743cae1acc0db3"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/drop_r3/run_manifest.txt",
+          "sha256": "2f2f9e597bd1b14d47af0f6d2618a8cbf3f03e89ae78e3a7ca540803bc645e4b"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/drop_r3/instrumentation/seed_summary.json",
+          "sha256": "566fecd01b4e2aa996a80af45e240c17233e07443b8a1e6942d6067156b0a58e"
+        }
+      },
+      "drop_r4": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only full drop",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "4d77d35c290b73157b0db402c185f1750e64409418f1d79d3e2de06b94daa919",
+          "times_sha256": "8fe80352a470597e27be4e1b5753771fa0ece15f25a1d03372f08b437c4263d4"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/drop_r4/provenance/snapshot_sha256.txt",
+          "sha256": "2c34eba6d799c84e00545c8db261f93174ab70f57dcc4865e8743cae1acc0db3"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/drop_r4/run_manifest.txt",
+          "sha256": "9679e17878f9a41f170a54d279fe992672621afbb697ae4f81fc09417b66a249"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/drop_r4/instrumentation/seed_summary.json",
+          "sha256": "ae76c25ceaf5270dd359e48ae81ec2aa5a88304971880b192db4cbc6399e2358"
+        }
+      },
+      "full_r1": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "1",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "4d77d35c290b73157b0db402c185f1750e64409418f1d79d3e2de06b94daa919",
+          "times_sha256": "8fe80352a470597e27be4e1b5753771fa0ece15f25a1d03372f08b437c4263d4"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/full_r1/provenance/snapshot_sha256.txt",
+          "sha256": "2c34eba6d799c84e00545c8db261f93174ab70f57dcc4865e8743cae1acc0db3"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/full_r1/run_manifest.txt",
+          "sha256": "a82d1c0cef7ab4df5f00d28cb7bf8fd704c6934becc317f0c47f62cdd76ef017"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/full_r1/instrumentation/seed_summary.json",
+          "sha256": "b28a46acdad1dc12e10fc40365843b4747e866a4ff2109df8660c406ff6fbe88"
+        }
+      },
+      "full_r2": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "1",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "4d77d35c290b73157b0db402c185f1750e64409418f1d79d3e2de06b94daa919",
+          "times_sha256": "8fe80352a470597e27be4e1b5753771fa0ece15f25a1d03372f08b437c4263d4"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/full_r2/provenance/snapshot_sha256.txt",
+          "sha256": "2c34eba6d799c84e00545c8db261f93174ab70f57dcc4865e8743cae1acc0db3"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/full_r2/run_manifest.txt",
+          "sha256": "5965cfab852d0bb320106bded60e4f69328f80abbd48b9645434bc2038500913"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/full_r2/instrumentation/seed_summary.json",
+          "sha256": "f30e33af742326f2a31bc33e2f3689ef7e76b0f693d9190d706c6f30be9f6cc5"
+        }
+      },
+      "full_r3": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "1",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "4d77d35c290b73157b0db402c185f1750e64409418f1d79d3e2de06b94daa919",
+          "times_sha256": "8fe80352a470597e27be4e1b5753771fa0ece15f25a1d03372f08b437c4263d4"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/full_r3/provenance/snapshot_sha256.txt",
+          "sha256": "2c34eba6d799c84e00545c8db261f93174ab70f57dcc4865e8743cae1acc0db3"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/full_r3/run_manifest.txt",
+          "sha256": "1aedaf41ff3d607eef0e5426f6d01490ec7cf19683f6c66dcf5ad5d13dcb6eeb"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/full_r3/instrumentation/seed_summary.json",
+          "sha256": "7f5358e47b4faa70185791df77d6847814f1e433bed7c871adeceacab4ca5e02"
+        }
+      },
+      "full_r4": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "1",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only full drop",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "4d77d35c290b73157b0db402c185f1750e64409418f1d79d3e2de06b94daa919",
+          "times_sha256": "8fe80352a470597e27be4e1b5753771fa0ece15f25a1d03372f08b437c4263d4"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/full_r4/provenance/snapshot_sha256.txt",
+          "sha256": "2c34eba6d799c84e00545c8db261f93174ab70f57dcc4865e8743cae1acc0db3"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/full_r4/run_manifest.txt",
+          "sha256": "11e1cf78d5a322e47a723f3e0cd0877afa0972e56ccfc9b4e13fe3cdb5384e29"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/full_r4/instrumentation/seed_summary.json",
+          "sha256": "37ace2374879205b98081f45aa5bc575aa493691cb9d13a6ee151ad3f148be57"
+        }
+      },
+      "orb_only_r1": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "",
+          "times_sha256": "8fe80352a470597e27be4e1b5753771fa0ece15f25a1d03372f08b437c4263d4"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/orb_only_r1/provenance/snapshot_sha256.txt",
+          "sha256": "7895a568db6eb22623b8f2b770bbebc27bdc705f8de750ce0a82586cc0cafcfe"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/orb_only_r1/run_manifest.txt",
+          "sha256": "12aeed48922eed21620b53bc701ced8d57e1e3c5077c933184dec80bd2e6ed55"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/orb_only_r1/instrumentation/seed_summary.json",
+          "sha256": "1280c3920211631fb31b6615667222569174fc0e23965daf181e65fbfdb799f7"
+        }
+      },
+      "orb_only_r2": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "",
+          "times_sha256": "8fe80352a470597e27be4e1b5753771fa0ece15f25a1d03372f08b437c4263d4"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/orb_only_r2/provenance/snapshot_sha256.txt",
+          "sha256": "7895a568db6eb22623b8f2b770bbebc27bdc705f8de750ce0a82586cc0cafcfe"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/orb_only_r2/run_manifest.txt",
+          "sha256": "673f50bb5fda3d6400e1e24fd5ac6e839a54f513e92ead38855ba61d43c1b34c"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/orb_only_r2/instrumentation/seed_summary.json",
+          "sha256": "77e858b2de31061e3e8dc1406962e17e5b124db96dfe479916538654910f6a95"
+        }
+      },
+      "orb_only_r3": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only drop full",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "",
+          "times_sha256": "8fe80352a470597e27be4e1b5753771fa0ece15f25a1d03372f08b437c4263d4"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/orb_only_r3/provenance/snapshot_sha256.txt",
+          "sha256": "7895a568db6eb22623b8f2b770bbebc27bdc705f8de750ce0a82586cc0cafcfe"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/orb_only_r3/run_manifest.txt",
+          "sha256": "93d38af656578a465b5f4509f67e4a4db7bce1d2a2ddf730a39e7cccd8103481"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/orb_only_r3/instrumentation/seed_summary.json",
+          "sha256": "9fa3d8ae231ded2bd1ef08c70194cc6004ff5161587a194a372127f0743374c8"
+        }
+      },
+      "orb_only_r4": {
+        "frozen_contract": {
+          "binary_sha256": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+          "config_sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee",
+          "external_lineage_pre_kf_outlier_purge_enforce": "0",
+          "liborbslam3_sha256": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+          "role_order": "orb_only full drop",
+          "runner_sha256": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+          "seed_sha256": "",
+          "times_sha256": "8fe80352a470597e27be4e1b5753771fa0ece15f25a1d03372f08b437c4263d4"
+        },
+        "frozen_snapshot": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/orb_only_r4/provenance/snapshot_sha256.txt",
+          "sha256": "7895a568db6eb22623b8f2b770bbebc27bdc705f8de750ce0a82586cc0cafcfe"
+        },
+        "manifest": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/orb_only_r4/run_manifest.txt",
+          "sha256": "ef13e84e75008d44f549e64208b65f570c9c67134203316458d41e211ed8563a"
+        },
+        "seed_summary": {
+          "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/orb_only_r4/instrumentation/seed_summary.json",
+          "sha256": "299e2619cd1d844574133d83b54f19b13031f2fa2380308dc843ffa7bf1b54f7"
+        }
+      }
+    }
+  },
+  "input_artifacts": {
+    "camera_config": {
+      "path": "/mnt/data/AQUA-FE_WS/logs/orbslam3_validation/ntnu_fjord_cam0_mono.yaml",
+      "sha256": "51893f89dbedd3e41560047fa018a88162854654d5fafe7b60ee49c1fe39d7ee"
+    },
+    "diagnostic_candidate_events": {
+      "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/full_r1/instrumentation/seed_events.csv",
+      "sha256": "376f4c76f2b3080c210a43f3626cd313f46a31c91c1ae2934be727ee59342853"
+    },
+    "diagnostic_evaluation_online": {
+      "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/evaluation_online.csv",
+      "sha256": "578c1ef5fdd3becbd9f1250cce66a6ec4c0d5a2861f950a7645e6cb80a4ae44b"
+    },
+    "diagnostic_evaluation_reconstructed": {
+      "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/evaluation_reconstructed.csv",
+      "sha256": "48e9cc1236e1aae9a9239c5ae221c882df4a4d7370d0fe86984e5dafb87e4f27"
+    },
+    "diagnostic_unbounded_events": {
+      "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/diagnostic_n6_d20/full_v23_fivearm_h100_q09/full_unbounded_r1/instrumentation/seed_events.csv",
+      "sha256": "c5885d9a9551c3765cf456aec81dc4592239b6d609056ac0f439ac6bb5c67fe6"
+    },
+    "low_evaluation_online": {
+      "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/evaluation_online.csv",
+      "sha256": "7d9fc55703c7f4c93bc41e17f8bb9e9feab5bb99baec65d1c94d57d88c2e2acf"
+    },
+    "low_evaluation_reconstructed": {
+      "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/evaluation_reconstructed.csv",
+      "sha256": "8ebdea362e25d7c7f8a258341b467b06a18bc6ed3121799f753e42cbe9381129"
+    },
+    "low_frontend_stats": {
+      "path": "/mnt/data/AQUA-FE_WS/online_positive_search_20260721/ntnu_fjord4_s30_d10/stats.csv",
+      "sha256": "9e61d0b444ac561705e793fe506a9a460110390ef148dda256069b1c5bc813c0"
+    },
+    "low_groundtruth": {
+      "path": "/mnt/data/AQUA-FE_WS/orbslam3_validation/ntnu_fjord4_s30_d10/dataset/groundtruth_tum.txt",
+      "sha256": "782ad4bf605330074a229f0c8434d02cbe4dab87158af1030f0ea0a89c4b5f47"
+    },
+    "low_native_times": {
+      "path": "/mnt/data/AQUA-FE_WS/orbslam3_validation/ntnu_fjord4_s30_d10/dataset/cam0_times.txt",
+      "sha256": "b486ed0ea2d01def64682d3b66c0e09ad0042e55186e1d267808db6d438adec0"
+    },
+    "low_seed_export_stats": {
+      "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/assets/seed_export_stats.json",
+      "sha256": "1ed964e061f344305a5dabc5844f96a1475f2a9701df1ad427c825dc3981a647"
+    },
+    "normal_evaluation_online": {
+      "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/evaluation_online.csv",
+      "sha256": "7a504125447677eb316d7e52f96522ecf915dd5c2aaaac5e9f8847a4bf25f74c"
+    },
+    "normal_evaluation_reconstructed": {
+      "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/evaluation_reconstructed.csv",
+      "sha256": "2ab0951bad05e53f8b6ca650430bad72f0a8025edc1e30a73fb0da7801365ae1"
+    },
+    "normal_frontend_stats": {
+      "path": "/mnt/data/AQUA-FE_WS/online_positive_search_20260721/ntnu_fjord4_s50_d20/stats.csv",
+      "sha256": "5456ff092255fe0a04fde945c8a3751b50a341890b4160a579ca4e35feb33e8f"
+    },
+    "normal_groundtruth": {
+      "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/dataset/groundtruth_tum.txt",
+      "sha256": "6032c428b0a432485b42abe2ddf0321fe15f41a3d96642cb1958568947be9f1a"
+    },
+    "normal_native_times": {
+      "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/dataset/cam0_times.txt",
+      "sha256": "8fe80352a470597e27be4e1b5753771fa0ece15f25a1d03372f08b437c4263d4"
+    },
+    "normal_seed_export_stats": {
+      "path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/assets/seed_export_stats.json",
+      "sha256": "1d7d93706de610db2cbb1a025737d13efafaff240f2b01142f8c5f9d724da615"
+    }
+  },
+  "low_texture_run_root": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09",
+  "low_trajectory_hashes": {
+    "drop": {
+      "online": [
+        "5a2b153facb7fe53547cc1fed03f3575d4c25ab36f8cd9639585817a94650389",
+        "5a2b153facb7fe53547cc1fed03f3575d4c25ab36f8cd9639585817a94650389",
+        "5a2b153facb7fe53547cc1fed03f3575d4c25ab36f8cd9639585817a94650389",
+        "5a2b153facb7fe53547cc1fed03f3575d4c25ab36f8cd9639585817a94650389"
+      ],
+      "reconstructed": [
+        "aed9a250765e7cf36a7581db66efb83d4e6f57f167f93b55bdba868420dfa0e4",
+        "aed9a250765e7cf36a7581db66efb83d4e6f57f167f93b55bdba868420dfa0e4",
+        "aed9a250765e7cf36a7581db66efb83d4e6f57f167f93b55bdba868420dfa0e4",
+        "aed9a250765e7cf36a7581db66efb83d4e6f57f167f93b55bdba868420dfa0e4"
+      ]
+    },
+    "full": {
+      "online": [
+        "de11e82fad35476541ee304e0910c6045737157446464f4786ea7824162756a6",
+        "de11e82fad35476541ee304e0910c6045737157446464f4786ea7824162756a6",
+        "de11e82fad35476541ee304e0910c6045737157446464f4786ea7824162756a6",
+        "1a68170d04d4dcf07738085aeac613a67c795e66f16f30a10556bcb44e732d49"
+      ],
+      "reconstructed": [
+        "f982e7cdf945544f49e82fe17c60679ff7b5e9de1e3d9d076337ba5e8a2e7007",
+        "f982e7cdf945544f49e82fe17c60679ff7b5e9de1e3d9d076337ba5e8a2e7007",
+        "f982e7cdf945544f49e82fe17c60679ff7b5e9de1e3d9d076337ba5e8a2e7007",
+        "a2435ffe0b58293835056b60dbe0a26d4ad76f00ca744f2c835cb8c207f93fa8"
+      ]
+    },
+    "full_bridge_off": {
+      "online": [
+        "92a0f0920d1a4f4da7b992277cbdd1bfb144c059440033bd549c4f3600f5f499",
+        "92a0f0920d1a4f4da7b992277cbdd1bfb144c059440033bd549c4f3600f5f499",
+        "92a0f0920d1a4f4da7b992277cbdd1bfb144c059440033bd549c4f3600f5f499",
+        "92a0f0920d1a4f4da7b992277cbdd1bfb144c059440033bd549c4f3600f5f499"
+      ],
+      "reconstructed": [
+        "8bf1ae1678cf36a925cba8f363d52f6244be5758425b37cc8b6b256aa2730357",
+        "8bf1ae1678cf36a925cba8f363d52f6244be5758425b37cc8b6b256aa2730357",
+        "8bf1ae1678cf36a925cba8f363d52f6244be5758425b37cc8b6b256aa2730357",
+        "8bf1ae1678cf36a925cba8f363d52f6244be5758425b37cc8b6b256aa2730357"
+      ]
+    },
+    "full_unbounded": {
+      "online": [
+        "de11e82fad35476541ee304e0910c6045737157446464f4786ea7824162756a6",
+        "6c2510ee959068212cce32c2277ee60b1f3039eeee7dbf899974c4343dc73da6",
+        "de11e82fad35476541ee304e0910c6045737157446464f4786ea7824162756a6",
+        "de11e82fad35476541ee304e0910c6045737157446464f4786ea7824162756a6"
+      ],
+      "reconstructed": [
+        "f982e7cdf945544f49e82fe17c60679ff7b5e9de1e3d9d076337ba5e8a2e7007",
+        "60f1ef3add8a9613968f9e603cc83174e99ebbaaa715ad5d2a4aff4000c06095",
+        "f982e7cdf945544f49e82fe17c60679ff7b5e9de1e3d9d076337ba5e8a2e7007",
+        "f982e7cdf945544f49e82fe17c60679ff7b5e9de1e3d9d076337ba5e8a2e7007"
+      ]
+    },
+    "orb_only": {
+      "online": [
+        "5a2b153facb7fe53547cc1fed03f3575d4c25ab36f8cd9639585817a94650389",
+        "5a2b153facb7fe53547cc1fed03f3575d4c25ab36f8cd9639585817a94650389",
+        "5a2b153facb7fe53547cc1fed03f3575d4c25ab36f8cd9639585817a94650389",
+        "5a2b153facb7fe53547cc1fed03f3575d4c25ab36f8cd9639585817a94650389"
+      ],
+      "reconstructed": [
+        "aed9a250765e7cf36a7581db66efb83d4e6f57f167f93b55bdba868420dfa0e4",
+        "aed9a250765e7cf36a7581db66efb83d4e6f57f167f93b55bdba868420dfa0e4",
+        "aed9a250765e7cf36a7581db66efb83d4e6f57f167f93b55bdba868420dfa0e4",
+        "aed9a250765e7cf36a7581db66efb83d4e6f57f167f93b55bdba868420dfa0e4"
+      ]
+    }
+  },
+  "low_v23_counters": [
+    {
+      "assisted_matches": 0,
+      "assisted_outliers": 0,
+      "complete": true,
+      "events_overflowed": 0,
+      "pre_kf_outliers": 0,
+      "pre_kf_purged": 0,
+      "pre_kf_scans": 90,
+      "related_mappoint_overflowed": 0,
+      "repeat": 1,
+      "role": "full_unbounded",
+      "seed_summary_path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_unbounded_r1/instrumentation/seed_summary.json",
+      "seed_summary_sha256": "3fa7248234bae3e655492373640745009c518862c16fe52433c62942b8cfdb7f"
+    },
+    {
+      "assisted_matches": 0,
+      "assisted_outliers": 0,
+      "complete": true,
+      "events_overflowed": 0,
+      "pre_kf_outliers": 0,
+      "pre_kf_purged": 0,
+      "pre_kf_scans": 85,
+      "related_mappoint_overflowed": 0,
+      "repeat": 2,
+      "role": "full_unbounded",
+      "seed_summary_path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_unbounded_r2/instrumentation/seed_summary.json",
+      "seed_summary_sha256": "dfedef1216ac79dcb0c69a9518ef62fedc8714a8d07e6ca7f4654a0ab9ab1692"
+    },
+    {
+      "assisted_matches": 0,
+      "assisted_outliers": 0,
+      "complete": true,
+      "events_overflowed": 0,
+      "pre_kf_outliers": 0,
+      "pre_kf_purged": 0,
+      "pre_kf_scans": 90,
+      "related_mappoint_overflowed": 0,
+      "repeat": 3,
+      "role": "full_unbounded",
+      "seed_summary_path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_unbounded_r3/instrumentation/seed_summary.json",
+      "seed_summary_sha256": "4b7b5b6f0ef8c59c26680affd416fbbb0589d2148533193fff3c981eaf048c9a"
+    },
+    {
+      "assisted_matches": 0,
+      "assisted_outliers": 0,
+      "complete": true,
+      "events_overflowed": 0,
+      "pre_kf_outliers": 0,
+      "pre_kf_purged": 0,
+      "pre_kf_scans": 90,
+      "related_mappoint_overflowed": 0,
+      "repeat": 4,
+      "role": "full_unbounded",
+      "seed_summary_path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_unbounded_r4/instrumentation/seed_summary.json",
+      "seed_summary_sha256": "103a97b40576923ab0d3411066ec8a4a5bf3a29b87cc6cda17b63322f57efab9"
+    },
+    {
+      "assisted_matches": 0,
+      "assisted_outliers": 0,
+      "complete": true,
+      "events_overflowed": 0,
+      "pre_kf_outliers": 0,
+      "pre_kf_purged": 0,
+      "pre_kf_scans": 90,
+      "related_mappoint_overflowed": 0,
+      "repeat": 1,
+      "role": "full",
+      "seed_summary_path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_r1/instrumentation/seed_summary.json",
+      "seed_summary_sha256": "c605f4bb8da9797f6477b5db5dd88a328edb65a3c126bfc45f4becd436f42322"
+    },
+    {
+      "assisted_matches": 0,
+      "assisted_outliers": 0,
+      "complete": true,
+      "events_overflowed": 0,
+      "pre_kf_outliers": 0,
+      "pre_kf_purged": 0,
+      "pre_kf_scans": 90,
+      "related_mappoint_overflowed": 0,
+      "repeat": 2,
+      "role": "full",
+      "seed_summary_path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_r2/instrumentation/seed_summary.json",
+      "seed_summary_sha256": "13cb9cf62eac84a55413bed4a36569f7c97844efcbdc59e3b0a6c9200ac46c2a"
+    },
+    {
+      "assisted_matches": 0,
+      "assisted_outliers": 0,
+      "complete": true,
+      "events_overflowed": 0,
+      "pre_kf_outliers": 0,
+      "pre_kf_purged": 0,
+      "pre_kf_scans": 90,
+      "related_mappoint_overflowed": 0,
+      "repeat": 3,
+      "role": "full",
+      "seed_summary_path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_r3/instrumentation/seed_summary.json",
+      "seed_summary_sha256": "d38753fde68c884131b0fabf3610cee1bfe0d867286f20811c8ff030a33cf849"
+    },
+    {
+      "assisted_matches": 0,
+      "assisted_outliers": 0,
+      "complete": true,
+      "events_overflowed": 0,
+      "pre_kf_outliers": 0,
+      "pre_kf_purged": 0,
+      "pre_kf_scans": 85,
+      "related_mappoint_overflowed": 0,
+      "repeat": 4,
+      "role": "full",
+      "seed_summary_path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s30_d10/formal_finalonline_v23_lineagefirst_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_fivearm_h100_q09/full_r4/instrumentation/seed_summary.json",
+      "seed_summary_sha256": "bc0347b6ae3c17cc208bec5e6ede6171042f1903c6b1f379c245d01bd272b043"
+    }
+  ],
+  "normal_exact_byte_parity": true,
+  "normal_texture_run_root": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09",
+  "normal_trajectory_hashes": {
+    "drop": {
+      "online": [
+        "52584fd23a9d226b69228fe79f65af1a504daafda50e6e30a2b65c0396c65898",
+        "52584fd23a9d226b69228fe79f65af1a504daafda50e6e30a2b65c0396c65898",
+        "52584fd23a9d226b69228fe79f65af1a504daafda50e6e30a2b65c0396c65898",
+        "52584fd23a9d226b69228fe79f65af1a504daafda50e6e30a2b65c0396c65898"
+      ],
+      "reconstructed": [
+        "83e38859416b2d5ef02b785d81cc91689d32a8d2e402e0e809e0b09897289ee0",
+        "83e38859416b2d5ef02b785d81cc91689d32a8d2e402e0e809e0b09897289ee0",
+        "83e38859416b2d5ef02b785d81cc91689d32a8d2e402e0e809e0b09897289ee0",
+        "83e38859416b2d5ef02b785d81cc91689d32a8d2e402e0e809e0b09897289ee0"
+      ]
+    },
+    "full": {
+      "online": [
+        "52584fd23a9d226b69228fe79f65af1a504daafda50e6e30a2b65c0396c65898",
+        "52584fd23a9d226b69228fe79f65af1a504daafda50e6e30a2b65c0396c65898",
+        "52584fd23a9d226b69228fe79f65af1a504daafda50e6e30a2b65c0396c65898",
+        "52584fd23a9d226b69228fe79f65af1a504daafda50e6e30a2b65c0396c65898"
+      ],
+      "reconstructed": [
+        "83e38859416b2d5ef02b785d81cc91689d32a8d2e402e0e809e0b09897289ee0",
+        "83e38859416b2d5ef02b785d81cc91689d32a8d2e402e0e809e0b09897289ee0",
+        "83e38859416b2d5ef02b785d81cc91689d32a8d2e402e0e809e0b09897289ee0",
+        "83e38859416b2d5ef02b785d81cc91689d32a8d2e402e0e809e0b09897289ee0"
+      ]
+    },
+    "orb_only": {
+      "online": [
+        "52584fd23a9d226b69228fe79f65af1a504daafda50e6e30a2b65c0396c65898",
+        "52584fd23a9d226b69228fe79f65af1a504daafda50e6e30a2b65c0396c65898",
+        "52584fd23a9d226b69228fe79f65af1a504daafda50e6e30a2b65c0396c65898",
+        "52584fd23a9d226b69228fe79f65af1a504daafda50e6e30a2b65c0396c65898"
+      ],
+      "reconstructed": [
+        "83e38859416b2d5ef02b785d81cc91689d32a8d2e402e0e809e0b09897289ee0",
+        "83e38859416b2d5ef02b785d81cc91689d32a8d2e402e0e809e0b09897289ee0",
+        "83e38859416b2d5ef02b785d81cc91689d32a8d2e402e0e809e0b09897289ee0",
+        "83e38859416b2d5ef02b785d81cc91689d32a8d2e402e0e809e0b09897289ee0"
+      ]
+    }
+  },
+  "normal_v23_counters": [
+    {
+      "assisted_matches": 0,
+      "assisted_outliers": 0,
+      "complete": true,
+      "events_overflowed": 0,
+      "pre_kf_outliers": 0,
+      "pre_kf_purged": 0,
+      "pre_kf_scans": 240,
+      "related_mappoint_overflowed": 0,
+      "repeat": 1,
+      "role": "full",
+      "seed_summary_path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/full_r1/instrumentation/seed_summary.json",
+      "seed_summary_sha256": "b28a46acdad1dc12e10fc40365843b4747e866a4ff2109df8660c406ff6fbe88"
+    },
+    {
+      "assisted_matches": 0,
+      "assisted_outliers": 0,
+      "complete": true,
+      "events_overflowed": 0,
+      "pre_kf_outliers": 0,
+      "pre_kf_purged": 0,
+      "pre_kf_scans": 240,
+      "related_mappoint_overflowed": 0,
+      "repeat": 2,
+      "role": "full",
+      "seed_summary_path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/full_r2/instrumentation/seed_summary.json",
+      "seed_summary_sha256": "f30e33af742326f2a31bc33e2f3689ef7e76b0f693d9190d706c6f30be9f6cc5"
+    },
+    {
+      "assisted_matches": 0,
+      "assisted_outliers": 0,
+      "complete": true,
+      "events_overflowed": 0,
+      "pre_kf_outliers": 0,
+      "pre_kf_purged": 0,
+      "pre_kf_scans": 240,
+      "related_mappoint_overflowed": 0,
+      "repeat": 3,
+      "role": "full",
+      "seed_summary_path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/full_r3/instrumentation/seed_summary.json",
+      "seed_summary_sha256": "7f5358e47b4faa70185791df77d6847814f1e433bed7c871adeceacab4ca5e02"
+    },
+    {
+      "assisted_matches": 0,
+      "assisted_outliers": 0,
+      "complete": true,
+      "events_overflowed": 0,
+      "pre_kf_outliers": 0,
+      "pre_kf_purged": 0,
+      "pre_kf_scans": 240,
+      "related_mappoint_overflowed": 0,
+      "repeat": 4,
+      "role": "full",
+      "seed_summary_path": "/mnt/data/AQUA-FE_WS/orbslam3_seeded_validation/v23_crossdataset_20260730/ntnu_fjord4_s50_d20/formal_noharm_v23_lateenforce_dualgateack_equalruntime_singlecpu2_noaslr_threearm_h100_q09/full_r4/instrumentation/seed_summary.json",
+      "seed_summary_sha256": "37ace2374879205b98081f45aa5bc575aa493691cb9d13a6ee151ad3f148be57"
+    }
+  ],
+  "source_hashes": {
+    "analysis_script": "8997351b2e907d717eaed1effcbbbc9c03bbfdb07509806492f4cb71687c592f",
+    "binary": "cebeeedb862a469f9b4928fc0712fd0fd93766d4a4b5faa09e7de5a0f19083fc",
+    "evaluator": "98dfa04854da97ddd44721ac8eb03261bf54b4d760f8c560e55cacc861e31b60",
+    "library": "05a7b3cc8aa7aaefec38ce995de9fbf808662c051f1ce1f0f35925f2e6093af8",
+    "low_full_seeds": "34cd230dfab28cd0050d8b4401815ed57985f4b85a0074748d24942019c31fb0",
+    "normal_full_seeds": "4d77d35c290b73157b0db402c185f1750e64409418f1d79d3e2de06b94daa919",
+    "runner": "6ffedc001ae51b6b80a391c4dad3a6cbd917037968a1e94e582f98e78a4c4c77",
+    "tracking_source": "96c78a274f3631283b2b9a579abbe4a9fc8270031943aa2645c482eff17545cb"
+  }
+}

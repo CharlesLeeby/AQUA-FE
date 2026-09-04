@@ -1,0 +1,97 @@
+{
+  "schema_version": "aqua-fe-published-supervins-v1-official-euroc-mh01-first2s-inference-smoke-attempt-001-failure-adoption-v1",
+  "created_at": "2026-08-17T00:02:00+08:00",
+  "status": "ADOPTED_TERMINAL_FAIL_CLOSED_NO_RETRY",
+  "scientific_role": "DEVELOPMENT_ONLY_CONTROLLER_RACE_FAILURE",
+  "formal_result": {
+    "path": "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_20260816_r1/attempt_001/run_result.json",
+    "sha256": "1b5c9942e9116b9c1c8e3b4a2dde7237d051ef9f60dfafc997bd90104f0ce6ef",
+    "size_bytes": 23190,
+    "status": "FAIL_STAGE3_OFFICIAL_MH01_FIRST2S_INFERENCE_SMOKE_NO_RETRY"
+  },
+  "controller_pins": {
+    "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_first2s_inference_smoke_freeze_v1.json": {
+      "sha256": "bcb02beddb337bb13c87b3953e2819c702b52bcce22179a6915abacb42ad2caf",
+      "size_bytes": 9143
+    },
+    "/home/ma/AQUA-FE_WS/papers/supervins_v1_official_euroc_mh01_first2s_inference_smoke_execution_lock_v1.json": {
+      "sha256": "c31131d97de12f83ac9ca29c142db5b2d46efcdc469a0ae99f249ce47b6a834b",
+      "size_bytes": 3510
+    },
+    "/home/ma/AQUA-FE_WS/scripts/run_published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_v1.py": {
+      "sha256": "a32b913c17af954738915b6de8f113be11d0d19d1b357d55d39dac079c7755a0",
+      "size_bytes": 42429
+    },
+    "/home/ma/AQUA-FE_WS/scripts/tests/test_run_published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_v1.py": {
+      "sha256": "b35a8ba25124025af14f0c72f2598e1d0a52b1f0358f004a6acf0a59d17a5e64",
+      "size_bytes": 5223
+    }
+  },
+  "attempt_artifact_pins": {
+    "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_20260816_r1/attempt_001/preflight_result.json": {
+      "sha256": "a2d3434148c3116f0fb9f8d7dde084177be569201fe3a7501225b95be8274272",
+      "size_bytes": 20028
+    },
+    "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_20260816_r1/attempt_001/roscore_start_claim.json": {
+      "sha256": "71897bbcba3a196fdf3f89b7a541cea60dcd17c4109eb3b599a0a3523ca7d1e9",
+      "size_bytes": 554
+    },
+    "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_20260816_r1/attempt_001/node_start_claim.json": {
+      "sha256": "d0fd59013fcd5ed4e67ba2808e568da72fb236583810869fddc56d978e29aeaf",
+      "size_bytes": 759
+    },
+    "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_20260816_r1/attempt_001/node.stdout.log": {
+      "sha256": "1e9aeeae167d5db728885dc2b63409570f82120a3f5cee9f5b75ff4ad96d618c",
+      "size_bytes": 818
+    },
+    "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_20260816_r1/attempt_001/node.stderr.log": {
+      "sha256": "b9a67c866818b1709d3b5b7c513c76d101093ce40d7e2b30b06addd1ef497ac4",
+      "size_bytes": 1125
+    },
+    "/home/ma/AQUA-FE_WS/experiments/published_supervins_v1_official_euroc_mh01_first2s_inference_smoke_20260816_r1/attempt_001/run_result.json": {
+      "sha256": "1b5c9942e9116b9c1c8e3b4a2dde7237d051ef9f60dfafc997bd90104f0ce6ef",
+      "size_bytes": 23190
+    }
+  },
+  "observed_runtime_facts": {
+    "preflight_go": true,
+    "roscore_start_count": 1,
+    "node_start_count": 1,
+    "publisher_start_count": 0,
+    "session_ready_marker_count": 1,
+    "session_ready_marker_elapsed_seconds": 0.9557637549878564,
+    "input_publishers": {},
+    "input_subscribers_at_single_immediate_sample": {},
+    "extract_feature_time_count": 0,
+    "matches_size_count": 0,
+    "ros_messages_published": 0,
+    "node_reaped": true,
+    "roscore_reaped": true,
+    "post_processes": [],
+    "post_port_11553_bound": false,
+    "changed_frozen_pins": [],
+    "changed_trajectory_artifacts": []
+  },
+  "failure_cause": {
+    "classification": "CONTROLLER_POST_MARKER_SUBSCRIPTION_REGISTRATION_RACE",
+    "evidence": "The pinned source emits ROS_WARN(\"waiting for image and imu...\") before registerPub(n) and before n.subscribe(IMU_TOPIC, ...) and n.subscribe(IMAGE0_TOPIC, ...). The controller made one immediate getSystemState sample at the marker, observed the node and output publishers but no input subscriptions, then correctly withheld the publisher and terminated fail-closed.",
+    "model_or_input_failure_observed": false,
+    "publisher_or_inference_reached": false
+  },
+  "formal_verdict": {
+    "attempt_001_is_terminal": true,
+    "attempt_001_namespace_reuse_or_retry_authorized": false,
+    "attempt_001_evidence_modification_authorized": false,
+    "proves_model_inference_failure": false,
+    "proves_input_incompatibility": false,
+    "proves_only_controller_sample_was_too_early": true
+  },
+  "authorized_additive_delta": {
+    "attempt": "attempt_002",
+    "fresh_evidence_root_required": true,
+    "isolated_master_port": 11554,
+    "only_controller_change": "After the session marker, read-only poll getSystemState for at most 12 seconds until /supervins_estimator is the exact subscriber on both /imu0 and /cam0/image_raw; do not start the publisher unless this condition is met.",
+    "all_other_input_pins_and_success_gates_unchanged": true,
+    "retry_within_attempt_002_authorized": false
+  }
+}

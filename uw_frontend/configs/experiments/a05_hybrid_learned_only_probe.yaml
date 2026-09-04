@@ -1,0 +1,15 @@
+extends: a05_hybrid_no_recovery_probe.yaml
+
+hybrid:
+  enable_classical_recovery: false
+  enable_lk_recovery: false
+  enable_learned_recovery: false
+  enable_learned_initialization: true
+  enable_semidense_fallback_initialization: true
+  learned_init_requires_klt_confirmation: true
+  source_aware_loftr_requires_confirmation: true
+  learned_confirmation_min_frames: 3
+  learned_confirmation_max_confirmed: 24
+  semidense_fallback_sidecar_max_extra: 24
+  max_learned_initialized: 36
+  max_learned_init_fraction: 0.10
