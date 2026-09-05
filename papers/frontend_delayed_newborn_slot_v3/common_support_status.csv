@@ -1,0 +1,8 @@
+comparison_id,run_slug,learned_arm,matched_cell,window_id,status,return_code,matched_count,common_span_s,common_coverage,rpe_pairs
+a09_6000_6800__router_xfeat,a09_6000_6800,router_xfeat,matched_gftt_for_router_xfeat,aqualoc_archaeology:A09:historical_6000_6800,PASS,0,38,37.0,0.95,37
+a09_6000_6800__router_splg,a09_6000_6800,router_splg,matched_gftt_for_router_splg,aqualoc_archaeology:A09:historical_6000_6800,PASS,0,38,37.0,0.95,37
+a02_0_900__router_xfeat,a02_0_900,router_xfeat,matched_gftt_for_router_xfeat,aqualoc_archaeology:A02:0000,PASS,0,42,41.0,0.9333333333333333,41
+a02_0_900__router_splg,a02_0_900,router_splg,matched_gftt_for_router_splg,aqualoc_archaeology:A02:0000,PASS,0,42,41.0,0.9333333333333333,41
+afrl_bus_s180_d045__router_xfeat,afrl_bus_s180_d045,router_xfeat,matched_gftt_for_router_xfeat,afrl:bus_outside:0004,PASS,0,42,41.0,0.9333333333333333,41
+afrl_bus_s180_d045__router_splg,afrl_bus_s180_d045,router_splg,matched_gftt_for_router_splg,afrl:bus_outside:0004,PASS,0,42,41.0,0.9333333333333333,41
+afrl_cemetery_s135_d045__router_xfeat,afrl_cemetery_s135_d045,router_xfeat,matched_gftt_for_router_xfeat,afrl:cemetery:0003,PASS,0,43,42.0,0.9555555555555556,42

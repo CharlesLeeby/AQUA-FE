@@ -1,0 +1,82 @@
+{
+  "schema_version": "aqua-fe-delayed-newborn-slot-v3-method-lock-v1",
+  "frozen_at": "2026-09-05T23:30:05+08:00",
+  "base_git_commit": "f6f8feec66c2faf1f59cdb67c1e817028a3bccaf",
+  "base_git_branch": "main",
+  "profile": "lineage_delayed_newborn_slot_v3",
+  "exporter_sha256": "bb4e50d8b9777e76aee558d94ec0597461e9dcad4ff9c9486875b46a7c714d1d",
+  "sole_mechanism_difference": "Move the unchanged v2 intervention interval from selected feature frames 0--4 to 32--36.",
+  "contract": {
+    "feature_cap": 350,
+    "measurement_selection": false,
+    "every_n": 2,
+    "online_seed_warmup_frames": 32,
+    "intervention_first_selected_frame": 32,
+    "intervention_last_selected_frame": 36,
+    "max_selected_frame": 36,
+    "min_age_advantage": 2,
+    "min_gftt_ratio": 0.0,
+    "grid_rows": 4,
+    "grid_cols": 6,
+    "same_grid_cell_required": false,
+    "coverage_monotone_required": true,
+    "donor_cell_min_remaining": 1,
+    "max_per_frame": 6,
+    "sequence_observation_counter": 50,
+    "sequence_counter_semantics": "inherited pre-final reservation; unchanged",
+    "lineage_continuation": false,
+    "allowed_sources": [
+      "confirmed_xfeat",
+      "confirmed_non_loftr_learned"
+    ],
+    "loftr_allowed": false,
+    "tracked_klt_replacement_allowed": false,
+    "older_gftt_replacement_allowed": false
+  },
+  "files": [
+    {
+      "path": "uw_frontend/ros/export_vins_features.py",
+      "sha256": "bb4e50d8b9777e76aee558d94ec0597461e9dcad4ff9c9486875b46a7c714d1d"
+    },
+    {
+      "path": "uw_frontend/configs/experiments/low_texture_xfeat_seedchain_frontend.yaml",
+      "sha256": "6f89d861cc002dfaf0eaf5f1294b0dbcfab9fe268c5dc0d09082f79811000bf3"
+    },
+    {
+      "path": "scripts/learned_seedchain_env.sh",
+      "sha256": "4372ad94dfd8602f15698a7aa355e01606b5e22fe7593aca9f3d272b7e4aa02a"
+    },
+    {
+      "path": "scripts/run_learned_seedchain_eval.sh",
+      "sha256": "5a18fa6a590ae6f64311a0329c2dd5c0ddf6c79dc19ceb13ad7587e39d42410e"
+    },
+    {
+      "path": "scripts/run_aqualoc_archaeo_vins_eval.sh",
+      "sha256": "62eeb000aebd04b1d45d892f4d49634efd5a83437c1b7345fa82e8ae9534e96d"
+    },
+    {
+      "path": "scripts/run_aqualoc_real_vins_eval.sh",
+      "sha256": "a345de2a31b79f2e757226ce54c461912da04fdd65ec435977ca45b9ce87efda"
+    },
+    {
+      "path": "scripts/run_afrl_cave_vins_eval.sh",
+      "sha256": "e3a84054cf38b8d9f951b4c8969e297e2528fba0bc9e078a71731443ea1a1708"
+    },
+    {
+      "path": "scripts/run_ntnu_vins_eval.sh",
+      "sha256": "a2735a801bc35160e678939e6316ddf3d6f2578105184252d0ef6b594e10a84a"
+    },
+    {
+      "path": "scripts/run_frontend_geometry_maturity_router_v1.py",
+      "sha256": "ac396251293e235a94b145f60c56da021a27a9b39e9ff39a08bd9cf6239cdf11"
+    },
+    {
+      "path": "scripts/run_frontend_delayed_newborn_slot_v3.py",
+      "sha256": "0cd12f5d06f1c7febb2bd1a009b72cb34a5020cc232c57d1b090030ebc79e7f1"
+    },
+    {
+      "path": "tests/test_final_mirror_noharm_contract.py",
+      "sha256": "1325de6fc603541c94c00dcafc8e448decfe9385e06e65a8708b9c176da7760e"
+    }
+  ]
+}

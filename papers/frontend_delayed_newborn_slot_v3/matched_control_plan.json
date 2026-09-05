@@ -1,0 +1,128 @@
+{
+  "action_audit_sha256": "842b61391c56e21fb89c20d2e13d97be5e231eebcb1dec21226b56c6e48a3eec",
+  "action_positive_cells_total": 7,
+  "backend_results_seen_before_freeze": false,
+  "builder": {
+    "known_limitation": "Lineages with different first-publication frames are applied in deterministic ascending-frame stages. This is a retrospective dose/slot source control, not an online detector-isolation control.",
+    "parameters": {
+      "block_size": 7,
+      "control_source_code": 0,
+      "exclusion_radius": 18,
+      "max_candidates": 512,
+      "max_fb_error": 1.0,
+      "max_image_dt": 0.002,
+      "min_distance": 18,
+      "quality_level": 0.01
+    },
+    "path": "scripts/build_gftt_matched_lineage_control.py",
+    "preserve_target_ids": true,
+    "sha256": "72438f10f515a6f3a69eeab203d4342d4969d0541085a0b3330ca506d3eb3795"
+  },
+  "cells": [
+    {
+      "arm": "router_xfeat",
+      "birth_groups": [
+        [
+          10000000
+        ],
+        [
+          10000001
+        ]
+      ],
+      "run_slug": "a09_6000_6800",
+      "target_bag_sha256": "dfdfaa516dbad164f503f82b7d82bc666a73d9d7e900cf2fedcac4b3fb4f08b2"
+    },
+    {
+      "arm": "router_splg",
+      "birth_groups": [
+        [
+          10000000
+        ]
+      ],
+      "run_slug": "a09_6000_6800",
+      "target_bag_sha256": "80d09e1b952efc76da8b933bd88cd80839907584b9d48c7fb38f2f7d8f097d9f"
+    },
+    {
+      "arm": "router_xfeat",
+      "birth_groups": [
+        [
+          10000000,
+          10000005
+        ],
+        [
+          10000008,
+          10000012
+        ],
+        [
+          10000006
+        ]
+      ],
+      "run_slug": "a02_0_900",
+      "target_bag_sha256": "536ab12d1536c90419064f08ea8c1ec995a241d37d804dbb5a9005f482a9cf57"
+    },
+    {
+      "arm": "router_splg",
+      "birth_groups": [
+        [
+          10000001,
+          10000016
+        ],
+        [
+          10000014
+        ]
+      ],
+      "run_slug": "a02_0_900",
+      "target_bag_sha256": "b219416a425cefe5494cd7986e4bd1a84ffe4c67786e10092cf46c734f5b7eb6"
+    },
+    {
+      "arm": "router_xfeat",
+      "birth_groups": [
+        [
+          10000000
+        ]
+      ],
+      "run_slug": "afrl_bus_s180_d045",
+      "target_bag_sha256": "4cef717519a16f87f6e4da37c7456bbb0e4048ac74d4733704146474b75c5e00"
+    },
+    {
+      "arm": "router_splg",
+      "birth_groups": [
+        [
+          10000000,
+          10000001,
+          10000002
+        ]
+      ],
+      "run_slug": "afrl_bus_s180_d045",
+      "target_bag_sha256": "b8ea9621538fc9909f90072ed3e2519a237af786a632eb3e972e7f052cfb0697"
+    },
+    {
+      "arm": "router_xfeat",
+      "birth_groups": [
+        [
+          10000000,
+          10000001,
+          10000002,
+          10000004,
+          10000005,
+          10000007
+        ],
+        [
+          10000008
+        ],
+        [
+          10000003,
+          10000006
+        ]
+      ],
+      "run_slug": "afrl_cemetery_s135_d045",
+      "target_bag_sha256": "df8eece8ad79fccf9d1d954b86b6ac63a8c49d51671ff300840ea705e2b07741"
+    }
+  ],
+  "frozen_at": "2026-09-06T01:15:56.790820+08:00",
+  "lineages_total": 24,
+  "opportunity_audit_sha256": "b10dcf29dca97bc4b00aebbb2c86f4f3856e1a79d11eac442c5785a2aac24d88",
+  "schema_version": "aqua-fe-delayed-newborn-slot-v3-matched-plan-v1",
+  "scientific_role": "retrospective same-ID/frame/dose matched-GFTT control before any v3 backend replay",
+  "selection_basis": "all and only action-positive arm-windows in the frozen 6x3 v3 export matrix"
+}

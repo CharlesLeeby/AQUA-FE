@@ -1,0 +1,9 @@
+{
+  "correction_recorded_at": "2026-09-06T01:25:00+08:00",
+  "incorrect_value": "2026-09-06T01:42:00+08:00",
+  "original_amendment_sha256": "4b4dac7f92484250479a1a80542c56916dc4eae8919ecac5286e32d9504085f6",
+  "reason": "Clerical wall-clock transcription error discovered immediately after freezing the backend lock and before any v3 backend replay.",
+  "scientific_fields_affected": false,
+  "corrected_frozen_at": "2026-09-06T01:23:30+08:00",
+  "schema_version": "aqua-fe-evidence-timestamp-correction-v1"
+}

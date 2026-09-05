@@ -22,6 +22,9 @@ SHADOW = RUNTIME / "shadow_root"
 PLAN = PAPER / "matched_control_plan.json"
 EXPECTED_PLAN_SHA256 = "a867ccac61938c01ac3088885cecc97e1b21ea38c52c5ebd5f51c6663a6c0865"
 BUILDER = ROOT / "scripts/build_gftt_matched_lineage_control.py"
+BUILDER_SHA256_OVERRIDE: str | None = None
+SPARSE_SCHEDULE_CELLS: set[tuple[str, str]] = set()
+REUSE_COMPLETED = False
 
 
 def sha256(path: Path) -> str:
@@ -63,7 +66,11 @@ def main() -> int:
     if sha256(PLAN) != EXPECTED_PLAN_SHA256:
         raise RuntimeError("matched-control plan identity drift")
     plan = json.loads(PLAN.read_text(encoding="utf-8"))
-    if sha256(BUILDER) != plan["builder"]["sha256"]:
+    current_builder_sha256 = sha256(BUILDER)
+    if (
+        current_builder_sha256 != plan["builder"]["sha256"]
+        and current_builder_sha256 != BUILDER_SHA256_OVERRIDE
+    ):
         raise RuntimeError("matched-control builder identity drift")
     windows = {row["run_slug"]: row for row in read_csv(PAPER / "development_windows.csv")}
     arms = {row["arm"]: row for row in read_csv(PAPER / "arms.csv")}
@@ -84,6 +91,20 @@ def main() -> int:
         evidence_dir = PAPER / "matched_controls" / slug / arm_name
         output_dir.mkdir(parents=True, exist_ok=True)
         evidence_dir.mkdir(parents=True, exist_ok=True)
+        stats_path = evidence_dir / "stats.json"
+        if REUSE_COMPLETED and stats_path.exists():
+            prior = json.loads(stats_path.read_text(encoding="utf-8"))
+            prior_output = Path(prior["output_bag"])
+            if (
+                prior.get("status") == "MATCHED"
+                and prior.get("plan_sha256") == EXPECTED_PLAN_SHA256
+                and prior.get("target_bag_sha256") == cell["target_bag_sha256"]
+                and prior_output.is_file()
+                and sha256(prior_output) == prior.get("output_bag_sha256")
+            ):
+                print(f"REUSE {slug} {arm_name}", flush=True)
+                continue
+            raise RuntimeError(f"completed matched-control identity drift: {slug} {arm_name}")
         current_bag = target_bag
         stage_rows: list[dict[str, object]] = []
         failed = ""
@@ -109,6 +130,8 @@ def main() -> int:
             ]
             for target_id in target_ids:
                 command.extend(["--target-id", str(int(target_id))])
+            if (slug, arm_name) in SPARSE_SCHEDULE_CELLS:
+                command.append("--allow-sparse-target-schedule")
             try:
                 environment = dict(os.environ)
                 existing_pythonpath = environment.get("PYTHONPATH", "")
@@ -188,7 +211,7 @@ def main() -> int:
             "plan": str(PLAN),
             "plan_sha256": EXPECTED_PLAN_SHA256,
             "builder": str(BUILDER),
-            "builder_sha256": sha256(BUILDER),
+            "builder_sha256": current_builder_sha256,
             "backend_replayed": False,
             "known_limitation": plan["builder"]["known_limitation"],
         }

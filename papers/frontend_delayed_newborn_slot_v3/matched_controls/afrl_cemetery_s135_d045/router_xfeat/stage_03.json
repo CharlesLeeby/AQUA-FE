@@ -1,0 +1,108 @@
+{
+  "allow_sparse_target_schedule": true,
+  "assignments": [
+    {
+      "candidate_index": 15,
+      "control_final_pixel": [
+        675.7205200195312,
+        198.91738891601562
+      ],
+      "control_id": 10000003,
+      "control_initial_pixel": [
+        655.0,
+        175.0
+      ],
+      "initial_distance_px": 4.7947203658165805,
+      "target_frames": [
+        34,
+        35,
+        36
+      ],
+      "target_id": 10000003,
+      "target_initial_pixel": [
+        659.7662353515625,
+        174.47813415527344
+      ]
+    },
+    {
+      "candidate_index": 153,
+      "control_final_pixel": [
+        747.3041381835938,
+        209.3342742919922
+      ],
+      "control_id": 10000006,
+      "control_initial_pixel": [
+        722.0,
+        184.0
+      ],
+      "initial_distance_px": 3.736041590746669,
+      "target_frames": [
+        34,
+        36
+      ],
+      "target_id": 10000006,
+      "target_initial_pixel": [
+        719.40087890625,
+        181.3162384033203
+      ]
+    }
+  ],
+  "builder_script_sha256": "7dd75c8ffc6e9ec47231d8de4904ddde0c54451f200f0b22ac03490b74dc0b46",
+  "camera_config": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/shadow_root/logs/afrl_cave_v31/external_hybrid_xfeat_every2_dnr3_afrl_cemetery_s135_d045_router_xfeat/afrl_cave_cam0_pinhole.yaml",
+  "camera_config_sha256": "9580011fcaa23217407c1d1dbf616d57e95d81498293129f70bc0700e40e5154",
+  "control_id_mode": "preserve_target_ids",
+  "control_parameters": {
+    "block_size": 7,
+    "control_source_code": 0,
+    "exclusion_radius": 18,
+    "first_frame_velocity": "zero",
+    "lk_criteria_count": 30,
+    "lk_criteria_epsilon": 0.01,
+    "lk_max_level": 3,
+    "lk_win_size": [
+      21,
+      21
+    ],
+    "max_candidates": 512,
+    "max_fb_error": 1.0,
+    "max_image_dt": 0.002,
+    "min_distance": 18,
+    "opencv_rng_seed": 20260803,
+    "quality_level": 0.01
+  },
+  "feature_frames": 357,
+  "feature_topic": "/feature_tracker/feature",
+  "first_replaced_frame": 34,
+  "full_interval_survivors": 239,
+  "gftt_candidates": 512,
+  "image_topic": "/camera/image_raw",
+  "inserted_observations": 5,
+  "last_replaced_frame": 36,
+  "new_id_base": 15000000,
+  "opencv_version": "4.2.0",
+  "output_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/matched_controls/afrl_cemetery_s135_d045/router_xfeat/features_matched_gftt.bag",
+  "output_bag_sha256": "8410198a56c2ec95435026a7a89f6dacfc10b4da93cd7e5076b367844d48645e",
+  "python_version": "3.8.10",
+  "raw_bag": "${AQUA_FE_OFFLOAD}/frontend_same_backend_confirmatory_v3/prepared/afrl_cemetery_s135_d045/input.bag",
+  "raw_bag_sha256": "7ab621a9e7937bd99965e23c5686f4aa2095e2460f4ff03b8c7de0289c1a3bea",
+  "removed_observations": 5,
+  "replaced_frames": 3,
+  "schema_version": "gftt-matched-lineage-control-v2",
+  "target_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/matched_controls/afrl_cemetery_s135_d045/router_xfeat/stage_02.bag",
+  "target_bag_sha256": "e1860dc0cc4464fba60d1ea3577823f863f705a79a1eca8f68fea78e459afdea",
+  "target_frames_by_id": {
+    "10000003": [
+      34,
+      35,
+      36
+    ],
+    "10000006": [
+      34,
+      36
+    ]
+  },
+  "target_ids": [
+    10000003,
+    10000006
+  ]
+}

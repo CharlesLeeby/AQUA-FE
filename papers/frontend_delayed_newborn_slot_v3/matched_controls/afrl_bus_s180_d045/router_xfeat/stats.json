@@ -1,0 +1,45 @@
+{
+  "arm": "router_xfeat",
+  "backend_replayed": false,
+  "builder": "${AQUA_FE_WS}/scripts/build_gftt_matched_lineage_control.py",
+  "builder_sha256": "72438f10f515a6f3a69eeab203d4342d4969d0541085a0b3330ca506d3eb3795",
+  "camera_config": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/shadow_root/logs/afrl_cave_v31/external_hybrid_xfeat_every2_dnr3_afrl_bus_s180_d045_router_xfeat/afrl_cave_cam0_pinhole.yaml",
+  "camera_config_sha256": "5856ee4b261d5b0d67021ef81ad0a0c5e8e6aa885184c68591530224b3645aee",
+  "inserted_observations": 3,
+  "known_limitation": "Lineages with different first-publication frames are applied in deterministic ascending-frame stages. This is a retrospective dose/slot source control, not an online detector-isolation control.",
+  "matched_lineages": 1,
+  "output_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/matched_controls/afrl_bus_s180_d045/router_xfeat/features_matched_gftt.bag",
+  "output_bag_sha256": "7c01d24b5ef2b54ae16fb110757f8d5109ebb9ee4049840d1987203b376ce07a",
+  "plan": "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/matched_control_plan.json",
+  "plan_sha256": "342c5b25537fe0e4952430a62506db560124391a454cf4e958bc732d0951bdfa",
+  "raw_bag": "${AQUA_FE_OFFLOAD}/frontend_same_backend_confirmatory_v3/prepared/afrl_bus_s180_d045/input.bag",
+  "raw_bag_sha256": "fa24e8d2b31e4242f572e068a0139ee61e6e201dca0bbb2a5b3089a1f714729d",
+  "removed_observations": 3,
+  "run_slug": "afrl_bus_s180_d045",
+  "schema_version": "aqua-fe-v2-matched-gftt-cell-v1",
+  "scientific_role": "retrospective matched-dose/slot attribution control",
+  "stages": [
+    {
+      "full_interval_survivors": 164,
+      "input_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/shadow_root/logs/afrl_cave_v31/external_hybrid_xfeat_every2_dnr3_afrl_bus_s180_d045_router_xfeat/features.bag",
+      "input_bag_sha256": "4cef717519a16f87f6e4da37c7456bbb0e4048ac74d4733704146474b75c5e00",
+      "inserted_observations": 3,
+      "output_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/matched_controls/afrl_bus_s180_d045/router_xfeat/features_matched_gftt.bag",
+      "output_bag_sha256": "7c01d24b5ef2b54ae16fb110757f8d5109ebb9ee4049840d1987203b376ce07a",
+      "removed_observations": 3,
+      "stage": 1,
+      "stage_stats": "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/matched_controls/afrl_bus_s180_d045/router_xfeat/stage_01.json",
+      "stage_stats_sha256": "f60eb376dd1035b3ed53faefd9186a3eae3ca4ca135a7c34a75e319b58ab23c8",
+      "target_ids": [
+        10000000
+      ]
+    }
+  ],
+  "status": "MATCHED",
+  "target_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/shadow_root/logs/afrl_cave_v31/external_hybrid_xfeat_every2_dnr3_afrl_bus_s180_d045_router_xfeat/features.bag",
+  "target_bag_sha256": "4cef717519a16f87f6e4da37c7456bbb0e4048ac74d4733704146474b75c5e00",
+  "target_ids": [
+    10000000
+  ],
+  "target_lineages": 1
+}

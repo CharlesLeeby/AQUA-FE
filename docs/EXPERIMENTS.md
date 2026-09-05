@@ -370,3 +370,72 @@ Occupied-track replacement cannot be called no-harm.
 
 Run predeclared A09 and Bus donor-delete-only controls before choosing one
 repair.
+
+## EXP-20260905-008 — Delayed newborn-slot router v3
+
+### Date
+
+2026-09-06
+
+### Status and Scientific Role
+
+`COMPLETE_NO_EXPANSION`; outcome-known six-window development test, not held-out.
+
+### Git Commit and Branch
+
+Experiment base `f6f8feec66c2faf1f59cdb67c1e817028a3bccaf` on `main` plus
+the exact locks/amendments. The publication commit is reporting identity only.
+
+### Dataset and Sequence / Window
+
+A09 6000--6800, A02 0--900, A08 2700--3600, H07 0--1000, AFRL Bus s180 d45,
+and Cemetery s135 d45: six windows, 12 learned arm-windows, seven active.
+
+### Environment and Exact Configuration
+
+ROS Noetic, unchanged VINS-Fusion-origin, per-window YAML/camera, IMU/time axis,
+proxy, every-n 2, and cap 350. Profile `lineage_delayed_newborn_slot_v3` keeps
+frames 0--31 exact KLT and permits unchanged exchange only on 32--36.
+
+### Baseline
+
+Fresh KLT, reused only under exact bag/config/binary/receipt identity.
+
+### Proposed Modification
+
+Move only the v2 action interval from 0--4 to 32--36.
+
+### Commands and Artifact / Run Paths
+
+See v3-named scripts and `papers/frontend_delayed_newborn_slot_v3/`;
+`artifacts.sha256` uses stable symbolic roots for run-scale artifacts.
+
+### Metrics
+
+Initialization, coverage, all-nine support, fixed-SE(3) APE, strict 1 s RPE,
+diagnostic Sim(3), repeat median/range, and evo cross-check.
+
+### Results
+
+Frontend 18/18, matched 7/7, backend 54/54, and common support 7/7 PASS.
+Active outcomes: 6 WIN/1 MIXED/0 LOSS/0 FAIL; five exact TIE mappings complete
+the 12-arm denominator. A02 returns within 1.2% of KLT; A09 remains divergent;
+Bus has no joint >=10% rescue.
+
+### Validity Checks and Common-Support Status
+
+Supports contain 38--43 poses, 37--42 s, and 93.33%--95.56% coverage; max evo
+difference is 4.997e-7 m. Nine unreceipted wrapper attempts are quarantined.
+
+### Interpretation
+
+Delay removes tested A02 harm but also the meaningful A09 rescue. Matched GFTT
+remains competitive; learned necessity is Unknown.
+
+### Conclusion
+
+`NO_EXPANSION`; the joint >=10% A09/Bus rescue criterion is false.
+
+### Follow-up
+
+Do not try a second horizon or start the 12-window extension in this protocol.

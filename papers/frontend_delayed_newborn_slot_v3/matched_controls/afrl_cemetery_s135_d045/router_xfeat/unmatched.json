@@ -1,0 +1,20 @@
+{
+  "arm": "router_xfeat",
+  "failure": "CalledProcessError: Command '['/usr/bin/python3', '${AQUA_FE_WS}/scripts/build_gftt_matched_lineage_control.py', '--target-bag', '${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/shadow_root/logs/afrl_cave_v31/external_hybrid_xfeat_every2_dnr3_afrl_cemetery_s135_d045_router_xfeat/features.bag', '--raw-bag', '${AQUA_FE_OFFLOAD}/frontend_same_backend_confirmatory_v3/prepared/afrl_cemetery_s135_d045/input.bag', '--camera-config', '${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/shadow_root/logs/afrl_cave_v31/external_hybrid_xfeat_every2_dnr3_afrl_cemetery_s135_d045_router_xfeat/afrl_cave_cam0_pinhole.yaml', '--output-bag', '${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/matched_controls/afrl_cemetery_s135_d045/router_xfeat/stage_01.bag', '--stats-json', '${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/matched_controls/afrl_cemetery_s135_d045/router_xfeat/stage_01.json', '--stats-csv', '${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/matched_controls/afrl_cemetery_s135_d045/router_xfeat/stage_01.csv', '--preserve-target-ids', '--target-id', '10000000', '--target-id', '10000001', '--target-id', '10000002', '--target-id', '10000004', '--target-id', '10000005', '--target-id', '10000007']' returned non-zero exit status 1.",
+  "plan_sha256": "342c5b25537fe0e4952430a62506db560124391a454cf4e958bc732d0951bdfa",
+  "run_slug": "afrl_cemetery_s135_d045",
+  "schema_version": "aqua-fe-v2-matched-gftt-cell-v1",
+  "stages_completed": [],
+  "status": "UNMATCHED",
+  "target_ids": [
+    10000000,
+    10000001,
+    10000002,
+    10000004,
+    10000005,
+    10000007,
+    10000008,
+    10000003,
+    10000006
+  ]
+}

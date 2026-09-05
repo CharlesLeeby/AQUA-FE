@@ -1,0 +1,13 @@
+window_id,run_slug,arm,protected_frame_count_expected,protected_frame_count_compared,protected_feature_messages_exact,mismatch_indices,status
+aqualoc_archaeology:A09:historical_6000_6800,a09_6000_6800,router_xfeat,32,32,True,,PASS
+aqualoc_archaeology:A09:historical_6000_6800,a09_6000_6800,router_splg,32,32,True,,PASS
+aqualoc_archaeology:A02:0000,a02_0_900,router_xfeat,32,32,True,,PASS
+aqualoc_archaeology:A02:0000,a02_0_900,router_splg,32,32,True,,PASS
+afrl:bus_outside:0004,afrl_bus_s180_d045,router_xfeat,32,32,True,,PASS
+afrl:bus_outside:0004,afrl_bus_s180_d045,router_splg,32,32,True,,PASS
+aqualoc_archaeology:A08:0003,a08_2700_3600,router_xfeat,32,32,True,,PASS
+aqualoc_archaeology:A08:0003,a08_2700_3600,router_splg,32,32,True,,PASS
+afrl:cemetery:0003,afrl_cemetery_s135_d045,router_xfeat,32,32,True,,PASS
+afrl:cemetery:0003,afrl_cemetery_s135_d045,router_splg,32,32,True,,PASS
+aqualoc_harbor:H07:historical_0_1000,h07_0_1000,router_xfeat,32,32,True,,PASS
+aqualoc_harbor:H07:historical_0_1000,h07_0_1000,router_splg,32,32,True,,PASS

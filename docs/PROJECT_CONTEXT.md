@@ -167,6 +167,15 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 - For learned attribution, compare protected KLT, dense-KLT rescue, learned without LoFTR, and learned with LoFTR on action-positive low-texture windows.
 - For no-harm, verify exact or near-exact KLT behavior and actual learned/LoFTR export counts on normal-texture windows.
 
+## September 2026 delayed-intervention decision
+
+`EXP-20260905-008` is complete with `NO_EXPANSION`. An exact KLT prefix through
+selected frame 31 eliminates the tested A02 catastrophic regression, but A09
+and Bus do not retain the required joint >=10% rescue. All 42 new replays,
+12 exact KLT mappings, and seven common supports pass. Directional 6 WIN/1 MIXED
+labels are mostly small and do not establish no-harm, learned necessity, or
+superiority to KLT/modern learned frontends.
+
 ## Important Files
 
 - AGENTS.md — long-term Codex working and logging rules.

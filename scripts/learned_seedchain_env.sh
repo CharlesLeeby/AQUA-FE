@@ -16,7 +16,7 @@ ROOT="${ROOT:-/home/ma/AQUA-FE_WS}"
 AQUAFE_SEEDCHAIN_PROFILE="${AQUAFE_SEEDCHAIN_PROFILE:-lineage_early_seed_noharm_v4}"
 
 case "$AQUAFE_SEEDCHAIN_PROFILE" in
-  lineage_safe_dense_start|generic_dense_start|lineage_relaxed_scan|lineage_init_safe_scan|lineage_early_seed_scan|lineage_early_seed_lineage_scan|lineage_early_seed_noharm_v4|lineage_early_seed_persistence_replace_v1|lineage_early_seed_singlechain_v2|lineage_early_seed_churn_guard_v3|lineage_early_seed_geometry_router_v1|lineage_early_seed_coverage_monotone_v2)
+  lineage_safe_dense_start|generic_dense_start|lineage_relaxed_scan|lineage_init_safe_scan|lineage_early_seed_scan|lineage_early_seed_lineage_scan|lineage_early_seed_noharm_v4|lineage_early_seed_persistence_replace_v1|lineage_early_seed_singlechain_v2|lineage_early_seed_churn_guard_v3|lineage_early_seed_geometry_router_v1|lineage_early_seed_coverage_monotone_v2|lineage_delayed_newborn_slot_v3)
     export FRONTEND_CONFIG="${FRONTEND_CONFIG:-$ROOT/uw_frontend/configs/experiments/low_texture_xfeat_seedchain_frontend.yaml}"
     ;;
   cirs_dense_start)
@@ -29,7 +29,7 @@ case "$AQUAFE_SEEDCHAIN_PROFILE" in
 esac
 
 case "$AQUAFE_SEEDCHAIN_PROFILE" in
-  lineage_safe_dense_start|generic_dense_start|lineage_relaxed_scan|lineage_init_safe_scan|lineage_early_seed_scan|lineage_early_seed_lineage_scan|lineage_early_seed_noharm_v4|lineage_early_seed_persistence_replace_v1|lineage_early_seed_singlechain_v2|lineage_early_seed_churn_guard_v3|lineage_early_seed_geometry_router_v1|lineage_early_seed_coverage_monotone_v2|cirs_dense_start)
+  lineage_safe_dense_start|generic_dense_start|lineage_relaxed_scan|lineage_init_safe_scan|lineage_early_seed_scan|lineage_early_seed_lineage_scan|lineage_early_seed_noharm_v4|lineage_early_seed_persistence_replace_v1|lineage_early_seed_singlechain_v2|lineage_early_seed_churn_guard_v3|lineage_early_seed_geometry_router_v1|lineage_early_seed_coverage_monotone_v2|lineage_delayed_newborn_slot_v3|cirs_dense_start)
     seedchain_warmup_default=8
     seedchain_max_per_frame_default=0
     seedchain_microburst_min_initial_default=20
@@ -69,6 +69,7 @@ case "$AQUAFE_SEEDCHAIN_PROFILE" in
     seedchain_persistence_same_grid_cell_default=0
     seedchain_persistence_coverage_monotone_default=0
     seedchain_persistence_max_per_frame_default=0
+    seedchain_persistence_max_selected_frame_default=4
     if [[ "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_relaxed_scan" ]]; then
       # Screening-only profile for windows where confirmed XFeat exists but the
       # CIRS dense-start signature is too strict. Keep confirmation and quality
@@ -93,7 +94,7 @@ case "$AQUAFE_SEEDCHAIN_PROFILE" in
       seedchain_microburst_restarts_default=3
       seedchain_lineage_continuation_default=1
     fi
-    if [[ "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_scan" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_noharm_v4" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_persistence_replace_v1" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_singlechain_v2" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_churn_guard_v3" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_geometry_router_v1" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_coverage_monotone_v2" ]]; then
+    if [[ "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_scan" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_noharm_v4" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_persistence_replace_v1" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_singlechain_v2" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_churn_guard_v3" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_geometry_router_v1" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_coverage_monotone_v2" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_delayed_newborn_slot_v3" ]]; then
       # Cross-dataset positive-search profile for windows where a small,
       # confirmed early XFeat burst helps VINS initialization. Keep the strict
       # dense-start/microburst contract, but do not suppress frames 0-7.
@@ -123,7 +124,7 @@ case "$AQUAFE_SEEDCHAIN_PROFILE" in
       seedchain_export_classical_mirror_default=1
       seedchain_preserve_classical_budget_default=1
     fi
-    if [[ "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_persistence_replace_v1" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_singlechain_v2" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_churn_guard_v3" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_geometry_router_v1" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_coverage_monotone_v2" ]]; then
+    if [[ "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_persistence_replace_v1" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_singlechain_v2" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_churn_guard_v3" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_geometry_router_v1" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_coverage_monotone_v2" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_delayed_newborn_slot_v3" ]]; then
       # Experimental contribution line. Keep the independent KLT mirror, but
       # allow only preregistered early confirmed-XFeat -> same-frame-GFTT
       # birth swaps with a strict raw-age advantage. This is not no-harm v4.
@@ -151,7 +152,7 @@ case "$AQUAFE_SEEDCHAIN_PROFILE" in
       seedchain_persistence_same_grid_cell_default=1
       seedchain_persistence_max_per_frame_default=6
     fi
-    if [[ "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_coverage_monotone_v2" ]]; then
+    if [[ "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_coverage_monotone_v2" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_delayed_newborn_slot_v3" ]]; then
       # Development-only v2: retain early/age-1/source/cap protection, but
       # replace the global churn ratio and exact-cell victim rule with a
       # per-exchange occupied-grid monotonicity invariant.
@@ -161,6 +162,13 @@ case "$AQUAFE_SEEDCHAIN_PROFILE" in
       seedchain_persistence_same_grid_cell_default=0
       seedchain_persistence_coverage_monotone_default=1
       seedchain_persistence_max_per_frame_default=6
+    fi
+    if [[ "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_delayed_newborn_slot_v3" ]]; then
+      # The only v3 mechanism change is timing: keep the v2 gate/router
+      # unchanged, but protect selected feature frames 0--31 and move the
+      # five-frame newborn-exchange interval from 0--4 to 32--36.
+      seedchain_warmup_default=32
+      seedchain_persistence_max_selected_frame_default=36
     fi
     if [[ "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_lineage_scan" ]]; then
       # Experimental variant of lineage_early_seed_scan: keep the same compact
@@ -184,7 +192,7 @@ case "$AQUAFE_SEEDCHAIN_PROFILE" in
     export EXPORT_CLASSICAL_MIRROR_BACKBONE="${EXPORT_CLASSICAL_MIRROR_BACKBONE:-$seedchain_export_classical_mirror_default}"
     export FINAL_MIRROR_PRESERVE_CLASSICAL_BUDGET="${FINAL_MIRROR_PRESERVE_CLASSICAL_BUDGET:-$seedchain_preserve_classical_budget_default}"
     export FINAL_MIRROR_PERSISTENCE_REPLACEMENT="${FINAL_MIRROR_PERSISTENCE_REPLACEMENT:-$seedchain_persistence_replacement_default}"
-    export FINAL_MIRROR_PERSISTENCE_MAX_SELECTED_FRAME="${FINAL_MIRROR_PERSISTENCE_MAX_SELECTED_FRAME:-4}"
+    export FINAL_MIRROR_PERSISTENCE_MAX_SELECTED_FRAME="${FINAL_MIRROR_PERSISTENCE_MAX_SELECTED_FRAME:-$seedchain_persistence_max_selected_frame_default}"
     export FINAL_MIRROR_PERSISTENCE_MIN_AGE_ADVANTAGE="${FINAL_MIRROR_PERSISTENCE_MIN_AGE_ADVANTAGE:-2}"
     export FINAL_MIRROR_PERSISTENCE_SINGLE_CHAIN="${FINAL_MIRROR_PERSISTENCE_SINGLE_CHAIN:-$seedchain_persistence_single_chain_default}"
     export FINAL_MIRROR_PERSISTENCE_MIN_GFTT_RATIO="${FINAL_MIRROR_PERSISTENCE_MIN_GFTT_RATIO:-$seedchain_persistence_min_gftt_ratio_default}"

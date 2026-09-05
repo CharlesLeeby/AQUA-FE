@@ -1,0 +1,13 @@
+window_id,run_slug,arm,action,outcome,common_support_status,ape_percent_change,rpe_percent_change,notes
+aqualoc_archaeology:A09:historical_6000_6800,a09_6000_6800,router_xfeat,True,WIN,PASS,-0.0026722443932203355,-0.005574611687142461,
+aqualoc_archaeology:A09:historical_6000_6800,a09_6000_6800,router_splg,True,WIN,PASS,-0.003318519447959023,-0.005325350345808388,
+aqualoc_archaeology:A02:0000,a02_0_900,router_xfeat,True,WIN,PASS,-1.1145866938135462,-0.34013201389034853,
+aqualoc_archaeology:A02:0000,a02_0_900,router_splg,True,WIN,PASS,-0.45106850507445895,-0.13225315349091327,
+afrl:bus_outside:0004,afrl_bus_s180_d045,router_xfeat,True,MIXED,PASS,4.8395639134129365,-5.545628177814976,
+afrl:bus_outside:0004,afrl_bus_s180_d045,router_splg,True,WIN,PASS,-9.353142164831985,-2.5358866490665544,
+aqualoc_archaeology:A08:0003,a08_2700_3600,router_xfeat,False,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,No independent replay; exact input identity maps to KLT.
+aqualoc_archaeology:A08:0003,a08_2700_3600,router_splg,False,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,No independent replay; exact input identity maps to KLT.
+afrl:cemetery:0003,afrl_cemetery_s135_d045,router_xfeat,True,WIN,PASS,-1.7167684141403239,-1.7740100129828629,
+afrl:cemetery:0003,afrl_cemetery_s135_d045,router_splg,False,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,No independent replay; exact input identity maps to KLT.
+aqualoc_harbor:H07:historical_0_1000,h07_0_1000,router_xfeat,False,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,No independent replay; exact input identity maps to KLT.
+aqualoc_harbor:H07:historical_0_1000,h07_0_1000,router_splg,False,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,No independent replay; exact input identity maps to KLT.

@@ -1,0 +1,38 @@
+{
+  "active_arm_windows": 7,
+  "active_cells": [
+    "a09_6000_6800:router_xfeat",
+    "a09_6000_6800:router_splg",
+    "a02_0_900:router_xfeat",
+    "a02_0_900:router_splg",
+    "afrl_bus_s180_d045:router_xfeat",
+    "afrl_bus_s180_d045:router_splg",
+    "afrl_cemetery_s135_d045:router_xfeat"
+  ],
+  "cells_expected": 18,
+  "cells_present": 18,
+  "decision": "FRONTEND_GO",
+  "experiment_id": "EXP-20260905-008",
+  "matched_control_complete": true,
+  "matched_control_expected": [
+    "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/matched_controls/a09_6000_6800/router_xfeat/stats.json",
+    "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/matched_controls/a09_6000_6800/router_splg/stats.json",
+    "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/matched_controls/a02_0_900/router_xfeat/stats.json",
+    "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/matched_controls/a02_0_900/router_splg/stats.json",
+    "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/matched_controls/afrl_bus_s180_d045/router_xfeat/stats.json",
+    "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/matched_controls/afrl_bus_s180_d045/router_splg/stats.json",
+    "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/matched_controls/afrl_cemetery_s135_d045/router_xfeat/stats.json"
+  ],
+  "safety_checks": {
+    "actions_only_frames_32_36": true,
+    "age_advantage_at_least_2": true,
+    "all_cells_integrity": true,
+    "donor_cell_retained": true,
+    "grid_occupancy_monotone": true,
+    "no_tracked_klt_or_old_gftt_removed": true,
+    "per_frame_cap_6": true,
+    "startup_frames_0_31_exact_klt": true,
+    "zero_action_exact_klt": true
+  },
+  "schema_version": "aqua-fe-delayed-newborn-slot-v3-frontend-v1"
+}

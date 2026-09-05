@@ -1,0 +1,19 @@
+{
+  "amended_before_any_v3_backend_replay": true,
+  "amendment_reason": "The preregistered afrl_cemetery_s135_d045:router_xfeat target schedule contains IDs that are absent on an intermediate publication frame and later reappear. The original builder rejected that faithful sparse schedule before producing the cell.",
+  "amendment_scope": [
+    "afrl_cemetery_s135_d045:router_xfeat"
+  ],
+  "backend_results_seen_before_amendment": false,
+  "builder_default_behavior_changed": false,
+  "builder_sha256_after_optional_extension": "7dd75c8ffc6e9ec47231d8de4904ddde0c54451f200f0b22ac03490b74dc0b46",
+  "builder_sha256_in_original_plan": "72438f10f515a6f3a69eeab203d4342d4969d0541085a0b3330ca506d3eb3795",
+  "control_semantics": "Track each assigned GFTT control through the complete first-to-last interval, but publish it only on the exact frames where the corresponding target ID was published.",
+  "frozen_at": "2026-09-06T01:42:00+08:00",
+  "new_option": "--allow-sparse-target-schedule",
+  "original_plan_sha256": "342c5b25537fe0e4952430a62506db560124391a454cf4e958bc732d0951bdfa",
+  "parameters_changed": false,
+  "selection_changed": false,
+  "target_ids_or_frames_changed": false,
+  "schema_version": "aqua-fe-delayed-newborn-slot-v3-matched-plan-amendment-v1"
+}

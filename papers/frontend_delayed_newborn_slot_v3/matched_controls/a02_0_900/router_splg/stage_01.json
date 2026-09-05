@@ -1,0 +1,105 @@
+{
+  "assignments": [
+    {
+      "candidate_index": 50,
+      "control_final_pixel": [
+        264.8273010253906,
+        363.4453125
+      ],
+      "control_id": 10000001,
+      "control_initial_pixel": [
+        266.0,
+        360.0
+      ],
+      "initial_distance_px": 13.354774309522286,
+      "target_frames": [
+        33,
+        34
+      ],
+      "target_id": 10000001,
+      "target_initial_pixel": [
+        271.1573486328125,
+        347.6812438964844
+      ]
+    },
+    {
+      "candidate_index": 27,
+      "control_final_pixel": [
+        454.1373596191406,
+        153.55503845214844
+      ],
+      "control_id": 10000016,
+      "control_initial_pixel": [
+        455.0,
+        151.0
+      ],
+      "initial_distance_px": 13.076181163172025,
+      "target_frames": [
+        33,
+        34
+      ],
+      "target_id": 10000016,
+      "target_initial_pixel": [
+        461.64593505859375,
+        139.7386474609375
+      ]
+    }
+  ],
+  "builder_script_sha256": "72438f10f515a6f3a69eeab203d4342d4969d0541085a0b3330ca506d3eb3795",
+  "camera_config": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_superpoint_lightglue_every2_dnr3_a02_0_900_router_splg/aqualoc_archaeo02_pinhole.yaml",
+  "camera_config_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+  "control_id_mode": "preserve_target_ids",
+  "control_parameters": {
+    "block_size": 7,
+    "control_source_code": 0,
+    "exclusion_radius": 18,
+    "first_frame_velocity": "zero",
+    "lk_criteria_count": 30,
+    "lk_criteria_epsilon": 0.01,
+    "lk_max_level": 3,
+    "lk_win_size": [
+      21,
+      21
+    ],
+    "max_candidates": 512,
+    "max_fb_error": 1.0,
+    "max_image_dt": 0.002,
+    "min_distance": 18,
+    "opencv_rng_seed": 20260803,
+    "quality_level": 0.01
+  },
+  "feature_frames": 450,
+  "feature_topic": "/feature_tracker/feature",
+  "first_replaced_frame": 33,
+  "full_interval_survivors": 501,
+  "gftt_candidates": 512,
+  "image_topic": "/camera/image_raw",
+  "inserted_observations": 4,
+  "last_replaced_frame": 34,
+  "new_id_base": 15000000,
+  "opencv_version": "4.2.0",
+  "output_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/matched_controls/a02_0_900/router_splg/stage_01.bag",
+  "output_bag_sha256": "d6e624f00738399390f12b3992dea93a1953694b192fb31b0de3cbf18992da94",
+  "python_version": "3.8.10",
+  "raw_bag": "${AQUA_FE_OFFLOAD}/frontend_same_backend_confirmatory_v3/prepared/a02_0_900/input.bag",
+  "raw_bag_sha256": "ab0fa69eddce3bde6cb03efecf3c4fcafdd3d66e53691b9a2eaa1f531ee660db",
+  "removed_observations": 4,
+  "replaced_frames": 2,
+  "schema_version": "gftt-matched-lineage-control-v2",
+  "target_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_superpoint_lightglue_every2_dnr3_a02_0_900_router_splg/features.bag",
+  "target_bag_sha256": "b219416a425cefe5494cd7986e4bd1a84ffe4c67786e10092cf46c734f5b7eb6",
+  "target_frames_by_id": {
+    "10000001": [
+      33,
+      34
+    ],
+    "10000016": [
+      33,
+      34
+    ]
+  },
+  "target_ids": [
+    10000001,
+    10000016
+  ]
+}

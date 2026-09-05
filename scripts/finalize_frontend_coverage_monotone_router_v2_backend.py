@@ -32,6 +32,13 @@ REPLAYS = RUNTIME / "backend_replays"
 PLAN = PAPER / "backend_smoke_plan.csv"
 LOCK = PAPER / "backend_execution_lock.json"
 EVALUATOR = ROOT / "scripts/evaluate_vins_common_support_dual_scale.py"
+EXPECTED_PLAN_ROWS = 42
+
+
+def replay_dir(item: dict[str, str]) -> Path:
+    if item.get("replay_dir"):
+        return Path(item["replay_dir"])
+    return REPLAYS / item["run_slug"] / item["cell_id"] / f"repeat{item['repeat']}"
 
 
 def sha256(path: Path) -> str:
@@ -139,7 +146,7 @@ def collect_backend_repeats(plan: list[dict[str, str]]) -> list[dict[str, object
         run_slug = item["run_slug"]
         cell_id = item["cell_id"]
         repeat = int(item["repeat"])
-        run_dir = REPLAYS / run_slug / cell_id / f"repeat{repeat}"
+        run_dir = replay_dir(item)
         receipt_path = run_dir / "replay_receipt.txt"
         vio = run_dir / "vins_output/vio.csv"
         log = run_dir / "vins.log"
@@ -374,7 +381,13 @@ def evaluate_common_support(
             )
             for repeat in range(1, 4):
                 name = f"{role}_r{repeat}"
-                vio = REPLAYS / run_slug / str(row["cell_id"]) / f"repeat{repeat}/vins_output/vio.csv"
+                plan_item = next(
+                    item for item in read_csv(PLAN)
+                    if item["run_slug"] == run_slug
+                    and item["cell_id"] == row["cell_id"]
+                    and int(item["repeat"]) == repeat
+                )
+                vio = replay_dir(plan_item) / "vins_output/vio.csv"
                 command += ["--arm", f"{name}={vio}", "--arm-config", f"{name}={config}"]
         process = subprocess.run(
             command,
@@ -556,8 +569,10 @@ def build_comparisons(statuses: list[dict[str, object]], accuracy: list[dict[str
 def main() -> int:
     identity_passed, identity_total = verify_lock()
     plan = read_csv(PLAN)
-    if len(plan) != 42:
-        raise RuntimeError(f"expected 42 frozen plan rows, got {len(plan)}")
+    if len(plan) != EXPECTED_PLAN_ROWS:
+        raise RuntimeError(
+            f"expected {EXPECTED_PLAN_ROWS} frozen plan rows, got {len(plan)}"
+        )
     repeats = collect_backend_repeats(plan)
     backend = aggregate_backend(repeats)
     runability = build_runability(backend)

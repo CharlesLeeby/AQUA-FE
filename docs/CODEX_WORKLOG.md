@@ -468,3 +468,70 @@ Freeze exactly one delayed newborn-slot development version that preserves the
 startup KLT history and shifts the existing five-selected-frame intervention
 window after a global fixed protection horizon. Do not change source,
 threshold, donor ranking, or continuation semantics in the same version.
+
+## 2026-09-06 — Delayed newborn-slot v3 closed-loop development test
+
+### Task Objective
+
+Test one globally delayed version of v2 and apply its frozen expansion gate.
+
+### Problem / Motivation
+
+Insertion was required for A09/Bus rescue, while startup deletion was sufficient
+for A02 harm; the test asks whether an exact KLT prefix separates the two.
+
+### Files Changed
+
+- `papers/frontend_delayed_newborn_slot_v3/`
+- v3 frontend, matched-control, backend, reducer, and manifest scripts
+- optional sparse-schedule matched-control support and append-only logs
+
+### Implementation
+
+Moved only the intervention interval from selected frames 0--4 to 32--36;
+frames 0--31 are exact KLT. Seven active cells received new matched-GFTT
+controls. Executed 42 new VINS replays and identity-mapped 12 frozen KLT runs.
+
+### Technical Decisions
+
+The horizon is an offline development diagnostic, not online initialization.
+An intermittent-ID control received a pre-backend sparse-schedule amendment.
+Nine wrapper attempts with zero receipts were quarantined after a readback-path
+bug; the correction changed output collection only.
+
+### Experiments Performed
+
+Eighteen frontend cells, seven matched controls, 42 new and 12 reused backend
+rows, seven all-nine supports, fixed SE(3)/Sim(3), and evo cross-check.
+
+### Quantitative Results
+
+All frontend, matched, backend, and common-support gates pass. Active labels are
+6 WIN/1 MIXED/0 LOSS/0 FAIL; the full 12 arm-window denominator adds five exact
+TIE. A02 XFeat/SP+LG APE is 0.139741/0.140679 m versus KLT 0.141317 m. A09
+remains divergent near 1242 m. Bus XFeat is +4.84%/-5.55%; SP+LG -9.35%/-2.54%.
+
+### Qualitative Observations
+
+Most WIN directions are tiny. A02 harm disappears, but the meaningful A09
+rescue also disappears; matched GFTT remains competitive.
+
+### Failed Attempts
+
+Nine unreceipted wrapper attempts were quarantined. The original matched builder
+rejected intermittent IDs until its explicit sparse-schedule option was used.
+
+### Known Issues
+
+Per-ID backend use is Unknown. These are outcome-known development windows and
+proxy comparisons; dataset-wide positive rate is Not evaluated.
+
+### Interpretation
+
+Confirmed fact: tested A02 catastrophic harm is removed. Confirmed fact: no
+A09/Bus arm retains the preregistered joint >=10% rescue. Timing-sensitive
+initialization intervention remains Hypothesis / Inference for the mechanism.
+
+### Next Steps
+
+Honor `NO_EXPANSION`: do not run the 12-window extension or a second horizon.

@@ -1,0 +1,63 @@
+{
+  "arm": "router_splg",
+  "backend_replayed": false,
+  "builder": "${AQUA_FE_WS}/scripts/build_gftt_matched_lineage_control.py",
+  "builder_sha256": "72438f10f515a6f3a69eeab203d4342d4969d0541085a0b3330ca506d3eb3795",
+  "camera_config": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_superpoint_lightglue_every2_dnr3_a02_0_900_router_splg/aqualoc_archaeo02_pinhole.yaml",
+  "camera_config_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+  "inserted_observations": 5,
+  "known_limitation": "Lineages with different first-publication frames are applied in deterministic ascending-frame stages. This is a retrospective dose/slot source control, not an online detector-isolation control.",
+  "matched_lineages": 3,
+  "output_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/matched_controls/a02_0_900/router_splg/features_matched_gftt.bag",
+  "output_bag_sha256": "99824c65d8e544a21978f760043cc1cbedf39ea42994692bd81f5cda765c6378",
+  "plan": "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/matched_control_plan.json",
+  "plan_sha256": "342c5b25537fe0e4952430a62506db560124391a454cf4e958bc732d0951bdfa",
+  "raw_bag": "${AQUA_FE_OFFLOAD}/frontend_same_backend_confirmatory_v3/prepared/a02_0_900/input.bag",
+  "raw_bag_sha256": "ab0fa69eddce3bde6cb03efecf3c4fcafdd3d66e53691b9a2eaa1f531ee660db",
+  "removed_observations": 5,
+  "run_slug": "a02_0_900",
+  "schema_version": "aqua-fe-v2-matched-gftt-cell-v1",
+  "scientific_role": "retrospective matched-dose/slot attribution control",
+  "stages": [
+    {
+      "full_interval_survivors": 501,
+      "input_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_superpoint_lightglue_every2_dnr3_a02_0_900_router_splg/features.bag",
+      "input_bag_sha256": "b219416a425cefe5494cd7986e4bd1a84ffe4c67786e10092cf46c734f5b7eb6",
+      "inserted_observations": 4,
+      "output_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/matched_controls/a02_0_900/router_splg/stage_01.bag",
+      "output_bag_sha256": "d6e624f00738399390f12b3992dea93a1953694b192fb31b0de3cbf18992da94",
+      "removed_observations": 4,
+      "stage": 1,
+      "stage_stats": "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/matched_controls/a02_0_900/router_splg/stage_01.json",
+      "stage_stats_sha256": "7f9fd99be1a22573fd76d567e523c15be3d4fcff7d82bdd8e379ca0d1233a6de",
+      "target_ids": [
+        10000001,
+        10000016
+      ]
+    },
+    {
+      "full_interval_survivors": 512,
+      "input_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/matched_controls/a02_0_900/router_splg/stage_01.bag",
+      "input_bag_sha256": "d6e624f00738399390f12b3992dea93a1953694b192fb31b0de3cbf18992da94",
+      "inserted_observations": 1,
+      "output_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/matched_controls/a02_0_900/router_splg/features_matched_gftt.bag",
+      "output_bag_sha256": "99824c65d8e544a21978f760043cc1cbedf39ea42994692bd81f5cda765c6378",
+      "removed_observations": 1,
+      "stage": 2,
+      "stage_stats": "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/matched_controls/a02_0_900/router_splg/stage_02.json",
+      "stage_stats_sha256": "8486e59a826a0293f3777d72927866179407c9c2bef007b3467e92fcf84f3e7d",
+      "target_ids": [
+        10000014
+      ]
+    }
+  ],
+  "status": "MATCHED",
+  "target_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_superpoint_lightglue_every2_dnr3_a02_0_900_router_splg/features.bag",
+  "target_bag_sha256": "b219416a425cefe5494cd7986e4bd1a84ffe4c67786e10092cf46c734f5b7eb6",
+  "target_ids": [
+    10000001,
+    10000016,
+    10000014
+  ],
+  "target_lineages": 3
+}

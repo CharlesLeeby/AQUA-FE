@@ -467,3 +467,60 @@ bidirectional initialization intervention and cannot be called no-harm.
 Freeze one delayed newborn-slot version on the existing six development
 windows. Shift only the five-selected-frame intervention interval; leave
 source, thresholds, donor ranking, capacities, and continuation policy fixed.
+
+## 2026-09-06 — Delayed intervention removes harm and meaningful rescue
+
+### Research Question
+
+Can an exact KLT prefix remove A02 harm while retaining A09/Bus benefit?
+
+### Hypothesis
+
+If only startup deletion causes harm, moving unchanged action to frames 32--36
+should preserve a later candidate benefit.
+
+### Motivation
+
+A02 deletion was harm-sufficient; A09/Bus needed insertion for rescue.
+
+### Related Baseline
+
+Frozen v2, fresh KLT, and new same-ID/frame/dose matched GFTT.
+
+### Proposed Idea
+
+Change only the global action interval from 0--4 to 32--36.
+
+### Why It Might Work
+
+All baseline development repeats logged initialization before frame 31.
+
+### Assumptions
+
+This is an offline development diagnostic; repeats are technical and reference
+trajectories are proxies.
+
+### Potential Failure Cases
+
+Initialization can stay fragile, candidate leverage can vanish, or classical
+controls can reproduce learned behavior.
+
+### Evidence
+
+All 54 backend plan rows and seven common supports pass. A02 returns within
+1.2% of KLT, but A09 remains near 1242 m and Bus has no joint >=10% rescue.
+Active directions are 6 WIN/1 MIXED, mostly small; matched controls compete.
+
+### Current Conclusion
+
+The hypothesis is half supported: delay removes tested harm but not while
+retaining meaningful benefit. Learned persistent-anchor gain is unproven.
+
+### Open Questions
+
+- Can an online-observable state separate helpful and harmful intervention?
+- Can learned candidates show value under a shared initialized state?
+
+### Next Experiment
+
+None in this protocol. `NO_EXPANSION`; a new mechanism needs a new freeze.

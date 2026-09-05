@@ -57,6 +57,15 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Keep the removed target IDs for the replacement observations.",
     )
+    parser.add_argument(
+        "--allow-sparse-target-schedule",
+        action="store_true",
+        help=(
+            "Permit a target ID to be absent on intermediate feature frames. "
+            "The classical control is still tracked through the complete interval, "
+            "but is published only on the target ID's observed frames."
+        ),
+    )
     parser.add_argument("--max-candidates", type=int, default=512)
     parser.add_argument("--quality-level", type=float, default=0.01)
     parser.add_argument("--min-distance", type=int, default=18)
@@ -343,7 +352,13 @@ def write_control(args: argparse.Namespace) -> dict[str, object]:
     first_frame = min(min(frames) for frames in frames_by_id.values())
     last_frame = max(max(frames) for frames in frames_by_id.values())
     interval = list(range(first_frame, last_frame + 1))
-    if any(frames != list(range(frames[0], frames[-1] + 1)) for frames in frames_by_id.values()):
+    if (
+        not bool(args.allow_sparse_target_schedule)
+        and any(
+            frames != list(range(frames[0], frames[-1] + 1))
+            for frames in frames_by_id.values()
+        )
+    ):
         raise RuntimeError(
             "this diagnostic requires every target lineage to be contiguous"
         )
@@ -491,6 +506,7 @@ def write_control(args: argparse.Namespace) -> dict[str, object]:
             str(feature_id): frames_by_id[feature_id]
             for feature_id in target_ids
         },
+        "allow_sparse_target_schedule": bool(args.allow_sparse_target_schedule),
         "gftt_candidates": int(len(initial)),
         "full_interval_survivors": int(np.count_nonzero(alive)),
         "control_parameters": {

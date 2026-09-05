@@ -1,0 +1,4 @@
+order,arm,display_name,method,seed_source,profile,role
+1,klt,Protected KLT,klt,xfeat,lineage_delayed_newborn_slot_v3,baseline
+2,router_xfeat,Delayed newborn slot + XFeat,hybrid_xfeat,xfeat,lineage_delayed_newborn_slot_v3,learned_source_candidate
+3,router_splg,Delayed newborn slot + SP+LG,hybrid_superpoint_lightglue,all_learned,lineage_delayed_newborn_slot_v3,learned_source_candidate

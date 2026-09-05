@@ -1,147 +1,145 @@
 # AQUA-FE 固定交接入口
 
-更新时间：`2026-09-05T23:15:18+08:00`
+更新时间：`2026-09-06T02:32:20+08:00`
 
-## 当前阶段与结论
+发布分支：`codex/aqua-fe-evidence-20260905`
 
-当前权威实验为 `EXP-20260905-005`（coverage-monotone router v2 固定后端闭环）、
-`EXP-20260905-006`（A02 donor-delete-only route-D 诊断）和 `EXP-20260905-007`
-（A09/Bus 正例 donor-delete-only 诊断）。这些窗口均为已知结果的开发证据；
-参考轨迹是 COLMAP/proxy，不是独立真值。主指标使用逐轨迹 proper fixed-scale SE(3) 对齐，
-Sim(3) 只作尺度诊断。
+## 当前阶段和结论
 
-- v2 冻结后端完成 `42/42` 次 replay，`42/42` 初始化并通过覆盖门；14 个独立 replay cell
-  全部 PASS，4 个 active 三臂共同支撑全部 PASS。
-- active 学习臂相对 KLT 为 `2 WIN / 0 TIE / 2 LOSS / 0 FAIL`。加入 8 个零动作、bag 与 KLT
-  逐字节一致的映射后，完整 12 个学习臂—窗口分母为 `2 WIN / 8 exact TIE / 2 LOSS / 0 FAIL`；
-  这些 TIE 不是额外 replay 或独立样本。
-- A09 与 AFRL Bus 改善，但 matched GFTT 也呈同方向改善；A02 的 XFeat、SP+LG 和对应
-  matched GFTT 均严重退化。因此 v2 被判定为 `COMPLETE_REJECT_NOHARM`，不能支持 AQUA-FE
-  普遍优于 KLT 或现代学习前端。
-- A02 route-D 从 fresh KLT 只删除预注册的 8 个启动期 donor 观测、完全不加候选。
-  3/3 replay PASS，并复现尺度/精度崩坏，判定 `DELETE_SUFFICIENT`。准确边界是：这 8 个
-  注册删除足以产生该 A02 结果；它不证明新增候选完全无影响、不证明任何单个 donor 独立致因，
-  也不能外推自然正例率。
-- 正例删除对照新增 replay `6/6` PASS，两个窗口的 12-arm 联合共同支撑均 PASS。A09 的
-  delete-only 与 KLT 同样数量级发散，只有加入 learned 或 matched GFTT 后才收敛；Bus 的
-  delete-only 中位数严重退化，加入任一候选才稳定并优于 KLT。因此两个正例都不是“删点即赢”。
-  但 matched GFTT 同样有效，现有正例主要支持观测/初始化干预，尚不支持 learned 必要性。
+当前最新实验是 `EXP-20260905-008`：在六个已经用于开发的窗口上，只把 v2
+的 newborn exchange 从 selected feature frames 0–4 延后到 32–36；前 32 帧
+与 fresh KLT 逐字节一致。该实验已完成并冻结为 **`NO_EXPANSION`**。
 
-## 完整分母
+- 前端 18/18 PASS，matched-GFTT 7/7 PASS。
+- 后端 42/42 新 replay PASS；另有 12 次 KLT replay 通过 bag、YAML、相机、
+  VINS 二进制和 receipt 身份复用，不算独立重跑。
+- 7/7 个 all-nine common supports PASS；固定尺度 SE(3) 为主，Sim(3) 只作尺度诊断。
+- 七个 active 学习臂方向标签为 `6 WIN / 1 MIXED / 0 LOSS / 0 FAIL`；完整
+  12 个学习臂—窗口分母另有 5 个零动作 exact TIE。这里的 WIN 包含低至
+  0.003% 的微小方向变化，不能表述为六个有实际意义的正例。
+- A02 的 v2 灾难回归消失；但 A09 的历史尺度救援也完全消失，Bus 没有任一臂
+  达到预注册的 APE/RPE 同时改善至少 10%。因此不进入 12 个新窗口验证。
 
-| 物理窗口 | XFeat v2 vs KLT | SP+LG v2 vs KLT | 备注 |
+参考轨迹是 COLMAP/proxy，只表示与 proxy 的一致程度，不是独立 GT 绝对误差。
+所有窗口均为 outcome-known 开发数据，不是 held-out。
+
+## 完整窗口 × 方法结果
+
+| 物理窗口 | delayed XFeat | delayed SP+LG | 说明 |
 |---|---:|---:|---|
-| A09 6000–6800 | WIN | exact TIE | SP+LG 零动作、映射 KLT |
-| A02 0–900 | LOSS | LOSS | 两臂均为重复严重回归 |
-| AFRL Bus s180 d45 | WIN | exact TIE | SP+LG 零动作、映射 KLT |
-| A08 2700–3600 | exact TIE | exact TIE | 两臂零动作 |
-| AFRL Cemetery s135 d45 | exact TIE | exact TIE | 两臂零动作 |
-| Harbor H07 0–1000 | exact TIE | exact TIE | 两臂零动作 |
+| A09 6000–6800 | WIN（微小、仍发散） | WIN（微小、仍发散） | 未保留 v2 尺度救援 |
+| A02 0–900 | WIN | WIN | 均回到 KLT 附近，严重风险消失 |
+| AFRL Bus s180 d45 | MIXED | WIN | XFeat APE 变差；SP+LG 改善不足 10% |
+| A08 2700–3600 | exact TIE | exact TIE | 零动作、bag 与 KLT 相同 |
+| AFRL Cemetery s135 d45 | WIN | exact TIE | XFeat 改善约 1.7%；SP+LG 零动作 |
+| Harbor H07 0–1000 | exact TIE | exact TIE | 零动作、bag 与 KLT 相同 |
 
-这里的物理窗口数为 6，学习臂—窗口数为 12；三次 solver replay 只衡量技术稳定性，
-不作为独立科学样本。
+物理窗口数为 6，学习臂—窗口数为 12，active 臂—窗口数为 7；三次 solver
+replay 只衡量技术稳定性，不是独立科学样本。
 
 ## 主要绝对结果
 
-数值为三次 replay 的中位数；APE/RPE 单位为米。共同支撑有 38–42 个 pose、37–41 秒、
-93.33%–95.00% coverage 和 37–41 个严格 1 秒 RPE pair。
+以下为三次技术重复中位数，APE/RPE 单位为米。18 个后端 cell 均为
+`3/3 init`，54 个计划行的轨迹覆盖为 93.34%–96.75%；共同支撑为 38–43 poses、37–42 秒、
+93.33%–95.56% coverage 和 37–42 个严格 1 秒 RPE pairs。
 
 | 窗口 / 臂 | fixed-SE(3) APE | fixed-SE(3) RPE | Sim(3) scale |
 |---|---:|---:|---:|
 | A09 / KLT | 1242.140002 | 150.846817 | 0.001474 |
-| A09 / XFeat | 0.732414 | 0.073563 | 0.753181 |
-| A09 / matched GFTT | 1.082355 | 0.116941 | 0.673421 |
+| A09 / delayed XFeat | 1242.106809 | 150.838407 | 0.001474 |
+| A09 / delayed SP+LG | 1242.098781 | 150.838783 | 0.001474 |
 | A02 / KLT | 0.141317 | 0.022697 | 0.898634 |
-| A02 / XFeat | 1.091754 | 0.104297 | 0.509214 |
-| A02 / SP+LG | 1.113829 | 0.104368 | 0.504201 |
-| A02 / donor-delete-only | 1.073158 | 0.102008 | 0.513513 |
-| AFRL Bus / KLT | 0.060109 | 0.037218 | 0.956106 |
-| AFRL Bus / XFeat | 0.042794 | 0.026725 | 0.972868 |
-| AFRL Bus / matched GFTT | 0.044833 | 0.027888 | 0.962457 |
+| A02 / delayed XFeat | 0.139741 | 0.022620 | 0.899927 |
+| A02 / delayed SP+LG | 0.140679 | 0.022667 | 0.899152 |
+| Bus / KLT | 0.060109 | 0.037218 | 0.956106 |
+| Bus / delayed XFeat | 0.063018 | 0.035154 | 0.949511 |
+| Bus / delayed SP+LG | 0.054487 | 0.036274 | 0.967653 |
+| Cemetery / KLT | 0.533576 | 0.065177 | 1.252467 |
+| Cemetery / delayed XFeat | 0.524416 | 0.064020 | 1.247086 |
 
-A02 donor-delete-only 相对 KLT 的 APE/RPE 为 `+659.4% / +349.4%`；其接受的初始化事件
-中位数提前 0.785 秒，与 learned/matched 的约 0.795 秒提前接近。该证据支持“启动期删点
-改变初始化路径并足以造成 A02 尺度失败”，但具体后端因果链仍是 Hypothesis / Inference。
+evo 独立交叉验证最大差为 `4.997e-7 m`。完整中位数、范围、Sim(3) 和逐重复
+结果见链接表格。
 
-正例删除对照在重新计算的 12-arm 共同支撑上得到：
+## 已查清的正例机制
 
-| 窗口 / 臂 | fixed-SE(3) APE | fixed-SE(3) RPE | Sim(3) scale |
-|---|---:|---:|---:|
-| A09 / B fresh KLT | 1242.140002 | 150.846817 | 0.001474 |
-| A09 / B-D delete only | 1242.135147 | 150.843919 | 0.001474 |
-| A09 / B-D+L XFeat | 0.732414 | 0.073563 | 0.753181 |
-| A09 / B-D+C matched GFTT | 1.082355 | 0.116941 | 0.673421 |
-| Bus / B fresh KLT | 0.060301 | 0.037071 | 0.950924 |
-| Bus / B-D delete only | 53.052375 | 6.980129 | 0.013964 |
-| Bus / B-D+L XFeat | 0.042258 | 0.026681 | 0.969382 |
-| Bus / B-D+C matched GFTT | 0.044229 | 0.026862 | 0.961621 |
+`EXP-20260905-007` 的两个 donor-delete-only 对照均完成 3 次 replay：
 
-A09 `B-D` 对 `B` 的微小中位数差（APE `-0.00039%`、RPE `-0.00192%`）只是同一发散量级，
-不复现正例；Bus `B-D` 三次中有两次发散。结论边界是“候选加入对这两个正例必要”，并非
-“learned 来源必要”；删除和加入仍是一个联合干预，不能据此断言某一单独候选的因果效应。
+- A09：KLT 与 delete-only 都在约 1242 m 的同一发散量级；加入 XFeat 或
+  matched GFTT 才分别收敛到 0.732 m 和 1.082 m。
+- Bus：delete-only 三次中两次发散，中位 APE 53.052 m；加入 XFeat 或
+  matched GFTT 后分别为 0.0423 m 和 0.0442 m。
 
-## Lineage 与审计边界
+因此两个历史正例都不是“只删点即赢”，候选加入相对 delete-only 是必要的；
+但 matched GFTT 同样能救援，所以 **learned 来源的必要性仍未证明**。当前最强结论是
+“少量观测替换能双向改变初始化/收敛分支”，不是“学习持久锚点普遍增强”。
 
-14 条 learned lineage 共发布 21 个观测：10 条长度 1、1 条长度 2、3 条长度 3；没有一条
-达到锁定后端的 4 观测非线性残差资格计数。实现审计确认 v2 没有分离首次准入与已准入续传，
-startup horizon 对两者一并关闭，并且 50 次 sequence 计数在最终仲裁之前消费：A02 两臂各有
-50 个 pre-final sidecar、实际只发布 8 个。10 条 singleton 中，3 条下一帧已被 aggregate budget
-挡住，5 条仍有 aggregate sidecar 但同 ID 原因 Unknown，另 2 条下一输出帧 tracker learned
-count 为 0。精确同 ID 的内部候选出生、隐藏存活、
-后端逐 ID 接收以及实际进入残差，当前均为 **Unknown**。A02 donor ID 377 实际只少了替换帧
-的 1 个观测，下一帧以同 ID 连续恢复；“基线以后还有 104 帧”不是“v2 删除了 104 帧”。
+A02 的 `DELETE_SUFFICIENT` 边界保持不变：只删除预注册的八个启动期 donor
+观测、不加候选，足以复现该窗口的严重尺度/精度退化。这不证明候选零影响，
+不证明任一 donor 单独致因，也不能外推到总体窗口比例。
 
-## 已完成、未完成与唯一下一项
+## Lineage 和 Unknown
 
-已完成：v2 前端/动作/matched control/lineage 审计、42 次冻结后端、全重复共同支撑评估、
-A02 donor-delete-only 三次诊断、A09/Bus donor-delete-only 六次诊断，以及本证据快照的
-路径脱敏镜像。
+v2 的 14 条 learned lineage 共 21 个发布观测：10 条长度 1、1 条长度 2、
+3 条长度 3，没有一条达到锁定后端的 4 观测非线性残差资格计数。预算审计确认：
 
-尚未完成：基于删除归因选择的唯一最小新版本；12 个新窗口验证。它们当前均为
-**Not evaluated**，不能写成已完成或已同步结果。
+- v2 没有独立的新准入预算和已准入 ID 续传表；startup horizon 同时截断两者；
+- 50 次 sequence counter 在最终仲裁前消费，A02 每臂有 50 个 pre-final
+  sidecar，但只发布 8 个；
+- 3 个 singleton 紧邻 aggregate budget 耗尽；另 5 个同 ID 停止原因仍
+  **Unknown**；另外 2 个下一输出帧 tracker learned count 为 0。
 
-唯一下一项实验是：在原六窗开发集冻结一个 delayed newborn-slot 版本，只把 v2 的固定
-5-selected-frame 介入窗延后到全局固定启动保护之后；候选来源、阈值、donor 排序、每帧及
-总预算均不变。保护期内输入保持 fresh KLT；之后仍只置换 age-1 GFTT，不删成熟轨迹。
-它不是在线“已初始化”保证，也不等于保留全部将来新生 GFTT。该版本先验证 A02 风险是否
-消失以及 A09/Bus 收益能否保留；通过预注册开发门后才允许锁定 12 个新窗口。
+候选逐 ID 内部存活、后端逐 ID 收到/实际进入残差、counter 原设计语义均仍是
+**Unknown**，不得写成“已确认预算 bug”。A02 donor ID 377 实际只缺一个发布观测，
+下一帧以同 ID 恢复；不能写成删除了未来 104 帧。
 
-## 可读证据与身份
+## 完成、未完成和唯一下一步
 
-- [v2 完整后端报告](../papers/frontend_coverage_monotone_router_v2/backend_completion_report.md)
-- [v2 主精度表](../papers/frontend_coverage_monotone_router_v2/accuracy.csv)、
-  [逐重复精度](../papers/frontend_coverage_monotone_router_v2/accuracy_repeats.csv)、
-  [比较表](../papers/frontend_coverage_monotone_router_v2/backend_comparisons.csv)、
-  [runability](../papers/frontend_coverage_monotone_router_v2/runability.csv)
-- [v2 动作审计](research_sync/EXP-20260905-005_v2_backend/action_audit.csv)、
-  [matched control 审计](research_sync/EXP-20260905-005_v2_backend/matched_control_audit.csv)、
-  [lineage 审计](research_sync/EXP-20260905-005_v2_backend/lineage_diagnostic.csv)、
-  [42 次紧凑 replay 表](research_sync/EXP-20260905-005_v2_backend/backend_results_repeats_compact.csv)、
-  [来源 SHA-256](research_sync/EXP-20260905-005_v2_backend/source_identity.csv)
-- [lineage 预算/续传审计](../papers/frontend_coverage_monotone_router_v2/lineage_budget_audit.md)、
-  [逐 ID 紧凑表](../papers/frontend_coverage_monotone_router_v2/lineage_budget_audit.csv)
-- [v2 冻结协议](../papers/frontend_coverage_monotone_router_v2/preregistration.md)、
-  [最终决策](../papers/frontend_coverage_monotone_router_v2/decision_backend_complete.json)；
-  `decision_historical_blocked_disk.json` 仅是已被完成结果取代的历史检查点。
-- [A02 donor-delete 报告](../papers/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/report.md)、
-  [主精度表](../papers/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/accuracy.csv)、
-  [逐重复精度](../papers/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/accuracy_repeats.csv)、
-  [删除清单](../papers/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/deleted_observations.csv)、
-  [协议](../papers/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/preregistration.md)、
-  [决策](../papers/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/decision.json)、
-  [来源 SHA-256](research_sync/EXP-20260905-006_a02_donor_delete/source_identity.csv)
-- [A09/Bus 正例 donor-delete 报告](../papers/frontend_v2_positive_delete_diagnostic/report.md)、
-  [主精度表](../papers/frontend_v2_positive_delete_diagnostic/accuracy.csv)、
-  [逐重复精度](../papers/frontend_v2_positive_delete_diagnostic/accuracy_repeats.csv)、
-  [四臂比较](../papers/frontend_v2_positive_delete_diagnostic/comparisons.csv)、
-  [runability](../papers/frontend_v2_positive_delete_diagnostic/runability.csv)、
-  [删除清单](../papers/frontend_v2_positive_delete_diagnostic/deleted_observations.csv)、
-  [预注册协议](../papers/frontend_v2_positive_delete_diagnostic/preregistration.md)、
-  [决策](../papers/frontend_v2_positive_delete_diagnostic/decision.json)、
-  [来源 SHA-256](research_sync/EXP-20260905-007_positive_delete/source_identity.csv)
+已完成：v2 42 次后端、A02 delete-only、A09/Bus delete-only、lineage/预算审计、
+delayed-v3 的前端、matched controls、42 次新后端、共同支撑和冻结判定。
 
-实验运行时源码身份是 `main@f6f8feec66c2faf1f59cdb67c1e817028a3bccaf` 加锁定的工作区文件：
-exporter SHA-256 `bb4e50d8...714d1d`，v2 runner `a5c171d8...ec3fe4`，后端 node
-`4e91d8ac...f4278`，后端 library `373a598c...71e8`。逐文件、逐窗口配置和输入 bag 的完整
-哈希见公开的 execution/method lock 与紧凑 replay 表；原始 bag、数据、模型、缓存和完整日志
-没有上传。后续“报告发布 commit”仅表示证据发布身份，不冒充上述实验运行时源码 commit。
+未完成且 **Not evaluated**：12 个新窗口验证、在线初始化状态保护、共享初始化状态
+下的候选价值、数据集总体正例率。因为 v3 没过扩展门，这些项目没有启动，不能通过
+继续换 horizon 或挑窗口来补正例。
+
+唯一下一步：遵守 `NO_EXPANSION`，停止本协议的方法扩展并把“初始化干预高度敏感、
+learned 必要性未证实”作为论文证据边界。若以后继续算法开发，必须为共享初始化状态
+或在线可观测判据另写新协议，不能作为 EXP-20260905-008 的第二个参数尝试。
+
+## 仓库内可读证据
+
+- [delayed-v3 完整报告](../papers/frontend_delayed_newborn_slot_v3/report.md)
+- [预注册协议](../papers/frontend_delayed_newborn_slot_v3/preregistration.md)、
+  [冻结决策](../papers/frontend_delayed_newborn_slot_v3/backend_decision.json)
+- [完整 12 臂结果](../papers/frontend_delayed_newborn_slot_v3/development_outcomes.csv)、
+  [主精度表](../papers/frontend_delayed_newborn_slot_v3/accuracy.csv)、
+  [逐重复精度](../papers/frontend_delayed_newborn_slot_v3/accuracy_repeats.csv)
+- [逐 replay runability](../papers/frontend_delayed_newborn_slot_v3/backend_results_repeats.csv)、
+  [臂级 runability](../papers/frontend_delayed_newborn_slot_v3/runability.csv)
+- [前端动作审计](../papers/frontend_delayed_newborn_slot_v3/action_audit.csv)、
+  [matched control 审计](../papers/frontend_delayed_newborn_slot_v3/matched_control_audit.csv)、
+  [共同支撑审计](../papers/frontend_delayed_newborn_slot_v3/common_support_status.csv)
+- [后端配置审计](../papers/frontend_delayed_newborn_slot_v3/backend_config_audit.csv)、
+  [完整哈希清单](../papers/frontend_delayed_newborn_slot_v3/artifacts.sha256)、
+  [公开副本来源身份](research_sync/EXP-20260905-008_delayed_v3/source_identity.csv)
+- [A09/Bus 正例删除归因报告](../papers/frontend_v2_positive_delete_diagnostic/report.md)、
+  [四臂比较](../papers/frontend_v2_positive_delete_diagnostic/comparisons.csv)
+- [A02 DELETE_SUFFICIENT 报告](../papers/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/report.md)
+- [v2 完整后端报告](../papers/frontend_coverage_monotone_router_v2/backend_completion_report.md)、
+  [lineage 预算审计](../papers/frontend_coverage_monotone_router_v2/lineage_budget_audit.md)
+
+## 源码、配置和数据身份
+
+实验运行时基线为 `main@f6f8feec66c2faf1f59cdb67c1e817028a3bccaf` 加冻结工作树
+文件；报告发布 commit 是后来的证据身份，不能冒充运行时源码 commit。
+
+- exporter：`bb4e50d8...714d1d`（v3 未修改 exporter）；
+- v3 environment/profile lock：`scripts/learned_seedchain_env.sh`
+  `4372ad94...aa02a`，method lock `9a6655a4...e8e54`；
+- VINS node/library：`4e91d8ac...f4278` / `373a598c...71e8`；
+- 后端原 lock：`26146d69...2473`；只修输出收集路径的 wrapper amendment：
+  `f4d68efa...e89a`；所有四个 active 物理窗口三臂 YAML 哈希各自唯一且审计 PASS。
+
+原始 bag、数据集、模型、缓存、完整控制台日志未上传。`artifacts.sha256` 用
+`repo:`、`v3_runtime:`、`v2_runtime:` 表示真实本地根，并给出 feature bag、
+`vio.csv`、`vins.log`、receipt 和紧凑报告的 SHA-256；GitHub 只发布小型报告、表格、
+协议、必要脚本和路径脱敏身份清单。

@@ -128,11 +128,64 @@ def main() -> int:
     ):
         jobs.append((positive_delete / name, positive_delete_public / name, None, "path_prefix_substitution"))
 
+    delayed_v3 = Path("papers/frontend_delayed_newborn_slot_v3")
+    for name in (
+        "accuracy.csv", "accuracy_repeats.csv", "action_audit.csv", "arms.csv",
+        "artifacts.sha256", "backend_comparisons.csv", "backend_config_audit.csv",
+        "backend_decision.json", "backend_execution_lock.json",
+        "backend_execution_lock_amendment.json", "backend_replay_plan.csv",
+        "backend_results.csv", "backend_results_repeats.csv",
+        "common_support_status.csv", "decision.json", "development_outcomes.csv",
+        "development_windows.csv", "exact_fallback.csv", "export_only_report.md",
+        "frontend_audit.csv", "klt_reuse_audit.csv", "matched_control_audit.csv",
+        "matched_control_plan.json", "matched_control_plan_amendment.json",
+        "matched_control_plan_amendment_timestamp_correction.json", "method_lock.json",
+        "opportunity_audit.csv", "preregistration.md", "report.md", "runability.csv",
+        "startup_protection_audit.csv",
+    ):
+        jobs.append((delayed_v3 / name, delayed_v3 / name, None, "path_prefix_substitution"))
+    for source in sorted((source_root / delayed_v3 / "matched_controls").rglob("*")):
+        if source.is_file():
+            relative = source.relative_to(source_root)
+            jobs.append((relative, relative, None, "path_prefix_substitution"))
+    for source in sorted((source_root / delayed_v3 / "common_support").glob("*")):
+        for name in (
+            "common_grid_audit.csv", "common_support_metrics.csv",
+            "common_support_summary.json", "evo_crosscheck.json",
+        ):
+            relative = (source / name).relative_to(source_root)
+            jobs.append((relative, relative, None, "path_prefix_substitution"))
+
+    delayed_scripts = (
+        "scripts/analyze_frontend_delayed_newborn_slot_v3.py",
+        "scripts/audit_frontend_delayed_newborn_slot_v3_actions.py",
+        "scripts/audit_frontend_delayed_newborn_slot_v3_matched_controls.py",
+        "scripts/build_frontend_delayed_newborn_slot_v3_artifact_manifest.py",
+        "scripts/build_gftt_matched_lineage_control.py",
+        "scripts/finalize_frontend_coverage_monotone_router_v2_backend.py",
+        "scripts/finalize_frontend_delayed_newborn_slot_v3_backend.py",
+        "scripts/freeze_frontend_delayed_newborn_slot_v3_backend_plan.py",
+        "scripts/freeze_frontend_delayed_newborn_slot_v3_matched_plan.py",
+        "scripts/learned_seedchain_env.sh",
+        "scripts/reuse_frontend_delayed_newborn_slot_v3_klt.py",
+        "scripts/run_frontend_coverage_monotone_router_v2_matched_controls.py",
+        "scripts/run_frontend_delayed_newborn_slot_v3.py",
+        "scripts/run_frontend_delayed_newborn_slot_v3_backend.py",
+        "scripts/run_frontend_delayed_newborn_slot_v3_backend_cell.sh",
+        "scripts/run_frontend_delayed_newborn_slot_v3_matched_controls.py",
+    )
+    for name in delayed_scripts:
+        relative = Path(name)
+        jobs.append((relative, relative, None, "verbatim_source"))
+
     manifest_rows: list[dict[str, str]] = []
     for relative_source, relative_destination, omit, transform in jobs:
         source = source_root / relative_source
         destination = destination_root / relative_destination
-        if source.suffix == ".csv":
+        if transform == "verbatim_source":
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_bytes(source.read_bytes())
+        elif source.suffix == ".csv":
             mirror_csv(source, destination, omit)
         else:
             mirror_text(source, destination)
@@ -153,6 +206,17 @@ def main() -> int:
             writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator="\n")
             writer.writeheader()
             writer.writerows(rows)
+    delayed_identity = destination_root / "docs/research_sync/EXP-20260905-008_delayed_v3/source_identity.csv"
+    delayed_identity.parent.mkdir(parents=True, exist_ok=True)
+    delayed_rows = [
+        row for row in manifest_rows
+        if row["source_file"].startswith(delayed_v3.as_posix() + "/")
+        or row["source_file"] in delayed_scripts
+    ]
+    with delayed_identity.open("w", newline="", encoding="utf-8") as stream:
+        writer = csv.DictWriter(stream, fieldnames=list(delayed_rows[0]), lineterminator="\n")
+        writer.writeheader()
+        writer.writerows(delayed_rows)
     return 0
 
 

@@ -1,0 +1,234 @@
+{
+  "allow_sparse_target_schedule": true,
+  "assignments": [
+    {
+      "candidate_index": 82,
+      "control_final_pixel": [
+        592.6353149414062,
+        165.35467529296875
+      ],
+      "control_id": 10000000,
+      "control_initial_pixel": [
+        569.0,
+        124.0
+      ],
+      "initial_distance_px": 37.760411600771654,
+      "target_frames": [
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "target_id": 10000000,
+      "target_initial_pixel": [
+        541.636962890625,
+        150.02139282226562
+      ]
+    },
+    {
+      "candidate_index": 148,
+      "control_final_pixel": [
+        544.1141357421875,
+        139.78680419921875
+      ],
+      "control_id": 10000001,
+      "control_initial_pixel": [
+        524.0,
+        99.0
+      ],
+      "initial_distance_px": 18.942058551269113,
+      "target_frames": [
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "target_id": 10000001,
+      "target_initial_pixel": [
+        533.8244018554688,
+        115.19514465332031
+      ]
+    },
+    {
+      "candidate_index": 19,
+      "control_final_pixel": [
+        548.7731323242188,
+        260.524169921875
+      ],
+      "control_id": 10000002,
+      "control_initial_pixel": [
+        523.0,
+        203.0
+      ],
+      "initial_distance_px": 25.426554512548535,
+      "target_frames": [
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "target_id": 10000002,
+      "target_initial_pixel": [
+        509.5512390136719,
+        181.42129516601562
+      ]
+    },
+    {
+      "candidate_index": 103,
+      "control_final_pixel": [
+        718.0601196289062,
+        228.61444091796875
+      ],
+      "control_id": 10000004,
+      "control_initial_pixel": [
+        713.0,
+        215.0
+      ],
+      "initial_distance_px": 61.62416526987185,
+      "target_frames": [
+        32,
+        33
+      ],
+      "target_id": 10000004,
+      "target_initial_pixel": [
+        770.7138671875,
+        236.60202026367188
+      ]
+    },
+    {
+      "candidate_index": 137,
+      "control_final_pixel": [
+        667.7899780273438,
+        358.307373046875
+      ],
+      "control_id": 10000005,
+      "control_initial_pixel": [
+        661.0,
+        338.0
+      ],
+      "initial_distance_px": 112.62349546522286,
+      "target_frames": [
+        32,
+        33
+      ],
+      "target_id": 10000005,
+      "target_initial_pixel": [
+        771.5574951171875,
+        359.4730529785156
+      ]
+    },
+    {
+      "candidate_index": 116,
+      "control_final_pixel": [
+        779.068359375,
+        202.38308715820312
+      ],
+      "control_id": 10000007,
+      "control_initial_pixel": [
+        754.0,
+        170.0
+      ],
+      "initial_distance_px": 41.52924576013544,
+      "target_frames": [
+        32,
+        34,
+        35
+      ],
+      "target_id": 10000007,
+      "target_initial_pixel": [
+        746.1099853515625,
+        210.77285766601562
+      ]
+    }
+  ],
+  "builder_script_sha256": "7dd75c8ffc6e9ec47231d8de4904ddde0c54451f200f0b22ac03490b74dc0b46",
+  "camera_config": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/shadow_root/logs/afrl_cave_v31/external_hybrid_xfeat_every2_dnr3_afrl_cemetery_s135_d045_router_xfeat/afrl_cave_cam0_pinhole.yaml",
+  "camera_config_sha256": "9580011fcaa23217407c1d1dbf616d57e95d81498293129f70bc0700e40e5154",
+  "control_id_mode": "preserve_target_ids",
+  "control_parameters": {
+    "block_size": 7,
+    "control_source_code": 0,
+    "exclusion_radius": 18,
+    "first_frame_velocity": "zero",
+    "lk_criteria_count": 30,
+    "lk_criteria_epsilon": 0.01,
+    "lk_max_level": 3,
+    "lk_win_size": [
+      21,
+      21
+    ],
+    "max_candidates": 512,
+    "max_fb_error": 1.0,
+    "max_image_dt": 0.002,
+    "min_distance": 18,
+    "opencv_rng_seed": 20260803,
+    "quality_level": 0.01
+  },
+  "feature_frames": 357,
+  "feature_topic": "/feature_tracker/feature",
+  "first_replaced_frame": 32,
+  "full_interval_survivors": 173,
+  "gftt_candidates": 512,
+  "image_topic": "/camera/image_raw",
+  "inserted_observations": 22,
+  "last_replaced_frame": 36,
+  "new_id_base": 15000000,
+  "opencv_version": "4.2.0",
+  "output_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/matched_controls/afrl_cemetery_s135_d045/router_xfeat/stage_01.bag",
+  "output_bag_sha256": "76062aefb8510093dba69d3cce944abc07055301aa8e66bebd3eeb8d83b4b79c",
+  "python_version": "3.8.10",
+  "raw_bag": "${AQUA_FE_OFFLOAD}/frontend_same_backend_confirmatory_v3/prepared/afrl_cemetery_s135_d045/input.bag",
+  "raw_bag_sha256": "7ab621a9e7937bd99965e23c5686f4aa2095e2460f4ff03b8c7de0289c1a3bea",
+  "removed_observations": 22,
+  "replaced_frames": 5,
+  "schema_version": "gftt-matched-lineage-control-v2",
+  "target_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/shadow_root/logs/afrl_cave_v31/external_hybrid_xfeat_every2_dnr3_afrl_cemetery_s135_d045_router_xfeat/features.bag",
+  "target_bag_sha256": "df8eece8ad79fccf9d1d954b86b6ac63a8c49d51671ff300840ea705e2b07741",
+  "target_frames_by_id": {
+    "10000000": [
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "10000001": [
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "10000002": [
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "10000004": [
+      32,
+      33
+    ],
+    "10000005": [
+      32,
+      33
+    ],
+    "10000007": [
+      32,
+      34,
+      35
+    ]
+  },
+  "target_ids": [
+    10000000,
+    10000001,
+    10000002,
+    10000004,
+    10000005,
+    10000007
+  ]
+}

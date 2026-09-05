@@ -1,0 +1,76 @@
+{
+  "assignments": [
+    {
+      "candidate_index": 437,
+      "control_final_pixel": [
+        305.0,
+        43.0
+      ],
+      "control_id": 10000001,
+      "control_initial_pixel": [
+        305.0,
+        43.0
+      ],
+      "initial_distance_px": 12.19222079997656,
+      "target_frames": [
+        34
+      ],
+      "target_id": 10000001,
+      "target_initial_pixel": [
+        317.1844787597656,
+        43.434425354003906
+      ]
+    }
+  ],
+  "builder_script_sha256": "72438f10f515a6f3a69eeab203d4342d4969d0541085a0b3330ca506d3eb3795",
+  "camera_config": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_dnr3_a09_6000_6800_router_xfeat/aqualoc_archaeo09_pinhole.yaml",
+  "camera_config_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+  "control_id_mode": "preserve_target_ids",
+  "control_parameters": {
+    "block_size": 7,
+    "control_source_code": 0,
+    "exclusion_radius": 18,
+    "first_frame_velocity": "zero",
+    "lk_criteria_count": 30,
+    "lk_criteria_epsilon": 0.01,
+    "lk_max_level": 3,
+    "lk_win_size": [
+      21,
+      21
+    ],
+    "max_candidates": 512,
+    "max_fb_error": 1.0,
+    "max_image_dt": 0.002,
+    "min_distance": 18,
+    "opencv_rng_seed": 20260803,
+    "quality_level": 0.01
+  },
+  "feature_frames": 400,
+  "feature_topic": "/feature_tracker/feature",
+  "first_replaced_frame": 34,
+  "full_interval_survivors": 512,
+  "gftt_candidates": 512,
+  "image_topic": "/camera/image_raw",
+  "inserted_observations": 1,
+  "last_replaced_frame": 34,
+  "new_id_base": 15000000,
+  "opencv_version": "4.2.0",
+  "output_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/matched_controls/a09_6000_6800/router_xfeat/features_matched_gftt.bag",
+  "output_bag_sha256": "50f40f5dc3ce72e3c32eacb1ea96fa42358b24988884123bfc4d27eb01f831ea",
+  "python_version": "3.8.10",
+  "raw_bag": "${AQUA_FE_WS}/artifacts/frontend_xfeat_replacement_attribution_v1/inputs/archaeo09_6000_6800.bag",
+  "raw_bag_sha256": "8f1e411795baf70ca989ad882088050f44072cdaf89423d00b6ec52086dbf394",
+  "removed_observations": 1,
+  "replaced_frames": 1,
+  "schema_version": "gftt-matched-lineage-control-v2",
+  "target_bag": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/matched_controls/a09_6000_6800/router_xfeat/stage_01.bag",
+  "target_bag_sha256": "64e9ec55cda9a1638b2d41c41bd509b2bf28a498bb4a07e43cd859aadbdbcd44",
+  "target_frames_by_id": {
+    "10000001": [
+      34
+    ]
+  },
+  "target_ids": [
+    10000001
+  ]
+}

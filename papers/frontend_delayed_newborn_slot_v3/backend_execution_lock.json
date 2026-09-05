@@ -1,0 +1,63 @@
+{
+  "backend_results_seen_before_freeze": false,
+  "experiment_id": "EXP-20260905-008",
+  "files": [
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/preregistration.md",
+      "sha256": "08515063cd998faa79343b7e839f7d5275a61b7454f558376a730ae94f8d8e91"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/development_windows.csv",
+      "sha256": "375469dcc1fb49e179196f682c62b2fca6a81704ce6e51dc1e13e30adaa98323"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/arms.csv",
+      "sha256": "b203b219378810c3e07d307af91470ce9b1b34abb767916473ce7cee84476a37"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/method_lock.json",
+      "sha256": "9a6655a45f5de991fedd22de29efc4c0052fd0ec4f362e1dc2709f840bbe8e54"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/decision.json",
+      "sha256": "f63942302471e55792f09a9b6b31d339158d81074212bc6253e733206ee44449"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/frontend_audit.csv",
+      "sha256": "32ef76481121427608e59c08225d374e12aabec1ced6eb5b7832bafbb11eea86"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/matched_control_plan.json",
+      "sha256": "342c5b25537fe0e4952430a62506db560124391a454cf4e958bc732d0951bdfa"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/matched_control_plan_amendment.json",
+      "sha256": "4b4dac7f92484250479a1a80542c56916dc4eae8919ecac5286e32d9504085f6"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/matched_control_audit.csv",
+      "sha256": "7d55a4e7058f1103cb5ca75d20d83b52928545d89bb16391441100579d7784b3"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_delayed_newborn_slot_v3/backend_replay_plan.csv",
+      "sha256": "55ced1e182356fc5dba67be598bf90ace4cfe7be7a12d386261eb284d048925a"
+    },
+    {
+      "path": "${AQUA_FE_WS}/scripts/run_frontend_delayed_newborn_slot_v3_backend.py",
+      "sha256": "d1f7c22d2724ce23676441167719e64ed6d1322579659f448275519878e44b6b"
+    },
+    {
+      "path": "${AQUA_FE_WS}/scripts/run_frontend_delayed_newborn_slot_v3_backend_cell.sh",
+      "sha256": "a3c91840127972c5bfb5157d97aeb16ac89a269e837d81cda3879432d1498733"
+    }
+  ],
+  "frozen_at": "2026-09-06T01:24:42.457151+08:00",
+  "new_replays": 42,
+  "plan_rows_total": 54,
+  "reuse_contract": "exact feature bag, canonical YAML, camera YAML, VINS binary/library and receipt-bound trajectory",
+  "reused_klt_replays": 12,
+  "schema_version": "aqua-fe-delayed-newborn-slot-v3-backend-lock-v1",
+  "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+  "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+  "vins_workspace": "${VINS_FUSION_ORIGIN}"
+}

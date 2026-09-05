@@ -1,0 +1,26 @@
+{
+  "amended_before_any_valid_v3_backend_receipt": true,
+  "backend_or_evaluation_parameter_changed": false,
+  "feature_bag_or_message_changed": false,
+  "frozen_at": "2026-09-06T01:35:28+08:00",
+  "invalid_attempts": {
+    "count": 9,
+    "disposition": "Quarantined; zero replay receipts; excluded from all scientific denominators.",
+    "path": "${AQUA_FE_OFFLOAD}/frontend_delayed_newborn_slot_v3/quarantine/backend_wrapper_path_mismatch_20260906T0125"
+  },
+  "original_lock_sha256": "26146d695c43231aeb1d67eedf9f905a64d3e654666576b35a643605f9b52473",
+  "original_plan_sha256": "55ced1e182356fc5dba67be598bf90ace4cfe7be7a12d386261eb284d048925a",
+  "reason": "The original v3 cell wrapper checked its own scratch path, while the bit-identical reused canonical YAML writes vio.csv to its frozen v2 output_path. VINS output existed, but the wrapper looked in the wrong directory.",
+  "repair": "Keep the canonical YAML byte-identical and copy vio.csv from the exact output_path declared by that YAML after validating it against the registered per-window scratch pattern.",
+  "schema_version": "aqua-fe-delayed-newborn-slot-v3-backend-lock-amendment-v1",
+  "wrapper_file_replacements": {
+    "${AQUA_FE_WS}/scripts/run_frontend_delayed_newborn_slot_v3_backend.py": {
+      "new_sha256": "42128f485b35b7ffaaf448f1f190306cf0cd462a7fb888d1a0dd4b7bd6e7872d",
+      "old_sha256": "d1f7c22d2724ce23676441167719e64ed6d1322579659f448275519878e44b6b"
+    },
+    "${AQUA_FE_WS}/scripts/run_frontend_delayed_newborn_slot_v3_backend_cell.sh": {
+      "new_sha256": "ad46a2d29697b16c551fe62572a305e9b5f9c70342d1800331832d5c9287cf04",
+      "old_sha256": "a3c91840127972c5bfb5157d97aeb16ac89a269e837d81cda3879432d1498733"
+    }
+  }
+}
