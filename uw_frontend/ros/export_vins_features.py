@@ -81,6 +81,23 @@ class _FinalMirrorExportInfo:
     persistence_churn_guard_gftt_births: int = 0
     persistence_churn_guard_denominator: int = 0
     persistence_churn_guard_ratio: float = float("nan")
+    persistence_source_router_active: bool = False
+    persistence_source_eligible_sidecars: int = 0
+    persistence_source_suppressed: int = 0
+    persistence_same_cell_active: bool = False
+    persistence_same_cell_suppressed: int = 0
+    persistence_coverage_monotone_active: bool = False
+    persistence_coverage_monotone_suppressed: int = 0
+    persistence_grid_cells_before: int = -1
+    persistence_grid_cells_after: int = -1
+    persistence_grid_cell_delta: int = 0
+    persistence_cross_cell_replacements: int = 0
+    persistence_donor_cell_min_remaining: int = -1
+    persistence_per_frame_cap: int = 0
+    persistence_per_frame_cap_suppressed: int = 0
+    persistence_replaced_gftt_max_age: int = -1
+    persistence_replacement_min_age_advantage_actual: int = -1
+    persistence_replacement_cell_mismatches: int = 0
 
 
 @dataclass(frozen=True)
@@ -1134,6 +1151,50 @@ def main() -> int:
             "At the first eligible sidecar frame, arm replacement only when "
             "same-frame GFTT births divided by the cap-limited mirror count "
             "meet this ratio. Values <=0 disable the guard."
+        ),
+    )
+    parser.add_argument(
+        "--final-mirror-persistence-source-router",
+        action="store_true",
+        help=(
+            "Fail closed to an explicit confirmed learned-source allowlist "
+            "before persistence replacement or vacant-capacity admission."
+        ),
+    )
+    parser.add_argument(
+        "--final-mirror-persistence-allow-all-non-loftr",
+        action="store_true",
+        help=(
+            "Under the source router, allow confirmed XFeat or SP+LG/other "
+            "non-LoFTR learned lineages. LoFTR remains ineligible."
+        ),
+    )
+    parser.add_argument(
+        "--final-mirror-persistence-same-grid-cell",
+        action="store_true",
+        help=(
+            "Permit a full-budget birth replacement only when the confirmed "
+            "sidecar and the GFTT birth occupy the same image grid cell."
+        ),
+    )
+    parser.add_argument(
+        "--final-mirror-persistence-coverage-monotone",
+        action="store_true",
+        help=(
+            "Permit an age-1 GFTT donor outside the sidecar cell only when "
+            "the donor cell remains occupied and occupied grid-cell count "
+            "cannot decrease after each deterministic exchange."
+        ),
+    )
+    parser.add_argument("--final-mirror-persistence-grid-rows", type=int, default=4)
+    parser.add_argument("--final-mirror-persistence-grid-cols", type=int, default=6)
+    parser.add_argument(
+        "--final-mirror-persistence-max-per-frame",
+        type=int,
+        default=0,
+        help=(
+            "Maximum persistence-router sidecars admitted on one published "
+            "frame. Values <=0 preserve the historical unbounded behavior."
         ),
     )
     parser.add_argument(
@@ -2732,6 +2793,23 @@ def main() -> int:
                 "final_mirror_persistence_churn_guard_gftt_births",
                 "final_mirror_persistence_churn_guard_denominator",
                 "final_mirror_persistence_churn_guard_ratio",
+                "final_mirror_persistence_source_router_active",
+                "final_mirror_persistence_source_eligible_sidecars",
+                "final_mirror_persistence_source_suppressed",
+                "final_mirror_persistence_same_cell_active",
+                "final_mirror_persistence_same_cell_suppressed",
+                "final_mirror_persistence_coverage_monotone_active",
+                "final_mirror_persistence_coverage_monotone_suppressed",
+                "final_mirror_persistence_grid_cells_before",
+                "final_mirror_persistence_grid_cells_after",
+                "final_mirror_persistence_grid_cell_delta",
+                "final_mirror_persistence_cross_cell_replacements",
+                "final_mirror_persistence_donor_cell_min_remaining",
+                "final_mirror_persistence_per_frame_cap",
+                "final_mirror_persistence_per_frame_cap_suppressed",
+                "final_mirror_persistence_replaced_gftt_max_age",
+                "final_mirror_persistence_replacement_min_age_advantage_actual",
+                "final_mirror_persistence_replacement_cell_mismatches",
                 "exported_learned_median_age",
                 "exported_non_loftr_learned_median_age",
                 "exported_xfeat_median_age",
@@ -3905,6 +3983,28 @@ def main() -> int:
                 persistence_min_gftt_ratio=float(
                     args.final_mirror_persistence_min_gftt_ratio
                 ),
+                persistence_source_router=bool(
+                    args.final_mirror_persistence_source_router
+                ),
+                persistence_allow_all_non_loftr=bool(
+                    args.final_mirror_persistence_allow_all_non_loftr
+                ),
+                persistence_same_grid_cell=bool(
+                    args.final_mirror_persistence_same_grid_cell
+                ),
+                persistence_coverage_monotone=bool(
+                    args.final_mirror_persistence_coverage_monotone
+                ),
+                persistence_grid_rows=int(
+                    args.final_mirror_persistence_grid_rows
+                ),
+                persistence_grid_cols=int(
+                    args.final_mirror_persistence_grid_cols
+                ),
+                persistence_max_per_frame=int(
+                    args.final_mirror_persistence_max_per_frame
+                ),
+                image_shape=gray.shape,
             )
             if final_mirror_export_info.zero_sidecar_restore:
                 # A rejected/empty learned branch must not leave a quality-side
@@ -4290,6 +4390,63 @@ def main() -> int:
                         ),
                         "final_mirror_persistence_churn_guard_ratio": (
                             final_mirror_export_info.persistence_churn_guard_ratio
+                        ),
+                        "final_mirror_persistence_source_router_active": (
+                            1
+                            if final_mirror_export_info.persistence_source_router_active
+                            else 0
+                        ),
+                        "final_mirror_persistence_source_eligible_sidecars": (
+                            final_mirror_export_info.persistence_source_eligible_sidecars
+                        ),
+                        "final_mirror_persistence_source_suppressed": (
+                            final_mirror_export_info.persistence_source_suppressed
+                        ),
+                        "final_mirror_persistence_same_cell_active": (
+                            1
+                            if final_mirror_export_info.persistence_same_cell_active
+                            else 0
+                        ),
+                        "final_mirror_persistence_same_cell_suppressed": (
+                            final_mirror_export_info.persistence_same_cell_suppressed
+                        ),
+                        "final_mirror_persistence_coverage_monotone_active": (
+                            1
+                            if final_mirror_export_info.persistence_coverage_monotone_active
+                            else 0
+                        ),
+                        "final_mirror_persistence_coverage_monotone_suppressed": (
+                            final_mirror_export_info.persistence_coverage_monotone_suppressed
+                        ),
+                        "final_mirror_persistence_grid_cells_before": (
+                            final_mirror_export_info.persistence_grid_cells_before
+                        ),
+                        "final_mirror_persistence_grid_cells_after": (
+                            final_mirror_export_info.persistence_grid_cells_after
+                        ),
+                        "final_mirror_persistence_grid_cell_delta": (
+                            final_mirror_export_info.persistence_grid_cell_delta
+                        ),
+                        "final_mirror_persistence_cross_cell_replacements": (
+                            final_mirror_export_info.persistence_cross_cell_replacements
+                        ),
+                        "final_mirror_persistence_donor_cell_min_remaining": (
+                            final_mirror_export_info.persistence_donor_cell_min_remaining
+                        ),
+                        "final_mirror_persistence_per_frame_cap": (
+                            final_mirror_export_info.persistence_per_frame_cap
+                        ),
+                        "final_mirror_persistence_per_frame_cap_suppressed": (
+                            final_mirror_export_info.persistence_per_frame_cap_suppressed
+                        ),
+                        "final_mirror_persistence_replaced_gftt_max_age": (
+                            final_mirror_export_info.persistence_replaced_gftt_max_age
+                        ),
+                        "final_mirror_persistence_replacement_min_age_advantage_actual": (
+                            final_mirror_export_info.persistence_replacement_min_age_advantage_actual
+                        ),
+                        "final_mirror_persistence_replacement_cell_mismatches": (
+                            final_mirror_export_info.persistence_replacement_cell_mismatches
                         ),
                         "exported_learned_median_age": sidecar_export_diag[
                             "learned_median_age"
@@ -8336,6 +8493,14 @@ def _finalize_mirror_sidecar_export(
     persistence_min_age_advantage: int = 2,
     persistence_single_chain: bool = False,
     persistence_min_gftt_ratio: float = 0.0,
+    persistence_source_router: bool = False,
+    persistence_allow_all_non_loftr: bool = False,
+    persistence_same_grid_cell: bool = False,
+    persistence_coverage_monotone: bool = False,
+    persistence_grid_rows: int = 4,
+    persistence_grid_cols: int = 6,
+    persistence_max_per_frame: int = 0,
+    image_shape: tuple[int, int] | None = None,
 ) -> tuple[TrackSet, _FinalMirrorExportInfo]:
     """Enforce the final KLT-mirror no-harm and feature-budget contract.
 
@@ -8346,9 +8511,10 @@ def _finalize_mirror_sidecar_export(
     ``preserve_classical_budget`` enabled, sidecars can use only vacant capacity
     below the final cap and can never evict an independent KLT observation.
     Experimental ``persistence_replacement`` instead permits a deterministic
-    early birth-for-birth swap, but only from confirmed XFeat to a same-frame
-    GFTT mirror birth with a strict raw-age advantage. It never removes a
-    tracked source="klt" observation.
+    early birth-for-birth swap. Its historical default is confirmed XFeat;
+    the optional source router can admit confirmed non-LoFTR learned lineages
+    under the same-cell or coverage-monotone donor contract and per-frame cap.
+    Neither path removes a tracked source="klt" observation.
     """
 
     if mirror_tracks is None:
@@ -8400,6 +8566,12 @@ def _finalize_mirror_sidecar_export(
             persistence_churn_guard_ratio=float(
                 state.persistence_churn_guard_ratio
             ),
+            persistence_source_router_active=bool(persistence_source_router),
+            persistence_same_cell_active=bool(persistence_same_grid_cell),
+            persistence_coverage_monotone_active=bool(
+                persistence_coverage_monotone
+            ),
+            persistence_per_frame_cap=max(0, int(persistence_max_per_frame)),
         )
 
     # Main hybrid and mirror KLT trackers allocate ids independently. Their
@@ -8421,6 +8593,14 @@ def _finalize_mirror_sidecar_export(
             state=state,
             single_chain=bool(persistence_single_chain),
             min_gftt_ratio=float(persistence_min_gftt_ratio),
+            source_router=bool(persistence_source_router),
+            allow_all_non_loftr=bool(persistence_allow_all_non_loftr),
+            same_grid_cell=bool(persistence_same_grid_cell),
+            coverage_monotone=bool(persistence_coverage_monotone),
+            grid_rows=int(persistence_grid_rows),
+            grid_cols=int(persistence_grid_cols),
+            max_per_frame=int(persistence_max_per_frame),
+            image_shape=image_shape,
             max_features=cap,
             selected_feature_index=int(selected_feature_index),
             max_selected_frame=int(persistence_max_selected_frame),
@@ -8521,6 +8701,14 @@ def _finalize_persistence_conditioned_mirror_export(
     state: "_ExportIdState",
     single_chain: bool,
     min_gftt_ratio: float,
+    source_router: bool,
+    allow_all_non_loftr: bool,
+    same_grid_cell: bool,
+    coverage_monotone: bool,
+    grid_rows: int,
+    grid_cols: int,
+    max_per_frame: int,
+    image_shape: tuple[int, int] | None,
     max_features: int,
     selected_feature_index: int,
     max_selected_frame: int,
@@ -8528,7 +8716,13 @@ def _finalize_persistence_conditioned_mirror_export(
     input_sidecars: int,
     remapped_sidecar_ids: int,
 ) -> tuple[TrackSet, _FinalMirrorExportInfo]:
-    """Apply the preregistered early birth-for-birth replacement rule."""
+    """Apply the preregistered early birth-for-birth replacement rule.
+
+    The optional source router admits only confirmed non-LoFTR learned
+    lineages, can require a same-cell GFTT birth or a coverage-monotone newborn
+    donor, and caps changes per frame. Defaults preserve the historical
+    XFeat-only persistence path.
+    """
 
     cap = max(0, int(max_features))
     if cap <= 0:
@@ -8597,12 +8791,21 @@ def _finalize_persistence_conditioned_mirror_export(
         np.arange(len(sidecars), dtype=np.int64),
         prefer_age=True,
     )
-    eligible_xfeat_order = np.asarray(
+    eligible_source_order = np.asarray(
         [
             idx
             for idx in raw_sidecar_order
-            if _is_xfeat_source(sidecars.sources[int(idx)])
-            and _is_confirmed_sidecar_source(sidecars.sources[int(idx)])
+            if _is_confirmed_sidecar_source(sidecars.sources[int(idx)])
+            and (
+                (
+                    bool(allow_all_non_loftr)
+                    and _is_non_loftr_learned_source(sidecars.sources[int(idx)])
+                )
+                or (
+                    not bool(allow_all_non_loftr)
+                    and _is_xfeat_source(sidecars.sources[int(idx)])
+                )
+            )
         ],
         dtype=np.int64,
     )
@@ -8611,6 +8814,10 @@ def _finalize_persistence_conditioned_mirror_export(
             idx
             for idx, source in enumerate(baseline.sources)
             if str(source).lower() == "gftt"
+            and (
+                not bool(source_router)
+                or int(baseline.ages[int(idx)]) == 1
+            )
         ],
         dtype=np.int64,
     )
@@ -8619,7 +8826,7 @@ def _finalize_persistence_conditioned_mirror_export(
         churn_guard_active
         and state.persistence_churn_guard_armed is None
         and int(selected_feature_index) <= int(max_selected_frame)
-        and len(eligible_xfeat_order) > 0
+        and len(eligible_source_order) > 0
         and len(gftt_indices) > 0
     ):
         denominator = max(1, int(len(baseline)))
@@ -8632,9 +8839,16 @@ def _finalize_persistence_conditioned_mirror_export(
         state.persistence_churn_guard_denominator = int(denominator)
         state.persistence_churn_guard_ratio = float(ratio)
 
-    sidecar_order = raw_sidecar_order
+    sidecar_order = (
+        eligible_source_order if bool(source_router) else raw_sidecar_order
+    )
+    source_suppressed = (
+        len(sidecars) - len(eligible_source_order) if bool(source_router) else 0
+    )
     single_chain_suppressed = 0
     if churn_guard_active and state.persistence_churn_guard_armed is False:
+        sidecar_order = np.empty((0,), dtype=np.int64)
+    elif bool(source_router) and int(selected_feature_index) > int(max_selected_frame):
         sidecar_order = np.empty((0,), dtype=np.int64)
     elif bool(single_chain):
         committed = state.persistence_committed_sidecar_id
@@ -8644,23 +8858,25 @@ def _finalize_persistence_conditioned_mirror_export(
             sidecar_order = np.asarray(
                 [
                     idx
-                    for idx in eligible_xfeat_order
+                    for idx in eligible_source_order
                     if int(sidecars.ids[int(idx)]) == int(committed)
                 ],
                 dtype=np.int64,
             )
         else:
-            sidecar_order = eligible_xfeat_order[:1]
+            sidecar_order = eligible_source_order[:1]
         single_chain_suppressed = len(sidecars) - len(sidecar_order)
     vacant = max(0, cap - len(baseline))
-    selected_sidecars = [int(idx) for idx in sidecar_order[:vacant]]
-    remaining_sidecars = [int(idx) for idx in sidecar_order[vacant:]]
+    frame_cap = max(0, int(max_per_frame))
+    vacant_limit = vacant if frame_cap <= 0 else min(vacant, frame_cap)
+    selected_sidecars = [int(idx) for idx in sidecar_order[:vacant_limit]]
+    remaining_sidecars = [int(idx) for idx in sidecar_order[vacant_limit:]]
 
-    confirmed_xfeat = [
+    eligible_source_set = {int(value) for value in eligible_source_order}
+    replacement_candidates = [
         idx
         for idx in remaining_sidecars
-        if _is_xfeat_source(sidecars.sources[idx])
-        and _is_confirmed_sidecar_source(sidecars.sources[idx])
+        if int(idx) in eligible_source_set
     ]
     if len(gftt_indices):
         weakest_gftt_first = list(
@@ -8677,30 +8893,150 @@ def _finalize_persistence_conditioned_mirror_export(
 
     horizon_blocked = bool(
         (
-            input_sidecars
-            if bool(single_chain)
-            else remaining_sidecars
+            len(eligible_source_order)
+            if bool(single_chain) or bool(source_router)
+            else replacement_candidates
         )
         and int(selected_feature_index) > int(max_selected_frame)
     )
     replaced_gftt: list[int] = []
+    replaced_age_advantages: list[int] = []
+    replacement_cell_mismatches = 0
+    same_cell_suppressed = 0
+    coverage_monotone_suppressed = 0
+    cross_cell_replacements = 0
+    donor_cell_remaining: list[int] = []
+    grid_cells_before = -1
+    grid_cells_after = -1
+    frame_cap_suppressed = 0
     if not horizon_blocked:
         available_gftt = weakest_gftt_first.copy()
         age_advantage = max(1, int(min_age_advantage))
-        for sidecar_idx in confirmed_xfeat:
-            target_pos = next(
-                (
-                    pos
-                    for pos, gftt_idx in enumerate(available_gftt)
-                    if int(sidecars.ages[sidecar_idx])
-                    >= int(baseline.ages[gftt_idx]) + age_advantage
-                ),
-                None,
+        sidecar_cells: dict[int, tuple[int, int]] = {}
+        gftt_cells: dict[int, tuple[int, int]] = {}
+        baseline_cells: dict[int, tuple[int, int]] = {}
+        current_cell_counts: dict[tuple[int, int], int] = {}
+        spatial_guard = bool(same_grid_cell) or bool(coverage_monotone)
+        if spatial_guard and image_shape is not None:
+            spatial_sidecar_indices = sorted(
+                set(selected_sidecars + replacement_candidates)
+            )
+            sidecar_cell_values = _grid_cell_indices(
+                sidecars.points[
+                    np.asarray(spatial_sidecar_indices, dtype=np.int64)
+                ],
+                image_shape,
+                rows=max(1, int(grid_rows)),
+                cols=max(1, int(grid_cols)),
+            )
+            sidecar_cells = {
+                int(idx): (int(cell[0]), int(cell[1]))
+                for idx, cell in zip(spatial_sidecar_indices, sidecar_cell_values)
+            }
+            baseline_cell_values = _grid_cell_indices(
+                baseline.points,
+                image_shape,
+                rows=max(1, int(grid_rows)),
+                cols=max(1, int(grid_cols)),
+            )
+            baseline_cells = {
+                int(idx): (int(cell[0]), int(cell[1]))
+                for idx, cell in enumerate(baseline_cell_values)
+            }
+            gftt_cells = {
+                int(idx): baseline_cells[int(idx)]
+                for idx in gftt_indices.tolist()
+            }
+            for cell in baseline_cells.values():
+                current_cell_counts[cell] = current_cell_counts.get(cell, 0) + 1
+            grid_cells_before = len(current_cell_counts)
+            for sidecar_idx in selected_sidecars:
+                cell = sidecar_cells[int(sidecar_idx)]
+                current_cell_counts[cell] = current_cell_counts.get(cell, 0) + 1
+        for sidecar_idx in replacement_candidates:
+            if frame_cap > 0 and len(selected_sidecars) >= frame_cap:
+                frame_cap_suppressed += 1
+                continue
+            if (bool(same_grid_cell) or bool(coverage_monotone)) and image_shape is None:
+                same_cell_suppressed += 1
+                if bool(coverage_monotone):
+                    coverage_monotone_suppressed += 1
+                continue
+            valid_targets: list[tuple[tuple[int, int, int], int]] = []
+            sidecar_cell = sidecar_cells.get(int(sidecar_idx))
+            current_occupied = sum(
+                count > 0 for count in current_cell_counts.values()
+            )
+            for pos, gftt_idx in enumerate(available_gftt):
+                if int(sidecars.ages[sidecar_idx]) < (
+                    int(baseline.ages[gftt_idx]) + age_advantage
+                ):
+                    continue
+                victim_cell = gftt_cells.get(int(gftt_idx))
+                if bool(same_grid_cell) and sidecar_cell != victim_cell:
+                    continue
+                if bool(coverage_monotone):
+                    if sidecar_cell is None or victim_cell is None:
+                        continue
+                    donor_remaining = (
+                        current_cell_counts.get(victim_cell, 0)
+                        - 1
+                        + int(sidecar_cell == victim_cell)
+                    )
+                    if donor_remaining < 1:
+                        continue
+                    after_counts = dict(current_cell_counts)
+                    after_counts[victim_cell] = after_counts.get(victim_cell, 0) - 1
+                    after_counts[sidecar_cell] = after_counts.get(sidecar_cell, 0) + 1
+                    after_occupied = sum(count > 0 for count in after_counts.values())
+                    if after_occupied < current_occupied:
+                        continue
+                same_cell_priority = int(sidecar_cell != victim_cell)
+                donor_occupancy_priority = -current_cell_counts.get(victim_cell, 0)
+                valid_targets.append(
+                    (
+                        (same_cell_priority, donor_occupancy_priority, int(pos)),
+                        int(pos),
+                    )
+                )
+            target_pos = (
+                min(valid_targets, key=lambda item: item[0])[1]
+                if valid_targets
+                else None
             )
             if target_pos is None:
+                if bool(same_grid_cell):
+                    same_cell_suppressed += 1
+                if bool(coverage_monotone):
+                    coverage_monotone_suppressed += 1
                 continue
             selected_sidecars.append(int(sidecar_idx))
-            replaced_gftt.append(int(available_gftt.pop(int(target_pos))))
+            victim = int(available_gftt.pop(int(target_pos)))
+            replaced_gftt.append(victim)
+            replaced_age_advantages.append(
+                int(sidecars.ages[int(sidecar_idx)]) - int(baseline.ages[victim])
+            )
+            if (
+                bool(same_grid_cell)
+                and sidecar_cells.get(int(sidecar_idx)) != gftt_cells.get(victim)
+            ):
+                replacement_cell_mismatches += 1
+            if bool(coverage_monotone):
+                victim_cell = gftt_cells[victim]
+                sidecar_cell = sidecar_cells[int(sidecar_idx)]
+                current_cell_counts[victim_cell] -= 1
+                current_cell_counts[sidecar_cell] = (
+                    current_cell_counts.get(sidecar_cell, 0) + 1
+                )
+                remaining = int(current_cell_counts[victim_cell])
+                donor_cell_remaining.append(remaining)
+                if sidecar_cell != victim_cell:
+                    cross_cell_replacements += 1
+
+        if spatial_guard and image_shape is not None:
+            grid_cells_after = sum(
+                count > 0 for count in current_cell_counts.values()
+            )
 
     if bool(single_chain) and selected_sidecars and state.persistence_committed_sidecar_id is None:
         state.persistence_committed_sidecar_id = int(
@@ -8738,7 +9074,7 @@ def _finalize_persistence_conditioned_mirror_export(
         remapped_sidecar_ids=int(remapped_sidecar_ids),
         persistence_replacement_active=True,
         persistence_horizon_blocked=bool(horizon_blocked),
-        persistence_eligible_sidecars=len(confirmed_xfeat),
+        persistence_eligible_sidecars=len(replacement_candidates),
         persistence_eligible_gftt=len(gftt_indices),
         persistence_replaced_gftt=len(replaced_gftt),
         persistence_dropped_sidecars=int(dropped_sidecars),
@@ -8767,6 +9103,37 @@ def _finalize_persistence_conditioned_mirror_export(
         persistence_churn_guard_ratio=float(
             state.persistence_churn_guard_ratio
         ),
+        persistence_source_router_active=bool(source_router),
+        persistence_source_eligible_sidecars=len(eligible_source_order),
+        persistence_source_suppressed=int(source_suppressed),
+        persistence_same_cell_active=bool(same_grid_cell),
+        persistence_same_cell_suppressed=int(same_cell_suppressed),
+        persistence_coverage_monotone_active=bool(coverage_monotone),
+        persistence_coverage_monotone_suppressed=int(
+            coverage_monotone_suppressed
+        ),
+        persistence_grid_cells_before=int(grid_cells_before),
+        persistence_grid_cells_after=int(grid_cells_after),
+        persistence_grid_cell_delta=(
+            int(grid_cells_after - grid_cells_before)
+            if grid_cells_before >= 0 and grid_cells_after >= 0
+            else 0
+        ),
+        persistence_cross_cell_replacements=int(cross_cell_replacements),
+        persistence_donor_cell_min_remaining=(
+            min(donor_cell_remaining) if donor_cell_remaining else -1
+        ),
+        persistence_per_frame_cap=int(frame_cap),
+        persistence_per_frame_cap_suppressed=int(frame_cap_suppressed),
+        persistence_replaced_gftt_max_age=(
+            max(int(baseline.ages[idx]) for idx in replaced_gftt)
+            if replaced_gftt
+            else -1
+        ),
+        persistence_replacement_min_age_advantage_actual=(
+            min(replaced_age_advantages) if replaced_age_advantages else -1
+        ),
+        persistence_replacement_cell_mismatches=int(replacement_cell_mismatches),
     )
 
 

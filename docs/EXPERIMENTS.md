@@ -107,3 +107,181 @@ State what the evidence supports and what it does not support.
 ### Conclusion
 
 ### Follow-up
+
+## EXP-20260905-005 — Frozen coverage-monotone-router-v2 backend completion
+
+### Objective
+
+Complete the preregistered same-backend comparison for all valid v2 inputs.
+
+### Hypothesis
+
+Sparse, coverage-monotone learned replacement may preserve KLT runability and
+improve trajectories on opportunity windows without harming controls.
+
+### Status and Scientific Role
+
+Status: `COMPLETE_REJECT_NOHARM`
+
+Role: outcome-known development evidence and negative no-harm result.
+
+### Code Version
+
+Commit: `f6f8feec66c2faf1f59cdb67c1e817028a3bccaf` plus locked file hashes.
+
+Branch: `main` at experiment time.
+
+Project Git status: dirty; exact exporter/runner/config/backend identities are
+recorded in the published locks.
+
+### Dataset
+
+Six development windows: AQUALOC A09/A02/A08, AFRL Bus/Cemetery, and Harbor
+H07. Reference: COLMAP/proxy, not independent ground truth.
+
+### Configuration
+
+Feature cap 350; measurement selection disabled; every_n=2; frozen v2 donor
+contract; one VINS-Fusion-origin backend YAML per window shared by all arms.
+
+### Baseline
+
+Fresh KLT feature bag.
+
+### Modification
+
+XFeat or SP+LG v2 replacement and same-ID/frame/dose matched GFTT controls.
+
+### Commands and Artifacts
+
+Published report: `papers/frontend_coverage_monotone_router_v2/backend_completion_report.md`.
+Compact repeats and identities: `docs/research_sync/EXP-20260905-005_v2_backend/`.
+
+### Metrics
+
+Runability first; exact common support; proper fixed-scale SE(3) APE; strict
+1 s translation RPE; Sim(3) scale as diagnostic; independent evo cross-check.
+
+### Validity Checks
+
+Input/config identity 17/17; repeat runability 42/42; active common support
+4/4; evo maximum absolute discrepancy below 5e-7 m.
+
+### Results
+
+Active learned arm-windows: 2 WIN / 2 LOSS. Full 12 arm-window denominator:
+2 WIN / 8 exact-fallback TIE / 2 LOSS / 0 FAIL. A09 and Bus improve; A02
+XFeat and SP+LG regress severely. Runtime/FPS, lost tracking, and inlier ratio:
+Not evaluated.
+
+### Observations
+
+Matched GFTT reproduces each KLT-relative direction, so candidate source is
+not established as necessary. Repeats are stability checks, not samples.
+
+### Failed Attempts
+
+Earlier disk blocks and wrapper failures are preserved in the full local
+record; no terminal result was discarded.
+
+### Interpretation
+
+V2 has safe frontend action supply but is not backend no-harm and does not
+support general superiority over KLT or a modern learned frontend.
+
+### Conclusion
+
+Reject v2 as the unified method.
+
+### Follow-up
+
+Donor-delete-only attribution, initially on A02 and then on both positive
+windows.
+
+## EXP-20260905-006 — A02 donor-delete-only route-D attribution
+
+### Objective
+
+Test whether the eight registered A02/XFeat donor deletions are sufficient for
+the observed initialization/scale failure without adding any candidate.
+
+### Hypothesis
+
+If KLT minus only those observations reproduces the failure, occupied-track
+deletion is sufficient for the tested harm.
+
+### Status and Scientific Role
+
+Status: `DELETE_SUFFICIENT`
+
+Role: one-window, outcome-known mechanism diagnostic.
+
+### Code Version
+
+Commit: experiment base `f6f8feec66c2faf1f59cdb67c1e817028a3bccaf` plus
+the route-D execution lock; backend node/library hashes are published.
+
+### Dataset
+
+AQUALOC Archaeology A02 frames [0,900); COLMAP/proxy reference.
+
+### Configuration
+
+Same frozen A02 backend/config/evaluator as v2; three serial new replays.
+
+### Baseline
+
+Fresh KLT, with existing v2 XFeat and matched-GFTT trajectories reused only
+under exact identity and recomputed four-arm common support.
+
+### Modification
+
+Delete exactly eight registered donor observations on three feature frames;
+insert zero candidates and preserve all other messages/observations.
+
+### Commands and Artifacts
+
+Published report and protocol:
+`papers/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/`.
+
+### Metrics
+
+Initialization, coverage, fixed-SE(3) APE, 1 s RPE, diagnostic Sim(3), and
+four-arm exact common support.
+
+### Validity Checks
+
+Execution identity 15/15; 3/3 new replay PASS; 42 common poses, 41 s,
+93.33% coverage, and 41 RPE pairs.
+
+### Results
+
+KLT APE/RPE 0.141317/0.022697 m; deletion-only 1.073158/0.102008 m
+(+659.4%/+349.4%). Sim(3) scale falls 0.898634 to 0.513513 and accepted
+initialization occurs 0.785 s earlier. Runtime/FPS, inlier ratio, and lost
+tracking count: Not evaluated.
+
+### Observations
+
+Deletion-only closely follows learned/matched failure. This demonstrates
+sufficiency for this registered deletion set, not candidate irrelevance,
+necessity, single-donor causality, or population prevalence.
+
+### Failed Attempts
+
+The first wrapper checked the wrong scratch output after a successful replay;
+the run was preserved and recovered by identity without replay.
+
+### Interpretation
+
+Startup donor deletion is sufficient for the tested A02 failure; the detailed
+backend causal chain remains Hypothesis / Inference.
+
+### Conclusion
+
+Occupied-track replacement cannot be called no-harm.
+
+### Follow-up
+
+Run predeclared A09 and Bus donor-delete-only controls before choosing one
+repair.

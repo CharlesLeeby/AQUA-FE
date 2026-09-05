@@ -449,6 +449,244 @@ class FinalMirrorNoHarmContractTest(unittest.TestCase):
         self.assertEqual(sum("xfeat" in source for source in first.sources), 2)
         self.assertEqual(sum("xfeat" in source for source in second.sources), 1)
 
+    def test_geometry_router_admits_same_cell_splg_birth_swap(self) -> None:
+        mirror = _tracks([1, 2, 3], ["klt", "gftt", "gftt"])
+        mirror.ages = np.asarray([10, 1, 1], dtype=np.int32)
+        mirror.points = np.asarray(
+            [[5.0, 5.0], [25.0, 10.0], [65.0, 60.0]], dtype=np.float32
+        )
+        sidecars = _tracks(
+            [20, 21],
+            ["superpoint_lightglue_confirmed", "loftr_confirmed"],
+            age_start=3,
+        )
+        sidecars.points = np.asarray(
+            [[28.0, 12.0], [66.0, 62.0]], dtype=np.float32
+        )
+
+        final, info = _finalize_mirror_sidecar_export(
+            sidecars,
+            mirror,
+            state=_ExportIdState(),
+            max_features=3,
+            persistence_replacement=True,
+            persistence_source_router=True,
+            persistence_allow_all_non_loftr=True,
+            persistence_same_grid_cell=True,
+            persistence_max_per_frame=6,
+            image_shape=(100, 120),
+            selected_feature_index=2,
+        )
+
+        self.assertEqual(len(final), 3)
+        self.assertIn(1, final.ids)
+        self.assertNotIn(2, final.ids)
+        self.assertIn(3, final.ids)
+        self.assertEqual(info.kept_sidecars, 1)
+        self.assertEqual(info.persistence_replaced_gftt, 1)
+        self.assertEqual(info.persistence_source_eligible_sidecars, 1)
+        self.assertEqual(info.persistence_source_suppressed, 1)
+        self.assertTrue(info.persistence_same_cell_active)
+        self.assertEqual(info.persistence_replaced_gftt_max_age, 1)
+        self.assertGreaterEqual(info.persistence_replacement_min_age_advantage_actual, 2)
+        self.assertEqual(info.persistence_replacement_cell_mismatches, 0)
+        self.assertTrue(any("superpoint" in source for source in final.sources))
+        self.assertFalse(any("loftr" in source for source in final.sources))
+
+    def test_geometry_router_fails_closed_without_same_cell_birth(self) -> None:
+        mirror = _tracks([1, 2], ["klt", "gftt"])
+        mirror.ages = np.asarray([10, 1], dtype=np.int32)
+        mirror.points = np.asarray([[5.0, 5.0], [25.0, 10.0]], dtype=np.float32)
+        sidecar = _tracks([20], ["xfeat_confirmed"], age_start=3)
+        sidecar.points = np.asarray([[95.0, 80.0]], dtype=np.float32)
+
+        final, info = _finalize_mirror_sidecar_export(
+            sidecar,
+            mirror,
+            state=_ExportIdState(),
+            max_features=2,
+            persistence_replacement=True,
+            persistence_source_router=True,
+            persistence_allow_all_non_loftr=True,
+            persistence_same_grid_cell=True,
+            persistence_max_per_frame=6,
+            image_shape=(100, 120),
+            selected_feature_index=2,
+        )
+
+        np.testing.assert_array_equal(final.ids, mirror.ids)
+        self.assertTrue(info.zero_sidecar_restore)
+        self.assertEqual(info.persistence_replaced_gftt, 0)
+        self.assertEqual(info.persistence_same_cell_suppressed, 1)
+
+    def test_geometry_router_enforces_six_per_frame_cap(self) -> None:
+        mirror = _tracks(list(range(8)), ["gftt"] * 8)
+        mirror.ages = np.ones(8, dtype=np.int32)
+        mirror.points = np.asarray(
+            [[10.0 + i, 10.0 + i] for i in range(8)], dtype=np.float32
+        )
+        sidecars = _tracks(
+            list(range(20, 28)), ["xfeat_confirmed"] * 8, age_start=3
+        )
+        sidecars.points = np.asarray(
+            [[11.0 + i, 11.0 + i] for i in range(8)], dtype=np.float32
+        )
+
+        final, info = _finalize_mirror_sidecar_export(
+            sidecars,
+            mirror,
+            state=_ExportIdState(),
+            max_features=8,
+            persistence_replacement=True,
+            persistence_source_router=True,
+            persistence_allow_all_non_loftr=True,
+            persistence_same_grid_cell=True,
+            persistence_max_per_frame=6,
+            image_shape=(100, 120),
+            selected_feature_index=2,
+        )
+
+        self.assertEqual(len(final), 8)
+        self.assertEqual(info.kept_sidecars, 6)
+        self.assertEqual(info.persistence_replaced_gftt, 6)
+        self.assertEqual(info.persistence_per_frame_cap_suppressed, 2)
+
+    def test_geometry_router_rejects_loftr_even_with_vacant_capacity(self) -> None:
+        mirror = _tracks([1, 2], ["klt", "klt"])
+        loftr = _tracks([20], ["loftr_confirmed"], age_start=3)
+
+        final, info = _finalize_mirror_sidecar_export(
+            loftr,
+            mirror,
+            state=_ExportIdState(),
+            max_features=3,
+            persistence_replacement=True,
+            persistence_source_router=True,
+            persistence_allow_all_non_loftr=True,
+            persistence_same_grid_cell=True,
+            persistence_max_per_frame=6,
+            image_shape=(100, 120),
+            selected_feature_index=2,
+        )
+
+        np.testing.assert_array_equal(final.ids, mirror.ids)
+        self.assertTrue(info.zero_sidecar_restore)
+        self.assertEqual(info.persistence_source_eligible_sidecars, 0)
+        self.assertEqual(info.persistence_source_suppressed, 1)
+
+    def test_coverage_monotone_router_uses_occupied_cross_cell_donor(self) -> None:
+        mirror = _tracks([1, 2, 3], ["klt", "klt", "gftt"])
+        mirror.ages = np.asarray([10, 10, 1], dtype=np.int32)
+        mirror.points = np.asarray(
+            [[5.0, 5.0], [25.0, 10.0], [27.0, 12.0]], dtype=np.float32
+        )
+        sidecar = _tracks([20], ["xfeat_confirmed"], age_start=3)
+        sidecar.points = np.asarray([[95.0, 80.0]], dtype=np.float32)
+
+        final, info = _finalize_mirror_sidecar_export(
+            sidecar,
+            mirror,
+            state=_ExportIdState(),
+            max_features=3,
+            persistence_replacement=True,
+            persistence_source_router=True,
+            persistence_allow_all_non_loftr=True,
+            persistence_coverage_monotone=True,
+            persistence_max_per_frame=6,
+            image_shape=(100, 120),
+            selected_feature_index=2,
+        )
+
+        self.assertEqual(len(final), 3)
+        self.assertIn(1, final.ids)
+        self.assertIn(2, final.ids)
+        self.assertNotIn(3, final.ids)
+        self.assertEqual(info.persistence_replaced_gftt, 1)
+        self.assertEqual(info.persistence_cross_cell_replacements, 1)
+        self.assertEqual(info.persistence_donor_cell_min_remaining, 1)
+        self.assertGreaterEqual(info.persistence_grid_cell_delta, 0)
+        self.assertEqual(info.persistence_coverage_monotone_suppressed, 0)
+
+    def test_coverage_monotone_router_rejects_singleton_donor_cell(self) -> None:
+        mirror = _tracks([1, 2], ["klt", "gftt"])
+        mirror.ages = np.asarray([10, 1], dtype=np.int32)
+        mirror.points = np.asarray([[5.0, 5.0], [25.0, 10.0]], dtype=np.float32)
+        sidecar = _tracks([20], ["xfeat_confirmed"], age_start=3)
+        sidecar.points = np.asarray([[95.0, 80.0]], dtype=np.float32)
+
+        final, info = _finalize_mirror_sidecar_export(
+            sidecar,
+            mirror,
+            state=_ExportIdState(),
+            max_features=2,
+            persistence_replacement=True,
+            persistence_source_router=True,
+            persistence_allow_all_non_loftr=True,
+            persistence_coverage_monotone=True,
+            persistence_max_per_frame=6,
+            image_shape=(100, 120),
+            selected_feature_index=2,
+        )
+
+        np.testing.assert_array_equal(final.ids, mirror.ids)
+        self.assertTrue(info.zero_sidecar_restore)
+        self.assertEqual(info.persistence_replaced_gftt, 0)
+        self.assertEqual(info.persistence_coverage_monotone_suppressed, 1)
+
+    def test_coverage_monotone_router_allows_same_cell_singleton_exchange(self) -> None:
+        mirror = _tracks([1, 2], ["klt", "gftt"])
+        mirror.ages = np.asarray([10, 1], dtype=np.int32)
+        mirror.points = np.asarray([[5.0, 5.0], [25.0, 10.0]], dtype=np.float32)
+        sidecar = _tracks([20], ["superpoint_lightglue_confirmed"], age_start=3)
+        sidecar.points = np.asarray([[27.0, 12.0]], dtype=np.float32)
+
+        final, info = _finalize_mirror_sidecar_export(
+            sidecar,
+            mirror,
+            state=_ExportIdState(),
+            max_features=2,
+            persistence_replacement=True,
+            persistence_source_router=True,
+            persistence_allow_all_non_loftr=True,
+            persistence_coverage_monotone=True,
+            persistence_max_per_frame=6,
+            image_shape=(100, 120),
+            selected_feature_index=2,
+        )
+
+        self.assertEqual(info.persistence_replaced_gftt, 1)
+        self.assertEqual(info.persistence_cross_cell_replacements, 0)
+        self.assertEqual(info.persistence_donor_cell_min_remaining, 1)
+        self.assertEqual(info.persistence_grid_cell_delta, 0)
+        self.assertTrue(any("superpoint" in source for source in final.sources))
+
+    def test_coverage_monotone_router_never_removes_old_gftt(self) -> None:
+        mirror = _tracks([1, 2, 3], ["klt", "gftt", "gftt"])
+        mirror.ages = np.asarray([10, 2, 8], dtype=np.int32)
+        mirror.points = np.asarray(
+            [[5.0, 5.0], [25.0, 10.0], [27.0, 12.0]], dtype=np.float32
+        )
+        sidecar = _tracks([20], ["xfeat_confirmed"], age_start=10)
+        sidecar.points = np.asarray([[95.0, 80.0]], dtype=np.float32)
+
+        final, info = _finalize_mirror_sidecar_export(
+            sidecar,
+            mirror,
+            state=_ExportIdState(),
+            max_features=3,
+            persistence_replacement=True,
+            persistence_source_router=True,
+            persistence_allow_all_non_loftr=True,
+            persistence_coverage_monotone=True,
+            persistence_max_per_frame=6,
+            image_shape=(100, 120),
+            selected_feature_index=2,
+        )
+
+        np.testing.assert_array_equal(final.ids, mirror.ids)
+        self.assertEqual(info.persistence_eligible_gftt, 0)
+        self.assertEqual(info.persistence_replaced_gftt, 0)
+
 
 if __name__ == "__main__":
     unittest.main()

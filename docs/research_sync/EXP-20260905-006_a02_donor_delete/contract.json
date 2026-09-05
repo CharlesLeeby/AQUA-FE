@@ -1,0 +1,83 @@
+{
+  "schema_version": "aqua-fe-v2-donor-delete-diagnostic-contract-v1",
+  "frozen_at": "2026-09-05T00:00:00+08:00",
+  "scientific_role": "outcome-known route-D development diagnostic",
+  "window_id": "aqualoc_archaeology:A02:0000",
+  "run_slug": "a02_0_900",
+  "feature_topic": "/feature_tracker/feature",
+  "proxy_topic": "/aqualoc/colmap_gt",
+  "deletions": {
+    "1542828791986278080": [362, 363, 365],
+    "1542828792085880800": [371, 372, 373],
+    "1542828792185715008": [376, 377]
+  },
+  "inputs": [
+    {
+      "role": "v2_action_audit",
+      "path": "${AQUA_FE_WS}/papers/frontend_coverage_monotone_router_v2/action_audit.csv",
+      "sha256": "43a9f9d3264bb23e0f8519e54285dd36b950613808c48af3ac668249344898d9"
+    },
+    {
+      "role": "v2_backend_plan",
+      "path": "${AQUA_FE_WS}/papers/frontend_coverage_monotone_router_v2/backend_smoke_plan.csv",
+      "sha256": "6b3af3e00c1baa970da69d03013597b2972e39b27601acf2e63c2fa71bccbbb7"
+    },
+    {
+      "role": "fresh_klt_bag",
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_gmrv2_a02_0_900_klt/features.bag",
+      "sha256": "5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520"
+    },
+    {
+      "role": "v2_xfeat_bag",
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_gmrv2_a02_0_900_router_xfeat/features.bag",
+      "sha256": "1af804c85b76a2226af88349dc3a00f2a7f45d3fae7882d432cd5374815a91c4"
+    },
+    {
+      "role": "matched_gftt_bag",
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/matched_controls/a02_0_900/router_xfeat/features_matched_gftt.bag",
+      "sha256": "52c6883379be69958a0e218723083fa4406d33a3bb0c5f37580561dadbcd6302"
+    },
+    {
+      "role": "canonical_backend_config",
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/vins_same_backend.yaml",
+      "sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1"
+    },
+    {
+      "role": "camera_config",
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/aqualoc_archaeo02_pinhole.yaml",
+      "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5"
+    },
+    {
+      "role": "vins_node",
+      "path": "${VINS_FUSION_ORIGIN}/devel/lib/vins/vins_node",
+      "sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278"
+    },
+    {
+      "role": "vins_library",
+      "path": "${VINS_FUSION_ORIGIN}/devel/lib/libvins_lib.so",
+      "sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8"
+    },
+    {
+      "role": "common_support_evaluator",
+      "path": "${AQUA_FE_WS}/scripts/evaluate_vins_common_support_dual_scale.py",
+      "sha256": "52b945ef78b09959f3a2d2558a1046ea09a0de8fa05c1accf679645c354e65d2"
+    }
+  ],
+  "new_replay_order": [1, 2, 3],
+  "runability": {
+    "minimum_coverage": 0.7,
+    "requires_initialization_marker": true,
+    "requires_nonempty_trajectory": true
+  },
+  "common_support": {
+    "required_trajectories": 12,
+    "minimum_poses": 30,
+    "minimum_span_s": 10,
+    "minimum_coverage": 0.7,
+    "minimum_rpe_pairs": 10,
+    "rpe_delta_s": 1
+  },
+  "primary_alignment": "per-trajectory proper fixed-scale SE(3)",
+  "diagnostic_alignment": "Sim(3)",
+  "stop_after_new_replays": 3
+}

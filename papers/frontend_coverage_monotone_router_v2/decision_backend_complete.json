@@ -1,0 +1,47 @@
+{
+  "schema_version": "aqua-fe-coverage-monotone-router-v2-backend-decision-v1",
+  "decided_at": "2026-09-05",
+  "status": "COMPLETE_REJECT_NOHARM",
+  "scientific_role": "outcome-known development evidence",
+  "backend": {
+    "planned_replays": 42,
+    "completed_replays": 42,
+    "repeat_pass": 42,
+    "repeat_fail": 0,
+    "unique_cells": 14,
+    "unique_cells_pass": 14,
+    "common_support_triplets_pass": 4,
+    "common_support_triplets_total": 4,
+    "frozen_identity_pass": 17,
+    "frozen_identity_total": 17
+  },
+  "active_learned_arm_windows_vs_klt": {
+    "denominator": 4,
+    "win": 2,
+    "tie": 0,
+    "loss": 2,
+    "fail": 0
+  },
+  "all_learned_arm_windows_vs_klt": {
+    "denominator": 12,
+    "win": 2,
+    "exact_fallback_tie": 8,
+    "loss": 2,
+    "fail": 0,
+    "note": "Exact-fallback ties map byte-identical learned bags to KLT and are not independent replays."
+  },
+  "learned_vs_matched_gftt": {
+    "active_denominator": 4,
+    "primary_ape_win": 4,
+    "primary_ape_tie": 0,
+    "primary_ape_loss": 0,
+    "rpe_direction_matches_primary": true,
+    "interpretation": "Matched GFTT follows the same rescue/harm direction as learned relative to KLT; learned source necessity is not established."
+  },
+  "blocking_result": "A02 XFeat and SP+LG, as well as both matched-GFTT controls, show repeatable large fixed-scale APE/RPE and fitted-scale regression relative to KLT.",
+  "selected_route": "D",
+  "selected_route_scope": "A02 XFeat only: delete the exact v2 donor observations without adding candidates, three repeats, same backend, four-arm common support with existing KLT/learned/matched results.",
+  "minimal_algorithm_change_authorized": false,
+  "new_window_expansion_authorized": false,
+  "claim_boundary": "V2 demonstrates safe frontend action supply but fails backend no-harm on A02. It does not support general superiority over KLT or a modern learned frontend."
+}

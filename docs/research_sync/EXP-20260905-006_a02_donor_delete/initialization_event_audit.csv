@@ -1,0 +1,13 @@
+role,repeat,initialization_timestamp_s,initialization_timestamp_ns,vins_log,role_median_initialization_timestamp_s,role_median_delta_vs_klt_s
+klt,1,1542828794.798946,1542828794798945792,${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_replays/a02_0_900/klt/repeat1/vins.log,1542828794.7987845,0.0
+klt,2,1542828794.7985144,1542828794798514432,${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_replays/a02_0_900/klt/repeat2/vins.log,1542828794.7987845,0.0
+klt,3,1542828794.7987845,1542828794798784512,${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_replays/a02_0_900/klt/repeat3/vins.log,1542828794.7987845,0.0
+learned,1,1542828794.003206,1542828794003205888,${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_replays/a02_0_900/router_xfeat/repeat1/vins.log,1542828794.003415,-0.7953693866729736
+learned,2,1542828794.003415,1542828794003415040,${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_replays/a02_0_900/router_xfeat/repeat2/vins.log,1542828794.003415,-0.7953693866729736
+learned,3,1542828794.0135896,1542828794013589504,${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_replays/a02_0_900/router_xfeat/repeat3/vins.log,1542828794.003415,-0.7953693866729736
+matched,1,1542828794.003571,1542828794003570944,${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_replays/a02_0_900/matched_gftt_for_router_xfeat/repeat1/vins.log,1542828794.0036438,-0.7951407432556152
+matched,2,1542828794.013721,1542828794013721088,${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_replays/a02_0_900/matched_gftt_for_router_xfeat/repeat2/vins.log,1542828794.0036438,-0.7951407432556152
+matched,3,1542828794.0036438,1542828794003643648,${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_replays/a02_0_900/matched_gftt_for_router_xfeat/repeat3/vins.log,1542828794.0036438,-0.7951407432556152
+donor_delete,1,1542828794.0136647,1542828794013664768,${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/backend_replays/a02_0_900/donor_delete_only/repeat1/vins.log,1542828794.0136647,-0.7851197719573975
+donor_delete,2,1542828794.0035512,1542828794003551232,${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/backend_replays/a02_0_900/donor_delete_only/repeat2/vins.log,1542828794.0136647,-0.7851197719573975
+donor_delete,3,1542828794.0138156,1542828794013815552,${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/backend_replays/a02_0_900/donor_delete_only/repeat3/vins.log,1542828794.0136647,-0.7851197719573975

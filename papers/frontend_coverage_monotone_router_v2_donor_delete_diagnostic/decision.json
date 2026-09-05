@@ -1,0 +1,33 @@
+{
+  "schema_version": "aqua-fe-v2-donor-delete-decision-v1",
+  "common_support_status": "PASS",
+  "classification": "DELETE_SUFFICIENT",
+  "new_backend_replays": 3,
+  "independent_windows": 1,
+  "new_window_expansion": 0,
+  "reason": "donor deletion alone fails the frozen no-harm boundary in APE and RPE",
+  "comparisons": [
+    {
+      "role": "learned",
+      "ape_delta_m": 0.9504377767240904,
+      "ape_change_pct": 672.5592584209028,
+      "rpe_change_pct": 359.52087661212005,
+      "noharm_vs_klt": false
+    },
+    {
+      "role": "matched",
+      "ape_delta_m": 0.9521476683196317,
+      "ape_change_pct": 673.7692307637964,
+      "rpe_change_pct": 360.6915092091878,
+      "noharm_vs_klt": false
+    },
+    {
+      "role": "donor_delete",
+      "ape_delta_m": 0.9318409694198719,
+      "ape_change_pct": 659.3995806010338,
+      "rpe_change_pct": 349.4388864989961,
+      "noharm_vs_klt": false
+    }
+  ],
+  "next_decision": "Do not expand v2. Use protected-KLT empty-slot admission as the sole next method-development direction; it must preserve existing observations and first pass the six-window development no-harm test."
+}

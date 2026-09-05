@@ -1,6 +1,6 @@
 # Project Context
 
-Last updated: 2026-09-04
+Last updated: 2026-09-05
 
 ## Research Topic
 
@@ -42,7 +42,10 @@ Durable main design: protected KLT/GFTT backbone plus sparse, confirmed, geometr
 - proposed_safe: full/protected KLT mirror plus strictly gated sidecar injection.
 - contribution_sparse: deliberately sparse/degraded backbone used to expose learned contribution.
 
-Latest development/confirmatory branch found: lineage_early_seed_churn_guard_v3, which conditionally allows an early XFeat replacement path based on the causal GFTT-birth ratio and otherwise closes to KLT. Its 12-sequence confirmatory result was not yet found as complete.
+Latest closed-loop development result: coverage-monotone router v2 completed
+42/42 frozen backend replays. It produces two active wins and two active losses;
+eight other learned arm-windows are byte-identical KLT mappings. It is rejected
+as no-harm, not promoted as the main method.
 
 ## Datasets
 
@@ -73,6 +76,12 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 - Direct transfer of the External-KLT temporal-collapse gate is rejected: it missed 2/2 known positives and opened on a known harmful window.
 - q_i has a reliability meaning and backend interface, but general trajectory benefit is not established.
 - Cross-dataset end-to-end superiority over strong KLT is not established.
+- Coverage-monotone router v2 is not backend no-harm: both A02 learned arms
+  suffer repeatable scale/accuracy regression. Removing only the eight
+  registered A02 startup donor observations, with no added candidate, is
+  sufficient to reproduce most of the failure (`DELETE_SUFFICIENT`).
+- Ten of fourteen v2 learned lineages have only one published observation;
+  hidden per-ID survival and backend residual use remain Unknown.
 - Many experiment generations coexist; the 2026-08-06 experiment_status.md is stale relative to the 2026-08-08 final claim map and September work.
 - Proxy trajectories, fixed-scale metrics, and Sim(3) diagnostics require explicit labels.
 - The repository has no declared open-source license.
@@ -80,7 +89,8 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 
 ## Active Research Questions
 
-- Does churn-guard v3 generalize on the frozen 12-sequence outcome-blind roster?
+- Do A09 and AFRL Bus wins require candidate insertion, or can registered
+  donor deletion alone reproduce them?
 - Which causal frontend-only geometry signals identify action-positive cases without opening on harmful windows?
 - Can learned-sidecar benefit be separated from dense-KLT/classical rescue?
 - Can a multi-sequence, valid-common-support end-to-end learned contribution be demonstrated?
@@ -88,7 +98,8 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 
 ## Current Priorities
 
-1. Audit or complete frontend_same_backend_confirmatory_v3 without changing its frozen contracts.
+1. Complete the two positive-window donor-delete controls and the lightweight
+   budget/continuation audit before selecting one minimal repair.
 2. Preserve exact KLT behavior when learned recovery is inactive.
 3. Keep the failed External-KLT direct-transfer result as a negative result; any geometry-aware replacement is a new branch.
 4. Require accepted learned-born lineage and valid common support before making learned-contribution claims.
@@ -96,6 +107,11 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 
 ## Recent Progress
 
+- 2026-09-05: v2 fixed-backend completion reached 42/42 replay PASS. The full
+  learned arm-window denominator is 2 WIN / 8 exact TIE / 2 LOSS / 0 FAIL.
+- 2026-09-05: A02 donor-delete-only replay reproduced the scale/accuracy
+  regression with 3/3 PASS, establishing deletion sufficiency for that tested
+  eight-observation set.
 - 2026-09-04: froze a 12-sequence same-backend confirmatory experiment for KLT, SP+LG, and XFeat churn-guard v3; execution notes record infrastructure recovery and an A04 archive-layout correction. Terminal results were not confirmed in this inspection.
 - 2026-09-04: External-KLT gate-transfer quick probe returned NO-GO and stopped before VINS replay.
 - 2026-09-04: initialized the standalone Git repository, added publication-safe ignore rules, and published the initial code/research-evidence snapshot to the public GitHub main branch.
@@ -104,7 +120,8 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 
 ## Next Experiments
 
-- Finish/audit the already frozen confirmatory-v3 matrix: 12 sequence-level windows × 3 frontend arms × 3 serial backend repeats, with runability first and common-support fixed-scale APE plus 1 s RPE second.
+- Run only A09/XFeat and AFRL Bus/XFeat donor-delete-only, three repeats each,
+  then choose one evidence-driven minimal repair.
 - If developing a new trigger, use persistent-cell coverage, parallax/bearing diversity, homography dominance, and candidate grid gain as hypotheses; freeze it before new-window outcomes.
 - For learned attribution, compare protected KLT, dense-KLT rescue, learned without LoFTR, and learned with LoFTR on action-positive low-texture windows.
 - For no-harm, verify exact or near-exact KLT behavior and actual learned/LoFTR export counts on normal-texture windows.

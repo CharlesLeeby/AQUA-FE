@@ -1,0 +1,67 @@
+{
+  "schema_version": "aqua-fe-v2-donor-delete-execution-lock-v1",
+  "files": [
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/contract.json",
+      "sha256": "f4355e6318dc589cde24f4919ebcdf858d8fd8c0a22d8157b5ef05968308c799"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/bag_structural_audit.json",
+      "sha256": "d2d5ac2126bdffcac6976ad7a60317a5fdab461bed76fdd2c2453075a4195046"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/replay_plan.csv",
+      "sha256": "8bcbb9d9101fb32f2621c46c92340d1d30f112d669ddbe3f34ba7dd165a9ead6"
+    },
+    {
+      "path": "${AQUA_FE_WS}/scripts/run_frontend_coverage_monotone_router_v2_donor_delete_backend_cell.sh",
+      "sha256": "27ac7aec2984f133e766a39a53b56bec2031c5081c5ef55c856efd41f2054ccd"
+    },
+    {
+      "path": "${AQUA_FE_WS}/scripts/run_frontend_coverage_monotone_router_v2_donor_delete_backend.py",
+      "sha256": "73c024cff641f405dbc698a86b8989f50ab520e7bf9fa8b9f0424c740e44393e"
+    },
+    {
+      "path": "${AQUA_FE_WS}/scripts/build_frontend_coverage_monotone_router_v2_donor_delete_control.py",
+      "sha256": "5c5b6cf635247565d2f570917c1ade0c7ed48afd3100c0c2519d6d174c79c9d4"
+    },
+    {
+      "path": "${AQUA_FE_WS}/scripts/evaluate_vins_common_support_dual_scale.py",
+      "sha256": "52b945ef78b09959f3a2d2558a1046ea09a0de8fa05c1accf679645c354e65d2"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_coverage_monotone_router_v2/backend_results_repeats.csv",
+      "sha256": "5a61b9c949a56e355f113814ba15a5130c7ee340fbc3b46563dd6e2a9dcdfafe"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_coverage_monotone_router_v2/accuracy_repeats.csv",
+      "sha256": "0727f1640c6735f15cc05d079b01de46fddcb8b1ef129bdf11ba5aeb053a69c8"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/execution_lock.json",
+      "sha256": "ad0f7bcd3cb07b890be76de9b67ef7d2c16cd1bab84c51f0422710fb8c942ef3"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/a02_0_900/features_donor_delete_only.bag",
+      "sha256": "f0efea06f922f0515464be068c9678b358060c899021355f89e6532822034fcb"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/vins_same_backend.yaml",
+      "sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/aqualoc_archaeo02_pinhole.yaml",
+      "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5"
+    }
+  ],
+  "vins_node": "${VINS_FUSION_ORIGIN}/devel/lib/vins/vins_node",
+  "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+  "vins_lib": "${VINS_FUSION_ORIGIN}/devel/lib/libvins_lib.so",
+  "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+  "replay_order": [
+    1,
+    2,
+    3
+  ],
+  "recovery_note": "The original runner looked for vio.csv under the diagnostic runtime although the frozen canonical YAML writes to the v2 canonical scratch. Recovery1 uses that exact configured path, preserves repeat1, and continues after a failed repeat."
+}

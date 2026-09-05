@@ -1,0 +1,81 @@
+{
+  "schema_version": "aqua-fe-coverage-monotone-router-v2-backend-execution-lock-v1",
+  "frozen_at": "2026-09-05T15:53:59+08:00",
+  "backend_results_seen_before_freeze": false,
+  "expected_unique_cells": 14,
+  "expected_serial_replays": 42,
+  "root_free_floor_bytes": 2147483648,
+  "offload_free_floor_bytes": 8589934592,
+  "vins_workspace": "${VINS_FUSION_ORIGIN}",
+  "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+  "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+  "files": [
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_coverage_monotone_router_v2/backend_smoke_plan.csv",
+      "sha256": "6b3af3e00c1baa970da69d03013597b2972e39b27601acf2e63c2fa71bccbbb7"
+    },
+    {
+      "path": "${AQUA_FE_WS}/scripts/run_frontend_coverage_monotone_router_v2_backend.py",
+      "sha256": "a8af2cea922dceb65f5fb0665351f8daf235c71a1bc31c8c6aedd41b10070c0f"
+    },
+    {
+      "path": "${AQUA_FE_WS}/scripts/run_frontend_coverage_monotone_router_v2_backend_cell.sh",
+      "sha256": "8df1e974848f178ef330c3089c26485b0f932eed6f20aaecfd5419153c770544"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/a09_6000_6800/vins_same_backend.yaml",
+      "sha256": "7ecf99b8c6540cc3c9ab4917b2453c1579afed96a928034c8e65e4f5f04532b1"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/a09_6000_6800/aqualoc_archaeo09_pinhole.yaml",
+      "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/vins_same_backend.yaml",
+      "sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/aqualoc_archaeo02_pinhole.yaml",
+      "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/afrl_bus_s180_d045/vins_same_backend.yaml",
+      "sha256": "cb9a252cdb0864aad843b7c6ad050f74ce0c1c07760df8963238d188364052f1"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/afrl_bus_s180_d045/afrl_cave_cam0_pinhole.yaml",
+      "sha256": "5856ee4b261d5b0d67021ef81ad0a0c5e8e6aa885184c68591530224b3645aee"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/a08_2700_3600/vins_same_backend.yaml",
+      "sha256": "783f5c621c79c1c02da2c9719d5a3c3fbb4900e42ae59437af627d4b05ca675d"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/a08_2700_3600/aqualoc_archaeo08_pinhole.yaml",
+      "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/afrl_cemetery_s135_d045/vins_same_backend.yaml",
+      "sha256": "47a9e75a9c2076276d0068c2d3d38da697d931a1311138794842a9e1c388f23e"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/afrl_cemetery_s135_d045/afrl_cave_cam0_pinhole.yaml",
+      "sha256": "9580011fcaa23217407c1d1dbf616d57e95d81498293129f70bc0700e40e5154"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/h07_0_1000/vins_same_backend.yaml",
+      "sha256": "e5aa86735aec32e7e118947dc6d72935aceb93e27e4c33c4a595117d18e222ab"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/h07_0_1000/aqualoc_harbor07_kannala.yaml",
+      "sha256": "40b62d139ef4246589b5cbafaa04619c0ebb9da0218a332e62706cfeda3d0242"
+    }
+  ],
+  "preflight_at_freeze": {
+    "root_free_bytes": 1930682368,
+    "root_gate": "FAIL",
+    "offload_free_bytes": 8627290112,
+    "offload_gate": "PASS_BY_37355520_BYTES"
+  },
+  "execution_authorized_when": "both disk floors pass and no pre-existing vins_node is running"
+}

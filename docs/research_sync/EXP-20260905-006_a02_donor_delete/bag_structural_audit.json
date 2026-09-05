@@ -1,0 +1,29 @@
+{
+  "schema_version": "aqua-fe-v2-donor-delete-bag-audit-v1",
+  "status": "PASS",
+  "source_bag": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_gmrv2_a02_0_900_klt/features.bag",
+  "source_bag_sha256": "5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520",
+  "output_bag": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/a02_0_900/features_donor_delete_only.bag",
+  "output_bag_sha256": "f0efea06f922f0515464be068c9678b358060c899021355f89e6532822034fcb",
+  "total_messages": 9542,
+  "feature_messages": 450,
+  "changed_feature_messages": 3,
+  "deleted_observations": 8,
+  "retained_feature_observations": 157492,
+  "learned_flags_in_output": 0,
+  "topic_message_counts": {
+    "/aqualoc/colmap_gt": 46,
+    "/feature_tracker/feature": 450,
+    "/rtimulib_node/imu": 9046
+  },
+  "checks": {
+    "registered_observation_set_exact": true,
+    "targets_unique_in_source": true,
+    "retained_feature_serialization_exact": true,
+    "non_feature_serialization_exact": true,
+    "topic_counts_exact": true,
+    "bag_timestamps_exact": true,
+    "feature_header_timestamps_exact": true,
+    "no_learned_feature_introduced": true
+  }
+}

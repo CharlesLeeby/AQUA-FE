@@ -87,6 +87,44 @@ Relevant evidence tables:
 - `logs/crossv36_learned_sidecar_validation.md`
 - `logs/crossv37_gate_patch_probe.md`
 
+## Geometry-Maturity Router v1 (development-only, not adopted)
+
+`lineage_early_seed_geometry_router_v1` is a default-off export profile that
+never removes tracked KLT, permits only age-1 GFTT replacement, requires a
+learned age advantage of 2, and limits action to selected frames 0--4, the same
+6-by-4 grid cell, and at most six sidecars per frame.
+
+Adoption status (2026-09-05): **not adopted / `SAFE_NULL`**. On six frozen,
+outcome-known development controls, all 18 KLT/XFeat/SP+LG export cells passed
+integrity and the A08, AFRL Cemetery, and H07 safety controls remained exact
+KLT no-ops. The profile admitted only one XFeat observation on one frame of
+A09; A02 and AFRL Bus remained no-op, so both frozen opportunity checks failed.
+No matched-classical or VINS continuation was run. See
+`papers/frontend_geometry_maturity_router_v1/report.md`.
+
+The result supports the structural late-action repair but not effectiveness or
+superiority. Do not use this profile as `proposed_safe` or as a paper primary
+arm.
+
+## Coverage-Monotone Router v2 (development-only, backend pending)
+
+`lineage_early_seed_coverage_monotone_v2` keeps the v1 startup horizon and
+mature-KLT ban, disables the global newborn ratio, and permits an age-1 GFTT
+donor from another cell only when the donor cell remains occupied and raw
+4-by-6 occupancy cannot decrease.
+
+Status (2026-09-05): **not adopted / frontend `SAFE_ACTIVE`, backend Not
+evaluated**. All 18 frozen development cells and all safety/opportunity gates
+pass. Opportunity action expands from v1's 1/3 windows to 3/3; 8/8 zero-action
+learned bags are exact KLT, and 14/14 active lineages have audited
+matched-GFTT controls. However, output-visible persistent-cell gain is zero on
+all action frames and one raw-age-1 donor has a 104-frame future KLT streak.
+The frozen 42-replay backend smoke is blocked by the fixed disk floor. See
+`papers/frontend_coverage_monotone_router_v2/report.md`.
+
+Do not promote this profile or claim improvement over KLT/SP+LG until the
+matched fixed-backend continuation and a new untouched roster pass.
+
 ## Frontend Robustness Candidate
 
 Use `experiments/three_layer_source_aware_frontend.yaml` for frontend-only

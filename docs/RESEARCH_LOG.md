@@ -331,3 +331,72 @@ tuning loop.
 Complete the existing 12-window, three-arm, three-repeat same-backend replay and
 report all windows. If source supply looks promising, perform a frontend-only
 geometry opportunity audit before creating a separately preregistered method.
+
+## 2026-09-05 — Does startup deletion explain both v2 harm and apparent rescue?
+
+### Research Question
+
+Are the two v2 positive windows improvements from learned candidates, from
+removing particular KLT observations, or from their joint intervention?
+
+### Hypothesis
+
+A02 proves registered deletion can switch initialization into a bad scale
+basin. The A09/Bus wins may likewise be deletion-driven; only positive-window
+donor-delete controls can separate this from candidate addition.
+
+### Motivation
+
+Learned and matched GFTT have the same direction in all four active cells, and
+the A02 deletion-only trajectory nearly reproduces both replacements.
+
+### Related Baseline
+
+Fresh KLT, v2 XFeat/SP+LG, and same-ID/frame/dose matched GFTT.
+
+### Proposed Idea
+
+For A09/XFeat and AFRL Bus/XFeat, construct KLT minus exactly the registered
+donor observations, add nothing, replay three times, and evaluate all four
+arms on one recomputed common support per window.
+
+### Why It Might Work
+
+It isolates the one intervention shared by learned and matched replacements
+without changing the backend, threshold, timing, or dose.
+
+### Assumptions
+
+The frozen action audit accurately identifies timestamp, feature ID, and
+camera identity; the proxy supports within-window consistency comparisons.
+
+### Potential Failure Cases
+
+Deletion and insertion can interact non-additively; technical phase sensitivity
+can overlap repeat ranges; sufficiency of a deletion set does not prove any
+single donor is causal.
+
+### Evidence
+
+Confirmed fact: v2 is 2 WIN / 2 LOSS on active cells. Confirmed fact: A02
+deletion-only is +659.4% APE and advances accepted initialization 0.785 s.
+Confirmed fact: ten of fourteen learned lineages have one published
+observation. Per-ID hidden survival and residual use are Unknown.
+
+### Current Conclusion
+
+The paper can claim a sensitive observation/initialization intervention, not
+yet learned persistent-anchor enhancement. Positive-window mechanism remains
+Unknown until the two deletion controls complete.
+
+### Open Questions
+
+- Does deletion alone reproduce the A09 order-of-magnitude rescue?
+- Does Bus require insertion for its smaller improvement?
+- Is premature sidecar-budget accounting an implementation error or only a
+  policy limitation?
+
+### Next Experiment
+
+Preregister and run exactly six new donor-delete-only replays: A09 and Bus,
+three each. Do not select a new method before this and the budget audit finish.

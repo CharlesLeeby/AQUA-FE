@@ -1,0 +1,43 @@
+{
+  "schema_version": "aqua-fe-coverage-monotone-router-v2-stage-decision-v2",
+  "decision": "BLOCKED_DISK",
+  "decided_at": "2026-09-05T15:53:59+08:00",
+  "frontend_stage": {
+    "status": "SAFE_ACTIVE",
+    "frozen_reducer_decision": "EXPORT_ONLY_GO",
+    "cells_passed": 18,
+    "cells_expected": 18,
+    "safety_checks_passed": 10,
+    "safety_checks_total": 10,
+    "opportunity_windows_active": 3,
+    "opportunity_windows_total": 3,
+    "active_learned_arm_windows": 4,
+    "exact_fallback_passed": 8,
+    "exact_fallback_total": 8
+  },
+  "matched_classical_stage": {
+    "status": "COMPLETE",
+    "active_lineages_matched": 14,
+    "active_lineages_total": 14,
+    "matched_observations": 21,
+    "target_observations": 21,
+    "audit_cells_passed": 4,
+    "audit_cells_total": 4
+  },
+  "backend_stage": {
+    "status": "BLOCKED_DISK",
+    "execution_plan_frozen": true,
+    "unique_cells": 14,
+    "serial_replays_planned": 42,
+    "serial_replays_completed": 0,
+    "root_free_bytes": 1925410816,
+    "root_required_bytes": 2147483648,
+    "root_shortfall_bytes": 222072832,
+    "offload_free_bytes": 8627290112,
+    "offload_required_bytes": 8589934592,
+    "offload_margin_bytes": 37355520,
+    "ape_rpe": "Not evaluated"
+  },
+  "evidence_boundary": "Development-only outcome-known windows. SAFE_ACTIVE means export opportunity and safety gates passed; it is not a trajectory-positive or paper superiority result.",
+  "unique_next_step": "Free at least 1 GiB on the root volume without deleting research evidence, then verified-archive-migrate the completed 405 MB frontend_same_backend_supplemental_v1 tree from offload to root with an original-path symlink; recheck both disk floors and execute the already frozen 42-row backend plan unchanged."
+}

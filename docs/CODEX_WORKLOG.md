@@ -305,3 +305,88 @@ development branch and untouched confirmatory windows.
 ### Interpretation
 
 ### Next Steps
+
+## 2026-09-05 — Publish frozen v2 completion and A02 donor-delete attribution
+
+### Objective
+
+Publish the completed v2 fixed-backend evidence through a stable GitHub entry
+point without rerunning valid cells or exposing run-scale payloads.
+
+### Motivation
+
+The 42/42 backend result and A02 route-D counterfactual existed only in the
+local research tree, preventing remote review and leaving an obsolete disk
+blocker easier to find than the terminal evidence.
+
+### Changes
+
+- Added `docs/CODEX_HANDOFF.md` as a concise Chinese evidence index.
+- Published compact v2 and route-D reports, tables, protocols, decisions, and
+  path-sanitized audit mirrors with source SHA-256 provenance.
+- Published the exact locked v2 exporter and runner sources used by the files'
+  recorded hashes; no backend source was changed.
+
+### Files Modified
+
+- `docs/CODEX_HANDOFF.md`
+- `docs/research_sync/EXP-20260905-005_v2_backend/`
+- `docs/research_sync/EXP-20260905-006_a02_donor_delete/`
+- `papers/frontend_coverage_monotone_router_v2/`
+- `papers/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/`
+- v2 implementation, runner, analyzer, test, and configuration-map files
+- append-only research logs
+
+### Implementation
+
+Used an isolated worktree and dedicated branch because the live experiment
+workspace is dirty. The snapshot builder replaces machine-local path prefixes
+with symbolic roots and removes bulky path-only columns while retaining every
+scientific field and content hash.
+
+### Technical Decisions
+
+- Treated exact zero-action mappings as ties but not independent replays.
+- Kept the historical `BLOCKED_DISK` decision under an explicitly superseded
+  filename; `decision_backend_complete.json` is authoritative.
+- Distinguished the experiment-time base commit and locked file hashes from
+  the later report-publication commit.
+
+### Experiments
+
+No new VINS experiment was run for this publication task. It publishes
+`EXP-20260905-005` and `EXP-20260905-006` without changing their outputs.
+
+### Quantitative Results
+
+V2: 42/42 repeat PASS, 2 WIN / 8 exact TIE / 2 LOSS / 0 FAIL across 12 learned
+arm-windows. A02 route D: 3/3 replay PASS; deletion-only APE/RPE is
+1.073158/0.102008 m versus KLT 0.141317/0.022697 m.
+
+### Qualitative Observations
+
+The published evidence rejects v2 as no-harm and limits A02 attribution to
+deletion sufficiency. Learned necessity and general superiority remain open.
+
+### Failed Attempts
+
+None during snapshot construction. Remote push/readback is recorded in the
+task handoff once completed.
+
+### Known Issues
+
+A09 and AFRL Bus donor-delete controls, the single minimal repair, and
+new-window validation are Not evaluated. The four-budget code-path audit is
+complete, but exact per-ID hidden survival and backend residual use remain
+Unknown.
+
+### Interpretation
+
+The durable result is mixed: sparse replacement can change the initialization
+basin in either direction, and A02 demonstrates that startup deletion alone is
+sufficient for severe harm.
+
+### Next Steps
+
+Preregister and run only the A09 and AFRL Bus positive-window donor-delete
+controls, three repeats per window, before selecting one minimal repair.

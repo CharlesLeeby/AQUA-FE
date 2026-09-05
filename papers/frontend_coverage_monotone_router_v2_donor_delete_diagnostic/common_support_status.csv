@@ -1,0 +1,2 @@
+window_id,required_trajectories,runable_trajectories,status,matched_count,common_span_s,common_coverage,rpe_pairs,return_code
+aqualoc_archaeology:A02:0000,12,12,PASS,42,41.0,0.9333333333333333,41,0
