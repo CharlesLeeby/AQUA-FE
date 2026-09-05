@@ -1,0 +1,23 @@
+{
+  "schema_version": "aqua-fe-v2-positive-delete-bag-audit-v1",
+  "status": "PASS",
+  "window_id": "afrl:bus_outside:0004",
+  "run_slug": "afrl_bus_s180_d045",
+  "source_bag": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/shadow_root/logs/afrl_cave_v31/external_klt_every2_gmrv2_afrl_bus_s180_d045_klt/features.bag",
+  "source_bag_sha256": "9e4d546cb799f516d933944e9715d1551affe381ab2f0171876cebb95d01ae84",
+  "output_bag": "${AQUA_FE_OFFLOAD}/frontend_v2_positive_delete_diagnostic/afrl_bus_s180_d045/features_donor_delete_only.bag",
+  "output_bag_sha256": "eabbccc1b9e28124fa53b94d53ab632a65ea1d48da3c4ea968813dbc5f7bafdb",
+  "total_messages": 5347,
+  "feature_messages": 282,
+  "changed_feature_messages": 1,
+  "deleted_observations": 2,
+  "retained_feature_observations": 98698,
+  "learned_flags_in_output": 0,
+  "checks": {
+    "registered_observation_set_exact": true,
+    "retained_feature_serialization_exact": true,
+    "non_feature_serialization_exact": true,
+    "topic_counts_and_bag_timestamps_exact": true,
+    "no_learned_feature_introduced": true
+  }
+}

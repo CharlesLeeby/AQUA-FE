@@ -400,3 +400,70 @@ Unknown until the two deletion controls complete.
 
 Preregister and run exactly six new donor-delete-only replays: A09 and Bus,
 three each. Do not select a new method before this and the budget audit finish.
+
+## 2026-09-05 — Do the two v2 wins require insertion?
+
+### Research Question
+
+Can registered donor deletion alone reproduce A09/Bus wins, or must a
+replacement observation be inserted?
+
+### Hypothesis
+
+If deletion-only remains divergent or regresses while both learned and matched
+classical replacements recover, the supported mechanism is an observation and
+initialization intervention rather than deletion-only or learned persistence.
+
+### Motivation
+
+A02 established harm from deletion but did not explain the positive cells.
+
+### Related Baseline
+
+Fresh KLT, v2 XFeat replacement, and same-timestamp/ID/dose matched GFTT.
+
+### Proposed Idea
+
+Remove exactly the registered donors from fresh KLT, insert nothing, replay
+three times per positive window, and compare all four arms on one support.
+
+### Why It Might Work
+
+It isolates deletion while retaining the same backend, timing, and baseline.
+
+### Assumptions
+
+The action audit identifies exact donor observations; proxy supports
+within-window comparison; repeats characterize technical variability only.
+
+### Potential Failure Cases
+
+Deletion and insertion can interact nonlinearly. A successful matched
+classical replacement cannot prove the learned source has no smaller effect.
+
+### Evidence
+
+Confirmed fact: A09 B-D remains at APE 1242.135 m while learned/matched converge
+to 0.732/1.082 m. Confirmed fact: Bus B-D median APE is 53.052 m with two
+divergent repeats, while learned/matched are 0.0423/0.0442 m. Both all-12 common
+supports and 6/6 new receipts pass. Confirmed fact: matched classical produces
+the same rescue direction. Backend per-ID residual use remains Unknown.
+
+### Current Conclusion
+
+Both positives require insertion relative to deletion-only, but learned is not
+shown necessary. Together with A02, startup replacement is a high-leverage,
+bidirectional initialization intervention and cannot be called no-harm.
+
+### Open Questions
+
+- Does moving the same intervention after a fixed startup protection horizon
+  eliminate A02 harm while retaining A09/Bus benefit?
+- Do any post-protection candidates publish for at least four observations?
+- Can the later intervention avoid a new severe loss without per-window tuning?
+
+### Next Experiment
+
+Freeze one delayed newborn-slot version on the existing six development
+windows. Shift only the five-selected-frame intervention interval; leave
+source, thresholds, donor ranking, capacities, and continuation policy fixed.

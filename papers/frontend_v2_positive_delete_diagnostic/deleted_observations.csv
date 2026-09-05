@@ -1,0 +1,6 @@
+window_id,run_slug,timestamp_ns,feature_id,source_feature_count,derived_feature_count
+aqualoc_archaeology:A09:historical_6000_6800,a09_6000_6800,1542889046271565680,944,350,349
+aqualoc_archaeology:A09:historical_6000_6800,a09_6000_6800,1542889046371444368,1086,350,349
+aqualoc_archaeology:A09:historical_6000_6800,a09_6000_6800,1542889046471564144,1320,350,349
+afrl:bus_outside:0004,afrl_bus_s180_d045,1494876660116016699,487,350,348
+afrl:bus_outside:0004,afrl_bus_s180_d045,1494876660116016699,500,350,348

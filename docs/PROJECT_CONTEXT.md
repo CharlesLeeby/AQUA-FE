@@ -42,10 +42,13 @@ Durable main design: protected KLT/GFTT backbone plus sparse, confirmed, geometr
 - proposed_safe: full/protected KLT mirror plus strictly gated sidecar injection.
 - contribution_sparse: deliberately sparse/degraded backbone used to expose learned contribution.
 
-Latest closed-loop development result: coverage-monotone router v2 completed
-42/42 frozen backend replays. It produces two active wins and two active losses;
-eight other learned arm-windows are byte-identical KLT mappings. It is rejected
-as no-harm, not promoted as the main method.
+Latest completed confirmatory branch: lineage_early_seed_churn_guard_v3, which conditionally allows an early XFeat replacement path based on the causal GFTT-birth ratio and otherwise closes to KLT. Its 12-sequence frontend matrix and all eligible backend replays are complete. XFeat acts in only 1/12 windows, so the branch remains a selective development mechanism rather than a generally superior main method.
+
+Latest development branch: `lineage_early_seed_geometry_router_v1`. It
+structurally protects tracked KLT and limits learned exchange to startup age-1
+GFTT births, but its frozen six-window export-only result is `SAFE_NULL`: all
+safety checks pass, while only one observation on one A09 frame is admitted.
+It is default-off and not adopted.
 
 ## Datasets
 
@@ -66,6 +69,7 @@ There is no single globally comparable best result. Strong scope-limited evidenc
 - AQUALOC A06 2210-2460: KLT 0.268486/0.113326 m versus protected mirror plus 10 LoFTR observations 0.058071/0.048803 m. Run: logs/aqualoc_archaeo_vins/external_hybrid_superpoint_lightglue_every2_may22_mirrorinject_vins_a06_2210_2460.
 - H07 1660-1720: KLT 0.050207/0.113417 m versus proposed_safe 0.050207/0.113416 m with zero LoFTR exports. Runs: logs/aqualoc_real_vins/external_klt_every2_may22_mirrorinject_h07_1660_1720_klt and logs/aqualoc_real_vins/external_hybrid_superpoint_lightglue_every2_may22_mirrorinject_h07_1660_1720_loftr.
 - Fixed modern XFeat M failed VINS initialization in 20/20 frozen windows; pairwise APE/RPE is undefined. Persistent-ID repair restored initialization on two diagnostic windows but produced very large errors, so it is not a learned-accuracy result. Evidence: papers/b1_vs_m_results.csv and papers/2026-08-08--xfeat-persistent-v2-repair.md.
+- Confirmatory-v3 same-backend matrix: 7/12 windows pass exact all-nine common support. XFeat-v3 has one attributable KLT window (APE -3.36%, RPE -7.20%, overlapping repeat ranges, p=1.0). SP+LG has seven active contrasts with 3 joint wins, 3 joint losses, and 1 mixed result; median APE/RPE changes are -0.069%/+0.257%. Evidence: papers/frontend_same_backend_confirmatory_v3/report.md.
 
 Primary evidence authority for these boundaries: papers/final_claim_evidence.md and docs/RESEARCH_LOG.md.
 
@@ -76,12 +80,25 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 - Direct transfer of the External-KLT temporal-collapse gate is rejected: it missed 2/2 known positives and opened on a known harmful window.
 - q_i has a reliability meaning and backend interface, but general trajectory benefit is not established.
 - Cross-dataset end-to-end superiority over strong KLT is not established.
-- Coverage-monotone router v2 is not backend no-harm: both A02 learned arms
-  suffer repeatable scale/accuracy regression. Removing only the eight
-  registered A02 startup donor observations, with no added candidate, is
-  sufficient to reproduce most of the failure (`DELETE_SUFFICIENT`).
-- Ten of fourteen v2 learned lineages have only one published observation;
-  hidden per-ID survival and backend residual use remain Unknown.
+- Unconditional learned-source expansion is rejected by confirmatory-v3: the tested SP+LG arm alternates between rescue and harm, including an A08 median regression and one divergent AFRL Cemetery replay.
+- Geometry-maturity router v1 is safe but null: its global 10% birth-ratio and
+  exact same-cell-victim requirements suppress A02 and AFRL Bus opportunity,
+  so no backend continuation is authorized.
+- Coverage-monotone router v2 passes its frontend safety/opportunity contract
+  but fails backend no-harm. The frozen backend is complete: 42/42 replays,
+  4/4 active common supports, and 2 WIN / 2 LOSS versus KLT. Eight additional
+  learned arm-windows are exact-fallback ties, not independent replays. A02
+  XFeat and SP+LG both regress from 0.141 m KLT APE to about 1.09--1.11 m.
+  Route-D deletion-only attribution reproduced the harm (1.073 m APE, scale
+  0.514) by removing only eight startup donor observations, so occupied-track
+  donor replacement is rejected as no-harm. Ten of 14 learned lineages remain
+  single-observation, none reaches four observations, and per-ID backend
+  residual use remains Unknown.
+- Positive-window donor-delete controls completed 6/6 new replays. A09
+  deletion-only remains at the KLT divergent scale; Bus deletion-only has two
+  divergent repeats. Both learned and matched-GFTT insertion recover the two
+  windows. Insertion is therefore required relative to the registered deletion
+  controls, but learned-source necessity remains unestablished.
 - Many experiment generations coexist; the 2026-08-06 experiment_status.md is stale relative to the 2026-08-08 final claim map and September work.
 - Proxy trajectories, fixed-scale metrics, and Sim(3) diagnostics require explicit labels.
 - The repository has no declared open-source license.
@@ -89,8 +106,8 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 
 ## Active Research Questions
 
-- Do A09 and AFRL Bus wins require candidate insertion, or can registered
-  donor deletion alone reproduce them?
+- Can delaying the same fixed newborn-slot intervention eliminate A02 harm
+  while retaining A09/Bus benefit under one global policy?
 - Which causal frontend-only geometry signals identify action-positive cases without opening on harmful windows?
 - Can learned-sidecar benefit be separated from dense-KLT/classical rescue?
 - Can a multi-sequence, valid-common-support end-to-end learned contribution be demonstrated?
@@ -98,20 +115,37 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 
 ## Current Priorities
 
-1. Complete the two positive-window donor-delete controls and the lightweight
-   budget/continuation audit before selecting one minimal repair.
+1. Freeze and test exactly one delayed newborn-slot version on the existing six
+   development windows; shift only the fixed intervention interval after a
+   global startup protection horizon.
 2. Preserve exact KLT behavior when learned recovery is inactive.
-3. Keep the failed External-KLT direct-transfer result as a negative result; any geometry-aware replacement is a new branch.
-4. Require accepted learned-born lineage and valid common support before making learned-contribution claims.
-5. Reconcile the live experiment-status index and clarify the intended submission narrative.
+3. Keep unconditional SP+LG expansion and the failed External-KLT direct-transfer result as negative evidence; any geometry-aware replacement is a new branch.
+4. Include a matched classical-candidate control and freeze before new-window backend outcomes.
+5. Require accepted learned-born lineage and valid common support before making learned-contribution claims.
 
 ## Recent Progress
 
-- 2026-09-05: v2 fixed-backend completion reached 42/42 replay PASS. The full
-  learned arm-window denominator is 2 WIN / 8 exact TIE / 2 LOSS / 0 FAIL.
-- 2026-09-05: A02 donor-delete-only replay reproduced the scale/accuracy
-  regression with 3/3 PASS, establishing deletion sufficiency for that tested
-  eight-observation set.
+- 2026-09-05: A09/Bus donor-delete-only controls completed 6/6 PASS. Deletion
+  does not reproduce either meaningful win; insertion is required, but matched
+  GFTT also works, so the evidence supports an observation/initialization
+  intervention rather than learned-source necessity.
+- 2026-09-05: completed all 42 frozen v2 backend replays. Active learned cells
+  are 2 wins and 2 losses versus KLT; repeated A02 regressions reject v2 as a
+  no-harm unified method.
+- 2026-09-05: route-D A02 counterfactual removed only the eight registered
+  donor observations and added nothing. Three replays and all-12 common support
+  pass; APE/RPE worsens +659%/+349% and initialization occurs 0.785 s earlier,
+  confirming donor deletion is sufficient for the tested scale failure.
+- 2026-09-05: exact v2 bag diagnosis found 10/14 single-observation lineages,
+  0/14 nonlinear-residual-eligible lineages by the locked >=4 rule, and only one
+  actually missing donor observation per exchange (21 total), not deletion of
+  later donor continuations.
+- 2026-09-05: completed the preregistered geometry-maturity router v1
+  export-only matrix (18/18 PASS). Seven safety checks pass, both opportunity
+  checks fail, and the branch is classified `SAFE_NULL`; backend is Not
+  evaluated.
+- 2026-09-04: completed confirmatory-v3: 72/72 eligible backend replays, 7 exact common-support windows, XFeat-v3 attributable n=1, and SP+LG joint outcomes 3 win/3 loss/1 mixed. Unconditional source expansion was rejected.
+- 2026-09-04: export-only action-frame audit found that grid gain alone does not separate rescue from harm; KLT maturity at action is a plausible but post-hoc routing signal.
 - 2026-09-04: froze a 12-sequence same-backend confirmatory experiment for KLT, SP+LG, and XFeat churn-guard v3; execution notes record infrastructure recovery and an A04 archive-layout correction. Terminal results were not confirmed in this inspection.
 - 2026-09-04: External-KLT gate-transfer quick probe returned NO-GO and stopped before VINS replay.
 - 2026-09-04: initialized the standalone Git repository, added publication-safe ignore rules, and published the initial code/research-evidence snapshot to the public GitHub main branch.
@@ -120,9 +154,16 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 
 ## Next Experiments
 
-- Run only A09/XFeat and AFRL Bus/XFeat donor-delete-only, three repeats each,
-  then choose one evidence-driven minimal repair.
-- If developing a new trigger, use persistent-cell coverage, parallax/bearing diversity, homography dominance, and candidate grid gain as hypotheses; freeze it before new-window outcomes.
+- Freeze one protected-KLT empty-slot admission development version: validated
+  candidates may use a small fixed share of naturally vacant slots after KLT
+  filtering and before GFTT refill, but may not delete existing observations.
+  Give its changed intervention structure a new matched-classical control and
+  first run the same six development windows. Do not expand to new windows
+  unless that unified version passes no-harm and shows net backend value.
+- Use A02/A09/AFRL Bus only as development opportunity controls and A08 plus
+  AFRL Cemetery/H07 as mandatory harm/stability controls; require an untouched
+  roster for any confirmation.
+- Freeze the router before evaluating a new non-overlapping confirmation roster.
 - For learned attribution, compare protected KLT, dense-KLT rescue, learned without LoFTR, and learned with LoFTR on action-positive low-texture windows.
 - For no-harm, verify exact or near-exact KLT behavior and actual learned/LoFTR export counts on normal-texture windows.
 

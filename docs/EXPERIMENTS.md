@@ -198,6 +198,91 @@ Reject v2 as the unified method.
 Donor-delete-only attribution, initially on A02 and then on both positive
 windows.
 
+## EXP-20260905-007 — A09/Bus positive donor-delete attribution
+
+### Date
+
+2026-09-05
+
+### Status and Scientific Role
+
+`COMPLETE_INSERTION_REQUIRED`; outcome-known two-window mechanism diagnostic,
+not held-out validation or a natural positive-rate estimate.
+
+### Git Commit and Branch
+
+Experiment base `f6f8feec66c2faf1f59cdb67c1e817028a3bccaf` on `main`, plus
+the published execution lock and script/file hashes; report publication uses a
+later dedicated branch commit and is not the experiment-time source identity.
+
+### Dataset and Sequence / Window
+
+AQUALOC A09 frames 6000--6800 and AFRL Bus s180 d45; two physical development
+windows, three new deletion-only replays each.
+
+### Environment and Exact Configuration
+
+ROS Noetic, unchanged VINS-Fusion-origin binaries, same canonical per-window
+YAML/camera, KLT bag, proxy, time axis, 350 cap, evaluator, and repeat count as
+v2. Execution identity 17/17 PASS.
+
+### Baseline
+
+B fresh KLT. Existing B-D+L XFeat and B-D+C matched-GFTT replays were reused
+only under exact identity and recomputed common support.
+
+### Proposed Modification
+
+B-D removes only the preregistered three A09 or two Bus donor observations at
+their exact timestamp/ID/camera; it inserts nothing and changes no other
+message or observation.
+
+### Commands and Artifact / Run Paths
+
+Builders/runners/analyzer are `scripts/build_frontend_v2_positive_delete_controls.py`,
+`scripts/run_frontend_v2_positive_delete_backend.py`, and
+`scripts/analyze_frontend_v2_positive_delete_backend.py`. Primary compact
+artifacts are under `papers/frontend_v2_positive_delete_diagnostic/`; run-scale
+artifacts remain in the offload root listed by the manifest.
+
+### Metrics
+
+Structural input identity, initialization and coverage, all-12 common support,
+proper fixed-scale SE(3) APE, strict 1 s RPE, diagnostic Sim(3), and repeat
+range.
+
+### Results
+
+Six of six new replays PASS; both all-12 supports PASS. A09 B versus B-D APE /
+RPE is 1242.140002/150.846817 versus 1242.135147/150.843919 m, while B-D+L
+and B-D+C converge at 0.732414/0.073563 and 1.082355/0.116941 m. Bus B versus
+B-D is 0.060301/0.037071 versus median 53.052375/6.980129 m; B-D+L and B-D+C
+are 0.042258/0.026681 and 0.044229/0.026862 m. Runtime/FPS, inlier ratio, and
+lost tracking count are Not evaluated.
+
+### Validity Checks and Common-Support Status
+
+A09: 38 common poses, 37 s, 95% coverage, 37 RPE pairs. Bus: 41 poses, 40 s,
+91.11% coverage, 40 RPE pairs. An interrupted unreceipted Bus repeat was
+quarantined and rerun; completed receipts are 6/6.
+
+### Interpretation
+
+Deletion-only does not reproduce either meaningful win. Candidate insertion is
+required for both registered positive outcomes, but matched GFTT is also
+effective, so learned necessity is unproven.
+
+### Conclusion
+
+Proceed only to one startup-protected intervention version; do not claim
+learned persistent anchors or expand v2.
+
+### Follow-up
+
+Preregister the six-window delayed newborn-slot version and its newly matched
+classical control; expand to 12 new windows only if the frozen development gate
+passes.
+
 ## EXP-20260905-006 — A02 donor-delete-only route-D attribution
 
 ### Objective

@@ -107,6 +107,27 @@ def main() -> int:
     ):
         jobs.append((route_d / name, route_d_public / name, None, "path_prefix_substitution"))
 
+    positive_delete = Path("papers/frontend_v2_positive_delete_diagnostic")
+    positive_delete_public = Path("docs/research_sync/EXP-20260905-007_positive_delete")
+    jobs.append(
+        (
+            positive_delete / "backend_results_repeats.csv",
+            positive_delete_public / "backend_results_repeats_compact.csv",
+            {"feature_bag", "canonical_config", "vio_csv", "vins_log", "replay_receipt"},
+            "path_columns_omitted;scientific_fields_and_hashes_preserved",
+        )
+    )
+    for name in (
+        "artifacts.sha256",
+        "initialization_event_audit.csv",
+        "execution_lock.json",
+        "contract.json",
+        "build_receipt.json",
+        "bag_structural_audit_a09_6000_6800.json",
+        "bag_structural_audit_afrl_bus_s180_d045.json",
+    ):
+        jobs.append((positive_delete / name, positive_delete_public / name, None, "path_prefix_substitution"))
+
     manifest_rows: list[dict[str, str]] = []
     for relative_source, relative_destination, omit, transform in jobs:
         source = source_root / relative_source
@@ -125,7 +146,7 @@ def main() -> int:
             }
         )
 
-    for public_dir in (v2_public, route_d_public):
+    for public_dir in (v2_public, route_d_public, positive_delete_public):
         rows = [row for row in manifest_rows if row["published_file"].startswith(public_dir.as_posix())]
         manifest = destination_root / public_dir / "source_identity.csv"
         with manifest.open("w", newline="", encoding="utf-8") as stream:

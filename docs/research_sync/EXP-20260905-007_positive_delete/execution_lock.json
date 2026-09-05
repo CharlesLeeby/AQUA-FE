@@ -1,0 +1,77 @@
+{
+  "schema_version": "aqua-fe-v2-positive-delete-execution-lock-v1",
+  "files": [
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_v2_positive_delete_diagnostic/contract.json",
+      "sha256": "ca7d7b3d5d11d585e56c7d0f0cbe17a1a2cf375b2051b69538c5f28ff78ef716"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_v2_positive_delete_diagnostic/build_receipt.json",
+      "sha256": "d5a567e3ef1793be40010f833f42915db2663b9edafc0d95ae59b6b732cde37d"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_v2_positive_delete_diagnostic/replay_plan.csv",
+      "sha256": "7aa8b06663e7b008bc3d52bda884e9efe5b564e87f624f740643bb4a4d43f39a"
+    },
+    {
+      "path": "${AQUA_FE_WS}/scripts/run_frontend_v2_positive_delete_backend_cell.sh",
+      "sha256": "417ea2971bb9312e8688de70f2463164a93cee73f3cc36e58fa580fef3f1df39"
+    },
+    {
+      "path": "${AQUA_FE_WS}/scripts/run_frontend_v2_positive_delete_backend.py",
+      "sha256": "4380d6e0499e2b8c8d562246aee4191f5b51e6dbb1f83c89ac09072d5ad0c1d3"
+    },
+    {
+      "path": "${AQUA_FE_WS}/scripts/analyze_frontend_v2_positive_delete_backend.py",
+      "sha256": "4488b05ef7aeaec16e657bbaa88af2e19f1064c499cdc891af891d251d599672"
+    },
+    {
+      "path": "${AQUA_FE_WS}/scripts/evaluate_vins_common_support_dual_scale.py",
+      "sha256": "52b945ef78b09959f3a2d2558a1046ea09a0de8fa05c1accf679645c354e65d2"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_coverage_monotone_router_v2/backend_results_repeats.csv",
+      "sha256": "5a61b9c949a56e355f113814ba15a5130c7ee340fbc3b46563dd6e2a9dcdfafe"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_coverage_monotone_router_v2/accuracy_repeats.csv",
+      "sha256": "0727f1640c6735f15cc05d079b01de46fddcb8b1ef129bdf11ba5aeb053a69c8"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_v2_positive_delete_diagnostic/a09_6000_6800/features_donor_delete_only.bag",
+      "sha256": "96dcb8df8419a001b5ba6448c3c3b57f5e7b1828338a41c1efffab8c81970d67"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_v2_positive_delete_diagnostic/afrl_bus_s180_d045/features_donor_delete_only.bag",
+      "sha256": "eabbccc1b9e28124fa53b94d53ab632a65ea1d48da3c4ea968813dbc5f7bafdb"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/a09_6000_6800/vins_same_backend.yaml",
+      "sha256": "7ecf99b8c6540cc3c9ab4917b2453c1579afed96a928034c8e65e4f5f04532b1"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/afrl_bus_s180_d045/vins_same_backend.yaml",
+      "sha256": "cb9a252cdb0864aad843b7c6ad050f74ce0c1c07760df8963238d188364052f1"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/a09_6000_6800/aqualoc_archaeo09_pinhole.yaml",
+      "sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5"
+    },
+    {
+      "path": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/afrl_bus_s180_d045/afrl_cave_cam0_pinhole.yaml",
+      "sha256": "5856ee4b261d5b0d67021ef81ad0a0c5e8e6aa885184c68591530224b3645aee"
+    }
+  ],
+  "vins_node": "${VINS_FUSION_ORIGIN}/devel/lib/vins/vins_node",
+  "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+  "vins_lib": "${VINS_FUSION_ORIGIN}/devel/lib/libvins_lib.so",
+  "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+  "replay_order": [
+    "a09_6000_6800:repeat1",
+    "a09_6000_6800:repeat2",
+    "a09_6000_6800:repeat3",
+    "afrl_bus_s180_d045:repeat1",
+    "afrl_bus_s180_d045:repeat2",
+    "afrl_bus_s180_d045:repeat3"
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "schema_version": "aqua-fe-v2-positive-delete-contract-v1",
+  "frozen_at": "2026-09-05T22:31:00+08:00",
+  "outcomes_observed_before_freeze": false,
+  "feature_topic": "/feature_tracker/feature",
+  "new_replay_order": [
+    "a09_6000_6800:repeat1",
+    "a09_6000_6800:repeat2",
+    "a09_6000_6800:repeat3",
+    "afrl_bus_s180_d045:repeat1",
+    "afrl_bus_s180_d045:repeat2",
+    "afrl_bus_s180_d045:repeat3"
+  ],
+  "windows": [
+    {
+      "window_id": "aqualoc_archaeology:A09:historical_6000_6800",
+      "run_slug": "a09_6000_6800",
+      "proxy_topic": "/aqualoc/colmap_gt",
+      "deletions": {
+        "1542889046271565680": [
+          944
+        ],
+        "1542889046371444368": [
+          1086
+        ],
+        "1542889046471564144": [
+          1320
+        ]
+      },
+      "fresh_klt_bag": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_gmrv2_a09_6000_6800_klt/features.bag",
+      "fresh_klt_bag_sha256": "6de8ffe9226c1c786bbd80b53049f2f4f1f58c2859808034b60b5dca171884ff",
+      "learned_bag": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_gmrv2_a09_6000_6800_router_xfeat/features.bag",
+      "learned_bag_sha256": "b60fac4979fb2e0103f1c8470f80f88513bd5e50511dbcb3a0ec1fcbd89ef62e",
+      "matched_bag": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/matched_controls/a09_6000_6800/router_xfeat/features_matched_gftt.bag",
+      "matched_bag_sha256": "a8984bbb9afdaae41c63197f978f148206a4b7cbc10187505a408c5d72f7a2ab",
+      "canonical_config": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/a09_6000_6800/vins_same_backend.yaml",
+      "canonical_config_sha256": "7ecf99b8c6540cc3c9ab4917b2453c1579afed96a928034c8e65e4f5f04532b1",
+      "camera_config": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/a09_6000_6800/aqualoc_archaeo09_pinhole.yaml",
+      "camera_config_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5"
+    },
+    {
+      "window_id": "afrl:bus_outside:0004",
+      "run_slug": "afrl_bus_s180_d045",
+      "proxy_topic": "/afrl/colmap_gt",
+      "deletions": {
+        "1494876660116016699": [
+          487,
+          500
+        ]
+      },
+      "fresh_klt_bag": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/shadow_root/logs/afrl_cave_v31/external_klt_every2_gmrv2_afrl_bus_s180_d045_klt/features.bag",
+      "fresh_klt_bag_sha256": "9e4d546cb799f516d933944e9715d1551affe381ab2f0171876cebb95d01ae84",
+      "learned_bag": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/shadow_root/logs/afrl_cave_v31/external_hybrid_xfeat_every2_gmrv2_afrl_bus_s180_d045_router_xfeat/features.bag",
+      "learned_bag_sha256": "34ec601a13843c7a39d53a95eb7bedc8db4086b1e6683921b2507cd7a5356442",
+      "matched_bag": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/matched_controls/afrl_bus_s180_d045/router_xfeat/features_matched_gftt.bag",
+      "matched_bag_sha256": "0b1e6b1abaccf2faa127a4de74a18d727c097767b5c4ef14a2443fa292715dcc",
+      "canonical_config": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/afrl_bus_s180_d045/vins_same_backend.yaml",
+      "canonical_config_sha256": "cb9a252cdb0864aad843b7c6ad050f74ce0c1c07760df8963238d188364052f1",
+      "camera_config": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/backend_canonical/afrl_bus_s180_d045/afrl_cave_cam0_pinhole.yaml",
+      "camera_config_sha256": "5856ee4b261d5b0d67021ef81ad0a0c5e8e6aa885184c68591530224b3645aee"
+    }
+  ],
+  "files": [
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_v2_positive_delete_diagnostic/preregistration.md",
+      "sha256": "be3cc16d983453332e3e0e49c2ea38c2ee490ce368449b128cacd044726d4433"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_coverage_monotone_router_v2/action_audit.csv",
+      "sha256": "43a9f9d3264bb23e0f8519e54285dd36b950613808c48af3ac668249344898d9"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_coverage_monotone_router_v2/backend_smoke_plan.csv",
+      "sha256": "6b3af3e00c1baa970da69d03013597b2972e39b27601acf2e63c2fa71bccbbb7"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_coverage_monotone_router_v2/backend_results_repeats.csv",
+      "sha256": "5a61b9c949a56e355f113814ba15a5130c7ee340fbc3b46563dd6e2a9dcdfafe"
+    },
+    {
+      "path": "${AQUA_FE_WS}/papers/frontend_coverage_monotone_router_v2/accuracy_repeats.csv",
+      "sha256": "0727f1640c6735f15cc05d079b01de46fddcb8b1ef129bdf11ba5aeb053a69c8"
+    },
+    {
+      "path": "${AQUA_FE_WS}/scripts/build_frontend_v2_positive_delete_controls.py",
+      "sha256": "eddb8d991f5f2bc00402a34df1a7b5a96c579360faa9e3b1f969f4f0a47811db"
+    },
+    {
+      "path": "${AQUA_FE_WS}/scripts/run_frontend_v2_positive_delete_backend.py",
+      "sha256": "4380d6e0499e2b8c8d562246aee4191f5b51e6dbb1f83c89ac09072d5ad0c1d3"
+    },
+    {
+      "path": "${AQUA_FE_WS}/scripts/run_frontend_v2_positive_delete_backend_cell.sh",
+      "sha256": "417ea2971bb9312e8688de70f2463164a93cee73f3cc36e58fa580fef3f1df39"
+    },
+    {
+      "path": "${AQUA_FE_WS}/scripts/analyze_frontend_v2_positive_delete_backend.py",
+      "sha256": "4488b05ef7aeaec16e657bbaa88af2e19f1064c499cdc891af891d251d599672"
+    },
+    {
+      "path": "${AQUA_FE_WS}/scripts/evaluate_vins_common_support_dual_scale.py",
+      "sha256": "52b945ef78b09959f3a2d2558a1046ea09a0de8fa05c1accf679645c354e65d2"
+    }
+  ],
+  "vins_node": "${VINS_FUSION_ORIGIN}/devel/lib/vins/vins_node",
+  "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+  "vins_lib": "${VINS_FUSION_ORIGIN}/devel/lib/libvins_lib.so",
+  "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+  "gates": {
+    "coverage": 0.7,
+    "common_poses": 30,
+    "common_span_s": 10,
+    "rpe_pairs": 10
+  },
+  "primary_alignment": "proper fixed-scale SE(3)",
+  "diagnostic_alignment": "Sim(3)"
+}

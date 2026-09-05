@@ -1,0 +1,23 @@
+{
+  "schema_version": "aqua-fe-v2-positive-delete-bag-audit-v1",
+  "status": "PASS",
+  "window_id": "aqualoc_archaeology:A09:historical_6000_6800",
+  "run_slug": "a09_6000_6800",
+  "source_bag": "${AQUA_FE_OFFLOAD}/frontend_coverage_monotone_router_v2/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_gmrv2_a09_6000_6800_klt/features.bag",
+  "source_bag_sha256": "6de8ffe9226c1c786bbd80b53049f2f4f1f58c2859808034b60b5dca171884ff",
+  "output_bag": "${AQUA_FE_OFFLOAD}/frontend_v2_positive_delete_diagnostic/a09_6000_6800/features_donor_delete_only.bag",
+  "output_bag_sha256": "96dcb8df8419a001b5ba6448c3c3b57f5e7b1828338a41c1efffab8c81970d67",
+  "total_messages": 8533,
+  "feature_messages": 400,
+  "changed_feature_messages": 3,
+  "deleted_observations": 3,
+  "retained_feature_observations": 139997,
+  "learned_flags_in_output": 0,
+  "checks": {
+    "registered_observation_set_exact": true,
+    "retained_feature_serialization_exact": true,
+    "non_feature_serialization_exact": true,
+    "topic_counts_and_bag_timestamps_exact": true,
+    "no_learned_feature_introduced": true
+  }
+}

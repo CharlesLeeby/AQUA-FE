@@ -1,0 +1,51 @@
+{
+  "schema_version": "aqua-fe-v2-positive-delete-decision-v1",
+  "new_backend_replays": 6,
+  "independent_windows": 2,
+  "window_decisions": [
+    {
+      "window_id": "aqualoc_archaeology:A09:historical_6000_6800",
+      "run_slug": "a09_6000_6800",
+      "common_support_status": "PASS",
+      "classification": "DELETE_DIRECTION_ONLY",
+      "B_ape_m": 1242.140001754619,
+      "BD_ape_m": 1242.1351471928838,
+      "BDL_ape_m": 0.7324143279267064,
+      "BDC_ape_m": 1.0823545694282526,
+      "B_rpe_m": 150.84681657767342,
+      "BD_rpe_m": 150.84391879853064,
+      "BDL_rpe_m": 0.0735633917026871,
+      "BDC_rpe_m": 0.11694077198954063,
+      "BD_vs_B_ape_change_pct": -0.0003908224297188845,
+      "BD_vs_B_rpe_change_pct": -0.0019210078200715408,
+      "BDL_minus_BD_ape_m": -1241.402732864957,
+      "BDL_minus_BD_rpe_m": -150.77035540682795,
+      "BDC_minus_BD_ape_m": -1241.0527926234556,
+      "BDC_minus_BD_rpe_m": -150.7269780265411,
+      "BD_closer_to_BDL_than_B_both_metrics": false
+    },
+    {
+      "window_id": "afrl:bus_outside:0004",
+      "run_slug": "afrl_bus_s180_d045",
+      "common_support_status": "PASS",
+      "classification": "INSERTION_REQUIRED_FOR_WIN",
+      "B_ape_m": 0.06030103054792109,
+      "BD_ape_m": 53.05237472217308,
+      "BDL_ape_m": 0.042257902422335195,
+      "BDC_ape_m": 0.044228568170579845,
+      "B_rpe_m": 0.03707107758848374,
+      "BD_rpe_m": 6.980129235902349,
+      "BDL_rpe_m": 0.026681258618196212,
+      "BDC_rpe_m": 0.026862001990089424,
+      "BD_vs_B_ape_change_pct": 87879.21733694497,
+      "BD_vs_B_rpe_change_pct": 18729.043259510618,
+      "BDL_minus_BD_ape_m": -53.01011681975074,
+      "BDL_minus_BD_rpe_m": -6.953447977284153,
+      "BDC_minus_BD_ape_m": -53.008146154002496,
+      "BDC_minus_BD_rpe_m": -6.95326723391226,
+      "BD_closer_to_BDL_than_B_both_metrics": false
+    }
+  ],
+  "new_window_expansion_authorized": false,
+  "next_step": "Combine with A02 deletion sufficiency and lineage budget audit; choose exactly one minimal development version."
+}

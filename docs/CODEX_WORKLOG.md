@@ -390,3 +390,81 @@ sufficient for severe harm.
 
 Preregister and run only the A09 and AFRL Bus positive-window donor-delete
 controls, three repeats per window, before selecting one minimal repair.
+
+## 2026-09-05 — Positive-window donor-delete attribution
+
+### Task Objective
+
+Determine whether the A09 and AFRL Bus v2 wins come from donor deletion or
+from the replacement observation, without changing the frozen backend.
+
+### Problem / Motivation
+
+A02 had already shown deletion sufficiency for harm. The two positive cells
+still confounded deletion and insertion, so they could not justify a candidate
+or learned-feature claim.
+
+### Files Changed
+
+- `papers/frontend_v2_positive_delete_diagnostic/`
+- positive donor-delete builder, replay runners, and analyzer under `scripts/`
+- append-only research logs and the GitHub handoff snapshot
+
+### Implementation
+
+Froze exact timestamp/ID/camera deletion lists for A09 and Bus, derived bags
+from fresh KLT with only those observations removed, ran three new serial
+VINS-Fusion-origin replays per window, and recomputed each window on one
+12-trajectory common support across B, B-D, B-D+L, and B-D+C.
+
+### Technical Decisions
+
+The tiny A09 B-D median change remains the same divergent scale and is not
+called a recovered win. Repeated solver runs are stability checks, not samples.
+Learned necessity is not inferred because matched GFTT also recovers both
+windows.
+
+### Experiments Performed
+
+Six new backend replays plus structural bag audits, initialization timing,
+fixed-SE(3) APE, strict 1 s RPE, diagnostic Sim(3), and exact common support.
+
+### Quantitative Results
+
+New replays 6/6 PASS and both common supports PASS. A09 B/B-D/BDL/BDC APE is
+1242.140002/1242.135147/0.732414/1.082355 m. Bus is
+0.060301/53.052375/0.042258/0.044229 m. Bus B-D has two divergent repeats;
+candidate insertion restores all repeats.
+
+### Qualitative Observations
+
+Neither positive is deletion-only. A09 needs insertion for the scale rescue;
+Bus deletion is hazardous and insertion stabilizes the intervention. The
+current evidence is observation/initialization manipulation, not persistent
+learned-anchor evidence.
+
+### Failed Attempts
+
+An interactive monitoring interruption left Bus repeat 2 without a valid
+receipt. Its incomplete output was preserved under `quarantine/`, and the
+receipt-aware runner reran only repeats 2--3; no terminal result was discarded.
+
+### Known Issues
+
+Per-ID backend residual use remains Unknown. The diagnostic uses two
+outcome-known development windows and proxy reference; population prevalence
+and learned-source necessity are Not evaluated.
+
+### Interpretation
+
+Confirmed fact: candidate insertion is required for the two registered
+positive outcomes relative to deletion-only. Confirmed fact: matched classical
+insertion is also sufficient. Interaction prevents assigning an isolated
+causal effect to any single observation.
+
+### Next Steps
+
+Freeze exactly one delayed newborn-slot development version that preserves the
+startup KLT history and shifts the existing five-selected-frame intervention
+window after a global fixed protection horizon. Do not change source,
+threshold, donor ranking, or continuation semantics in the same version.

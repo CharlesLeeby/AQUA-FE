@@ -1,11 +1,12 @@
 # AQUA-FE 固定交接入口
 
-更新时间：`2026-09-05T22:26:36+08:00`
+更新时间：`2026-09-05T23:15:18+08:00`
 
 ## 当前阶段与结论
 
-当前权威实验为 `EXP-20260905-005`（coverage-monotone router v2 固定后端闭环）和
-`EXP-20260905-006`（A02 donor-delete-only route-D 诊断）。这些窗口均为已知结果的开发证据；
+当前权威实验为 `EXP-20260905-005`（coverage-monotone router v2 固定后端闭环）、
+`EXP-20260905-006`（A02 donor-delete-only route-D 诊断）和 `EXP-20260905-007`
+（A09/Bus 正例 donor-delete-only 诊断）。这些窗口均为已知结果的开发证据；
 参考轨迹是 COLMAP/proxy，不是独立真值。主指标使用逐轨迹 proper fixed-scale SE(3) 对齐，
 Sim(3) 只作尺度诊断。
 
@@ -21,6 +22,10 @@ Sim(3) 只作尺度诊断。
   3/3 replay PASS，并复现尺度/精度崩坏，判定 `DELETE_SUFFICIENT`。准确边界是：这 8 个
   注册删除足以产生该 A02 结果；它不证明新增候选完全无影响、不证明任何单个 donor 独立致因，
   也不能外推自然正例率。
+- 正例删除对照新增 replay `6/6` PASS，两个窗口的 12-arm 联合共同支撑均 PASS。A09 的
+  delete-only 与 KLT 同样数量级发散，只有加入 learned 或 matched GFTT 后才收敛；Bus 的
+  delete-only 中位数严重退化，加入任一候选才稳定并优于 KLT。因此两个正例都不是“删点即赢”。
+  但 matched GFTT 同样有效，现有正例主要支持观测/初始化干预，尚不支持 learned 必要性。
 
 ## 完整分母
 
@@ -58,6 +63,23 @@ A02 donor-delete-only 相对 KLT 的 APE/RPE 为 `+659.4% / +349.4%`；其接受
 中位数提前 0.785 秒，与 learned/matched 的约 0.795 秒提前接近。该证据支持“启动期删点
 改变初始化路径并足以造成 A02 尺度失败”，但具体后端因果链仍是 Hypothesis / Inference。
 
+正例删除对照在重新计算的 12-arm 共同支撑上得到：
+
+| 窗口 / 臂 | fixed-SE(3) APE | fixed-SE(3) RPE | Sim(3) scale |
+|---|---:|---:|---:|
+| A09 / B fresh KLT | 1242.140002 | 150.846817 | 0.001474 |
+| A09 / B-D delete only | 1242.135147 | 150.843919 | 0.001474 |
+| A09 / B-D+L XFeat | 0.732414 | 0.073563 | 0.753181 |
+| A09 / B-D+C matched GFTT | 1.082355 | 0.116941 | 0.673421 |
+| Bus / B fresh KLT | 0.060301 | 0.037071 | 0.950924 |
+| Bus / B-D delete only | 53.052375 | 6.980129 | 0.013964 |
+| Bus / B-D+L XFeat | 0.042258 | 0.026681 | 0.969382 |
+| Bus / B-D+C matched GFTT | 0.044229 | 0.026862 | 0.961621 |
+
+A09 `B-D` 对 `B` 的微小中位数差（APE `-0.00039%`、RPE `-0.00192%`）只是同一发散量级，
+不复现正例；Bus `B-D` 三次中有两次发散。结论边界是“候选加入对这两个正例必要”，并非
+“learned 来源必要”；删除和加入仍是一个联合干预，不能据此断言某一单独候选的因果效应。
+
 ## Lineage 与审计边界
 
 14 条 learned lineage 共发布 21 个观测：10 条长度 1、1 条长度 2、3 条长度 3；没有一条
@@ -72,14 +94,17 @@ count 为 0。精确同 ID 的内部候选出生、隐藏存活、
 ## 已完成、未完成与唯一下一项
 
 已完成：v2 前端/动作/matched control/lineage 审计、42 次冻结后端、全重复共同支撑评估、
-A02 donor-delete-only 三次诊断，以及本证据快照的路径脱敏镜像。
+A02 donor-delete-only 三次诊断、A09/Bus donor-delete-only 六次诊断，以及本证据快照的
+路径脱敏镜像。
 
-尚未完成：A09/XFeat 与 AFRL Bus/XFeat 的 donor-delete-only 六次 replay；基于删除归因选择的
-唯一最小新版本；12 个新窗口验证。它们当前均为
+尚未完成：基于删除归因选择的唯一最小新版本；12 个新窗口验证。它们当前均为
 **Not evaluated**，不能写成已完成或已同步结果。
 
-唯一下一项实验是：按预注册清单对 A09 和 AFRL Bus 各做 3 次 donor-delete-only replay，
-比较 `B / B-D / B-D+L / B-D+C`，判断两个正例主要来自删点还是加点。
+唯一下一项实验是：在原六窗开发集冻结一个 delayed newborn-slot 版本，只把 v2 的固定
+5-selected-frame 介入窗延后到全局固定启动保护之后；候选来源、阈值、donor 排序、每帧及
+总预算均不变。保护期内输入保持 fresh KLT；之后仍只置换 age-1 GFTT，不删成熟轨迹。
+它不是在线“已初始化”保证，也不等于保留全部将来新生 GFTT。该版本先验证 A02 风险是否
+消失以及 A09/Bus 收益能否保留；通过预注册开发门后才允许锁定 12 个新窗口。
 
 ## 可读证据与身份
 
@@ -105,6 +130,15 @@ A02 donor-delete-only 三次诊断，以及本证据快照的路径脱敏镜像�
   [协议](../papers/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/preregistration.md)、
   [决策](../papers/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/decision.json)、
   [来源 SHA-256](research_sync/EXP-20260905-006_a02_donor_delete/source_identity.csv)
+- [A09/Bus 正例 donor-delete 报告](../papers/frontend_v2_positive_delete_diagnostic/report.md)、
+  [主精度表](../papers/frontend_v2_positive_delete_diagnostic/accuracy.csv)、
+  [逐重复精度](../papers/frontend_v2_positive_delete_diagnostic/accuracy_repeats.csv)、
+  [四臂比较](../papers/frontend_v2_positive_delete_diagnostic/comparisons.csv)、
+  [runability](../papers/frontend_v2_positive_delete_diagnostic/runability.csv)、
+  [删除清单](../papers/frontend_v2_positive_delete_diagnostic/deleted_observations.csv)、
+  [预注册协议](../papers/frontend_v2_positive_delete_diagnostic/preregistration.md)、
+  [决策](../papers/frontend_v2_positive_delete_diagnostic/decision.json)、
+  [来源 SHA-256](research_sync/EXP-20260905-007_positive_delete/source_identity.csv)
 
 实验运行时源码身份是 `main@f6f8feec66c2faf1f59cdb67c1e817028a3bccaf` 加锁定的工作区文件：
 exporter SHA-256 `bb4e50d8...714d1d`，v2 runner `a5c171d8...ec3fe4`，后端 node
