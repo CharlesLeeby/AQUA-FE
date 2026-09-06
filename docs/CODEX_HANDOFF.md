@@ -1,6 +1,6 @@
 # AQUA-FE 固定交接入口
 
-更新时间：`2026-09-06T14:36:10+08:00`
+更新时间：`2026-09-06T17:16:31+08:00`
 发布分支：`codex/aqua-fe-evidence-20260905`
 
 ## 当前阶段与结论
@@ -9,7 +9,8 @@
 audit）：后端没有显式 `initialized` topic/service，但第一条私有
 `/vins_estimator/odometry` 只会在内部进入 `NON_LINEAR` 后发布，因此是可在线
 观察的单向 post-init 边沿。当前前端先离线生成 feature bag，不能消费这个反馈；
-而且该边沿发生在初始化之后，无法改变触发它的尺度分支。
+该事件无法回溯改变初始化输入。后端随后仍继续优化，因此“以后也无法修正尺度”
+超出了当前证据；详见下方结论边界补充。
 
 此前实验 `EXP-20260906-009`（protected pre-refill slot v1）在六个
 outcome-known 开发窗口上测试一个最小机制：保留所有已经存活的 KLT/GFTT
@@ -62,8 +63,9 @@ learned、matched classical。
 ## 为什么得到这个结论
 
 1. A02 中所有 carried 观测都和 KLT 一样，只改变了 8 个 newborn；结果仍从
-   KLT scale≈0.899 跌到 learned/matched scale≈0.50。因此问题不再能归因于
-   “删成熟 KLT”，仅改变启动期新生点也足以让尺度收敛走错分支。
+   KLT 的 Sim(3) 拟合 scale≈0.899 变为 learned/matched≈0.50，并出现固定尺度
+   误差大幅增长。这支持启动期新生观测干预会影响尺度一致性；拟合 scale 并非
+   直接读取的后端初始化变量，具体内部收敛分支仍含推断。
 2. A02 的 learned 与 matched GFTT 几乎相同（差小于 0.5%），说明这里主要是
    新生观测调度效应，不是 XFeat/SP+LG 内容本身。
 3. A09 的 XFeat 不仅击败发散的 KLT，还比同剂量 matched GFTT 的 fixed APE/RPE
@@ -78,18 +80,19 @@ learned、matched classical。
 support、fixed/Sim(3) 与 evo、配置/二进制身份审计、178 项哈希清单。
 
 未完成且 **Not evaluated**：12 个新窗口、sequence-held-out 结果、数据集总体正例率、
-共享初始化状态后的学习候选价值、实时 ROS 传输延迟、运行时/FPS。因为冻结扩展门
-失败，这些没有启动。
+实时初始化反馈下的学习候选价值、实时 ROS 传输延迟、运行时/FPS。
+delayed-v3 已测试固定初始化保护前缀，但实时反馈版本尚未测试。
 
 仍为 **Unknown**：后端逐 ID 是否实际进入残差；独立 GT 下的绝对误差。
 
-唯一决策：`DO_NOT_IMPLEMENT_POST_INIT_VARIANT`。delayed-v3 已在所有开发 KLT
-完成初始化后动作，却未保留 A09 收敛正例；新建 live router 会回答另一个
-post-init tracking 问题，不能修复初始化。停止这条 replacement/admission 线，
-不再尝试第二个 slot 数、newborn 顺序、离线 horizon 或在线 timing 变体。
+本阶段唯一决策：保持 `NO_EXPANSION` 和 `DO_NOT_IMPLEMENT_POST_INIT_VARIANT`。
+测试过的 delayed-v3 未保留 A09 收敛正例，protected-prefill 仍有两项严重回归；
+按冻结停止规则，本轮不再运行 slot、顺序或时机变体。这不构成“所有初始化后方法
+均不可能有效”的证明，后续尺度恢复能力仍需独立证据。
 
 ## 仓库内可读证据
 
+- [结论边界补充](../papers/frontend_init_state_interface_audit/claim_boundary_addendum.md)
 - [初始化状态接口审计](../papers/frontend_init_state_interface_audit/report.md)、
   [接口表](../papers/frontend_init_state_interface_audit/interface_audit.csv)、
   [决策](../papers/frontend_init_state_interface_audit/decision.json)

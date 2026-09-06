@@ -671,3 +671,20 @@ Inference: a live router would answer a different post-init tracking question.
 ### Next Steps
 
 `DO_NOT_IMPLEMENT_POST_INIT_VARIANT`; stop this replacement/admission line.
+
+
+## 2026-09-06 — Clarify the post-initialization claim boundary
+
+- Date: 2026-09-06.
+- Task objective: check whether the interface audit supports its broad scale-recovery conclusion.
+- Problem / motivation: a post-init event cannot change earlier inputs, but that alone does not prove later scale recovery impossible.
+- Files changed: claim_boundary_addendum.md under frontend_init_state_interface_audit; current handoff/context; this worklog and RESEARCH_LOG.
+- Implementation: read-only inspection of continued triangulation, pose/speed/bias optimization, residual insertion, and state writeback; append a clarification while preserving frozen reports and decisions.
+- Technical decisions: distinguish the NON_LINEAR flag from initialization quality; distinguish fitted Sim(3) scale from the estimator's internal initialization scale.
+- Experiments performed: no new experiment; new-method effectiveness is Not evaluated.
+- Quantitative results: unchanged protected-prefill denominator, six physical windows and 12 learned arm-windows: 1 WIN / 9 TIE / 2 LOSS / 0 FAIL; new-window evaluation remains unstarted.
+- Qualitative observations: the source continues optimizing after initialization. The observed delayed-v3 failure cannot rule out every future post-init method.
+- Failed attempts: no new replay attempts. The prior inference was too broad and is explicitly qualified.
+- Known issues: actual ROS arrival ordering and live-feedback efficacy remain Unknown / Not evaluated; source inspection is not a recovery experiment.
+- Interpretation: NO_EXPANSION remains an evidence-based stage decision, not an impossibility result.
+- Next steps: retain the frozen stop; publish this clarification with existing evidence, without another automatic variant.

@@ -648,3 +648,19 @@ initialization decision that generates it.
 
 None on this line; preserve the negative result and do not create another
 timing variant from the same six windows.
+
+
+## 2026-09-06 — A stopping decision is not an impossibility claim
+
+- Research question: does observing initialization completion imply subsequent scale correction is impossible?
+- Hypothesis: the earlier interface audit conflated unchanged historical inputs with fixed future state estimates.
+- Motivation: preserve a defensible causal interpretation of the failed delayed intervention.
+- Related baseline: EXP-20260905-008 delayed-v3 and EXP-20260906-009 protected-prefill.
+- Proposed idea: inspect the current optimization path and narrow the claim in an append-only supplement.
+- Why it might work: code can establish which states remain optimized, while experiments bound demonstrated recovery.
+- Assumptions: the inspected source identity matches the prior interface audit; no additional runtime evidence is inferred.
+- Potential failure cases: treating NON_LINEAR as a quality certificate, fitted alignment scale as an internal initializer variable, or a single timing test as proof about every post-init policy.
+- Evidence: processImage continues triangulation and optimization; Ceres uses visual/IMU residuals and writes back pose/speed/bias states. The frozen delayed-v3 failed its expansion gate.
+- Current conclusion: Confirmed fact — tested delayed-v3 did not recover A09; Hypothesis / Inference — different later observations might change scale error. General recovery efficacy is Not evaluated.
+- Open questions: future live-feedback efficacy and actual arrival ordering remain unmeasured.
+- Next experiment: none under the current stopping rules; scientific uncertainty does not authorize another parameter variant.

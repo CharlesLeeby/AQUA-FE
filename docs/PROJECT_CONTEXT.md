@@ -203,6 +203,13 @@ The current exporter is offline, and the edge occurs after the scale decision.
 Combined with delayed-v3's failed expansion gate, this does not justify another
 post-init slot/timing variant; the replacement/admission line is stopped.
 
+Claim-boundary clarification (2026-09-06): this stopping decision applies to the
+current development stage. NON_LINEAR is not an initialization-quality
+certificate; the backend continues optimizing state afterwards. The failed
+delayed-v3 test does not prove all later scale recovery impossible. Reported
+Sim(3) scales are proxy-alignment diagnostics, not direct initializer values.
+See `papers/frontend_init_state_interface_audit/claim_boundary_addendum.md`.
+
 ## Important Files
 
 - AGENTS.md — long-term Codex working and logging rules.
