@@ -1,11 +1,17 @@
 # AQUA-FE 固定交接入口
 
-更新时间：`2026-09-06T14:27:20+08:00`
+更新时间：`2026-09-06T14:36:10+08:00`
 发布分支：`codex/aqua-fe-evidence-20260905`
 
 ## 当前阶段与结论
 
-最新实验是 `EXP-20260906-009`（protected pre-refill slot v1）。它在六个
+最新检查点是 `EXP-20260906-010`（VINS initialization-state interface
+audit）：后端没有显式 `initialized` topic/service，但第一条私有
+`/vins_estimator/odometry` 只会在内部进入 `NON_LINEAR` 后发布，因此是可在线
+观察的单向 post-init 边沿。当前前端先离线生成 feature bag，不能消费这个反馈；
+而且该边沿发生在初始化之后，无法改变触发它的尺度分支。
+
+此前实验 `EXP-20260906-009`（protected pre-refill slot v1）在六个
 outcome-known 开发窗口上测试一个最小机制：保留所有已经存活的 KLT/GFTT
 观测，只让学习候选与“本帧即将新生的 GFTT”竞争 350 预算。
 
@@ -72,17 +78,21 @@ learned、matched classical。
 support、fixed/Sim(3) 与 evo、配置/二进制身份审计、178 项哈希清单。
 
 未完成且 **Not evaluated**：12 个新窗口、sequence-held-out 结果、数据集总体正例率、
-共享初始化状态后的学习候选价值、运行时/FPS。因为冻结扩展门失败，这些没有启动。
+共享初始化状态后的学习候选价值、实时 ROS 传输延迟、运行时/FPS。因为冻结扩展门
+失败，这些没有启动。
 
-仍为 **Unknown**：后端逐 ID 是否实际进入残差；是否已有可供前端消费的实时
-initialization-complete 信号；独立 GT 下的绝对误差。
+仍为 **Unknown**：后端逐 ID 是否实际进入残差；独立 GT 下的绝对误差。
 
-唯一下一步：只读审计 unchanged VINS backend 是否暴露实时初始化完成状态。
-只有确认存在因果在线信号，才另写协议验证 post-init admission；否则停止这条
-replacement/admission 线，不再尝试第二个 slot 数、newborn 顺序或离线 frame horizon。
+唯一决策：`DO_NOT_IMPLEMENT_POST_INIT_VARIANT`。delayed-v3 已在所有开发 KLT
+完成初始化后动作，却未保留 A09 收敛正例；新建 live router 会回答另一个
+post-init tracking 问题，不能修复初始化。停止这条 replacement/admission 线，
+不再尝试第二个 slot 数、newborn 顺序、离线 horizon 或在线 timing 变体。
 
 ## 仓库内可读证据
 
+- [初始化状态接口审计](../papers/frontend_init_state_interface_audit/report.md)、
+  [接口表](../papers/frontend_init_state_interface_audit/interface_audit.csv)、
+  [决策](../papers/frontend_init_state_interface_audit/decision.json)
 - [本轮完整报告](../papers/frontend_protected_prefill_slot_v1/report.md)
 - [预注册协议](../papers/frontend_protected_prefill_slot_v1/preregistration.md)、
   [前端决策](../papers/frontend_protected_prefill_slot_v1/decision.json)、

@@ -609,3 +609,65 @@ development-only positive. The unified method fails the expansion gate.
 Honor `NO_EXPANSION`. Do not tune another prefill variant. Audit the unchanged
 backend for an online initialization-complete signal before considering a
 separately preregistered post-init method.
+
+## 2026-09-06 — Locked VINS initialization-state interface audit
+
+### Task Objective
+
+Determine whether unchanged VINS-Fusion exposes a causal real-time
+initialization-complete state usable by AQUA-FE.
+
+### Problem / Motivation
+
+Protected prefill retained A09 but still caused two A02 wrong-scale losses. A
+causal init boundary was the frozen prerequisite for any post-init rule.
+
+### Files Changed
+
+`papers/frontend_init_state_interface_audit/` and the append-only research
+logs/context.
+
+### Implementation
+
+Read-only inspection of the locked estimator transition, ROS publishers,
+restart/failure paths, hashes, and three existing replay pairs. No backend
+source or binary changed.
+
+### Technical Decisions
+
+The first private `odometry` message is classified as an implicit one-way edge,
+not an explicit/latching status contract. Offline bag export is kept distinct
+from live causal consumption.
+
+### Experiments Performed
+
+No new replay. Source-path audit plus A09/A02/Bus log and first-output
+corroboration.
+
+### Quantitative Results
+
+Init-log clock minus first-output-header offsets are 0.145338, 0.226782, and
+0.442001 s; these are buffered timestamp lags, not transport latency.
+
+### Qualitative Observations
+
+`/vins_estimator/odometry` is published only after `NON_LINEAR`. No explicit
+initialized topic/service or false/reset publication exists.
+
+### Failed Attempts
+
+External Git-root lookup incorrectly resolved to host `/` and was discarded;
+a verbose `rostopic echo -p` probe was also excluded from evidence.
+
+### Known Issues
+
+Live delivery/reset behavior is Not evaluated. The current exporter is offline.
+
+### Interpretation
+
+Confirmed fact: the edge exists but arrives too late to alter initialization.
+Inference: a live router would answer a different post-init tracking question.
+
+### Next Steps
+
+`DO_NOT_IMPLEMENT_POST_INIT_VARIANT`; stop this replacement/admission line.

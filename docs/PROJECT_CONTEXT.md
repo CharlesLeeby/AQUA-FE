@@ -106,8 +106,8 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 
 ## Active Research Questions
 
-- Does the unchanged VINS backend expose a real-time initialization-complete
-  signal that could causally protect the startup prefix?
+- The init-interface question is resolved: an implicit post-init odometry edge
+  exists, but it cannot protect or alter the startup decision that creates it.
 - Which causal frontend-only geometry signals identify action-positive cases without opening on harmful windows?
 - Can learned-sidecar benefit be separated from dense-KLT/classical rescue?
 - Can a multi-sequence, valid-common-support end-to-end learned contribution be demonstrated?
@@ -115,8 +115,8 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 
 ## Current Priorities
 
-1. Honor the protected-prefill `NO_EXPANSION`; perform a read-only online-init
-   interface audit before considering any separate post-init method.
+1. Honor protected-prefill `NO_EXPANSION` and the completed interface audit;
+   stop the replacement/admission line rather than build another timing variant.
 2. Preserve exact KLT behavior when learned recovery is inactive.
 3. Keep unconditional SP+LG expansion and the failed External-KLT direct-transfer result as negative evidence; any geometry-aware replacement is a new branch.
 4. Include a matched classical-candidate control and freeze before new-window backend outcomes.
@@ -124,6 +124,11 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 
 ## Recent Progress
 
+- 2026-09-06: read-only init-interface audit `EXP-20260906-010` completed.
+  `/vins_estimator/odometry` is an implicit post-init edge, but there is no
+  explicit status/reset interface, the exporter is offline, and the event is
+  too late to alter initialization. Decision:
+  `DO_NOT_IMPLEMENT_POST_INIT_VARIANT`.
 - 2026-09-06: protected pre-refill slot `EXP-20260906-009` completed. All
   carried observations are exact and only age-1 GFTT births are omitted, but
   active results are 1 WIN/1 TIE/2 LOSS. A09 retains a strong XFeat positive;
@@ -158,10 +163,10 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 
 ## Next Experiments
 
-- Do not tune a second prefill budget/order/timing variant. Audit whether the
-  unchanged backend exposes a real-time initialization-complete state; if it
-  does, separately preregister one causally post-init admission test. If it
-  does not, stop this line rather than use outcome-known timing.
+- Do not tune a second prefill budget/order/timing variant and do not build a
+  live post-init router from these six outcome-known windows. The edge exists
+  but cannot affect initialization; delayed-v3 already failed the post-init
+  expansion gate.
 - Use A02/A09/AFRL Bus only as development opportunity controls and A08 plus
   AFRL Cemetery/H07 as mandatory harm/stability controls; require an untouched
   roster for any confirmation.
@@ -188,6 +193,15 @@ fixed scale, but A02/XFeat and A02/SP+LG remain severe wrong-scale losses and
 Bus is an exact tie. The 12-arm denominator is 1 WIN/9 TIE/2 LOSS/0 FAIL. This
 invalidates mature-track protection as a sufficient no-harm rule and does not
 support superiority over KLT or a modern learned frontend.
+
+## September 2026 initialization-interface decision
+
+`EXP-20260906-010` confirms that the first private
+`/vins_estimator/odometry` publication is an implicit real-time post-init edge.
+There is no explicit initialized Boolean/service or matching false/reset event.
+The current exporter is offline, and the edge occurs after the scale decision.
+Combined with delayed-v3's failed expansion gate, this does not justify another
+post-init slot/timing variant; the replacement/admission line is stopped.
 
 ## Important Files
 

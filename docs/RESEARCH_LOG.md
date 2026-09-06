@@ -589,3 +589,62 @@ but the unified method is unsupported.
 
 No new variant under `EXP-20260906-009`. Perform a read-only backend-interface
 audit first.
+
+## 2026-09-06 — Can the unchanged backend provide a causal init boundary?
+
+### Research Question
+
+Does locked VINS-Fusion expose an online initialization-complete signal that
+can separate KLT initialization from later learned admission?
+
+### Hypothesis
+
+An existing backend output may mark nonlinear operation without backend changes
+or future information.
+
+### Motivation
+
+Early substitutions rescue A09 but destabilize A02; an online boundary was the
+only remaining justification for a post-init variant.
+
+### Related Baseline
+
+Protected prefill EXP-20260906-009 and delayed-v3 EXP-20260905-008.
+
+### Proposed Idea
+
+Audit the interface before implementing anything.
+
+### Why It Might Work
+
+VINS begins odometry publication only after successful initialization.
+
+### Assumptions
+
+Locked hashes and default node name match the inspected code.
+
+### Potential Failure Cases
+
+No typed status, stale reset state, offline export, or a signal too late for
+initialization.
+
+### Evidence
+
+`solver_flag` changes before guarded odometry publication; private naming gives
+`/vins_estimator/odometry`. No explicit status/reset event exists. Delayed-v3
+already acted after all development KLT initializations and failed expansion.
+
+### Current Conclusion
+
+The signal exists but is scientifically insufficient: it cannot alter the
+initialization decision that generates it.
+
+### Open Questions
+
+- Could a future system paper justify live feedback for post-init tracking?
+- What genuinely new pre-init evidence could predict safe learned admission?
+
+### Next Experiment
+
+None on this line; preserve the negative result and do not create another
+timing variant from the same six windows.

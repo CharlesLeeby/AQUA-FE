@@ -1,0 +1,12 @@
+{
+  "decision": "DO_NOT_IMPLEMENT_POST_INIT_VARIANT",
+  "experiment_id": "EXP-20260906-010",
+  "explicit_initialized_topic_or_service": false,
+  "implicit_realtime_edge_available": true,
+  "implicit_topic": "/vins_estimator/odometry",
+  "offline_exporter_can_consume_causally": false,
+  "can_affect_initialization_branch": false,
+  "reason": "The first odometry message is a causal post-initialization edge, but the current frontend is offline and the event occurs too late to alter initialization. The already completed delayed-v3 post-initialization development test failed its expansion gate and lost the A09 rescue, so another timing variant is not supported.",
+  "scientific_status": "READ_ONLY_INTERFACE_AUDIT_COMPLETE",
+  "schema_version": "aqua-fe-init-state-interface-audit-v1"
+}

@@ -1,0 +1,7 @@
+interface_or_event,scope,observable_without_backend_change,exact_semantics,limitations,evidence
+Estimator::solver_flag,process_internal,no,"INITIAL changes to NON_LINEAR only after initialStructure succeeds and optimization/updateLatestStates complete",C++ member is not a cross-process interface,"estimator.cpp:458-477"
+/vins_estimator/odometry,ROS private topic,yes,"first publication occurs after processImage returns with solver_flag NON_LINEAR",implicit one-way edge; not latched; no explicit false/reset event; header time may precede reception time,"visualization.cpp:34-38,124-144; rosNodeTest.cpp:235-266"
+/vins_estimator/imu_propagate,ROS private topic,yes,"published on IMU callbacks only while solver_flag is NON_LINEAR",normally later than the first odometry publication and not an explicit status message,"estimator.cpp:205-216; visualization.cpp:34-38"
+Initialization finish!,stdout ROS log,yes,"logged immediately after solver_flag is set to NON_LINEAR",not a typed ROS interface and unsuitable as the method contract,"estimator.cpp:471-477"
+/vins_restart,input ROS topic,yes,"external true request clears estimator state back to INITIAL",does not cover internal failureDetection reboot and emits no initialized=false acknowledgement,"rosNodeTest.cpp:192-200,273; estimator.cpp:559-566"
+offline feature-bag exporter,AQUA-FE current execution,no,"feature bag is completed before the frozen VINS replay",cannot causally consume a backend event without a new live stream/router architecture,"protected-prefill and delayed-v3 replay contracts"

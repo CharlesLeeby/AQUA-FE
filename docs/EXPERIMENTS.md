@@ -513,3 +513,70 @@ One A09 positive does not offset two A02 losses or prove general superiority.
 
 No second budget/order/timing variant. First audit for a causal online
 initialization-complete interface.
+
+## EXP-20260906-010 — VINS initialization-state interface audit
+
+### Date
+
+2026-09-06
+
+### Status and Scientific Role
+
+`COMPLETE_READ_ONLY`; causal-feasibility audit, not a trajectory benchmark.
+
+### Git Commit and Branch
+
+Unchanged external VINS source; exact source/binary hashes are in the report.
+The AQUA-FE publication commit is reporting identity only.
+
+### Dataset and Sequence / Window
+
+No new run. Existing A09, A02, and AFRL Bus repeat-1 artifacts were used only
+for code-path corroboration.
+
+### Environment and Exact Configuration
+
+ROS Noetic and the locked node/library from EXP-20260906-009; no YAML, bag,
+gate, backend, or evaluator changed.
+
+### Baseline
+
+Locked VINS behavior and current offline AQUA-FE exporter.
+
+### Proposed Modification
+
+None; read-only interface audit.
+
+### Commands and Artifact / Run Paths
+
+Source inspection in the locked VINS workspace; compact results in
+`papers/frontend_init_state_interface_audit/`.
+
+### Metrics
+
+Signal existence, semantics, ordering, namespace, reset behavior, and causal
+consumability.
+
+### Results
+
+No explicit status exists. First `/vins_estimator/odometry` is an implicit
+post-init edge. Existing buffered header lags are 0.145338--0.442001 s.
+
+### Validity Checks and Common-Support Status
+
+Not applicable: no new replay or APE/RPE comparison. Source and binary hashes
+were recorded; backend remained unchanged.
+
+### Interpretation
+
+The edge exists, but the offline exporter cannot consume it and it occurs after
+the target initialization decision.
+
+### Conclusion
+
+`DO_NOT_IMPLEMENT_POST_INIT_VARIANT`; delayed-v3 already failed the post-init
+expansion gate and lost A09 rescue.
+
+### Follow-up
+
+Stop the replacement/admission line rather than tune another slot or horizon.
