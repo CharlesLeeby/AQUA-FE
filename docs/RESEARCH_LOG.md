@@ -679,3 +679,31 @@ timing variant from the same six windows.
 - Current conclusion: Confirmed fact — final rejection does not refund reservation; existing IDs re-enter donor/horizon checks. Exact hidden survival remains Unknown. These observed first-publication times permit only two or three observations under frame-4 cutoff, so an unchanged-horizon budget-only repair cannot establish a four-observation nonlinear chain from the same starts.
 - Open questions: whether specific candidates survive internally, whether separating continuation has net backend benefit, and whether longer chains justify the extra classical-observation opportunity cost.
 - Next experiment: none within the stopped stage; separately authorize and freeze any new admission/continuation experiment. Do not infer that the whole method class is impossible.
+
+## 2026-09-07 — Test published-ID continuation as one separately authorized policy
+
+- Research question: does allowing genuinely published, currently valid IDs to continue produce usable chains and net backend benefit?
+- Hypothesis: first-admission policy is one publication bottleneck; removing that bottleneck may help but may also alter harmful initialization inputs.
+- Motivation: accounting-only changes cannot overcome the v2 frame-4 cutoff; user explicitly authorized a separate lifecycle experiment after the diagnostic.
+- Related baseline: frozen v2, delayed-v3, protected-prefill and EXP-011; all six windows are development data.
+- Proposed idea: unchanged first admission, explicit public-ID state, validity-based consecutive continuation, carried-classical protection and newborn refill capacity; retain upstream reservations and cap actual publication separately at 50.
+- Why it might work: a valid public chain can exceed the original horizon without repeatedly seeking admission donors, making longer observations available to VINS.
+- Assumptions: candidate existence before online-seed gating is only stage-level evidence; backend actual residual use remains Unknown.
+- Potential failure cases: candidates disappear upstream, newborn capacity runs out, cap closes chains, repeated newborn omissions change initialization, or matched classical explains the same gain.
+- Evidence: eight minimal tests pass; A09 KLT export completed, XFeat probe incomplete. No new backend evidence.
+- Current conclusion: Confirmed fact — policy is frozen and execution began; Hypothesis / Inference — longer publication may help VINS. Effectiveness is Not evaluated. This is not a behavior-preserving bookkeeping fix or a no-harm theorem.
+- Open questions: A02 risk, A09/Bus retained gain, chain termination reasons and learned versus matched benefit.
+- Next experiment: only EXP-012, with frozen six-window denominator and new matched controls; no second continuation variant if expansion criteria fail.
+
+### EXP-20260906-012 probe completion checkpoint — 2026-09-07
+
+Confirmed fact: both A09 probe receipts are complete and actual-bag audits PASS.
+The same public XFeat ID 10000000 appears consecutively at output frames 2–12,
+11 observations versus original v2's three. Frame 13 still contains raw ID 734,
+but quality 0.0827817 is below unchanged 0.1, so continuation terminates normally.
+Eleven newborn observations were omitted; carried classical changes are zero;
+IMU/non-feature stream, time axis and retained fields/points match fresh KLT.
+Matrix resumed at A09/SP+LG, skipping both identity-valid probes: 2/18 completed.
+This confirms publication behavior only. New backend, A02 no-harm, A09/Bus gain,
+and new-window results remain Not evaluated. No runtime source changes followed
+the method freeze; the only next step is the remaining frozen matrix and controls.

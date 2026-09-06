@@ -1124,7 +1124,7 @@ if [[ "$MODE" == "external" ]]; then
       --adaptive-warmup-full-min-init-parallax-px "$ADAPTIVE_WARMUP_FULL_MIN_INIT_PARALLAX_PX"
       --adaptive-warmup-full-max-init-parallax-px "$ADAPTIVE_WARMUP_FULL_MAX_INIT_PARALLAX_PX"
     )
-    "${PYTHON_COMMAND[@]}" -m uw_frontend.ros.export_vins_features "${EXPORT_ARGS[@]}"
+    "${PYTHON_COMMAND[@]}" -m "${AQUAFE_EXPORT_MODULE:-uw_frontend.ros.export_vins_features}" "${EXPORT_ARGS[@]}"
   fi
 fi
 

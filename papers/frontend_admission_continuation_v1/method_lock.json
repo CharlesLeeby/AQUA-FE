@@ -1,0 +1,87 @@
+{
+  "archived_exporter_git_object": "3c50b742d6e0c69796a69813e42823e9895ed684:uw_frontend/ros/export_vins_features.py",
+  "base_git_branch": "main",
+  "base_git_commit": "f6f8feec66c2faf1f59cdb67c1e817028a3bccaf",
+  "experiment_id": "EXP-20260906-012",
+  "exporter_sha256": "bb4e50d8b9777e76aee558d94ec0597461e9dcad4ff9c9486875b46a7c714d1d",
+  "files": [
+    {
+      "path": "uw_frontend/ros/export_vins_admission_continuation_v1.py",
+      "sha256": "52c793eee45b67d05e0c648a54612b875fbc4ea00b5da082079ff5672c70be8e"
+    },
+    {
+      "path": "uw_frontend/tracking/track_state.py",
+      "sha256": "c6a5f23209f830088a33cf2afd733c3520d7da88e14a0f10c01e8d54ce384802"
+    },
+    {
+      "path": "uw_frontend/tracking/klt_tracker.py",
+      "sha256": "b2e1e5aea587bad2ce5b930a38d5bdae2e15a8e989fbe24c767af2dde2f2f732"
+    },
+    {
+      "path": "uw_frontend/tracking/hybrid_tracker.py",
+      "sha256": "8c79e4ffd84888e0752781b58cdf05672d1600bcc2ee7a6b4a112456eda8221e"
+    },
+    {
+      "path": "uw_frontend/evaluation/run_frontend_eval.py",
+      "sha256": "ebb1caf821ee12db5c8a61e498a0c40dab7d0e7bb261c9d6b4e9d17bbf6438ec"
+    },
+    {
+      "path": "scripts/learned_seedchain_env.sh",
+      "sha256": "665c96a4bab01866c9ccfe0458d0d2e1239c2d07a94d157c3e70c8555416e615"
+    },
+    {
+      "path": "scripts/run_learned_seedchain_eval.sh",
+      "sha256": "5a18fa6a590ae6f64311a0329c2dd5c0ddf6c79dc19ceb13ad7587e39d42410e"
+    },
+    {
+      "path": "scripts/run_aqualoc_archaeo_vins_eval.sh",
+      "sha256": "65c7633dd9acc9edb90b761fcbc26aa0da0f45a1bfac1bc99cbf2f55622dac75"
+    },
+    {
+      "path": "scripts/run_aqualoc_real_vins_eval.sh",
+      "sha256": "ae3fc5ba38d1bb627b814de09b2312f16553b3b58658682381d123d7bb0abf3d"
+    },
+    {
+      "path": "scripts/run_afrl_cave_vins_eval.sh",
+      "sha256": "d4e3ca7a295ff978796665f14509fc03d2b4917542fe89b27f1805f85af0a973"
+    },
+    {
+      "path": "scripts/run_frontend_geometry_maturity_router_v1.py",
+      "sha256": "ac396251293e235a94b145f60c56da021a27a9b39e9ff39a08bd9cf6239cdf11"
+    },
+    {
+      "path": "scripts/run_frontend_admission_continuation_v1.py",
+      "sha256": "56eb030c571562a19b97e130d2d3432aaf1bd1b281aa492289ce3d2d3cca8aee"
+    },
+    {
+      "path": "tests/test_admission_continuation_v1.py",
+      "sha256": "3d364840b3e34aa0a4a8362732345df2aee462b9790eb0a0aa7d5eca27c0ab1b"
+    },
+    {
+      "path": "uw_frontend/configs/experiments/low_texture_xfeat_seedchain_frontend.yaml",
+      "sha256": "6f89d861cc002dfaf0eaf5f1294b0dbcfab9fe268c5dc0d09082f79811000bf3"
+    },
+    {
+      "path": "uw_frontend/configs/experiments/low_texture_active_xfeat_sidecar.yaml",
+      "sha256": "2a61f1c57a77df4ed6bf2d85c080c7e6bd754a2ff47171e526e0643a3d617a25"
+    },
+    {
+      "path": "uw_frontend/configs/experiments/paper_vins_safe_learned_sidecar.yaml",
+      "sha256": "4500894ee15f4515881de6322e5780ce7f2381b2a1ce7fba4bd3d958e11264ce"
+    },
+    {
+      "path": "uw_frontend/configs/experiments/loftr_extreme_only_frontend.yaml",
+      "sha256": "d5927fb412de869cfe9dd6275dfb81a566fc33e4149160bafc0e8fa933b27eed"
+    },
+    {
+      "path": "uw_frontend/configs/experiments/three_layer_source_aware_frontend.yaml",
+      "sha256": "236e5173611731ffefd3acdd3b9f69429633dac16ae66429690d609fab0dd5d7"
+    },
+    {
+      "path": "uw_frontend/configs/backend_strict_frontend.yaml",
+      "sha256": "908351d3d9547b98f917ffd059efdc7b279ee7f9199887688cda48e178a4855a"
+    }
+  ],
+  "frozen_at": "2026-09-07T00:01:03.672243+08:00",
+  "schema_version": "aqua-fe-admission-continuation-v1-method-lock-v1"
+}

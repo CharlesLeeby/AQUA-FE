@@ -704,3 +704,32 @@ Inference: a live router would answer a different post-init tracking question.
 - Known issues: same-ID hidden survival, precise loss reasons, and actual backend per-ID use remain Unknown. No new trajectory evidence exists.
 - Interpretation: bookkeeping alone cannot extend these observed first-publication times past the frozen frame-4 horizon; removing policy limits is not a behavior-preserving bug fix.
 - Next steps: retain NO_EXPANSION and the stage stop; a separate admission/continuation experiment requires an explicit new scope, not automatic parameter search.
+
+## 2026-09-07 — Authorized published-ID lifecycle experiment: probe started
+
+- Date: 2026-09-07 (registration begun September 6, method locked after midnight).
+- Task objective: execute the newly authorized separation of first admission and continuation.
+- Problem / motivation: v2 rechecks first-admission rules for published IDs; tests alone do not establish persistent constraints or backend benefit.
+- Files changed: frontend_admission_continuation_v1 protocol/roster/lock/report; independent exporter, runner, audit, matched/backend helpers and eight tests; one opt-in exporter-module variable in three dataset runners; handoff and research logs.
+- Implementation: exact archived v2 loaded with SHA verification; retain original first-admission rules and upstream reservation accounting; register only actual published IDs, continue current valid observations, preserve carried classical tracks, explicitly omit newborn refill observations, enforce separate actual-publication cap.
+- Technical decisions: one lifecycle policy, not a budget refund plus timing search. Main/default exporter and external VINS unchanged. No revival, backfill or future-data decisions. New matched controls are required.
+- Experiments performed: EXP-20260906-012, eight synthetic tests PASS; actual A09 KLT/XFeat export probe launched serially.
+- Quantitative results at checkpoint: KLT 400/401 expected feature messages, coverage 0.9975062344, cap 350; XFeat unfinished. Full matrix denominator 18 frontend cells / six physical windows / 12 learned arm-windows. New backend 0; efficacy Not evaluated.
+- Qualitative observations: previous NO_EXPANSION remains a historical stage decision; user approval opens this separate, frozen experiment only.
+- Failed attempts: none at this checkpoint.
+- Known issues: complete bag audit, matched controls and backend results pending; exact per-ID residual use Unknown.
+- Interpretation: eight unit tests are implementation evidence, not no-harm or a new positive window.
+- Next steps: complete and audit the probe, then the frozen six-window matrix if structurally valid; no second lifecycle version.
+
+### EXP-20260906-012 probe completion checkpoint — 2026-09-07
+
+Confirmed fact: both A09 probe receipts are complete and actual-bag audits PASS.
+The same public XFeat ID 10000000 appears consecutively at output frames 2–12,
+11 observations versus original v2's three. Frame 13 still contains raw ID 734,
+but quality 0.0827817 is below unchanged 0.1, so continuation terminates normally.
+Eleven newborn observations were omitted; carried classical changes are zero;
+IMU/non-feature stream, time axis and retained fields/points match fresh KLT.
+Matrix resumed at A09/SP+LG, skipping both identity-valid probes: 2/18 completed.
+This confirms publication behavior only. New backend, A02 no-harm, A09/Bus gain,
+and new-window results remain Not evaluated. No runtime source changes followed
+the method freeze; the only next step is the remaining frozen matrix and controls.

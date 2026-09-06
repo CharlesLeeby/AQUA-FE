@@ -869,7 +869,7 @@ if [[ "$MODE" == "external" && ! -f "$FEATURE_BAG" ]]; then
       EXPORT_ARGS+=(--final-mirror-prefill-slot-allow-all-non-loftr)
     fi
     EXPORT_ARGS+=(--mirror-measurement-selection-policy "$MIRROR_MEASUREMENT_SELECTION_POLICY")
-  "${PYTHON_COMMAND[@]}" -m uw_frontend.ros.export_vins_features "${EXPORT_ARGS[@]}"
+  "${PYTHON_COMMAND[@]}" -m "${AQUAFE_EXPORT_MODULE:-uw_frontend.ros.export_vins_features}" "${EXPORT_ARGS[@]}"
 fi
 
 if [[ "$MODE" == "external" && -n "$FEATURE_BAG_OVERRIDE" ]]; then

@@ -1,11 +1,26 @@
 # AQUA-FE 固定交接入口
 
-更新时间：`2026-09-06T22:59:42+08:00`
+更新时间：`2026-09-07T00:24:00+08:00`
 发布分支：`codex/aqua-fe-evidence-20260905`
 
 ## 当前阶段与结论
 
-最新检查点是 `EXP-20260906-011`（只读预算/续传诊断）：4/4 原 metrics 身份
+**当前执行：EXP-20260906-012，PARTIAL / PROBE_PASS / FRONTEND_MATRIX_RUNNING。** 用户已另行
+授权一次“首次准入与持续发布分离”最小实验；此前停止决定和负例不变。
+8/8 函数测试通过，探针 2/2 完成：A09 同一 XFeat ID 正式连续发布从 3 增至
+11 帧；第 13 帧因原质量阈值不通过而终止。省略 11 个 newborn、carried KLT
+损失 0；bag 结构审计通过。完整矩阵当前 2/18，其余 16 个已按序启动。
+新后端、A02 风险是否消除及 A09/Bus 收益是否保留均 **Not evaluated**，不能报告
+新 WIN。固定分母六窗、18 前端单元、12 学习臂—窗口；新窗口仍为 0/12。
+当前唯一下一步是完成同一冻结六窗矩阵与新 matched
+controls，不新增第二个机制。见[本轮简报](../papers/frontend_admission_continuation_v1/report.md)、
+[协议](../papers/frontend_admission_continuation_v1/preregistration.md)、
+[窗口](../papers/frontend_admission_continuation_v1/development_windows.csv)、
+[方法锁](../papers/frontend_admission_continuation_v1/method_lock.json)。
+已完成探针的[审计](../papers/frontend_admission_continuation_v1/probe_audit.json)与
+[逐帧 CSV](../papers/frontend_admission_continuation_v1/probe_lineage_events.csv)也可读取。
+
+此前检查点 `EXP-20260906-011`（只读预算/续传诊断）：4/4 原 metrics 身份
 核验通过，14 条 lineage 全部复核，5/5 冻结源码函数测试通过。10 条单帧发布不能
 统一归因于预算耗尽：5 条停止后的下一帧仍通过 23 个候选，3 条之后无 pre-final
 候选，另 2 条之后没有 learned tracker 输出。A09 只用了 3/50 名额就被 microburst
@@ -129,7 +144,7 @@ delayed-v3 已测试固定初始化保护前缀，但实时反馈版本尚未测
   [v2 后端报告](../papers/frontend_coverage_monotone_router_v2/backend_completion_report.md)、
   [A09/Bus 删除归因](../papers/frontend_v2_positive_delete_diagnostic/report.md)
 
-## 源码、配置与数据身份
+## 此前 protected-prefill 的源码、配置与数据身份
 
 实验运行时基线为 `main@f6f8feec66c2faf1f59cdb67c1e817028a3bccaf` 加冻结
 工作树文件；后来的报告发布 commit 不能冒充运行时源码 commit。

@@ -596,3 +596,30 @@ Stop the replacement/admission line rather than tune another slot or horizon.
 - Interpretation: A09 stops with 47/50 reservations unused; v2 publication continuation also depends on donor availability and final horizon. Refunding reservations alone is not evidence of a useful persistent constraint.
 - Conclusion: current NO_EXPANSION retained; new strategy effectiveness Not evaluated.
 - Follow-up: no more automatic slot/order/timing variants; separately scope any future admission/continuation strategy before implementation.
+
+## EXP-20260906-012 — Admission/continuation separation v1
+
+- Date: 2026-09-07; preregistration September 6, source freeze 2026-09-07T00:01:03.672243+08:00.
+- Status / scientific role: PARTIAL / FRONTEND_PROBE_RUNNING; user-authorized development experiment, not held out.
+- Git / branch: main@f6f8feec66c2faf1f59cdb67c1e817028a3bccaf plus method_lock.json; frozen v2 exporter Git object 3c50b742d6e0c69796a69813e42823e9895ed684, SHA bb4e50d8b9777e76aee558d94ec0597461e9dcad4ff9c9486875b46a7c714d1d. Reporting branch differs from runtime identity.
+- Dataset / windows: fixed A09 6000–6800, A02 0–900, Bus s180 d45, A08 2700–3600, Cemetery s135 d45, H07 0–1000; KLT/XFeat/SP+LG, 18 frontend cells.
+- Environment / configuration: ROS Noetic, current locked v2 source/dependencies, original lineage_early_seed_coverage_monotone_v2, every_n=2, 350 total / six sidecars, original first-admission horizon and reservation cap retained.
+- Baseline: fresh same-contract KLT; only identity-valid v2 backend reuse. Proposed: published-ID lifecycle continuation, current-valid observations and newborn-slot opportunity cost; actual final publication capped at 50.
+- Commands / artifacts: ROS-sourced /usr/bin/python3 scripts/run_frontend_admission_continuation_v1.py --probe-pair; source-frozen artifacts in papers/frontend_admission_continuation_v1 and runtime at /media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1.
+- Metrics / results: 8/8 synthetic tests PASS; A09 KLT complete with 400 frames / 99.7506% coverage / max350, XFeat running. New matched and backend results Not evaluated.
+- Validity / common support: full bag safety audit pending. Backend contract unchanged: all-nine common support, 30 poses / 10 s / 70%, strict 1 s RPE, fixed-scale proper SE(3) primary, Sim(3) diagnostic and evo. Proxy is not independent GT.
+- Interpretation / conclusion: no new WIN or safety-effectiveness claim. Prior negative results remain unchanged; current progress is one valid frontend receipt, not a completed matrix.
+- Follow-up: finish the probe and matrix, new matched controls, all active three-repeat backend cells; apply frozen stop/expansion criteria without retuning.
+
+### EXP-20260906-012 probe completion checkpoint — 2026-09-07
+
+Confirmed fact: both A09 probe receipts are complete and actual-bag audits PASS.
+The same public XFeat ID 10000000 appears consecutively at output frames 2–12,
+11 observations versus original v2's three. Frame 13 still contains raw ID 734,
+but quality 0.0827817 is below unchanged 0.1, so continuation terminates normally.
+Eleven newborn observations were omitted; carried classical changes are zero;
+IMU/non-feature stream, time axis and retained fields/points match fresh KLT.
+Matrix resumed at A09/SP+LG, skipping both identity-valid probes: 2/18 completed.
+This confirms publication behavior only. New backend, A02 no-harm, A09/Bus gain,
+and new-window results remain Not evaluated. No runtime source changes followed
+the method freeze; the only next step is the remaining frozen matrix and controls.

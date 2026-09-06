@@ -241,3 +241,29 @@ exporter confirm pre-final charging, repeated donor requirements, and independen
 horizon/microburst truncation; A09 spent only 3/50 reservations. No algorithm,
 bag, backend replay, threshold or frozen decision changed. Accounting-only
 effectiveness is Not evaluated; the current NO_EXPANSION stage stop remains.
+
+## September 7, 2026 — Separate lifecycle experiment authorized and started
+
+User approval reopened exactly one admission/continuation development experiment,
+EXP-20260906-012. Previous NO_EXPANSION results remain intact. Exact v2 first
+admission is wrapped by a new published-ID lifecycle, with carried-classical
+protection, explicit newborn opportunity cost and a 50 final-observation cap;
+the upstream reservation counter is not refunded. Eight tests pass; A09 KLT
+completed 400 frames / 99.7506% coverage and XFeat probe is running. Full frozen
+denominator is six development windows, 18 frontend cells, 12 learned arm-windows.
+Backend efficacy and new-window results are Not evaluated. Complete actual bag
+audits before any new backend; use newly matched controls for the changed
+publication schedule. See papers/frontend_admission_continuation_v1/.
+
+### EXP-20260906-012 probe completion checkpoint — 2026-09-07
+
+Confirmed fact: both A09 probe receipts are complete and actual-bag audits PASS.
+The same public XFeat ID 10000000 appears consecutively at output frames 2–12,
+11 observations versus original v2's three. Frame 13 still contains raw ID 734,
+but quality 0.0827817 is below unchanged 0.1, so continuation terminates normally.
+Eleven newborn observations were omitted; carried classical changes are zero;
+IMU/non-feature stream, time axis and retained fields/points match fresh KLT.
+Matrix resumed at A09/SP+LG, skipping both identity-valid probes: 2/18 completed.
+This confirms publication behavior only. New backend, A02 no-harm, A09/Bus gain,
+and new-window results remain Not evaluated. No runtime source changes followed
+the method freeze; the only next step is the remaining frozen matrix and controls.
