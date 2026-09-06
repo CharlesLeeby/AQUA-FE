@@ -664,3 +664,18 @@ timing variant from the same six windows.
 - Current conclusion: Confirmed fact — tested delayed-v3 did not recover A09; Hypothesis / Inference — different later observations might change scale error. General recovery efficacy is Not evaluated.
 - Open questions: future live-feedback efficacy and actual arrival ordering remain unmeasured.
 - Next experiment: none under the current stopping rules; scientific uncertainty does not authorize another parameter variant.
+
+## 2026-09-06 — Short publication is not a single-budget failure
+
+- Research question: can an accounting-only fix explain and repair the short v2 learning lineages?
+- Hypothesis: the upstream reservation counter and undifferentiated admission/continuation gates both truncate publication.
+- Motivation: avoid changing multiple policies under the label of a bookkeeping bug.
+- Related baseline: v2, delayed-v3 and protected-prefill; all outcome-known development windows.
+- Proposed idea: rejoin all 14 lineages to identity-verified next-output metrics and reproduce gate behavior in the archived v2 code. The five partial-budget cases were already distinguished by the September 5 publication-only audit; restoring that missing local context prevents rediscovery being misreported as a new result.
+- Why it might work: aggregate tags can be disambiguated by actual surviving candidate counts and source branches without rerunning a dataset.
+- Assumptions: original metric receipts match; function tests establish behavior, not the hidden survival of any historical ID.
+- Potential failure cases: partial-budget tags misread as full blockage; aggregate live counts misread as same-ID survival; output eligibility misread as actual residual use.
+- Evidence: A02/SP+LG five singletons precede a row still forwarding 23 candidates, three precede zero; Bus two precede no learned output. A09 uses three reservations then microburst closes. Five synthetic frozen-code tests pass.
+- Current conclusion: Confirmed fact — final rejection does not refund reservation; existing IDs re-enter donor/horizon checks. Exact hidden survival remains Unknown. These observed first-publication times permit only two or three observations under frame-4 cutoff, so an unchanged-horizon budget-only repair cannot establish a four-observation nonlinear chain from the same starts.
+- Open questions: whether specific candidates survive internally, whether separating continuation has net backend benefit, and whether longer chains justify the extra classical-observation opportunity cost.
+- Next experiment: none within the stopped stage; separately authorize and freeze any new admission/continuation experiment. Do not infer that the whole method class is impossible.

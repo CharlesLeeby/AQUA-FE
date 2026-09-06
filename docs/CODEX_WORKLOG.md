@@ -688,3 +688,19 @@ Inference: a live router would answer a different post-init tracking question.
 - Known issues: actual ROS arrival ordering and live-feedback efficacy remain Unknown / Not evaluated; source inspection is not a recovery experiment.
 - Interpretation: NO_EXPANSION remains an evidence-based stage decision, not an impossibility result.
 - Next steps: retain the frozen stop; publish this clarification with existing evidence, without another automatic variant.
+
+## 2026-09-06 — Complete the frozen v2 budget/continuation audit
+
+- Date: 2026-09-06.
+- Task objective: continue the outstanding short-lineage diagnosis without another prohibited slot/timing variant.
+- Problem / motivation: the oldest aggregate budget tag was too broadly interpreted. A September 5 publication-only audit had already qualified it, but the main workspace lacked those files.
+- Files changed: scripts/audit_frontend_v2_budget_continuation.py; tests/test_v2_budget_continuation_characterization.py; v2 budget_continuation_addendum.md and budget_continuation_audit_20260906.csv; research/experiment/context logs and publication handoff.
+- Implementation: restore the two already-published lineage_budget_audit files to the main workspace; hash-check four original metrics, rejoin all 14 IDs to next-output records, and characterize the exact archived v2 exporter in five synthetic tests. Original diagnostics and frozen code are unchanged; the 5/3 distinction is reproduced, not a new discovery.
+- Technical decisions: separate partial budget filtering, zero surviving pre-final candidates, internal survival, and actual residual use. A gate tag is not a per-ID causal receipt.
+- Experiments performed: EXP-20260906-011 read-only audit and five function tests; no frontend export or VINS replay. New-method effectiveness is Not evaluated.
+- Quantitative results: 4/4 metrics identities match; 14 lineage plus 32 frame rows; ten singletons split into 5 partial-budget / 3 no-prefinal-budget / 2 no-pregate next-output cases; 5/5 final tests PASS.
+- Qualitative observations: rejected final candidates consume upstream reservations; same-ID continuation still needs a donor and remains subject to horizon/microburst rules. A09 used only 3/50 reservations.
+- Failed attempts: first synthetic test run had 3 fixture-construction errors (missing required GateInfo fields); fixture corrected, no estimator changes.
+- Known issues: same-ID hidden survival, precise loss reasons, and actual backend per-ID use remain Unknown. No new trajectory evidence exists.
+- Interpretation: bookkeeping alone cannot extend these observed first-publication times past the frozen frame-4 horizon; removing policy limits is not a behavior-preserving bug fix.
+- Next steps: retain NO_EXPANSION and the stage stop; a separate admission/continuation experiment requires an explicit new scope, not automatic parameter search.

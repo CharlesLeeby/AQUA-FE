@@ -580,3 +580,19 @@ expansion gate and lost A09 rescue.
 ### Follow-up
 
 Stop the replacement/admission line rather than tune another slot or horizon.
+
+## EXP-20260906-011 — Frozen v2 budget and continuation characterization
+
+- Date: 2026-09-06.
+- Status / scientific role: COMPLETE_READ_ONLY; post-hoc accounting diagnosis and synthetic source-behavior tests, not a new method or held-out evaluation.
+- Git / branch: original run base f6f8feec66c2faf1f59cdb67c1e817028a3bccaf on main plus method_lock_recovery1.json; exact v2 exporter later archived at 3c50b742d6e0c69796a69813e42823e9895ed684 (SHA bb4e50d8b9777e76aee558d94ec0597461e9dcad4ff9c9486875b46a7c714d1d). Publication branch codex/aqua-fe-evidence-20260905 is not the runtime source identity.
+- Dataset/window: every v2 active cell: A09 6000–6800/XFeat, A02 0–900/XFeat and SP+LG, AFRL Bus s180 d45/XFeat; all 14 published lineages.
+- Environment/configuration: local ROS Noetic, system Python, frozen exporter loaded from a verified Git object; no runtime configuration changes. Synthetic gate isolation is not a dataset configuration.
+- Baseline: original lineage_diagnostic.csv and v2 metrics/receipts.
+- Proposed modification: executable reproduction of the partial-budget distinction already documented in the September 5 publication-only lineage_budget_audit; no frontend algorithm modification. The prior two audit files were restored to the main workspace unchanged.
+- Commands/artifacts: audit_frontend_v2_budget_continuation.py --paper papers/frontend_coverage_monotone_router_v2 --output papers/frontend_coverage_monotone_router_v2/budget_continuation_audit_20260906.csv; ROS-sourced /usr/bin/python3 -m unittest discover -s tests -p test_v2_budget_continuation_characterization.py -v; see budget_continuation_addendum.md.
+- Metrics/results: 4/4 original metrics hashes verified, 46 compact rows, 5/5 tests PASS after correcting three initial fixture-construction errors. Ten singletons: five next-output partial budget cases, three budget-tag/no-prefinal cases, two no-pregate cases; exact per-ID causes Unknown.
+- Validity/common support: no new APE/RPE calculation; common support not applicable to this diagnostic. All earlier repeats, failures, gates, original CSVs and decisions remain unchanged.
+- Interpretation: A09 stops with 47/50 reservations unused; v2 publication continuation also depends on donor availability and final horizon. Refunding reservations alone is not evidence of a useful persistent constraint.
+- Conclusion: current NO_EXPANSION retained; new strategy effectiveness Not evaluated.
+- Follow-up: no more automatic slot/order/timing variants; separately scope any future admission/continuation strategy before implementation.

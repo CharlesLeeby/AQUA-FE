@@ -1,11 +1,21 @@
 # AQUA-FE 固定交接入口
 
-更新时间：`2026-09-06T17:16:31+08:00`
+更新时间：`2026-09-06T22:59:42+08:00`
 发布分支：`codex/aqua-fe-evidence-20260905`
 
 ## 当前阶段与结论
 
-最新检查点是 `EXP-20260906-010`（VINS initialization-state interface
+最新检查点是 `EXP-20260906-011`（只读预算/续传诊断）：4/4 原 metrics 身份
+核验通过，14 条 lineage 全部复核，5/5 冻结源码函数测试通过。10 条单帧发布不能
+统一归因于预算耗尽：5 条停止后的下一帧仍通过 23 个候选，3 条之后无 pre-final
+候选，另 2 条之后没有 learned tracker 输出。A09 只用了 3/50 名额就被 microburst
+关闭。这个分类区别此前已在发布区审计中说明，本次补回主目录，并新增五个精确
+冻结源码的复现测试和固定发布起点下的长度上界。逐 ID 内部存活和精确终止原因
+仍为 Unknown。**没有修改
+前端算法、重跑后端或新增正例**。仅修记账不能解除同一 ID 的 donor/horizon 续传
+限制；另开续传策略需要独立授权与冻结，不绕过现有 `NO_EXPANSION`。
+
+此前检查点 `EXP-20260906-010`（VINS initialization-state interface
 audit）：后端没有显式 `initialized` topic/service，但第一条私有
 `/vins_estimator/odometry` 只会在内部进入 `NON_LINEAR` 后发布，因此是可在线
 观察的单向 post-init 边沿。当前前端先离线生成 feature bag，不能消费这个反馈；
@@ -92,6 +102,10 @@ delayed-v3 已测试固定初始化保护前缀，但实时反馈版本尚未测
 
 ## 仓库内可读证据
 
+- [预算/续传诊断补充](../papers/frontend_coverage_monotone_router_v2/budget_continuation_addendum.md)、
+  [46 行逐帧/逐 ID 紧凑证据](../papers/frontend_coverage_monotone_router_v2/budget_continuation_audit_20260906.csv)、
+  [可复查分析脚本](../scripts/audit_frontend_v2_budget_continuation.py)、
+  [冻结源码行为测试](../tests/test_v2_budget_continuation_characterization.py)
 - [结论边界补充](../papers/frontend_init_state_interface_audit/claim_boundary_addendum.md)
 - [初始化状态接口审计](../papers/frontend_init_state_interface_audit/report.md)、
   [接口表](../papers/frontend_init_state_interface_audit/interface_audit.csv)、

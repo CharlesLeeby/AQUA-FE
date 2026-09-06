@@ -229,3 +229,15 @@ See `papers/frontend_init_state_interface_audit/claim_boundary_addendum.md`.
 - uw_frontend/evaluation/run_frontend_eval.py — frontend-only entrypoint.
 - uw_frontend/tracking/hybrid_tracker.py — hybrid frontend core.
 - uw_frontend/ros/export_vins_features.py — VINS feature export and gating path.
+
+## September 2026 budget/continuation clarification
+
+Read-only EXP-20260906-011 now completes the aggregate/source-level v2 budget
+audit. All four metrics match their original receipts. The ten singletons split
+into five next-output partial-budget cases (23 candidates still passed), three
+budget-tag/no-prefinal cases, and two no-pregate cases. Exact same-ID internal
+survival and termination remain Unknown. Five tests on the exact archived v2
+exporter confirm pre-final charging, repeated donor requirements, and independent
+horizon/microburst truncation; A09 spent only 3/50 reservations. No algorithm,
+bag, backend replay, threshold or frozen decision changed. Accounting-only
+effectiveness is Not evaluated; the current NO_EXPANSION stage stop remains.
