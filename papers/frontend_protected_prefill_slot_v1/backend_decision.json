@@ -1,0 +1,24 @@
+{
+  "active_arm_windows": 4,
+  "active_outcomes": {
+    "LOSS": 2,
+    "TIE": 1,
+    "WIN": 1
+  },
+  "criteria": {
+    "a09_or_bus_joint_improvement_at_least_10_percent": true,
+    "active_wins_exceed_losses_plus_mixed": false,
+    "all_active_common_supports_pass": true,
+    "matched_structural_audits_pass": true,
+    "no_active_fail": true,
+    "no_active_metric_regression_over_10_percent": false
+  },
+  "decided_at": "2026-09-06T14:15:38.850516+08:00",
+  "decision": "NO_EXPANSION",
+  "experiment_id": "EXP-20260906-009",
+  "full_learned_arm_window_denominator": 12,
+  "next_step": "Do not expand or try a second slot budget/order/timing variant; report this protected pre-refill mechanism as unsupported.",
+  "physical_windows": 6,
+  "schema_version": "aqua-fe-protected-prefill-slot-v1-development-decision-v1",
+  "zero_action_arm_windows": 8
+}

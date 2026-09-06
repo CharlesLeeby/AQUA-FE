@@ -1,0 +1,185 @@
+{
+  "arms": {
+    "klt_r1": {
+      "fixed_se3": {
+        "ape_abs_diff_m": 3.8306966937406983e-07,
+        "evo_ape_rmse_m": 0.142194,
+        "evo_segmented_rpe_rmse_m": 0.022697,
+        "primary_ape_rmse_m": 0.1421936169303306,
+        "primary_rpe_rmse_m": 0.022696850881355115,
+        "rpe_abs_diff_m": 1.4911864488348359e-07,
+        "rpe_pair_count": 41
+      },
+      "sim3": {
+        "ape_abs_diff_m": 1.7391095765567632e-07,
+        "evo_ape_rmse_m": 0.060636,
+        "evo_segmented_rpe_rmse_m": 0.017329,
+        "primary_ape_rmse_m": 0.06063582608904235,
+        "primary_rpe_rmse_m": 0.0173288345382067,
+        "rpe_abs_diff_m": 1.6546179330140243e-07,
+        "rpe_pair_count": 41
+      }
+    },
+    "klt_r2": {
+      "fixed_se3": {
+        "ape_abs_diff_m": 4.087067811686662e-07,
+        "evo_ape_rmse_m": 0.141052,
+        "evo_segmented_rpe_rmse_m": 0.022691,
+        "primary_ape_rmse_m": 0.14105240870678118,
+        "primary_rpe_rmse_m": 0.022691012529205763,
+        "rpe_abs_diff_m": 1.2529205763167628e-08,
+        "rpe_pair_count": 41
+      },
+      "sim3": {
+        "ape_abs_diff_m": 3.1355074098238234e-07,
+        "evo_ape_rmse_m": 0.060811,
+        "evo_segmented_rpe_rmse_m": 0.017411,
+        "primary_ape_rmse_m": 0.06081131355074098,
+        "primary_rpe_rmse_m": 0.017410635349040866,
+        "rpe_abs_diff_m": 3.646509591330449e-07,
+        "rpe_pair_count": 41
+      }
+    },
+    "klt_r3": {
+      "fixed_se3": {
+        "ape_abs_diff_m": 4.1490746605088447e-07,
+        "evo_ape_rmse_m": 0.141317,
+        "evo_segmented_rpe_rmse_m": 0.022702,
+        "primary_ape_rmse_m": 0.14131658509253395,
+        "primary_rpe_rmse_m": 0.022702110726377272,
+        "rpe_abs_diff_m": 1.1072637727191359e-07,
+        "rpe_pair_count": 41
+      },
+      "sim3": {
+        "ape_abs_diff_m": 3.26679950993225e-07,
+        "evo_ape_rmse_m": 0.060774,
+        "evo_segmented_rpe_rmse_m": 0.017402,
+        "primary_ape_rmse_m": 0.06077367332004901,
+        "primary_rpe_rmse_m": 0.017402114901302543,
+        "rpe_abs_diff_m": 1.1490130254199205e-07,
+        "rpe_pair_count": 41
+      }
+    },
+    "learned_r1": {
+      "fixed_se3": {
+        "ape_abs_diff_m": 3.304468181308806e-07,
+        "evo_ape_rmse_m": 1.129775,
+        "evo_segmented_rpe_rmse_m": 0.104269,
+        "primary_ape_rmse_m": 1.1297746695531818,
+        "primary_rpe_rmse_m": 0.10426871937385436,
+        "rpe_abs_diff_m": 2.806261456406167e-07,
+        "rpe_pair_count": 41
+      },
+      "sim3": {
+        "ape_abs_diff_m": 5.816417049386846e-09,
+        "evo_ape_rmse_m": 0.04477,
+        "evo_segmented_rpe_rmse_m": 0.017017,
+        "primary_ape_rmse_m": 0.04477000581641705,
+        "primary_rpe_rmse_m": 0.017016581396383908,
+        "rpe_abs_diff_m": 4.186036160931661e-07,
+        "rpe_pair_count": 41
+      }
+    },
+    "learned_r2": {
+      "fixed_se3": {
+        "ape_abs_diff_m": 1.9871324519193934e-07,
+        "evo_ape_rmse_m": 1.132486,
+        "evo_segmented_rpe_rmse_m": 0.10472299999999998,
+        "primary_ape_rmse_m": 1.1324861987132453,
+        "primary_rpe_rmse_m": 0.10472324881194973,
+        "rpe_abs_diff_m": 2.4881194975179266e-07,
+        "rpe_pair_count": 41
+      },
+      "sim3": {
+        "ape_abs_diff_m": 1.8693023728227898e-07,
+        "evo_ape_rmse_m": 0.045333,
+        "evo_segmented_rpe_rmse_m": 0.017345,
+        "primary_ape_rmse_m": 0.045332813069762716,
+        "primary_rpe_rmse_m": 0.01734474441056235,
+        "rpe_abs_diff_m": 2.5558943764908415e-07,
+        "rpe_pair_count": 41
+      }
+    },
+    "learned_r3": {
+      "fixed_se3": {
+        "ape_abs_diff_m": 2.5083685573079606e-07,
+        "evo_ape_rmse_m": 1.114017,
+        "evo_segmented_rpe_rmse_m": 0.104327,
+        "primary_ape_rmse_m": 1.1140172508368558,
+        "primary_rpe_rmse_m": 0.10432735340598358,
+        "rpe_abs_diff_m": 3.53405983574695e-07,
+        "rpe_pair_count": 41
+      },
+      "sim3": {
+        "ape_abs_diff_m": 2.39360822169854e-07,
+        "evo_ape_rmse_m": 0.045545,
+        "evo_segmented_rpe_rmse_m": 0.019077,
+        "primary_ape_rmse_m": 0.04554476063917783,
+        "primary_rpe_rmse_m": 0.01907747611953447,
+        "rpe_abs_diff_m": 4.761195344683833e-07,
+        "rpe_pair_count": 41
+      }
+    },
+    "matched_r1": {
+      "fixed_se3": {
+        "ape_abs_diff_m": 2.900276565576121e-07,
+        "evo_ape_rmse_m": 1.129584,
+        "evo_segmented_rpe_rmse_m": 0.105281,
+        "primary_ape_rmse_m": 1.1295842900276565,
+        "primary_rpe_rmse_m": 0.10528104526230277,
+        "rpe_abs_diff_m": 4.526230276691301e-08,
+        "rpe_pair_count": 41
+      },
+      "sim3": {
+        "ape_abs_diff_m": 1.7576619305154084e-07,
+        "evo_ape_rmse_m": 0.04474,
+        "evo_segmented_rpe_rmse_m": 0.01848,
+        "primary_ape_rmse_m": 0.04473982423380695,
+        "primary_rpe_rmse_m": 0.018479853782545737,
+        "rpe_abs_diff_m": 1.462174542624095e-07,
+        "rpe_pair_count": 41
+      }
+    },
+    "matched_r2": {
+      "fixed_se3": {
+        "ape_abs_diff_m": 2.8216609115894187e-07,
+        "evo_ape_rmse_m": 1.133936,
+        "evo_segmented_rpe_rmse_m": 0.104818,
+        "primary_ape_rmse_m": 1.133935717833909,
+        "primary_rpe_rmse_m": 0.10481751852679792,
+        "rpe_abs_diff_m": 4.814732020713697e-07,
+        "rpe_pair_count": 41
+      },
+      "sim3": {
+        "ape_abs_diff_m": 7.742397338528217e-08,
+        "evo_ape_rmse_m": 0.045186,
+        "evo_segmented_rpe_rmse_m": 0.017323,
+        "primary_ape_rmse_m": 0.04518607742397338,
+        "primary_rpe_rmse_m": 0.017323186283129337,
+        "rpe_abs_diff_m": 1.8628312933519076e-07,
+        "rpe_pair_count": 41
+      }
+    },
+    "matched_r3": {
+      "fixed_se3": {
+        "ape_abs_diff_m": 1.294727318690292e-07,
+        "evo_ape_rmse_m": 1.134124,
+        "evo_segmented_rpe_rmse_m": 0.104817,
+        "primary_ape_rmse_m": 1.1341241294727318,
+        "primary_rpe_rmse_m": 0.10481715712256937,
+        "rpe_abs_diff_m": 1.5712256937194802e-07,
+        "rpe_pair_count": 41
+      },
+      "sim3": {
+        "ape_abs_diff_m": 2.7266716633167487e-07,
+        "evo_ape_rmse_m": 0.045246,
+        "evo_segmented_rpe_rmse_m": 0.017288,
+        "primary_ape_rmse_m": 0.04524627266716633,
+        "primary_rpe_rmse_m": 0.017288442564439798,
+        "rpe_abs_diff_m": 4.425644397967887e-07,
+        "rpe_pair_count": 41
+      }
+    }
+  },
+  "evo_version": "1.31.1"
+}

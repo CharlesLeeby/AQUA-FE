@@ -1,0 +1,13 @@
+window_id,run_slug,arm,action,admitted_sidecars,omitted_newborns,outcome,common_support_status,ape_percent_change,rpe_percent_change,ape_percent_change_vs_matched,rpe_percent_change_vs_matched,notes
+aqualoc_archaeology:A09:historical_6000_6800,a09_6000_6800,slot_xfeat,True,3,3,WIN,PASS,-99.94101421318354,-99.95123596047077,-32.30799762295724,-37.10024885019452,
+aqualoc_archaeology:A09:historical_6000_6800,a09_6000_6800,slot_splg,False,0,0,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,,,No independent replay; exact input identity maps to KLT.
+aqualoc_archaeology:A02:0000,a02_0_900,slot_xfeat,True,8,8,LOSS,PASS,674.2686567507822,361.0315631413787,-0.020864780528495608,-0.0009806242177057278,
+aqualoc_archaeology:A02:0000,a02_0_900,slot_splg,True,8,8,LOSS,PASS,699.4636077664958,359.65563219030463,-0.3669562758527145,-0.4676366390881759,
+afrl:bus_outside:0004,afrl_bus_s180_d045,slot_xfeat,True,2,2,TIE,PASS,0.0,0.0,0.0,0.0,
+afrl:bus_outside:0004,afrl_bus_s180_d045,slot_splg,False,0,0,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,,,No independent replay; exact input identity maps to KLT.
+aqualoc_archaeology:A08:0003,a08_2700_3600,slot_xfeat,False,0,0,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,,,No independent replay; exact input identity maps to KLT.
+aqualoc_archaeology:A08:0003,a08_2700_3600,slot_splg,False,0,0,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,,,No independent replay; exact input identity maps to KLT.
+afrl:cemetery:0003,afrl_cemetery_s135_d045,slot_xfeat,False,0,0,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,,,No independent replay; exact input identity maps to KLT.
+afrl:cemetery:0003,afrl_cemetery_s135_d045,slot_splg,False,0,0,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,,,No independent replay; exact input identity maps to KLT.
+aqualoc_harbor:H07:historical_0_1000,h07_0_1000,slot_xfeat,False,0,0,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,,,No independent replay; exact input identity maps to KLT.
+aqualoc_harbor:H07:historical_0_1000,h07_0_1000,slot_splg,False,0,0,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,,,No independent replay; exact input identity maps to KLT.

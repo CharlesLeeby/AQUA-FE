@@ -1,0 +1,71 @@
+{
+  "schema_version": "aqua-fe-protected-prefill-slot-v1-method-lock-v1",
+  "frozen_at": "2026-09-06T03:07:19+08:00",
+  "base_git_commit": "f6f8feec66c2faf1f59cdb67c1e817028a3bccaf",
+  "base_git_branch": "main",
+  "profile": "lineage_protected_prefill_slot_v1",
+  "exporter_sha256": "e20bc39f90399ab26d4280541d4fb68f5d6a00ca497b729872b454f675e99e17",
+  "sole_mechanism_difference": "Retain every carried independent-mirror observation; admit confirmed candidates into pre-GFTT-refill capacity and fill the remainder with deterministic mirror GFTT births.",
+  "contract": {
+    "feature_cap": 350,
+    "measurement_selection": false,
+    "every_n": 2,
+    "intervention_first_selected_frame": 0,
+    "intervention_last_selected_frame": 4,
+    "candidate_min_raw_age": 3,
+    "max_per_frame": 6,
+    "sequence_observation_counter": 50,
+    "sequence_counter_semantics": "inherited pre-final reservation; unchanged",
+    "lineage_continuation": false,
+    "allowed_sources": [
+      "confirmed_xfeat",
+      "confirmed_non_loftr_learned"
+    ],
+    "loftr_allowed": false,
+    "carried_observation_deletion_allowed": false,
+    "potential_newborn_gftt_opportunity_cost_allowed": true,
+    "newborn_fill_order": "independent mirror original deterministic order"
+  },
+  "files": [
+    {
+      "path": "uw_frontend/ros/export_vins_features.py",
+      "sha256": "e20bc39f90399ab26d4280541d4fb68f5d6a00ca497b729872b454f675e99e17"
+    },
+    {
+      "path": "uw_frontend/configs/experiments/low_texture_xfeat_seedchain_frontend.yaml",
+      "sha256": "6f89d861cc002dfaf0eaf5f1294b0dbcfab9fe268c5dc0d09082f79811000bf3"
+    },
+    {
+      "path": "scripts/learned_seedchain_env.sh",
+      "sha256": "665c96a4bab01866c9ccfe0458d0d2e1239c2d07a94d157c3e70c8555416e615"
+    },
+    {
+      "path": "scripts/run_learned_seedchain_eval.sh",
+      "sha256": "5a18fa6a590ae6f64311a0329c2dd5c0ddf6c79dc19ceb13ad7587e39d42410e"
+    },
+    {
+      "path": "scripts/run_aqualoc_archaeo_vins_eval.sh",
+      "sha256": "54e166cee8d21fec57959340e1f6c9f8cac095934bf5bbcfb4ff5c4dc1168700"
+    },
+    {
+      "path": "scripts/run_aqualoc_real_vins_eval.sh",
+      "sha256": "ee5acb03402e5cfd90f93564e6e33a5344afb53fc3246c9c5e3821dda5c88349"
+    },
+    {
+      "path": "scripts/run_afrl_cave_vins_eval.sh",
+      "sha256": "c6b3a9ac3f10772e70dcc9f5fe73387a5f7ca7dec34510c4c0098e316f40db56"
+    },
+    {
+      "path": "scripts/run_frontend_geometry_maturity_router_v1.py",
+      "sha256": "ac396251293e235a94b145f60c56da021a27a9b39e9ff39a08bd9cf6239cdf11"
+    },
+    {
+      "path": "scripts/run_frontend_protected_prefill_slot_v1.py",
+      "sha256": "5d21719fdbe46e5c905c8cfd7006c728ed4761f9178c45b6210a997f0da079c5"
+    },
+    {
+      "path": "tests/test_final_mirror_noharm_contract.py",
+      "sha256": "d8013ff61e032c7fec4719d962e1a6c6df014d5199a25869947008dd8ae27186"
+    }
+  ]
+}

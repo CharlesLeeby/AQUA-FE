@@ -1,0 +1,4 @@
+order,arm,display_name,method,seed_source,profile,role
+1,klt,Protected KLT,klt,xfeat,lineage_protected_prefill_slot_v1,baseline
+2,slot_xfeat,Protected pre-refill slot + XFeat,hybrid_xfeat,xfeat,lineage_protected_prefill_slot_v1,learned_source_candidate
+3,slot_splg,Protected pre-refill slot + SP+LG,hybrid_superpoint_lightglue,all_learned,lineage_protected_prefill_slot_v1,learned_source_candidate

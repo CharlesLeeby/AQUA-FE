@@ -1,0 +1,85 @@
+{
+  "action_audit_sha256": "aa3acee9bddae5f38b844445462584dc7f57f5f8a4736016c017a1cf5f1c0f12",
+  "action_positive_cells_total": 4,
+  "backend_results_seen_before_freeze": false,
+  "builder": {
+    "known_limitation": "Retrospective source control matched to the learned intervention's IDs, frames, and dose; it is not an online detector-isolation control.",
+    "parameters": {
+      "block_size": 7,
+      "control_source_code": 0,
+      "exclusion_radius": 18,
+      "max_candidates": 512,
+      "max_fb_error": 1.0,
+      "max_image_dt": 0.002,
+      "min_distance": 18,
+      "quality_level": 0.01
+    },
+    "path": "scripts/build_gftt_matched_lineage_control.py",
+    "preserve_target_ids": true,
+    "sha256": "7dd75c8ffc6e9ec47231d8de4904ddde0c54451f200f0b22ac03490b74dc0b46"
+  },
+  "cells": [
+    {
+      "allow_sparse_target_schedule": false,
+      "arm": "slot_xfeat",
+      "birth_groups": [
+        [
+          10000000
+        ]
+      ],
+      "run_slug": "a09_6000_6800",
+      "target_bag_sha256": "0a6bc1845b347b3105f1bb1b8a85499ceea9377fe6d3ce2d5c6eae712677de17"
+    },
+    {
+      "allow_sparse_target_schedule": false,
+      "arm": "slot_xfeat",
+      "birth_groups": [
+        [
+          10000000,
+          10000001,
+          10000002
+        ]
+      ],
+      "run_slug": "a02_0_900",
+      "target_bag_sha256": "ce364493e963963cac968d5bf796e0b365b1d6a20ba97753cc870a12360e5051"
+    },
+    {
+      "allow_sparse_target_schedule": false,
+      "arm": "slot_splg",
+      "birth_groups": [
+        [
+          10000015,
+          10000016,
+          10000017,
+          10000018,
+          10000021
+        ],
+        [
+          10000000,
+          10000004,
+          10000007
+        ]
+      ],
+      "run_slug": "a02_0_900",
+      "target_bag_sha256": "22ad515df63a71bf4f7b068f4c4b3d290e0b2d822544b04d191441d2ad6899ef"
+    },
+    {
+      "allow_sparse_target_schedule": false,
+      "arm": "slot_xfeat",
+      "birth_groups": [
+        [
+          10000000,
+          10000001
+        ]
+      ],
+      "run_slug": "afrl_bus_s180_d045",
+      "target_bag_sha256": "ee4cd80ec33c955b3f133d2e2746239feb8d2199aff88e17d6238b079048905e"
+    }
+  ],
+  "frontend_audit_sha256": "ffcaa1cf91a82b37fd0f81e320377dc35aec1c976efc9b2646c32a9798067299",
+  "frozen_at": "2026-09-06T05:27:33.850075+08:00",
+  "lineages_total": 14,
+  "schema_version": "aqua-fe-protected-prefill-slot-v1-matched-plan-v1",
+  "scientific_role": "retrospective same-ID/frame/dose matched-GFTT control before any backend replay",
+  "selection_basis": "all and only action-positive arm-windows in the frozen 6x3 pre-refill-slot frontend matrix"
+}

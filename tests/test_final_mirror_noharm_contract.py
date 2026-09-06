@@ -687,6 +687,115 @@ class FinalMirrorNoHarmContractTest(unittest.TestCase):
         self.assertEqual(info.persistence_eligible_gftt, 0)
         self.assertEqual(info.persistence_replaced_gftt, 0)
 
+    def test_prefill_slot_preserves_carried_tracks_and_omits_only_births(self) -> None:
+        mirror = _tracks([1, 2, 3, 4], ["klt", "klt", "gftt", "gftt"])
+        mirror.ages = np.asarray([12, 4, 1, 1], dtype=np.int32)
+        sidecars = _tracks(
+            [20, 21],
+            ["xfeat_confirmed", "superpoint_lightglue_confirmed"],
+            age_start=3,
+        )
+
+        final, info = _finalize_mirror_sidecar_export(
+            sidecars,
+            mirror,
+            state=_ExportIdState(),
+            max_features=4,
+            prefill_slot_admission=True,
+            prefill_slot_allow_all_non_loftr=True,
+            prefill_slot_max_per_frame=2,
+            selected_feature_index=2,
+        )
+
+        self.assertEqual(len(final), 4)
+        self.assertIn(1, final.ids)
+        self.assertIn(2, final.ids)
+        self.assertNotIn(3, final.ids)
+        self.assertNotIn(4, final.ids)
+        self.assertEqual(info.prefill_slot_carried_observations, 2)
+        self.assertEqual(info.prefill_slot_baseline_newborns, 2)
+        self.assertEqual(info.prefill_slot_admitted_sidecars, 2)
+        self.assertEqual(info.prefill_slot_omitted_newborns, 2)
+        self.assertEqual(info.dropped_classical_for_cap, 2)
+
+    def test_prefill_slot_uses_true_underfull_capacity_without_omission(self) -> None:
+        mirror = _tracks([1, 2], ["klt", "gftt"])
+        mirror.ages = np.asarray([9, 1], dtype=np.int32)
+        sidecar = _tracks([20], ["xfeat_confirmed"], age_start=3)
+
+        final, info = _finalize_mirror_sidecar_export(
+            sidecar,
+            mirror,
+            state=_ExportIdState(),
+            max_features=3,
+            prefill_slot_admission=True,
+            prefill_slot_max_per_frame=1,
+            selected_feature_index=2,
+        )
+
+        self.assertEqual(len(final), 3)
+        self.assertIn(1, final.ids)
+        self.assertIn(2, final.ids)
+        self.assertEqual(info.prefill_slot_admitted_sidecars, 1)
+        self.assertEqual(info.prefill_slot_omitted_newborns, 0)
+
+    def test_prefill_slot_horizon_fails_closed_to_exact_mirror(self) -> None:
+        mirror = _tracks([1, 2], ["klt", "gftt"])
+        mirror.ages = np.asarray([9, 1], dtype=np.int32)
+        sidecar = _tracks([20], ["xfeat_confirmed"], age_start=3)
+
+        final, info = _finalize_mirror_sidecar_export(
+            sidecar,
+            mirror,
+            state=_ExportIdState(),
+            max_features=2,
+            prefill_slot_admission=True,
+            prefill_slot_max_selected_frame=4,
+            selected_feature_index=5,
+        )
+
+        np.testing.assert_array_equal(final.ids, mirror.ids)
+        self.assertTrue(info.zero_sidecar_restore)
+        self.assertTrue(info.prefill_slot_horizon_blocked)
+        self.assertEqual(info.prefill_slot_admitted_sidecars, 0)
+
+    def test_prefill_slot_rejects_young_and_loftr_candidates(self) -> None:
+        mirror = _tracks([1, 2], ["klt", "gftt"])
+        mirror.ages = np.asarray([9, 1], dtype=np.int32)
+        sidecars = _tracks(
+            [20, 21], ["xfeat_confirmed", "loftr_confirmed"], age_start=2
+        )
+
+        final, info = _finalize_mirror_sidecar_export(
+            sidecars,
+            mirror,
+            state=_ExportIdState(),
+            max_features=2,
+            prefill_slot_admission=True,
+            prefill_slot_allow_all_non_loftr=True,
+            prefill_slot_min_age=3,
+            selected_feature_index=2,
+        )
+
+        np.testing.assert_array_equal(final.ids, mirror.ids)
+        self.assertTrue(info.zero_sidecar_restore)
+        self.assertEqual(info.prefill_slot_source_suppressed, 1)
+        self.assertEqual(info.prefill_slot_age_suppressed, 1)
+
+    def test_prefill_slot_and_replacement_are_mutually_exclusive(self) -> None:
+        mirror = _tracks([1], ["gftt"])
+        sidecar = _tracks([20], ["xfeat_confirmed"], age_start=3)
+
+        with self.assertRaises(ValueError):
+            _finalize_mirror_sidecar_export(
+                sidecar,
+                mirror,
+                state=_ExportIdState(),
+                max_features=1,
+                persistence_replacement=True,
+                prefill_slot_admission=True,
+            )
+
 
 if __name__ == "__main__":
     unittest.main()

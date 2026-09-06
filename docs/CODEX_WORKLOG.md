@@ -535,3 +535,77 @@ initialization intervention remains Hypothesis / Inference for the mechanism.
 ### Next Steps
 
 Honor `NO_EXPANSION`: do not run the 12-window extension or a second horizon.
+
+## 2026-09-06 — Protected pre-refill slot v1 closed loop
+
+### Task Objective
+
+Test one minimal admission mechanism that protects every carried KLT/GFTT
+observation and competes only with newborn GFTT, then apply the frozen decision.
+
+### Problem / Motivation
+
+Delayed v3 removed A02 harm but also removed the meaningful A09 rescue. This
+test asks whether mature-track protection can retain benefit without harm.
+
+### Files Changed
+
+`papers/frontend_protected_prefill_slot_v1/`, corresponding scripts, exporter
+profile/plumbing, unit tests, and append-only research logs.
+
+### Implementation
+
+Profile `lineage_protected_prefill_slot_v1` retains v2 gates and frames 0--4.
+It preserves all carried mirror observations, admits at most six confirmed
+age>=3 non-LoFTR candidates, then fills remaining capacity with same-frame
+age-1 GFTT births. Matched controls retain IDs, frames, dose, quality, and sigma.
+
+### Technical Decisions
+
+Admission is an explicit newborn opportunity cost, not free capacity or
+guaranteed no-harm. KLT backend results are reused only under exact identity.
+
+### Experiments Performed
+
+18 frontend cells, four matched controls, 24 new VINS replays, 18
+identity-reused KLT replays, four all-nine supports, fixed-SE(3), diagnostic
+Sim(3), and evo cross-check.
+
+### Quantitative Results
+
+Frontend 18/18 and nine structural checks PASS; 21 candidate observations from
+14 lineages omit 21 age-1 GFTT observations with zero carried mismatch. Backend
+24/24 new and 18/18 reused rows PASS; 4/4 supports PASS. Active outcomes are 1
+WIN/1 TIE/2 LOSS/0 FAIL; all 12 arms are 1 WIN/9 TIE/2 LOSS/0 FAIL. A09
+XFeat APE/RPE is 0.733/0.0736 m versus KLT 1242.140/150.847 m. A02
+XFeat/SP+LG APE is 1.094/1.130 m versus KLT 0.141 m.
+
+### Qualitative Observations
+
+A09 retains a learned-over-matched advantage. A02 learned and matched are
+nearly identical and both select scale near 0.50 rather than KLT's 0.899. Bus
+is an exact backend tie.
+
+### Failed Attempts
+
+One interactive interruption left an unreceipted Bus matched repeat. It was
+preserved in quarantine and excluded; only the interrupted and pending repeats
+were run after the 21 existing receipts passed identity checks.
+
+### Known Issues
+
+Per-feature residual use is Unknown. These are outcome-known development
+windows and proxy agreement is not independent GT. Dataset-wide positive rate
+is Not evaluated.
+
+### Interpretation
+
+Confirmed fact: carried-track protection is insufficient for no-harm; newborn
+selection alone can flip startup scale. Confirmed fact: A09 is one
+development-only positive. The unified method fails the expansion gate.
+
+### Next Steps
+
+Honor `NO_EXPANSION`. Do not tune another prefill variant. Audit the unchanged
+backend for an online initialization-complete signal before considering a
+separately preregistered post-init method.

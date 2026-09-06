@@ -439,3 +439,77 @@ remains competitive; learned necessity is Unknown.
 ### Follow-up
 
 Do not try a second horizon or start the 12-window extension in this protocol.
+
+## EXP-20260906-009 — Protected pre-refill slot admission v1
+
+### Date
+
+2026-09-06
+
+### Status and Scientific Role
+
+`COMPLETE_NO_EXPANSION`; outcome-known six-window mechanism-development test,
+not held-out validation.
+
+### Git Commit and Branch
+
+Experiment base `f6f8feec66c2faf1f59cdb67c1e817028a3bccaf` on `main`, plus
+the exact method/backend locks. Publication commit is reporting identity.
+
+### Dataset and Sequence / Window
+
+AQUALOC A09 6000--6800, A02 0--900, A08 2700--3600, Harbor H07 0--1000,
+AFRL Bus s180 d45, and AFRL Cemetery s135 d45: six windows and 12 learned arms.
+
+### Environment and Exact Configuration
+
+ROS Noetic, unchanged `VINS-Fusion-origin`, same YAML/camera/proxy, IMU/time
+bounds, every-n 2, cap 350, and `lineage_protected_prefill_slot_v1`. Exact
+hashes are in the locks and `artifacts.sha256`.
+
+### Baseline
+
+Fresh KLT; backend results reused only under exact identity.
+
+### Proposed Modification
+
+Preserve every carried observation and admit candidates only at the expense of
+same-frame age-1 GFTT births; candidate gates, timing, and budgets are unchanged.
+
+### Commands and Artifact / Run Paths
+
+Scripts named `frontend_protected_prefill_slot_v1`; compact evidence under
+`papers/frontend_protected_prefill_slot_v1/`; run paths use manifest aliases.
+
+### Metrics
+
+Frontend safety, runability, all-nine support, fixed-scale SE(3) APE, strict 1 s
+RPE, diagnostic Sim(3), repeat median/range, and evo.
+
+### Results
+
+18/18 frontend, 4/4 matched controls, 24/24 new backend, 18/18 reused KLT, and
+4/4 supports PASS. Active results are 1 WIN/1 TIE/2 LOSS/0 FAIL; full results
+are 1 WIN/9 TIE/2 LOSS/0 FAIL. A09 XFeat improves fixed APE/RPE from
+1242.140/150.847 to 0.733/0.0736 m and beats matched by 32.31%/37.10%. A02
+XFeat/SP+LG worsen APE by 674.27%/699.46% and RPE by 361.03%/359.66%. Bus is
+an exact tie. Runtime/FPS and lost tracking count are Not evaluated.
+
+### Validity Checks and Common-Support Status
+
+All structural/config/common-support audits pass; evo discrepancy is below
+`5e-7` m. One interrupted unreceipted directory is quarantined and excluded.
+
+### Interpretation
+
+Startup newborn identity can flip scale even when all carried tracks are exact.
+One A09 positive does not offset two A02 losses or prove general superiority.
+
+### Conclusion
+
+`NO_EXPANSION`; no-regression-over-10% and win-dominance gates fail.
+
+### Follow-up
+
+No second budget/order/timing variant. First audit for a causal online
+initialization-complete interface.

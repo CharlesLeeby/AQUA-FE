@@ -1,0 +1,81 @@
+{
+  "allow_sparse_target_schedule": false,
+  "assignments": [
+    {
+      "candidate_index": 254,
+      "control_final_pixel": [
+        876.35791015625,
+        401.89410400390625
+      ],
+      "control_id": 10000000,
+      "control_initial_pixel": [
+        870.0,
+        383.0
+      ],
+      "initial_distance_px": 13.247312661424262,
+      "target_frames": [
+        2,
+        3,
+        4
+      ],
+      "target_id": 10000000,
+      "target_initial_pixel": [
+        864.6814575195312,
+        395.1327819824219
+      ]
+    }
+  ],
+  "builder_script_sha256": "7dd75c8ffc6e9ec47231d8de4904ddde0c54451f200f0b22ac03490b74dc0b46",
+  "camera_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_protected_prefill_slot_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_ppsv1_a09_6000_6800_slot_xfeat/aqualoc_archaeo09_pinhole.yaml",
+  "camera_config_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+  "control_id_mode": "preserve_target_ids",
+  "control_parameters": {
+    "block_size": 7,
+    "control_source_code": 0,
+    "exclusion_radius": 18,
+    "first_frame_velocity": "zero",
+    "lk_criteria_count": 30,
+    "lk_criteria_epsilon": 0.01,
+    "lk_max_level": 3,
+    "lk_win_size": [
+      21,
+      21
+    ],
+    "max_candidates": 512,
+    "max_fb_error": 1.0,
+    "max_image_dt": 0.002,
+    "min_distance": 18,
+    "opencv_rng_seed": 20260803,
+    "quality_level": 0.01
+  },
+  "feature_frames": 400,
+  "feature_topic": "/feature_tracker/feature",
+  "first_replaced_frame": 2,
+  "full_interval_survivors": 349,
+  "gftt_candidates": 512,
+  "image_topic": "/camera/image_raw",
+  "inserted_observations": 3,
+  "last_replaced_frame": 4,
+  "new_id_base": 15000000,
+  "opencv_version": "4.2.0",
+  "output_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_protected_prefill_slot_v1/matched_controls/a09_6000_6800/slot_xfeat/features_matched_gftt.bag",
+  "output_bag_sha256": "9ac5040f91cbfcd980cf4262d8cb14c84f3b860ccfe012e8505acbb9e8cbafc7",
+  "python_version": "3.8.10",
+  "raw_bag": "/home/ma/AQUA-FE_WS/artifacts/frontend_xfeat_replacement_attribution_v1/inputs/archaeo09_6000_6800.bag",
+  "raw_bag_sha256": "8f1e411795baf70ca989ad882088050f44072cdaf89423d00b6ec52086dbf394",
+  "removed_observations": 3,
+  "replaced_frames": 3,
+  "schema_version": "gftt-matched-lineage-control-v2",
+  "target_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_protected_prefill_slot_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_ppsv1_a09_6000_6800_slot_xfeat/features.bag",
+  "target_bag_sha256": "0a6bc1845b347b3105f1bb1b8a85499ceea9377fe6d3ce2d5c6eae712677de17",
+  "target_frames_by_id": {
+    "10000000": [
+      2,
+      3,
+      4
+    ]
+  },
+  "target_ids": [
+    10000000
+  ]
+}

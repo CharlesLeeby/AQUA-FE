@@ -98,6 +98,18 @@ class _FinalMirrorExportInfo:
     persistence_replaced_gftt_max_age: int = -1
     persistence_replacement_min_age_advantage_actual: int = -1
     persistence_replacement_cell_mismatches: int = 0
+    prefill_slot_active: bool = False
+    prefill_slot_horizon_blocked: bool = False
+    prefill_slot_carried_observations: int = 0
+    prefill_slot_baseline_newborns: int = 0
+    prefill_slot_vacant_capacity: int = 0
+    prefill_slot_eligible_sidecars: int = 0
+    prefill_slot_admitted_sidecars: int = 0
+    prefill_slot_omitted_newborns: int = 0
+    prefill_slot_dropped_sidecars: int = 0
+    prefill_slot_source_suppressed: int = 0
+    prefill_slot_age_suppressed: int = 0
+    prefill_slot_per_frame_cap: int = 0
 
 
 @dataclass(frozen=True)
@@ -1195,6 +1207,47 @@ def main() -> int:
         help=(
             "Maximum persistence-router sidecars admitted on one published "
             "frame. Values <=0 preserve the historical unbounded behavior."
+        ),
+    )
+    parser.add_argument(
+        "--final-mirror-prefill-slot-admission",
+        action="store_true",
+        help=(
+            "Development-only protected admission: retain every carried "
+            "independent-mirror observation, admit a bounded number of "
+            "confirmed non-LoFTR candidates into capacity available before "
+            "same-frame GFTT refill, then fill remaining slots with mirror "
+            "GFTT births in their original order. This changes potential "
+            "newborn GFTT births and is not an intrinsically no-harm mode."
+        ),
+    )
+    parser.add_argument(
+        "--final-mirror-prefill-slot-max-selected-frame",
+        type=int,
+        default=4,
+        help="Last selected feature frame eligible for pre-refill slot admission.",
+    )
+    parser.add_argument(
+        "--final-mirror-prefill-slot-min-age",
+        type=int,
+        default=3,
+        help="Minimum raw age for a confirmed candidate using a pre-refill slot.",
+    )
+    parser.add_argument(
+        "--final-mirror-prefill-slot-allow-all-non-loftr",
+        action="store_true",
+        help=(
+            "Allow confirmed XFeat and SP+LG/other non-LoFTR learned "
+            "candidates. Without this flag, only confirmed XFeat is eligible."
+        ),
+    )
+    parser.add_argument(
+        "--final-mirror-prefill-slot-max-per-frame",
+        type=int,
+        default=0,
+        help=(
+            "Maximum candidates admitted before GFTT refill on one published "
+            "frame. Values <=0 leave the available pre-refill capacity as the limit."
         ),
     )
     parser.add_argument(
@@ -2810,6 +2863,18 @@ def main() -> int:
                 "final_mirror_persistence_replaced_gftt_max_age",
                 "final_mirror_persistence_replacement_min_age_advantage_actual",
                 "final_mirror_persistence_replacement_cell_mismatches",
+                "final_mirror_prefill_slot_active",
+                "final_mirror_prefill_slot_horizon_blocked",
+                "final_mirror_prefill_slot_carried_observations",
+                "final_mirror_prefill_slot_baseline_newborns",
+                "final_mirror_prefill_slot_vacant_capacity",
+                "final_mirror_prefill_slot_eligible_sidecars",
+                "final_mirror_prefill_slot_admitted_sidecars",
+                "final_mirror_prefill_slot_omitted_newborns",
+                "final_mirror_prefill_slot_dropped_sidecars",
+                "final_mirror_prefill_slot_source_suppressed",
+                "final_mirror_prefill_slot_age_suppressed",
+                "final_mirror_prefill_slot_per_frame_cap",
                 "exported_learned_median_age",
                 "exported_non_loftr_learned_median_age",
                 "exported_xfeat_median_age",
@@ -4004,6 +4069,21 @@ def main() -> int:
                 persistence_max_per_frame=int(
                     args.final_mirror_persistence_max_per_frame
                 ),
+                prefill_slot_admission=bool(
+                    args.final_mirror_prefill_slot_admission
+                ),
+                prefill_slot_max_selected_frame=int(
+                    args.final_mirror_prefill_slot_max_selected_frame
+                ),
+                prefill_slot_min_age=int(
+                    args.final_mirror_prefill_slot_min_age
+                ),
+                prefill_slot_allow_all_non_loftr=bool(
+                    args.final_mirror_prefill_slot_allow_all_non_loftr
+                ),
+                prefill_slot_max_per_frame=int(
+                    args.final_mirror_prefill_slot_max_per_frame
+                ),
                 image_shape=gray.shape,
             )
             if final_mirror_export_info.zero_sidecar_restore:
@@ -4447,6 +4527,44 @@ def main() -> int:
                         ),
                         "final_mirror_persistence_replacement_cell_mismatches": (
                             final_mirror_export_info.persistence_replacement_cell_mismatches
+                        ),
+                        "final_mirror_prefill_slot_active": (
+                            1 if final_mirror_export_info.prefill_slot_active else 0
+                        ),
+                        "final_mirror_prefill_slot_horizon_blocked": (
+                            1
+                            if final_mirror_export_info.prefill_slot_horizon_blocked
+                            else 0
+                        ),
+                        "final_mirror_prefill_slot_carried_observations": (
+                            final_mirror_export_info.prefill_slot_carried_observations
+                        ),
+                        "final_mirror_prefill_slot_baseline_newborns": (
+                            final_mirror_export_info.prefill_slot_baseline_newborns
+                        ),
+                        "final_mirror_prefill_slot_vacant_capacity": (
+                            final_mirror_export_info.prefill_slot_vacant_capacity
+                        ),
+                        "final_mirror_prefill_slot_eligible_sidecars": (
+                            final_mirror_export_info.prefill_slot_eligible_sidecars
+                        ),
+                        "final_mirror_prefill_slot_admitted_sidecars": (
+                            final_mirror_export_info.prefill_slot_admitted_sidecars
+                        ),
+                        "final_mirror_prefill_slot_omitted_newborns": (
+                            final_mirror_export_info.prefill_slot_omitted_newborns
+                        ),
+                        "final_mirror_prefill_slot_dropped_sidecars": (
+                            final_mirror_export_info.prefill_slot_dropped_sidecars
+                        ),
+                        "final_mirror_prefill_slot_source_suppressed": (
+                            final_mirror_export_info.prefill_slot_source_suppressed
+                        ),
+                        "final_mirror_prefill_slot_age_suppressed": (
+                            final_mirror_export_info.prefill_slot_age_suppressed
+                        ),
+                        "final_mirror_prefill_slot_per_frame_cap": (
+                            final_mirror_export_info.prefill_slot_per_frame_cap
                         ),
                         "exported_learned_median_age": sidecar_export_diag[
                             "learned_median_age"
@@ -8500,6 +8618,11 @@ def _finalize_mirror_sidecar_export(
     persistence_grid_rows: int = 4,
     persistence_grid_cols: int = 6,
     persistence_max_per_frame: int = 0,
+    prefill_slot_admission: bool = False,
+    prefill_slot_max_selected_frame: int = 4,
+    prefill_slot_min_age: int = 3,
+    prefill_slot_allow_all_non_loftr: bool = False,
+    prefill_slot_max_per_frame: int = 0,
     image_shape: tuple[int, int] | None = None,
 ) -> tuple[TrackSet, _FinalMirrorExportInfo]:
     """Enforce the final KLT-mirror no-harm and feature-budget contract.
@@ -8514,7 +8637,11 @@ def _finalize_mirror_sidecar_export(
     early birth-for-birth swap. Its historical default is confirmed XFeat;
     the optional source router can admit confirmed non-LoFTR learned lineages
     under the same-cell or coverage-monotone donor contract and per-frame cap.
-    Neither path removes a tracked source="klt" observation.
+    ``prefill_slot_admission`` keeps every carried mirror observation, admits a
+    bounded confirmed candidate before the mirror's age-1 GFTT birth pool, and
+    uses that pool only for the remaining capacity. Both experimental paths
+    change counterfactual newborn GFTT publication, but neither removes a
+    carried source="klt" observation.
     """
 
     if mirror_tracks is None:
@@ -8524,6 +8651,22 @@ def _finalize_mirror_sidecar_export(
     sidecars = _select_sidecar_sources(tracks)
     input_sidecars = len(sidecars)
     cap = 0 if max_features is None else max(0, int(max_features))
+    if bool(persistence_replacement) and bool(prefill_slot_admission):
+        raise ValueError(
+            "persistence replacement and pre-refill slot admission are mutually exclusive"
+        )
+    prefill_newborn_mask = np.asarray(
+        [
+            str(source).lower() == "gftt" and int(age) == 1
+            for source, age in zip(mirror.sources, mirror.ages)
+        ],
+        dtype=bool,
+    )
+    prefill_carried_count = int(np.count_nonzero(~prefill_newborn_mask))
+    prefill_newborn_count = int(np.count_nonzero(prefill_newborn_mask))
+    prefill_vacant_capacity = (
+        max(0, int(cap) - prefill_carried_count) if cap > 0 else 0
+    )
 
     if input_sidecars == 0:
         # Strong no-harm invariant: rejection is a true rollback, including
@@ -8572,6 +8715,11 @@ def _finalize_mirror_sidecar_export(
                 persistence_coverage_monotone
             ),
             persistence_per_frame_cap=max(0, int(persistence_max_per_frame)),
+            prefill_slot_active=bool(prefill_slot_admission),
+            prefill_slot_carried_observations=prefill_carried_count,
+            prefill_slot_baseline_newborns=prefill_newborn_count,
+            prefill_slot_vacant_capacity=prefill_vacant_capacity,
+            prefill_slot_per_frame_cap=max(0, int(prefill_slot_max_per_frame)),
         )
 
     # Main hybrid and mirror KLT trackers allocate ids independently. Their
@@ -8585,6 +8733,20 @@ def _finalize_mirror_sidecar_export(
     sidecars = _remap_recovered_export_ids(sidecars, state)
     remapped_sidecar_ids = int(np.count_nonzero(sidecars.ids != original_sidecar_ids))
     sidecars = _deduplicate_tracks_for_vins(sidecars)
+
+    if bool(prefill_slot_admission):
+        return _finalize_prefill_slot_mirror_export(
+            mirror,
+            sidecars,
+            max_features=cap,
+            selected_feature_index=int(selected_feature_index),
+            max_selected_frame=int(prefill_slot_max_selected_frame),
+            min_age=int(prefill_slot_min_age),
+            allow_all_non_loftr=bool(prefill_slot_allow_all_non_loftr),
+            max_per_frame=int(prefill_slot_max_per_frame),
+            input_sidecars=input_sidecars,
+            remapped_sidecar_ids=remapped_sidecar_ids,
+        )
 
     if bool(persistence_replacement):
         return _finalize_persistence_conditioned_mirror_export(
@@ -8691,6 +8853,160 @@ def _finalize_mirror_sidecar_export(
         ),
         dropped_classical_for_cap=dropped_classical,
         remapped_sidecar_ids=remapped_sidecar_ids,
+    )
+
+
+def _finalize_prefill_slot_mirror_export(
+    mirror: TrackSet,
+    sidecars: TrackSet,
+    *,
+    max_features: int,
+    selected_feature_index: int,
+    max_selected_frame: int,
+    min_age: int,
+    allow_all_non_loftr: bool,
+    max_per_frame: int,
+    input_sidecars: int,
+    remapped_sidecar_ids: int,
+) -> tuple[TrackSet, _FinalMirrorExportInfo]:
+    """Admit confirmed sidecars before deterministic same-frame GFTT refill.
+
+    The cap-limited independent mirror is the baseline reference. Every
+    carried observation is retained. Only age-1 ``gftt`` births can be omitted
+    when a candidate consumes pre-refill capacity. The resulting opportunity
+    cost is explicit and must not be described as free/no-harm capacity.
+    """
+
+    cap = max(0, int(max_features))
+    frame_cap = max(0, int(max_per_frame))
+    baseline_count = min(len(mirror), cap) if cap > 0 else len(mirror)
+    baseline = _subset_tracks_by_indices(
+        mirror,
+        np.arange(baseline_count, dtype=np.int64),
+    )
+    base_cap_drop = max(0, len(mirror) - len(baseline))
+    newborn_mask = np.asarray(
+        [
+            str(source).lower() == "gftt" and int(age) == 1
+            for source, age in zip(baseline.sources, baseline.ages)
+        ],
+        dtype=bool,
+    )
+    newborn_indices = np.flatnonzero(newborn_mask).astype(np.int64)
+    carried_indices = np.flatnonzero(~newborn_mask).astype(np.int64)
+    carried_count = len(carried_indices)
+    newborn_count = len(newborn_indices)
+    vacant_capacity = max(0, cap - carried_count) if cap > 0 else 0
+
+    raw_order = _source_selection_order(
+        sidecars,
+        np.arange(len(sidecars), dtype=np.int64),
+        prefer_age=True,
+    )
+    source_eligible = np.asarray(
+        [
+            int(idx)
+            for idx in raw_order
+            if _is_confirmed_sidecar_source(sidecars.sources[int(idx)])
+            and (
+                (
+                    bool(allow_all_non_loftr)
+                    and _is_non_loftr_learned_source(sidecars.sources[int(idx)])
+                )
+                or (
+                    not bool(allow_all_non_loftr)
+                    and _is_xfeat_source(sidecars.sources[int(idx)])
+                )
+            )
+        ],
+        dtype=np.int64,
+    )
+    eligible = np.asarray(
+        [
+            int(idx)
+            for idx in source_eligible
+            if int(sidecars.ages[int(idx)]) >= max(1, int(min_age))
+        ],
+        dtype=np.int64,
+    )
+    source_suppressed = max(0, len(sidecars) - len(source_eligible))
+    age_suppressed = max(0, len(source_eligible) - len(eligible))
+    horizon_blocked = bool(
+        len(eligible) > 0
+        and int(selected_feature_index) > int(max_selected_frame)
+    )
+    admission_limit = vacant_capacity
+    if frame_cap > 0:
+        admission_limit = min(admission_limit, frame_cap)
+    selected_indices = (
+        np.empty((0,), dtype=np.int64)
+        if horizon_blocked or cap <= 0
+        else eligible[:admission_limit]
+    )
+    selected = (
+        _subset_tracks_by_indices(sidecars, selected_indices)
+        if len(selected_indices)
+        else TrackSet.empty()
+    )
+    dropped_sidecars = max(0, len(eligible) - len(selected))
+
+    if len(selected) == 0:
+        return baseline, _FinalMirrorExportInfo(
+            active=True,
+            zero_sidecar_restore=True,
+            input_sidecars=int(input_sidecars),
+            kept_sidecars=0,
+            dropped_classical_for_cap=int(base_cap_drop),
+            remapped_sidecar_ids=int(remapped_sidecar_ids),
+            prefill_slot_active=True,
+            prefill_slot_horizon_blocked=bool(horizon_blocked),
+            prefill_slot_carried_observations=int(carried_count),
+            prefill_slot_baseline_newborns=int(newborn_count),
+            prefill_slot_vacant_capacity=int(vacant_capacity),
+            prefill_slot_eligible_sidecars=int(len(eligible)),
+            prefill_slot_admitted_sidecars=0,
+            prefill_slot_omitted_newborns=0,
+            prefill_slot_dropped_sidecars=int(dropped_sidecars),
+            prefill_slot_source_suppressed=int(source_suppressed),
+            prefill_slot_age_suppressed=int(age_suppressed),
+            prefill_slot_per_frame_cap=int(frame_cap),
+        )
+
+    remaining_for_newborns = max(0, cap - carried_count - len(selected))
+    kept_newborn_indices = newborn_indices[:remaining_for_newborns]
+    classical_keep_indices = np.sort(
+        np.concatenate([carried_indices, kept_newborn_indices]).astype(np.int64)
+    )
+    classical = _subset_tracks_by_indices(baseline, classical_keep_indices)
+    omitted_newborns = max(0, newborn_count - len(kept_newborn_indices))
+    finalized = _deduplicate_tracks_for_vins(
+        _append_tracksets(classical, selected)
+    )
+    if len(finalized) > cap:
+        raise RuntimeError(
+            f"pre-refill slot export exceeds cap: {len(finalized)} > {cap}"
+        )
+    if len(np.unique(finalized.ids.astype(np.int64))) != len(finalized):
+        raise RuntimeError("pre-refill slot export contains duplicate feature ids")
+
+    return finalized, _FinalMirrorExportInfo(
+        active=True,
+        input_sidecars=int(input_sidecars),
+        kept_sidecars=int(len(selected)),
+        dropped_classical_for_cap=int(base_cap_drop + omitted_newborns),
+        remapped_sidecar_ids=int(remapped_sidecar_ids),
+        prefill_slot_active=True,
+        prefill_slot_horizon_blocked=False,
+        prefill_slot_carried_observations=int(carried_count),
+        prefill_slot_baseline_newborns=int(newborn_count),
+        prefill_slot_vacant_capacity=int(vacant_capacity),
+        prefill_slot_eligible_sidecars=int(len(eligible)),
+        prefill_slot_admitted_sidecars=int(len(selected)),
+        prefill_slot_omitted_newborns=int(omitted_newborns),
+        prefill_slot_dropped_sidecars=int(dropped_sidecars),
+        prefill_slot_source_suppressed=int(source_suppressed),
+        prefill_slot_age_suppressed=int(age_suppressed),
+        prefill_slot_per_frame_cap=int(frame_cap),
     )
 
 

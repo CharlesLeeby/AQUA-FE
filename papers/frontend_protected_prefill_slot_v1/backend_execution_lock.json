@@ -1,0 +1,64 @@
+{
+  "active_arm_windows": 4,
+  "backend_results_seen_before_freeze": false,
+  "experiment_id": "EXP-20260906-009",
+  "files": [
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_protected_prefill_slot_v1/preregistration.md",
+      "sha256": "0c4055031ad5d5400bd4b52c2bae932357b142b569b75b2af359791b4ea22a82"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_protected_prefill_slot_v1/development_windows.csv",
+      "sha256": "375469dcc1fb49e179196f682c62b2fca6a81704ce6e51dc1e13e30adaa98323"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_protected_prefill_slot_v1/arms.csv",
+      "sha256": "c79064806baa5c02a06de7c5adf107a5ae565e1b8e7be4470b0ab8491c6502b4"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_protected_prefill_slot_v1/method_lock.json",
+      "sha256": "a66e67b72cd3c48a9fda6537790c60bf4c59a343a56dbde334f1869f5749e8a7"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_protected_prefill_slot_v1/decision.json",
+      "sha256": "4c4d9183d4fc6575e4e4a5a8e635459ff8668a8d5e9be9542c54d47509eca349"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_protected_prefill_slot_v1/frontend_audit.csv",
+      "sha256": "ffcaa1cf91a82b37fd0f81e320377dc35aec1c976efc9b2646c32a9798067299"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_protected_prefill_slot_v1/matched_control_plan.json",
+      "sha256": "6fc9f93f847c223dcf550588b9a4004d935314f24562c9fbc0bcb94ceaac9fd3"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_protected_prefill_slot_v1/matched_control_plan.lock.json",
+      "sha256": "0367fce16fabe2af102811f925f16c61ed5ab9fbef7f8851dee286269241901d"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_protected_prefill_slot_v1/matched_control_audit.csv",
+      "sha256": "c9bc55f3d3c47b6cb88716ba9d8b9f8941fa6f62194f13fec5503b41c06e297d"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_protected_prefill_slot_v1/backend_replay_plan.csv",
+      "sha256": "f1a40ee0e418931390a44929560235f18d4977a1160f312fb0df501633973612"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_frontend_protected_prefill_slot_v1_backend.py",
+      "sha256": "9221171944fd2807c0fee774beb0cf012f2d282d8a3b6c661f975f3d8ab5d765"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_frontend_protected_prefill_slot_v1_backend_cell.sh",
+      "sha256": "0ca51c935f90e917a3948b14e99695d0c1e102493c58f18853b1b41ffbd77261"
+    }
+  ],
+  "frozen_at": "2026-09-06T05:28:17.315580+08:00",
+  "new_replays": 24,
+  "plan_rows_total": 42,
+  "reuse_contract": "exact fresh/v2 KLT feature bag, canonical YAML, camera YAML, VINS binary/library, receipt and trajectory identities",
+  "reused_klt_replays": 18,
+  "schema_version": "aqua-fe-protected-prefill-slot-v1-backend-lock-v1",
+  "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+  "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+  "vins_workspace": "/home/ma/SLAM/VINS-Fusion-origin"
+}

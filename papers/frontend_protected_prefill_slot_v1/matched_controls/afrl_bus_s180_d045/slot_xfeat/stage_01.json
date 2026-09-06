@@ -1,0 +1,102 @@
+{
+  "allow_sparse_target_schedule": false,
+  "assignments": [
+    {
+      "candidate_index": 200,
+      "control_final_pixel": [
+        702.0,
+        242.0
+      ],
+      "control_id": 10000000,
+      "control_initial_pixel": [
+        702.0,
+        242.0
+      ],
+      "initial_distance_px": 20.06469291533328,
+      "target_frames": [
+        2
+      ],
+      "target_id": 10000000,
+      "target_initial_pixel": [
+        683.4955444335938,
+        234.24261474609375
+      ]
+    },
+    {
+      "candidate_index": 129,
+      "control_final_pixel": [
+        707.0,
+        224.0
+      ],
+      "control_id": 10000001,
+      "control_initial_pixel": [
+        707.0,
+        224.0
+      ],
+      "initial_distance_px": 13.728333628061794,
+      "target_frames": [
+        2
+      ],
+      "target_id": 10000001,
+      "target_initial_pixel": [
+        707.8799438476562,
+        210.29989624023438
+      ]
+    }
+  ],
+  "builder_script_sha256": "7dd75c8ffc6e9ec47231d8de4904ddde0c54451f200f0b22ac03490b74dc0b46",
+  "camera_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_protected_prefill_slot_v1/shadow_root/logs/afrl_cave_v31/external_hybrid_xfeat_every2_ppsv1_afrl_bus_s180_d045_slot_xfeat/afrl_cave_cam0_pinhole.yaml",
+  "camera_config_sha256": "5856ee4b261d5b0d67021ef81ad0a0c5e8e6aa885184c68591530224b3645aee",
+  "control_id_mode": "preserve_target_ids",
+  "control_parameters": {
+    "block_size": 7,
+    "control_source_code": 0,
+    "exclusion_radius": 18,
+    "first_frame_velocity": "zero",
+    "lk_criteria_count": 30,
+    "lk_criteria_epsilon": 0.01,
+    "lk_max_level": 3,
+    "lk_win_size": [
+      21,
+      21
+    ],
+    "max_candidates": 512,
+    "max_fb_error": 1.0,
+    "max_image_dt": 0.002,
+    "min_distance": 18,
+    "opencv_rng_seed": 20260803,
+    "quality_level": 0.01
+  },
+  "feature_frames": 282,
+  "feature_topic": "/feature_tracker/feature",
+  "first_replaced_frame": 2,
+  "full_interval_survivors": 454,
+  "gftt_candidates": 454,
+  "image_topic": "/camera/image_raw",
+  "inserted_observations": 2,
+  "last_replaced_frame": 2,
+  "new_id_base": 15000000,
+  "opencv_version": "4.2.0",
+  "output_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_protected_prefill_slot_v1/matched_controls/afrl_bus_s180_d045/slot_xfeat/features_matched_gftt.bag",
+  "output_bag_sha256": "9394549f52938329ed5f3b73ce798cda487e4e8752fc535e971c249e155685bb",
+  "python_version": "3.8.10",
+  "raw_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_same_backend_confirmatory_v3/prepared/afrl_bus_s180_d045/input.bag",
+  "raw_bag_sha256": "fa24e8d2b31e4242f572e068a0139ee61e6e201dca0bbb2a5b3089a1f714729d",
+  "removed_observations": 2,
+  "replaced_frames": 1,
+  "schema_version": "gftt-matched-lineage-control-v2",
+  "target_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_protected_prefill_slot_v1/shadow_root/logs/afrl_cave_v31/external_hybrid_xfeat_every2_ppsv1_afrl_bus_s180_d045_slot_xfeat/features.bag",
+  "target_bag_sha256": "ee4cd80ec33c955b3f133d2e2746239feb8d2199aff88e17d6238b079048905e",
+  "target_frames_by_id": {
+    "10000000": [
+      2
+    ],
+    "10000001": [
+      2
+    ]
+  },
+  "target_ids": [
+    10000000,
+    10000001
+  ]
+}

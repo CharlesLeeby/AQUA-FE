@@ -1,0 +1,7 @@
+run_slug,plan_rows,unique_backend_config_hashes,unique_camera_config_hashes,unique_vins_node_hashes,unique_vins_lib_hashes,status
+a02_0_900,15,1,1,1,1,PASS
+a08_2700_3600,3,1,1,1,1,PASS
+a09_6000_6800,9,1,1,1,1,PASS
+afrl_bus_s180_d045,9,1,1,1,1,PASS
+afrl_cemetery_s135_d045,3,1,1,1,1,PASS
+h07_0_1000,3,1,1,1,1,PASS

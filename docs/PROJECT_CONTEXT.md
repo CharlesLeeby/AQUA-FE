@@ -106,8 +106,8 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 
 ## Active Research Questions
 
-- Can delaying the same fixed newborn-slot intervention eliminate A02 harm
-  while retaining A09/Bus benefit under one global policy?
+- Does the unchanged VINS backend expose a real-time initialization-complete
+  signal that could causally protect the startup prefix?
 - Which causal frontend-only geometry signals identify action-positive cases without opening on harmful windows?
 - Can learned-sidecar benefit be separated from dense-KLT/classical rescue?
 - Can a multi-sequence, valid-common-support end-to-end learned contribution be demonstrated?
@@ -115,9 +115,8 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 
 ## Current Priorities
 
-1. Freeze and test exactly one delayed newborn-slot version on the existing six
-   development windows; shift only the fixed intervention interval after a
-   global startup protection horizon.
+1. Honor the protected-prefill `NO_EXPANSION`; perform a read-only online-init
+   interface audit before considering any separate post-init method.
 2. Preserve exact KLT behavior when learned recovery is inactive.
 3. Keep unconditional SP+LG expansion and the failed External-KLT direct-transfer result as negative evidence; any geometry-aware replacement is a new branch.
 4. Include a matched classical-candidate control and freeze before new-window backend outcomes.
@@ -125,6 +124,11 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 
 ## Recent Progress
 
+- 2026-09-06: protected pre-refill slot `EXP-20260906-009` completed. All
+  carried observations are exact and only age-1 GFTT births are omitted, but
+  active results are 1 WIN/1 TIE/2 LOSS. A09 retains a strong XFeat positive;
+  A02 still selects the wrong scale branch and Bus becomes an exact tie. Frozen
+  decision is `NO_EXPANSION`.
 - 2026-09-05: A09/Bus donor-delete-only controls completed 6/6 PASS. Deletion
   does not reproduce either meaningful win; insertion is required, but matched
   GFTT also works, so the evidence supports an observation/initialization
@@ -154,12 +158,10 @@ Primary evidence authority for these boundaries: papers/final_claim_evidence.md 
 
 ## Next Experiments
 
-- Freeze one protected-KLT empty-slot admission development version: validated
-  candidates may use a small fixed share of naturally vacant slots after KLT
-  filtering and before GFTT refill, but may not delete existing observations.
-  Give its changed intervention structure a new matched-classical control and
-  first run the same six development windows. Do not expand to new windows
-  unless that unified version passes no-harm and shows net backend value.
+- Do not tune a second prefill budget/order/timing variant. Audit whether the
+  unchanged backend exposes a real-time initialization-complete state; if it
+  does, separately preregister one causally post-init admission test. If it
+  does not, stop this line rather than use outcome-known timing.
 - Use A02/A09/AFRL Bus only as development opportunity controls and A08 plus
   AFRL Cemetery/H07 as mandatory harm/stability controls; require an untouched
   roster for any confirmation.
@@ -175,6 +177,17 @@ and Bus do not retain the required joint >=10% rescue. All 42 new replays,
 12 exact KLT mappings, and seven common supports pass. Directional 6 WIN/1 MIXED
 labels are mostly small and do not establish no-harm, learned necessity, or
 superiority to KLT/modern learned frontends.
+
+## September 2026 protected-prefill decision
+
+`EXP-20260906-009` is complete with `NO_EXPANSION`. Its 18/18 frontend cells
+preserve every carried observation and omit only same-frame age-1 GFTT births.
+All 24 new and 18 identity-reused backend replays and all four common supports
+pass. A09/XFeat retains a strong convergence event and beats matched GFTT under
+fixed scale, but A02/XFeat and A02/SP+LG remain severe wrong-scale losses and
+Bus is an exact tie. The 12-arm denominator is 1 WIN/9 TIE/2 LOSS/0 FAIL. This
+invalidates mature-track protection as a sufficient no-harm rule and does not
+support superiority over KLT or a modern learned frontend.
 
 ## Important Files
 

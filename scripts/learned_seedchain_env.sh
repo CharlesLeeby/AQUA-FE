@@ -16,7 +16,7 @@ ROOT="${ROOT:-/home/ma/AQUA-FE_WS}"
 AQUAFE_SEEDCHAIN_PROFILE="${AQUAFE_SEEDCHAIN_PROFILE:-lineage_early_seed_noharm_v4}"
 
 case "$AQUAFE_SEEDCHAIN_PROFILE" in
-  lineage_safe_dense_start|generic_dense_start|lineage_relaxed_scan|lineage_init_safe_scan|lineage_early_seed_scan|lineage_early_seed_lineage_scan|lineage_early_seed_noharm_v4|lineage_early_seed_persistence_replace_v1|lineage_early_seed_singlechain_v2|lineage_early_seed_churn_guard_v3|lineage_early_seed_geometry_router_v1|lineage_early_seed_coverage_monotone_v2|lineage_delayed_newborn_slot_v3)
+  lineage_safe_dense_start|generic_dense_start|lineage_relaxed_scan|lineage_init_safe_scan|lineage_early_seed_scan|lineage_early_seed_lineage_scan|lineage_early_seed_noharm_v4|lineage_early_seed_persistence_replace_v1|lineage_early_seed_singlechain_v2|lineage_early_seed_churn_guard_v3|lineage_early_seed_geometry_router_v1|lineage_early_seed_coverage_monotone_v2|lineage_delayed_newborn_slot_v3|lineage_protected_prefill_slot_v1)
     export FRONTEND_CONFIG="${FRONTEND_CONFIG:-$ROOT/uw_frontend/configs/experiments/low_texture_xfeat_seedchain_frontend.yaml}"
     ;;
   cirs_dense_start)
@@ -29,7 +29,7 @@ case "$AQUAFE_SEEDCHAIN_PROFILE" in
 esac
 
 case "$AQUAFE_SEEDCHAIN_PROFILE" in
-  lineage_safe_dense_start|generic_dense_start|lineage_relaxed_scan|lineage_init_safe_scan|lineage_early_seed_scan|lineage_early_seed_lineage_scan|lineage_early_seed_noharm_v4|lineage_early_seed_persistence_replace_v1|lineage_early_seed_singlechain_v2|lineage_early_seed_churn_guard_v3|lineage_early_seed_geometry_router_v1|lineage_early_seed_coverage_monotone_v2|lineage_delayed_newborn_slot_v3|cirs_dense_start)
+  lineage_safe_dense_start|generic_dense_start|lineage_relaxed_scan|lineage_init_safe_scan|lineage_early_seed_scan|lineage_early_seed_lineage_scan|lineage_early_seed_noharm_v4|lineage_early_seed_persistence_replace_v1|lineage_early_seed_singlechain_v2|lineage_early_seed_churn_guard_v3|lineage_early_seed_geometry_router_v1|lineage_early_seed_coverage_monotone_v2|lineage_delayed_newborn_slot_v3|lineage_protected_prefill_slot_v1|cirs_dense_start)
     seedchain_warmup_default=8
     seedchain_max_per_frame_default=0
     seedchain_microburst_min_initial_default=20
@@ -70,6 +70,11 @@ case "$AQUAFE_SEEDCHAIN_PROFILE" in
     seedchain_persistence_coverage_monotone_default=0
     seedchain_persistence_max_per_frame_default=0
     seedchain_persistence_max_selected_frame_default=4
+    seedchain_prefill_slot_default=0
+    seedchain_prefill_slot_max_selected_frame_default=4
+    seedchain_prefill_slot_min_age_default=3
+    seedchain_prefill_slot_allow_all_non_loftr_default=0
+    seedchain_prefill_slot_max_per_frame_default=0
     if [[ "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_relaxed_scan" ]]; then
       # Screening-only profile for windows where confirmed XFeat exists but the
       # CIRS dense-start signature is too strict. Keep confirmation and quality
@@ -94,7 +99,7 @@ case "$AQUAFE_SEEDCHAIN_PROFILE" in
       seedchain_microburst_restarts_default=3
       seedchain_lineage_continuation_default=1
     fi
-    if [[ "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_scan" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_noharm_v4" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_persistence_replace_v1" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_singlechain_v2" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_churn_guard_v3" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_geometry_router_v1" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_coverage_monotone_v2" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_delayed_newborn_slot_v3" ]]; then
+    if [[ "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_scan" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_noharm_v4" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_persistence_replace_v1" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_singlechain_v2" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_churn_guard_v3" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_geometry_router_v1" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_coverage_monotone_v2" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_delayed_newborn_slot_v3" || "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_protected_prefill_slot_v1" ]]; then
       # Cross-dataset positive-search profile for windows where a small,
       # confirmed early XFeat burst helps VINS initialization. Keep the strict
       # dense-start/microburst contract, but do not suppress frames 0-7.
@@ -170,6 +175,18 @@ case "$AQUAFE_SEEDCHAIN_PROFILE" in
       seedchain_warmup_default=32
       seedchain_persistence_max_selected_frame_default=36
     fi
+    if [[ "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_protected_prefill_slot_v1" ]]; then
+      # Development-only route-C test. Keep every carried independent-mirror
+      # observation and let confirmed non-LoFTR candidates occupy at most six
+      # slots before deterministic same-frame GFTT refill. Potential newborn
+      # GFTT births remain an explicit opportunity cost.
+      seedchain_export_classical_mirror_default=1
+      seedchain_preserve_classical_budget_default=0
+      seedchain_persistence_replacement_default=0
+      seedchain_prefill_slot_default=1
+      seedchain_prefill_slot_allow_all_non_loftr_default=1
+      seedchain_prefill_slot_max_per_frame_default=6
+    fi
     if [[ "$AQUAFE_SEEDCHAIN_PROFILE" == "lineage_early_seed_lineage_scan" ]]; then
       # Experimental variant of lineage_early_seed_scan: keep the same compact
       # early XFeat seed, then allow a tiny budget of mature KLT-confirmed
@@ -203,6 +220,11 @@ case "$AQUAFE_SEEDCHAIN_PROFILE" in
     export FINAL_MIRROR_PERSISTENCE_GRID_ROWS="${FINAL_MIRROR_PERSISTENCE_GRID_ROWS:-4}"
     export FINAL_MIRROR_PERSISTENCE_GRID_COLS="${FINAL_MIRROR_PERSISTENCE_GRID_COLS:-6}"
     export FINAL_MIRROR_PERSISTENCE_MAX_PER_FRAME="${FINAL_MIRROR_PERSISTENCE_MAX_PER_FRAME:-$seedchain_persistence_max_per_frame_default}"
+    export FINAL_MIRROR_PREFILL_SLOT_ADMISSION="${FINAL_MIRROR_PREFILL_SLOT_ADMISSION:-$seedchain_prefill_slot_default}"
+    export FINAL_MIRROR_PREFILL_SLOT_MAX_SELECTED_FRAME="${FINAL_MIRROR_PREFILL_SLOT_MAX_SELECTED_FRAME:-$seedchain_prefill_slot_max_selected_frame_default}"
+    export FINAL_MIRROR_PREFILL_SLOT_MIN_AGE="${FINAL_MIRROR_PREFILL_SLOT_MIN_AGE:-$seedchain_prefill_slot_min_age_default}"
+    export FINAL_MIRROR_PREFILL_SLOT_ALLOW_ALL_NON_LOFTR="${FINAL_MIRROR_PREFILL_SLOT_ALLOW_ALL_NON_LOFTR:-$seedchain_prefill_slot_allow_all_non_loftr_default}"
+    export FINAL_MIRROR_PREFILL_SLOT_MAX_PER_FRAME="${FINAL_MIRROR_PREFILL_SLOT_MAX_PER_FRAME:-$seedchain_prefill_slot_max_per_frame_default}"
 
     export LEARNED_EXPORT_ONLINE_SEED_GATE="${LEARNED_EXPORT_ONLINE_SEED_GATE:-1}"
     export LEARNED_EXPORT_ONLINE_SEED_SOURCES="${LEARNED_EXPORT_ONLINE_SEED_SOURCES:-xfeat}"

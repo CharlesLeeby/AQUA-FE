@@ -1,0 +1,73 @@
+{
+  "arm": "slot_splg",
+  "backend_replayed": false,
+  "builder": "/home/ma/AQUA-FE_WS/scripts/build_gftt_matched_lineage_control.py",
+  "builder_sha256": "7dd75c8ffc6e9ec47231d8de4904ddde0c54451f200f0b22ac03490b74dc0b46",
+  "camera_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_protected_prefill_slot_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_superpoint_lightglue_every2_ppsv1_a02_0_900_slot_splg/aqualoc_archaeo02_pinhole.yaml",
+  "camera_config_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+  "inserted_observations": 8,
+  "known_limitation": "Retrospective source control matched to the learned intervention's IDs, frames, and dose; it is not an online detector-isolation control.",
+  "matched_lineages": 8,
+  "output_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_protected_prefill_slot_v1/matched_controls/a02_0_900/slot_splg/features_matched_gftt.bag",
+  "output_bag_sha256": "ba8770da7f7a9f6582e9ad3b2cfe95d94e916b03cbd09f476a48ef494f0bcc6e",
+  "plan": "/home/ma/AQUA-FE_WS/papers/frontend_protected_prefill_slot_v1/matched_control_plan.json",
+  "plan_sha256": "6fc9f93f847c223dcf550588b9a4004d935314f24562c9fbc0bcb94ceaac9fd3",
+  "raw_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_same_backend_confirmatory_v3/prepared/a02_0_900/input.bag",
+  "raw_bag_sha256": "ab0fa69eddce3bde6cb03efecf3c4fcafdd3d66e53691b9a2eaa1f531ee660db",
+  "removed_observations": 8,
+  "run_slug": "a02_0_900",
+  "schema_version": "aqua-fe-v2-matched-gftt-cell-v1",
+  "scientific_role": "retrospective matched-dose/slot attribution control",
+  "stages": [
+    {
+      "full_interval_survivors": 512,
+      "input_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_protected_prefill_slot_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_superpoint_lightglue_every2_ppsv1_a02_0_900_slot_splg/features.bag",
+      "input_bag_sha256": "22ad515df63a71bf4f7b068f4c4b3d290e0b2d822544b04d191441d2ad6899ef",
+      "inserted_observations": 5,
+      "output_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_protected_prefill_slot_v1/matched_controls/a02_0_900/slot_splg/stage_01.bag",
+      "output_bag_sha256": "8fe7b23f2a04e4e6e152e781aa174f45d674ef961827bc6950d98916b604f3f2",
+      "removed_observations": 5,
+      "stage": 1,
+      "stage_stats": "/home/ma/AQUA-FE_WS/papers/frontend_protected_prefill_slot_v1/matched_controls/a02_0_900/slot_splg/stage_01.json",
+      "stage_stats_sha256": "35152c5f4c0a64e851497da445942e04b4b1f81eb22d945d6a24a685fd1845ff",
+      "target_ids": [
+        10000015,
+        10000016,
+        10000017,
+        10000018,
+        10000021
+      ]
+    },
+    {
+      "full_interval_survivors": 512,
+      "input_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_protected_prefill_slot_v1/matched_controls/a02_0_900/slot_splg/stage_01.bag",
+      "input_bag_sha256": "8fe7b23f2a04e4e6e152e781aa174f45d674ef961827bc6950d98916b604f3f2",
+      "inserted_observations": 3,
+      "output_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_protected_prefill_slot_v1/matched_controls/a02_0_900/slot_splg/features_matched_gftt.bag",
+      "output_bag_sha256": "ba8770da7f7a9f6582e9ad3b2cfe95d94e916b03cbd09f476a48ef494f0bcc6e",
+      "removed_observations": 3,
+      "stage": 2,
+      "stage_stats": "/home/ma/AQUA-FE_WS/papers/frontend_protected_prefill_slot_v1/matched_controls/a02_0_900/slot_splg/stage_02.json",
+      "stage_stats_sha256": "87253e704f3672c735e9490150db60255ebc76d6e872570e3e2a3681df0e694d",
+      "target_ids": [
+        10000000,
+        10000004,
+        10000007
+      ]
+    }
+  ],
+  "status": "MATCHED",
+  "target_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_protected_prefill_slot_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_superpoint_lightglue_every2_ppsv1_a02_0_900_slot_splg/features.bag",
+  "target_bag_sha256": "22ad515df63a71bf4f7b068f4c4b3d290e0b2d822544b04d191441d2ad6899ef",
+  "target_ids": [
+    10000015,
+    10000016,
+    10000017,
+    10000018,
+    10000021,
+    10000000,
+    10000004,
+    10000007
+  ],
+  "target_lineages": 8
+}

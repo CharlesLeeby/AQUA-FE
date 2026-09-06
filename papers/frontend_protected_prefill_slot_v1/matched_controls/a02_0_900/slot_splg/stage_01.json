@@ -1,0 +1,177 @@
+{
+  "allow_sparse_target_schedule": false,
+  "assignments": [
+    {
+      "candidate_index": 275,
+      "control_final_pixel": [
+        154.0,
+        463.0
+      ],
+      "control_id": 10000015,
+      "control_initial_pixel": [
+        154.0,
+        463.0
+      ],
+      "initial_distance_px": 2.8315012029668196,
+      "target_frames": [
+        2
+      ],
+      "target_id": 10000015,
+      "target_initial_pixel": [
+        154.22775268554688,
+        460.17767333984375
+      ]
+    },
+    {
+      "candidate_index": 101,
+      "control_final_pixel": [
+        478.0,
+        153.0
+      ],
+      "control_id": 10000016,
+      "control_initial_pixel": [
+        478.0,
+        153.0
+      ],
+      "initial_distance_px": 6.6322126307722975,
+      "target_frames": [
+        2
+      ],
+      "target_id": 10000016,
+      "target_initial_pixel": [
+        482.0086975097656,
+        147.7163848876953
+      ]
+    },
+    {
+      "candidate_index": 142,
+      "control_final_pixel": [
+        454.0,
+        134.0
+      ],
+      "control_id": 10000017,
+      "control_initial_pixel": [
+        454.0,
+        134.0
+      ],
+      "initial_distance_px": 8.3529381898193,
+      "target_frames": [
+        2
+      ],
+      "target_id": 10000017,
+      "target_initial_pixel": [
+        456.3773193359375,
+        142.0074920654297
+      ]
+    },
+    {
+      "candidate_index": 282,
+      "control_final_pixel": [
+        402.0,
+        93.0
+      ],
+      "control_id": 10000018,
+      "control_initial_pixel": [
+        402.0,
+        93.0
+      ],
+      "initial_distance_px": 9.312785827765552,
+      "target_frames": [
+        2
+      ],
+      "target_id": 10000018,
+      "target_initial_pixel": [
+        396.7488708496094,
+        85.3088607788086
+      ]
+    },
+    {
+      "candidate_index": 89,
+      "control_final_pixel": [
+        425.0,
+        97.0
+      ],
+      "control_id": 10000021,
+      "control_initial_pixel": [
+        425.0,
+        97.0
+      ],
+      "initial_distance_px": 1.8443401999461178,
+      "target_frames": [
+        2
+      ],
+      "target_id": 10000021,
+      "target_initial_pixel": [
+        423.2350769042969,
+        97.53538513183594
+      ]
+    }
+  ],
+  "builder_script_sha256": "7dd75c8ffc6e9ec47231d8de4904ddde0c54451f200f0b22ac03490b74dc0b46",
+  "camera_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_protected_prefill_slot_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_superpoint_lightglue_every2_ppsv1_a02_0_900_slot_splg/aqualoc_archaeo02_pinhole.yaml",
+  "camera_config_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+  "control_id_mode": "preserve_target_ids",
+  "control_parameters": {
+    "block_size": 7,
+    "control_source_code": 0,
+    "exclusion_radius": 18,
+    "first_frame_velocity": "zero",
+    "lk_criteria_count": 30,
+    "lk_criteria_epsilon": 0.01,
+    "lk_max_level": 3,
+    "lk_win_size": [
+      21,
+      21
+    ],
+    "max_candidates": 512,
+    "max_fb_error": 1.0,
+    "max_image_dt": 0.002,
+    "min_distance": 18,
+    "opencv_rng_seed": 20260803,
+    "quality_level": 0.01
+  },
+  "feature_frames": 450,
+  "feature_topic": "/feature_tracker/feature",
+  "first_replaced_frame": 2,
+  "full_interval_survivors": 512,
+  "gftt_candidates": 512,
+  "image_topic": "/camera/image_raw",
+  "inserted_observations": 5,
+  "last_replaced_frame": 2,
+  "new_id_base": 15000000,
+  "opencv_version": "4.2.0",
+  "output_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_protected_prefill_slot_v1/matched_controls/a02_0_900/slot_splg/stage_01.bag",
+  "output_bag_sha256": "8fe7b23f2a04e4e6e152e781aa174f45d674ef961827bc6950d98916b604f3f2",
+  "python_version": "3.8.10",
+  "raw_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_same_backend_confirmatory_v3/prepared/a02_0_900/input.bag",
+  "raw_bag_sha256": "ab0fa69eddce3bde6cb03efecf3c4fcafdd3d66e53691b9a2eaa1f531ee660db",
+  "removed_observations": 5,
+  "replaced_frames": 1,
+  "schema_version": "gftt-matched-lineage-control-v2",
+  "target_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_protected_prefill_slot_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_superpoint_lightglue_every2_ppsv1_a02_0_900_slot_splg/features.bag",
+  "target_bag_sha256": "22ad515df63a71bf4f7b068f4c4b3d290e0b2d822544b04d191441d2ad6899ef",
+  "target_frames_by_id": {
+    "10000015": [
+      2
+    ],
+    "10000016": [
+      2
+    ],
+    "10000017": [
+      2
+    ],
+    "10000018": [
+      2
+    ],
+    "10000021": [
+      2
+    ]
+  },
+  "target_ids": [
+    10000015,
+    10000016,
+    10000017,
+    10000018,
+    10000021
+  ]
+}

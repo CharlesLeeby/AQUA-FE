@@ -1,0 +1,30 @@
+{
+  "active_arm_windows": 4,
+  "active_cells": [
+    "a09_6000_6800:slot_xfeat",
+    "a02_0_900:slot_xfeat",
+    "a02_0_900:slot_splg",
+    "afrl_bus_s180_d045:slot_xfeat"
+  ],
+  "cells_expected": 18,
+  "cells_present": 18,
+  "decision": "FRONTEND_GO",
+  "experiment_id": "EXP-20260906-009",
+  "learned_arm_windows": 12,
+  "matched_control_audit_sha256": "c9bc55f3d3c47b6cb88716ba9d8b9f8941fa6f62194f13fec5503b41c06e297d",
+  "matched_control_cells": 4,
+  "matched_control_complete": true,
+  "matched_control_plan_sha256": "6fc9f93f847c223dcf550588b9a4004d935314f24562c9fbc0bcb94ceaac9fd3",
+  "safety_checks": {
+    "actions_only_frames_0_4": true,
+    "all_18_cells_complete_and_integrity_pass": true,
+    "all_carried_observations_exact": true,
+    "candidate_age_at_least_3": true,
+    "confirmed_non_loftr_sources_only": true,
+    "no_extra_classical_observations": true,
+    "only_age1_gftt_births_omitted": true,
+    "strict_count_contract_and_cap": true,
+    "zero_action_exact_klt": true
+  },
+  "schema_version": "aqua-fe-protected-prefill-slot-v1-frontend-v1"
+}

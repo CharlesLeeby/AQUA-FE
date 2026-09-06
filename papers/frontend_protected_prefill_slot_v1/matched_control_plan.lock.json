@@ -1,0 +1,12 @@
+{
+  "action_audit_sha256": "aa3acee9bddae5f38b844445462584dc7f57f5f8a4736016c017a1cf5f1c0f12",
+  "backend_results_seen_before_freeze": false,
+  "builder": "scripts/build_gftt_matched_lineage_control.py",
+  "builder_sha256": "7dd75c8ffc6e9ec47231d8de4904ddde0c54451f200f0b22ac03490b74dc0b46",
+  "experiment_id": "EXP-20260906-009",
+  "frontend_audit_sha256": "ffcaa1cf91a82b37fd0f81e320377dc35aec1c976efc9b2646c32a9798067299",
+  "frozen_at": "2026-09-06T05:27:33.850437+08:00",
+  "matched_control_plan": "papers/frontend_protected_prefill_slot_v1/matched_control_plan.json",
+  "matched_control_plan_sha256": "6fc9f93f847c223dcf550588b9a4004d935314f24562c9fbc0bcb94ceaac9fd3",
+  "schema_version": "aqua-fe-protected-prefill-slot-v1-matched-plan-lock-v1"
+}

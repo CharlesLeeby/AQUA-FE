@@ -524,3 +524,68 @@ retaining meaningful benefit. Learned persistent-anchor gain is unproven.
 ### Next Experiment
 
 None in this protocol. `NO_EXPANSION`; a new mechanism needs a new freeze.
+
+## 2026-09-06 — Is carried-track protection sufficient for no-harm?
+
+### Research Question
+
+Can A09/Bus benefit survive without A02 harm if candidates compete only with
+newborn GFTT and never delete carried observations?
+
+### Hypothesis
+
+If mature deletion causes A02 harm, pre-refill admission should retain the
+useful early candidate schedule while removing the wrong-scale failure.
+
+### Motivation
+
+v2 insertion was required relative to deletion-only for positives, while
+delayed v3 protected A02 but suppressed meaningful rescue.
+
+### Related Baseline
+
+Fresh KLT, v2, delayed v3, and same-ID/frame/dose matched GFTT.
+
+### Proposed Idea
+
+Keep v2 candidate production/timing; preserve carried mirror observations and
+spend only deterministic newborn-GFTT capacity.
+
+### Why It Might Work
+
+It retains the early candidate schedule but removes mature-track deletion.
+
+### Assumptions
+
+Source/age identify births; newborn opportunity cost is explicit; proxy
+evaluation is valid only within the frozen development contract.
+
+### Potential Failure Cases
+
+Newborn identity may itself control initialization; candidates may be too short;
+learned content may matter only in one sequence.
+
+### Evidence
+
+All frontend, matched, backend, and support gates pass. All 21 omissions are
+age-1 GFTT with zero carried mismatch. A09 XFeat converges and beats matched.
+A02 learned and matched both select scale near 0.50 versus KLT 0.899 and suffer
+>6.7x APE. Bus is backend-inert.
+
+### Current Conclusion
+
+The hypothesis is rejected. Carried-track protection is insufficient; startup
+newborn scheduling alone can flip scale. A09 remains one development positive,
+but the unified method is unsupported.
+
+### Open Questions
+
+- Is a real-time initialization-complete signal already exposed?
+- After a shared initialized prefix, can a multi-frame learned lineage affect
+  residuals without steering initialization?
+- Should this line stop if no causal online signal exists?
+
+### Next Experiment
+
+No new variant under `EXP-20260906-009`. Perform a read-only backend-interface
+audit first.
