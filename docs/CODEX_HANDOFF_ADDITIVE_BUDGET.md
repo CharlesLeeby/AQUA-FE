@@ -7,3 +7,5 @@
 [报告](../papers/frontend_additive_budget_v1/report.md) / [比较](../papers/frontend_additive_budget_v1/comparisons.csv) / [决策](../papers/frontend_additive_budget_v1/decision.json)。
 
 恢复：从独立 worktree 加载 `/opt/ros/noetic/setup.bash`，设置 `PYTHONPATH=.:$PYTHONPATH`，用 `/mnt/data/AQUA-FE_WS/envs/aquafe_cuda/bin/python scripts/run_additive_budget_v1.py --window a09_6000_6800`。仅在无已完成 receipt 时运行；不可覆盖未完成目录。
+
+后端已完成诊断构建，实际执行锁为 `backend_execution_lock_v2.json`；原锁保留审计。数学算法/1000容量不变。容量证据、评价时间适配及探针规则见 capacity_and_evaluation_addendum.md。所有正式结果仍 Not evaluated。

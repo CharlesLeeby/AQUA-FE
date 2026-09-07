@@ -779,3 +779,17 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: 后端逐ID使用诊断和容量检查待完成。
 - Interpretation: 仅实现/合同证据，不是收益证据。
 - Next steps: 第一窗结构容量探针及完整矩阵。
+
+## 2026-09-07 — additive-budget-v1 后端诊断合同
+- Task objective: 证明实际容量并区分发布量、接收量与优化残差。
+- Problem / motivation: NUM_OF_F1000 是深度存储而非每帧上限；全窗ID上界过于保守。
+- Files changed: build/run_additive_budget_backend.py、audit_additive_budget_capacity.py、评价适配器、诊断patch/header、构建与执行/evaluation锁及补充合同。
+- Implementation: 隔离源码/对象快照构建；只读 received/eligible/residual/solver 日志，写深度前容量及消息长度检查。
+- Technical decisions: 原容量1000未扩容；所有臂用同版本。连续ID的11帧区间证明给出2×最大单帧总量上界；上界不足时用有防越界保护的正式合同探针，不误称实际容量不足。
+- Experiments performed: A09 源流运行中；后端 Not evaluated。
+- Quantitative results: B整窗>=4次ID为3220/1718/5800/1688/8631/7034，按锁定六窗顺序；只是容量宽松上界，非同时优化量。精度 Not evaluated。
+- Qualitative observations: 隔离构建动态链接指向新诊断lib；外部共享后端均未改动。
+- Failed attempts: attempt1补丁anchor重复导致构建前停止，保留目录与console；attempt2成功，修正定位不改变算法。Git CSV CRLF检查警告，非冻结占位CSV转换LF，冻结windows保持原字节。
+- Known issues: 真实solver资源/容量需运行后读日志；无独立GT。
+- Interpretation: 容量预检与工程诊断不构成学习收益证据。
+- Next steps: 完成第一窗输出及容量审计，资源允许后串行后端。

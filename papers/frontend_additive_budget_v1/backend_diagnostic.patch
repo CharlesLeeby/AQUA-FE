@@ -1,0 +1,81 @@
+--- a/src/rosNodeTest.cpp
++++ b/src/rosNodeTest.cpp
+@@ -148,8 +148,13 @@
+ }
+ 
+ 
++#include "additive_audit.h"
++
+ void feature_callback(const sensor_msgs::PointCloudConstPtr &feature_msg)
+ {
++    if (feature_msg->channels.size() < 6) throw std::runtime_error("INVALID_FEATURE_CHANNELS");
++    for (const auto &channel : feature_msg->channels)
++        if (channel.values.size() != feature_msg->points.size()) throw std::runtime_error("INVALID_FEATURE_LENGTH");
+     map<int, vector<pair<int, Eigen::Matrix<double, 8, 1>>>> featureFrame;
+     for (unsigned int i = 0; i < feature_msg->points.size(); i++)
+     {
+@@ -185,6 +190,11 @@
+         featureFrame[feature_id].emplace_back(camera_id,  xyz_uv_velocity);
+     }
+     double t = feature_msg->header.stamp.toSec();
++    if (FILE* f = aquafe_audit_file()) {
++        for (const auto &item : featureFrame)
++            std::fprintf(f,"received,%.9f,%d,%zu\n",t,item.first,item.second.size());
++        std::fflush(f);
++    }
+     estimator.inputFeature(t, featureFrame);
+     return;
+ }
+--- a/src/estimator/estimator.cpp
++++ b/src/estimator/estimator.cpp
+@@ -8,6 +8,7 @@
+  *******************************************************/
+ 
+ #include "estimator.h"
++#include "../additive_audit.h"
+ #include "../utility/visualization.h"
+ #include "../factor/initial_bias_factor.h"
+ #include <ceres/normal_prior.h>
+@@ -875,6 +876,8 @@
+     }
+ 
+ 
++    if (f_manager.getFeatureCount() > NUM_OF_F)
++        throw std::runtime_error("CAPACITY_UNSUPPORTED: depth features exceed NUM_OF_F");
+     VectorXd dep = f_manager.getDepthVector();
+     for (int i = 0; i < f_manager.getFeatureCount(); i++)
+         para_Feature[i][0] = dep(i);
+@@ -1134,6 +1137,7 @@
+         }
+     }
+ 
++    std::map<int, int> aquafe_residuals;
+     int f_m_cnt = 0;
+     int feature_index = -1;
+     for (auto &it_per_id : f_manager.feature)
+@@ -1158,6 +1162,7 @@
+                                                                  it_per_id.feature_per_frame[0].cur_td, it_per_frame.cur_td);
+                 f_td->setQualityWeight(std::min(it_per_id.feature_per_frame[0].visual_quality, it_per_frame.visual_quality));
+                 problem.AddResidualBlock(f_td, loss_function, para_Pose[imu_i], para_Pose[imu_j], para_Ex_Pose[0], para_Feature[feature_index], para_Td[0]);
++                if (aquafe_audit_file()) ++aquafe_residuals[it_per_id.feature_id];
+             }
+ 
+             if(STEREO && it_per_frame.is_stereo)
+@@ -1202,6 +1207,17 @@
+     TicToc t_solver;
+     ceres::Solver::Summary summary;
+     ceres::Solve(options, &problem, &summary);
++    if (FILE* f = aquafe_audit_file()) {
++        for (const auto &item : f_manager.feature)
++            if (item.feature_per_frame.size() >= 4)
++                std::fprintf(f,"eligible,%.9f,%d,%zu\n",Headers[frame_count],item.feature_id,item.feature_per_frame.size());
++        for (const auto &item : aquafe_residuals)
++            std::fprintf(f,"residual,%.9f,%d,%d\n",Headers[frame_count],item.first,item.second);
++        std::fprintf(f,"solver,%.9f,%.9f,%.9f,%zu,%d\n",Headers[frame_count],
++            summary.total_time_in_seconds,options.max_solver_time_in_seconds,
++            summary.iterations.size(),static_cast<int>(summary.termination_type));
++        std::fflush(f);
++    }
+     //cout << summary.BriefReport() << endl;
+     ROS_DEBUG("Iterations : %d", static_cast<int>(summary.iterations.size()));
+     //printf("solver costs: %f \n", t_solver.toc());

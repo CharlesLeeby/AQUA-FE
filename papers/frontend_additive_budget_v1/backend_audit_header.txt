@@ -1,0 +1,9 @@
+#pragma once
+#include <cstdio>
+#include <cstdlib>
+#include <stdexcept>
+inline FILE* aquafe_audit_file() {
+    static FILE* f = [](){ const char* p=std::getenv("AQUAFE_BACKEND_AUDIT");
+        return p ? std::fopen(p,"a") : nullptr; }();
+    return f;
+}

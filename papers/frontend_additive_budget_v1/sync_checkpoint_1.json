@@ -1,0 +1,25 @@
+{
+  "commit": "d1c793a8d56b3f8efe2ed3b3d770b706e692dbdc",
+  "readback": [
+    {
+      "path": "docs/CODEX_HANDOFF_ADDITIVE_BUDGET.md",
+      "remote_sha256": "5619bac5114bd843b3ac0c7f8c81096ccdd4286505b90c5d3e2b92e50b6ee5c0",
+      "equal": true
+    },
+    {
+      "path": "papers/frontend_additive_budget_v1/report.md",
+      "remote_sha256": "18ac89f2562e3fa772f9490eb9960e05f125c89700ab2a2b886a27ec27de46c6",
+      "equal": true
+    },
+    {
+      "path": "papers/frontend_additive_budget_v1/comparisons.csv",
+      "remote_sha256": "291572d3db3652d97ebc107afd1c58662d488f8022fad1cb4295efc6c2bcbdac",
+      "equal": true
+    },
+    {
+      "path": "papers/frontend_additive_budget_v1/decision.json",
+      "remote_sha256": "6f260df9189af889e408f4b6eb8d8547e72ce0aea68c8a2a969bda9325c5834b",
+      "equal": true
+    }
+  ]
+}
