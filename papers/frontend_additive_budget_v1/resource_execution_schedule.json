@@ -1,0 +1,24 @@
+{
+  "frontend_cpus": [
+    0,
+    6
+  ],
+  "backend_cpus": [
+    2,
+    3,
+    8,
+    9
+  ],
+  "physical_core_groups": {
+    "frontend": [
+      0
+    ],
+    "backend": [
+      2,
+      3
+    ]
+  },
+  "scope": "Only processes launched by this task; no affinity changes to other tasks",
+  "source_timing_boundary": "A09 source and first part of A02 were generated before pinning; report measured wall costs with this limitation",
+  "backend_timing_boundary": "All formal backend runs use same affinity, one replay at a time; own frontend may run on separate physical core; external VINS means WAITING_RESOURCE"
+}

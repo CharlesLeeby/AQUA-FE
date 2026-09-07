@@ -807,3 +807,29 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: APE/RPE/优化使用量 Not evaluated；逐ID精确私有终止原因Unknown，按类累计拒绝有源流证据。
 - Interpretation: 只支持剂量差已形成，不能支持收益。
 - Next steps: 固定五窗继续，正式后端串行且需资源空闲。
+
+## 2026-09-07 — A09完整后端与A02前端检查点
+- Task objective: 完成首窗正式矩阵并保持全分母。
+- Problem/motivation: 剂量增加不代表后端净收益。
+- Files changed: 完整统计表、A09共同支撑/evo摘要、checkpoint_a09、环境/CPU执行记录、串行恢复控制器。
+- Implementation: 12次新replay、接收/资格/残差日志、6组支撑；修正分析中的reset代理为实际system reboot日志而非构造函数init begins；增加solver累计/接近上限诊断。
+- Technical decisions: 原容量足够，未扩容；保留同一数学后端。自身源流/后端绑不同物理核，成本边界明确。
+- Experiments: A09正式12次；A02前端4臂完成，等待分析更新。
+- Quantitative results: 见EXPERIMENTS与checkpoint_a09；A02 L6=2688、L-all=116129、C-all=41339次追加。
+- Qualitative observations: A09新增观测也实际进入残差，但未救回尺度异常。
+- Failed attempts: 无新工程失败；A09负结果完整保留。
+- Known issues: 其余窗精度Not evaluated；没有逐ID私有tracker精确终止映射。
+- Interpretation: 局部否定高剂量净收益，不能推广至尚未完成窗。
+- Next steps: 顺序执行其余固定矩阵。
+
+## 2026-09-07 — 添加式来源与receipt语义只读审计
+- Objective/problem: 核对C-all公平性及时间元数据，避免共享函数被误称相同权重公式。
+- Files changed: implementation_audit_notes.md、source_weight_audit_checkpoint.csv；冻结方法/receipt未改。
+- Implementation/technical decisions: 读取vins_safe源分支并量化已完成源流q；将原receipt.started_at解释为生成时刻，精确启动时刻Unknown。
+- Experiments: 未新增实验；A09/A02/Bus既有源流只读审计。
+- Quantitative results: 来源q精确范围见审计CSV；不改任何观测或后端权重。
+- Qualitative observations: C和XFeat继承不同来源权重分支，核心XFeat L6/all仍完全相同。
+- Failed attempts: 无。
+- Known issues: 来源方案比较受剂量、成本及来源权重混杂；精确私有终止原因Unknown。
+- Interpretation: 不可宣称纯检测器隔离或等资源learned优越；L6/all数量控制仍成立。
+- Next steps: 完成原矩阵，报告全部混杂与负例。

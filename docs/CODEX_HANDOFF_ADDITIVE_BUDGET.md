@@ -11,3 +11,5 @@
 后端已完成诊断构建，实际执行锁为 `backend_execution_lock_v2.json`；原锁保留审计。数学算法/1000容量不变。容量证据、评价时间适配及探针规则见 capacity_and_evaluation_addendum.md。所有正式结果仍 Not evaluated。
 
 A09前端四臂完成；L6=2251、L-all=42018、C-all=22392次追加观测，KLT逐字段保持。backend B/repeat1预启动遇到WAITING_RESOURCE，尚无正式replay。剩余五窗源流在本轮终端会话顺序执行；不要重复启动，先查进程/receipt。准确状态见report和decision。
+
+A09正式12/12完成且共同支撑/evo通过：更多剂量未改善净收益，两学习添加臂对B实用退化。A02前端4臂完成，后端控制器等待/顺序执行；AFRL Bus源流运行中。见checkpoint_a09.md。恢复前检查 execute_additive_budget_matrix.py 与 frontend进程，不重复启动。

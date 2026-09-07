@@ -284,3 +284,5 @@ or the twelve-window extension. Full evidence and current public index:
 papers/frontend_admission_continuation_v1/report.md and docs/CODEX_HANDOFF.md.
 
 2026-09-07：用户授权独立 additive-budget-v1，worktree `/home/ma/AQUA-FE_WS_additive_budget_v1`；四臂固定候选合同见独立交接。旧 NO_EXPANSION 不改写；新效果 Not evaluated。
+
+2026-09-07 additive-budget-v1 A09完整12次回放：剂量差充分，但L-all对L6未获实用收益，两学习添加臂对B实用退化；属于严重尺度异常开发窗。其余五窗继续原合同，未改变主方法/旧结论。见独立checkpoint_a09.md。

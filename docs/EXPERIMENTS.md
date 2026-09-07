@@ -666,3 +666,14 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Interpretation: Confirmed fact: A09剂量对照充分。Hypothesis / Inference: 更多有效后端约束是否改善仍未知。
 - Conclusion: 尚不能回答净收益，未晋升主方法。
 - Follow-up: 其余五窗源流正在顺序执行；后端等待外部VINS任务释放资源，不终止其他任务。
+
+## EXP-20260907-ADDITIVE-BUDGET-V1 — A09后端完成
+- Date: 2026-09-07。Status/scientific role: A09 12/12新回放完成，固定development局部结果；整个矩阵未完成。
+- Git/branch: 诊断后端2297bb8合同，源流d1c793a文件哈希；exp/additive-budget-v1-20260907。
+- Dataset/window/environment/configuration: 同锁A09 6000–6800，B/L6/L-all/C-all，max_solver_time=.04/8iter，固定端口12671，后端CPU2,3,8,9；自身前端在不同物理核。
+- Baseline/modification: 完整共享KLT；公开并发6/all和传统all。
+- Commands/artifacts: run_additive_budget_backend.py四臂三重复；evaluate_additive_budget_v1.py；runtime backend/a09_6000_6800/*/repeat*/receipt.json；paper checkpoint_a09.md/common_support/a09_6000_6800/。
+- Metrics/results: APE/RPE中位B1242.139997/150.846816、L61415.067546/171.484729、L-all1451.201568/175.767799、C-all1242.363832/150.846781 m。完整范围见共同支撑CSV。
+- Validity/common support: 12个接收完整、388poses、覆盖96.75%；38共同poses/37秒/95%/37RPE对；evo通过。未触发1000容量保护；有轨迹与初始化日志不代表定位可靠。
+- Interpretation/conclusion: 剂量对照充分但A09未获净收益；L-all vs L6双升而未达实用变化门，两学习添加臂对B实用退化。所有臂严重尺度漂移；不把尺度对齐诊断替代fixed-scale主结果。
+- Follow-up: 保留负例，继续固定其余五窗；不扩窗、不调参。

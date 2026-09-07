@@ -747,3 +747,17 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion: Hypothesis / Inference，未获得支持或反证。
 - Open questions: 剂量差、残差真实使用和端到端作用。
 - Next experiment: 预注册固定六窗四臂，不新增扫描。
+
+## 2026-09-07 — A09添加式剂量差与负收益
+- Research question: 同一合格XFeat流解除6并发配额，更多实际剂量能否改善A09？
+- Hypothesis: 完整KLT上的更高剂量可能补足约束。
+- Motivation: 区分旧replacement与纯加法/数量。
+- Related baseline: 锁定B及L6，全部同一诊断后端、三重复。
+- Proposed idea: 冻结L-all相对L6数量对照。
+- Why it might work: 扩大持续观测及后端实际残差。
+- Assumptions: 固定支撑和尺度；这是开发窗、非独立GT。
+- Potential failure cases: 初始化尺度错误、非线性求解、观测错误及solver时间预算。
+- Evidence: Confirmed fact: L-all42018次对L62251次；残差建立次数也明显增加；38共同poses/37s/95%支撑、evo通过。APE中位L-all1451.201568m、L61415.067546m、B1242.139997m。详见checkpoint_a09.md和共同支撑CSV。
+- Current conclusion: A09高剂量未提供净收益；对L6差异SMALL_OR_UNCERTAIN，对B两学习添加臂PRACTICAL_LOSS。Hypothesis / Inference: 尺度异常/初始化可能主导，但未完成因果归因。
+- Open questions: 其余固定五窗、候选使用率与成本的差异。
+- Next experiment: 按原合同完成剩余五窗；不围绕A09调参。

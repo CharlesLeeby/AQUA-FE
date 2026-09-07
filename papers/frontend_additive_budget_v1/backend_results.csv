@@ -1,73 +1,73 @@
-run_slug,arm,repeat,status
-a09_6000_6800,B,1,Not evaluated.
-a09_6000_6800,B,2,Not evaluated.
-a09_6000_6800,B,3,Not evaluated.
-a09_6000_6800,L6,1,Not evaluated.
-a09_6000_6800,L6,2,Not evaluated.
-a09_6000_6800,L6,3,Not evaluated.
-a09_6000_6800,L-all,1,Not evaluated.
-a09_6000_6800,L-all,2,Not evaluated.
-a09_6000_6800,L-all,3,Not evaluated.
-a09_6000_6800,C-all,1,Not evaluated.
-a09_6000_6800,C-all,2,Not evaluated.
-a09_6000_6800,C-all,3,Not evaluated.
-a02_0_900,B,1,Not evaluated.
-a02_0_900,B,2,Not evaluated.
-a02_0_900,B,3,Not evaluated.
-a02_0_900,L6,1,Not evaluated.
-a02_0_900,L6,2,Not evaluated.
-a02_0_900,L6,3,Not evaluated.
-a02_0_900,L-all,1,Not evaluated.
-a02_0_900,L-all,2,Not evaluated.
-a02_0_900,L-all,3,Not evaluated.
-a02_0_900,C-all,1,Not evaluated.
-a02_0_900,C-all,2,Not evaluated.
-a02_0_900,C-all,3,Not evaluated.
-afrl_bus_s180_d045,B,1,Not evaluated.
-afrl_bus_s180_d045,B,2,Not evaluated.
-afrl_bus_s180_d045,B,3,Not evaluated.
-afrl_bus_s180_d045,L6,1,Not evaluated.
-afrl_bus_s180_d045,L6,2,Not evaluated.
-afrl_bus_s180_d045,L6,3,Not evaluated.
-afrl_bus_s180_d045,L-all,1,Not evaluated.
-afrl_bus_s180_d045,L-all,2,Not evaluated.
-afrl_bus_s180_d045,L-all,3,Not evaluated.
-afrl_bus_s180_d045,C-all,1,Not evaluated.
-afrl_bus_s180_d045,C-all,2,Not evaluated.
-afrl_bus_s180_d045,C-all,3,Not evaluated.
-a08_2700_3600,B,1,Not evaluated.
-a08_2700_3600,B,2,Not evaluated.
-a08_2700_3600,B,3,Not evaluated.
-a08_2700_3600,L6,1,Not evaluated.
-a08_2700_3600,L6,2,Not evaluated.
-a08_2700_3600,L6,3,Not evaluated.
-a08_2700_3600,L-all,1,Not evaluated.
-a08_2700_3600,L-all,2,Not evaluated.
-a08_2700_3600,L-all,3,Not evaluated.
-a08_2700_3600,C-all,1,Not evaluated.
-a08_2700_3600,C-all,2,Not evaluated.
-a08_2700_3600,C-all,3,Not evaluated.
-afrl_cemetery_s135_d045,B,1,Not evaluated.
-afrl_cemetery_s135_d045,B,2,Not evaluated.
-afrl_cemetery_s135_d045,B,3,Not evaluated.
-afrl_cemetery_s135_d045,L6,1,Not evaluated.
-afrl_cemetery_s135_d045,L6,2,Not evaluated.
-afrl_cemetery_s135_d045,L6,3,Not evaluated.
-afrl_cemetery_s135_d045,L-all,1,Not evaluated.
-afrl_cemetery_s135_d045,L-all,2,Not evaluated.
-afrl_cemetery_s135_d045,L-all,3,Not evaluated.
-afrl_cemetery_s135_d045,C-all,1,Not evaluated.
-afrl_cemetery_s135_d045,C-all,2,Not evaluated.
-afrl_cemetery_s135_d045,C-all,3,Not evaluated.
-h07_0_1000,B,1,Not evaluated.
-h07_0_1000,B,2,Not evaluated.
-h07_0_1000,B,3,Not evaluated.
-h07_0_1000,L6,1,Not evaluated.
-h07_0_1000,L6,2,Not evaluated.
-h07_0_1000,L6,3,Not evaluated.
-h07_0_1000,L-all,1,Not evaluated.
-h07_0_1000,L-all,2,Not evaluated.
-h07_0_1000,L-all,3,Not evaluated.
-h07_0_1000,C-all,1,Not evaluated.
-h07_0_1000,C-all,2,Not evaluated.
-h07_0_1000,C-all,3,Not evaluated.
+run_slug,arm,repeat,status,wall_s,peak_node_rss_bytes,feature_bag_sha256,binary_sha256,run_dir,initialization_count,failure_detection_count,reset_count_proxy,lost_tracking_count,initialization_log_first,received_KLT,received_KLT_unique_ids,received_candidate,received_candidate_unique_ids,eligible_KLT,eligible_KLT_unique_ids,eligible_candidate,eligible_candidate_unique_ids,residual_KLT,residual_KLT_unique_ids,residual_candidate,residual_candidate_unique_ids,solver_calls,solver_near_time_limit_count,solver_at_or_above_time_limit_count,solver_total_s,solver_mean_s,max_solver_s,max_actual_eligible,received_complete,poses,trajectory_coverage,trajectory_length_m,first_pose_sensor_s,runability
+a09_6000_6800,B,1,COMPLETE,60.32174500299152,89210880,6de8ffe9226c1c786bbd80b53049f2f4f1f58c2859808034b60b5dca171884ff,e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/backend/a09_6000_6800/B/repeat1,1,0,0,Unknown,"[ INFO] [1788794405.161949545, 1542889047.416713875]: Initialization finish!",140000,19477,0,0,34870,2869,0,0,167832,2869,0,0,388,16,11,3.8069426830000026,0.009811707945876295,0.034933083,275,True,388,0.967497263970065,4500.522243794641,1542889047.27177088,PASS
+a09_6000_6800,B,2,COMPLETE,60.52062686299905,89919488,6de8ffe9226c1c786bbd80b53049f2f4f1f58c2859808034b60b5dca171884ff,e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/backend/a09_6000_6800/B/repeat2,1,0,0,Unknown,"[ INFO] [1788794465.781912607, 1542889047.416974655]: Initialization finish!",140000,19477,0,0,34868,2869,0,0,167825,2869,0,0,388,12,8,3.746998309999999,0.009657212139175255,0.03522508,275,True,388,0.967497263970065,4500.4974714931095,1542889047.27177088,PASS
+a09_6000_6800,B,3,COMPLETE,60.3202350599895,89911296,6de8ffe9226c1c786bbd80b53049f2f4f1f58c2859808034b60b5dca171884ff,e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/backend/a09_6000_6800/B/repeat3,1,0,0,Unknown,"[ INFO] [1788794526.699649039, 1542889047.416874517]: Initialization finish!",140000,19477,0,0,34455,2865,0,0,166469,2865,0,0,388,15,13,3.747188190999999,0.009657701523195873,0.035575946,275,True,388,0.967497263970065,4471.493000055597,1542889047.27177088,PASS
+a09_6000_6800,L6,1,COMPLETE,60.420619718002854,90230784,6906e7fdc3a4cf349840c3f732550e5169dcc6ff8886d7a58a23e2a2c366e706,e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/backend/a09_6000_6800/L6/repeat1,1,0,0,Unknown,"[ INFO] [1788794587.403057784, 1542889047.447768058]: Initialization finish!",140000,19477,2251,253,34695,2874,405,109,167397,2874,1312,109,388,8,6,3.7538257980000007,0.00967480875773196,0.035185762,278,True,388,0.967497263970065,5246.345532019823,1542889047.27177088,PASS
+a09_6000_6800,L6,2,COMPLETE,60.42476194599294,89600000,6906e7fdc3a4cf349840c3f732550e5169dcc6ff8886d7a58a23e2a2c366e706,e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/backend/a09_6000_6800/L6/repeat2,1,0,0,Unknown,"[ INFO] [1788794648.302384829, 1542889047.467303049]: Initialization finish!",140000,19477,2251,253,34021,2885,392,108,163620,2885,1274,108,388,18,13,3.754578890999998,0.00967674971907216,0.035992542,278,True,388,0.967497263970065,4665.691784036575,1542889047.27177088,PASS
+a09_6000_6800,L6,3,COMPLETE,60.42096186999697,90476544,6906e7fdc3a4cf349840c3f732550e5169dcc6ff8886d7a58a23e2a2c366e706,e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/backend/a09_6000_6800/L6/repeat3,1,0,0,Unknown,"[ INFO] [1788794709.105133380, 1542889047.447450793]: Initialization finish!",140000,19477,2251,253,34966,2870,414,107,169962,2870,1347,107,388,10,10,3.879806547000005,0.009999501409793828,0.034360942,278,True,388,0.967497263970065,5147.642254405936,1542889047.27177088,PASS
+a09_6000_6800,L-all,1,COMPLETE,60.525351936987136,89722880,e0c5de737d82af40a4a565d10d6f1b9921a68ecda3ecab2b9b6e0f4baee66cf8,e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/backend/a09_6000_6800/L-all/repeat1,1,0,0,Unknown,"[ INFO] [1788794771.961764116, 1542889047.447686923]: Initialization finish!",140000,19477,42018,2555,35015,2862,6391,1474,169002,2862,19424,1474,388,7,7,3.8640864410000013,0.009958985672680415,0.035892189,278,True,388,0.967497263970065,5334.169627549369,1542889047.27177088,PASS
+a09_6000_6800,L-all,2,COMPLETE,60.524961620001704,90312704,e0c5de737d82af40a4a565d10d6f1b9921a68ecda3ecab2b9b6e0f4baee66cf8,e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/backend/a09_6000_6800/L-all/repeat2,1,0,0,Unknown,"[ INFO] [1788794832.768608373, 1542889047.447351342]: Initialization finish!",140000,19477,42018,2555,34931,2870,6433,1497,169714,2870,19576,1497,388,9,7,3.8714559650000013,0.009977979291237117,0.035245788,281,True,388,0.967497263970065,5144.537975205934,1542889047.27177088,PASS
+a09_6000_6800,L-all,3,COMPLETE,60.52654397500737,89436160,e0c5de737d82af40a4a565d10d6f1b9921a68ecda3ecab2b9b6e0f4baee66cf8,e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/backend/a09_6000_6800/L-all/repeat3,1,0,0,Unknown,"[ INFO] [1788794893.747937436, 1542889047.447618881]: Initialization finish!",140000,19477,42018,2555,34949,2857,6384,1475,169261,2857,19382,1475,388,10,8,3.8762888880000013,0.009990435278350519,0.034446665,278,True,388,0.967497263970065,5278.808682516839,1542889047.27177088,PASS
+a09_6000_6800,C-all,1,COMPLETE,60.62581020798825,89423872,00b20e828bcc0974bea0bcb01712cc265130284d001c4d67d1bee6734e9abbb0,e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/backend/a09_6000_6800/C-all/repeat1,1,0,0,Unknown,"[ INFO] [1788794954.908820703, 1542889047.437788881]: Initialization finish!",140000,19477,22392,1474,37152,2849,3353,639,181920,2849,10133,639,388,14,11,4.376412809,0.011279414456185567,0.041399937,278,True,388,0.967497263970065,12288.191228798234,1542889047.27177088,PASS
+a09_6000_6800,C-all,2,COMPLETE,60.41607802499493,89653248,00b20e828bcc0974bea0bcb01712cc265130284d001c4d67d1bee6734e9abbb0,e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/backend/a09_6000_6800/C-all/repeat2,1,0,0,Unknown,"[ INFO] [1788795015.987053786, 1542889047.427359521]: Initialization finish!",140000,19477,22392,1474,34214,2861,3303,646,165704,2861,9950,646,388,19,17,3.8940512730000014,0.010036214621134024,0.036069276,275,True,388,0.967497263970065,4468.0060332540015,1542889047.27177088,PASS
+a09_6000_6800,C-all,3,COMPLETE,60.52363471800345,89440256,00b20e828bcc0974bea0bcb01712cc265130284d001c4d67d1bee6734e9abbb0,e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/backend/a09_6000_6800/C-all/repeat3,1,0,0,Unknown,"[ INFO] [1788795076.847923477, 1542889047.437412433]: Initialization finish!",140000,19477,22392,1474,34519,2858,3304,642,166661,2858,9958,642,388,16,11,3.8014710779999996,0.00979760587113402,0.035660694,275,True,388,0.967497263970065,4500.941287317871,1542889047.27177088,PASS
+a02_0_900,B,1,COMPLETE,64.97736083800555,103661568,5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520,e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/backend/a02_0_900/B/repeat1,1,0,0,Unknown,"[ INFO] [1788795360.845173848, 1542828794.808850353]: Initialization finish!",157500,2221,0,0,165268,1692,0,0,1399729,1692,0,0,421,104,83,13.115572061999984,0.031153377819477395,0.04861175,407,True,421,0.9333598441532135,4.628468086702316,1542828794.685281536,PASS
+a02_0_900,B,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a02_0_900,B,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a02_0_900,L6,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a02_0_900,L6,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a02_0_900,L6,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a02_0_900,L-all,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a02_0_900,L-all,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a02_0_900,L-all,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a02_0_900,C-all,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a02_0_900,C-all,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a02_0_900,C-all,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_bus_s180_d045,B,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_bus_s180_d045,B,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_bus_s180_d045,B,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_bus_s180_d045,L6,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_bus_s180_d045,L6,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_bus_s180_d045,L6,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_bus_s180_d045,L-all,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_bus_s180_d045,L-all,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_bus_s180_d045,L-all,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_bus_s180_d045,C-all,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_bus_s180_d045,C-all,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_bus_s180_d045,C-all,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a08_2700_3600,B,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a08_2700_3600,B,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a08_2700_3600,B,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a08_2700_3600,L6,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a08_2700_3600,L6,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a08_2700_3600,L6,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a08_2700_3600,L-all,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a08_2700_3600,L-all,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a08_2700_3600,L-all,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a08_2700_3600,C-all,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a08_2700_3600,C-all,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+a08_2700_3600,C-all,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_cemetery_s135_d045,B,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_cemetery_s135_d045,B,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_cemetery_s135_d045,B,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_cemetery_s135_d045,L6,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_cemetery_s135_d045,L6,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_cemetery_s135_d045,L6,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_cemetery_s135_d045,L-all,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_cemetery_s135_d045,L-all,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_cemetery_s135_d045,L-all,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_cemetery_s135_d045,C-all,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_cemetery_s135_d045,C-all,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_cemetery_s135_d045,C-all,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+h07_0_1000,B,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+h07_0_1000,B,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+h07_0_1000,B,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+h07_0_1000,L6,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+h07_0_1000,L6,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+h07_0_1000,L6,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+h07_0_1000,L-all,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+h07_0_1000,L-all,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+h07_0_1000,L-all,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+h07_0_1000,C-all,1,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+h07_0_1000,C-all,2,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+h07_0_1000,C-all,3,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

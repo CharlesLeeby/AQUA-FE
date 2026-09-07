@@ -34,21 +34,24 @@ def backend_stats(target):
     receipt=json.loads((target/'receipt.json').read_text());verify_artifacts(receipt)
     result={k:receipt[k] for k in ['run_slug','arm','repeat','status','wall_s','peak_node_rss_bytes','feature_bag_sha256','binary_sha256']}
     result['run_dir']=str(target)
+    result['receipt_emitted_at']=receipt['started_at']
+    result['exact_wall_clock_start']='Unknown'
     log=(target/'vins.log').read_text(errors='replace')
     result['initialization_count']=log.count('Initialization finish!')
     result['failure_detection_count']=log.count('failure detection!')
-    result['reset_count_proxy']=max(0,log.count('init begins')-1)
+    result['reset_count_proxy']=log.count('system reboot!')
     result['lost_tracking_count']='Unknown'
     init=[line for line in log.splitlines() if 'Initialization finish!' in line]
     result['initialization_log_first']=init[0] if init else ''
     result['initialization_log_first']=re.sub(r'\x1b\[[0-9;]*m','',result['initialization_log_first'])
-    use=Counter();idsets=defaultdict(set);times=defaultdict(Counter);max_solver=0.;solver_calls=0;solver_near_limit=0
+    use=Counter();idsets=defaultdict(set);times=defaultdict(Counter);max_solver=0.;solver_calls=0;solver_near_limit=0;solver_sum=0.;solver_at_limit=0
     if (target/'backend_use.csv').exists():
         for row in csv.reader((target/'backend_use.csv').open()):
             kind=row[0]
             if kind=='solver':
                 elapsed,limit=float(row[2]),float(row[3]);solver_calls+=1
                 max_solver=max(max_solver,elapsed);solver_near_limit+=elapsed>=.95*limit
+                solver_sum+=elapsed;solver_at_limit+=elapsed>=limit
             elif kind in ('received','eligible','residual'):
                 tid=int(row[2]);n=int(row[3]);label='candidate' if tid>=10_000_000 else 'KLT'
                 use[kind+'_'+label]+=n if kind in ('received','residual') else 1
@@ -59,6 +62,8 @@ def backend_stats(target):
             result[kind+'_'+label]=use[kind+'_'+label]
             result[kind+'_'+label+'_unique_ids']=len(idsets[kind+'_'+label])
     result.update(solver_calls=solver_calls,solver_near_time_limit_count=solver_near_limit,
+                  solver_at_or_above_time_limit_count=solver_at_limit,solver_total_s=solver_sum,
+                  solver_mean_s=solver_sum/solver_calls if solver_calls else '',
                   max_solver_s=max_solver,max_actual_eligible=max(times['eligible'].values(),default=0))
     source_counts=Counter()
     with rosbag.Bag(receipt['feature_bag']) as bag:
@@ -109,6 +114,10 @@ def evaluate(w,arms,backend):
             artifacts={str(p):sha(p) for p in out.rglob('*') if p.is_file()}))
     receipt=json.loads((out/'evaluation_receipt.json').read_text());verify_artifacts(receipt)
     if receipt['returncode']!=0:return None,'INVALID_COMMON_SUPPORT_OR_EVALUATOR'
+    evo=json.loads((out/'evo_crosscheck.json').read_text())
+    if any(m['ape_abs_diff_m']>1e-6 or m['rpe_abs_diff_m']>1e-6
+           for a in evo['arms'].values() for m in a.values()):
+        return None,'INVALID_EVO_CROSSCHECK'
     summary=json.loads((out/'common_support_summary.json').read_text())
     support=summary['support']
     if not support['ape_valid'] or not support['rpe_valid']:return None,'INVALID_COMMON_SUPPORT'
@@ -219,7 +228,7 @@ def main():
         metric=f"{r['APE_median']:.6g} / {r['RPE_median']:.6g}" if 'APE_median' in r else 'Not evaluated.'
         lines.append(f"| {slug} | {arm} | {dose} | {lifetime} | {metric} | {n}/3 | {r.get('merge_wall_s','Unknown')} |")
     lines+=['',f"前端完成 {fe}/24；新后端尝试 {attempted}/72，成功输出 {completed}/72。没有将技术重复当独立窗口。",'',
-        'all 仅针对冻结 top_k=2048、每次60种子/800私有池。GFTT原生供给设置与XFeat不同，不能声称等资源学习来源更强。',
+        'all 仅针对冻结 top_k=2048、每次60种子/800私有池。GFTT原生供给设置与XFeat不同，不能声称等资源学习来源更强。冻结vins_safe函数还包含来源权重分支，C-all/XFeat不是完全相同的q映射；L6/L-all仍共享完全相同的XFeat质量值。见[实现审计](implementation_audit_notes.md)。',
         '所有已完成合并均检验去掉候选后逐消息重建原始B，并核对非feature消息；L6按source_id/精确时间戳是L-all子集。',
         '完整剂量、源码/输入哈希及运行路径见 [frontend_audit.csv](frontend_audit.csv)；[后端逐次结果](backend_results.csv)、[预注册30对比](comparisons.csv)、[资源](resource_usage.csv)、[共同支撑](common_support_status.csv)。',
         '主表精度采用四臂十二轨迹共同支撑；每项两臂比较另外在其六条轨迹共同支撑上判断。表间口径不得拼接。',
