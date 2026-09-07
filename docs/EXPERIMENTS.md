@@ -662,3 +662,17 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Validity/common support: no support selection or metric stitching occurred. ROS logging clock and sensor/header clock are separate; low-excitation warnings are not counted as rejection. Two parser checks and deterministic CSV byte comparison PASS. Thirty replays are not thirty windows.
 - Interpretation/conclusion: registered original donor deletion suffices for harm and the changed accepted initialization path; the exact scale/gravity rejection and whether earlier acceptance mediates harm remain Unknown.
 - Follow-up: no new version, replay or expansion. Frozen development count remains 2 WIN / 8 TIE / 2 LOSS / 0 FAIL; no newly positive window.
+
+### EXP-20260906-012 — Existing-input initialization mechanism diagnostic
+
+- Date/status/role: 2026-09-08; COMPLETE / RETROSPECTIVE_DIAGNOSTIC; outcome-known A02 development evidence, not another method experiment.
+- Git/source identity: original runtime main@f6f8feec66c2faf1f59cdb67c1e817028a3bccaf plus frozen version hashes. This later driver and publication have separate identities recorded in a02_initialization_input_audit.json.
+- Dataset/window: AQUALOC A02 0–900 only; existing KLT and original registered eight-observation donor-delete bags.
+- Environment/config: original libvins_lib.so 373a598c…71e8, original YAML a0d5aad3…5af1, no ambient initialization overrides; independent driver compiled in a temporary directory. External source/binary not changed.
+- Baseline/modification: same-input KLT/KLT control then KLT/delete-only existing-input comparison; no new bag, gate, strategy, trajectory optimization or APE/RPE calculation.
+- Commands/artifacts: python3 -B scripts/audit_a02_degradation_mechanism.py; papers/frontend_admission_continuation_v1/a02_{degradation_mechanism.md,initialization_input_audit.json}.
+- Results: first relative-pose success output17 for both; same window history and323 ordered corresponding points; identical R/T. At first SFM input,371 multiframe tracks in both,3834 versus3831 observations, identical multiframe order. Missing births belong to IDs363/372/377 with10→9,9→8,8→7 window observations. Five other removed IDs are singletons.
+- Validation/common support: same-input controlPASS, exact repeated function reductionPASS, source/bag/YAML identitiesPASS, exact timestamp string checkPASS; all30 previous log hashes verified. No new common-support evaluation or replacement of frozen metrics; previous deletion study's all12 support remains authoritative.
+- Metrics boundary: old fixed APE/RPE KLT0.141317/0.022697 versus delete1.073158/0.102008; same old table's Sim3 APE0.060774/0.045444 and scales0.898634/0.513513. Proxy, not independent GT; fitted scale is not internal initialization scale.
+- Conclusion: the no-harm interpretation of newborn deletion is unsupported; actual first-SFM temporal input differs even when earliest window/RANSAC pose is unchanged. Exact numerical mediation remains Unknown.
+- Follow-up: 0 new frontend/VIO runs, 0 new physical windows, no repair or expansion. A separate logging-only initialization diagnostic requires explicit authorization and protocol.

@@ -781,3 +781,19 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: exact alignment subcause, per-ID residual use and mediation by earlier acceptance remain Unknown; source inspection is not an internal-state receipt.
 - Interpretation: original registered donor deletion reproduces both harm and the earlier accepted initialization path; this does not attribute harm to one donor or prove earlier acceptance alone causes the error.
 - Next steps: retain NO_EXPANSION, publish this bounded addendum, and stop this policy line; a new intervention requires separate explicit authority and protocol.
+
+## 2026-09-08 — Locate the A02 initialization input perturbation
+
+- Date: 2026-09-08T02:35:14+08:00.
+- Task objective: investigate the cause of degradation, without implementing another policy or changing frozen evidence.
+- Problem / motivation: prior deletion sufficiency and timing association did not establish which initialization inputs changed.
+- Files changed: scripts/audit_a02_initialization_inputs.cpp and audit_a02_degradation_mechanism.py; a02_initialization_input_audit.json and a02_degradation_mechanism.md; handoff/context and required logs.
+- Implementation: independently compile a short diagnostic driver and dynamically link the existing hash-locked VINS library. Read the two existing A02 bags; call unchanged feature management and relative-pose functions only through their first relative-pose success. Do not call Estimator/SFM/BA/IMU alignment. Sum printed gyro-calibration increments from all 30 existing A02 logs.
+- Technical decisions: stop before an unobserved SFM branch can invalidate the shadow state; keep timestamp ns as decimal strings; preserve all original inputs, metrics, source and binary identities. The first SFM input is not a recorded per-ID residual trace.
+- Experiments performed: bounded existing-input function diagnostic, same-input control and repeated reduction; 0 new frontend/VIO runs and 0 new windows.
+- Quantitative results: both inputs first succeed at output17; all prefix window choices and 323 ordered correspondences match, relative R/T difference0. Multiframe tracks371/371, observations3834/3831. IDs363/372/377 lose first observations (10→9,9→8,8→7); five other removed IDs are singletons in the prefix. Multiframe order unchanged.
+- Qualitative observations: age-1 at intervention does not imply an irrelevant initialization observation. Failure-time gyro bias updates persist under the recorded no-rollback path, so failed attempts are not stateless.
+- Failed attempts: first driver build exposed an ambiguous TopicQuery constructor and const-ID list-copy assignment; corrected locally without editing VINS. Initial JSON export exposed a ns numeric-rounding risk; timestamps changed to strings before publication and exact values rechecked.
+- Known issues: no historical per-ID residual trace or internal scale/gravity values; no three-only deletion VIO test, no independent rollback-effect test, no implemented repair.
+- Interpretation: direct eight-observation deletion sufficiency remains; first relative-pose/RANSAC/window explanations are ruled out for the first successful step, while the first SFM multiframe input differs. Later scale/bias mediation remains an inference.
+- Next steps: publish the diagnosis, retain NO_EXPANSION; seek explicit authority for one separately specified logging-only initialization diagnostic, not another method variant.

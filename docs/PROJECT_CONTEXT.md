@@ -282,3 +282,18 @@ window or held-out evaluation was obtained. The method is not promoted as no-har
 Frozen decision NO_EXPANSION: do not auto-run another budget/order/timing variant
 or the twelve-window extension. Full evidence and current public index:
 papers/frontend_admission_continuation_v1/report.md and docs/CODEX_HANDOFF.md.
+
+## September 8, 2026 — A02 degradation input localized; no repair yet
+
+Read-only calls into the frozen library locate a first-SFM input difference:
+KLT and original delete-only use identical prefix windows,323 ordered two-view
+correspondences and first relative R/T; their371 multiframe tracks have3834
+versus3831 observations. IDs363/372/377 lose their birth measurements but persist.
+Thus protecting mature tracks/newborn age does not preserve initialization input.
+Original eight-observation deletion sufficiency remains; a three-only subset and
+exact internal scale/gravity mediation are not evaluated. Failed alignment bias
+updates persist in the recorded no-rollback path, but enabling rollback is not a
+validated repair. No new VIO/frontend run or method variant; NO_EXPANSION remains.
+Current diagnosis: papers/frontend_admission_continuation_v1/a02_degradation_mechanism.md.
+Only proposed next diagnostic is separately authorized logging of initialization
+numerics on unchanged original inputs; not a reopened method/parameter search.

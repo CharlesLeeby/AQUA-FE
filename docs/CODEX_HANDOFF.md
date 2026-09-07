@@ -1,6 +1,6 @@
 # AQUA-FE 固定交接入口
 
-更新时间：2026-09-07T22:52:50+08:00
+更新时间：2026-09-08T02:35:14+08:00
 发布分支：`codex/aqua-fe-evidence-20260905`
 
 ## 当前实验与结论
@@ -85,6 +85,14 @@ KLT 各重复有 7 次视觉—IMU 对齐拒绝，旧/新替换、matched、原�
 但具体尺度/重力拒绝值 Unknown，不能说“较早初始化本身已被证明是根因”。
 详见 [初始化补充](../papers/frontend_admission_continuation_v1/a02_initialization_addendum.md)
 与 [30 份逐次日志审计](../papers/frontend_admission_continuation_v1/a02_initialization_log_audit.csv)。
+
+9 月 8 日新增 [恶化机制定位](../papers/frontend_admission_continuation_v1/a02_degradation_mechanism.md)：
+直接调用冻结库做初始化前缀诊断（不是新 VIO replay），KLT/delete-only 首次相对位姿前的
+窗口、323 对对应点及相对位姿完全相同；进入 SFM 的多帧观测 3834→3831，
+对应 donor 363/372/377 各少一个出生观测，371 条多帧轨迹的数量和顺序不变。
+这否定“只动 age-1 就保护了初始化约束”的推理；不是三点子集已被单独验证致因。
+源码/日志还确认失败对齐前的偏置更新不自动回滚，但其独立致害作用 Unknown。
+精确尺度/重力失败值仍需独立的仅日志诊断，尚未授权/执行；本轮未修方法或再开变体。
 
 **唯一下一步：按冻结决定停止此续传版本，不扩展新窗、不自动再试第二个预算/顺序/保护范围变体。**
 保留局部 A09 增益与 A02 严重负例；“扩大正例且没有严重回归”的目标未获支持。

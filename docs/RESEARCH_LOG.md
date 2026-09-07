@@ -747,3 +747,16 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Hypothesis / Inference: startup observation sensitivity remains a more consistent explanation of A02 risk than missing persistent learned constraints alone. Exact mediation, initial scale/gravity values and this version's new deletion-set attribution remain Unknown.
 - Open questions: the unavailable internal states cannot be reconstructed from final Sim(3) fit; it is not the initializer's scale. New online policy/generalization Not evaluated.
 - Next experiment: none under current authorization/freeze. Retain NO_EXPANSION; do not relaunch failed delay/prefill policies or add another lifecycle variant.
+
+## 2026-09-08 — A newborn's first observation can belong to a persistent initialization track
+
+- Research question: does the harmful A02 deletion first change keyframes/RANSAC, or does it remove multiview initialization support despite protecting mature tracks?
+- Hypothesis/motivation: birth-time age is not a guarantee of zero initialization value; failed visual–IMU alignment may also retain state between attempts.
+- Related baseline: exact frozen KLT and original eight-observation delete-only counterfactual, not a new proposed input.
+- Proposed diagnostic/why it works: call the unchanged library's feature manager and relative-pose solver through the first success only; compare ordered data before global SFM without inventing later unlogged branches.
+- Assumptions/potential failures: the bounded input diagnostic is not historical per-ID residual instrumentation; later SFM failure could change marginalization, so inspection stops there. Future observations are explanatory only, never online decision features.
+- Evidence — Confirmed facts: prefix frame choices,323 ordered correspondences and first R/T are identical. SFM multiframe track count/order identical371, observations3834→3831. IDs363/372/377 lose their birth observation while retaining9/8/7 observations. Five other deletions are singletons in the prefix. Frozen code updates gyro bias before alignment and only explicitly rolls back on a nonzero option, absent in recorded runs.
+- Current conclusion: protecting mature KLT and feature coverage does not protect the full initialization constraint set. The original deletion set suffices for harm; the relevant first-SFM input difference is now localized, but the three-only subset has not been independently replayed.
+- Hypothesis / Inference: changed visual structure plus stateful failed attempts can lead to the observed different scale agreement. Bias-update persistence is a possible pathway, not an independently demonstrated bug or a validated fix.
+- Open questions: exact gravity/scale rejection values, per-ID residual usage, three-only/single-donor sufficiency and rollback's separate effect remain Unknown. Post-hoc Sim3 scale is not an initializer measurement.
+- Next experiment: propose only a separately authorized numerical-logging diagnostic on unchanged original KLT/delete inputs. No new algorithm, window search or automatic relaxation of NO_EXPANSION.
