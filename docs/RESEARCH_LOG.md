@@ -843,3 +843,33 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion: a new severe classical-additive negative is established within this window/proxy contract. Root cause Unknown; general expansion decision Unknown.
 - Open questions: whether new positives also appear, and which initialization/utility signals distinguish outcomes.
 - Next experiment: continue the unchanged remaining Batch A matrix, then apply its frozen gate.
+
+
+## 2026-09-08 — Prospective comparison versus globally unseen data
+- Research question: what independence does this opportunity-expansion roster actually support?
+- Hypothesis: a prospective fixed-C comparison outside its six development cases can test that limited transfer question even when other project lines have used some physical intervals.
+- Motivation: avoid inflating sequence-held-out into a claim that no project member has ever evaluated these data.
+- Related baseline: the old six outcome-known C-all controls and the unchanged fresh-B contract.
+- Proposed idea: keep the already frozen roster and add a separate broader-history exposure audit, without outcome-driven exclusions.
+- Why it might work: explicit provenance keeps the prospective comparison and prior project exposure distinguishable.
+- Assumptions: the two inspected historical manifests are informative but not an exhaustive record of every historical run.
+- Potential failure cases: missing historical records; ambiguous inclusive endpoints; falsely treating the remaining windows as universally unseen.
+- Evidence: Confirmed fact. broader_history_exposure_audit.csv records A 7/12 and B 7/12 interior overlaps with identified source rows; provenance JSON pins source hashes. The preregistration already restricted heldout scope to six C-all development windows.
+- Current conclusion: no change to roster or practical classifications; broad unseen-data generalization is Unknown. This audit does not estimate a natural positive rate.
+- Open questions: mechanisms causing case-level gains/losses are Not evaluated. by this provenance audit.
+- Next experiment: finish the existing frozen B/C matrix and transfer its set-level outcomes to observation-utility / risk research only.
+
+
+## 2026-09-08 — A03 severe numerical degradation despite receipt completeness
+- Research question: can frozen extra classical observations damage an otherwise initialized VIO trajectory outside the C-all development set?
+- Hypothesis: initialization-sensitive or poorly useful added constraints may amplify trajectory scale/path error even when all messages arrive intact.
+- Motivation: distinguish structural delivery success from geometric utility and risk.
+- Related baseline: fresh complete KLT on A03[0,900); old A02/Bus remain outcome-known controls.
+- Proposed idea: retain the fixed intervention and characterize the new set-level negative for downstream mechanisms.
+- Why it might work: the unchanged B/C contract provides a concrete contrast while complete receipts exclude silent dropping as the explanation.
+- Assumptions: same frozen backend and evaluator identities; timing diagnostics are descriptive rather than causal.
+- Potential failure cases: attributing the effect to initialization without a controlled initialization study, or using Sim3 to hide metric scale failure.
+- Evidence: Confirmed fact. A03 own-support CAPE median2854.46348m versus B0.85802846m; CRPE277.286662m versus B0.07895172m; all6exactreceipts/runabilityPASS;42commonposes,41RPEpairs,evoPASS. Exact paths in the corresponding EXPERIMENTS entry and case_registry.csv. Firstpose delay is equal; fitted scales differ sharply.
+- Current conclusion: second severe C-all regression outside its six developers. Mechanistic explanation remains Hypothesis / Inference. No acceptable-generalization confirmation can meet the frozen severe-count bound after this result; complete Batch A is still needed for honest case counts.
+- Open questions: which set-level temporal/geometric properties distinguish any later positive/neutral cases from A01/A03?
+- Next experiment: finish remaining frozen Batch A windows; do not activate B; pass complete evidence to observation-utility / risk mechanism research.

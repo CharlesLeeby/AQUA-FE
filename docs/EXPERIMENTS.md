@@ -768,3 +768,19 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Initialization/diagnostics: one initialization per run; B firstpose delay6.248s,C7.249s; visual–IMU misalignment rejects B2,C7; fittedscale medians B0.7467,C0.4508. No reset/failure-detection logs. New candidate residual blocks med374181; repeated use is not independent information.
 - Interpretation/conclusion: severe negative new C case, not a structural delivery defect; initialization/scale differences remain association, not causal proof. Overall decisionUnknown.
 - Follow-up: complete the other11 Batch A windows; no early substitution or threshold changes.
+
+
+## coe1_A03_initial_window — 2026-09-08
+- Experiment ID: classical_opportunity_expansion_v1/coe1_a03_00000_00900.
+- Status and scientific role: COMPLETE per-window comparison; PRACTICAL_LOSS / SEVERE_REGRESSION; frozen classical additive control, not proposed method.
+- Git commit and branch: runner source3f8396a85dd668cd8f4fbad720ba689d1da9e525; exp/classical-opportunity-expansion-v1-20260908; source identity locks inherited8f323ba and Python3.8 adapterd162b73.
+- Dataset/sequence/window: AQUALOC archaeology03,900rawimages[0,900), exact sensor stamps in window_roster_frozen.csv; broader history exposure separately recorded.
+- Environment/configuration: ROS Noetic/Python3.8, existing guarded capacity1000 backend, ROS12691, .04s/8iterations, serial CPU2,3,8,9, inherited sensor family calibration; exact hash locks unchanged.
+- Baseline: fresh complete KLT B,350cap,every2offset1,adaptive_clahe,vins_safe.
+- Proposed modification: none to method; C-all appends frozen GFTT/LK classical candidates, preserves every B observation/nonfeature message.
+- Commands/artifacts: scripts/classical_opportunity_py38.py --batch A drives run_classical_opportunity_expansion.py --window coe1_a03_00000_00900 --arm B|C-all --repeat1|2|3; runtime /media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_a03_00000_00900; reports papers/frontend_classical_opportunity_expansion_v1/common_support/coe1_a03_00000_00900/C-all_vs_B and backend_results.csv.
+- Metrics/results: BAPE median0.85802846m(range0.85446650–0.86166514), CAPE2854.46348m(2781.31691–2867.04419); BRPE0.07895172m(0.07863311–0.07921606), CRPE277.286662m(270.935815–278.489161). Fixed-scale properSE3, strict1s global positional delta RPE; Sim3 diagnostic only.
+- Validity/common support:6/6runabilityPASS, exact per-IDreceiptsPASS,42commonposes,41s,coverage95.4545%,41RPEpairs,evo<1e-6m; actual max473<1000. Firstpose1.2501735s and trajectorycoverage97.1582% botharms. No reset/misalignment log evidence establishes a causal explanation; losttracking truth Unknown.
+- Interpretation: initialized output continuity and successful delivery do not imply accurate VIO. Extremely large C errors occur in all3technicalrepeats and remain in the registered denominator.
+- Conclusion: second severe new negative in Batch A prevents Batch B admission; all remaining10A windows still required.
+- Follow-up: complete frozen Batch A, then final set-level case handoff; no rerun, XFeat arm or parameter adjustment.

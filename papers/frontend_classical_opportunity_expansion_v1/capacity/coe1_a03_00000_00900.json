@@ -1,0 +1,36 @@
+{
+  "arms": {
+    "B": {
+      "arbitrary_keyframe_depth_bound": 700,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/baseline/coe1_a03_00000_00900/features.bag",
+      "feature_bag_sha256": "7e4855bead748425c7c89ca449c6694b2a37dfb19112160347f02e37f4d59630",
+      "feature_messages": 450,
+      "gaps": [],
+      "max_consecutive11_ge4": 399,
+      "max_consecutive11_ids": 563,
+      "max_per_message": 350,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 3364,
+      "whole_window_ge4": 2529
+    },
+    "C-all": {
+      "arbitrary_keyframe_depth_bound": 1036,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/frontend/coe1_a03_00000_00900/C-all.bag",
+      "feature_bag_sha256": "fbf8a0cdea2c2807228a2d4df6230edb28ce76b631f33427714abbf99c19acc5",
+      "feature_messages": 450,
+      "gaps": [],
+      "max_consecutive11_ge4": 568,
+      "max_consecutive11_ids": 733,
+      "max_per_message": 518,
+      "public_gap_count": 0,
+      "status": "GUARDED_CAPACITY_PROBE_REQUIRED",
+      "unique_ids": 6010,
+      "whole_window_ge4": 4407
+    }
+  },
+  "capacity_modified": false,
+  "run_slug": "coe1_a03_00000_00900"
+}

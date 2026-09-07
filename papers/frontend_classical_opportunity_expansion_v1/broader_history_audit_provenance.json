@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-08",
+  "status": "DESCRIPTIVE_PROVENANCE_ONLY",
+  "timing": "after roster freeze and first A01 result; not a selection filter",
+  "criterion": "same sequence and strict positive-length frame-interval intersection; potential endpoint-only overlap retained separately",
+  "sources": {
+    "papers/ieee_sensors_journal_experiments/history_exclusion_manifest.csv": "9f08516f20718ef1f0ca3c8cbe2753f74859b4f2c437cee5db666b611318cd61",
+    "papers/frontend_same_backend_confirmatory_v3/candidate_windows.csv": "bcb929f172f8597d0665fc8eed506d9539deced55b835a31b0b05c50c7069b4d",
+    "papers/frontend_classical_opportunity_expansion_v1/broader_history_exposure_audit.csv": "706c5edd1e0263ebf4274832596b1af756773446cc6b4a631a78b571c680ab4a"
+  },
+  "known_prior_overlap_counts": {
+    "A": 7,
+    "B": 7
+  },
+  "selection_changed": false,
+  "frozen_classification_changed": false,
+  "boundary": "No overlap in these two manifests does not prove globally unseen data; sequence-held-out is relative only to six C-all development windows."
+}

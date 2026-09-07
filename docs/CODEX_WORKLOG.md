@@ -954,3 +954,33 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: both arms show descriptive repeat instability; COLMAP proxy, relative held-out scope and nonexclusive host limit interpretation.
 - Interpretation: Confirmed fact — fixed C-all can produce a new severe negative outside its six development windows even with intact KLT and received candidates. Global expansion conclusion Unknown,11 A windows pending.
 - Next steps: finish Batch A, apply registered B gate, retain this risk-mechanism case.
+
+
+## 2026-09-08 — Classical expansion broader-history scope and case supplement
+- Task objective: make heldout scope and final case diagnostics reviewable while the registered batch continues.
+- Problem / motivation: prospective frozen-C evidence outside six developer windows must not be described as globally unseen AQUA-FE physical data; candidate observation counts and time spans need distinct units.
+- Files changed: papers/frontend_classical_opportunity_expansion_v1/broader_history_exposure_audit.csv, broader_history_audit_provenance.json; scripts/complete_classical_opportunity_case_fields.py; this log, RESEARCH_LOG and independent handoff.
+- Implementation: inspect two existing manifests for same-sequence positive-length frame-interval intersection; keep endpoint ambiguity separate. Add a post-completion-only case supplement for raw-start versus ROS-clock initialization timings, published lifetime spans, exact receipt counts, reference coverage and old A02/Bus context.
+- Technical decisions: no selection, frozen source, evaluation or classification changes. The supplement asserts practical/tier/severe fields are unchanged and checks lifecycle totals against frontend receipts. It is not run during controller writes.
+- Experiments performed: Not evaluated. in this documentation/supplement task; already authorized Batch A continues separately. Python 3.8 compilation checked.
+- Quantitative results: A 7/12 and B 7/12 frozen intervals overlap broader recorded project intervals in the two checked manifests; see exact per-window evidence paths and SHA256 provenance. Counts are descriptive only.
+- Qualitative observations: absence of overlap in these manifests is not proof of global novelty. Future case labels describe whole candidate sets, not per-feature utility.
+- Failed attempts: none in this supplement task.
+- Known issues: full active matrix and final runtime supplement remain Not evaluated.; controller is still running.
+- Interpretation: retain the preregistered six-C-window heldout definition and explicitly limit generalization claims.
+- Next steps: finish all active batch windows; run supplementary diagnostics only after the controller exits and decision is COMPLETE.
+
+
+## 2026-09-08 — A03 registered expansion severe negative
+- Task objective: complete the next frozen Batch A B/C comparison without substitution.
+- Problem / motivation: determine whether the unchanged C-all probe transfers outside six development windows, retaining large negative results.
+- Files changed: current expansion result/case/decision tables, common_support/coe1_a03_00000_00900, capacity audit, independent handoff and project/research/experiment logs; final descriptive bundle builder added but not run on partial evidence.
+- Implementation: one immutable fresh B and C bag; B1/2/3 then C1/2/3; original evaluator and all six own-support trajectories; no additional replay or tuning.
+- Technical decisions: retained runability PASS separately from numerical accuracy failure; an initialized continuous but diverged trajectory is not silently excluded. Batch B gate must fail once two severe cases exist, but all remaining Batch A windows still run.
+- Experiments performed: coe1_a03_00000_00900, AQUALOC archaeology03 raw images [0,900), inherited frozen camera/profile/backend, 6 formal attempts.
+- Quantitative results: B APE min/median/max 0.8544665/0.85802846/0.86166514m; C 2781.31691/2854.46348/2867.04419m. B RPE 0.07863311/0.07895172/0.07921606m; C 270.935815/277.286662/278.489161m. Own support42poses/41s/95.4545%/41RPEpairs. Evo maximum absolute cross-check error <1e-6m. C publishes46104observations,2646IDs,median lifetime9observations,max157.
+- Qualitative observations: first-pose reference delay1.2501735s for both arms, no visual–IMU misalignment rejection logged, while fitted scale changes from B median2.307925 to C0.00049766. Both baseline scale bias and C numerical explosion remain visible; no causal claim from those associations.
+- Failed attempts: no infrastructure failure; all three C accuracy outcomes are severe negatives, preserved. All6 runability and exact per-ID receipts PASS; actual capacity maximum473<1000.
+- Known issues: initialization/scale root cause Unknown. COLMAP remains proxy, and A03 is a known broader-project interval although excluded from C-all's six developers.
+- Interpretation: Confirmed fact. second severe new C-all case; Batch A currently2/12resolved,12/72formal attempts,2PRACTICAL_LOSS,0structural failures. Batch B cannot meet its frozen <=1 severe condition; final complete-denominator conclusion awaits remaining10A windows.
+- Next steps: continue frozen Batch A; preserve the inactive B roster; transfer complete case pool to observation-utility / risk research.

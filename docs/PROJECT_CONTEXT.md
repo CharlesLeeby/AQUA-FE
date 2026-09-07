@@ -306,3 +306,7 @@ A new fixed-method experimental branch/worktree starts at additive release 49c02
 ### 2026-09-08 — Classical expansion first resolved case
 
 A01[0,900) completes6/6 repeats with intact B/delivery/capacity/evaluation contracts and becomes a new PRACTICAL_LOSS/SEVERE_REGRESSION C-all case (APE med0.1550→0.5550m; own-six support36poses/35s/81.818%). Remaining11 Batch A windows pending; final scientific decisionUnknown. New case does not revise frozen old experiment conclusions. See independent handoff/case registry.
+
+
+### 2026-09-08 classical expansion checkpoint: second severe case
+Confirmed fact: the independent classical opportunity expansion has resolved A01 and A03[0,900), both PRACTICAL_LOSS / SEVERE_REGRESSION;12of72BatchAformalreplayscomplete,0structuralfailures. A03CAPE median2854.46348m versusB0.85802846m, own six-trajectory support/evo/receipts valid; detailed ranges and limitations in the expansion case registry. The frozen BatchB<=1severe admission requirement can no longer be satisfied; finish remaining10A windows before issuing the complete final case counts/decision. Old continuation NO_EXPANSION and additive-budget conclusions remain unchanged; no C-all tuning or learned-arm expansion is authorized here. Heldout means outside sixC-alldevelopers; broader project interval exposure is separately audited.
