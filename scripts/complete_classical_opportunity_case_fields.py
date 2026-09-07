@@ -103,6 +103,17 @@ def main():
         c['raw_reference_span_s_field_note']='legacy field contains roster image span; use explicit reference_span_s and raw_image_span_s'
         c['reference_time_span_over_raw_window']=(max(gt)-min(gt))/(int(w['end_stamp_ns'])-int(w['start_stamp_ns'])) if len(gt)>1 else 0.
         grid=PAPER/'common_support'/slug/'C-all_vs_B/common_grid_audit.csv'
+        sp=grid.parent/'common_support_summary.json'
+        if sp.exists():
+            support=json.loads(sp.read_text())['support']
+            c['observed_common_support_json']=json.dumps(support)
+            for key in ['matched_count','common_span_s','common_coverage','rpe_pairs','segment_count']:
+                c['support_'+key]=support[key]
+            if c['classification']=='NOT_EVALUABLE':
+                violations=[]
+                for key,minimum in [('matched_count',30),('common_span_s',10),('common_coverage',.7),('rpe_pairs',10)]:
+                    if support[key]<minimum:violations.append('{}={} < frozen minimum {}'.format(key,support[key],minimum))
+                c['not_evaluable_reason_detail']='; '.join(violations) or c['reason']
         if grid.exists():
             gr=rows(grid);c['reference_valid_fraction_on_evaluation_grid']=sum(int(r['reference_valid']) for r in gr)/len(gr) if gr else 'Unknown'
         else:c['reference_valid_fraction_on_evaluation_grid']='Not evaluated.'

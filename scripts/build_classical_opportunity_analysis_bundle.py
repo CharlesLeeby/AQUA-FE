@@ -240,7 +240,7 @@ def main():
                '## Unplottable cases', '']
     for c in cases:
         if number(c, 'APE_delta_m') is None:
-            catalog.append('- {}: {}; {}. Accuracy absent by contract, not deleted.'.format(c['window_id'], c['classification'], c['reason']))
+            catalog.append('- {}: {}; {}. Accuracy absent by contract, not deleted.'.format(c['window_id'], c['classification'], c.get('not_evaluable_reason_detail') or c['reason']))
     catalog.append('')
     (OUT / 'figure-catalog.md').write_text('\n'.join(catalog))
     print('DESCRIPTIVE_ANALYSIS_COMPLETE', json.dumps(decision['classification_counts']))

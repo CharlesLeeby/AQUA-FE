@@ -888,3 +888,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion:a new robust/practical candidate-set positive exists outside sixCdevelopers;acceptable-risk generalization remains unsupported by the2severe cases. Cause of opposite outcomes acrossA03/A04isHypothesis / Inference.
 - Open questions:which initialization/observation-utility properties distinguish the rescue and harm cases?
 - Next experiment:finish remaining frozenBatchA;then observation-utility/risk analysis only,without newC tuning or BatchB.
+
+
+## 2026-09-08 — A05 reference-limited case remains in the denominator
+- Research question:what conclusion is allowed when both arms run successfully but their common reference grid is too short?
+- Hypothesis:operational backend success can coexist with insufficient evidence for a comparative accuracy conclusion.
+- Motivation:prevent an apparent full-coverage percentage from hiding the absolute support-count requirement.
+- Related baseline:freshKLT B and unchangedC-all on A05[0,900).
+- Proposed idea:retain NOT_EVALUABLE and publish the exact failed condition,without substituting a different window or metric.
+- Why it might work:keeps the frozen scientific denominator honest and avoids unsupported utility labels.
+- Assumptions:the inherited own-support evaluator's minimum30poses remains binding even when26RPE pairs are available.
+- Potential failure cases:reporting unmatched accuracy,using only validRPE to claim victory,or dropping the case from the denominator.
+- Evidence:Confirmed fact. common_support/coe1_a05_00000_00900/C-all_vs_B/common_support_summary.json records27matchedposes/27gridpoints,26s,ape_validFalse,rpe_validTrue;all6receipts/runabilityPASS.
+- Current conclusion:APE/RPE comparison Not evaluated. Reference-limited,not a confirmed positive/negative candidate set.
+- Open questions:per-feature utility and this window's true relative accuracy remain Unknown.
+- Next experiment:continue the already frozen remaining8BatchA windows;no replacement of A05.

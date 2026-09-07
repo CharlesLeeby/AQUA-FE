@@ -1,0 +1,1 @@
+{"output": "/home/ma/AQUA-FE_WS_classical_opportunity_expansion_v1/papers/frontend_classical_opportunity_expansion_v1/common_support/coe1_a05_00000_00900/C-all_vs_B", "support": {"ape_valid": false, "common_coverage": 1.0, "common_span_s": 26.0, "grid_count": 27, "matched_count": 27, "rpe_pairs": 26, "rpe_valid": true, "segment_count": 1, "window_duration_s": 26.996555263991468}}

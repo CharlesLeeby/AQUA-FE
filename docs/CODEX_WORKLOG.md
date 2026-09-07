@@ -1014,3 +1014,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: gain is conditional on a pathological B trajectory and own support barely above70%; root cause Unknown. Proxy reference and three technical repeats do not establish broad efficacy.
 - Interpretation: Confirmed fact. first new robust/practical positive; partial totals1gain/2loss/0neutral,2severe,0structuralfailures,3of12Aresolved. Severe-risk bound still excludes Batch B and acceptable-generalization confirmation.
 - Next steps: complete remaining9A windows and retain A04 as a baseline-anomaly mechanism case.
+
+
+## 2026-09-08 — A05 retained without an accuracy comparison
+- Task objective: complete the fourth frozen window, including a limited reference case.
+- Problem / motivation: successful backend output and full coverage of a short reference segment do not satisfy the registered minimum common-pose count.
+- Files changed: expansion tables/common_support/capacity and case handoff; case supplement/figure catalog builder now expose numeric support-failure reasons; required logs and independent handoff.
+- Implementation: all six B/C replays ran; inherited evaluator returned INVALID_COMMON_SUPPORT. Case APE/RPE fields remain blank. Added a reporting-only reason detail from the existing support JSON, without changing labels or thresholds.
+- Technical decisions: do not replace the window or compare unmatched per-arm APE/RPE;100% coverage here describes the27-point reference evaluation grid, not the entire approximately45s input window.
+- Experiments performed: coe1_a05_00000_00900, AQUALOC archaeology05[0,900), B/C each3technicalrepeats.
+- Quantitative results:27 common poses<30 required;26s span,27grid points,100% common-grid coverage,26strictRPE pairs. Reference time span26.996555s. All6runability and exactper-IDreceipts PASS. C publishes4442observations/1195IDs. APE/RPE comparison:Not evaluated.
+- Qualitative observations: a structurally available reference can still be insufficient under the frozen evaluation contract. Sparse candidate action was not used for exclusion.
+- Failed attempts: no backend/infrastructure failure; NOT_EVALUABLE is retained as a scientific-support limitation.
+- Known issues: no defensible positive/negative accuracy label for this window. Full batch remains incomplete; case supplement/full figures still not executed.
+- Interpretation: current4/12A windows,24/72formal replays:1practical gain,2practical loss,1NOT_EVALUABLE,2severe,0structural failures.
+- Next steps: continue A06 and remaining frozen windows; retain A05 as a reference-limited, unlabeled utility case.

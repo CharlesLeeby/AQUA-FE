@@ -800,3 +800,19 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Interpretation:robust range-separated improvement over a numerically diverged baseline;common support just exceeds frozen bound. This supports a specific rescue case, not unqualified routine accuracy gain.
 - Conclusion:first new practical/robust positive,one positive sequence;2existingsevere regressions still prohibitBatchB.
 - Follow-up:finish9remainingA windows;handoff baseline-anomaly case to utility/risk mechanisms without tuning C-all.
+
+
+## coe1_A05_initial_window — 2026-09-08
+- Experiment ID: classical_opportunity_expansion_v1/coe1_a05_00000_00900.
+- Date/status/scientific role:2026-09-08;NOT_EVALUABLE/INVALID_COMMON_SUPPORT;fixed classical additive probe;all6planned technical replays completed.
+- Git commit/branch:969d7fe32c54fe71fddb9bf648ad22c62333cc3b;exp/classical-opportunity-expansion-v1-20260908;frozen mathematical source unchanged.
+- Dataset/window:AQUALOC archaeology05raw[0,900);900images,reference exists but covers a shorter segment;exact timestamps in frozen roster/preparation receipt.
+- Environment/configuration:registered ROSNoetic/Python3.8,port12691,guarded1000capacity,.04s/8iterations,serialbackend CPU2,3,8,9,unchanged calibration/configuration/hash locks.
+- Baseline:fresh complete KLT B,350cap,every2offset1,adaptive_clahe,vins_safe.
+- Proposed modification:frozen C-all adds all eligible classical candidates,without removingB.
+- Commands/artifacts:run_classical_opportunity_expansion.py --window coe1_a05_00000_00900 --arm B|C-all --repeat 1|2|3 via registered controller. Runtime /media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_a05_00000_00900;published common_support/coe1_a05_00000_00900/C-all_vs_B and case/backend tables.
+- Metrics/results:all6runability/exactper-IDreceiptsPASS;C4442publishedobservations/1195IDs;APE/RPE comparison Not evaluated.
+- Validity/common support:matched_count27<30,span26s,common_grid_count27,coverage1.0,rpe_pairs26;ape_validFalse. Reference span26.996555s;100% means coverage of this shorter reference grid,not full raw-input coverage. Do not compare a standalone valid RPE when the registered joint comparison fails.
+- Interpretation:structural availability of reference did not guarantee evaluation eligibility;the preselected window remains in the full denominator.
+- Conclusion:NOT_EVALUABLE with exact minimum-pose violation;neither a C gain nor a C loss,not a backend failure.
+- Follow-up:continue remaining8A windows;retain as reference-limited case,without substitution or threshold changes.
