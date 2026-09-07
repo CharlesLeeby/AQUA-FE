@@ -896,3 +896,19 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Interpretation:stable practical improvement over a moderate-error baseline,accompanied by earlier initialization-related timing;cause remains Unknown.
 - Conclusion:third ROBUST_PRACTICAL_GAIN on third positive sequence;2severe cases still violate the BatchB/final acceptable-risk bound.
 - Follow-up:finish H03–H05,then utility/risk case analysis only.
+
+
+## coe1_H03_initial_window — 2026-09-08
+- Experiment ID:classical_opportunity_expansion_v1/coe1_h03_00000_00900.
+- Date/status/scientific role:2026-09-08;COMPLETE comparison,SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN;fixed classical control with absolute numerical anomalies.
+- Git commit/branch:9c07f6935daddd278bb165eb431718bf11769cec reporting checkpoint;replays began under49c9c3b612bb73f34857d7bec80362a7366a2109;exp/classical-opportunity-expansion-v1-20260908;source/config/binary locks unchanged.
+- Dataset/window:AQUALOC Harbor03raw[0,900),exact timestamps/input/reference identities in frozen roster/preparation.
+- Environment/configuration:registered ROSNoetic/Python3.8,port12691,guarded1000capacity,.04s/8iterations,serialCPU2,3,8,9,unchanged Harbor-family configuration.
+- Baseline:fresh completeKLT B350cap/every2offset1/adaptive_clahe/vins_safe.
+- Proposed modification:frozen C-all classical addition retaining allB/nonfeature messages.
+- Commands/artifacts:run_classical_opportunity_expansion.py --window coe1_h03_00000_00900 --arm B|C-all --repeat 1|2|3 via registered controller. Runtime /media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h03_00000_00900;published common_support/coe1_h03_00000_00900/C-all_vs_B and case/backend tables.
+- Metrics/results:APEmin/median/maxB848.004116/848.216346/848.384525m,C0.07146680/837.927196/838.008913m;RPEB91.990762/92.019467/92.037611m,C0.04154727/90.965970/90.972569m. C29659observations/2696IDs,life4median/141maxobservations;actual residualblocks29806–199867acrossrepeats.
+- Validity/common support:all6runability/per-IDreceiptsPASS;43poses,42s,95.5556%coverage,42RPEpairs,evo<1e-6m;maxactualeligible644<1000;firstposeC1.448549–1.748524s,B1.448549s;losttrackingtruthUnknown,logproxiesseparate.
+- Interpretation:one accurate C repeat and two inaccurate C repeats;the frozen median/range outcome is uncertain. This is not acceptable absolute performance despite structural/runability validity.
+- Conclusion:SMALL_OR_UNCERTAIN with numerical anomaly and unusual C repeat instability;no extra repeat or best-run selection.
+- Follow-up:finish H04/H05,retain full ranges and initialization/receipt context for utility/risk research.

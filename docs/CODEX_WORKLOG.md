@@ -1134,3 +1134,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues:final supplement execution remains pending.
 - Interpretation:improves reporting of the existing case pool without changing scientific conclusions.
 - Next steps:finish H03–H05 and execute final audit/supplement/analysis sequence.
+
+
+## 2026-09-08 — H03 absolute numerical anomalies and C repeat instability
+- Task objective: complete the tenth registered case and preserve all technical outcomes.
+- Problem / motivation: one accurate C repeat must not hide two inaccurate C repeats or a numerically abnormal baseline.
+- Files changed: expansion tables/common_support/capacity, mechanism/independent handoffs and required logs.
+- Implementation: same immutable B/C bags,each3technicalrepeats;unchanged own-support/evo/median/range classification.
+- Technical decisions: SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN remains binding. Relative comparison is not a claim that either arm is absolutely accurate;no selection of the best C repeat.
+- Experiments performed:coe1_h03_00000_00900,AQUALOC Harbor03raw[0,900),6formalreplays.
+- Quantitative results:APEmin/median/maxB848.004116/848.216346/848.384525m,C0.07146680/837.927196/838.008913m;RPEB91.990762/92.019467/92.037611m,C0.04154727/90.965970/90.972569m. Support43poses/42s/95.5556%/42RPEpairs,evo<1e-6m. C29659observations/2696IDs,life4median/141maxobservations.
+- Qualitative observations:baseline consistently inaccurate;C bimodal across technical repeats. FirstposedelayC1.448549–1.748524s versusB1.448549s. Ccandidate residual blocks29806–199867 and actualeligible407–644 vary although the published bag is identical. All6runability/per-IDreceiptsPASS;capacity<1000.
+- Failed attempts:no infrastructure/runability failure;severe absolute numerical errors are retained explicitly rather than hidden by the relative neutral label.
+- Known issues:runability PASS denotes valid output/coverage,not useful numerical accuracy. Cause of the C repeat instability remains Unknown.
+- Interpretation:10/12A,60/72replays:3robust/practicalgains,2losses,4small/uncertain,1NOT_EVALUABLE,2relative severe regressions,0structuralfailures. H03 is a key baseline-anomaly/repeat-instability mechanism case.
+- Next steps:finish H04/H05 and final audit/report;do not rerun to choose favorable C outcomes.

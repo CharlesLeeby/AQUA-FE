@@ -978,3 +978,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion:positive opportunity spans A04/A07/H02 and is not confined to A04-style baseline numerical explosion. Registered acceptable-risk transfer remains unsupported with2severe cases;complete denominator still pending.
 - Open questions:which utility/risk properties distinguish these heterogeneous positives from neutral and severe-negative cases?
 - Next experiment:finish remaining3frozenA windows;then observation-utility/risk mechanism research,without BatchB or tuning.
+
+
+## 2026-09-08 — H03 warns against conflating relative neutrality with absolute reliability
+- Research question:what does a neutral relative label mean when the baseline is badly inaccurate and C technical repeats split between accurate and inaccurate outputs?
+- Hypothesis:initialization/solver sensitivity can produce radically different outcomes from one identical feature bag.
+- Motivation:retain the best,median and worst outputs and avoid interpreting relative neutrality as reliable operation.
+- Related baseline:fresh fullKLT Harbor03[0,900),plus earlier baseline-instabilityA06 and robust positives.
+- Proposed idea:tag H03 in mechanism prose as a numerical-anomaly/repeat-instability case while preserving the frozen SMALL_OR_UNCERTAIN classification.
+- Why it might work:separates delivery/runability validity,absolute error and relative evidence strength.
+- Assumptions:three technicalrepeats are not independent scientific samples;all source/bag/binary identities stay fixed.
+- Potential failure cases:promoting the single C0.0715mrepeat to a positive,omitting the two approximately838mCoutcomes,or treating runabilityPASS as numerical success.
+- Evidence:Confirmed fact.H03BAPE848.004–848.385m,C0.071467/837.927196/838.008913m(min/median/max),43commonposes/42RPEpairs,evo/receiptsPASS. Actual C residual counts and firstpose timings vary across the same-bag repeats. Exact artifacts in case_registry.csv/common_support.
+- Current conclusion:uncertain relative effect with severe absolute numerical pathology;cause remains Hypothesis / Inference. The registered relative severe flag is false because C is not worse than B by its frozen criteria,not because the outputs are operationally good.
+- Open questions:what backend-state sensitivity explains the divergent C repeats,and can utility/risk research predict it without using future outcomes as per-feature labels?
+- Next experiment:complete fixed H04/H05 only;then mechanism handoff,without extra replays or tuning.
