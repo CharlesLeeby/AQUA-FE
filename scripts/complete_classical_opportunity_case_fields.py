@@ -37,7 +37,8 @@ def main():
     for slug in ['a02_0_900','afrl_bus_s180_d045']:
         f=next(r for r in oldfront if r['run_slug']==slug and r['arm']=='C-all')
         row=dict(case_origin='OLD_OUTCOME_KNOWN_DEVELOPMENT',window_id=slug)
-        for k in ['total_published','max_concurrent','public_ids','chains_ge4','chains_ge10','lifetime_median','lifetime_max']:row[k]=f[k]
+        for k in ['feature_messages','total_published','max_concurrent','public_ids','chains_ge4','chains_ge10','lifetime_median','lifetime_max']:row[k]=f[k]
+        row['candidate_observations_per_exported_message']=float(f['total_published'])/int(f['feature_messages']) if int(f['feature_messages']) else 'Unknown'
         s=json.loads((OLD/'common_support'/slug/'C-all_vs_B/common_support_summary.json').read_text())
         for arm in ['B','C-all']:
             for key,label in [('fixed_se3_ape_rmse_m','APE'),('fixed_se3_rpe_rmse_m','RPE'),('sim3_scale','fitted_scale')]:
@@ -56,6 +57,8 @@ def main():
         fp=RUNTIME/'frontend'/slug/'receipt.json'
         if not fp.exists():continue
         fr=json.loads(fp.read_text());bp=RUNTIME/'baseline'/slug/'receipt.json';prep=RUNTIME/'prepared'/slug/'receipt.json'
+        c['exported_feature_messages']=fr['arms']['C-all']['feature_messages']
+        c['candidate_observations_per_exported_message']=fr['arms']['C-all']['total_published']/c['exported_feature_messages'] if c['exported_feature_messages'] else 'Unknown'
         resources.append(dict(window_id=w['window_id'],batch=w['batch'],preparation_wall_s=json.loads(prep.read_text())['wall_s'],
             fresh_B_export_wall_s=json.loads(bp.read_text())['wall_s'],C_source_generation_wall_s=fr['generation_wall_s'],
             B_merge_audit_wall_s=fr['arms']['B']['merge_wall_s'],C_merge_audit_wall_s=fr['arms']['C-all']['merge_wall_s'],

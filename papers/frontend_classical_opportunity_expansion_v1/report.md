@@ -2,11 +2,11 @@
 
 Status: IN_PROGRESS; scientific decision: Unknown.
 
-1. New prospective C-all physical windows replayed: 8; replay attempts: 48.
+1. New prospective C-all physical windows replayed: 9; replay attempts: 54.
 2. Activated roster: 12 sequence-held-out / 0 window-held-out relative to the six C-all development windows; broader project exposure retained.
-3. Full activated denominator: {"PRACTICAL_LOSS": 2, "PRACTICAL_GAIN": 2, "NOT_EVALUABLE": 1, "SMALL_OR_UNCERTAIN": 3, "PENDING": 4}.
-4. ROBUST_PRACTICAL_GAIN: 2.
-5. Practical positive sequences: ["A04", "A07"].
+3. Full activated denominator: {"PRACTICAL_LOSS": 2, "PRACTICAL_GAIN": 3, "NOT_EVALUABLE": 1, "SMALL_OR_UNCERTAIN": 3, "PENDING": 3}.
+4. ROBUST_PRACTICAL_GAIN: 3.
+5. Practical positive sequences: ["A04", "A07", "H02"].
 6. Severe regression windows: 2.
 7. Candidate dose/lifetime/initialization comparison with old A02/Bus: pending final case interpretation; exact new fields in case_registry.csv and old tables remain frozen.
 8. Batch B activated: False. Exact unactivated windows remain in the registry.
@@ -24,7 +24,7 @@ Status: IN_PROGRESS; scientific decision: Unknown.
 | coe1_a07_00000_00900 | A | PRACTICAL_GAIN | ROBUST_PRACTICAL_GAIN | 3.04255 / 3.04441 / 3.05375 | 0.173395 / 0.173396 / 0.173401 | False |  |
 | coe1_a10_00000_00900 | A | SMALL_OR_UNCERTAIN | DIRECTIONAL_GAIN | 0.0598424 / 0.0600755 / 0.0604784 | 0.05649 / 0.0566184 / 0.0566204 | False |  |
 | coe1_h01_00000_00900 | A | SMALL_OR_UNCERTAIN | NONE | 0.0707647 / 0.0707647 / 0.070898 | 0.0712008 / 0.0715236 / 0.0715518 | False |  |
-| coe1_h02_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |
+| coe1_h02_00000_00900 | A | PRACTICAL_GAIN | ROBUST_PRACTICAL_GAIN | 0.103418 / 0.109392 / 0.110284 | 0.0293568 / 0.0294124 / 0.0294126 | False |  |
 | coe1_h03_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |
 | coe1_h04_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |
 | coe1_h05_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |

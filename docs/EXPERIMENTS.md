@@ -880,3 +880,19 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Interpretation:small error increases with substantial confirmed intervention;neutral is not null action.
 - Conclusion:SMALL_OR_UNCERTAIN,not a practicalpositive/loss or independent no-harm population claim.
 - Follow-up:finish H02–H05 and retain this nonzero-action neutral case for utility/risk research.
+
+
+## coe1_H02_initial_window — 2026-09-08
+- Experiment ID:classical_opportunity_expansion_v1/coe1_h02_00000_00900.
+- Date/status/scientific role:2026-09-08;COMPLETE comparison,PRACTICAL_GAIN/ROBUST_PRACTICAL_GAIN;fixed classical additive probe.
+- Git commit/branch:49c9c3b612bb73f34857d7bec80362a7366a2109 reporting checkpoint;replays began under292fe54d3c9ca69ed25823f324ae1cc679cc0e18;exp/classical-opportunity-expansion-v1-20260908;frozen identities unchanged.
+- Dataset/window:AQUALOC Harbor02raw[0,900),exact timestamps/input/reference identity in frozen roster/preparation;broader project overlap retained.
+- Environment/configuration:registered ROSNoetic/Python3.8,port12691,guarded1000capacity,.04s/8iterations,serialCPU2,3,8,9,unchanged Harbor calibration and source locks.
+- Baseline:fresh completeKLT B350cap/every2offset1/adaptive_clahe/vins_safe.
+- Proposed modification:frozen C-all append-only classical candidates;allB/nonfeature messages preserved.
+- Commands/artifacts:run_classical_opportunity_expansion.py --window coe1_h02_00000_00900 --arm B|C-all --repeat 1|2|3 via registered controller. Runtime /media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h02_00000_00900;published common_support/coe1_h02_00000_00900/C-all_vs_B and case/backend tables.
+- Metrics/results:APEmin/median/maxB0.10341843/0.10939183/0.11028445m,C0.02935680/0.02941242/0.02941257m;RPEB0.03472649/0.03621206/0.03636493m,C0.00768505/0.00768786/0.00768837m. C35978observations/4319IDs,life4median/106maxobservations;256448actualresidualblocksperrepeat.
+- Validity/common support:all6runability/per-IDreceiptsPASS;41poses,40s,91.1111%coverage,40RPEpairs,evo<1e-6m;maxactualeligible620<1000;Cfirstpose1.599425searlier;misalignment countsB12/C2;losttrackingtruthUnknown,logproxiesseparate.
+- Interpretation:stable practical improvement over a moderate-error baseline,accompanied by earlier initialization-related timing;cause remains Unknown.
+- Conclusion:third ROBUST_PRACTICAL_GAIN on third positive sequence;2severe cases still violate the BatchB/final acceptable-risk bound.
+- Follow-up:finish H03–H05,then utility/risk case analysis only.

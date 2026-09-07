@@ -963,3 +963,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion:SMALL_OR_UNCERTAIN with stable baseline and substantial action. Per-feature utility remains Not evaluated.
 - Open questions:which candidate/state properties distinguish this neutral case from the positive and severe-negative sets?
 - Next experiment:finish remaining4frozenA windows;then utility/risk mechanism analysis only.
+
+
+## 2026-09-08 — H02 broadens the positive case type without changing the risk decision
+- Research question:are new positive opportunities limited to rescue of numerically extreme baselines?
+- Hypothesis:fixed additional observations can also improve a moderate-error baseline in some cold-start windows.
+- Motivation:avoid overgeneralizing the A04 failure-rescue context to every positive.
+- Related baseline:freshKLT Harbor02[0,900),plus earlier A04/A07 positives and A01/A03 severe negatives.
+- Proposed idea:retain H02 as a third robust positive and compare dose/lifetime/initialization context with old A02/Bus and the new positives.
+- Why it might work:provides a distinct positive case while leaving the harmful cases and fixed severe bound unchanged.
+- Assumptions:own-support accuracy validity and exact receipts;firstpose/initialization observations are descriptive,not mediation evidence.
+- Potential failure cases:attributing the gain solely to earlier initialization,calling three positives overallconfirmation despite2severe cases,or assigning positive labels to allH02candidates.
+- Evidence:Confirmed fact.H02APEmedian0.10939183→0.02941242m,RPE0.03621206→0.00768786m;41commonposes/40RPEpairs,evo/receiptsPASS;Cfirstposeabout1.599425searlier. Bfittedscale1.045307,C0.980834. Exact ranges and artifacts in case_registry.csv/common_support.
+- Current conclusion:positive opportunity spans A04/A07/H02 and is not confined to A04-style baseline numerical explosion. Registered acceptable-risk transfer remains unsupported with2severe cases;complete denominator still pending.
+- Open questions:which utility/risk properties distinguish these heterogeneous positives from neutral and severe-negative cases?
+- Next experiment:finish remaining3frozenA windows;then observation-utility/risk mechanism research,without BatchB or tuning.

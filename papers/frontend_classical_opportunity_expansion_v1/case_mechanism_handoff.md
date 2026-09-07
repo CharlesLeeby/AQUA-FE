@@ -1,7 +1,7 @@
 # Classical expansion mechanism handoff — partial checkpoint
 
-Status: Batch A8/12windows resolved,48/72formalreplays. This is a case interpretation
-checkpoint, not the final analysis/report. The remaining four A windows must complete.
+Status: Batch A9/12windows resolved,54/72formalreplays. This is a case interpretation
+checkpoint, not the final analysis/report. The remaining three A windows must complete.
 The registered Batch B gate is already impossible because two severe regressions exist.
 
 All labels below refer to the **whole C candidate set versus B for this cold-start window**.
@@ -37,3 +37,5 @@ A07 `coe1_a07_00000_00900` is the second PRACTICAL_GAIN/ROBUST_PRACTICAL_GAIN: B
 A10 `coe1_a10_00000_00900` is a stable SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN case: APEmedian0.06007548→0.05661839m(reduction3.457mm<10mmabsolute practicalfloor),RPE0.05224253→0.05369101m(increase1.448mmwithin guard). Support40poses/39s/93.0233%/39RPEpairs,evo/receiptsPASS. C8287observations/1460IDs,life2median/72maxobservations;firstposeequal. This neutral case differs from A06 baseline-instability uncertainty.
 
 H01 `coe1_h01_00000_00900` is a nonzero-action SMALL_OR_UNCERTAIN case: C20127observations/2498IDs and124110actualresidualblocks eachrepeat;APEmedian0.07076473→0.07152362m,RPE0.00997393→0.01010866m. Support42poses/41s/93.3333%/41RPEpairs,evo/receiptsPASS. Firstposeequal,repeat ranges small. Do not treat its neutral classification as absence of intervention or use residual counts as utility labels.
+
+H02 `coe1_h02_00000_00900` is the third ROBUST_PRACTICAL_GAIN: BAPE0.10341843/0.10939183/0.11028445m versus C0.02935680/0.02941242/0.02941257m;BRPE0.03472649/0.03621206/0.03636493m versus C0.00768505/0.00768786/0.00768837m. Support41poses/40s/91.1111%/40RPEpairs,evo/receiptsPASS. C35978observations/4319IDs,life4median/106maxobservations;firstpose1.599425searlier andmisalignment logcount12→2. Baseline has moderate error rather than A04-style numerical explosion. These timing changes remain associations,not proved causal mechanisms.

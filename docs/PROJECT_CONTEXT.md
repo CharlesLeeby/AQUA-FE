@@ -318,3 +318,7 @@ Confirmed fact:A04[0,900)adds onePRACTICAL_GAIN/ROBUST_PRACTICAL_GAIN,with a num
 
 ### 2026-09-08 classical expansion midpoint: two cross-sequence robust positives, risk bound still failed
 Confirmed fact:6/12BatchA windows and36/72formalreplays complete. A04 andA07 arePRACTICAL_GAIN/ROBUST_PRACTICAL_GAIN;A01/A03 arePRACTICAL_LOSS/SEVERE_REGRESSION;A06 isSMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN;A05 isNOT_EVALUABLE(27commonposes<30). A07APE median3.044412→0.173396m,RPE0.682203→0.106705m,ownsupport/evo/receiptsPASS. Local positive opportunity exists across two sequences,but2severe cases violate the frozen<=1riskbound;BatchB remains excluded. Finish the remaining6A windows before finalcomplete-denominatorreport. OldNO_EXPANSION/additive conclusions and main method remain unchanged. See expansion case_mechanism_handoff.md and exact case_registry.csv.
+
+
+### 2026-09-08 classical expansion: H02 third robust positive
+Confirmed fact:9/12BatchA windows and54/72formalreplays resolved. Counts3PRACTICAL_GAIN(allROBUST,acrossA04/A07/H02),2PRACTICAL_LOSS(bothsevere),3SMALL_OR_UNCERTAIN,1NOT_EVALUABLE,0structuralfailures. H02APEmedian0.10939183→0.02941242m,RPE0.03621206→0.00768786m,ownsupport/evo/receiptsPASS;positive evidence is not limited to A04-style baseline numerical explosion. The frozen<=1severe bound is still violated,soBatchB remains excluded and no acceptable-risk confirmation is permitted. FinishH03–H05 and preserve complete case handoff;old conclusions/main method unchanged.

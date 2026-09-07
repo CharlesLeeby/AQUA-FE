@@ -1104,3 +1104,33 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues:small error increases remain visible;nonzero candidate receipts/residuals do not establish useful constraints or per-feature labels.
 - Interpretation:current8/12A,48/72replays:2robust/practicalgains,2losses,3small/uncertain,1NOT_EVALUABLE,2severe,0structuralfailures. H01 is a nonzero-action neutral mechanism case.
 - Next steps:finish H02–H05 without tuning or BatchB.
+
+
+## 2026-09-08 — H02 third robust positive with a moderate-error baseline
+- Task objective: complete the ninth registered case and retain a positive beyond the large baseline-error archaeology cases.
+- Problem / motivation: distinguish whether all new positives require pathological baseline numerical failure.
+- Files changed: expansion result/common-support/capacity tables, mechanism/independent handoffs and required logs.
+- Implementation: unchanged Harbor B/Ceach3technicalrepeats and own-support/evo/classification contract.
+- Technical decisions: retain ROBUST_PRACTICAL_GAIN and note earlier C firstpose as an association,not a demonstrated causal mechanism;do not relax the severe-risk bound.
+- Experiments performed:coe1_h02_00000_00900,AQUALOC Harbor02raw[0,900),6formalreplays.
+- Quantitative results:APEmin/median/maxB0.10341843/0.10939183/0.11028445m,C0.02935680/0.02941242/0.02941257m;RPEB0.03472649/0.03621206/0.03636493m,C0.00768505/0.00768786/0.00768837m. Support41poses/40s/91.1111%/40RPEpairs,evo<1e-6m. C35978observations/4319IDs,life4median/106maxobservations,residual256448perrepeat.
+- Qualitative observations:Bfittedscale1.045307 andC0.980834,without A04-style numerical explosion. Cfirstpose1.550007s versusB3.149432s;misalignment counts2versus12. All6runability/per-IDreceiptsPASS,maxactualeligible620<1000.
+- Failed attempts:none in this window;earlier severe negative/uncertain/reference-limited cases retained.
+- Known issues:initialization association is not causal attribution;broader project history overlap and proxy reference remain explicit.
+- Interpretation:9/12A,54/72replays:3robust/practicalgains acrossA04/A07/H02,2losses,3small/uncertain,1NOT_EVALUABLE,2severe,0structuralfailures. Positive opportunity is not confined to the numerically exploded A04 baseline;acceptable-risk criterion still fails.
+- Next steps:finish H03–H05 and final registered decision/case handoff;no BatchB or C-all tuning.
+
+
+## 2026-09-08 — Case dose denominator clarification
+- Task objective: make the requested comparison with oldA02/Bus dose counts interpretable across differing output-message counts.
+- Problem / motivation: absolute published observations alone hide the exported-message denominator.
+- Files changed: scripts/complete_classical_opportunity_case_fields.py and this log.
+- Implementation: add exported feature-message count and candidate observations per exported message to final new/old case summaries,using existing frontend receipts only.
+- Technical decisions: descriptive unit clarification;no candidate selection,classification or metric changes;window and publicID remain composite keys.
+- Experiments performed:Not evaluated. for this supplement;Python3.8 compilation passed;no extra replay.
+- Quantitative results:Not evaluated. until final case supplement runs.
+- Qualitative observations:dose per message still does not measure independent constraint utility;published lifetimes are window-censored observations.
+- Failed attempts:none.
+- Known issues:final supplement execution remains pending.
+- Interpretation:improves reporting of the existing case pool without changing scientific conclusions.
+- Next steps:finish H03–H05 and execute final audit/supplement/analysis sequence.
