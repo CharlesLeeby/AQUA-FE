@@ -765,3 +765,17 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: per-ID backend reception/residual use and internal tracker death Unknown; no held-out evaluation or natural prevalence estimate.
 - Interpretation: a local fixed-scale improvement is real at A09, but not a new positive window or demonstrated no-harm method.
 - Next steps: NO_EXPANSION; publish full evidence; no second lifecycle budget/order/timing variant or new-window execution under this freeze.
+
+## 2026-09-07 — additive-budget-v1 源流冻结
+- Task objective: 独立四臂只加不删数量实验；保留全部 KLT。
+- Problem / motivation: 旧 replacement 配额与 donor/上游容量耦合，不能通过只改 exporter 测试 all。
+- Files changed: 新 preregistration/arms/windows/source lock、additive_budget_v1.py、run_additive_budget_v1.py、测试与独立交接/占位表。
+- Implementation: 私有独立源池、共享 XFeat 流、因果 L6 发布、逐字段 KLT 恢复验证。
+- Technical decisions: 固定 top_k2048、seed60、pool800；原始 B bag 只读复用；不碰默认路径。
+- Experiments performed: Not evaluated. 5 个结构单元测试通过；读取六窗输入元数据。
+- Quantitative results: 24 臂窗、72 replay 上限；精度 Not evaluated。
+- Qualitative observations: 原后端外部点不受 max_cnt 裁剪，深度固定数组1000需容量检查。
+- Failed attempts: 未 source ROS 的测试 import rospy 失败；显式 ROS 环境后通过。读取几何 dataclass 默认构造失败，改为查阅显式冻结参数，无实验受影响。
+- Known issues: 后端逐ID使用诊断和容量检查待完成。
+- Interpretation: 仅实现/合同证据，不是收益证据。
+- Next steps: 第一窗结构容量探针及完整矩阵。

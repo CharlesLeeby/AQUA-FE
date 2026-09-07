@@ -733,3 +733,17 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Hypothesis / Inference: A09 change is consistent with improved scale agreement, not uniformly improved shape. Eight A02 chains are capacity-limited under protection of all mirror-carried tracks; restricting protection to previously public tracks would be a different, untested policy with additional opportunity cost.
 - Open questions: per-ID backend use, exact Bus tracker termination, generalization and independent GT accuracy remain Unknown / Not evaluated. Original DELETE_SUFFICIENT does not transfer automatically to this new donor set.
 - Next experiment: none under the current freeze. NO_EXPANSION; do not try a second lifecycle variant or search until a desired win count.
+
+## 2026-09-07 — 添加式预算独立研究
+- Research question: 完整KLT上更多合格XFeat是否增加有效剂量与净收益？
+- Hypothesis: 小并发限制可能抑制贡献；额外传统点也可能有同类收益。
+- Motivation: 旧删除/续传结果不能隔离数量问题。
+- Related baseline: 相同原始KLT350。
+- Proposed idea: B/L6/L-all/C-all，共享源流与加法合并。
+- Why it might work: 不损失任何基线观测，扩大可用持续约束。
+- Assumptions: 时间、身份、有效性、去重和后端容量正确；非线性优化仍可能受害。
+- Potential failure cases: 重复、错误约束、初始化扰动、求解时间预算不足、上游有限供给。
+- Evidence: Confirmed fact: 原代码存在公开前 promotion 与容量限制；实测效果 Not evaluated。
+- Current conclusion: Hypothesis / Inference，未获得支持或反证。
+- Open questions: 剂量差、残差真实使用和端到端作用。
+- Next experiment: 预注册固定六窗四臂，不新增扫描。

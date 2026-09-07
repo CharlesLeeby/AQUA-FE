@@ -282,3 +282,5 @@ window or held-out evaluation was obtained. The method is not promoted as no-har
 Frozen decision NO_EXPANSION: do not auto-run another budget/order/timing variant
 or the twelve-window extension. Full evidence and current public index:
 papers/frontend_admission_continuation_v1/report.md and docs/CODEX_HANDOFF.md.
+
+2026-09-07：用户授权独立 additive-budget-v1，worktree `/home/ma/AQUA-FE_WS_additive_budget_v1`；四臂固定候选合同见独立交接。旧 NO_EXPANSION 不改写；新效果 Not evaluated。
