@@ -1,6 +1,6 @@
 # AQUA-FE 固定交接入口
 
-更新时间：2026-09-07T18:08:10+08:00
+更新时间：2026-09-07T22:52:50+08:00
 发布分支：`codex/aqua-fe-evidence-20260905`
 
 ## 当前实验与结论
@@ -78,6 +78,13 @@ donor 377：本版只缺输出帧 4 的一个观测，帧 5 同 ID 返回；不�
 Unknown：逐 ID 内部完整寿命、实际后端接收/残差使用、Bus 两条候选的精确 tracker 终止原因。
 Not evaluated：新窗口/sequence-held-out、独立 GT 精度、实时初始化反馈方法、总体自然正例率。
 初始化日志 ROS 时间和首个位姿传感器时间在运行审计中分开记录。
+
+本轮只读补充（0 次新 replay）：A02 全部 30 份既有记录的身份核验通过。
+KLT 各重复有 7 次视觉—IMU 对齐拒绝，旧/新替换、matched、原只删点组均为 3 次；
+后者首个位姿传感器时刻提前 0.898443 s。原删点也改变了接受初始化的路径，
+但具体尺度/重力拒绝值 Unknown，不能说“较早初始化本身已被证明是根因”。
+详见 [初始化补充](../papers/frontend_admission_continuation_v1/a02_initialization_addendum.md)
+与 [30 份逐次日志审计](../papers/frontend_admission_continuation_v1/a02_initialization_log_audit.csv)。
 
 **唯一下一步：按冻结决定停止此续传版本，不扩展新窗、不自动再试第二个预算/顺序/保护范围变体。**
 保留局部 A09 增益与 A02 严重负例；“扩大正例且没有严重回归”的目标未获支持。

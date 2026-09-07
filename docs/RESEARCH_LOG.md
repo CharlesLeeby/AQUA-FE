@@ -733,3 +733,17 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Hypothesis / Inference: A09 change is consistent with improved scale agreement, not uniformly improved shape. Eight A02 chains are capacity-limited under protection of all mirror-carried tracks; restricting protection to previously public tracks would be a different, untested policy with additional opportunity cost.
 - Open questions: per-ID backend use, exact Bus tracker termination, generalization and independent GT accuracy remain Unknown / Not evaluated. Original DELETE_SUFFICIENT does not transfer automatically to this new donor set.
 - Next experiment: none under the current freeze. NO_EXPANSION; do not try a second lifecycle variant or search until a desired win count.
+
+## 2026-09-07 — A02 harm is associated with a different accepted alignment path
+
+- Research question: what logged initialization stage distinguishes the A02 baseline from harmful replacement and deletion inputs?
+- Hypothesis / motivation: early observation intervention can alter accepted visual–IMU initialization even if mature tracks are preserved; publication length alone might not resolve that startup sensitivity.
+- Related baseline: existing A02 KLT, original v2 and continuation learned/matched, original registered eight-observation deletion-only input.
+- Proposed idea / why it might work: a bounded read-only reconstruction of logged rejection stages can distinguish a feature/parallax rejection from visual–IMU alignment rejection without changing the estimator.
+- Assumptions: logs expose only recorded events; exact shared first VIO time does not imply identical estimator state. All outcomes are already known development evidence.
+- Potential failure cases: stdout/stderr order is not time order; low-excitation messages do not reject; absent DEBUG scale/gravity data cannot identify an unlogged subcause.
+- Evidence — Confirmed fact: all 30 existing receipts/VIO identities pass. KLT's three repeats each record seven alignment rejections; all 27 intervention records, including original delete-only, record three. Their first VIO sensor timestamp is 0.898442752 s earlier. Relative-pose rejection message counts are five in every record.
+- Current conclusion: the original deletion sufficiency result now has a reproducible initialization-path correlate; it does not prove that earlier initialization itself causes all final error or that a single donor is responsible.
+- Hypothesis / Inference: startup observation sensitivity remains a more consistent explanation of A02 risk than missing persistent learned constraints alone. Exact mediation, initial scale/gravity values and this version's new deletion-set attribution remain Unknown.
+- Open questions: the unavailable internal states cannot be reconstructed from final Sim(3) fit; it is not the initializer's scale. New online policy/generalization Not evaluated.
+- Next experiment: none under current authorization/freeze. Retain NO_EXPANSION; do not relaunch failed delay/prefill policies or add another lifecycle variant.

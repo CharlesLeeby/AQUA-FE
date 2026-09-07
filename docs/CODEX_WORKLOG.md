@@ -765,3 +765,19 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: per-ID backend reception/residual use and internal tracker death Unknown; no held-out evaluation or natural prevalence estimate.
 - Interpretation: a local fixed-scale improvement is real at A09, but not a new positive window or demonstrated no-harm method.
 - Next steps: NO_EXPANSION; publish full evidence; no second lifecycle budget/order/timing variant or new-window execution under this freeze.
+
+## 2026-09-07 — Read-only A02 initialization follow-up after frozen stop
+
+- Date: 2026-09-07T22:52:50+08:00.
+- Task objective: continue useful attribution work without reopening the completed EXP-012 policy experiment.
+- Problem / motivation: A02 remained severely worse despite longer publication; accepted initialization times differed, but the logged rejection stage had not been systematically counted.
+- Files changed: scripts/audit_a02_initialization_logs.py; papers/frontend_admission_continuation_v1/a02_initialization_{addendum.md,log_audit.csv}; CODEX_HANDOFF and the three required append-only logs.
+- Implementation: read only three existing manifests, deduplicate reused replay directories, verify receipts and actual trajectory hashes, sort dual-clock ROS events by wall time and emit one compact CSV with original line numbers.
+- Technical decisions: no frontend/backend/config/input/threshold change; no replay; no fresh APE/RPE or cross-support metric stitching. INFO event counts are not the complete initialization-attempt history.
+- Experiments performed: retrospective log audit of all 30 existing A02 replay records in the three scoped manifests, one physical development window; two parser checks and deterministic CSV readback.
+- Quantitative results: 30/30 receipt identities PASS; KLT 3 repeats each show 5 feature/parallax rejects and 7 alignment rejects; all other 27 records show 5 and 3. First VIO sensor delay is 2.897861216 vs 1.999418464 s, a 0.898442752 s difference. All 30 have one initialization marker; new replays/windows/variants = 0.
+- Qualitative observations: low IMU excitation messages are warnings, not rejection gates in the inspected code. Different stdout/stderr buffering makes raw file order misleading. Actual scale/gravity values were not logged.
+- Failed attempts: no new experimental attempt; prior failed/negative results preserved.
+- Known issues: exact alignment subcause, per-ID residual use and mediation by earlier acceptance remain Unknown; source inspection is not an internal-state receipt.
+- Interpretation: original registered donor deletion reproduces both harm and the earlier accepted initialization path; this does not attribute harm to one donor or prove earlier acceptance alone causes the error.
+- Next steps: retain NO_EXPANSION, publish this bounded addendum, and stop this policy line; a new intervention requires separate explicit authority and protocol.

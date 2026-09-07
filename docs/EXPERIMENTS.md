@@ -650,3 +650,15 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Validity: 4/4 all-nine common supports, 38–42 poses / 37–41 s / 93.33%–95% / strict 1 s RPE; evo delta <5e-7 m. Same-grid v2/current/KLT comparison also 4/4 PASS. No parameter/gate/backend change.
 - Interpretation: A09 fixed-scale versus v2 improves 12.44%/16.47%, while Sim(3) errors increase; A02 improves about 10% relative to v2 but retains severe KLT regression. Learned is not proven necessary; matched also improves the positive-window baseline.
 - Conclusion/follow-up: frozen NO_EXPANSION; stop this single policy experiment, preserve negative/partial history and publish. No additional parameter variant or twelve-window extension.
+
+### EXP-20260906-012 — A02 existing initialization-log audit (no new replay)
+
+- Date / status / scientific role: 2026-09-07; COMPLETE / READ_ONLY_RETROSPECTIVE; no new outcome-blind test and no change to NO_EXPANSION.
+- Git identity: main@f6f8feec66c2faf1f59cdb67c1e817028a3bccaf plus separately hashed experimental versions; audit/publication code is later and is not the replay source commit. Publish on codex/aqua-fe-evidence-20260905.
+- Dataset/window: AQUALOC A02 0–900, one previously used development window. Existing ten version–arm combinations, three repeats each, deduplicated across three manifests.
+- Environment/configuration: same locked VINS node/lib, canonical A02 YAML; read only existing logs, receipts, environment records and trajectories. Baseline is fresh v2 KLT; compared inputs are original v2 learned/matched, continuation learned/matched and original eight-observation donor-delete-only.
+- Proposed modification: none. Command: python3 -B scripts/audit_a02_initialization_logs.py (stdout only). Artifacts: papers/frontend_admission_continuation_v1/a02_initialization_addendum.md and a02_initialization_log_audit.csv.
+- Metrics/results: 30/30 input/config/binary receipt and actual VIO hash checks PASS. Each KLT repeat: 5 relative-pose rejection messages, 7 alignment rejection messages, first VIO delay 2.897861216 s. Every other record: 5, 3 and 1.999418464 s. One initialization marker each. No new APE/RPE scoring; original matched-support metrics remain authoritative.
+- Validity/common support: no support selection or metric stitching occurred. ROS logging clock and sensor/header clock are separate; low-excitation warnings are not counted as rejection. Two parser checks and deterministic CSV byte comparison PASS. Thirty replays are not thirty windows.
+- Interpretation/conclusion: registered original donor deletion suffices for harm and the changed accepted initialization path; the exact scale/gravity rejection and whether earlier acceptance mediates harm remain Unknown.
+- Follow-up: no new version, replay or expansion. Frozen development count remains 2 WIN / 8 TIE / 2 LOSS / 0 FAIL; no newly positive window.
