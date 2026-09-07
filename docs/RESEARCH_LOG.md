@@ -787,3 +787,16 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion: 结构错误而非效果结果；首尝试无效保留。修复后效果Not evaluated.。
 - Open questions: 修复后的完整映射、容量和后端是否全部有效？
 - Next experiment: 按恢复锁生成唯一正式共同流，继续原Cemetery四臂；无新参数/窗口。
+
+
+## 2026-09-08 — 数量效果与净收益分开
+- Research question: 更多同源合格点改善L6时，是否也超过完整KLT？
+- Hypothesis: 小配额可能压低局部约束作用，但更大的添加剂量仍可能带来初始化/尺度风险。
+- Motivation / related baseline: 原B不变的添加式四臂，六窗固定。
+- Proposed idea / why it might work: 共享源流单独取消并发配额，使数量对比有明确控制。
+- Assumptions: 全24输入身份读回通过；Cemetery一次无效尝试与修复明确保留；技术重复不独立。
+- Potential failure cases: 中位数掩盖不稳定重复，来源q/代价不等，阶段性solver日志覆盖不全。
+- Evidence: Confirmed fact：A08 L-all/L6达到实用改善，但L-all/B实用退化；Bus L-all首重复APE23.25m而另两次约.043m；H07全五对比不确定。详checkpoint_a08/bus/h07.md及comparisons.csv。
+- Current conclusion: 局部数量效应成立不能替代端到端净收益判断；不存在当前五窗L-all/B实用改善。完整六窗结论待Cemetery。
+- Open questions: 更多观测如何改变初始化与尺度，哪些实际残差参与风险？仅现有日志不足作纯因果归因。
+- Next experiment: 仅完成Cemetery固定12次，然后给出一个后续方向，不自动扩展。

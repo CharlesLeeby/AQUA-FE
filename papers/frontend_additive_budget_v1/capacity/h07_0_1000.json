@@ -1,0 +1,67 @@
+{
+  "arms": {
+    "B": {
+      "arbitrary_keyframe_depth_bound": 700,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_real_vins/external_klt_every2_acv1_h07_0_1000_klt/features.bag",
+      "feature_bag_sha256": "d2572daad26a0a626cf4f013c3dfafd872edaffc3bf41c302ff1406c07246358",
+      "feature_messages": 500,
+      "gaps": [],
+      "max_consecutive11_ge4": 432,
+      "max_consecutive11_ids": 3604,
+      "max_per_message": 350,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 30173,
+      "whole_window_ge4": 7034
+    },
+    "C-all": {
+      "arbitrary_keyframe_depth_bound": 808,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/h07_0_1000/C-all.bag",
+      "feature_bag_sha256": "373de3529b2c53226590f21d8809874cfd2facf6fc05d936ada72db8344ae4e8",
+      "feature_messages": 500,
+      "gaps": [],
+      "max_consecutive11_ge4": 453,
+      "max_consecutive11_ids": 3604,
+      "max_per_message": 404,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 31472,
+      "whole_window_ge4": 7539
+    },
+    "L-all": {
+      "arbitrary_keyframe_depth_bound": 934,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/h07_0_1000/L-all.bag",
+      "feature_bag_sha256": "9942977f0f36e8a1c6b9faa02dc71caae36ea35d1cc69bb0f974c1fa8e52c690",
+      "feature_messages": 500,
+      "gaps": [],
+      "max_consecutive11_ge4": 512,
+      "max_consecutive11_ids": 3605,
+      "max_per_message": 467,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 33736,
+      "whole_window_ge4": 8682
+    },
+    "L6": {
+      "arbitrary_keyframe_depth_bound": 712,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/h07_0_1000/L6.bag",
+      "feature_bag_sha256": "715b051d8fe99a92e6e0416fa8dda2d31b9716ad593c1751ea060b3c08f5c4a1",
+      "feature_messages": 500,
+      "gaps": [],
+      "max_consecutive11_ge4": 438,
+      "max_consecutive11_ids": 3605,
+      "max_per_message": 356,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 30677,
+      "whole_window_ge4": 7242
+    }
+  },
+  "capacity_modified": false,
+  "proof": "WINDOW_SIZE=10; continuous public IDs remain contiguous under frame removal; every length>=4 interval among indices0..10 intersects {3,7}; depth_count<=2*max_input_count. Whole-window count is only a looser bound.",
+  "run_slug": "h07_0_1000"
+}

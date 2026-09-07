@@ -702,3 +702,15 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Validity/common support: INVALID_SOURCE_ALIGNMENT；APE/RPE、初始化、覆盖、残差Not evaluated.；未进入任何精度分母筛选。
 - Interpretation/conclusion: raw191非冻结输出帧，必须按既定帧索引关联；不是资源或算法效果失败。
 - Follow-up: cemetery_recovery_lock.json锁定一行关联overlay；保留无效源并重新生成一次正式共同流，明确额外计算与一次生成规则偏差，不改方法参数。
+
+
+## additive_budget_v1_frontend24_and_backend60 — 2026-09-08
+- Status/scientific role: 前端24/24结构验收完成，五个开发窗60/72后端完成，非最终矩阵。
+- Git/branch: 源d1c793a、诊断执行2297bb8、Cemetery恢复38e5881；exp/additive-budget-v1-20260907。
+- Dataset/config: 原windows.csv六窗、source_and_backend_lock.json及backend_execution_lock_v2.json；Cemetery仅frame-index overlay。
+- Baseline/modification: 同原B加L6/L-all/C-all；完整四臂×3。
+- Commands/artifacts: audit_additive_budget_delivery.py、summarize_additive_budget_sources.py、analyze_additive_budget_v1.py；独立runtime；delivery_readback_audit.csv、source_generation_attempts.csv、各checkpoint/common_support/。
+- Metrics/results: 全24原B/非feature/源坐标q/速度读回通过；六窗剂量门通过。A08 L-all/L6实用改善但L-all/B实用退化；H07五对比均不确定；Bus异常首重复保留。量化与逐次范围见CSV。
+- Validity/common support: 五窗六类支撑各PASS并经evo核对；技术3不作独立样本。Cemetery后端Not evaluated.。
+- Interpretation/conclusion: 量对照确实形成；当前局部相对L6改善不能解释为对B稳定净收益。
+- Follow-up: 仅完成Cemetery原12次；不新增预算/窗口/补最好重复。

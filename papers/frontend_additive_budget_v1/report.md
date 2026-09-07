@@ -10,24 +10,24 @@
 | a02_0_900 | L6 | 2688 / 6 | 4.0 / 86 | 0.944678 / 0.0878391 | 3/3 | 10.229005264991429 |
 | a02_0_900 | L-all | 116129 / 318 | 5.0 / 182 | 0.994532 / 0.0927771 | 3/3 | 18.45441820200358 |
 | a02_0_900 | C-all | 41339 / 132 | 15.0 / 143 | 0.0695174 / 0.016427 | 3/3 | 12.351352280005813 |
-| afrl_bus_s180_d045 | B | 0 / 0 | 0 / 0 | Not evaluated. | 0/3 | 1.290750191998086 |
-| afrl_bus_s180_d045 | L6 | 1537 / 6 | 2.0 / 51 | Not evaluated. | 0/3 | 5.850150307000149 |
-| afrl_bus_s180_d045 | L-all | 2963 / 30 | 2.0 / 51 | Not evaluated. | 0/3 | 5.8055210589955095 |
-| afrl_bus_s180_d045 | C-all | 2305 / 38 | 1.0 / 47 | Not evaluated. | 0/3 | 5.714580660991487 |
-| a08_2700_3600 | B | Unknown / Unknown | Unknown / Unknown | Not evaluated. | 0/3 | Unknown |
-| a08_2700_3600 | L6 | Unknown / Unknown | Unknown / Unknown | Not evaluated. | 0/3 | Unknown |
-| a08_2700_3600 | L-all | Unknown / Unknown | Unknown / Unknown | Not evaluated. | 0/3 | Unknown |
-| a08_2700_3600 | C-all | Unknown / Unknown | Unknown / Unknown | Not evaluated. | 0/3 | Unknown |
-| afrl_cemetery_s135_d045 | B | Unknown / Unknown | Unknown / Unknown | Not evaluated. | 0/3 | Unknown |
-| afrl_cemetery_s135_d045 | L6 | Unknown / Unknown | Unknown / Unknown | Not evaluated. | 0/3 | Unknown |
-| afrl_cemetery_s135_d045 | L-all | Unknown / Unknown | Unknown / Unknown | Not evaluated. | 0/3 | Unknown |
-| afrl_cemetery_s135_d045 | C-all | Unknown / Unknown | Unknown / Unknown | Not evaluated. | 0/3 | Unknown |
-| h07_0_1000 | B | Unknown / Unknown | Unknown / Unknown | Not evaluated. | 0/3 | Unknown |
-| h07_0_1000 | L6 | Unknown / Unknown | Unknown / Unknown | Not evaluated. | 0/3 | Unknown |
-| h07_0_1000 | L-all | Unknown / Unknown | Unknown / Unknown | Not evaluated. | 0/3 | Unknown |
-| h07_0_1000 | C-all | Unknown / Unknown | Unknown / Unknown | Not evaluated. | 0/3 | Unknown |
+| afrl_bus_s180_d045 | B | 0 / 0 | 0 / 0 | 0.0588963 / 0.0263231 | 3/3 | 1.290750191998086 |
+| afrl_bus_s180_d045 | L6 | 1537 / 6 | 2.0 / 51 | 0.061526 / 0.0295115 | 3/3 | 5.850150307000149 |
+| afrl_bus_s180_d045 | L-all | 2963 / 30 | 2.0 / 51 | 0.0439087 / 0.0262228 | 3/3 | 5.8055210589955095 |
+| afrl_bus_s180_d045 | C-all | 2305 / 38 | 1.0 / 47 | 0.0380845 / 0.0262852 | 3/3 | 5.714580660991487 |
+| a08_2700_3600 | B | 0 / 0 | 0 / 0 | 0.147626 / 0.0334238 | 3/3 | 4.34368858099333 |
+| a08_2700_3600 | L6 | 2688 / 6 | 6.0 / 112 | 0.695554 / 0.0694114 | 3/3 | 12.266959216998657 |
+| a08_2700_3600 | L-all | 130866 / 348 | 8.0 / 299 | 0.548041 / 0.0576591 | 3/3 | 22.367944247002015 |
+| a08_2700_3600 | C-all | 87401 / 251 | 18.0 / 200 | 0.124623 / 0.0325478 | 3/3 | 17.544451489011408 |
+| afrl_cemetery_s135_d045 | B | 0 / 0 | 0 / 0 | Not evaluated. | 0/3 | 1.8287630780105246 |
+| afrl_cemetery_s135_d045 | L6 | 1792 / 6 | 2.0 / 26 | Not evaluated. | 0/3 | 7.042233075000695 |
+| afrl_cemetery_s135_d045 | L-all | 10977 / 149 | 2.0 / 39 | Not evaluated. | 0/3 | 7.678542034002021 |
+| afrl_cemetery_s135_d045 | C-all | 6656 / 88 | 2.0 / 28 | Not evaluated. | 0/3 | 7.356698324991157 |
+| h07_0_1000 | B | 0 / 0 | 0 / 0 | 1.28658 / 0.231179 | 3/3 | 2.5379706289968453 |
+| h07_0_1000 | L6 | 2801 / 6 | 3.0 / 58 | 1.27628 / 0.213095 | 3/3 | 10.706779744010419 |
+| h07_0_1000 | L-all | 20346 / 117 | 3.0 / 95 | 1.27235 / 0.215416 | 3/3 | 11.911872223005048 |
+| h07_0_1000 | C-all | 6422 / 54 | 2.0 / 53 | 1.31357 / 0.227691 | 3/3 | 11.209300300994073 |
 
-前端完成 12/24；新后端尝试 24/72，成功输出 24/72。没有将技术重复当独立窗口。
+前端完成 24/24；新后端尝试 60/72，成功输出 60/72。没有将技术重复当独立窗口。
 
 all 仅针对冻结 top_k=2048、每次60种子/800私有池。GFTT原生供给设置与XFeat不同，不能声称等资源学习来源更强。冻结vins_safe函数还包含来源权重分支，C-all/XFeat不是完全相同的q映射；L6/L-all仍共享完全相同的XFeat质量值。见[实现审计](implementation_audit_notes.md)。
 所有已完成合并均检验去掉候选后逐消息重建原始B，并核对非feature消息；L6按source_id/精确时间戳是L-all子集。

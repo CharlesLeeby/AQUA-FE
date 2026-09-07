@@ -39,11 +39,15 @@ def backend_stats(target):
     log=(target/'vins.log').read_text(errors='replace')
     result['initialization_count']=log.count('Initialization finish!')
     result['failure_detection_count']=log.count('failure detection!')
+    result['initialization_visual_imu_misalignment_count']=log.count('misalign visual structure with IMU')
+    result['initialization_sfm_solver_timing']='Unknown'
     result['reset_count_proxy']=log.count('system reboot!')
     result['lost_tracking_count']='Unknown'
     init=[line for line in log.splitlines() if 'Initialization finish!' in line]
     result['initialization_log_first']=init[0] if init else ''
     result['initialization_log_first']=re.sub(r'\x1b\[[0-9;]*m','',result['initialization_log_first'])
+    clock_match=re.search(r'\[(\d+\.\d+),\s*(\d+\.\d+)\]',result['initialization_log_first'])
+    result['initialization_finish_first_ros_clock_s']=clock_match.group(2) if clock_match else 'Unknown'
     use=Counter();idsets=defaultdict(set);times=defaultdict(Counter);max_solver=0.;solver_calls=0;solver_near_limit=0;solver_sum=0.;solver_at_limit=0
     solver_budgets=Counter();solver_iterations=Counter();solver_terminations=Counter()
     if (target/'backend_use.csv').exists():
@@ -72,6 +76,7 @@ def backend_stats(target):
                   solver_iteration_histogram_json=json.dumps(solver_iterations,sort_keys=True),
                   solver_termination_integer_histogram_json=json.dumps(solver_terminations,sort_keys=True),
                   exact_solver_stop_reason='Unknown',
+                  solver_diagnostic_scope='estimator.optimization nonlinear solve; initialization SfM solve not instrumented',
                   max_solver_s=max_solver,max_actual_eligible=max(times['eligible'].values(),default=0))
     source_counts=Counter()
     with rosbag.Bag(receipt['feature_bag']) as bag:
@@ -81,12 +86,14 @@ def backend_stats(target):
         for _,m,_ in bag.read_messages(topics=['/feature_tracker/feature']):
             source_counts.update('candidate' if int(t)>=10_000_000 else 'KLT' for t in m.channels[0].values)
     result['received_complete']=all(use['received_'+k]==source_counts[k] for k in ['KLT','candidate'])
+    result['reference_start_sensor_s']=str(stamps[0])
     vio=target/'vins_output/vio.csv'
     result.update(poses=0,trajectory_coverage=0.,trajectory_length_m='',first_pose_sensor_s='')
     if vio.exists() and vio.stat().st_size:
         from evaluate_vins_common_support import load_vins_body_csv
         poses=load_vins_body_csv(vio)
         result.update(poses=len(poses.stamps),first_pose_sensor_s=str(poses.stamps[0]),
+            first_pose_delay_from_reference_start_s=float(poses.stamps[0]-stamps[0]),
             trajectory_length_m=float(np.linalg.norm(np.diff(poses.positions,axis=0),axis=1).sum()),
             trajectory_coverage=float((min(poses.stamps[-1],stamps[-1])-max(poses.stamps[0],stamps[0]))/(stamps[-1]-stamps[0])))
     result['runability']=('PASS' if receipt['status']=='COMPLETE' and result['poses']>=30
@@ -184,6 +191,15 @@ def main():
                 support_json=json.dumps(summary['support'],sort_keys=True) if summary else '',
                 artifact=str(PAPER/'common_support'/slug/comparison)))
             if len(arms)==4:
+                for arm in arms:
+                    for repeat in [1,2,3]:
+                        row=backend.get((slug,arm,repeat))
+                        if row is not None:
+                            row['all_four_metric_status']=status
+                            if summary:
+                                v=summary['arms'][f'{arm}_r{repeat}']
+                                row.update(all_four_APE_rmse_m=v['fixed_se3_ape_rmse_m'],
+                                    all_four_RPE_rmse_m=v['fixed_se3_rpe_rmse_m'],all_four_sim3_scale=v['sim3_scale'])
                 if summary:
                     for row in front:
                         if row['run_slug']==slug:

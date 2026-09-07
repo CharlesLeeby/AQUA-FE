@@ -1,0 +1,67 @@
+{
+  "arms": {
+    "B": {
+      "arbitrary_keyframe_depth_bound": 700,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/afrl_cave_v31/external_klt_every2_acv1_afrl_cemetery_s135_d045_klt/features.bag",
+      "feature_bag_sha256": "c144ba971b2d7fc1b73980f9d1336d508f823db26f448f803df747536688169e",
+      "feature_messages": 357,
+      "gaps": [],
+      "max_consecutive11_ge4": 489,
+      "max_consecutive11_ids": 1910,
+      "max_per_message": 350,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 25827,
+      "whole_window_ge4": 8631
+    },
+    "C-all": {
+      "arbitrary_keyframe_depth_bound": 876,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/afrl_cemetery_s135_d045/C-all.bag",
+      "feature_bag_sha256": "90ff3f75dbe56f2247d751a187bd8dc97c01ca27855cb986410f9aa80f0f579a",
+      "feature_messages": 357,
+      "gaps": [],
+      "max_consecutive11_ge4": 558,
+      "max_consecutive11_ids": 1918,
+      "max_per_message": 438,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 28009,
+      "whole_window_ge4": 9201
+    },
+    "L-all": {
+      "arbitrary_keyframe_depth_bound": 998,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/afrl_cemetery_s135_d045/L-all.bag",
+      "feature_bag_sha256": "da767b0d48d6895cfa996127423388935d64c0e59275fba614b82757aa4e0030",
+      "feature_messages": 357,
+      "gaps": [],
+      "max_consecutive11_ge4": 570,
+      "max_consecutive11_ids": 1919,
+      "max_per_message": 499,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 29276,
+      "whole_window_ge4": 9582
+    },
+    "L6": {
+      "arbitrary_keyframe_depth_bound": 712,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/afrl_cemetery_s135_d045/L6.bag",
+      "feature_bag_sha256": "18050bcfa8acd7c59b9d04715a7ec03a7f999a9811fb7d17ecaf49fad0948681",
+      "feature_messages": 357,
+      "gaps": [],
+      "max_consecutive11_ge4": 494,
+      "max_consecutive11_ids": 1919,
+      "max_per_message": 356,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 26415,
+      "whole_window_ge4": 8783
+    }
+  },
+  "capacity_modified": false,
+  "proof": "WINDOW_SIZE=10; continuous public IDs remain contiguous under frame removal; every length>=4 interval among indices0..10 intersects {3,7}; depth_count<=2*max_input_count. Whole-window count is only a looser bound.",
+  "run_slug": "afrl_cemetery_s135_d045"
+}

@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import numpy as np
 from run_additive_budget_v1 import ROOT, PAPER, RUNTIME, sha
+from analyze_additive_budget_v1 import table
 
 ARMS = ['B', 'L6', 'L-all', 'C-all']
 COLORS = ['#666666', '#0072B2', '#D55E00', '#009E73']
@@ -40,15 +41,36 @@ def main():
     slugs = [w['run_slug'] for w in windows]
     f = {(r['run_slug'], r['arm']): r for r in front}
     b = {(s, a): [r for r in back if r['run_slug'] == s and r['arm'] == a] for s in slugs for a in ARMS}
+    summaries=[]
+    for s in slugs:
+        for a in ARMS:
+            runs=b[s,a]
+            row=dict(run_slug=s,arm=a,attempted=len(runs),runability_pass=sum(r.get('runability')=='PASS' for r in runs))
+            for field in ['wall_s','peak_node_rss_bytes','first_pose_delay_from_reference_start_s',
+                          'trajectory_coverage','trajectory_length_m','received_candidate','received_KLT',
+                          'eligible_candidate','residual_candidate','residual_KLT','max_actual_eligible',
+                          'solver_total_s','solver_near_limit_fraction','solver_at_or_above_limit_fraction',
+                          'all_four_APE_rmse_m','all_four_RPE_rmse_m','all_four_sim3_scale']:
+                values=[num(r[field]) for r in runs if r.get(field) not in ('',None,'Unknown')]
+                for name,value in [('min',min(values) if values else 'Unknown'),
+                                   ('median',float(np.median(values)) if values else 'Unknown'),
+                                   ('max',max(values) if values else 'Unknown')]:row[field+'_'+name]=value
+            summaries.append(row)
+    table(PAPER/'backend_arm_summary.csv',summaries)
     q = [r for r in pairs if r['comparison'] == 'L-all_vs_L6']
     counts = Counter(r.get('practical') or r['status'] for r in q)
     decision.update(quantity_comparison_counts=dict(counts),
+        source_generation_attempts=7 if (PAPER/'cemetery_invalid_attempt.json').exists() else 6,
+        invalid_source_generation_attempts=1 if (PAPER/'cemetery_invalid_attempt.json').exists() else 0,
         failed_or_invalid_backend_runs=sum(r.get('runability') != 'PASS' for r in back),
         all_comparison_counts={p:dict(Counter(r.get('practical') or r['status'] for r in pairs if r['comparison']==p)) for p in dict.fromkeys(r['comparison'] for r in pairs)})
     # Final scientific wording is reviewed after generation; these are exact descriptive counts.
     decision['answer'] = (f"取消配额在{decision['quantity_contrast_sufficient_windows']}/6窗形成充分发布剂量差；"
         f"L-all相对L6：实用改善{counts['PRACTICAL_GAIN']}窗，实用退化{counts['PRACTICAL_LOSS']}窗，"
         f"小幅或不确定{counts['SMALL_OR_UNCERTAIN']}窗；其余不可作精度胜负判断。")
+    net=decision['all_comparison_counts']['L-all_vs_B']
+    decision['answer']+=(f"L-all相对完整B：实用改善{net.get('PRACTICAL_GAIN',0)}窗，"
+                         f"实用退化{net.get('PRACTICAL_LOSS',0)}窗。")
     (PAPER/'decision.json').write_text(json.dumps(decision, ensure_ascii=False, indent=2)+'\n')
 
     out = PAPER/'analysis-output'
@@ -87,14 +109,21 @@ def main():
     fig.savefig(figures/'02-dose-and-use.png', dpi=180)
     plt.close(fig)
 
-    quantity = ['| 窗口 | L6触顶帧 / L-all>6帧 | 发布倍率 | 实际候选残差倍率 | APE变化% / RPE变化% | 冻结判断 |',
-                '|---|---:|---:|---:|---:|---|']
+    quantity = ['| 窗口 | L6触顶帧 / L-all>6帧 | 发布倍率 | 实际候选残差倍率 | 常规求解总时间倍率 | APE变化% / RPE变化% | 冻结判断 |',
+                '|---|---:|---:|---:|---:|---:|---|']
     for r, label in zip(q, LABELS):
         s = r['run_slug']; den = med(b[s,'L6'], 'residual_candidate')
         ratio = fmt(med(b[s,'L-all'], 'residual_candidate')/den) if den else 'Unknown'
+        solver_den=med(b[s,'L6'],'solver_total_s')
+        solver_ratio=fmt(med(b[s,'L-all'],'solver_total_s')/solver_den) if solver_den else 'Unknown'
         delta = f"{fmt(r['APE_delta_pct'])} / {fmt(r['RPE_delta_pct'])}" if r.get('APE_delta_pct') else 'Not evaluated.'
-        quantity.append(f"| {label} | {f[s,'L6']['frames_at_six']} / {f[s,'L-all']['frames_over_six']} | {fmt(r['dose_ratio'])} | {ratio} | {delta} | {r.get('practical') or r['status']} |")
+        quantity.append(f"| {label} | {f[s,'L6']['frames_at_six']} / {f[s,'L-all']['frames_over_six']} | {fmt(r['dose_ratio'])} | {ratio} | {solver_ratio} | {delta} | {r.get('practical') or r['status']} |")
     quantity_text = '\n'.join(quantity)
+    contrast_counts=['| 固定对比 | 实用改善 | 实用退化 | 小幅或不确定 | 不可作精度判断 |',
+                     '|---|---:|---:|---:|---:|']
+    for name,c in decision['all_comparison_counts'].items():
+        gains=c.get('PRACTICAL_GAIN',0);losses=c.get('PRACTICAL_LOSS',0);uncertain=c.get('SMALL_OR_UNCERTAIN',0)
+        contrast_counts.append(f'| {name} | {gains} | {losses} | {uncertain} | {6-gains-losses-uncertain} |')
     stats = ['统计单位为六个预先固定、已知历史结果的开发窗口；每臂3次技术重复描述运行波动，不是18个独立样本。',
         '主指标为fixed-scale proper SE(3) APE RMSE，越小越好。严格1秒RPE为全局对齐坐标下的位置增量误差，不是包含姿态的完整相对位姿变换误差。COLMAP/proxy不是独立GT。',
         '主表每窗12轨迹共同支撑；五类对比各自6轨迹共同支撑。全部冻结支撑门和evo数值交叉核验见common_support_status.csv及各evaluation_receipt.json。',
@@ -122,9 +151,13 @@ def main():
         'Claim candidate：更多学习候选的后端净收益由五类预注册对比决定。证据：comparisons.csv和各共同支撑摘要。允许表述：本六个开发窗内的实用改善/退化/不确定数量。禁止表述：技术重复显著性、held-out泛化率、共同初始化后纯跟踪因果效应。结论：weaken至开发性端到端证据。',
         'Claim candidate：C-all与L-all仅能比较整个来源方案。证据：source_weight_audit.csv、source_supply.csv、frontend_window_resources.csv。不同供给、用时及冻结q来源先验构成混杂；等剂量、等算力、等q的来源优越性为Not evaluated.。结论：keep该限制。']
     (out/'analysis-report.md').write_text('\n\n'.join(analysis)+'\n')
+    inputs = {str(PAPER/name):sha(PAPER/name) for name in ['frontend_audit.csv','backend_results.csv','comparisons.csv','source_supply.csv','source_weight_audit.csv','frontend_window_resources.csv']}
+    (out/'provenance.json').write_text(json.dumps(dict(script_sha256=sha(__file__),inputs=inputs,
+        figures={p.name:sha(p) for p in figures.glob('*.png')}), indent=2)+'\n')
 
     # User requested report.md and a full four-arm table first; this overrides skill default naming.
-    lines = ['| 窗口 | 臂 | 发布总量/峰值并发 | 寿命中位/最长(观测) | APE/RPE中位(m) | 初始化成功/复放输出 | reset代理总数 | 合并/后端墙钟中位(s) |',
+    generation = {r['run_slug']:r['generation_wall_s'] for r in read('frontend_window_resources.csv')}
+    lines = ['| 窗口 | 臂 | 发布总量/峰值并发 | 寿命中位/最长(观测) | APE/RPE中位(m) | 初始化成功/复放输出 | reset代理总数 | 两源共享生成/合并/后端(s) |',
              '|---|---|---:|---:|---:|---:|---:|---:|']
     for s, label in zip(slugs, LABELS):
         for a in ARMS:
@@ -133,26 +166,27 @@ def main():
             init = sum(num(v.get('initialization_count') or 0)>0 for v in runs)
             complete = sum(v['status']=='COMPLETE' for v in runs)
             reset = sum(num(v.get('reset_count_proxy') or 0) for v in runs)
-            lines.append(f"| {label} | {a} | {r['total_published']}/{r['max_concurrent']} | {r['lifetime_median']}/{r['lifetime_max']} | {metric} | {init}/3；{complete}/3 | {int(reset)} | {fmt(r['merge_wall_s'])}/{fmt(med(runs,'wall_s'))} |")
+            generation_s = '复用' if a=='B' else fmt(generation[s])
+            lines.append(f"| {label} | {a} | {r['total_published']}/{r['max_concurrent']} | {r['lifetime_median']}/{r['lifetime_max']} | {metric} | {init}/3；{complete}/3 | {int(reset)} | {generation_s}/{fmt(r['merge_wall_s'])}/{fmt(med(runs,'wall_s'))} |")
     lines += ['', decision['answer'], '', f"日期：{datetime.now().date()}；实验线 frontend_additive_budget_v1，版本v1。前端24/24，正式尝试72/72，三技术重复，复用旧后端结果0次。原B bag只读复用，不计作新KLT推理。", '',
         '完整数量对照如下，方向变化不自动等同实用改善：', '', quantity_text, '',
-        '五类固定对比的全部30行及精确数值见[comparisons.csv](comparisons.csv)。APE与RPE必须使用同一对比的共同支撑；主表是另行计算的四臂共同支撑。初始化成功仅表示日志事件，不代表尺度可靠或定位准确。',
+        '\n'.join(contrast_counts), '',
+        '以上是六个目的性开发窗的描述计数，不是总体成功率。五类固定对比的全部30行及精确数值见[comparisons.csv](comparisons.csv)。APE与RPE必须使用同一对比的共同支撑；主表是另行计算的四臂共同支撑。初始化成功仅表示日志事件，不代表尺度可靠或定位准确。',
         '', '原始KLT在全部合并中保持时间戳、ID、相机、坐标、速度和原通道；移除追加尾部可序列化重建B，非feature消息一致。六窗L6/L-all各只读同一份XFeat流，按源ID和精确时间戳核对观测子集。公开间断后新ID，无未来寿命选择或历史倒填。',
         '', 'all仅针对top_k=2048、每次最多60新种子、私有池最多800的冻结生成器。正常GFTT候选使用1024角点供给，其他通用跟踪/几何/去重共享。实际源池限额事件与拒绝统计见[source_supply.csv](source_supply.csv)、[rejection_summary.csv](rejection_summary.csv)。没有根据效果改门或静默裁剪全部臂。',
-        '', '共享两源生成耗时、图像尺寸/实测原始帧数、模块计时及进程峰值RSS见[frontend_window_resources.csv](frontend_window_resources.csv)。B生成耗时为Unknown（只读复用）；表中B合并时间主要是读回审计。L6/L-all共用完整XFeat推理，不可声称6条配额减少本轮网络推理成本。A09及A02前段源生成尚未固定CPU亲和，跨窗时间不可作严格速度排名。',
+        '', '共享两源生成耗时在同窗三添加臂重复展示，仅实际执行一次，不能相加。图像尺寸/实测原始帧数、模块计时及进程峰值RSS见[frontend_window_resources.csv](frontend_window_resources.csv)。B生成耗时为Unknown（只读复用）；表中B合并时间主要是读回审计，后端时间为三重复墙钟中位，含ROS启动、播放、排空与收尾。L6/L-all共用完整XFeat推理，不可声称6条配额减少本轮网络推理成本。A09及A02前段源生成尚未固定CPU亲和；宿主非排他，Bus部分运行期间另有编译任务，严格无干扰性能排名Not evaluated.。',
         '', '后端四臂使用同一只读诊断二进制，容量仍1000，无容量扩展；实际逐ID接收、>=4观测资格、真正加入问题的投影残差、solver用时及RSS见[backend_results.csv](backend_results.csv)。计数可跨优化重复使用观测；可运行不等于正确尺度。工程保护结果保留在72行分母。solver接近上限为elapsed>=95%预算，实际达到为elapsed>=预算，不能据此唯一识别停止原因。',
+        '逐臂三重复的最小/中位/最大汇总见[backend_arm_summary.csv](backend_arm_summary.csv)，包含首次位姿延迟、实际使用、容量、solver、RSS和尺度。公开ID数、>=4及>=10观测长链见[frontend_audit.csv](frontend_audit.csv)，逐链寿命见[candidate_lifecycle.csv](candidate_lifecycle.csv)。',
         '', '三重复按中位数和全范围报告。未执行总体显著性推断，依据及效应量见[统计附录](analysis-output/stats-appendix.md)。六窗是已知结果的开发窗，参考为COLMAP/proxy；添加观测从同一起点介入，可改变初始化，不能主张共同初始化后的纯跟踪效应。',
         '', '![四臂精度](analysis-output/figures/01-four-arm-ape.png)',
         '图1用于核对各窗精度和技术波动。误差条不是置信区间；A09尺度漂移必须保留，不能只强调初始化成功。预注册的胜负仍以两臂专属共同支撑为准。',
         '', '![公开剂量和实际残差使用](analysis-output/figures/02-dose-and-use.png)',
         '图2区分“发布了更多点”与“后端实际用了多少约束”。二者都不能直接证明新增独立信息或定位收益。',
         '', '已知实现边界：[implementation_audit_notes.md](implementation_audit_notes.md)。XFeat与C的冻结vins_safe来源映射不同，实际q范围见[source_weight_audit.csv](source_weight_audit.csv)，加上供给与耗时不同，仅允许整个来源方案比较。逐私有ID的确切死亡原因Unknown；有按类累计FB/NCC/边界死亡和几何/质量/去重拒绝，不能逐链唯一归因。receipt.started_at实际为收尾写入时间；墙钟用时有效，精确启动墙钟Unknown。',
+        '', '执行偏差：Cemetery首次源生成遇到raw190/191异图同时间戳，358源记录对357个原B时刻，合并身份门拒绝，后端未使用该流。原产物全部隔离保存，随后按已冻结2/0帧索引补上输出关联条件，恢复前另行冻结一行overlay。Cemetery因此有两次生成尝试，其他五窗一次；正式L6/L-all仍共享唯一有效源流。失败尝试精确额外墙钟Unknown，不能记为零或隐瞒。详[cemetery_recovery_addendum.md](cemetery_recovery_addendum.md)、[失败清单](cemetery_invalid_attempt.json)、[六窗帧索引核对](all_window_frame_alignment_audit.json)。原冻结runner和门限未修改；这是结构修复，不能作为方法效果证据。',
         '', '复现入口：[preregistration.md](preregistration.md)、[源与输入锁](source_and_backend_lock.json)、[后端执行锁](backend_execution_lock_v2.json)、[评估锁](evaluation_lock.json)、[完整分析](analysis-output/analysis-report.md)、[图解释](analysis-output/figure-catalog.md)。运行大文件保留于独立运行目录，哈希可核查，未上传bag、权重或大日志。报告使用用户指定路径，未尝试Obsidian写回。',
         '', '当前唯一下一步：'+decision['next_step']]
     (PAPER/'report.md').write_text('\n'.join(lines)+'\n')
-    inputs = {str(PAPER/name):sha(PAPER/name) for name in ['frontend_audit.csv','backend_results.csv','comparisons.csv','source_supply.csv','source_weight_audit.csv','frontend_window_resources.csv']}
-    (out/'provenance.json').write_text(json.dumps(dict(script_sha256=sha(__file__),inputs=inputs,
-        figures={p.name:sha(p) for p in figures.glob('*.png')}), indent=2)+'\n')
     print(json.dumps(decision, ensure_ascii=False, indent=2))
 
 

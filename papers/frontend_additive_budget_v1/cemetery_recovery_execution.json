@@ -1,0 +1,10 @@
+{
+  "boundary": "one invalid first attempt retained; no duplicate inference for L6/L-all; frame-index association repair only",
+  "invalid_attempt": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/quarantine/afrl_cemetery_s135_d045_source_attempt1",
+  "original_runner_sha256": "14f36246747de4dd7f93f6d60e19e3bfb97af26d31b3f4663ba57f41b6bdd6b5",
+  "overlaid_runner_sha256": "7a14c2e766352c6532ecc619ec5eb2a0414a04c9760d17fa6c7838b6a4d95762",
+  "recovery_lock_sha256": "a7c150eef80e9bc2d92cf1fca9bfea6c1a3252b19e79f61c903ca10c6cbf1f57",
+  "resulting_frontend_receipt_sha256": "cfa5282e30ac6128eb09e355f8bdf0c7961bd5c0437bb0b136b7fc956818d96a",
+  "source_generation_attempts_per_source": 2,
+  "valid_source_streams_per_source": 1
+}

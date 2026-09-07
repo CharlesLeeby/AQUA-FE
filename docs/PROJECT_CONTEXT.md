@@ -292,3 +292,6 @@ papers/frontend_admission_continuation_v1/report.md and docs/CODEX_HANDOFF.md.
 
 
 2026-09-08独立additive_budget_v1证据完整性问题：Cemetery raw190/191异图同stamp触发重复输出关联，首源尝试无效保留。原B正确匹配冻结stride；一行frame-index overlay另锁，原冻结代码不改。恢复尚未评估，其他窗口继续，主研究方向不变。见cemetery_recovery_addendum.md。
+
+
+2026-09-08 additive_budget_v1：全部24前端独立读回通过，Cemetery结构恢复有效（首失败保留）；五窗60回放完成。A08数量对比实用改善但仍差于B，H07无实用变化，Bus有保留的异常重复。主方法/后端门不变，完整判定待Cemetery。详checkpoint_frontend_complete.md。

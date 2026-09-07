@@ -865,3 +865,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: 明确偏离每窗一次生成：Cemetery将有两次尝试（首份无效），仍只让L6/L-all共享一份正式流。恢复结果Not evaluated.。
 - Interpretation: Confirmed fact为输入/关联bug，不是学习候选精度失败；候选与后端结果均不得据此推断。
 - Next steps: 完成纠正源流、读回、容量，再继续原四臂三重复，正式上限仍72。
+
+
+## 2026-09-08 — 全部前端恢复验收与五窗后端检查点
+- Date / objective: 2026-09-08；完成六窗24前端，并保持四臂完整证据。
+- Problem / motivation: 验证实际bag与共同源逐ID关系，并防止中位数隐藏Bus异常。
+- Files changed: 三个分析/报告/读回脚本；任务表格、source_generation_attempts.csv、delivery_readback_audit.csv、all_window_frame_alignment_audit.json；checkpoint_bus/a08/h07/frontend_complete.md及共同支撑摘要。
+- Implementation: 六窗源坐标/q/速度/原B逐消息独立核对；补逐次all_four精度、初始化时刻/视觉IMU不一致次数、solver直方图与范围；最终图表脚本等待72齐备。
+- Technical decisions: 保留原Cemetery失败，使用独立锁的一行帧索引overlay；H07先回放、Cemetery后回放以等待恢复，内窗臂/重复顺序不变，仅一个活动后端队列。
+- Experiments performed: 全24输出读回/容量通过；A09/A02/Bus/A08/H07共60正式回放及各自共同支撑/evo完成；Cemetery后端未完成。
+- Quantitative results: 六窗L-all/L6发布倍率均>=1.25且触顶/超过6帧门通过。A08数量APE0.548041/0.695554m实用改善，但对B0.147626m实用退化；H07数量APE1.272349/1.276281m不确定。Bus L-all首重复APE23.252566m、另两次约.043m，必须保留。完整精确数字见comparisons.csv及checkpoint。
+- Qualitative observations: 更多数量可有局部改善，但不等于完整KLT净收益；并发量不等于独立信息。
+- Failed attempts: Cemetery首源INVALID_SOURCE_ALIGNMENT保留；七次源尝试产生六份正式共同源；等待外部VINS为WAITING_RESOURCE，不计算法失败。
+- Known issues: 跨来源q/成本混杂、非独占宿主、初始化SfM计时Unknown、私有ID确切死亡原因Unknown；source_commit为完成时HEAD，源身份以锁哈希为准。
+- Interpretation: Confirmed fact为已完成窗口；全六窗效果结论Not evaluated.，不扩预算或研究方向。
+- Next steps: 完成Cemetery12次，复核完整72分母并生成最终报告/图/远端同步。

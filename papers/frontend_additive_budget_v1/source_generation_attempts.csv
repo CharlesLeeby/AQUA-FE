@@ -1,0 +1,8 @@
+run_slug,attempt,status,scientific_role,generation_wall_s,total_with_merge_s,peak_rss_kib,receipt
+a02_0_900,1,FRONTEND_COMPLETE,formal_shared_source,1111.6117192219972,1156.351448218993,1626392,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a02_0_900/receipt.json
+a08_2700_3600,1,FRONTEND_COMPLETE,formal_shared_source,1261.6856090850051,1320.0582303440024,1293360,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a08_2700_3600/receipt.json
+a09_6000_6800,1,FRONTEND_COMPLETE,formal_shared_source,833.0564254130004,867.9521994470124,1351164,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a09_6000_6800/receipt.json
+afrl_bus_s180_d045,1,FRONTEND_COMPLETE,formal_shared_source,264.0078119279933,282.72510666100425,1249588,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/afrl_bus_s180_d045/receipt.json
+afrl_cemetery_s135_d045,2,FRONTEND_COMPLETE,formal_shared_source,385.40297932500835,409.4974776790041,1313852,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/afrl_cemetery_s135_d045/receipt.json
+h07_0_1000,1,FRONTEND_COMPLETE,formal_shared_source,447.0134313390008,483.6416803559987,1389588,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/h07_0_1000/receipt.json
+afrl_cemetery_s135_d045,1,INVALID_SOURCE_ALIGNMENT,retained_failed_attempt,Unknown,Unknown,Unknown,papers/frontend_additive_budget_v1/cemetery_invalid_attempt.json

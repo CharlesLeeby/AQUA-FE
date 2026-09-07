@@ -1,0 +1,59 @@
+{
+  "audited_at": "2026-09-08T00:19:38.226205",
+  "windows": [
+    {
+      "run_slug": "a09_6000_6800",
+      "raw_images": 801,
+      "unique_raw_stamps": 801,
+      "B_outputs": 400,
+      "frozen_frame_indices_match_B_exactly": true,
+      "stamp_only_extra_outputs": 0,
+      "raw_stamp_sequence_sha256": "2109407aef7e3b0fb250c6bb038c45d5810d8b194599898fb48c499917362576"
+    },
+    {
+      "run_slug": "a02_0_900",
+      "raw_images": 901,
+      "unique_raw_stamps": 901,
+      "B_outputs": 450,
+      "frozen_frame_indices_match_B_exactly": true,
+      "stamp_only_extra_outputs": 0,
+      "raw_stamp_sequence_sha256": "adacfde358ba243bd9d2137b536179ea90ca00bbf2e7f66aa347f3c13bbfbca4"
+    },
+    {
+      "run_slug": "afrl_bus_s180_d045",
+      "raw_images": 564,
+      "unique_raw_stamps": 564,
+      "B_outputs": 282,
+      "frozen_frame_indices_match_B_exactly": true,
+      "stamp_only_extra_outputs": 0,
+      "raw_stamp_sequence_sha256": "26da290371859fb4b6127646afec8669fb70dd3bd040ab048a2da50eac0eb169"
+    },
+    {
+      "run_slug": "a08_2700_3600",
+      "raw_images": 901,
+      "unique_raw_stamps": 901,
+      "B_outputs": 450,
+      "frozen_frame_indices_match_B_exactly": true,
+      "stamp_only_extra_outputs": 0,
+      "raw_stamp_sequence_sha256": "ff088147b78f6c79cb7a6c0463ed1bec9029625995c2b452a4482947fab6b5f5"
+    },
+    {
+      "run_slug": "afrl_cemetery_s135_d045",
+      "raw_images": 713,
+      "unique_raw_stamps": 712,
+      "B_outputs": 357,
+      "frozen_frame_indices_match_B_exactly": true,
+      "stamp_only_extra_outputs": 1,
+      "raw_stamp_sequence_sha256": "511f01798a0804192ebd62db97185b05d15fd5cec0f11850e2b53866e08ea787"
+    },
+    {
+      "run_slug": "h07_0_1000",
+      "raw_images": 1001,
+      "unique_raw_stamps": 1001,
+      "B_outputs": 500,
+      "frozen_frame_indices_match_B_exactly": true,
+      "stamp_only_extra_outputs": 0,
+      "raw_stamp_sequence_sha256": "d365ca3a35f74bae44beb280b60033295efa2178e2e96399eb06507f4721c9fd"
+    }
+  ]
+}

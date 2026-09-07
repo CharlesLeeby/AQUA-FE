@@ -19,3 +19,6 @@ A09正式12/12完成且共同支撑/evo通过：更多剂量未改善净收益�
 
 
 2026-09-08：Bus12完成，L-all首重复APE23.2526m而另两次约.043m，不得用中位改善掩盖风险。Cemetery首源尝试INVALID_SOURCE_ALIGNMENT（raw190/191异图同stamp），已完整隔离并冻结索引关联修复；H07仍按原冻结生成。恢复锁和偏差见cemetery_recovery_addendum.md。
+
+
+2026-09-08检查点：前端24/24全部独立读回通过；五窗60/72后端与共同支撑完成。Cemetery修复有效，当前只剩其12次后端；H07队列结束、原controller已恢复。A08数量改善不等于对B净收益，Bus异常重复保留。详checkpoint_frontend_complete.md；38e5881远端四文件读回一致，见sync_38e5881.json。
