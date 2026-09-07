@@ -1,0 +1,46 @@
+{
+  "aa": [
+    {
+      "variants": [
+        "frozen",
+        "diagnostic"
+      ],
+      "window": "a02_0_900"
+    },
+    {
+      "variants": [
+        "frozen",
+        "diagnostic"
+      ],
+      "window": "a08_2700_3600"
+    },
+    {
+      "variants": [
+        "frozen",
+        "diagnostic"
+      ],
+      "window": "afrl_bus_s180_d045"
+    }
+  ],
+  "aa_all_required": true,
+  "exact_timestamps_required": true,
+  "formal_arms": [
+    "B",
+    "L-all",
+    "C-all"
+  ],
+  "formal_max": 27,
+  "orientation_max_tolerance_rad": 1e-05,
+  "position_max_tolerance_m": 1e-05,
+  "repeats": [
+    1,
+    2,
+    3
+  ],
+  "source_commit": "2bc23263e7f6dc39329373fc78bc9098f1e19109",
+  "windows": [
+    "a02_0_900",
+    "a08_2700_3600",
+    "afrl_bus_s180_d045"
+  ]
+}

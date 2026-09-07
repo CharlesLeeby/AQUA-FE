@@ -1,0 +1,20 @@
+#pragma once
+#include <cstdio>
+#include <cstdlib>
+#include <Eigen/Dense>
+inline FILE* utility_file() {
+ static FILE* f=[](){const char* p=std::getenv("AQUAFE_UTILITY_LOG");return p?std::fopen(p,"a"):nullptr;}();return f;
+}
+inline double& utility_stamp(){static double t=0;return t;}
+inline int& utility_attempt(){static int n=0;return n;}
+inline void utility_event(const char* kind, double a=0,double b=0,double c=0,double d=0) {
+ if(FILE* f=utility_file())std::fprintf(f,"%s,%.9f,%d,%.17g,%.17g,%.17g,%.17g\n",kind,utility_stamp(),utility_attempt(),a,b,c,d);
+}
+inline void utility_matrix(const char* kind,const Eigen::MatrixXd& A,const Eigen::VectorXd& b) {
+ if(FILE* f=utility_file()){
+  std::fprintf(f,"matrix,%s,%.9f,%d,%ld",kind,utility_stamp(),utility_attempt(),static_cast<long>(A.rows()));
+  for(int i=0;i<A.rows();++i)for(int j=0;j<A.cols();++j)std::fprintf(f,",%.17g",A(i,j));
+  for(int i=0;i<b.size();++i){std::fprintf(f,",%.17g",b(i));}
+  std::fprintf(f,"\n");
+ }
+}

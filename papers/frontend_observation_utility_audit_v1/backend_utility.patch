@@ -1,0 +1,178 @@
+--- a/src/estimator/estimator.cpp
++++ b/src/estimator/estimator.cpp
+@@ -9,6 +9,7 @@
+ 
+ #include "estimator.h"
+ #include "../additive_audit.h"
++#include "../utility_audit.h"
+ #include "../utility/visualization.h"
+ #include "../factor/initial_bias_factor.h"
+ #include <ceres/normal_prior.h>
+@@ -584,6 +585,9 @@
+ 
+ bool Estimator::initialStructure()
+ {
++    utility_stamp()=Headers[frame_count]; ++utility_attempt();
++    utility_event("attempt",frame_count,f_manager.feature.size(),all_image_frame.size());
++    for(const auto& f:f_manager.feature)utility_event("input_id",f.feature_id,f.start_frame,f.feature_per_frame.size());
+     TicToc t_sfm;
+     //check imu observibility
+     {
+@@ -607,6 +611,7 @@
+         }
+         var = sqrt(var / ((int)all_image_frame.size() - 1));
+         //ROS_WARN("IMU variation %f!", var);
++        utility_event("imu_excitation",var);
+         if(var < 0.25)
+         {
+             ROS_INFO("IMU excitation not enouth!");
+@@ -637,19 +642,23 @@
+     int l;
+     if (!relativePose(relative_R, relative_T, l))
+     {
++        utility_event("relative_result",0);
+         ROS_INFO("Not enough features or parallax; Move device around");
+         return false;
+     }
++    utility_event("relative_result",1,l);
+     GlobalSFM sfm;
+     if(!sfm.construct(frame_count + 1, Q, T, l,
+               relative_R, relative_T,
+               sfm_f, sfm_tracked_points))
+     {
++        utility_event("sfm_result",0);
+         ROS_DEBUG("global SFM failed!");
+         marginalization_flag = MARGIN_OLD;
+         return false;
+     }
+ 
++    utility_event("sfm_result",1,sfm_tracked_points.size());
+     //solve pnp for all frame
+     map<double, ImageFrame>::iterator frame_it;
+     map<int, Vector3d>::iterator it;
+@@ -697,17 +706,21 @@
+             }
+         }
+         cv::Mat K = (cv::Mat_<double>(3, 3) << 1, 0, 0, 0, 1, 0, 0, 0, 1);     
++        utility_event("pnp_input",pts_3_vector.size(),frame_it->first);
+         if(pts_3_vector.size() < 6)
+         {
+             cout << "pts_3_vector size " << pts_3_vector.size() << endl;
++            utility_event("pnp_result",0,frame_it->first);
+             ROS_DEBUG("Not enough points for solve pnp !");
+             return false;
+         }
+         if (! cv::solvePnP(pts_3_vector, pts_2_vector, K, D, rvec, t, 1))
+         {
++            utility_event("pnp_result",0,frame_it->first);
+             ROS_DEBUG("solve pnp fail!");
+             return false;
+         }
++        utility_event("pnp_result",1,frame_it->first);
+         cv::Rodrigues(rvec, r);
+         MatrixXd R_pnp,tmp_R_pnp;
+         cv::cv2eigen(r, tmp_R_pnp);
+@@ -734,6 +747,8 @@
+     VectorXd x;
+     //solve scale
+     bool result = VisualIMUAlignment(all_image_frame, Bgs, g, x);
++    utility_event("alignment_result",result,x.size() ? x.tail<1>()(0) : 0);
++    utility_event("alignment_bg",Bgs[0].x(),Bgs[0].y(),Bgs[0].z());
+     if(!result)
+     {
+         ROS_DEBUG("solve g failed!");
+@@ -751,6 +766,7 @@
+     }
+ 
+     double s = (x.tail<1>())(0);
++    utility_event("accepted_scale_gravity",s,g.x(),g.y(),g.z());
+     for (int i = 0; i <= WINDOW_SIZE; i++)
+     {
+         pre_integrations[i]->repropagate(Vector3d::Zero(), Bgs[i]);
+@@ -810,6 +826,10 @@
+     {
+         vector<pair<Vector3d, Vector3d>> corres;
+         corres = f_manager.getCorresponding(i, WINDOW_SIZE);
++        utility_event("relative_pair",i,WINDOW_SIZE,corres.size());
++        for(const auto& f:f_manager.feature)
++            if(f.start_frame<=i && f.start_frame+static_cast<int>(f.feature_per_frame.size())-1>=WINDOW_SIZE)
++                utility_event("relative_id",f.feature_id,i,WINDOW_SIZE);
+         if (corres.size() > 20)
+         {
+             double sum_parallax = 0;
+@@ -823,6 +843,7 @@
+ 
+             }
+             average_parallax = 1.0 * sum_parallax / int(corres.size());
++            utility_event("relative_parallax",i,average_parallax,average_parallax*460);
+             if(average_parallax * 460 > 30 && m_estimator.solveRelativeRT(corres, relative_R, relative_T))
+             {
+                 l = i;
+--- a/src/initial/initial_aligment.cpp
++++ b/src/initial/initial_aligment.cpp
+@@ -10,6 +10,7 @@
+  *******************************************************/
+ 
+ #include "initial_alignment.h"
++#include "../utility_audit.h"
+ 
+ #include <cstdlib>
+ 
+@@ -36,6 +37,8 @@
+         b += tmp_A.transpose() * tmp_b;
+     }
+     delta_bg = A.ldlt().solve(b);
++    utility_matrix("gyro_normal",A,b);
++    utility_event("gyro_delta",delta_bg.x(),delta_bg.y(),delta_bg.z());
+     ROS_WARN_STREAM("gyroscope bias initial calibration " << delta_bg.transpose());
+ 
+     for (int i = 0; i <= WINDOW_SIZE; i++)
+@@ -127,6 +130,8 @@
+             A = A * 1000.0;
+             b = b * 1000.0;
+             x = A.ldlt().solve(b);
++            utility_matrix("gravity_refine_normal",A,b);
++            utility_event("gravity_refine_step",k,x.tail<1>()(0)/100.0);
+             VectorXd dg = x.segment<2>(n_state - 3);
+             g0 = (g0 + lxly * dg).normalized() * G.norm();
+             //double s = x(n_state - 1);
+@@ -189,9 +194,11 @@
+     A = A * 1000.0;
+     b = b * 1000.0;
+     x = A.ldlt().solve(b);
++    utility_matrix("alignment_normal",A,b);
+     double s = x(n_state - 1) / 100.0;
+     ROS_DEBUG("estimated scale: %f", s);
+     g = x.segment<3>(n_state - 4);
++    utility_event("linear_scale_gravity",s,g.x(),g.y(),g.z());
+     ROS_DEBUG_STREAM(" result g     " << g.norm() << " " << g.transpose());
+     const bool diagnostics = std::getenv("VINS_INITIAL_DIAGNOSTICS") != nullptr;
+     if (diagnostics)
+@@ -204,6 +211,7 @@
+     RefineGravity(all_image_frame, g, x);
+     s = (x.tail<1>())(0) / 100.0;
+     (x.tail<1>())(0) = s;
++    utility_event("refined_scale_gravity",s,g.x(),g.y(),g.z());
+     ROS_DEBUG_STREAM(" refine     " << g.norm() << " " << g.transpose());
+     if (diagnostics)
+         ROS_WARN("initial alignment: refined scale %.6f gravity_norm %.6f", s, g.norm());
+--- a/src/initial/initial_sfm.cpp
++++ b/src/initial/initial_sfm.cpp
+@@ -12,6 +12,7 @@
+ #include "initial_sfm.h"
+ 
+ #include <cstdlib>
++#include "../utility_audit.h"
+ 
+ GlobalSFM::GlobalSFM(){}
+ 
+@@ -296,6 +297,9 @@
+ 		options.max_num_iterations = std::atoi(sfm_iterations);
+ 	ceres::Solver::Summary summary;
+ 	ceres::Solve(options, &problem, &summary);
++    utility_event("sfm_solver",summary.total_time_in_seconds,options.max_solver_time_in_seconds,summary.iterations.size(),summary.termination_type);
++    utility_event("sfm_cost",summary.initial_cost,summary.final_cost);
++    for(const auto& f:sfm_f)if(f.state)utility_event("sfm_residual_id",f.id,f.observation.size());
+ 	//std::cout << summary.BriefReport() << "\n";
+ 	if (summary.termination_type == ceres::CONVERGENCE || summary.final_cost < 5e-03)
+ 	{
