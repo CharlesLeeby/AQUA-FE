@@ -1,0 +1,7 @@
+{
+  "reason": "Python3.8 lacks dict union; one descriptive row-construction expression is replaced before first backend. Metric formulas, gate logic, evaluator and source files unchanged.",
+  "original_analysis_sha256": "6a8c7744a5e70a6e1065b8a4c232572dc40202388609cf782ce38574ac5f9c4d",
+  "compatible_analysis_sha256": "781da4b8e8f81162ee540a2630874bc9b0168988fe486b2c3d73b979486b5f02",
+  "adapter_sha256": "01009bdb76f8f06700e7e20b686258c96585a2ddf535968f8738d91b9a082761",
+  "formal_replays_before_fix": 0
+}
