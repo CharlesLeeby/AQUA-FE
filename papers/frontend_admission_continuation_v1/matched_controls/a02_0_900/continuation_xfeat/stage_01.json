@@ -1,0 +1,139 @@
+{
+  "allow_sparse_target_schedule": false,
+  "assignments": [
+    {
+      "candidate_index": 376,
+      "control_final_pixel": [
+        256.2650451660156,
+        208.1256103515625
+      ],
+      "control_id": 10000000,
+      "control_initial_pixel": [
+        261.0,
+        201.0
+      ],
+      "initial_distance_px": 13.114562563517596,
+      "target_frames": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "target_id": 10000000,
+      "target_initial_pixel": [
+        255.05784606933594,
+        212.69113159179688
+      ]
+    },
+    {
+      "candidate_index": 35,
+      "control_final_pixel": [
+        224.6355743408203,
+        256.039794921875
+      ],
+      "control_id": 10000001,
+      "control_initial_pixel": [
+        228.0,
+        251.0
+      ],
+      "initial_distance_px": 5.856166880251124,
+      "target_frames": [
+        2,
+        3,
+        4
+      ],
+      "target_id": 10000001,
+      "target_initial_pixel": [
+        232.93568420410156,
+        247.8482208251953
+      ]
+    },
+    {
+      "candidate_index": 98,
+      "control_final_pixel": [
+        471.087890625,
+        106.03671264648438
+      ],
+      "control_id": 10000002,
+      "control_initial_pixel": [
+        473.0,
+        104.0
+      ],
+      "initial_distance_px": 16.09338611210676,
+      "target_frames": [
+        2,
+        3
+      ],
+      "target_id": 10000002,
+      "target_initial_pixel": [
+        472.7457275390625,
+        120.09137725830078
+      ]
+    }
+  ],
+  "builder_script_sha256": "7dd75c8ffc6e9ec47231d8de4904ddde0c54451f200f0b22ac03490b74dc0b46",
+  "camera_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_acv1_a02_0_900_continuation_xfeat/aqualoc_archaeo02_pinhole.yaml",
+  "camera_config_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+  "control_id_mode": "preserve_target_ids",
+  "control_parameters": {
+    "block_size": 7,
+    "control_source_code": 0,
+    "exclusion_radius": 18,
+    "first_frame_velocity": "zero",
+    "lk_criteria_count": 30,
+    "lk_criteria_epsilon": 0.01,
+    "lk_max_level": 3,
+    "lk_win_size": [
+      21,
+      21
+    ],
+    "max_candidates": 512,
+    "max_fb_error": 1.0,
+    "max_image_dt": 0.002,
+    "min_distance": 18,
+    "opencv_rng_seed": 20260803,
+    "quality_level": 0.01
+  },
+  "feature_frames": 450,
+  "feature_topic": "/feature_tracker/feature",
+  "first_replaced_frame": 2,
+  "full_interval_survivors": 488,
+  "gftt_candidates": 512,
+  "image_topic": "/camera/image_raw",
+  "inserted_observations": 9,
+  "last_replaced_frame": 5,
+  "new_id_base": 15000000,
+  "opencv_version": "4.2.0",
+  "output_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/matched_controls/a02_0_900/continuation_xfeat/features_matched_gftt.bag",
+  "output_bag_sha256": "f36806e20ca10a1527b3982c1254ed1f925f8a5398373a74d7826961c63fe428",
+  "python_version": "3.8.10",
+  "raw_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_same_backend_confirmatory_v3/prepared/a02_0_900/input.bag",
+  "raw_bag_sha256": "ab0fa69eddce3bde6cb03efecf3c4fcafdd3d66e53691b9a2eaa1f531ee660db",
+  "removed_observations": 9,
+  "replaced_frames": 4,
+  "schema_version": "gftt-matched-lineage-control-v2",
+  "target_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_acv1_a02_0_900_continuation_xfeat/features.bag",
+  "target_bag_sha256": "8973fddc448f8c56558884b4ce5bb625906f367a4a73f379b473770460fcaad0",
+  "target_frames_by_id": {
+    "10000000": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "10000001": [
+      2,
+      3,
+      4
+    ],
+    "10000002": [
+      2,
+      3
+    ]
+  },
+  "target_ids": [
+    10000000,
+    10000001,
+    10000002
+  ]
+}

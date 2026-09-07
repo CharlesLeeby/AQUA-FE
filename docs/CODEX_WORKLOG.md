@@ -733,3 +733,35 @@ Matrix resumed at A09/SP+LG, skipping both identity-valid probes: 2/18 completed
 This confirms publication behavior only. New backend, A02 no-harm, A09/Bus gain,
 and new-window results remain Not evaluated. No runtime source changes followed
 the method freeze; the only next step is the remaining frozen matrix and controls.
+
+## 2026-09-07 — Recover EXP-012 execution without changing the experiment
+
+- Date: 2026-09-07, afternoon.
+- Task objective: continue the frozen six-window lifecycle experiment after execution interruption.
+- Problem / motivation: only two receipts survived the earlier session; an SP+LG metrics file with 400 frames was not evidence of successful completion. The alleged old bounded controller was absent.
+- Files changed: run_aquafe_v2_bounded_continuation.py; analysis-only lineage and re-associated v2 comparison helpers; current report and logs.
+- Implementation: release-hash-locked serial stage controller, exclusive lock, mutable progress plus append-only stage logs; subsequently hosted in user unit aquafe-exp012-bounded-20260907.service. All frontend/export/backend/metric source locks remain unchanged.
+- Technical decisions: preserve unreceipted artifacts in protocol quarantine; reuse only valid receipts. No new threshold, source, slot policy, window or algorithm version.
+- Experiments performed: resumed the existing EXP-012 matrix; no new scientific experiment.
+- Quantitative results at 15:51: 4/18 frontend cells complete; A09 SP+LG bag exactly equals KLT; A02 KLT passed; A02 XFeat running. New backend 0, effectiveness Not evaluated.
+- Qualitative observations: a normal foreground monitoring session returned 143 (SIGTERM); sender/cause Unknown. User service remains active across tool calls and beyond the prior interruption interval.
+- Failed attempts: the initial nohup controller did not persist; a subsequent interactive controller exited 143, later leaving an unreceipted A02 attempt. Original SP+LG and A02 partial directories are preserved, not counted as independent samples or successful runs.
+- Known issues: new matched/trajectory results pending; later success is not guaranteed by an active service.
+- Interpretation: execution recovery is infrastructure work, not evidence of no-harm or improved APE/RPE.
+- Next steps: monitor the bounded controller, review actual stop/output state, complete only permitted unfinished stages and publish complete evidence.
+
+## 2026-09-07 — Complete and publish EXP-012 without another variant
+
+- Date: 2026-09-07, completion 17:56 +08:00; follow-up reductions completed in this session.
+- Task objective: finish the authorized published-ID continuation development experiment and publish its real result.
+- Problem / motivation: v2 first-admission rules truncated actual publication; longer hidden survival alone did not prove backend benefit.
+- Files changed: EXP-012 compact evidence/report/config snapshots; CODEX_HANDOFF; bounded execution controller; analysis-only lineage, environment/timing, same-grid v2 comparison and manifest helpers; required logs. No frozen exporter/backend/evaluator modification after release.
+- Implementation: completed all original stages in the user service, then read-only per-ID and re-associated trajectory analysis. Preserved interrupted attempts; copied 12 actual YAML files with exact byte identity.
+- Technical decisions: full 12 learned arm-window denominator; exact zero-action KLT mapping; newly matched GFTT for all four active cells; fixed SE(3) primary, Sim(3) explicit. No post-hoc window/source selection.
+- Experiments performed: same EXP-012 only, 18 frontend cells, 4 matched controls, 24 new backend replays plus 18 identity-valid reused KLT trajectories; no old v2 replay rerun.
+- Quantitative results: 18/18 frontend, 4/4 matched and 42/42 runability PASS; 4/4 common supports PASS; 2 WIN / 8 TIE / 2 LOSS / 0 FAIL. Eleven lineages / 33 published observations; four singletons; zero carried classical mismatches. A09 fixed APE/RPE versus v2: -12.44%/-16.47%; A02 remains +592.94%/+605.21% APE versus KLT. Forty-two environment records pass 35 semantic settings; evo delta <5e-7 m.
+- Qualitative observations: A09 chain reaches 11 publications (~1 s), but Sim(3) APE/RPE worsen relative to v2. Bus input is exactly old v2 and one technical replay exceeds KLT APE. Donor 377 misses only output frame 4 and returns at 5.
+- Failed attempts: prior nohup/interactive execution interruptions were preserved in quarantine; signal sender Unknown. No completed backend runability failure. The mechanism fails frozen net-benefit/no-severe-regression criteria.
+- Known issues: per-ID backend reception/residual use and internal tracker death Unknown; no held-out evaluation or natural prevalence estimate.
+- Interpretation: a local fixed-scale improvement is real at A09, but not a new positive window or demonstrated no-harm method.
+- Next steps: NO_EXPANSION; publish full evidence; no second lifecycle budget/order/timing variant or new-window execution under this freeze.

@@ -707,3 +707,29 @@ Matrix resumed at A09/SP+LG, skipping both identity-valid probes: 2/18 completed
 This confirms publication behavior only. New backend, A02 no-harm, A09/Bus gain,
 and new-window results remain Not evaluated. No runtime source changes followed
 the method freeze; the only next step is the remaining frozen matrix and controls.
+
+## 2026-09-07 — Completed files and live progress are different evidence
+
+- Research question: can an interrupted exporter or a stale RUNNING progress file be treated as a valid completed cell?
+- Hypothesis / motivation: process lifetime failures can leave plausible full-length metrics while omitting the successful-exit receipt.
+- Related baseline: EXP-012's two receipt-backed A09 probes.
+- Proposed idea / why it might work: use exact completion receipts as the scientific ledger and a bounded, separately release-locked user service for execution; keep partial attempts.
+- Assumptions / potential failure cases: active service does not imply later success; signal source is Unknown; a full metrics row count is insufficient to infer exit code zero.
+- Evidence: original SP+LG had 400 metrics frames without a receipt; after preserved recovery it completed, and its bag equals fresh KLT. A monitored controller later returned SIGTERM/143. Current user service completed A02 KLT and continued the registered order.
+- Current conclusion: Confirmed fact — four frontend receipts at 15:51; no new backend result. Infrastructure recovery cannot strengthen a scientific effectiveness claim.
+- Open questions: A02 risk and A09/Bus retained backend benefit remain Not evaluated.
+- Next experiment: none additional; finish only the already frozen lifecycle experiment.
+
+## 2026-09-07 — Longer published chains yield local benefit, not no-harm
+
+- Research question: does separating continued publication from first admission expand attributable backend improvement without severe regressions?
+- Hypothesis / motivation: v2 could stop already admitted, still valid candidates; repairing the publication lifecycle might restore useful temporal constraints.
+- Related baseline: frozen v2, exact fresh KLT and newly same-ID/frame/dose matched GFTT on the six outcome-known development windows.
+- Proposed idea / why it might work: continue only truly public IDs while protecting mirror-carried classical tracks, without changing first admission, source, geometry, total cap or backend.
+- Assumptions: internal presence is not residual use; omitting age-1 GFTT has opportunity cost; solver repeats are not independent windows. A continuation policy also changes donor omissions and may change subsequent first admissions.
+- Potential failure cases: early measurement changes can alter initialization despite carried-track protection; mirror points never previously published can consume protected capacity.
+- Evidence — Confirmed facts: 33 actual observations across 11 lineages, A09 length3→11; 24 new replays plus18 KLT reuse all runnable; full outcome2W/8T/2L. A09 fixed-scale -12.44%/-16.47% against same-grid v2, but Sim(3) APE/RPE increase ~41.4%/~3.4%. Both A02 arms remain severely worse than KLT. Bus input unchanged, no new intervention. Donor377 loses one observation, not104.
+- Current conclusion: published-ID continuation has a local fixed-scale effect at A09 but fails the registered no-severe-regression and net-win conditions. There is no newly positive physical window and no evidence for overall superiority or no-harm.
+- Hypothesis / Inference: A09 change is consistent with improved scale agreement, not uniformly improved shape. Eight A02 chains are capacity-limited under protection of all mirror-carried tracks; restricting protection to previously public tracks would be a different, untested policy with additional opportunity cost.
+- Open questions: per-ID backend use, exact Bus tracker termination, generalization and independent GT accuracy remain Unknown / Not evaluated. Original DELETE_SUFFICIENT does not transfer automatically to this new donor set.
+- Next experiment: none under the current freeze. NO_EXPANSION; do not try a second lifecycle variant or search until a desired win count.

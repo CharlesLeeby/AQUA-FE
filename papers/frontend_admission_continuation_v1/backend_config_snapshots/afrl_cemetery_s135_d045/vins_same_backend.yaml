@@ -1,0 +1,47 @@
+%YAML:1.0
+
+imu: 1
+num_of_cam: 1
+multiple_thread: 0
+
+imu_topic: "/imu/imu"
+image0_topic: "/unused/image"
+image1_topic: ""
+output_path: "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/backend_scratch/afrl_cemetery_s135_d045/vins_output"
+
+image_width: 800
+image_height: 600
+cam0_calib: "afrl_cave_cam0_pinhole.yaml"
+
+estimate_extrinsic: 0
+body_T_cam0: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: d
+   data: [-0.058908912633135135, -0.52915319866270305, 0.84647896155628621, 0.48001426881232601,
+           0.99820146310178337, -0.021781384293521461, 0.055851681798435991, -0.0207118888424173,
+           -0.011116612516295452, 0.84824669975384215, 0.52948461477447539, -0.024462980992115326,
+           0, 0, 0, 1]
+
+max_cnt: 350
+min_dist: 20
+freq: 10
+F_threshold: 1
+show_track: 0
+flow_back: 1
+equalize: 1
+
+max_solver_time: 0.040000000000000001
+max_num_iterations: 8
+keyframe_parallax: 10
+
+acc_n: 0.0071376
+gyr_n: 0.0016017
+acc_w: 0.00028739999999999999
+gyr_w: 1.6500000000000001e-05
+g_norm: 9.8100
+
+loop_closure: 0
+td: 0.042800514283894642
+estimate_td: 0
+rolling_shutter: 0

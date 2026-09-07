@@ -1,0 +1,88 @@
+{
+  "active_arm_windows": 4,
+  "backend_results_seen_before_freeze": false,
+  "experiment_id": "EXP-20260906-012",
+  "files": [
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_admission_continuation_v1/preregistration.md",
+      "sha256": "9f56bd3d93136bb62eccb2bad46b9fa46c93f0e145a211d6d789bec69b9b1649"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_admission_continuation_v1/development_windows.csv",
+      "sha256": "375469dcc1fb49e179196f682c62b2fca6a81704ce6e51dc1e13e30adaa98323"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_admission_continuation_v1/arms.csv",
+      "sha256": "8c19f03ec3a27cd9f2048d873271375e52b1327fd69d609f62fa44658fd52968"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_admission_continuation_v1/method_lock.json",
+      "sha256": "29a3aa7a4b53664d199d151f8b19de66d3efc2c64588225b003747b9a81467b5"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_admission_continuation_v1/decision.json",
+      "sha256": "0cb3cc3c747fe3ef9a8a14a3ec50941e28fe9d7eecf3deae9d68237a9d2431d8"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_admission_continuation_v1/frontend_audit.csv",
+      "sha256": "0f494df67527fe685c5ea71e034eb5866a6112a8ad62465a02c03acc83a362f1"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_admission_continuation_v1/matched_control_plan.json",
+      "sha256": "143a11b82e9e83aaa4e18358484922e38ecdebed96051a6e45b6d50bd2d9595e"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_admission_continuation_v1/matched_control_plan.lock.json",
+      "sha256": "22c9504f1dc0d679eeb7dc1baefb2f4275243a61afd28cc7ee52ccbed8dca0c9"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_admission_continuation_v1/matched_control_audit.csv",
+      "sha256": "f956c72ff9024f58de1c973e644d8135896411cbb9b672de414b7e6e69d1958f"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/papers/frontend_admission_continuation_v1/backend_replay_plan.csv",
+      "sha256": "cce7a8accc4524f4579b2e1e69ea212b71a0cdc07898193908fa2d5576b43ebd"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_frontend_admission_continuation_v1_backend.py",
+      "sha256": "f8171c7053d641534729d821a879efddcbdd480c10c6840aabd395d62f6d8add"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/scripts/run_frontend_admission_continuation_v1_backend_cell.sh",
+      "sha256": "fc57ec84bc4f585f44a8b5ac4ea6098639705e7ff8df2719b084c3d0bf1e9670"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/scripts/freeze_frontend_admission_continuation_v1_backend_plan.py",
+      "sha256": "03b705174b7748a1858b6c6a1c61f7331b345d9b9d863e837586cd4586f6b84f"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/scripts/finalize_frontend_admission_continuation_v1_backend.py",
+      "sha256": "9329754adca8bf6603c0158c213151931fa6445246ee0d5b0785870d7176a177"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/scripts/finalize_frontend_coverage_monotone_router_v2_backend.py",
+      "sha256": "d97f1d2a96c49b49690112c1d434b4f4412992f4c21e4f7d016f7168eadb677a"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/scripts/audit_frontend_admission_continuation_v1.py",
+      "sha256": "b8523577fe2da27108480972719ad84e92f474b50ad49ace942bfa6c89e3b0f0"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/scripts/build_gftt_matched_lineage_control.py",
+      "sha256": "7dd75c8ffc6e9ec47231d8de4904ddde0c54451f200f0b22ac03490b74dc0b46"
+    },
+    {
+      "path": "/home/ma/AQUA-FE_WS/scripts/evaluate_vins_common_support_dual_scale.py",
+      "sha256": "52b945ef78b09959f3a2d2558a1046ea09a0de8fa05c1accf679645c354e65d2"
+    }
+  ],
+  "frozen_at": "2026-09-07T17:29:36.278178+08:00",
+  "new_replays": 24,
+  "plan_rows_total": 42,
+  "reuse_contract": "exact fresh/v2 KLT feature bag, canonical YAML, camera YAML, VINS binary/library, receipt and trajectory identities",
+  "reused_klt_replays": 18,
+  "schema_version": "aqua-fe-admission-continuation-v1-backend-lock-v1",
+  "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+  "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+  "vins_workspace": "/home/ma/SLAM/VINS-Fusion-origin"
+}

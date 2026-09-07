@@ -1,0 +1,16 @@
+%YAML:1.0
+---
+model_type: PINHOLE
+camera_name: afrl_cave_cam0
+image_width: 800
+image_height: 600
+distortion_parameters:
+   k1: -0.16289394362063583
+   k2: 0.083518333566827321
+   p1: 0.012276483503048642
+   p2: 0.00068589667926601547
+projection_parameters:
+   fx: 569.41638487703995
+   fy: 569.79734903739597
+   cx: 354.08646869152329
+   cy: 308.56448691330405

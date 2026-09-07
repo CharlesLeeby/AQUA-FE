@@ -1,161 +1,116 @@
 # AQUA-FE 固定交接入口
 
-更新时间：`2026-09-07T00:24:00+08:00`
+更新时间：2026-09-07T18:08:10+08:00
 发布分支：`codex/aqua-fe-evidence-20260905`
 
-## 当前阶段与结论
+## 当前实验与结论
 
-**当前执行：EXP-20260906-012，PARTIAL / PROBE_PASS / FRONTEND_MATRIX_RUNNING。** 用户已另行
-授权一次“首次准入与持续发布分离”最小实验；此前停止决定和负例不变。
-8/8 函数测试通过，探针 2/2 完成：A09 同一 XFeat ID 正式连续发布从 3 增至
-11 帧；第 13 帧因原质量阈值不通过而终止。省略 11 个 newborn、carried KLT
-损失 0；bag 结构审计通过。完整矩阵当前 2/18，其余 16 个已按序启动。
-新后端、A02 风险是否消除及 A09/Bus 收益是否保留均 **Not evaluated**，不能报告
-新 WIN。固定分母六窗、18 前端单元、12 学习臂—窗口；新窗口仍为 0/12。
-当前唯一下一步是完成同一冻结六窗矩阵与新 matched
-controls，不新增第二个机制。见[本轮简报](../papers/frontend_admission_continuation_v1/report.md)、
-[协议](../papers/frontend_admission_continuation_v1/preregistration.md)、
-[窗口](../papers/frontend_admission_continuation_v1/development_windows.csv)、
-[方法锁](../papers/frontend_admission_continuation_v1/method_lock.json)。
-已完成探针的[审计](../papers/frontend_admission_continuation_v1/probe_audit.json)与
-[逐帧 CSV](../papers/frontend_admission_continuation_v1/probe_lineage_events.csv)也可读取。
+**EXP-20260906-012：COMPLETE / NO_EXPANSION。**
+只实现了一个“首次准入与同 ID 持续发布分离”开发版本：首次准入不变，
+续传绕过首次准入期限/预算规则，保留镜像 carried KLT，只竞争新生 GFTT/空位。
+这是独立策略改动，不是覆盖旧 v2 的记账修复。
 
-此前检查点 `EXP-20260906-011`（只读预算/续传诊断）：4/4 原 metrics 身份
-核验通过，14 条 lineage 全部复核，5/5 冻结源码函数测试通过。10 条单帧发布不能
-统一归因于预算耗尽：5 条停止后的下一帧仍通过 23 个候选，3 条之后无 pre-final
-候选，另 2 条之后没有 learned tracker 输出。A09 只用了 3/50 名额就被 microburst
-关闭。这个分类区别此前已在发布区审计中说明，本次补回主目录，并新增五个精确
-冻结源码的复现测试和固定发布起点下的长度上界。逐 ID 内部存活和精确终止原因
-仍为 Unknown。**没有修改
-前端算法、重跑后端或新增正例**。仅修记账不能解除同一 ID 的 donor/horizon 续传
-限制；另开续传策略需要独立授权与冻结，不绕过现有 `NO_EXPANSION`。
+结论：**A09 已知正例进一步改善，但 A02 风险未消除，没有新增正例窗口。**
+新版本不能称 no-harm，不能说明 AQUA-FE 总体优于 KLT 或同后端现代学习系统。
+固定后端前端隔离对比，不作与 HFNet-SLAM 的整系统精度声明。
+实际配置 `loop_closure=0`；验证的是前端到 VINS 的端到端影响，不是回环检测收益。
+参考为 COLMAP/proxy，非独立 GT；fixed-scale proper SE(3) 为主，Sim(3) 只作明确诊断。
 
-此前检查点 `EXP-20260906-010`（VINS initialization-state interface
-audit）：后端没有显式 `initialized` topic/service，但第一条私有
-`/vins_estimator/odometry` 只会在内部进入 `NON_LINEAR` 后发布，因此是可在线
-观察的单向 post-init 边沿。当前前端先离线生成 feature bag，不能消费这个反馈；
-该事件无法回溯改变初始化输入。后端随后仍继续优化，因此“以后也无法修正尺度”
-超出了当前证据；详见下方结论边界补充。
+- 六个已知结果的开发窗口，不是 held-out。前端 18/18 PASS，matched GFTT 4/4 PASS。
+- 动作：4/12 学习臂—窗口、3/6 物理窗口；33 次发布、11 条 lineage。
+  省略 33 个 age-1 GFTT，carried 观测变化为 0；8 个零动作学习臂整 bag 等于 KLT。
+- **24/24 新后端回放完成 + 18/18 身份有效 KLT 复用**，不是 42 次新 replay。
+  原 v2 的 42 次结果未重跑。solver 三重复不是独立科学样本。
+- 全分母：**2 WIN / 8 TIE / 2 LOSS / 0 MIXED / 0 FAIL**；
+  active 分母：2 WIN / 2 LOSS / 0 FAIL。没有丢弃 active 失败。
+- 42/42 初始化和覆盖门通过；266–489 poses，轨迹覆盖 93.336%–97.604%。
+  四组 all-nine common support 全 PASS：38–42 poses、37–41 秒、93.33%–95%。
+  evo 最大差 < 5e-7 m；每窗后端/相机 YAML 和二进制一致，42 项环境身份审计 PASS。
+- 新窗口完成 0；没有进入 12 窗验证，不能据此估计数据集自然正例率。
 
-此前实验 `EXP-20260906-009`（protected pre-refill slot v1）在六个
-outcome-known 开发窗口上测试一个最小机制：保留所有已经存活的 KLT/GFTT
-观测，只让学习候选与“本帧即将新生的 GFTT”竞争 350 预算。
+| 开发窗口 | XFeat | SP+LG |
+|---|---|---|
+| A09 6000–6800 | WIN | exact TIE / 零动作 |
+| A02 0–900 | LOSS | LOSS |
+| Bus s180 d45 | WIN，中位数；输入与旧 v2 相同 | exact TIE / 零动作 |
+| A08 2700–3600 | exact TIE / 零动作 | exact TIE / 零动作 |
+| Cemetery s135 d45 | exact TIE / 零动作 | exact TIE / 零动作 |
+| H07 0–1000 | exact TIE / 零动作 | exact TIE / 零动作 |
 
-冻结结论是 **`NO_EXPANSION`**：保护成熟/延续轨迹仍不足以保证 no-harm。
-A09/XFeat 保留了强收敛正例，但 A02 两个学习臂仍进入错误尺度分支，Bus 的旧正例
-变为精确 TIE。不能据此声称 AQUA-FE 总体优于 KLT 或同后端现代学习前端，也没有
-启动 12 个新窗口验证。
+## 主要绝对结果与机制边界
 
-- 前端：18/18 PASS，9/9 结构检查 PASS。
-- 动作：4/12 学习臂—窗口有动作；14 条 lineage、21 个学习观测；只省略 21 个
-  age-1 GFTT，carried 观测逐字段损失为 0。
-- 零动作：8/12 学习臂整 bag 与 fresh KLT 字节一致，仅映射为 TIE。
-- matched control：4/4 同 ID/同帧/同剂量 GFTT/LK 控制 PASS。
-- 后端：24/24 新 replay PASS；18/18 KLT replay 经精确身份复用，不算独立运行。
-- common support：4/4 PASS；fixed-scale proper SE(3) 为主，Sim(3) 仅诊断尺度。
-- active 分母：`1 WIN / 1 TIE / 2 LOSS / 0 FAIL`；完整 12 臂分母：
-  `1 WIN / 9 TIE / 2 LOSS / 0 FAIL`。
+下表为三次中位数，fixed APE / 1s RPE，单位 m；完整范围、逐次值与 Sim(3) 在报告/CSV。
 
-参考轨迹是 COLMAP/proxy，只表示与 proxy 的一致程度，不是独立 GT 绝对误差。
-三次 solver replay 是技术重复，不是独立科学样本。
+| active 窗口 / 臂 | KLT APE / RPE | learned APE / RPE | matched GFTT APE / RPE |
+|---|---|---|---|
+| A09 / XFeat | 1242.140 / 150.847 | 0.641290 / 0.061445 | 1.653014 / 0.166323 |
+| A02 / XFeat | 0.141317 / 0.022697 | 0.979235 / 0.091623 | 1.109044 / 0.104795 |
+| A02 / SP+LG | 0.141317 / 0.022697 | 0.996579 / 0.092403 | 0.999609 / 0.092963 |
+| Bus / XFeat | 0.060109 / 0.037218 | 0.042794 / 0.026725 | 0.054469 / 0.027436 |
 
-## 六窗口 × 两学习臂
+A09 同一 ID 从 3 次延长至 11 次（约 1 秒）；相对旧 v2 重新共同支撑后的 fixed
+APE/RPE 降 12.44%/16.47%。但 Sim(3) APE/RPE 反增约 41.4%/3.4%，拟合 scale
+0.753→0.778：不是所有几何口径都提升。相对本版 matched，fixed APE/RPE 低
+61.20%/63.06%，支持这个开发窗候选内容有额外作用；matched 也优于 KLT，
+因此 learned 仍非被证明必需。
 
-| 物理窗口 | protected XFeat | protected SP+LG | 说明 |
-|---|---:|---:|---|
-| A09 6000–6800 | WIN | exact TIE | XFeat 3 个连续观测恢复尺度收敛 |
-| A02 0–900 | LOSS | LOSS | 各改 8 个 newborn，均进入错误尺度分支 |
-| AFRL Bus s180 d45 | active exact TIE | exact TIE | XFeat 两个单帧观测对轨迹无影响 |
-| A08 2700–3600 | exact TIE | exact TIE | 零动作、bag 等于 KLT |
-| AFRL Cemetery s135 d45 | exact TIE | exact TIE | 零动作、bag 等于 KLT |
-| Harbor H07 0–1000 | exact TIE | exact TIE | 零动作、bag 等于 KLT |
+A02 两臂相对旧 v2 改善约一成，仍较 KLT 有约 +593%/+605% APE 回归，未修复风险。
+Bus 新输入与旧 v2 字节一致，中位数收益不算新机制收益；一次 APE 为 0.065287，
+高于 KLT 0.060109，不能称三次都无害。
 
-## 主要绝对结果
+本版 11 条 lineage 的终止分类：8 条因镜像保护规则下无空位，1 条质量不合格，
+2 条下一帧门前已无候选（精确 tracker 原因 Unknown）；4 条仍是单次发布。
+原 v2 的 10 条单帧不能全部归因于预算耗尽，原审计结论未改写。
+A02 镜像还保护了此前从未公开的点，限制了续传；放宽它将改变更多基线观测，
+属于另一个未经测试、不能保证无害的策略，本轮没有实施。
+donor 377：本版只缺输出帧 4 的一个观测，帧 5 同 ID 返回；不是删掉 104 帧。
 
-下表为三次技术重复中位数，APE/RPE 单位为米；每行 K/L/C 分别是 KLT、
-learned、matched classical。
+原 A02 **DELETE_SUFFICIENT** 仅表示注册八个 donor 观测的联合删除足以复现危害，
+不表示某一个 donor 单独致因、候选毫无影响，或本版新删除集合也完成了删除归因。
+原 A09/Bus delete-only 不复现收益，支持原组合需要加点作用，但 matched classical
+也能提供正向作用，不能改写成“学习持久锚点必需”。
 
-| active 窗口 / 臂 | fixed APE K / L / C | fixed RPE K / L / C | Sim(3) scale K / L / C |
-|---|---:|---:|---:|
-| A09 / XFeat | 1242.140 / 0.733 / 1.082 | 150.847 / 0.0736 / 0.1169 | 0.00147 / 0.753 / 0.673 |
-| A02 / XFeat | 0.141 / 1.094 / 1.094 | 0.0227 / 0.1046 / 0.1046 | 0.899 / 0.509 / 0.509 |
-| A02 / SP+LG | 0.141 / 1.130 / 1.134 | 0.0227 / 0.1043 / 0.1048 | 0.899 / 0.501 / 0.500 |
-| Bus / XFeat | 0.0601 / 0.0601 / 0.0601 | 0.0372 / 0.0372 / 0.0372 | 0.956 / 0.956 / 0.956 |
+## 已完成、Unknown 与唯一下一步
 
-共同支撑为 38–42 poses、37–41 秒、93.3%–95.0% coverage、37–41 个严格
-1 秒 RPE pairs；evo 独立交叉验证最大差小于 `5e-7 m`。
+已完成：本版六窗前端、逐链诊断、新 matched 控制、完整后端三重复、双尺度/evo、
+旧 v2 同网格比较、配置/环境/时刻审计与产物身份。之前的 v2、删除诊断及负例均保留。
 
-## 为什么得到这个结论
+Unknown：逐 ID 内部完整寿命、实际后端接收/残差使用、Bus 两条候选的精确 tracker 终止原因。
+Not evaluated：新窗口/sequence-held-out、独立 GT 精度、实时初始化反馈方法、总体自然正例率。
+初始化日志 ROS 时间和首个位姿传感器时间在运行审计中分开记录。
 
-1. A02 中所有 carried 观测都和 KLT 一样，只改变了 8 个 newborn；结果仍从
-   KLT 的 Sim(3) 拟合 scale≈0.899 变为 learned/matched≈0.50，并出现固定尺度
-   误差大幅增长。这支持启动期新生观测干预会影响尺度一致性；拟合 scale 并非
-   直接读取的后端初始化变量，具体内部收敛分支仍含推断。
-2. A02 的 learned 与 matched GFTT 几乎相同（差小于 0.5%），说明这里主要是
-   新生观测调度效应，不是 XFeat/SP+LG 内容本身。
-3. A09 的 XFeat 不仅击败发散的 KLT，还比同剂量 matched GFTT 的 fixed APE/RPE
-   低 32.31%/37.10%。这支持“这个窗口中 XFeat 内容有额外作用”，但样本只有一个
-   开发窗口，不能外推为总体优势。
-4. Bus 两个单帧 XFeat 观测和 matched control 都产生与 KLT 完全相同的后端轨迹，
-   因而旧 v2 Bus 收益依赖原 donor/newborn 干预组合，不是这两个孤立观测本身。
+**唯一下一步：按冻结决定停止此续传版本，不扩展新窗、不自动再试第二个预算/顺序/保护范围变体。**
+保留局部 A09 增益与 A02 严重负例；“扩大正例且没有严重回归”的目标未获支持。
 
-## 完成、未完成与 Unknown
+## 可直接读取的证据
 
-已完成：前端矩阵、matched controls、后端三重复、runability、all-nine common
-support、fixed/Sim(3) 与 evo、配置/二进制身份审计、178 项哈希清单。
+- [完整报告](../papers/frontend_admission_continuation_v1/report.md)、
+  [12 项胜负](../papers/frontend_admission_continuation_v1/development_outcomes.csv)、
+  [主精度与范围](../papers/frontend_admission_continuation_v1/accuracy.csv)、
+  [逐次精度](../papers/frontend_admission_continuation_v1/accuracy_repeats.csv)
+- [runability](../papers/frontend_admission_continuation_v1/runability.csv)、
+  [逐次后端](../papers/frontend_admission_continuation_v1/backend_results_repeats.csv)、
+  [共同支撑](../papers/frontend_admission_continuation_v1/common_support_status.csv)
+- [逐链与 donor 诊断](../papers/frontend_admission_continuation_v1/lineage_diagnostic.csv)、
+  [动作](../papers/frontend_admission_continuation_v1/action_audit.csv)、
+  [matched 审计](../papers/frontend_admission_continuation_v1/matched_control_audit.csv)、
+  [与旧 v2 的同网格比较](../papers/frontend_admission_continuation_v1/v2_common_comparison.csv)
+- [预注册](../papers/frontend_admission_continuation_v1/preregistration.md)、
+  [窗口](../papers/frontend_admission_continuation_v1/development_windows.csv)、
+  [方法锁](../papers/frontend_admission_continuation_v1/method_lock.json)、
+  [replay manifest](../papers/frontend_admission_continuation_v1/backend_replay_plan.csv)、
+  [冻结决策](../papers/frontend_admission_continuation_v1/backend_decision.json)
+- [后端配置审计](../papers/frontend_admission_continuation_v1/backend_config_audit.csv)、
+  [实际 YAML 快照来源表](../papers/frontend_admission_continuation_v1/backend_config_snapshots/source_identity.csv)、
+  [环境与初始化时刻](../papers/frontend_admission_continuation_v1/backend_environment_audit.csv)、
+  [哈希清单](../papers/frontend_admission_continuation_v1/artifacts.sha256)
+- [原 v2 完整后端](../papers/frontend_coverage_monotone_router_v2/backend_completion_report.md)、
+  [A02 删除对照](../papers/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/report.md)、
+  [A09/Bus 删除归因](../papers/frontend_v2_positive_delete_diagnostic/report.md)、
+  [原预算审计](../papers/frontend_coverage_monotone_router_v2/budget_continuation_addendum.md)
 
-未完成且 **Not evaluated**：12 个新窗口、sequence-held-out 结果、数据集总体正例率、
-实时初始化反馈下的学习候选价值、实时 ROS 传输延迟、运行时/FPS。
-delayed-v3 已测试固定初始化保护前缀，但实时反馈版本尚未测试。
-
-仍为 **Unknown**：后端逐 ID 是否实际进入残差；独立 GT 下的绝对误差。
-
-本阶段唯一决策：保持 `NO_EXPANSION` 和 `DO_NOT_IMPLEMENT_POST_INIT_VARIANT`。
-测试过的 delayed-v3 未保留 A09 收敛正例，protected-prefill 仍有两项严重回归；
-按冻结停止规则，本轮不再运行 slot、顺序或时机变体。这不构成“所有初始化后方法
-均不可能有效”的证明，后续尺度恢复能力仍需独立证据。
-
-## 仓库内可读证据
-
-- [预算/续传诊断补充](../papers/frontend_coverage_monotone_router_v2/budget_continuation_addendum.md)、
-  [46 行逐帧/逐 ID 紧凑证据](../papers/frontend_coverage_monotone_router_v2/budget_continuation_audit_20260906.csv)、
-  [可复查分析脚本](../scripts/audit_frontend_v2_budget_continuation.py)、
-  [冻结源码行为测试](../tests/test_v2_budget_continuation_characterization.py)
-- [结论边界补充](../papers/frontend_init_state_interface_audit/claim_boundary_addendum.md)
-- [初始化状态接口审计](../papers/frontend_init_state_interface_audit/report.md)、
-  [接口表](../papers/frontend_init_state_interface_audit/interface_audit.csv)、
-  [决策](../papers/frontend_init_state_interface_audit/decision.json)
-- [本轮完整报告](../papers/frontend_protected_prefill_slot_v1/report.md)
-- [预注册协议](../papers/frontend_protected_prefill_slot_v1/preregistration.md)、
-  [前端决策](../papers/frontend_protected_prefill_slot_v1/decision.json)、
-  [冻结后端决策](../papers/frontend_protected_prefill_slot_v1/backend_decision.json)
-- [完整 12 臂结果](../papers/frontend_protected_prefill_slot_v1/development_outcomes.csv)、
-  [主精度表](../papers/frontend_protected_prefill_slot_v1/accuracy.csv)、
-  [逐重复精度](../papers/frontend_protected_prefill_slot_v1/accuracy_repeats.csv)
-- [前端动作审计](../papers/frontend_protected_prefill_slot_v1/action_audit.csv)、
-  [matched control 审计](../papers/frontend_protected_prefill_slot_v1/matched_control_audit.csv)、
-  [common support 审计](../papers/frontend_protected_prefill_slot_v1/common_support_status.csv)
-- [逐 replay runability](../papers/frontend_protected_prefill_slot_v1/backend_results_repeats.csv)、
-  [臂级 runability](../papers/frontend_protected_prefill_slot_v1/runability.csv)、
-  [后端配置审计](../papers/frontend_protected_prefill_slot_v1/backend_config_audit.csv)
-- [v2 与本机制对照](../papers/frontend_protected_prefill_slot_v1/v2_vs_prefill_mechanism.csv)、
-  [完整哈希清单](../papers/frontend_protected_prefill_slot_v1/artifacts.sha256)
-- [此前 delayed-v3 报告](../papers/frontend_delayed_newborn_slot_v3/report.md)、
-  [v2 后端报告](../papers/frontend_coverage_monotone_router_v2/backend_completion_report.md)、
-  [A09/Bus 删除归因](../papers/frontend_v2_positive_delete_diagnostic/report.md)
-
-## 此前 protected-prefill 的源码、配置与数据身份
-
-实验运行时基线为 `main@f6f8feec66c2faf1f59cdb67c1e817028a3bccaf` 加冻结
-工作树文件；后来的报告发布 commit 不能冒充运行时源码 commit。
-
-- exporter SHA-256：`e20bc39f...9e17`
-- profile/env SHA-256：`665c96a4...1e615`
-- method lock SHA-256：`a66e67b7...e8a7`
-- backend plan SHA-256：`f1a40ee0...3612`
-- VINS node/library：`4e91d8ac...f4278` / `373a598c...71e8`
-
-原始 bag、数据集、模型、缓存和完整控制台日志未上传。`artifacts.sha256` 使用
-`repo:`、`prefill_runtime:`、`v2_runtime:` 逻辑根记录本地输入、feature bag、
-`vio.csv`、`vins.log` 和 receipts 的身份；GitHub 只包含小型报告、表格、协议、
-必要脚本和 compact common-support/matched-control 证据。
+运行源码身份：`main@f6f8feec66c2faf1f59cdb67c1e817028a3bccaf` 加 method lock 的精确文件。
+新入口 SHA-256 为 `52c793ee…be8e`；原 v2 exporter 从 `3c50b742…de684` Git 对象加载并校验
+`bb4e50d8…d1d`。这是实验源码身份，不是之后的报告发布 commit。
+数据/相机/窗口引用及完整 SHA 见协议、manifest、真实 YAML 快照。
+bag、模型、原始数据和完整控制台日志留本地，不上传；这里公开实际报告和数值表，不只有哈希。

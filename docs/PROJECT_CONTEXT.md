@@ -1,6 +1,6 @@
 # Project Context
 
-Last updated: 2026-09-05
+Last updated: 2026-09-07
 
 ## Research Topic
 
@@ -267,3 +267,18 @@ Matrix resumed at A09/SP+LG, skipping both identity-valid probes: 2/18 completed
 This confirms publication behavior only. New backend, A02 no-harm, A09/Bus gain,
 and new-window results remain Not evaluated. No runtime source changes followed
 the method freeze; the only next step is the remaining frozen matrix and controls.
+
+## September 7, 2026 — EXP-012 complete; NO_EXPANSION
+
+Latest completed development result supersedes the earlier PARTIAL progress above.
+The separately authorized admission/continuation policy finished 18/18 frontend,
+4/4 new matched controls and 24/24 new backend replays plus18 reused KLT trajectories.
+All42 runability and four common supports pass; full12 learned arm-windows yield
+2 WIN / 8 TIE / 2 LOSS / 0 FAIL on six outcome-known physical windows.
+A09 publication length3→11 and same-grid fixed APE/RPE versus v2 improve12.44%/16.47%;
+Sim(3) errors increase, so this is not uniform geometry improvement. A02 still has
+severe regression versus KLT. Bus input remains identical to v2. No new positive
+window or held-out evaluation was obtained. The method is not promoted as no-harm.
+Frozen decision NO_EXPANSION: do not auto-run another budget/order/timing variant
+or the twelve-window extension. Full evidence and current public index:
+papers/frontend_admission_continuation_v1/report.md and docs/CODEX_HANDOFF.md.

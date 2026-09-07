@@ -1,0 +1,10 @@
+{
+  "active_arm_windows": 4,
+  "cells_expected": 18,
+  "cells_present": 18,
+  "decision": "FRONTEND_GO",
+  "experiment_id": "EXP-20260906-012",
+  "matched_control_complete": false,
+  "probe_only": false,
+  "safety_pass": true
+}

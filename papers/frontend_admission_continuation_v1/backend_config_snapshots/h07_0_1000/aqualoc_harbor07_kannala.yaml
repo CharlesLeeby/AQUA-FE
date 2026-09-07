@@ -1,0 +1,15 @@
+%YAML:1.0
+---
+model_type: KANNALA_BRANDT
+camera_name: aqualoc_harbor07
+image_width: 640
+image_height: 512
+projection_parameters:
+   k2: -0.06125568297136998
+   k3: -0.003796743395135256
+   k4: 0.027326634771204592
+   k5: -0.030296403142887066
+   mu: 413.32595366566017
+   mv: 413.70198739483686
+   u0: 305.9507483284928
+   v0: 259.4439948946375

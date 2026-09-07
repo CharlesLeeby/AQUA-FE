@@ -1,0 +1,13 @@
+window_id,run_slug,arm,action,admitted_sidecars,omitted_newborns,outcome,common_support_status,ape_percent_change,rpe_percent_change,ape_percent_change_vs_matched,rpe_percent_change_vs_matched,notes
+aqualoc_archaeology:A09:historical_6000_6800,a09_6000_6800,continuation_xfeat,True,11,11,WIN,PASS,-99.94837219193752,-99.959266580901,-61.20482503556013,-63.0567610217281,
+aqualoc_archaeology:A09:historical_6000_6800,a09_6000_6800,continuation_splg,False,0,0,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,,,No independent replay; exact input identity maps to KLT.
+aqualoc_archaeology:A02:0000,a02_0_900,continuation_xfeat,True,9,9,LOSS,PASS,592.9373650496351,303.6804849871098,-11.704558552013856,-12.569511721877557,
+aqualoc_archaeology:A02:0000,a02_0_900,continuation_splg,True,11,11,LOSS,PASS,605.210438534377,307.11944275308883,-0.30310586446631316,-0.6022040292322006,
+afrl:bus_outside:0004,afrl_bus_s180_d045,continuation_xfeat,True,2,2,WIN,PASS,-28.80534887641124,-28.19444532360611,-21.434362586085797,-2.592900763149397,
+afrl:bus_outside:0004,afrl_bus_s180_d045,continuation_splg,False,0,0,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,,,No independent replay; exact input identity maps to KLT.
+aqualoc_archaeology:A08:0003,a08_2700_3600,continuation_xfeat,False,0,0,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,,,No independent replay; exact input identity maps to KLT.
+aqualoc_archaeology:A08:0003,a08_2700_3600,continuation_splg,False,0,0,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,,,No independent replay; exact input identity maps to KLT.
+afrl:cemetery:0003,afrl_cemetery_s135_d045,continuation_xfeat,False,0,0,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,,,No independent replay; exact input identity maps to KLT.
+afrl:cemetery:0003,afrl_cemetery_s135_d045,continuation_splg,False,0,0,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,,,No independent replay; exact input identity maps to KLT.
+aqualoc_harbor:H07:historical_0_1000,h07_0_1000,continuation_xfeat,False,0,0,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,,,No independent replay; exact input identity maps to KLT.
+aqualoc_harbor:H07:historical_0_1000,h07_0_1000,continuation_splg,False,0,0,TIE,MAPPED_BYTE_IDENTICAL_KLT,0.0,0.0,,,No independent replay; exact input identity maps to KLT.

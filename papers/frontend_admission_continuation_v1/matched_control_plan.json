@@ -1,0 +1,80 @@
+{
+  "action_audit_sha256": "539e236b49c033a1cd9ac9c21380e46e06a03a7b64e937342e8553850d74c22c",
+  "action_positive_cells_total": 4,
+  "backend_results_seen_before_freeze": false,
+  "builder": {
+    "known_limitation": "Retrospective source control matched to the learned intervention's IDs, frames, and dose; it is not an online detector-isolation control.",
+    "parameters": {
+      "block_size": 7,
+      "control_source_code": 0,
+      "exclusion_radius": 18,
+      "max_candidates": 512,
+      "max_fb_error": 1.0,
+      "max_image_dt": 0.002,
+      "min_distance": 18,
+      "quality_level": 0.01
+    },
+    "path": "scripts/build_gftt_matched_lineage_control.py",
+    "preserve_target_ids": true,
+    "sha256": "7dd75c8ffc6e9ec47231d8de4904ddde0c54451f200f0b22ac03490b74dc0b46"
+  },
+  "cells": [
+    {
+      "allow_sparse_target_schedule": false,
+      "arm": "continuation_xfeat",
+      "birth_groups": [
+        [
+          10000000
+        ]
+      ],
+      "run_slug": "a09_6000_6800",
+      "target_bag_sha256": "629db0467020a06635db8d2236150dc4fa921446c71326082f78be9df09a5845"
+    },
+    {
+      "allow_sparse_target_schedule": false,
+      "arm": "continuation_xfeat",
+      "birth_groups": [
+        [
+          10000000,
+          10000001,
+          10000002
+        ]
+      ],
+      "run_slug": "a02_0_900",
+      "target_bag_sha256": "8973fddc448f8c56558884b4ce5bb625906f367a4a73f379b473770460fcaad0"
+    },
+    {
+      "allow_sparse_target_schedule": false,
+      "arm": "continuation_splg",
+      "birth_groups": [
+        [
+          10000015,
+          10000016,
+          10000017,
+          10000018,
+          10000021
+        ]
+      ],
+      "run_slug": "a02_0_900",
+      "target_bag_sha256": "52766b961162d8179016dfdce508b1e758eabbc05aa45ef98ba648965ea38d3c"
+    },
+    {
+      "allow_sparse_target_schedule": false,
+      "arm": "continuation_xfeat",
+      "birth_groups": [
+        [
+          10000000,
+          10000001
+        ]
+      ],
+      "run_slug": "afrl_bus_s180_d045",
+      "target_bag_sha256": "34ec601a13843c7a39d53a95eb7bedc8db4086b1e6683921b2507cd7a5356442"
+    }
+  ],
+  "frontend_audit_sha256": "0f494df67527fe685c5ea71e034eb5866a6112a8ad62465a02c03acc83a362f1",
+  "frozen_at": "2026-09-07T17:28:35.649245+08:00",
+  "lineages_total": 11,
+  "schema_version": "aqua-fe-admission-continuation-v1-matched-plan-v1",
+  "scientific_role": "retrospective same-ID/frame/dose matched-GFTT control before any backend replay",
+  "selection_basis": "all and only action-positive arm-windows in the frozen 6x3 admission-continuation frontend matrix"
+}

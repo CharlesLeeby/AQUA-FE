@@ -1,0 +1,53 @@
+{
+  "arm": "continuation_splg",
+  "backend_replayed": false,
+  "builder": "/home/ma/AQUA-FE_WS/scripts/build_gftt_matched_lineage_control.py",
+  "builder_sha256": "7dd75c8ffc6e9ec47231d8de4904ddde0c54451f200f0b22ac03490b74dc0b46",
+  "camera_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_superpoint_lightglue_every2_acv1_a02_0_900_continuation_splg/aqualoc_archaeo02_pinhole.yaml",
+  "camera_config_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+  "inserted_observations": 11,
+  "known_limitation": "Retrospective source control matched to the learned intervention's IDs, frames, and dose; it is not an online detector-isolation control.",
+  "matched_lineages": 5,
+  "output_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/matched_controls/a02_0_900/continuation_splg/features_matched_gftt.bag",
+  "output_bag_sha256": "fff1c1a829024d7a8c89a6758a08ccedfb0bc76e9051461da5351de1744a098f",
+  "plan": "/home/ma/AQUA-FE_WS/papers/frontend_admission_continuation_v1/matched_control_plan.json",
+  "plan_sha256": "143a11b82e9e83aaa4e18358484922e38ecdebed96051a6e45b6d50bd2d9595e",
+  "raw_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_same_backend_confirmatory_v3/prepared/a02_0_900/input.bag",
+  "raw_bag_sha256": "ab0fa69eddce3bde6cb03efecf3c4fcafdd3d66e53691b9a2eaa1f531ee660db",
+  "removed_observations": 11,
+  "run_slug": "a02_0_900",
+  "schema_version": "aqua-fe-v2-matched-gftt-cell-v1",
+  "scientific_role": "retrospective matched-dose/slot attribution control",
+  "stages": [
+    {
+      "full_interval_survivors": 487,
+      "input_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_superpoint_lightglue_every2_acv1_a02_0_900_continuation_splg/features.bag",
+      "input_bag_sha256": "52766b961162d8179016dfdce508b1e758eabbc05aa45ef98ba648965ea38d3c",
+      "inserted_observations": 11,
+      "output_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/matched_controls/a02_0_900/continuation_splg/features_matched_gftt.bag",
+      "output_bag_sha256": "fff1c1a829024d7a8c89a6758a08ccedfb0bc76e9051461da5351de1744a098f",
+      "removed_observations": 11,
+      "stage": 1,
+      "stage_stats": "/home/ma/AQUA-FE_WS/papers/frontend_admission_continuation_v1/matched_controls/a02_0_900/continuation_splg/stage_01.json",
+      "stage_stats_sha256": "f81a4acf72d88dd78e40e0a20574529f2b21dd6bb3087d4d5e12f6fafcea6605",
+      "target_ids": [
+        10000015,
+        10000016,
+        10000017,
+        10000018,
+        10000021
+      ]
+    }
+  ],
+  "status": "MATCHED",
+  "target_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_superpoint_lightglue_every2_acv1_a02_0_900_continuation_splg/features.bag",
+  "target_bag_sha256": "52766b961162d8179016dfdce508b1e758eabbc05aa45ef98ba648965ea38d3c",
+  "target_ids": [
+    10000015,
+    10000016,
+    10000017,
+    10000018,
+    10000021
+  ],
+  "target_lineages": 5
+}

@@ -1,0 +1,12 @@
+{
+  "action_audit_sha256": "539e236b49c033a1cd9ac9c21380e46e06a03a7b64e937342e8553850d74c22c",
+  "backend_results_seen_before_freeze": false,
+  "builder": "scripts/build_gftt_matched_lineage_control.py",
+  "builder_sha256": "7dd75c8ffc6e9ec47231d8de4904ddde0c54451f200f0b22ac03490b74dc0b46",
+  "experiment_id": "EXP-20260906-012",
+  "frontend_audit_sha256": "0f494df67527fe685c5ea71e034eb5866a6112a8ad62465a02c03acc83a362f1",
+  "frozen_at": "2026-09-07T17:28:35.650017+08:00",
+  "matched_control_plan": "papers/frontend_admission_continuation_v1/matched_control_plan.json",
+  "matched_control_plan_sha256": "143a11b82e9e83aaa4e18358484922e38ecdebed96051a6e45b6d50bd2d9595e",
+  "schema_version": "aqua-fe-admission-continuation-v1-matched-plan-lock-v1"
+}

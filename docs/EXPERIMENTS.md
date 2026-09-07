@@ -623,3 +623,30 @@ Matrix resumed at A09/SP+LG, skipping both identity-valid probes: 2/18 completed
 This confirms publication behavior only. New backend, A02 no-harm, A09/Bus gain,
 and new-window results remain Not evaluated. No runtime source changes followed
 the method freeze; the only next step is the remaining frozen matrix and controls.
+
+### EXP-20260906-012 — Interrupted-execution recovery checkpoint
+
+- Date / status: 2026-09-07 afternoon; PARTIAL / FRONTEND_RUNNING.
+- Scientific role / identity: continuation of the same six-window development experiment, not new samples. Runtime main base f6f8feec66c2faf1f59cdb67c1e817028a3bccaf plus the original method lock; published source snapshot 16aad555a1ab617a2aed7260126243111be0a4a0 is not a replacement runtime commit.
+- Dataset / baseline / modification: unchanged registered six windows, fresh KLT versus the sole published-ID continuation policy; no experimental parameter change.
+- Environment / commands: ROS Noetic environment forwarded to user systemd unit aquafe-exp012-bounded-20260907.service; /usr/bin/python3 -u scripts/run_aquafe_v2_bounded_continuation.py. Original stage scripts and release identities are checked before execution.
+- Artifacts: continuation_runtime:bounded_execution/{release_lock.json,progress.json,frontend.log,controller_service.log}; two incomplete frontend attempts preserved under continuation_runtime:quarantine/.
+- Results at 15:51: four valid frontend receipts; A09 SP+LG feature SHA equals KLT, A02 KLT passes; 0 new VINS replays. Failed infrastructure attempts remain visible; they are not successful repeats or additional physical windows.
+- Validity / common support: full frontend structural audit and all-nine backend common support pending; no current APE/RPE comparison. Fixed denominator 18 frontend cells / 12 learned arm-windows / six physical windows.
+- Interpretation / conclusion: the restart changes process lifetime management only. New-method backend effectiveness is Not evaluated.
+- Follow-up: finish the frozen matrix and permitted stages, retaining every failure and applying the original stopping criteria.
+
+### EXP-20260906-012 — Complete admission/continuation development result
+
+- Date / status / role: 2026-09-07; COMPLETE / NO_EXPANSION; outcome-known six-window development study.
+- Git identity: runtime main@f6f8feec66c2faf1f59cdb67c1e817028a3bccaf plus method-lock file hashes; v2 exporter archived at 3c50b742d6e0c69796a69813e42823e9895ed684. Report publication is a separate commit on codex/aqua-fe-evidence-20260905.
+- Dataset/windows: A09 6000–6800, A02 0–900, Bus s180 d45, A08 2700–3600, Cemetery s135 d45, H07 0–1000; no added/replaced window.
+- Environment/config/baseline: fixed VINS-Fusion-origin, original YAML/camera/node/library, 350 total / six sidecars per frame / 50 actual learned observations, every_n=2. Fresh KLT bags exactly match reused v2 KLT inputs; all 42 environment audits pass. Proxy, not independent GT.
+- Modification: only already-public IDs may continue on current valid observations without first-admission horizon/microburst/reservation checks. All mirror-carried classical observations protected; newborn opportunity cost remains.
+- Commands/artifacts: scripts/run_aquafe_v2_bounded_continuation.py invokes frozen stages; scripts/analyze_admission_continuation_v1_{lineages,environment,v2_comparison}.py and build_admission_continuation_v1_manifest.py reduce evidence. papers/frontend_admission_continuation_v1/; continuation_runtime: under Data storage offload; actual bags/vio/log/receipt paths are in the published tables and manifest.
+- Results: 18/18 frontend PASS; 4/4 new matched controls PASS; 24/24 new VINS replays completed, 18 KLT reused; 42/42 init+coverage PASS. Full learned denominator 2 WIN / 8 TIE / 2 LOSS / 0 MIXED / 0 FAIL, active 2 WIN / 2 LOSS. No new physical positive window; no new-window validation.
+- Metrics: A09 learned fixed APE/RPE 0.641290/0.061445 m versus KLT 1242.140/150.847 and matched 1.653014/0.166323. A02 XFeat 0.979235/0.091623 and SP+LG 0.996579/0.092403 versus KLT 0.141317/0.022697. Bus learned median 0.042794/0.026725, same bag as old v2, APE range 0.042794–0.065287. Full ranges/Sim(3) in accuracy.csv.
+- Frontend diagnostics: 11 lineages / 33 observations, four singletons; eight capacity terminations, one quality rejection, two absent pre-online stage. A02 donor 377 baseline105/current104, missing frame4 only. Future lifetime never used online.
+- Validity: 4/4 all-nine common supports, 38–42 poses / 37–41 s / 93.33%–95% / strict 1 s RPE; evo delta <5e-7 m. Same-grid v2/current/KLT comparison also 4/4 PASS. No parameter/gate/backend change.
+- Interpretation: A09 fixed-scale versus v2 improves 12.44%/16.47%, while Sim(3) errors increase; A02 improves about 10% relative to v2 but retains severe KLT regression. Learned is not proven necessary; matched also improves the positive-window baseline.
+- Conclusion/follow-up: frozen NO_EXPANSION; stop this single policy experiment, preserve negative/partial history and publish. No additional parameter variant or twelve-window extension.

@@ -1,74 +1,202 @@
-# 首次准入与持续发布分离 v1
+# 首次准入与持续发布分离 v1：完整开发结果
 
-实验：`EXP-20260906-012`；状态：**PARTIAL / PROBE_PASS / FRONTEND_MATRIX_RUNNING**。
-更新时间：2026-09-07T00:24:00+08:00。
+更新时间：2026-09-07T18:08:10+08:00。实验 `EXP-20260906-012`；状态 `COMPLETE / NO_EXPANSION`。
 
-这是用户在上一阶段停止后另行授权的单一开发实验，不改写此前
-`NO_EXPANSION`，六个窗口均为已知结果的开发数据，不是 held-out。
+本表是固定 VINS-Fusion-origin 的**前端隔离开发对比**，不是整系统竞赛。
+实际 YAML 为 `loop_closure: 0`；这里的“闭环”指前端到 VINS 的端到端验证，不是回环检测/位姿图优化。
+参考轨迹为 COLMAP/proxy：数值表示与 proxy 的一致程度，不是独立 GT 绝对误差。
+HFNet-SLAM 属于不同后端设计空间，不进本表；不作整系统对 HFNet 的精度声明。
 
-## 唯一改动与边界
+## 结论先行
 
-首次准入仍执行精确冻结 v2 的全部规则。只有上一输出帧真正发布过的同一 ID，
-且本帧在原 online-seed 门之前仍存在、通过原基础有效性检查，才可续传。
-续传不再反复经过“首次准入”的 microburst、0–4 帧期限和预扣名额规则。
-它保留全部有效 carried KLT，只占用本帧新生 GFTT 或真实空位；这一机会成本
-被逐帧记录，不能称天然 no-harm。
+**续传确实变长，已知 A09 窗的固定尺度误差也进一步降低，但 A02 严重回归未消除，正例窗口没有增加。**
+完整分母为六个已知结果的开发窗口、12 个学习臂—窗口：
+`2 WIN / 8 TIE / 2 LOSS / 0 MIXED / 0 FAIL`；有动作的四项为 2 WIN / 2 LOSS。
+不能声称 no-harm、普遍优于 KLT，或普遍优于同后端现代学习系统。
 
-350 总量、6 个学习点/帧不变；原上游 50 次预扣计数未退款。另设实际最终
-发布 50 观测上限，含首次和续传。没有改变网络、来源、首次准入时间、几何
-阈值或外部 VINS；不倒填、不复活已终止的 ID。
+- 前端 18/18 完成并通过实际 bag 结构审计；4/12 学习臂有动作，对应 3/6 物理窗口。
+- 33 个实际发布观测、11 条 lineage；省略 33 个 age-1 GFTT，carried KLT 逐字段/坐标改变为 0。
+  另外 8 个学习臂整 bag 与 fresh KLT 字节一致，仅映射为 TIE。
+- 新 matched GFTT 4/4 PASS，严格同 ID/帧/剂量；不自动沿用旧的 21 观测控制。
+- **24/24 新后端回放完成**，另有 18/18 原 KLT 回放按身份复用，共 42 项有效记录。
+  原 v2 的 42 次后端没有重跑或覆盖。三次 solver replay 是技术重复，不是独立窗口。
+- 42/42 runability PASS；四组 all-nine common support 全 PASS，无失败窗口被剔除。
+- `NO_EXPANSION` 的失败条件为：存在 >10% 严重回归，且 active WIN 数没有超过 LOSS+MIXED。
+  没有进入新窗口验证；新窗口完成数为 0。12 窗只是满足条件后的待登记计划，不是已完成的验证分母。
 
-## 当前有效进度
+| 固定物理窗口 | 续传 XFeat | 续传 SP+LG |
+|---|---|---|
+| A09 6000–6800 | WIN，11 观测 | exact TIE，无动作 |
+| A02 0–900 | LOSS，9 观测 | LOSS，11 观测 |
+| Bus s180 d45 | WIN，2 观测；与旧 v2 输入相同 | exact TIE，无动作 |
+| A08 2700–3600 | exact TIE，无动作 | exact TIE，无动作 |
+| Cemetery s135 d45 | exact TIE，无动作 | exact TIE，无动作 |
+| H07 0–1000 | exact TIE，无动作 | exact TIE，无动作 |
 
-- 8/8 最小函数测试通过；它们不是数据集或后端效果验证。
-- A09/KLT 前端完成：400 输出帧、39.893 秒、覆盖 99.75%，最大 350 点。
-- A09/XFeat 完成并通过完整 bag 审计：同一个公开 ID `10000000` 在输出帧
-  2–12 连续发布 11 次，原 v2 为 3 次；增加的是正式发布链，不是隐藏池计数。
-- 11 个学习观测对应省略 11 个 age-1 GFTT；成熟/延续 KLT 观测损失为 0。
-  保留点的全部通道、归一化坐标、IMU/非 feature 消息和时间轴检查通过。
-- 第 13 帧 raw ID `734` 仍存在，age=27、FB=0.354、NCC=0.707，但
-  quality=0.08278 低于原 0.1 阈值，故终止。不是再次被首次准入期限截断。
-- 探针 2/2 PASS，计入完整矩阵 2/18；其余 16 个已按原顺序继续，A09/SP+LG
-  正在运行。未重复运行两个有效探针单元。
-- 完整矩阵分母固定为 6 个物理窗口、18 个前端单元、12 个学习臂—窗口。
-- 新 matched controls、后端三重复、WIN/TIE/LOSS/FAIL、APE/RPE：**Not evaluated**。
-- 新窗口验证：0/12，未进入。没有新增可归因后端改善的结论。
+这里的 TIE 不是学习贡献，也不是独立 replay。三个全臂同包窗口不进入前端贡献精度分母；
+其他窗口的零动作学习臂同样只作精确 KLT 映射，遵循同包排除先例。
+这是有目的的开发集，不能用 2/6 推算数据集自然正例率。
 
-真实 bag 审计覆盖时间戳、所有非 feature 消息、保留点的全部通道和归一化坐标、
-ID 连续性、最终预算、首次准入范围和省略的 age-1 GFTT。后端逐 ID 实际残差使用
-仍为 **Unknown**。内部候选存在、公开观测链、后端实际使用是不同证据层次。
+## 唯一机制及逐链诊断
 
-## 冻结的后续执行
+首次准入完全保留冻结 v2 的来源、几何/质量门、donor 排序和输出帧 0–4 范围。
+只有上一输出帧**真正公开过**、本帧门前仍有效的同一 raw ID 才能续传；
+续传不再重过 first-admission microburst/horizon/上游预扣预算。保护全部独立镜像 carried KLT，
+仅占用新生 GFTT/空位，保留 350 总量、6 个学习点/帧和 50 个最终发布观测上限；
+上游原有 50 次预扣计数没有退款。这是独立的策略改动，不是覆盖 v2 的无行为变化记账修复。
 
-探针通过结构审计后原序执行其余前端单元，复用已完成回执，不重跑已有 v2
-42 次后端。全部动作臂建立新的同 ID/帧/剂量 matched GFTT；只有精确输入、
-配置、二进制、环境和回执身份相符才复用 KLT。所有动作臂与 matched 均做
-三次固定后端 replay，按原 all-nine common support、30 poses/10 秒/70%
-和严格 1 秒 RPE 网格评估；fixed-scale proper SE(3) 为主、Sim(3) 明示诊断。
-参考是 COLMAP/proxy，不是独立 GT。
+| 窗口 / 臂 | 原 v2 发布长度 | 本版发布长度（逐 ID） | 本版终止证据 |
+|---|---|---|---|
+| A09 / XFeat | 3 | 11 | 帧 13 的同一 raw ID 734 仍在门前，但 quality 0.08278 < 原 0.1 |
+| A02 / XFeat | 3、3、2 | 4、3、2 | 三条均因本版规则下无新生点/空位终止 |
+| A02 / SP+LG | 八条各 1 | 4、3、2、1、1 | 五条均因本版规则下无新生点/空位终止；首次准入集合也受续传占位影响 |
+| Bus / XFeat | 1、1 | 1、1 | 下一帧门前已无对应候选；精确 tracker 终止原因 Unknown |
 
-达到[预注册标准](preregistration.md)才进入独立冻结的 12 新窗口；否则停止，
-不再尝试第二个续传参数版本。新协议不能倒过来赋予旧负例新的通过标准。
+原 14 条 lineage 中 10 条单帧，不能统一归因为预算耗尽，见
+[冻结预算审计](../frontend_coverage_monotone_router_v2/budget_continuation_addendum.md)。
+本版为 11 条中的 4 条单帧，不能把不同 ID 分母伪装成同一批轨迹的配对存活率。
+本版终止原因：8 条容量、1 条质量、2 条上游缺席；没有一条因最终 50 预算耗尽而终止。
 
-## 可复查入口及身份
+A09 的 11 次发布横跨约 1.0002 秒，并非长时间运行的锚点。
+动作仍局限在启动前缀：A09 约 0.200–1.200 秒，A02 约 0.199–0.498 秒，
+Bus 约 0.320 秒。A09 最后观测约与首个位姿同一时刻（两种时间序列相差约 80 ns），
+其他动作均早于首个位姿。不能声称已经验证稳定运行期的持续锚点增强。
+有三条达到至少四次发布，但这只是数量诊断：**内部真实出生/死亡、逐 ID 后端实际接收和残差使用均为 Unknown**。
 
-- [预注册](preregistration.md)、[六窗清单](development_windows.csv)、[方法臂](arms.csv)
-- [探针完整审计](probe_audit.json)、[逐帧发布证据](probe_lineage_events.csv)
-- [方法锁](method_lock.json)、[独立运行入口](../../uw_frontend/ros/export_vins_admission_continuation_v1.py)
-- [矩阵 runner](../../scripts/run_frontend_admission_continuation_v1.py)、[bag 审计](../../scripts/audit_frontend_admission_continuation_v1.py)、[测试](../../tests/test_admission_continuation_v1.py)
-- [前期预算证据](../frontend_coverage_monotone_router_v2/budget_continuation_addendum.md)
+容量限制还有一个重要边界：A02/XFeat 终止帧 4/5/6 的镜像 carried 数为 348/349/350，
+其中分别有 2/2/1 个此前被省略、从未公开的 ID。本版连这些内部镜像点也保护；
+并不等于 350 个“已经公开”的旧轨迹占满。改成只保护此前已公开的轨迹会改变更多基线观测，
+属于另一个有机会成本的策略，**未实施、Not evaluated，不能称天然无害**。
 
-运行时主仓库基线 `main@f6f8feec66c2faf1f59cdb67c1e817028a3bccaf` 加 method lock
-中的精确文件。原 v2 exporter 从 Git 对象
-`3c50b742d6e0c69796a69813e42823e9895ed684:uw_frontend/ros/export_vins_features.py`
-加载并验证 SHA-256 `bb4e50d8b9777e76aee558d94ec0597461e9dcad4ff9c9486875b46a7c714d1d`。
-新入口 SHA-256 为 `52c793eee45b67d05e0c648a54612b875fbc4ea00b5da082079ff5672c70be8e`。
-报告发布 commit 不是实验运行时源码 commit。
+donor 377 的实际对照：KLT 共 105 次，本版 XFeat 共 104 次；只缺输出帧 4，
+帧 5 同 ID 返回。不是删除了未来 104 帧。未来基线寿命没有用于在线决策。
+逐 ID 记录、容量现场和 donor 行都在同一份 [lineage_diagnostic.csv](lineage_diagnostic.csv)。
 
-大产物留在 `continuation_runtime:`，其本地根为
-`/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1`。
-每单元 `frontend_receipt.json` 记录输入/输出身份，新增
-`lifecycle_events.csv` 和 `lifecycle_frames.csv` 记录发布链。GitHub 不上传 bag、
-模型或控制台日志。`probe_lineage_events.csv` 是实际事件表的 LF 换行公开副本；
-原始 CRLF 文件 SHA-256 在 probe_audit.json 中，数值内容保持一致。
-当前 checkpoint 发布协议、源码、完成探针的紧凑证据和 PARTIAL 状态。
+## 同后端绝对误差
+
+每个 active 臂与 KLT、新 matched GFTT 的全部九条轨迹使用同一共同支撑。
+门不变：30 poses / 10 秒 / 70% coverage；严格 1 秒 RPE 网格。
+四组实际为 38–42 poses、37–41 秒、93.33%–95.00% common coverage、37–41 个 RPE pairs。
+fixed-scale proper SE(3) 为主；Sim(3) 明示诊断，不用于替代主判定。
+evo 两种尺度口径交叉验证最大绝对差 < 5e-7 m。
+
+K=KLT，L=本版 learned，C=本版 matched GFTT。误差单位 m；
+fixed 列为三次中位数 [最小, 最大]。Sim(3) 列显示中位数；
+全部 Sim(3) 范围及逐次绝对值见 [accuracy.csv](accuracy.csv)、[accuracy_repeats.csv](accuracy_repeats.csv)。
+
+| 窗口 / 来源 / 角色 | fixed APE | fixed 1s RPE | Sim(3) APE / RPE | 拟合 scale |
+|---|---|---|---|---|
+| A09 6000–6800 / XFeat / K | 1242.140 [1242.123, 1242.175] | 150.847 [150.842, 150.849] | 1.270540 / 0.224500 | 0.001474 |
+| A09 6000–6800 / XFeat / L | 0.641290 [0.640374, 0.641524] | 0.061445 [0.061376, 0.061446] | 0.067421 / 0.019121 | 0.777599 |
+| A09 6000–6800 / XFeat / C | 1.653014 [1.651191, 1.653136] | 0.166323 [0.166164, 0.166336] | 0.143694 / 0.041117 | 3.842195 |
+| A02 0–900 / XFeat / K | 0.141317 [0.141052, 0.142194] | 0.022697 [0.022691, 0.022702] | 0.060774 / 0.017402 | 0.898634 |
+| A02 0–900 / XFeat / L | 0.979235 [0.953975, 0.979635] | 0.091623 [0.088995, 0.091629] | 0.033543 / 0.017809 | 0.536363 |
+| A02 0–900 / XFeat / C | 1.109044 [1.107483, 1.110096] | 0.104795 [0.104761, 0.104861] | 0.052096 / 0.019166 | 0.505281 |
+| A02 0–900 / SP+LG / K | 0.141317 [0.141052, 0.142194] | 0.022697 [0.022691, 0.022702] | 0.060774 / 0.017402 | 0.898634 |
+| A02 0–900 / SP+LG / L | 0.996579 [0.991747, 1.016237] | 0.092403 [0.091985, 0.094647] | 0.031015 / 0.017951 | 0.531985 |
+| A02 0–900 / SP+LG / C | 0.999609 [0.998599, 0.999736] | 0.092963 [0.092706, 0.093090] | 0.029741 / 0.017671 | 0.531228 |
+| Bus s180 d45 / XFeat / K | 0.060109 [0.060109, 0.060109] | 0.037218 [0.037218, 0.037218] | 0.045288 / 0.035828 | 0.956106 |
+| Bus s180 d45 / XFeat / L | 0.042794 [0.042794, 0.065287] | 0.026725 [0.026725, 0.027092] | 0.035416 / 0.026057 | 0.972868 |
+| Bus s180 d45 / XFeat / C | 0.054469 [0.053789, 0.056118] | 0.027436 [0.026235, 0.037443] | 0.029545 / 0.025716 | 0.949609 |
+
+A09 learned 相对本版 matched 的 fixed APE/RPE 低 61.20%/63.06%，支持该开发窗中候选内容有额外作用；
+但 matched 也远好于发散的 KLT，所以仍不能声称 learned 必需。
+A02/XFeat 比 matched 低 11.70%/12.57%，**两者依然严重差于 KLT**；
+SP+LG 比 matched 仅低 0.30%/0.60%，不能把这种接近的结果当成学习内容的普遍优势。
+matched 是按已知干预结构建立的回顾性控制，不是独立在线 detector-isolation 方法。
+
+Bus 按预注册中位数判 WIN，但三次 learned APE 范围为 0.042794–0.065287，
+其中一次高于 KLT 的 0.060109；不能写成三次均无害。
+Bus learned 整包与旧 v2 字节一致，中位数也一致，不是本次续传机制新增的干预或正例。
+
+## 与旧 v2 的同网格比较
+
+以下是另行重新关联 KLT/current/v2 的九条轨迹，不是拼接历史标量；
+四组均过原共同支撑门，未新增回放。完整范围和 Sim(3) 见
+[v2_common_comparison.csv](v2_common_comparison.csv)。
+
+| 窗口 / 来源 | fixed APE：v2 → 本版 | 变化 | fixed RPE：v2 → 本版 | 变化 |
+|---|---|---|---|---|
+| A09 6000–6800 / XFeat | 0.732414 → 0.641290 | -12.44% | 0.073563 → 0.061445 | -16.47% |
+| A02 0–900 / XFeat | 1.091754 → 0.979235 | -10.31% | 0.104297 → 0.091623 | -12.15% |
+| A02 0–900 / SP+LG | 1.113829 → 0.996579 | -10.53% | 0.104368 → 0.092403 | -11.46% |
+| Bus s180 d45 / XFeat | 0.042794 → 0.042794 | 0.00% | 0.026725 → 0.026725 | 0.00% |
+
+A09 的 fixed-scale 增益可归因于本次冻结的续传干预整体，但这个整体也改变了新生 GFTT 的发布，
+不能进一步声称已单独识别“长度”而排除其删点代价。
+A09 Sim(3) APE 从 0.047682 升至 0.067421（约 +41.4%），RPE 从 0.018498 升至 0.019121（约 +3.4%）；
+拟合 scale 从 0.75318 变为 0.77760。这与尺度一致性改善相符，但不是所有几何指标都改善。
+A02 两臂较 v2 改善约一成，却仍有约 +593%/+605% APE 与 +304%/+307% RPE 的 KLT 回归。
+
+此前 A02 的 DELETE_SUFFICIENT 只适用于原注册八个 donor 观测的联合删除；
+不证明 donor 377 单独致因，不证明候选无作用，也不能自动扩展到本版不同删除清单。
+此前 A09/Bus 的 delete-only 不复现收益，说明原干预组合中加点有作用；
+matched classical 也能复现正向作用，因此“学习持久锚点是必要原因”仍不成立。
+见 [正例删除归因](../frontend_v2_positive_delete_diagnostic/report.md)、
+[A02 删除对照](../frontend_coverage_monotone_router_v2_donor_delete_diagnostic/report.md)。
+
+## 初始化、覆盖与身份
+
+所有 42 项记录均有一次 Initialization finish 日志、非空轨迹和 >=70% coverage。
+下表位姿数/覆盖在各组三次中相同。首个位姿列是传感器时间；初始化日志列是回放 ROS 时钟，
+均相对第一条 feature 时间，后者不是精确的单帧内部状态转换 receipt。
+
+| 窗口 / 角色 | poses | 轨迹覆盖 | 首个位姿延迟 s | 初始化日志延迟范围 s |
+|---|---|---|---|---|
+| A02 0–900 / L/SP+LG | 430 | 95.333% | 1.999 | 2.226–2.227 |
+| A02 0–900 / L/XFeat | 430 | 95.333% | 1.999 | 2.226–2.226 |
+| A02 0–900 / K | 421 | 93.336% | 2.898 | 3.011–3.012 |
+| A02 0–900 / C/SP+LG | 430 | 95.333% | 1.999 | 2.216–2.226 |
+| A02 0–900 / C/XFeat | 430 | 95.333% | 1.999 | 2.216–2.226 |
+| A08 2700–3600 / K | 440 | 97.555% | 0.999 | 1.145–1.155 |
+| A09 6000–6800 / L/XFeat | 388 | 96.750% | 1.200 | 1.396–1.416 |
+| A09 6000–6800 / K | 388 | 96.750% | 1.200 | 1.345–1.356 |
+| A09 6000–6800 / C/XFeat | 388 | 96.750% | 1.200 | 1.355–1.365 |
+| Bus s180 d45 / L/XFeat | 267 | 94.490% | 2.232 | 2.694–2.704 |
+| Bus s180 d45 / K | 267 | 94.490% | 2.232 | 2.684–2.695 |
+| Bus s180 d45 / C/XFeat | 266 | 94.136% | 2.391 | 2.865–2.896 |
+| Cemetery s135 d45 / K | 345 | 96.628% | 1.383 | 1.628–1.628 |
+| H07 0–1000 / K | 489 | 97.604% | 1.101 | 1.269–1.269 |
+
+[后端逐次记录](backend_results_repeats.csv)、[runability](runability.csv) 保留全部分母。
+[配置审计](backend_config_audit.csv) 六窗全部 PASS：每窗各臂/重复的 YAML、相机、node/library 哈希唯一且一致。
+[运行身份与时刻审计](backend_environment_audit.csv) 42/42 PASS，各有 35 项 estimator/library/numeric 设置一致；
+ROS 私有端口和临时 PATH 文本不是逐字相同，实际 rosbag/roscore/python3 解析路径相同。
+[12 份实际 YAML 快照及来源](backend_config_snapshots/source_identity.csv) 是普通文件，不是本机软链接；
+快照与原件字节一致，运行配置未被修改。
+
+## 源码、产物与执行记录
+
+运行时基线：`main@f6f8feec66c2faf1f59cdb67c1e817028a3bccaf` 加
+[method_lock.json](method_lock.json) 中的精确文件；
+v2 exporter 从 Git 对象 `3c50b742d6e0c69796a69813e42823e9895ed684` 加载，
+SHA-256 `bb4e50d8b9777e76aee558d94ec0597461e9dcad4ff9c9486875b46a7c714d1d`。
+新入口 SHA-256 `52c793eee45b67d05e0c648a54612b875fbc4ea00b5da082079ff5672c70be8e`。
+8/8 冻结函数测试通过；测试不是数据集效果。
+报告发布 commit 不冒充实验源码 commit。
+
+[预注册](preregistration.md)、[窗口](development_windows.csv)、[前端审计](frontend_audit.csv)、
+[动作](action_audit.csv)、[matched 审计](matched_control_audit.csv)、
+[replay manifest](backend_replay_plan.csv)、[执行锁](backend_execution_lock.json)、
+[冻结决定](backend_decision.json)、[完整哈希清单](artifacts.sha256)、[产物清单](artifact_inventory.csv)。
+
+逻辑根 `continuation_runtime:` =
+`/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1`；
+`v2_runtime:` 为同父目录下原 v2 产物。清单记录 bag、metrics、逐 ID ledger、
+vio.csv、vins.log、receipts 和配置身份；大数据、模型、bag、完整控制台日志不上传 GitHub。
+主结果表包含实际数值，不能把只有哈希当作内容已公开。
+
+执行中两个无完成回执的 frontend 中间目录按协议保留在 quarantine：
+- `partial_a02_0_900_klt_20260907T073848Z`
+- `partial_a09_6000_6800_continuation_splg_20260907T072403Z`
+
+一次 nohup 未保持存活，随后监控会话返回 SIGTERM/143，发送方 Unknown。
+改用本机用户服务只改变运行载体，未改冻结实验；最终全部阶段成功退出。
+中间尝试不算成功 replay 或独立窗口。没有写入锁定的 /mnt/data 证据或修改外部 VINS。
+
+## 唯一下一步
+
+**按冻结规则停止此续传版本，不扩展 12 新窗，不自动再试预算/顺序/保护范围变体。**
+保留 A09 的局部 fixed-scale 增益、A02 的严重负例和 Bus 的同输入重复波动。
+候选持续发布得到改善，但“扩大正例窗口且无严重回归”的开发目标未获支持。
+后端逐 ID 使用、独立 GT 精度、实时初始化反馈方法和新窗口验证均为 Unknown / Not evaluated。
