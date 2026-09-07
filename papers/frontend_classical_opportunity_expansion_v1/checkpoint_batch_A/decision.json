@@ -1,0 +1,25 @@
+{
+  "status": "BATCH_RESOLVED",
+  "activated_batches": [
+    "A"
+  ],
+  "physical_windows_planned": 12,
+  "physical_windows_replayed": 12,
+  "backend_attempted": 72,
+  "classification_counts": {
+    "PRACTICAL_LOSS": 2,
+    "PRACTICAL_GAIN": 3,
+    "NOT_EVALUABLE": 1,
+    "SMALL_OR_UNCERTAIN": 6
+  },
+  "severe_regression_count": 2,
+  "structural_failure_windows": 0,
+  "robust_practical_gain_count": 3,
+  "practical_positive_sequences": [
+    "A04",
+    "A07",
+    "H02"
+  ],
+  "scientific_decision": "Unknown",
+  "next_step": "Complete the frozen active batch and registered decision; no tuning or substitutions."
+}

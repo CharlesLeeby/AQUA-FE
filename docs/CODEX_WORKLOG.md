@@ -1149,3 +1149,33 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues:runability PASS denotes valid output/coverage,not useful numerical accuracy. Cause of the C repeat instability remains Unknown.
 - Interpretation:10/12A,60/72replays:3robust/practicalgains,2losses,4small/uncertain,1NOT_EVALUABLE,2relative severe regressions,0structuralfailures. H03 is a key baseline-anomaly/repeat-instability mechanism case.
 - Next steps:finish H04/H05 and final audit/report;do not rerun to choose favorable C outcomes.
+
+
+## 2026-09-08 — H04 small-change neutral case
+- Task objective: complete the eleventh fixed B/C comparison.
+- Problem / motivation: preserve sub-threshold error increases and actual candidate action in the neutral case pool.
+- Files changed: expansion tables/common_support/capacity, mechanism/independent handoffs and required logs.
+- Implementation: unchanged B/Ceach3technicalrepeats,Harbor configuration,own-support/evo/classification.
+- Technical decisions: SMALL_OR_UNCERTAIN/NONE;do not hide small C-B error increases or change the loss threshold.
+- Experiments performed:coe1_h04_00000_00900,AQUALOC Harbor04raw[0,900),6formalreplays.
+- Quantitative results:APEmin/median/maxB0.16890296/0.16890639/0.16892903m,C0.17110440/0.17110605/0.17139934m;RPEB0.02454722/0.02455506/0.02458801m,C0.02463115/0.02463187/0.02478457m. Support43poses/42s/95.5556%/42RPEpairs,evo<1e-6m. C5714observations/1014IDs,life3median/94maxobservations,residual34968perrepeat.
+- Qualitative observations:stable ranges,firstposedelay1.351892sbotharms;misalignment countsB2/C1. All6runability/per-IDreceiptsPASS,maxactualeligible434<1000.
+- Failed attempts:none.
+- Known issues:relative neutrality does not mean exactly unchanged accuracy or individual candidate usefulness.
+- Interpretation:11/12A,66/72replays:3robust/practicalgains,2losses,5small/uncertain,1NOT_EVALUABLE,2severe,0structuralfailures.
+- Next steps:finish H05,save BatchA gate/snapshot,run final integrity/supplement/analysis/report and publish final decision.
+
+
+## 2026-09-08 — H05 and complete Batch A matrix
+- Task objective: resolve the twelfth frozen window and retain the complete 12-window denominator.
+- Problem / motivation: the predefined Batch A must finish despite an already failed severe-risk gate.
+- Files changed: expansion result/common-support/capacity tables, batch checkpoint, independent/mechanism handoffs and required logs.
+- Implementation: unchanged H05 B/C-all, three technical repeats per arm; no new arms, windows, tuning or extra repeats.
+- Technical decisions: H05 is SMALL_OR_UNCERTAIN/NONE; small increases remain reported. Batch B is not eligible because two severe regressions exceed the frozen maximum of one.
+- Experiments performed: coe1_h05_00000_00900, AQUALOC Harbor05 raw [0,900), six formal replays.
+- Quantitative results: APE min/median/max B 0.218331637/0.218333457/0.218334404 m, C 0.218611866/0.218612648/0.218617415 m; RPE B 0.024782784/0.024782804/0.024783122 m, C 0.024875999/0.024877202/0.024877742 m. Own support 43 poses/42 s/95.5556%/42 RPE pairs. C 8610 observations/1529 IDs; lifetime median 3/max 74 observations; candidate residual blocks 50808 each repeat; max actual eligible 460 < 1000.
+- Qualitative observations: stable ranges; first-pose delay 1.051083 s in both arms, no visual/IMU misalignment log events. All six runability and exact per-ID receipts PASS.
+- Failed attempts: none in H05. Earlier negatives and A05 reference-support invalidity remain in the denominator.
+- Known issues: numerical runability is distinct from accuracy; proxy reference and prior broader-project exposure limit inference.
+- Interpretation: all 12 physical windows and 72 formal replays are resolved: 3 practical/robust gains, 2 losses (both severe), 6 small/uncertain, 0 FAIL, 1 NOT_EVALUABLE. Local opportunity exists across A04/A07/H02, but acceptable-risk generalization fails.
+- Next steps: publish the Batch A checkpoint, verify immutable artifacts and gate, finish descriptive analysis/case handoff/final report, publish the final decision. No Batch B or C-all tuning.

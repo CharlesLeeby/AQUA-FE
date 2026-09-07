@@ -1,18 +1,18 @@
 # Classical additive opportunity expansion — evidence checkpoint
 
-Status: IN_PROGRESS; scientific decision: Unknown.
+Status: COMPLETE; scientific decision: ADDITIVE_OPPORTUNITY_NOT_GENERALIZED.
 
-1. New prospective C-all physical windows replayed: 10; replay attempts: 60.
+1. New prospective C-all physical windows replayed: 12; replay attempts: 72.
 2. Activated roster: 12 sequence-held-out / 0 window-held-out relative to the six C-all development windows; broader project exposure retained.
-3. Full activated denominator: {"PRACTICAL_LOSS": 2, "PRACTICAL_GAIN": 3, "NOT_EVALUABLE": 1, "SMALL_OR_UNCERTAIN": 4, "PENDING": 2}.
+3. Full activated denominator: {"PRACTICAL_LOSS": 2, "PRACTICAL_GAIN": 3, "NOT_EVALUABLE": 1, "SMALL_OR_UNCERTAIN": 6}.
 4. ROBUST_PRACTICAL_GAIN: 3.
 5. Practical positive sequences: ["A04", "A07", "H02"].
 6. Severe regression windows: 2.
 7. Candidate dose/lifetime/initialization comparison with old A02/Bus: pending final case interpretation; exact new fields in case_registry.csv and old tables remain frozen.
 8. Batch B activated: False. Exact unactivated windows remain in the registry.
-9. Decision: Unknown.
+9. Decision: ADDITIVE_OPPORTUNITY_NOT_GENERALIZED.
 10. Case handoff: positive_cases.csv, neutral_cases.csv, negative_cases.csv, failure_cases.csv.
-11. Next step: Complete the frozen active batch and registered decision; no tuning or substitutions.
+11. Next step: Transfer the retained positive/negative/initialization cases to observation-utility / risk-mechanism research; no automatic C-all tuning.
 
 | Window | Batch | Class | Tier | B APE min / median / max (m) | C APE min / median / max (m) | Severe | Reason |
 |---|---|---|---|---|---|---|---|
@@ -26,8 +26,8 @@ Status: IN_PROGRESS; scientific decision: Unknown.
 | coe1_h01_00000_00900 | A | SMALL_OR_UNCERTAIN | NONE | 0.0707647 / 0.0707647 / 0.070898 | 0.0712008 / 0.0715236 / 0.0715518 | False |  |
 | coe1_h02_00000_00900 | A | PRACTICAL_GAIN | ROBUST_PRACTICAL_GAIN | 0.103418 / 0.109392 / 0.110284 | 0.0293568 / 0.0294124 / 0.0294126 | False |  |
 | coe1_h03_00000_00900 | A | SMALL_OR_UNCERTAIN | DIRECTIONAL_GAIN | 848.004 / 848.216 / 848.385 | 0.0714668 / 837.927 / 838.009 | False |  |
-| coe1_h04_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |
-| coe1_h05_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |
+| coe1_h04_00000_00900 | A | SMALL_OR_UNCERTAIN | NONE | 0.168903 / 0.168906 / 0.168929 | 0.171104 / 0.171106 / 0.171399 | False |  |
+| coe1_h05_00000_00900 | A | SMALL_OR_UNCERTAIN | NONE | 0.218332 / 0.218333 / 0.218334 | 0.218612 / 0.218613 / 0.218617 | False |  |
 | coe1_a01_00900_01800 | B | NOT_ACTIVATED | NONE | Not evaluated. | Not evaluated. | False |  |
 | coe1_a03_00900_01800 | B | NOT_ACTIVATED | NONE | Not evaluated. | Not evaluated. | False |  |
 | coe1_a04_00900_01800 | B | NOT_ACTIVATED | NONE | Not evaluated. | Not evaluated. | False |  |

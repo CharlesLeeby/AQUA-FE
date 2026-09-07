@@ -1,7 +1,7 @@
 # Classical expansion mechanism handoff — partial checkpoint
 
-Status: Batch A10/12windows resolved,60/72formalreplays. This is a case interpretation
-checkpoint, not the final analysis/report. The remaining two A windows must complete.
+Status: Batch A11/12windows resolved,66/72formalreplays. This is a case interpretation
+checkpoint, not the final analysis/report. The remaining one A window must complete.
 The registered Batch B gate is already impossible because two severe regressions exist.
 
 All labels below refer to the **whole C candidate set versus B for this cold-start window**.
@@ -41,3 +41,9 @@ H01 `coe1_h01_00000_00900` is a nonzero-action SMALL_OR_UNCERTAIN case: C20127ob
 H02 `coe1_h02_00000_00900` is the third ROBUST_PRACTICAL_GAIN: BAPE0.10341843/0.10939183/0.11028445m versus C0.02935680/0.02941242/0.02941257m;BRPE0.03472649/0.03621206/0.03636493m versus C0.00768505/0.00768786/0.00768837m. Support41poses/40s/91.1111%/40RPEpairs,evo/receiptsPASS. C35978observations/4319IDs,life4median/106maxobservations;firstpose1.599425searlier andmisalignment logcount12→2. Baseline has moderate error rather than A04-style numerical explosion. These timing changes remain associations,not proved causal mechanisms.
 
 H03 `coe1_h03_00000_00900` is SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN with severe absolute numerical anomalies: BAPE848.004116/848.216346/848.384525m;C0.07146680/837.927196/838.008913m(min/median/max). One C repeat is accurate and two are not. Support43poses/42s/95.5556%/42RPEpairs,evo/receiptsPASS. Same C bag publishes29659observations/2696IDs;actualresiduals29806–199867 andfirstposedelay1.448549–1.748524s vary. Do not choose the single good repeat or interpret the relative neutral label/runabilityPASS as reliable absolute performance.
+
+H04 `coe1_h04_00000_00900` is SMALL_OR_UNCERTAIN/NONE: APEmedian0.16890639→0.17110605m,RPE0.02455506→0.02463187m,small adverse changes below practicalloss conditions. Support43poses/42s/95.5556%/42RPEpairs,evo/receiptsPASS;C5714observations/1014IDs,life3median/94maxobservations. Preserve this direction and nonzero action without altering the frozen class.
+
+
+## Batch A completion checkpoint — 2026-09-08
+All 12/12 windows and 72/72 replays are resolved. H05 is SMALL_OR_UNCERTAIN. Totals: 3 practical/robust gains, 2 practical losses (both severe), 6 small/uncertain, 0 FAIL, 1 NOT_EVALUABLE. This completion supersedes earlier partial counters. Batch B is not eligible. Final artifact audit, analysis bundle and full Chinese report remain pending; no additional replay is authorized by this handoff.

@@ -912,3 +912,34 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Interpretation:one accurate C repeat and two inaccurate C repeats;the frozen median/range outcome is uncertain. This is not acceptable absolute performance despite structural/runability validity.
 - Conclusion:SMALL_OR_UNCERTAIN with numerical anomaly and unusual C repeat instability;no extra repeat or best-run selection.
 - Follow-up:finish H04/H05,retain full ranges and initialization/receipt context for utility/risk research.
+
+
+## coe1_H04_initial_window — 2026-09-08
+- Experiment ID:classical_opportunity_expansion_v1/coe1_h04_00000_00900.
+- Date/status/scientific role:2026-09-08;COMPLETE comparison,SMALL_OR_UNCERTAIN/NONE;fixed classical control.
+- Git commit/branch:2e4cee7ae1baf4a1af70e255f449c213836b17f0 reporting checkpoint;replays began under9c07f6935daddd278bb165eb431718bf11769cec;exp/classical-opportunity-expansion-v1-20260908;frozen identities unchanged.
+- Dataset/window:AQUALOC Harbor04raw[0,900),exact input/reference/timestamps in frozen roster and preparation.
+- Environment/configuration:registered ROSNoetic/Python3.8,port12691,guarded1000capacity,.04s/8iterations,serialCPU2,3,8,9,unchanged Harbor-family calibration/hash locks.
+- Baseline:fresh completeKLT B350cap/every2offset1/adaptive_clahe/vins_safe.
+- Proposed modification:frozen C-all classical addition,allB/nonfeature messages preserved.
+- Commands/artifacts:run_classical_opportunity_expansion.py --window coe1_h04_00000_00900 --arm B|C-all --repeat 1|2|3 via registered controller. Runtime /media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h04_00000_00900;published common_support/coe1_h04_00000_00900/C-all_vs_B and case/backend tables.
+- Metrics/results:APEmin/median/maxB0.16890296/0.16890639/0.16892903m,C0.17110440/0.17110605/0.17139934m;RPEB0.02454722/0.02455506/0.02458801m,C0.02463115/0.02463187/0.02478457m. C5714observations/1014IDs,life3median/94maxobservations,residual34968perrepeat.
+- Validity/common support:all6runability/per-IDreceiptsPASS;43poses,42s,95.5556%coverage,42RPEpairs,evo<1e-6m;maxactualeligible434<1000;firstpose1.351892sbotharms;losttrackingtruthUnknown,logproxiesseparate.
+- Interpretation:APE increase0.002199662m andRPE increase0.000076803m below frozen practicalloss conditions.
+- Conclusion:SMALL_OR_UNCERTAIN,retained with nonzero action and small error increases.
+- Follow-up:complete H05 and final full-denominator handoff;no BatchB/tuning.
+
+
+## COE1-A-H05 — 2026-09-08
+- Status and scientific role: COMPLETE; final preregistered opportunity-probe case in Batch A; SMALL_OR_UNCERTAIN/NONE.
+- Git commit and branch: execution lock 8f323ba with Python 3.8 reporting adapter d162b73; branch exp/classical-opportunity-expansion-v1-20260908. Latest pre-completion checkpoint 2e4cee7ae1baf4a1af70e255f449c213836b17f0.
+- Dataset and sequence/window: AQUALOC Harbor05, coe1_h05_00000_00900, raw [0,900), sequence-held-out only relative to the old six C-all development windows.
+- Environment and exact configuration: registered aquafe_cuda Python 3.8, ROS Noetic master 12691; frozen Harbor configuration, same capacity-1000 diagnostic VINS binary, solver 0.04 s/8 iterations; full configuration and hashes in expansion locks and per-run receipts.
+- Baseline: fresh full KLT B, three technical replays.
+- Proposed modification: fixed additive classical C-all, complete B retained, three technical replays.
+- Commands and artifact/run paths: scripts/classical_opportunity_py38.py --batch A --wait-first-pid 846846; runtime /media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h05_00000_00900/{B,C-all}/repeat{1,2,3}; primary papers/frontend_classical_opportunity_expansion_v1/{backend_results.csv,case_registry.csv,common_support/coe1_h05_00000_00900/C-all_vs_B/}.
+- Metrics and results: fixed-scale proper SE(3) APE B min/median/max 0.218331637/0.218333457/0.218334404 m, C 0.218611866/0.218612648/0.218617415 m; strict 1 s translational RPE B 0.024782784/0.024782804/0.024783122 m, C 0.024875999/0.024877202/0.024877742 m. Median deltas +0.000279191 m APE and +0.000094398 m RPE. C 8610 observations, 1529 IDs, 660 IDs >=4 and 253 IDs >=10 observations; lifetime median/max 3/74 observations. Per-arm trajectory coverage 97.6523%, first-pose delay 1.051083 s, all reset/failure/misalignment proxies zero. Backend wall time B 64.828–64.941 s, C 64.791–65.036 s; not algorithm FPS. Lost-tracking count Unknown.
+- Validity checks and common support: own six-trajectory support 43 poses/42 s/95.5556%/42 RPE pairs; evo below 1e-6 m; all six runability and per-ID receipts PASS, max actual eligible 460 < 1000. COLMAP/proxy is not independent GT.
+- Interpretation: nonzero classical dose with small stable accuracy increases below the frozen practical-loss conditions.
+- Conclusion: complete Batch A denominator is 12 windows/72 replays; 3 gains, 2 losses, 6 small/uncertain, 0 FAIL, 1 NOT_EVALUABLE, 2 severe regressions.
+- Follow-up: freeze/publish Batch A checkpoint and final integrity/report; no Batch B under the registered gate.

@@ -993,3 +993,33 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion:uncertain relative effect with severe absolute numerical pathology;cause remains Hypothesis / Inference. The registered relative severe flag is false because C is not worse than B by its frozen criteria,not because the outputs are operationally good.
 - Open questions:what backend-state sensitivity explains the divergent C repeats,and can utility/risk research predict it without using future outcomes as per-feature labels?
 - Next experiment:complete fixed H04/H05 only;then mechanism handoff,without extra replays or tuning.
+
+
+## 2026-09-08 — H04 retains sub-threshold harm direction without relabeling
+- Research question:how should small error increases be represented when they fail the registered practicalloss conditions?
+- Hypothesis:neutral case pools can include small adverse directions as well as small favorable directions or technical uncertainty.
+- Motivation:avoid interpreting the neutral label as exactly zero effect.
+- Related baseline:fresh fullKLT Harbor04[0,900),plus nonzero-action neutralH01.
+- Proposed idea:retain the frozen class and expose exact metric changes/receipt evidence.
+- Why it might work:preserves useful mechanism context without introducing a new threshold.
+- Assumptions:the unchanged absolute/relative/range/RPE criteria remain binding.
+- Potential failure cases:calling every positive C-B difference a practicalloss,or suppressing the direction because it is below threshold.
+- Evidence:Confirmed fact.H04APEmedian0.16890639→0.17110605m,RPE0.02455506→0.02463187m;43commonposes/42RPEpairs,evo/receiptsPASS;C5714publishedobservations/residual34968perrepeat.
+- Current conclusion:SMALL_OR_UNCERTAIN with small adverse direction;candidate-specific utility Not evaluated.
+- Open questions:which utility/risk signals distinguish small neutral changes from registered severe losses?
+- Next experiment:finish H05 only,then final case-pool handoff and registered decision.
+
+
+## 2026-09-08 — Full Batch A opportunity and risk boundary
+- Research question: does the frozen classical additive control provide practical benefits beyond the old six developer windows while staying within the registered severe-risk bound?
+- Hypothesis: extra classical observations can help in some cases, but observation utility and risk are heterogeneous.
+- Motivation: finish the fixed denominator and provide genuine positive, negative and neutral mechanism cases.
+- Related baseline: old C/B 2 gain/0 loss/4 small and L/B 0 gain/3 loss/3 small remain unchanged; fresh full KLT is the new-window comparator.
+- Proposed idea: no method change; transfer this complete set-level case pool to observation-utility/risk research.
+- Why it might work: comparisons include contrasting actual backend outcomes under the same additive contract, including moderate-error baseline gains and severe negatives.
+- Assumptions: each valid comparison uses its own six trajectories and the frozen proxy-reference contract; technical repeats measure execution variation only.
+- Potential failure cases: unfiltered additive admission causes large errors in A01/A03; A04 baseline rescue and H03 unstable numerical states could mislead an overly simple utility model; A05 has inadequate common-pose count.
+- Evidence: Confirmed fact. Batch A has 12 windows/72 formal replays, 3 practical/robust gains across A04/A07/H02, 2 severe practical losses, 6 small/uncertain, 0 FAIL and 1 NOT_EVALUABLE. H05 closes the denominator with stable small C-B increases despite 8610 published candidates and exact backend receipts. Inspect expansion case_registry.csv, backend_results.csv and own common_support directories.
+- Current conclusion: local positive opportunity is observed, but the <=1 severe-regression bound is violated. ADDITIVE_OPPORTUNITY_NOT_GENERALIZED and EXPANSION_STOPPED_AFTER_BATCH_A are required. This does not erase positive cases or authorize more window searching.
+- Open questions: which pre-outcome observations predict utility versus initialization/trajectory risk? Causation and individual feature utility remain Unknown / Not evaluated.
+- Next experiment: only observation-utility/risk mechanism research, separately designed and authorized; these outcome-known windows are development cases for any mechanism informed by them, requiring fresh independent confirmation later.

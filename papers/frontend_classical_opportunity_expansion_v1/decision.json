@@ -1,17 +1,16 @@
 {
-  "status": "IN_PROGRESS",
+  "status": "COMPLETE",
   "activated_batches": [
     "A"
   ],
   "physical_windows_planned": 12,
-  "physical_windows_replayed": 10,
-  "backend_attempted": 60,
+  "physical_windows_replayed": 12,
+  "backend_attempted": 72,
   "classification_counts": {
     "PRACTICAL_LOSS": 2,
     "PRACTICAL_GAIN": 3,
     "NOT_EVALUABLE": 1,
-    "SMALL_OR_UNCERTAIN": 4,
-    "PENDING": 2
+    "SMALL_OR_UNCERTAIN": 6
   },
   "severe_regression_count": 2,
   "structural_failure_windows": 0,
@@ -21,6 +20,7 @@
     "A07",
     "H02"
   ],
-  "scientific_decision": "Unknown",
-  "next_step": "Complete the frozen active batch and registered decision; no tuning or substitutions."
+  "scientific_decision": "ADDITIVE_OPPORTUNITY_NOT_GENERALIZED",
+  "next_step": "Transfer the retained positive/negative/initialization cases to observation-utility / risk-mechanism research; no automatic C-all tuning.",
+  "expansion_status": "EXPANSION_STOPPED_AFTER_BATCH_A"
 }
