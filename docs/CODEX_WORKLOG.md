@@ -939,3 +939,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Failed attempts: none. Known issues: this is a bounded-prefix check, not a full six-window regeneration.
 - Interpretation: Confirmed fact — prefix identity; new-window backend effectiveness Not evaluated.
 - Next steps: complete the frozen Batch A readiness gates and repeats.
+
+## 2026-09-08 — First new C-all case: A01 severe regression
+
+- Task objective: complete the first frozen B/C six-replay comparison and retain its scientific outcome.
+- Problem / motivation: assess fixed C-all beyond the six development windows without selecting positives.
+- Files changed: new result/registry/decision/common-support tables, independent handoff, work/experiment/research/context logs; no frozen method/config/evaluator changes.
+- Implementation: complete A01 input[0,900), B/C450 output frames, independent serialized readback, capacity proof and six exact-binary repeats; common-support/evo analysis.
+- Technical decisions: B and C each retain all three repeats; practical/severe rules unchanged; continue all remaining Batch A windows despite first loss.
+- Experiments performed: 6 new formal A01 replays; source-generation equivalence already recorded separately. Python3.8 dict-row compatibility was fixed in a hashed adapter before first replay, preserving original analysis/controller source and locks.
+- Quantitative results: A01 primary own-six support36 poses/35s/81.818% coverage/35RPE pairs; B APE median0.155037m (min0.114753,max0.155037), C0.554981m (0.510393–0.658114); B RPE median0.020657m, C0.070127m. Classification PRACTICAL_LOSS, severe=True. C50545 observations/1017 IDs/lifetime median26 max435. Actual maximum optimizer eligibility610<1000; six received-ID checksPASS. Evidence paths: papers/frontend_classical_opportunity_expansion_v1/{case_registry.csv,backend_results.csv,window_outcomes.csv,common_support/coe1_a01_00000_00900/C-all_vs_B/}; runtime same slug.
+- Qualitative observations: C initialization-related rejection count2→7 and first-pose delay6.248→7.249s; fitted-scale medians B0.7467,C0.4508. These co-occur with regression, without proving the root cause.
+- Failed attempts: no formal structural/replay failures; the negative scientific result is retained. Original waiting controller stopped for Python3.8 compatibility at0 formal attempts, not a discarded repeat.
+- Known issues: both arms show descriptive repeat instability; COLMAP proxy, relative held-out scope and nonexclusive host limit interpretation.
+- Interpretation: Confirmed fact — fixed C-all can produce a new severe negative outside its six development windows even with intact KLT and received candidates. Global expansion conclusion Unknown,11 A windows pending.
+- Next steps: finish Batch A, apply registered B gate, retain this risk-mechanism case.

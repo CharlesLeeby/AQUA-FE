@@ -755,3 +755,16 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Validity/common support: exact dictionary equality; backend common support/APE/RPE Not evaluated. Backend replay count0.
 - Interpretation/conclusion: bounded execution equivalence PASS, not effectiveness evidence or a new outcome sample.
 - Follow-up: continue registered new-window source/receipt gates and Batch A backend matrix.
+
+## EXP-20260908-CLASSICAL-OPPORTUNITY-V1 / A01 — COMPLETE window, Batch A IN_PROGRESS
+
+- Date: 2026-09-08; role: new frozen classical-control case; git branch exp/classical-opportunity-expansion-v1-20260908, source49c0247/execution8f323ba/compatibilityd162b73.
+- Dataset/window: AQUALOC archaeologyA01 CSV image[0,900), measured44.942442912s; updated COLMAP proxy. Exact timestamps/input hashes in frozen roster and runtime preparation receipt.
+- Environment/configuration: frozen B/C pipeline, existing guarded binary e231871e...68aadd, old A02-family config/camera unchanged, ROS12691, .04s/8 solver, cap1000; frontendCPU0,6 and backend2,3,8,9; fresh B and six new repeats.
+- Baseline/modification: full KLT B vs exact additive C-all; no removals or q/backend changes.
+- Commands/artifacts: run_classical_opportunity_expansion.py --window coe1_a01_00000_00900 --arm B|C-all --repeat1|2|3; full argv in each receipt under runtime/backend/coe1_a01_00000_00900. Tables and own-six common-support artifacts in papers/frontend_classical_opportunity_expansion_v1.
+- Metrics/results: B/C APE medians0.155036765/0.554980933m; RPE0.020657359/0.070126905m; APE+257.9673%,RPE+239.4766%, both exceed frozen severe/noise margins. Full ranges are in case_registry.csv. PRACTICAL_LOSS/SEVERE_REGRESSION.
+- Validity/common support: all6 runabilityPASS and exact per-ID receipts; 36 common poses,35s,coverage81.818%,35strict1sRPE pairs; evoPASS; static C upperbound992 and actual maxeligibility610<1000. B reconstruction/nonfeature/source-q/velocity/float32 contractsPASS.
+- Initialization/diagnostics: one initialization per run; B firstpose delay6.248s,C7.249s; visual–IMU misalignment rejects B2,C7; fittedscale medians B0.7467,C0.4508. No reset/failure-detection logs. New candidate residual blocks med374181; repeated use is not independent information.
+- Interpretation/conclusion: severe negative new C case, not a structural delivery defect; initialization/scale differences remain association, not causal proof. Overall decisionUnknown.
+- Follow-up: complete the other11 Batch A windows; no early substitution or threshold changes.

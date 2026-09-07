@@ -302,3 +302,7 @@ papers/frontend_admission_continuation_v1/report.md and docs/CODEX_HANDOFF.md.
 ## 2026-09-08 — Independently authorized classical opportunity expansion
 
 A new fixed-method experimental branch/worktree starts at additive release 49c0247: `exp/classical-opportunity-expansion-v1-20260908`, `/home/ma/AQUA-FE_WS_classical_opportunity_expansion_v1`. Prior continuation/additive outputs and conclusions remain frozen. New scope is B/C only, 24 preregistered windows in two batches (12 sequences), 72 Batch A replays and at most 72 conditional Batch B replays. C-all is a classical control, not the proposed innovation. See `papers/frontend_classical_opportunity_expansion_v1/preregistration.md` and `docs/CODEX_HANDOFF_CLASSICAL_EXPANSION.md`. New accuracy Not evaluated.; held-out labels refer to the six C-all development windows and do not assert globally unseen project data.
+
+### 2026-09-08 — Classical expansion first resolved case
+
+A01[0,900) completes6/6 repeats with intact B/delivery/capacity/evaluation contracts and becomes a new PRACTICAL_LOSS/SEVERE_REGRESSION C-all case (APE med0.1550→0.5550m; own-six support36poses/35s/81.818%). Remaining11 Batch A windows pending; final scientific decisionUnknown. New case does not revise frozen old experiment conclusions. See independent handoff/case registry.

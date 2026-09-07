@@ -1,0 +1,36 @@
+{
+  "arms": {
+    "B": {
+      "arbitrary_keyframe_depth_bound": 700,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/baseline/coe1_a01_00000_00900/features.bag",
+      "feature_bag_sha256": "6625d495b4ac1cad4193a19b1a9c5144e8183347e7ea2672c9d570ac4b98d097",
+      "feature_messages": 450,
+      "gaps": [],
+      "max_consecutive11_ge4": 381,
+      "max_consecutive11_ids": 429,
+      "max_per_message": 350,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 1561,
+      "whole_window_ge4": 917
+    },
+    "C-all": {
+      "arbitrary_keyframe_depth_bound": 992,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/frontend/coe1_a01_00000_00900/C-all.bag",
+      "feature_bag_sha256": "b69d4b9054156934587a41137cc893ba0b37e6b1922e9716eb7ad34b63e8068b",
+      "feature_messages": 450,
+      "gaps": [],
+      "max_consecutive11_ge4": 536,
+      "max_consecutive11_ids": 616,
+      "max_per_message": 496,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 2578,
+      "whole_window_ge4": 1726
+    }
+  },
+  "capacity_modified": false,
+  "run_slug": "coe1_a01_00000_00900"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "IN_PROGRESS",
+  "activated_batches": [
+    "A"
+  ],
+  "physical_windows_planned": 12,
+  "physical_windows_replayed": 1,
+  "backend_attempted": 6,
+  "classification_counts": {
+    "PRACTICAL_LOSS": 1,
+    "PENDING": 11
+  },
+  "severe_regression_count": 1,
+  "structural_failure_windows": 0,
+  "robust_practical_gain_count": 0,
+  "practical_positive_sequences": [],
+  "scientific_decision": "Unknown",
+  "next_step": "Complete the frozen active batch and registered decision; no tuning or substitutions."
+}

@@ -828,3 +828,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion: Unknown; neither confirmation nor lack of generalization is established. Old NO_EXPANSION decisions are unchanged.
 - Open questions: cross-sequence repeatability, candidate lifetime/initialization differences, negative case mechanisms.
 - Next experiment: full frozen Batch A B/C three technical repeats, followed only by the preregistered conditional Batch B.
+
+## 2026-09-08 — A01 adds a classical-additive risk case
+
+- Research question: can useful extra observations be harmful despite full backbone preservation?
+- Hypothesis: initialization/scale sensitivity may make an otherwise valid additive candidate set harmful.
+- Motivation: first new fixed-C comparison is severely worse, unlike old A02/Bus positives.
+- Related baseline: fresh complete KLT B on A01[0,900), three technical repeats.
+- Proposed idea: retain the window for subsequent observation-utility/risk analysis; do not tune C here.
+- Why it might work: Hypothesis / Inference — risk models could distinguish candidate-set or initialization contexts; this experiment does not identify per-feature utility.
+- Assumptions: serialized preservation, exact delivery, fixed backend/evaluation and common-support gates hold.
+- Potential failure cases: proxy reference bias, initialization stochasticity, solver timing, scale ambiguity; larger candidate count/lifetime alone is not sufficient.
+- Evidence: Confirmed fact — A01 C50545 extra observations,1017 IDs, lifetime median26; APE median0.5550m vsB0.1550m, RPE0.07013 vs0.02066; six-supportPASS. Init delay+1.0006s, misalignment rejections2→7 and fitted-scale changes co-occur. Artifacts: new case_registry.csv/backend_results.csv/common_support/coe1_a01_00000_00900.
+- Current conclusion: a new severe classical-additive negative is established within this window/proxy contract. Root cause Unknown; general expansion decision Unknown.
+- Open questions: whether new positives also appear, and which initialization/utility signals distinguish outcomes.
+- Next experiment: continue the unchanged remaining Batch A matrix, then apply its frozen gate.
