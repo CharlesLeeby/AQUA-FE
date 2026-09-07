@@ -941,3 +941,19 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Evidence / Current conclusion / Interpretation：PARTIAL_MECHANISM，解释类别E；在线判别仍为F边界。没有达到开发risk-aware admission的五项最低证据，不训练、不调阈值、不推广为主方法。
 - Known issues / Open questions：内部初始化状态因A/A失败无有效补齐；q影响终局尚未独立控制；真实水下标签、逐点causal utility、独立GT/未知窗泛化Not evaluated.。
 - Next steps / Next experiment / Follow-up：唯一下一步为冻结B回放确定性与日志侵入性审计，先查清本次A08冻结版异常再恢复初始化内部诊断；暂不开发router，本轮不执行下一项。
+
+
+## 2026-09-08 / OBSUTILITY-v1 / 最终复核与报告发布
+
+- Date / Task objective：2026-09-08；完成独立机制审计的可复查交付和源码/报告身份分离。
+- Problem / motivation：避免将提交时HEAD冒充补充脚本执行身份，或将数学恒等式验证误作真实VIO有效性证明。
+- Files changed：独立report/decision/handoff、analysis-output/provenance.json、reproduction.md、publication_checkpoints.json与本日志；审计源码已在54ac885冻结。
+- Implementation：report脚本逐文件比对显式源码commit；未提交代码标记UNCOMMITTED并保留hash，不伪报源码身份。首次提取/诊断仍准确指向07e59b5。
+- Technical decisions：源码commit54ac8850121ecae38289b629bd19310b4fdc0426与最终报告发布commit分开；四核心文件每次push后按固定版本逐字节读回，最终读回receipt留runtime避免自引用。
+- Experiments performed：无新增实验或回放。补充独立数学复核与36个原首输出状态核对；重新检查六窗输出/源/配置、原后端哈希、六次A/A逐ID接收和零正式诊断。
+- Quantitative results：有限差分Jacobian最大误差3.6198155584088454e-11，36/36首状态逐值及源hash一致；原有1,341,840观测、126/336汇总不变。完整性QA PASS；A/A行为门仍3/3 FAIL、正式诊断0。
+- Qualitative observations：四图已目视检查，修正图04措辞明确是首输出时间；最终Sim3与内部初始化scale严格分开。
+- Failed attempts：本次最终复核无新增失败；先前编译/环境失败及全部A/A失败仍保留，不因QA通过而升级证据。
+- Known issues：内部初始化状态、逐点效用和水下物理标签仍Unknown；算法有效性与新窗口泛化Not evaluated.。
+- Interpretation：DECISION仍PARTIAL_MECHANISM；没有新的在线准入判别证据，不开发router。
+- Next steps：唯一后续研究仍是冻结B回放确定性与日志侵入性审计，先查清本次A08冻结版异常；本任务止于发布，不启动下一轮。

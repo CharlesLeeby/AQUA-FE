@@ -1,0 +1,67 @@
+{
+  "checkpoints": [
+    {
+      "commit": "2bc23263e7f6dc39329373fc78bc9098f1e19109",
+      "checks": [
+        {
+          "path": "docs/CODEX_HANDOFF_OBSERVATION_UTILITY.md",
+          "sha256": "327a61185f4b2d37f3ddf579a81452bf296bccc7a70b40e3d53d802e8d4fb801",
+          "match": true
+        },
+        {
+          "path": "papers/frontend_observation_utility_audit_v1/report.md",
+          "sha256": "b23cca959df53ae220f90fa0931d0d58bfe4ff925e2b436907b79ebd36d89b33",
+          "match": true
+        },
+        {
+          "path": "papers/frontend_observation_utility_audit_v1/decision.json",
+          "sha256": "9d550fe19db803521bf3ea17af5e1bc101a42411e65d575003030a93653d196c",
+          "match": true
+        },
+        {
+          "path": "papers/frontend_observation_utility_audit_v1/window_mechanism_summary.csv",
+          "sha256": "2761e3b4c7e53c6df636d766adedb6c25b884bd2ba4102c43ec10271210107b2",
+          "match": true
+        }
+      ]
+    },
+    {
+      "commit": "54ac8850121ecae38289b629bd19310b4fdc0426",
+      "branch": "exp/observation-utility-audit-v1-20260908",
+      "remote_head": "54ac8850121ecae38289b629bd19310b4fdc0426",
+      "verified_at": "2026-09-07T18:46:21.001965+00:00",
+      "files": [
+        {
+          "path": "docs/CODEX_HANDOFF_OBSERVATION_UTILITY.md",
+          "url": "https://raw.githubusercontent.com/CharlesLeeby/AQUA-FE/54ac8850121ecae38289b629bd19310b4fdc0426/docs/CODEX_HANDOFF_OBSERVATION_UTILITY.md",
+          "sha256": "0fb27507c0931f5179a65dad3ed3b31b1c12e9b1abd7551c9885f5cf2bfdd4e2",
+          "bytes": 2261,
+          "status": "PASS"
+        },
+        {
+          "path": "papers/frontend_observation_utility_audit_v1/report.md",
+          "url": "https://raw.githubusercontent.com/CharlesLeeby/AQUA-FE/54ac8850121ecae38289b629bd19310b4fdc0426/papers/frontend_observation_utility_audit_v1/report.md",
+          "sha256": "ec8830d75f9a293e43e86e213aa8bcc0744ddbd87a636065503ab4f6a66210dc",
+          "bytes": 10406,
+          "status": "PASS"
+        },
+        {
+          "path": "papers/frontend_observation_utility_audit_v1/decision.json",
+          "url": "https://raw.githubusercontent.com/CharlesLeeby/AQUA-FE/54ac8850121ecae38289b629bd19310b4fdc0426/papers/frontend_observation_utility_audit_v1/decision.json",
+          "sha256": "ee073a3159f0c2e680c85f21775a707ec19881af3c25671b66f7818b83b0e4b2",
+          "bytes": 1387,
+          "status": "PASS"
+        },
+        {
+          "path": "papers/frontend_observation_utility_audit_v1/window_mechanism_summary.csv",
+          "url": "https://raw.githubusercontent.com/CharlesLeeby/AQUA-FE/54ac8850121ecae38289b629bd19310b4fdc0426/papers/frontend_observation_utility_audit_v1/window_mechanism_summary.csv",
+          "sha256": "2ce416f6a34e039b858005faaa881b77798bbd5cc830dd2dec7f3c8bade397f4",
+          "bytes": 9039,
+          "status": "PASS"
+        }
+      ],
+      "status": "PASS"
+    }
+  ],
+  "final_release_readback": "Stored after final push at runtime/remote_readback_<release_commit>.json to avoid a self-referential commit"
+}

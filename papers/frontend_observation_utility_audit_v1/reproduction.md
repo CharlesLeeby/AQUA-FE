@@ -37,3 +37,5 @@ export PYTHONPATH=.:$PYTHONPATH
 verbatim `prior_*`三份文件来自54cc31f，不修写其内容/哈希；其中相对链接应在[原提交](https://github.com/CharlesLeeby/AQUA-FE/tree/54cc31fa2ef455ac1e13cdb120cf4b4a2ed15731)的原目录解释。原旧报告所引用的新实验结果不可自动转移。
 
 报告生成未作Obsidian写回；四幅PNG为Matplotlib科学数据图，不是生成式图片。普通汇总可以重建，冻结问题/输入/执行锁/原输出不得覆盖。
+
+完整审计/补充分析源码已冻结于`54ac8850121ecae38289b629bd19310b4fdc0426`；首次提取和诊断仍为`07e59b5933ca6c7b1c19906a19ff1f5adf30c3a2`。最终报告用`OBSUTILITY_ANALYSIS_COMMIT=54ac8850121ecae38289b629bd19310b4fdc0426`生成，脚本会逐文件验证该提交与执行代码一致。前两次GitHub固定版本读回记录见publication_checkpoints.json；最后一次发布读回保存在上述runtime/remote_readback_<release_commit>.json，避免自引用commit。

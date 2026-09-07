@@ -10,7 +10,7 @@
 
 ## 身份、范围与机制差异图
 
-2026-09-08；observation utility audit v1。源证据49c0247、旧A02初始化补充54cc31f；本轮审计/诊断源码07e59b5；补充分析源码UNCOMMITTED supplement; base HEAD=07e59b5933ca6c7b1c19906a19ff1f5adf30c3a2; exact script hashes recorded；报告发布commit与源身份分开。本任务不修改任何旧源流、权重、算法/门/预算或六窗原结论。
+2026-09-08；observation utility audit v1。源证据49c0247、旧A02初始化补充54cc31f；本轮审计/诊断源码07e59b5；补充分析源码54ac8850121ecae38289b629bd19310b4fdc0426；报告发布commit与源身份分开。本任务不修改任何旧源流、权重、算法/门/预算或六窗原结论。
 
 ```mermaid
 flowchart LR
