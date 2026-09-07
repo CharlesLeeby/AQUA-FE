@@ -1,0 +1,24 @@
+{
+  "audited_at": "2026-09-08T00:14:06.384158",
+  "run_slug": "afrl_cemetery_s135_d045",
+  "raw_image_messages": 713,
+  "baseline_feature_messages": 357,
+  "frozen_stride_matches_baseline_exactly": true,
+  "duplicate_raw_images": [
+    [
+      {
+        "raw_index": 190,
+        "stamp_ns": 1535225009039622399,
+        "pixel_sha256": "d7b6cee278e9f301df9799a944697a92b1a233a30c6b22af904a7a2078b7a56e",
+        "selected_by_frozen_stride": true
+      },
+      {
+        "raw_index": 191,
+        "stamp_ns": 1535225009039622399,
+        "pixel_sha256": "1566c9e604cd1f648c4e4b85a51bc4ff5ce60e26ef60f128549dee2f3f0af70d",
+        "selected_by_frozen_stride": false
+      }
+    ]
+  ],
+  "decision": "repair output association by frozen raw frame index; raw tracking unchanged; never deduplicate different pixels by choosing a future source observation"
+}

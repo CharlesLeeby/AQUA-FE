@@ -1,0 +1,27 @@
+{
+  "status": "INVALID_SOURCE_ALIGNMENT",
+  "run_slug": "afrl_cemetery_s135_d045",
+  "detected_at": "2026-09-08T00:15:23.116281",
+  "error": "nonmonotone or mismatched source timestamp; same raw timestamp at indices190/191 with different pixels, only190 belongs to frozen output stride",
+  "generation_attempt": 1,
+  "formal_backend_replays": 0,
+  "exact_failed_generation_wall_s": "Unknown",
+  "original_directory": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/afrl_cemetery_s135_d045",
+  "quarantine_directory": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/quarantine/afrl_cemetery_s135_d045_source_attempt1",
+  "artifacts": {
+    "classical_gftt_source.jsonl": {
+      "sha256": "c59adbc6f33a90213dfae00db17ddbf573397575f353a698baf3f171d5629d9c",
+      "bytes": 2127097
+    },
+    "L6.bag": {
+      "sha256": "3279c51405fcd38f53a6b6437fbb73bb9d8d299dfb700c035a81cea71ffc8d2a",
+      "bytes": 2818541
+    },
+    "xfeat_source.jsonl": {
+      "sha256": "e65f67a14248fc5d5cc41bb358f6d99beb69f76943441cf175c6a7950e743dcf",
+      "bytes": 3285785
+    }
+  },
+  "console_log": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/afrl_cemetery_s135_d045_frontend_console.log",
+  "console_sha256": "e177110d300f0d9d88e871c8c1811a2a7b03682604f192dab171f34287087890"
+}

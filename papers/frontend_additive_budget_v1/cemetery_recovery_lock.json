@@ -1,0 +1,14 @@
+{
+  "frozen_at": "2026-09-08T00:15:23.183233",
+  "files": {
+    "scripts/recover_additive_budget_cemetery.py": "08166347f32a403c58ffd9e0f6f9d806ad6a26f19f7c7338b21018dc6341a48a",
+    "scripts/run_additive_budget_v1.py": "14f36246747de4dd7f93f6d60e19e3bfb97af26d31b3f4663ba57f41b6bdd6b5",
+    "papers/frontend_additive_budget_v1/cemetery_recovery_addendum.md": "e7f9eea8335f9fc20eed0eb7b5dbd87d08a3b28b9469aeb3d58bd446040cc29b",
+    "papers/frontend_additive_budget_v1/cemetery_duplicate_input_audit.json": "7720ac0028d958990c204d9e51c0e21ad6c6d4c013a641fe69fce5a264a7ba01",
+    "papers/frontend_additive_budget_v1/cemetery_invalid_attempt.json": "41589c6c0dac5303961b91313a7d654860df0a9392dfed8eba13a24ad3e21cb2"
+  },
+  "overlaid_runner_sha256": "7a14c2e766352c6532ecc619ec5eb2a0414a04c9760d17fa6c7838b6a4d95762",
+  "invalid_attempt": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/quarantine/afrl_cemetery_s135_d045_source_attempt1",
+  "source_generation_attempts": 2,
+  "scope": "frame-index association only; Cemetery backend not yet evaluated"
+}

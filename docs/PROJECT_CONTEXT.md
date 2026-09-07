@@ -289,3 +289,6 @@ papers/frontend_admission_continuation_v1/report.md and docs/CODEX_HANDOFF.md.
 
 
 2026-09-07 additive_budget_v1独立分支进展：A09/A02共24次正式回放完成。A02数量对比不确定，学习两臂对B实用退化，C-all/B实用改善；不同共同支撑不能混用。尚非完整结论，不改变protected KLT主线。详papers/frontend_additive_budget_v1/checkpoint_a02.md。
+
+
+2026-09-08独立additive_budget_v1证据完整性问题：Cemetery raw190/191异图同stamp触发重复输出关联，首源尝试无效保留。原B正确匹配冻结stride；一行frame-index overlay另锁，原冻结代码不改。恢复尚未评估，其他窗口继续，主研究方向不变。见cemetery_recovery_addendum.md。

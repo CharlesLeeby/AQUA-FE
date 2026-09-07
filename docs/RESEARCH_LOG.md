@@ -774,3 +774,16 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion: 该窗不支持“只因加得少所以未获益”；精确退化机制为Hypothesis / Inference。
 - Open questions: 何种初始化/约束/求解变化解释现象？其余四窗结果尚未齐备。
 - Next experiment: 不新增实验，只完成冻结六窗四臂矩阵。
+
+
+## 2026-09-08 — 输入身份需保留帧索引
+- Research question: 同stamp能否唯一确定Cemetery原B所对应图像？
+- Hypothesis: CSV冻结帧索引才是存在重复stamp时的输出语义。
+- Motivation / related baseline: B严格357唯一时刻，源出现358记录且合并拒绝。
+- Proposed idea / why it might work: 仅补原generate条件，从帧索引选择已冻结图像；不改变逐raw跟踪或候选门。
+- Assumptions: 原CSV语义可信，B由该stride生成。
+- Potential failure cases: 仅删源行会把后续私有previous_output保留在错误图片上；重新生成须披露成本和偏差。
+- Evidence: Confirmed fact：全部357B stamp精确等于713raw按2/0选择；raw190/191同stamp、异像素，只有190应导出。见cemetery_duplicate_input_audit.json。
+- Current conclusion: 结构错误而非效果结果；首尝试无效保留。修复后效果Not evaluated.。
+- Open questions: 修复后的完整映射、容量和后端是否全部有效？
+- Next experiment: 按恢复锁生成唯一正式共同流，继续原Cemetery四臂；无新参数/窗口。

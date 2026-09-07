@@ -850,3 +850,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: 来源q映射、初始化和非等资源混杂；私有ID精确死亡原因及solver确切停止原因Unknown。
 - Interpretation: Confirmed fact仅限开发窗端到端结果；机制为Hypothesis / Inference，全矩阵结论仍Not evaluated.
 - Next steps: 完成Bus/A08/Cemetery/H07剩余固定回放，不改门或窗口。
+
+
+## 2026-09-08 — additive_budget_v1 Cemetery源流关联错误与恢复冻结
+- Date / task objective: 2026-09-08；完成固定六窗，修复输入关联错误而不改变候选方法。
+- Problem / motivation: Cemetery输入raw190/191同时间戳但不同像素；仅190属于冻结2/0导出帧。原runner按stamp误触发191，358条源记录对357条B，发布门拒绝。
+- Files changed: scripts/recover_additive_budget_cemetery.py；papers/frontend_additive_budget_v1/cemetery_{duplicate_input_audit,invalid_attempt,recovery_lock}.json和cemetery_recovery_addendum.md；独立运行失败目录移至quarantine；原冻结文件未修改。
+- Implementation: 对原runner作明确一行内存overlay，输出关联同时要求原generate帧索引条件；所有raw图像跟踪照旧。原失败source/部分bag保留，重新生成唯一正式共同流。
+- Technical decisions: 确认两个像素哈希不同，不能简单去重源记录；通过所有357个B时刻精确等于冻结raw stride序列验证修复依据。恢复在Cemetery任何后端效果之前锁定，不调门/预算。
+- Experiments performed: 首次源生成与合并失败，0次Cemetery后端；H07原冻结生成独立继续。
+- Quantitative results: 原输入713图像，B357时刻，失败源358记录/357唯一时刻；重复raw190/191。精确哈希见duplicate_input_audit。失败生成精确墙钟Unknown；不计零成本。
+- Qualitative observations: 时间戳本身不是本输入内的唯一原始图像身份，必须保留CSV索引语义。
+- Failed attempts: INVALID_SOURCE_ALIGNMENT，隔离目录frontend_additive_budget_v1/quarantine/afrl_cemetery_s135_d045_source_attempt1；不删除、不用其残缺bag回放。
+- Known issues: 明确偏离每窗一次生成：Cemetery将有两次尝试（首份无效），仍只让L6/L-all共享一份正式流。恢复结果Not evaluated.。
+- Interpretation: Confirmed fact为输入/关联bug，不是学习候选精度失败；候选与后端结果均不得据此推断。
+- Next steps: 完成纠正源流、读回、容量，再继续原四臂三重复，正式上限仍72。

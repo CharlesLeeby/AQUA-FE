@@ -690,3 +690,15 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Validity/common support: 全12接收完整、初始化/覆盖通过；各对比6轨迹和四臂12轨迹支撑通过，evo通过。不同支撑数值不混用。
 - Interpretation/conclusion: 发布和实际残差差异充分，当前学习数量收益未获支持；C-all结果不能外推等资源来源优越性。
 - Follow-up: 仅继续原矩阵。ATE单独口径、lost tracking真实事件、精确solver停止原因Not evaluated./Unknown；详列字段不臆造。
+
+
+## additive_budget_v1_Cemetery_source_attempt1 — 2026-09-08
+- Status/scientific role: INVALID_SOURCE_ALIGNMENT；结构失败尝试，非精度证据。
+- Git commit/branch: 冻结源d1c793a，当前21ddfa3 / exp/additive-budget-v1-20260907。
+- Dataset/window/config: AFRL Cemetery s135 d45，原windows.csv every_n2/frame_offset0、同B与输入SHA，source_and_backend_lock.json。
+- Baseline/modification: 原B；同冻结XFeat/GFTT私有流，尚未得到有效添加bag。
+- Commands/artifacts: run_additive_budget_v1.py --window afrl_cemetery_s135_d045；原console保留；quarantine/afrl_cemetery_s135_d045_source_attempt1；cemetery_invalid_attempt.json。
+- Metrics/results: 713raw图像、357B、358源记录、1重复时间戳对且像素不同；合并身份门拒绝；后端0次。
+- Validity/common support: INVALID_SOURCE_ALIGNMENT；APE/RPE、初始化、覆盖、残差Not evaluated.；未进入任何精度分母筛选。
+- Interpretation/conclusion: raw191非冻结输出帧，必须按既定帧索引关联；不是资源或算法效果失败。
+- Follow-up: cemetery_recovery_lock.json锁定一行关联overlay；保留无效源并重新生成一次正式共同流，明确额外计算与一次生成规则偏差，不改方法参数。

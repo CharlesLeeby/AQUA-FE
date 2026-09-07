@@ -16,3 +16,6 @@ A09正式12/12完成且共同支撑/evo通过：更多剂量未改善净收益�
 
 
 2026-09-07追加：A02全12次完成且共同支撑/evo通过，详checkpoint_a02.md。Bus回放推进，A08源生成中；完整矩阵最终判断仍待完成。A09检查点d1ddd0f已push，四个远端文件SHA256读回一致，见sync_d1ddd0f.json。
+
+
+2026-09-08：Bus12完成，L-all首重复APE23.2526m而另两次约.043m，不得用中位改善掩盖风险。Cemetery首源尝试INVALID_SOURCE_ALIGNMENT（raw190/191异图同stamp），已完整隔离并冻结索引关联修复；H07仍按原冻结生成。恢复锁和偏差见cemetery_recovery_addendum.md。
