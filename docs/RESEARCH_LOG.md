@@ -813,3 +813,22 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion: 当前有限生成器的剂量问题已有效检验；“此前只是六条太少”不足以解释完整KLT条件下的净收益缺失。局部数量效应与总体添加机制支持必须分开。不提升C-all为主方法，不改变protected KLT主线。
 - Open questions: 哪些初始化/尺度和约束使用变化导致学习添加风险？当前非共享初始化/非等资源来源比较不足以作纯因果归因，相关解释为Hypothesis / Inference。
 - Next experiment: 本轮停止。唯一后续建议为现有逐ID、初始化与尺度日志的失稳归因审计；新增预算/窗口/时机变体Not evaluated.且不自动执行。
+
+
+## 2026-09-08 / OBSUTILITY-v1 / 冻结研究问题
+
+- Objective / Research question：完整KLT下候选的相对几何效用、初始化风险与水下运动真实性。
+- Problem / Motivation：添加数量及残差已增加但L-all无净收益；来源/q/剂量与初始化混杂尚未分解。
+- Files changed：独立papers/frontend_observation_utility_audit_v1、独立handoff及本日志。
+- Implementation / Proposed idea：只读机制发现，原证据49c0247与54cc31f锁定引用；不写新算法。
+- Technical decisions / Assumptions：物理窗为科学单位；固定全部shadow矩阵指标、统一q分析、严格A/A容差，不按结果选择。
+- Experiment ID / status / scientific role：OBSUTILITY-v1，QUESTIONS_FROZEN，development mechanism audit；branch exp/observation-utility-audit-v1-20260908，base49c0247。
+- Dataset / baseline：原六窗windows.csv，B/L-all/C-all，L6作原剂量解释。COLMAP/proxy非独立GT。
+- Experiments / Commands / artifacts：读取原CSV与日志结构；research_questions.md定义后续命令合同；新回放0。
+- Quantitative results / metrics：新量Not evaluated.；原24/72完整性仅引用原审计。
+- Qualitative observations / Evidence：原日志无完整scale/gravity/信息谱；候选残差不等于独立信息。
+- Failed attempts / Known issues：初查外部源码路径VINS-Fusion无效，实际为VINS-Fusion-master；原主工作区有其他未提交文件，不修改。
+- Hypothesis / Why it might work：相对KLT信息与初始化条件可能比可跟踪性更接近整体干预影响。
+- Potential failure cases / Interpretation：全秩影子子空间、未知深度、非独立样本/q混杂可能使任何单指标不可判别。
+- Conclusion / Open questions：Unknown，尚无在线准入量证据。
+- Next steps / Next experiment：先完整既有数据审计；缺失状态才做日志后端及B A/A，不自动开发router。

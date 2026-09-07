@@ -1,0 +1,8 @@
+{
+  "status": "QUESTIONS_FROZEN",
+  "decision": "INSUFFICIENT_EVIDENCE",
+  "provisional": true,
+  "formal_diagnostic_replays": 0,
+  "algorithm_changes": 0,
+  "next_step": "Complete existing-data mechanism audit; diagnostic only after strict B A/A."
+}
