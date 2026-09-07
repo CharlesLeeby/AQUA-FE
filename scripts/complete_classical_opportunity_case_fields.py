@@ -10,7 +10,6 @@ from decimal import Decimal
 import json
 from pathlib import Path
 import statistics
-import sys
 
 from run_classical_opportunity_expansion import ROOT,PAPER,RUNTIME,OLD,sha,save,verify
 
@@ -84,9 +83,24 @@ def main():
                 summarize(c,arm+'_'+label,vals)
             c[arm+'_per_ID_receipts_exact']=all(r.get('received_per_id_exact')=='True' for r in rr) if len(rr)==3 else 'Unknown'
             c[arm+'_backend_receipt_count']=len(rr)
+            c[arm+'_runability_failed_repeats']=';'.join(r['repeat'] for r in rr if r.get('runability')!='PASS')
+        for metric,absolute in [('APE',.01),('RPE',.005)]:
+            baseline=c.get('B_'+metric+'_median')
+            if baseline not in ('',None,'Unknown'):
+                b=float(baseline)
+                exceeded=[r['repeat'] for r in back if r['run_slug']==slug and r['arm']=='C-all'
+                          and r.get(metric) not in ('',None,'Unknown') and float(r[metric])-b>max(.1*b,absolute)]
+                c['C_single_repeat_'+metric+'_severe_vs_B_median_repeats']=';'.join(exceeded)
+                c['C_single_repeat_'+metric+'_severe_vs_B_median_count']=len(exceeded)
+            else:
+                c['C_single_repeat_'+metric+'_severe_vs_B_median_count']='Not evaluated.'
+        c['single_repeat_flag_definition']='frozen descriptive flag: C repeat exceeds B median by max(10%,.01m APE/.005m RPE); does not alter window class'
         gt=[]
         with rosbag.Bag(w['input_bag']) as bag:
             gt=[m.header.stamp.to_nsec() for _,m,_ in bag.read_messages(topics=['/aqualoc/colmap_gt'])]
+        c['reference_span_s']=(max(gt)-min(gt))/1e9 if len(gt)>1 else 0.
+        c['raw_image_span_s']=(int(w['end_stamp_ns'])-int(w['start_stamp_ns']))/1e9
+        c['raw_reference_span_s_field_note']='legacy field contains roster image span; use explicit reference_span_s and raw_image_span_s'
         c['reference_time_span_over_raw_window']=(max(gt)-min(gt))/(int(w['end_stamp_ns'])-int(w['start_stamp_ns'])) if len(gt)>1 else 0.
         grid=PAPER/'common_support'/slug/'C-all_vs_B/common_grid_audit.csv'
         if grid.exists():

@@ -984,3 +984,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: initialization/scale root cause Unknown. COLMAP remains proxy, and A03 is a known broader-project interval although excluded from C-all's six developers.
 - Interpretation: Confirmed fact. second severe new C-all case; Batch A currently2/12resolved,12/72formal attempts,2PRACTICAL_LOSS,0structural failures. Batch B cannot meet its frozen <=1 severe condition; final complete-denominator conclusion awaits remaining10A windows.
 - Next steps: continue frozen Batch A; preserve the inactive B roster; transfer complete case pool to observation-utility / risk research.
+
+
+## 2026-09-08 — Final evidence validation preparation
+- Task objective: prepare final integrity checks and complete case diagnostics during the remaining fixed frontend/replay work.
+- Problem / motivation: final publication needs inspectable per-run provenance, explicit timing units and single-repeat anomaly flags, without modifying the experimental method.
+- Files changed: scripts/audit_classical_opportunity_final.py; scripts/complete_classical_opportunity_case_fields.py; papers/frontend_classical_opportunity_expansion_v1/finalization_notes.md; this log.
+- Implementation: nonblocking controller-lock check; receipt/config/input/output hashes and existing per-ID/evo/support/classifier verification; small receipt export. Case supplement adds explicit measured reference/image spans and frozen descriptive single-repeat severe-margin flags.
+- Technical decisions: no new replay or accuracy evaluator; no adjustment of source, gates, classification or scientific repeats. Prior audit/bundle paths are not silently overwritten.
+- Experiments performed: Not evaluated. for finalization scripts; active Batch A continues independently. Python3.8 syntax compilation passed.
+- Quantitative results: Not evaluated.; final scripts are not executed on the current partial denominator.
+- Qualitative observations: initialized output, candidate receipt completeness and backend numerical quality must remain distinct. Technical ranges are not population uncertainty intervals.
+- Failed attempts: none in finalization preparation.
+- Known issues: final runtime audit and rendered-figure review remain outstanding until all active windows resolve.
+- Interpretation: implementation prepares traceable reporting only; it supplies no new scientific outcome.
+- Next steps: complete Batch A, run finalization sequence, inspect figures and write the final Chinese report/hand-off.
