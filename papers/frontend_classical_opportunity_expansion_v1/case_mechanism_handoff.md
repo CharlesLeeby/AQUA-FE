@@ -1,49 +1,29 @@
-# Classical expansion mechanism handoff — partial checkpoint
+# Observation-utility / risk 案例交接 — COMPLETE
 
-Status: Batch A11/12windows resolved,66/72formalreplays. This is a case interpretation
-checkpoint, not the final analysis/report. The remaining one A window must complete.
-The registered Batch B gate is already impossible because two severe regressions exist.
+2026-09-08。固定 C-all 扩展已结束，12 新窗口 / 72 正式 replay。3 PRACTICAL_GAIN（均 ROBUST）、2 PRACTICAL_LOSS（均 severe）、6 SMALL_OR_UNCERTAIN、0 FAIL、1 NOT_EVALUABLE。最终 `ADDITIVE_OPPORTUNITY_NOT_GENERALIZED`，`EXPANSION_STOPPED_AFTER_BATCH_A`；冻结 Batch B 的 12 窗为 NOT_ACTIVATED，不再启动。
 
-All labels below refer to the **whole C candidate set versus B for this cold-start window**.
-No individual GFTT point is labeled useful or harmful. All A windows here are raw [0,900),
-sequence-held-out relative only to six C-all developers; broader history is separately audited.
+本交接只提供集合级案例。正例不是逐 candidate 正标签，负例不是逐 candidate 负标签。本轮新窗口只相对旧六个 C-all 开发窗 held-out；7 个 A 窗与已检查的更广项目旧区间重叠。现在全部已 outcome-known，任何利用这些结果设计的新机制须将其作为开发案例，另行冻结独立确认材料。
 
-| Case | Frozen result | Mechanism case to retain | Evidence boundary |
-|---|---|---|---|
-| coe1_a01_00000_00900 | PRACTICAL_LOSS, severe | C APE0.554981m versus B0.155037m; C first pose about1s later, scale changes | Both arms have repeat variation; association does not prove initialization causality |
-| coe1_a03_00000_00900 | PRACTICAL_LOSS, severe | C numerical explosion in all3repeats: APE2781–2867m versus B0.854–0.862m; first-pose delay equal | Exact receipts and evo pass; runability PASS means output presence/coverage, not good numerical accuracy; baseline fitted scale is itself biased |
-| coe1_a04_00000_00900 | PRACTICAL_GAIN, ROBUST_PRACTICAL_GAIN | Baseline numerical anomaly: BAPE743–838m while CAPE0.113788–0.113804m; C starts about2.900s later and fitted scale is near1 | Common support31/44poses=70.4545%,35s,2segments,29strictRPEpairs; just above frozen support minimum. This is a baseline-anomaly rescue contrast, not routine small-error tracking improvement |
+| 角色 | 案例 | 研究价值及证据边界 |
+|---|---|---|
+| 稳定实用正例 | A04 / A07 / H02 | A04 为异常基线被改善；A07 较高误差基线改善；H02 中等误差基线稳定获益。三者初始化延迟差方向并不相同。 |
+| 严重负例 | A01 / A03 | A01 较长寿命仍退化；A03 三次 C 数值均严重异常，单一首姿态延迟或 misalignment 计数不能排除风险。 |
+| 稳定小变化 | A10 / H01 / H04 / H05 | 非零发布及后端接收，不应归因为零作用量；A10 APE/RPE 方向存在折衷。 |
+| 技术重复与基线异常 | A06 / H03 | A06 中位数改善不足以超过 B range；H03 两个 C 异常、一个良好，同一 bag 下残差使用分化。 |
+| 参考边界 | A05 | common poses 27<30，精度 Not evaluated.；仍保留全部前后端观测和时序。 |
 
-A04 C publishes57373observations/4843publicIDs; lifetime median6,max195observations;
-2971IDs reach4observations and1745reach10. Old A02 uses41339/1725IDs/lifetime median15;
-oldBus2305/752IDs/lifetime median1. Dose and lifetime differ without defining an admission
-rule. Old A02/Bus remain outcome-known controls, outside the new denominator.
+数值主表为 [case_registry.csv](case_registry.csv)，逐窗文字解释为 [case_interpretation.csv](case_interpretation.csv)，结果列表为 [positive](positive_cases.csv)、[neutral](neutral_cases.csv)、[negative](negative_cases.csv)、[failure/reference-limited](failure_cases.csv)。每窗 ID 为 `coe1_<sequence>_00000_00900`，raw 索引 `[0,900)`，均 B×3/C-all×3、固定尺度 SE(3) APE 和 strict 1 s RPE、自身六轨支撑；完整 min/median/max 及尺度诊断在主表。
 
-The exact per-repeat metrics, scales, timing, receipts and runtime paths are in
-case_registry.csv and backend_results.csv; each common_support/<window>/C-all_vs_B
-folder contains its own six-trajectory support and evo checks. Missing common support
-must never be replaced with unmatched single-arm accuracy.
+使用数据时遵循这些字段定义：
 
-Only next research destination: observation-utility / risk mechanism analysis. Preserve
-these contrasts and all later neutral/failure cases. Do not tune C-all, add learned arms,
-search nearby windows, or reuse the whole-window sign as a per-feature training label.
+- `candidate_lifecycle.csv` 是公开 ID 的紧凑观测链，联合键 **window_id + public_id**；ID 每窗重新开始，不能只按 public_id 跨窗连接。`public_observations` 与 `observed_span_s` 分别为观测计数及时间跨度，受窗口与准入截断；private termination 原因 Unknown。
+- 原始事件和源观测在本地 `frontend/<slug>/candidate_lifecycle.csv`、`classical_gftt_source.jsonl`，后端逐 ID 收据与残差记录在 `backend/<slug>/{B,C-all}/repeat{1,2,3}/`；根为 `/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1`。
+- `received_candidate`、unique IDs、eligible IDs、residual blocks 区分发布、接收、可用和求解使用；残差块会在优化调用间重复，不能当独立观测量。全部实际后端逐 ID 接收通过，最大 actual eligible 644<1000。
+- `B_feature_coverage_median` / `C_feature_coverage_median` 是逐输出消息 **4×6 网格占用比例**的中位数；不是轨迹 coverage，也不是像素纹理分数。该网格只用于描述，不是 C 选择规则。
+- `*_first_pose_delay_from_raw_start_s` 是传感器首姿态相对 raw 起点；`*_first_pose_delay_from_reference_start_s` 以参考起点计。`*_initialization_ROS_clock_delay_from_raw_start_s` 来源于初始化日志的 ROS clock，与传感器姿态时间分开解释。A05 参考晚起使 reference-relative 值为负，raw-relative 约 1.351 s。
+- `reference_span_s` 与 `raw_image_span_s` 分开使用；继承字段 `raw_reference_span_s` 实际含 roster image span，已在主表显式注释。`support_*` 是自身六轨交集的评价支撑。A05 100% 只覆盖短参考网格。
+- `reset_count_proxy` / `failure_detection_count` 是日志代理，均为零不能排除数值发散；真实 lost-tracking 计数 Unknown。单 C 重复相对 B 中位数的 severe-margin 标志是冻结描述，不改窗口分类。
 
-A05 `coe1_a05_00000_00900` is retained as NOT_EVALUABLE:27commonposes<30required,26s/26RPEpairs. All6runability/receiptsPASS; the27-point reference grid has100%coverage but covers only26.996555s of reference span. No set-level positive/negative utility label is assigned. See its own common_support summary.
+[完整中文报告](report.md)与[严格分析包](analysis-output/analysis-report.md)先于机制解释。`final_integrity_audit.json` PASS，1,656 个哈希无不一致，72 次回放身份/接收及有效评价一致。COLMAP/proxy 不是独立 GT；跨总体有效性和个体 candidate utility 均 Not evaluated.。
 
-A06 `coe1_a06_00000_00900` is SMALL_OR_UNCERTAIN / DIRECTIONAL_GAIN,with BAPE2.050386/151.785956/183.491589m versus C0.948918/0.950726/0.970376m(min/median/max). Median reduction150.835229m does not exceed181.441203m armrange;do not promote this case to practicalgain. Support37poses/36s/84.0909%/36RPEpairs,evo/receiptsPASS. Retain as baseline-instability context,even though allCAPE/RPErepeats are lower.
-
-A07 `coe1_a07_00000_00900` is the second PRACTICAL_GAIN/ROBUST_PRACTICAL_GAIN: BAPE3.042555/3.044412/3.053754m versus C0.17339477/0.17339578/0.17340055m;BRPE0.68196793/0.68220301/0.68298444m versus C0.10670231/0.10670485/0.10670487m. Support36poses/38s/80%/34RPEpairs,evo/receiptsPASS. C30732observations/4890IDs,life3median/121maxobservations;firstposeabout0.200searlier. Baseline fittedscale0.289838versusC0.896614 remains diagnostic context. Positives now crossA04/A07;2severe cases still fail the registered riskbound.
-
-A10 `coe1_a10_00000_00900` is a stable SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN case: APEmedian0.06007548→0.05661839m(reduction3.457mm<10mmabsolute practicalfloor),RPE0.05224253→0.05369101m(increase1.448mmwithin guard). Support40poses/39s/93.0233%/39RPEpairs,evo/receiptsPASS. C8287observations/1460IDs,life2median/72maxobservations;firstposeequal. This neutral case differs from A06 baseline-instability uncertainty.
-
-H01 `coe1_h01_00000_00900` is a nonzero-action SMALL_OR_UNCERTAIN case: C20127observations/2498IDs and124110actualresidualblocks eachrepeat;APEmedian0.07076473→0.07152362m,RPE0.00997393→0.01010866m. Support42poses/41s/93.3333%/41RPEpairs,evo/receiptsPASS. Firstposeequal,repeat ranges small. Do not treat its neutral classification as absence of intervention or use residual counts as utility labels.
-
-H02 `coe1_h02_00000_00900` is the third ROBUST_PRACTICAL_GAIN: BAPE0.10341843/0.10939183/0.11028445m versus C0.02935680/0.02941242/0.02941257m;BRPE0.03472649/0.03621206/0.03636493m versus C0.00768505/0.00768786/0.00768837m. Support41poses/40s/91.1111%/40RPEpairs,evo/receiptsPASS. C35978observations/4319IDs,life4median/106maxobservations;firstpose1.599425searlier andmisalignment logcount12→2. Baseline has moderate error rather than A04-style numerical explosion. These timing changes remain associations,not proved causal mechanisms.
-
-H03 `coe1_h03_00000_00900` is SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN with severe absolute numerical anomalies: BAPE848.004116/848.216346/848.384525m;C0.07146680/837.927196/838.008913m(min/median/max). One C repeat is accurate and two are not. Support43poses/42s/95.5556%/42RPEpairs,evo/receiptsPASS. Same C bag publishes29659observations/2696IDs;actualresiduals29806–199867 andfirstposedelay1.448549–1.748524s vary. Do not choose the single good repeat or interpret the relative neutral label/runabilityPASS as reliable absolute performance.
-
-H04 `coe1_h04_00000_00900` is SMALL_OR_UNCERTAIN/NONE: APEmedian0.16890639→0.17110605m,RPE0.02455506→0.02463187m,small adverse changes below practicalloss conditions. Support43poses/42s/95.5556%/42RPEpairs,evo/receiptsPASS;C5714observations/1014IDs,life3median/94maxobservations. Preserve this direction and nonzero action without altering the frozen class.
-
-
-## Batch A completion checkpoint — 2026-09-08
-All 12/12 windows and 72/72 replays are resolved. H05 is SMALL_OR_UNCERTAIN. Totals: 3 practical/robust gains, 2 practical losses (both severe), 6 small/uncertain, 0 FAIL, 1 NOT_EVALUABLE. This completion supersedes earlier partial counters. Batch B is not eligible. Final artifact audit, analysis bundle and full Chinese report remain pending; no additional replay is authorized by this handoff.
+唯一研究后继是 observation-utility / risk mechanism research：检查现有正负案例中的观测效用、危险初始化和后端数值风险，再为新机制另行设计验证。停止把 additive observation 作为主要研究假设继续扩展；无自动 C-all 调参、补充 learned 臂或替换窗口授权。旧 continuation NO_EXPANSION、additive-budget 结论和受保护 KLT/两-profile 解释保持原样。

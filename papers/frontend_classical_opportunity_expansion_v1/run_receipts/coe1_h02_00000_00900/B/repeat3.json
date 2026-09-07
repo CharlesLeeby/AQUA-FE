@@ -1,0 +1,59 @@
+{
+  "arm": "B",
+  "artifacts": {
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h02_00000_00900/B/repeat3/backend_use.csv": "756696990d794b2622fbba7965d2ef0f6291cab80b5746b6fcee7ed4af6d3223",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h02_00000_00900/B/repeat3/play.log": "12598fac7b2955d136d4a0708010f05a7ab42b355ed3c1a8dfe1d4a41b477547",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h02_00000_00900/B/repeat3/ros_home/roscore-12691.pid": "99b81107cacbd8c251956e90230b11a81422fa511304b1d7d9fc185777e9ecf2",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h02_00000_00900/B/repeat3/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h02_00000_00900/B/repeat3/ros_logs/609ae78c-ab01-11f1-b66e-f55576d0c46b/master.log": "0e056bcb85e1fd7cbe207ec74218ea12ed6db6ae47bde2f9fe7c2ddae5a574ea",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h02_00000_00900/B/repeat3/ros_logs/609ae78c-ab01-11f1-b66e-f55576d0c46b/roslaunch-qiu-927046.log": "669ebbc2a1c3ba4c4993637baf0397cfc4cbb6aee8437167ef55f0220aa81736",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h02_00000_00900/B/repeat3/ros_logs/609ae78c-ab01-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "b3c2ac0640505ce806d002ad37e79a746fd6b27e720bb94a5e3367660b97039c",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h02_00000_00900/B/repeat3/ros_logs/609ae78c-ab01-11f1-b66e-f55576d0c46b/rosout.log": "29e52d8f01fe9efb79b53226c6fabb149bed8a56e1f4572d0c3347894f2cd1d8",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h02_00000_00900/B/repeat3/roscore.log": "929007df2a680011935cc70459d85e35de61664da6d3d27ee851cc6b93ceef38",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h02_00000_00900/B/repeat3/vins.log": "25ca9f0be0e7a35421d224089a0891853d6a5ff463c55a8faa67a8e5fcc86e17",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h02_00000_00900/B/repeat3/vins.yaml": "164122c59c9f7c8ac00e4742b7292878c89b35045c866152ee5fe0694e2be560",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h02_00000_00900/B/repeat3/vins_output/vio.csv": "b444d119c70822125bb17c45901c1e516b8fc0b49e6c0d3aa76799bf7a942377"
+  },
+  "backend_lock_sha256": "d6334d9e017941e2e32649cc0b7ff61b4ba642fbd8f0db9c43a309dca5da6b4a",
+  "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+  "canonical_source_sha256": "e5aa86735aec32e7e118947dc6d72935aceb93e27e4c33c4a595117d18e222ab",
+  "capacity_preflight_status": "PASS",
+  "commands": [
+    [
+      "roscore",
+      "-p",
+      "12691"
+    ],
+    [
+      "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+      "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h02_00000_00900/B/repeat3/vins.yaml"
+    ],
+    [
+      "/opt/ros/noetic/lib/rosbag/play",
+      "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/baseline/coe1_h02_00000_00900/features.bag",
+      "--clock",
+      "--rate",
+      "1.0",
+      "--delay",
+      "3",
+      "--quiet"
+    ]
+  ],
+  "config_sha256": "164122c59c9f7c8ac00e4742b7292878c89b35045c866152ee5fe0694e2be560",
+  "error": "",
+  "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/baseline/coe1_h02_00000_00900/features.bag",
+  "feature_bag_sha256": "c41b46f40bd749494058c5ea9b8571654beff5a5a5bffc505acf3228e863e054",
+  "peak_node_rss_bytes": 102998016,
+  "repeat": 3,
+  "resource_pre": {
+    "available_memory_bytes": 26551914496,
+    "free_bytes": {
+      "/home/ma/AQUA-FE_WS_classical_opportunity_expansion_v1": 15868719104,
+      "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1": 24258621440
+    }
+  },
+  "run_slug": "coe1_h02_00000_00900",
+  "started_at": "2026-09-07T21:17:27.488753+00:00",
+  "status": "COMPLETE",
+  "wall_s": 64.6997275959875
+}

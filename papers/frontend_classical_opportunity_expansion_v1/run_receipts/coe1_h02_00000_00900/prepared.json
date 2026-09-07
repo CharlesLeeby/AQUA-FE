@@ -1,0 +1,22 @@
+{
+  "counts": {
+    "images": 900,
+    "imu": 9054,
+    "reference": 180
+  },
+  "end_index_exclusive": 900,
+  "image_shape": [
+    512,
+    640
+  ],
+  "input_bag_sha256": "09ddfb8e9f5c80d2f2d1073737095812f9499dd710115577b3e971b0d9c87ae1",
+  "metadata_receipt_sha256": "4ed2e7a003794f5f5476a5933fd0b5f231e3dc436f3a6287d05ca561ac60f70d",
+  "pixel_stamp_stream_sha256": "32dbbb8e2ca3e87ccadab61a34cdde9741e10dd3156300ad0e790f160488d5d8",
+  "raw_archive": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Harbor_sites_sequences/harbor_sequence_02_raw_data.tar.gz",
+  "raw_archive_sha256": "fdfb91d68c94d595c662adf3f6820fedd63f1590b3325c7464dd7a78d4fb4124",
+  "reference_sha256": "b7a68f0f29fcde15b9126c21a4ecdf859f0e068f536e627eb69bd2456150b72a",
+  "run_slug": "coe1_h02_00000_00900",
+  "start_index": 0,
+  "status": "PREPARED",
+  "wall_s": 35.94256735799718
+}

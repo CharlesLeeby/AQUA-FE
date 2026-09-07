@@ -1,0 +1,25 @@
+{
+  "artifacts": {
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/baseline/coe1_a04_00000_00900/aqualoc_archaeo04_pinhole.yaml": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/baseline/coe1_a04_00000_00900/console.log": "1e14f984f06244e15da66d8d4ca59fb24154e0c5650e206331ff0304ef603894",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/baseline/coe1_a04_00000_00900/features.bag": "cf865341e1882b6a40d116b4d9427175d465caf8bf735439012348c8641d5104",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/baseline/coe1_a04_00000_00900/frontend_metrics.csv": "fc0af6366db934548e690c9e51da0b24eeb58cb62513d3859cae638d74129a6f",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/baseline/coe1_a04_00000_00900/lifecycle_events.csv": "41618758bab609c70b002d75224a579f066b7687b28aaef68d82b092d8c8786e",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/baseline/coe1_a04_00000_00900/lifecycle_frames.csv": "767a68f4d25c10605f8083bf5a7b2a039f8c26861464f2a032d3941890216800"
+  },
+  "baseline_sha256": "cf865341e1882b6a40d116b4d9427175d465caf8bf735439012348c8641d5104",
+  "command": [
+    "bash",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/shadow_root/scripts/run_learned_seedchain_eval.sh",
+    "aqualoc_archaeo",
+    "4",
+    "0",
+    "899",
+    "klt",
+    "2"
+  ],
+  "input_bag_sha256": "798bcee03343e06b59f046826fb39624bbd95ffc86c487306cab81b60cf7915f",
+  "returncode": 0,
+  "run_slug": "coe1_a04_00000_00900",
+  "wall_s": 648.0268826730025
+}

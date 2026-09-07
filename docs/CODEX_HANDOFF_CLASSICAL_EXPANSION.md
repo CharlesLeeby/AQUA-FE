@@ -1,29 +1,28 @@
-# Classical additive opportunity expansion 独立交接
+# Classical opportunity expansion v1 独立交接
 
-2026-09-08；状态：**Batch A IN_PROGRESS，11/12 窗完成，66/72 次正式 replay 完成。**
+状态：**COMPLETE**，2026-09-08。本轮所有已授权实验、完整案例整理和最终报告已完成。最终科学决策 `ADDITIVE_OPPORTUNITY_NOT_GENERALIZED`，扩展状态 `EXPANSION_STOPPED_AFTER_BATCH_A`。
 
-首窗 `coe1_a01_00000_00900`：**PRACTICAL_LOSS / SEVERE_REGRESSION**。自身六轨迹共同支撑36 poses、35s、coverage81.818%、35对严格1s RPE；evo检查通过。B APE min/median/max=0.114753/0.155037/0.155037m；C=0.510393/0.554981/0.658114m。B RPE=0.015997/0.020657/0.020657m；C=0.064600/0.070127/0.083283m。全部6次runability和逐ID接收PASS，实际最大优化资格610<1000，未扩容/删KLT。
+本轮基于 `49c02471716e8ac960e35dd9dd44ef6fbb1428c6`，独立工作树 `/home/ma/AQUA-FE_WS_classical_opportunity_expansion_v1`，分支 `exp/classical-opportunity-expansion-v1-20260908`。原主工作树、外部 VINS 源码/二进制以及旧论文实验目录均未修改。旧 continuation NO_EXPANSION、旧 additive C/B 2/0/4 和 L/B 0/3/3 结论保持不变。
 
-C追加50545次观测，1017公开ID，寿命中位26、最长435；首个位姿相对参考延迟由6.248s变为7.249s，视觉/IMU对齐拒绝日志次数2→7。两臂重复波动均保留。尺度/初始化变化是同时观察到的现象，不是已经证明的致因。这个新负例不能删除或用于调整C。
+**Confirmed fact.** Batch A 12 个新物理窗口、72 次正式回放全部完成。3 practical gain（A04/A07/H02，均 robust）、2 practical loss（A01/A03，均 severe）、6 small/uncertain、0 FAIL、1 NOT_EVALUABLE（A05 的 common poses=27<30）。正例跨三条序列，但严重退化超过冻结的 <=1 条件，故没有运行 Batch B；其另外 12 个冻结窗为 NOT_ACTIVATED / Not evaluated.。没有第四次重复、learned 扩展臂或结果驱动换窗。
 
-A03也已完成并出现严重退化：BAPE中位0.858028m，CAPE2854.46348m；自身42poses/41s/95.4545%/41RPEpairs，evo与6次逐ID/runability均PASS。A04已完成并获PRACTICAL_GAIN/ROBUST_PRACTICAL_GAIN，但B数值异常：BAPE中位743.154m，C0.113799m；支撑31/44poses=70.4545%，evo/receiptsPASS，C首姿更晚约2.900s。A05六次运行/逐ID均PASS，但共同位姿27<30，归NOT_EVALUABLE，不比较APE/RPE。A06为SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN：CAPE中位0.950726m，B151.785956m，但B范围181.441203m超过中位改善150.835229m，不能升级practical。A07也为PRACTICAL_GAIN/ROBUST_PRACTICAL_GAIN：APE中位3.044412→0.173396m，RPE0.682203→0.106705m，36poses/80%/34RPEpairs，evo/receiptsPASS。A10为SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN：APE中位0.060075→0.056618m，改善3.46mm低于1cm绝对门限；RPE增加1.45mm仍在护栏内。H01为SMALL_OR_UNCERTAIN：C追加20127观测/2498ID，APE中位仅增加0.759mm、RPE增加0.135mm；42poses/93.3333%/41RPEpairs，evo/receiptsPASS。H02也为ROBUST_PRACTICAL_GAIN：APE中位0.109392→0.029412m，RPE0.036212→0.007688m，C首姿提前约1.599s；41poses/91.1111%/40RPEpairs，evo/receiptsPASS。H03为SMALL_OR_UNCERTAIN，绝对数值异常且C重复不稳定：BAPE约848m，C一次0.071467m、另两次约838m，中位837.927196m；43poses/95.5556%/42RPEpairs，evo/receiptsPASS。H04为SMALL_OR_UNCERTAIN：APE增加2.200mm、RPE增加0.077mm，43poses/95.5556%/42RPEpairs，evo/receiptsPASS。剩余Batch A1窗pending；H05正在执行。两次严重退化已使Batch B进入条件不成立，但必须继续完整A分母。必须完成全部12窗后再按冻结门决定Batch B，不可因首个严重退化提前换窗/停掉其余A窗。当前最终科学结论 **Unknown**。A/B合计24窗清单已在任何新C/后端结果前一次冻结，Batch B尚未激活。
+全部 A 窗为相应序列 raw `[0,900)`，相对旧六个 C-all 开发窗为 12 sequence-held-out/0 window-held-out。更广历史有 7/12 与已检查旧区间重叠；未发现重叠不等于全局从未使用。全部现已 outcome-known，供未来机制设计时属于开发案例，不能充当该未来机制的独立确认集。
 
-独立 worktree `/home/ma/AQUA-FE_WS_classical_opportunity_expansion_v1`，分支 `exp/classical-opportunity-expansion-v1-20260908`，基准49c0247。清单冻结881dad7、执行冻结8f323ba、控制器964db5b、Python3.8兼容入口d162b73；均已推送并远端读回。旧主工作区/旧实验源码与结果不改。
+最终审计 PASS：1,656 个唯一产物哈希、72 次回放身份/配置/逐 ID 接收、全部有效窗口评价和分类均一致；最大 actual eligible 644<1000；最大 evo 差 4.9937014e-7 m<1e-6 m。运行 PASS 与零 reset/failure 代理不等于绝对数值可靠；A03、A04 基线、A06、H03 异常详见报告。
 
-实际运行入口（先source ROS Noetic、设置线程环境）：`/mnt/data/AQUA-FE_WS/envs/aquafe_cuda/bin/python scripts/classical_opportunity_py38.py --batch A --wait-first-pid 846846`。当前控制器仍在运行，不要重复启动。运行根 `/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1`；活动日志 `batch_A_controller_attempt2.log`。原等待控制器在0次正式replay时为Python3.8描述表行构造兼容而停止，独立A01前端未停止/未重跑；原脚本、锁和日志保留。见execution_notes.md。
+最先阅读：
 
-使用ROS12691；其他VINS存在则WAITING_RESOURCE，不算FAIL，不kill。只有本任务前端与串行后端可并行；宿主独占Unknown。每次回放前检查binary/config/输入哈希、容量、磁盘、进程、端口、锁。
+- [完整报告](../papers/frontend_classical_opportunity_expansion_v1/report.md)：首屏回答全部 11 个问题，完整 min/median/max、A02/Bus 对照及解释边界。
+- [案例表](../papers/frontend_classical_opportunity_expansion_v1/case_registry.csv)及[逐窗解释](../papers/frontend_classical_opportunity_expansion_v1/case_interpretation.csv)。
+- [机制交接](../papers/frontend_classical_opportunity_expansion_v1/case_mechanism_handoff.md)：联合 ID 键、各字段语义、异常案例和下一步边界。
+- [决策](../papers/frontend_classical_opportunity_expansion_v1/decision.json)、[冻结 Batch A 快照](../papers/frontend_classical_opportunity_expansion_v1/checkpoint_batch_A/)、[最终审计](../papers/frontend_classical_opportunity_expansion_v1/final_integrity_audit.json)。
+- [分析包](../papers/frontend_classical_opportunity_expansion_v1/analysis-output/analysis-report.md)：2 张 PNG/SVG 图、精确数值表、统计附录、输入 provenance。
 
-12条序列×每批每序列1窗，共24个预注册C-all比较窗口；112候选含12不足900帧的尾窗。全部sequence-held-out仅相对六个C-all开发窗，**不是整个项目完全未见**；更广历史重叠另行只读核验，不改变冻结清单。
+可复现入口与运行根：
 
-入口：[预注册](../papers/frontend_classical_opportunity_expansion_v1/preregistration.md)、[全清单](../papers/frontend_classical_opportunity_expansion_v1/window_roster_frozen.csv)、[实时报告](../papers/frontend_classical_opportunity_expansion_v1/report.md)、[逐次结果](../papers/frontend_classical_opportunity_expansion_v1/backend_results.csv)、[案例注册](../papers/frontend_classical_opportunity_expansion_v1/case_registry.csv)、[决策](../papers/frontend_classical_opportunity_expansion_v1/decision.json)。
+- 方法执行锁、原始 roster 和 preregistration 位于 `papers/frontend_classical_opportunity_expansion_v1/`。窗口冻结 `881dad7`、方法锁 `8f323ba`、完整 Batch A 检查点 `853cdd6011f9d3a73cfbd84e580d121530cbecdb` 均正常推送并远端回读。最终发布另有 runtime 读回收据。
+- 本地根 `/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1`；原始输入/输出 bag、源流和大日志留在本地。Git 只交付必要收据和适量派生 CSV/图表。
+- 控制器已经正常退出；专用 ROS master 12691，任务节点随回放清理。不应重启 `classical_opportunity_py38.py --batch A` 或运行 Batch B。已完成最终化目录有防覆盖检查，不要反复执行脚本。
+- Python 3.8 兼容适配、旧 wrapper 路径映射和有限前缀等价探针见 execution_notes；早期失败/初版图表均保留。脚本只做执行兼容与报告，没有改变 C-all、后端或评价合同。
 
-C-all只作 classical additive opportunity probe。旧NO_EXPANSION不变。不得增加学习对照、调参、换窗口或第四次技术重复。最终案例只允许窗口候选集合层面的正负解释。唯一研究交付对象是observation-utility / risk机制分析。
-
-更广历史只读核验：A、B各有7/12窗与两个已检查旧项目清单的已登记区间有内部重叠；其余窗仅表示这两个清单未发现内部重叠，不能证明全项目未见。见broader_history_exposure_audit.csv及其provenance。此核验不改变预先声明的six-window heldout范围、清单或判定。
-
-新增机制交接说明见 [case_mechanism_handoff.md](../papers/frontend_classical_opportunity_expansion_v1/case_mechanism_handoff.md)，包含A01/A03负例和A04基线数值异常救援正例。最终运行后依finalization_notes.md执行审计、案例补充和图表；当前不要覆盖控制器实时表。
-
-
-## Batch A completion checkpoint — 2026-09-08
-All 12/12 windows and 72/72 replays are resolved. H05 is SMALL_OR_UNCERTAIN. Totals: 3 practical/robust gains, 2 practical losses (both severe), 6 small/uncertain, 0 FAIL, 1 NOT_EVALUABLE. This completion supersedes earlier partial counters. Batch B is not eligible. Final artifact audit, analysis bundle and full Chinese report remain pending; no additional replay is authorized by this handoff.
+唯一下一步为 observation-utility / risk mechanism research。停止把 additive observation 作为主要研究假设继续扩展；保留局部机会和严重负例，并为新机制另行预注册独立验证。不得把窗口集合级正负标签传播为每个 candidate 的 utility；COLMAP/proxy 不是独立 GT，总体自然正例率和因果机制 Not evaluated.。

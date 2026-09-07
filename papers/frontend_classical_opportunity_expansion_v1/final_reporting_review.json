@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "utc": "2026-09-07T22:05:29.096988+00:00",
+  "active_window_count": 12,
+  "frozen_inactive_window_count": 12,
+  "formal_replays": 72,
+  "classification_and_tiers_unchanged_from_batch_checkpoint": true,
+  "case_lists_match_registry": true,
+  "lifecycle_joint_keys_and_counts_exact": true,
+  "lifecycle_chains": 29382,
+  "published_candidate_observations": 304268,
+  "analysis_provenance_input_hashes_exact": true,
+  "frozen_protocol_inputs_backend_results_and_evaluations_unchanged": true,
+  "protected_code_and_old_papers_unchanged": true,
+  "report_relative_links_exist": true,
+  "rendered_figure_review": "PASS; full range/denominator/units/proxy boundaries; initial context labels revised; first figure PNG unchanged",
+  "report_outputs_sha256": {
+    "report.md": "087f78c475aa5eb7b9f71290e47ef1640777dd363451119bd01784ec7240f39b",
+    "case_interpretation.csv": "11cad24c9008f79324369e3631bf0e9690b3a72a4852cc3c5e2b73064a243979",
+    "case_mechanism_handoff.md": "d289b1910d7dac56a381d63f310f1486d459bbe00f299c39eb44d62317d4d5eb",
+    "candidate_lifecycle.csv": "fd3ebefb404dc80bc98106ee642b5e8eb76c8c8139d42aad13bab816a9b1bc45",
+    "source_supply.csv": "20aeb3a8b2c3dc5f683046220791d78ba45e89a8de77b2b319f6a5404d19695f",
+    "resource_usage.csv": "c80209b139f4c2f45257a7180ebb7a3379893b0143543465bf08d9131d46097d",
+    "old_positive_comparison_reference.csv": "23c75bbac85af3e57af7c02d92188bf9f59d41e7035b5d07eb8ba2ad06803daa",
+    "sequence_distribution.csv": "d99b3c646edfb7337d3bd3ea5f8869c2fcc91b707636ddae95359b285b26658f",
+    "analysis-output/analysis-report.md": "4fc4076daa96f27d3f1b2fd9982369952fcca5963206f1a4b22bd2b8a3fba07e",
+    "analysis-output/stats-appendix.md": "498ce030aefb0401feb0a7ab8f85d82dfb111b0f96768640d8faee91579c2238",
+    "analysis-output/figure-catalog.md": "382fed32c5ea2a9ebf215112826be2437a491a9c9c9ac66b743858d0da7d4173",
+    "analysis-output/exact_numeric_summary.csv": "0f6e52dd6f820b64a2405d22bebbf8a45605336400b2c8fe94a21eea5b89b77b",
+    "analysis-output/figures/figure-01-repeat-ranges.png": "087318299372cd04f0d0235fd47e2bb9c5dbeb84432b41752154428de8f3f785",
+    "analysis-output/figures/figure-02-case-context.png": "6115dfbeda86d16e3b036355a8b6fd88deec8998f64b20010047820de56fb271",
+    "analysis-output/figures/figure-01-repeat-ranges.svg": "b88a4cd40099e81987da3323c2d80374258c0bc5777da382ebad3ab1808e1b5e",
+    "analysis-output/figures/figure-02-case-context.svg": "1c4f351190714a522e9bb549970f0b66a67cee8c15dfbae50617d0522a5e924c"
+  },
+  "remaining_not_evaluated": [
+    "Batch B, stopped by frozen gate",
+    "A05 accuracy comparison, common poses below 30",
+    "individual candidate utility and causal mechanism",
+    "population generalization and independent GT accuracy"
+  ]
+}

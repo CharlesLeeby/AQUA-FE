@@ -1,0 +1,13 @@
+{
+  "B_feature_coverage_median": 0.9166666666666666,
+  "C_feature_coverage_median": 0.9166666666666666,
+  "backbone_serialized_exact": true,
+  "feature_bag_sha256": "b7609bca29808b1656d3ad9013c9712d4481ab3b57333bb1f3ab76a9c6385fdf",
+  "feature_messages": 450,
+  "float32_ID_exact": true,
+  "frame_audit_sha256": "d2abb1b25236c5c3db53f596b009ecc5c9c60f8ebb632a85b5a432b2f7174b4b",
+  "nonfeature_messages_exact": 9222,
+  "run_slug": "coe1_h04_00000_00900",
+  "source_coordinates_q_velocity_exact": true,
+  "status": "PASS"
+}

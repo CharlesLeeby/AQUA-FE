@@ -1,0 +1,107 @@
+{
+  "arms": {
+    "B": {
+      "backbone_exact": true,
+      "capacity_status": "PASS",
+      "chains_ge10": 0,
+      "chains_ge4": 0,
+      "conservative_depth_id_bound": 917,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/baseline/coe1_a01_00000_00900/features.bag",
+      "feature_messages": 450,
+      "frames_at_six": 0,
+      "frames_over_six": 0,
+      "lifetime_max": 0,
+      "lifetime_median": 0,
+      "max_11_frame_id_union": 429,
+      "max_concurrent": 0,
+      "max_total": 350,
+      "merge_wall_s": 2.1476104780012975,
+      "public_ids": 0,
+      "sha256": "6625d495b4ac1cad4193a19b1a9c5144e8183347e7ea2672c9d570ac4b98d097",
+      "source_stream_sha256": null,
+      "total_published": 0,
+      "unique_ids": 1561,
+      "zero_action_identity": true
+    },
+    "C-all": {
+      "backbone_exact": true,
+      "capacity_status": "CAPACITY_REVIEW_REQUIRED",
+      "chains_ge10": 682,
+      "chains_ge4": 809,
+      "conservative_depth_id_bound": 1726,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/frontend/coe1_a01_00000_00900/C-all.bag",
+      "feature_messages": 450,
+      "frames_at_six": 0,
+      "frames_over_six": 444,
+      "lifetime_max": 435,
+      "lifetime_median": 26.0,
+      "max_11_frame_id_union": 616,
+      "max_concurrent": 146,
+      "max_total": 496,
+      "merge_wall_s": 12.507896477996837,
+      "public_ids": 1017,
+      "sha256": "b69d4b9054156934587a41137cc893ba0b37e6b1922e9716eb7ad34b63e8068b",
+      "source_stream_sha256": "6fe29b2bb36502012304b6723c8304316157bb37dcb13a55f3fb9e86ac18a9a0",
+      "total_published": 50545,
+      "unique_ids": 2578,
+      "zero_action_identity": false
+    }
+  },
+  "artifacts": {
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/frontend/coe1_a01_00000_00900/C-all.bag": "b69d4b9054156934587a41137cc893ba0b37e6b1922e9716eb7ad34b63e8068b",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/frontend/coe1_a01_00000_00900/candidate_lifecycle.csv": "e998f13b4a7fd99d4201b254149033cfe3a5204ebb7013a5c206bcafd8e3335d",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/frontend/coe1_a01_00000_00900/classical_gftt_source.jsonl": "6fe29b2bb36502012304b6723c8304316157bb37dcb13a55f3fb9e86ac18a9a0",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/frontend/coe1_a01_00000_00900/frontend_frames.csv": "c952cca0bff7010eaaa82e93158c55e1452fba8ddb478b525a230e905b630261"
+  },
+  "baseline_sha256": "6625d495b4ac1cad4193a19b1a9c5144e8183347e7ea2672c9d570ac4b98d097",
+  "generation_wall_s": 571.9663428759959,
+  "image_shape": [
+    608,
+    968
+  ],
+  "input_bag_sha256": "bd72c76e0b6e0a8401a37de9c66cb8414955f82f9f1eeadccd5aad0cd36b013f",
+  "peak_rss_kib": 582580,
+  "raw_frames": 900,
+  "resource_post": {
+    "available_memory_bytes": 26290941952,
+    "free_bytes": {
+      "/home/ma/AQUA-FE_WS_classical_opportunity_expansion_v1": 15953575936,
+      "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1": 27272511488
+    }
+  },
+  "resource_pre": {
+    "available_memory_bytes": 26481504256,
+    "free_bytes": {
+      "/home/ma/AQUA-FE_WS_classical_opportunity_expansion_v1": 16333590528,
+      "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1": 27308642304
+    }
+  },
+  "run_slug": "coe1_a01_00000_00900",
+  "source_commit": "d162b73bf9b5d942bcff749c859cf0f66954deb4",
+  "source_counters": {
+    "classical_gftt": {
+      "backward_fail": 1,
+      "border_fail": 699,
+      "eligible_observations": 50545,
+      "fb_fail": 216,
+      "forward_fail": 2,
+      "generation_calls": 450,
+      "generator_seed_limit": 1837,
+      "matcher_output": 460424,
+      "ncc_fail": 153,
+      "peak_pool": 580,
+      "processed_frames": 900,
+      "seed_boundary": 3832,
+      "seed_duplicate_private": 453235,
+      "seeds_created": 1520
+    }
+  },
+  "source_lock_sha256": "08a9300823a0285a166d9699ad0976a146ea1a0f6127e1191c3800d80f582acc",
+  "status": "FRONTEND_COMPLETE",
+  "timings": {
+    "classical_gftt_eligibility_s": 72.37344511714764,
+    "classical_gftt_tracking_generation_s": 311.5880408600642,
+    "image_preprocessing_s": 166.96789662905212
+  },
+  "total_wall_s": 586.8967615290021
+}

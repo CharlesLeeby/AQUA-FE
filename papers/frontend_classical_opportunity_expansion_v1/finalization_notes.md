@@ -39,3 +39,6 @@ comparison, severe cases, inactive Batch B, and the sole observation-utility/ris
 Append required work/experiment/research/project logs, update the independent handoff,
 commit/push scoped small artifacts and read back the remote commit and files.
 No Obsidian write-back is part of the requested delivery.
+
+## Executed completion — 2026-09-08
+Controller exited normally after 12 windows / 72 formal replays; Batch B gate false (2 severe regressions). Batch A commit 853cdd6011f9d3a73cfbd84e580d121530cbecdb was pushed and remotely read back. Final integrity audit PASS (1656 hashes); supplement COMPLETE with labels preserved; descriptive analysis COMPLETE; both PNGs visually inspected. A label-only figure revision preserved its first bundle at runtime/reporting_drafts/analysis-output-before-label-layout-review; exact_numeric_summary.csv bytes are identical. The cross-filesystem Path.rename attempt and the subsequent protected overwrite refusal produced no experiment mutation; recovery used a hash-verified archive move. Full Chinese report, case interpretation and final independent/mechanism handoffs are complete. These instructions are an execution record, not a request to rerun a completed matrix.

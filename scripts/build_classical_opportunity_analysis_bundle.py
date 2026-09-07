@@ -15,7 +15,7 @@ KINDS = ['PRACTICAL_GAIN', 'PRACTICAL_LOSS', 'SMALL_OR_UNCERTAIN', 'FAIL', 'NOT_
 COLORS = {'PRACTICAL_GAIN': '#0072B2', 'PRACTICAL_LOSS': '#D55E00',
           'SMALL_OR_UNCERTAIN': '#666666', 'FAIL': '#CC79A7', 'NOT_EVALUABLE': '#999999'}
 MARKERS = {'PRACTICAL_GAIN': '^', 'PRACTICAL_LOSS': 'v',
-           'SMALL_OR_UNCERTAIN': 'o', 'FAIL': 'x', 'NOT_EVALUABLE': 's'}
+           'SMALL_OR_UNCERTAIN': 's', 'FAIL': 'x', 'NOT_EVALUABLE': 'x'}
 
 
 def read(name):
@@ -150,18 +150,27 @@ def main():
         cb = number(c, 'C-all_first_pose_delay_from_reference_start_s_median')
         bb = number(c, 'B_first_pose_delay_from_reference_start_s_median')
         points = [(dose, delta), (life, cb-bb if cb is not None and bb is not None else None)]
-        for ax, (x, y) in zip(axes, points):
+        for panel, (ax, (x, y)) in enumerate(zip(axes, points)):
             if x is None or y is None:
                 continue
             ax.scatter(x, y, color=COLORS[c['classification']], marker=MARKERS[c['classification']], s=42)
-            ax.annotate(c['sequence'] + '/' + c['batch'], (x, y), xytext=(4, 4), textcoords='offset points', fontsize=7)
+            # Separate coincident descriptors without jittering measured values.
+            if panel == 1 and c['sequence'] in ['H04', 'H05']:
+                continue  # H01/H04/H05 have exactly the same displayed coordinates.
+            offsets = {'A05': (-35, 35), 'A10': (-35, -30),
+                       'H01': (18, 23), 'H03': (32, -2), 'A07': (20, -27)} if panel == 1 else {'H04': (-40, 24), 'H05': (14, 17), 'A10': (25, -22)}
+            offset = offsets.get(c['sequence'], (4, 4))
+            label = 'H01/H04/H05 (A)' if panel == 1 and c['sequence'] == 'H01' else c['sequence'] + '/' + c['batch']
+            ax.annotate(label, (x, y), xytext=offset,
+                        textcoords='offset points', fontsize=7,
+                        arrowprops={'arrowstyle': '-', 'color': '#999999', 'lw': .5} if c['sequence'] in offsets else None)
     for c in old:
         label = 'old A02' if c['window_id'].startswith('a02') else 'old Bus'
         points = [(float(c['total_published']), float(c['C-all_APE_median']) - float(c['B_APE_median'])),
                   (float(c['lifetime_median']), float(c['C-all_first_pose_delay_from_reference_start_s_median']) - float(c['B_first_pose_delay_from_reference_start_s_median']))]
-        for ax, (x, y) in zip(axes, points):
+        for panel, (ax, (x, y)) in enumerate(zip(axes, points)):
             ax.scatter(x, y, facecolors='none', edgecolors='#000000', marker='D', s=55)
-            ax.annotate(label, (x, y), xytext=(4, -11), textcoords='offset points', fontsize=8)
+            ax.annotate(label, (x, y), xytext=(-32, -17) if panel == 1 and label == 'old Bus' else (4, -11), textcoords='offset points', fontsize=8)
     for ax in axes:
         ax.axhline(0, color='#777777', linewidth=.8, linestyle='--')
         ax.grid(alpha=.2)
@@ -170,6 +179,8 @@ def main():
     axes[0].set_ylabel('Median APE delta: C - B (m; symlog)')
     axes[0].set_yscale('symlog', linthresh=.01)
     axes[0].set_title('Dose and accuracy association')
+    axes[0].legend(handles=[Line2D([0], [0], marker=MARKERS[k], color=COLORS[k],
+                          label=k, linestyle='') for k in KINDS[:3]], loc='upper left', fontsize=7)
     axes[1].set_xlabel('Median public-ID lifetime (observations)')
     axes[1].set_ylabel('Median first-pose delay delta: C - B (s)')
     axes[1].set_title('Lifetime and initialization timing association')

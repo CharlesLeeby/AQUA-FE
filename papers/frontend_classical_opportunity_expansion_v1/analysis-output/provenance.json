@@ -1,0 +1,22 @@
+{
+  "analysis_unit": "physical window; technical repeats describe solver variation only",
+  "primary_comparison": "frozen C-all versus fresh complete KLT B, own six-trajectory support",
+  "primary_metric": "fixed-scale proper SE(3) APE RMSE, lower is better",
+  "guardrail": "strict aligned-global positional-delta translational RPE RMSE at 1 s",
+  "reference": "COLMAP/proxy; not independent GT",
+  "script_sha256": "dc0274e36b12b2cb8ebcbe8a8d1faa633331b84df7b2a02c282d73b84516b6d7",
+  "inputs": {
+    "decision.json": "9500c9d13abf4dd341871f63c93a773d0c4c6d2a4e58f370c709c27c039ffebc",
+    "case_registry.csv": "65ec4edb8ad9429ad24f52daa6a2ebe7a779c0456215ab38f277a53caf2fb263",
+    "backend_results.csv": "9de731a57cacaf4ba113c35da706929c1764e54cbe438f65f4b83b821dbf2b0b",
+    "window_outcomes.csv": "d80424bee6bdbd55e5df0aa20ba18da7c0b7f838f8dc884cfe33e7a70a4a9150",
+    "old_positive_comparison_reference.csv": "23c75bbac85af3e57af7c02d92188bf9f59d41e7035b5d07eb8ba2ad06803daa",
+    "case_supplement_receipt.json": "b2114ea7e0eac3e506265790d6c893edaa6c6bee88d2d3f69e5ab4096994f6c7",
+    "preregistration.md": "9aa45cb3008ba273278df27492ee48d80ec27bfe3bf986ed12f1badd43367342",
+    "source_and_backend_lock.json": "08a9300823a0285a166d9699ad0976a146ea1a0f6127e1191c3800d80f582acc",
+    "backend_execution_lock_v2.json": "d6334d9e017941e2e32649cc0b7ff61b4ba642fbd8f0db9c43a309dca5da6b4a",
+    "evaluation_lock.json": "a1b5efc090ea45eaaff85281138ba69db4c44119a7eaff53c6c2fb50efecb970",
+    "broader_history_exposure_audit.csv": "706c5edd1e0263ebf4274832596b1af756773446cc6b4a631a78b571c680ab4a"
+  },
+  "classification_changes": false
+}

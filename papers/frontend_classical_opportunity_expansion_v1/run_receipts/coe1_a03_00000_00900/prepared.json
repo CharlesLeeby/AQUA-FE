@@ -1,0 +1,22 @@
+{
+  "counts": {
+    "images": 900,
+    "imu": 9035,
+    "reference": 45
+  },
+  "end_index_exclusive": 900,
+  "image_shape": [
+    608,
+    968
+  ],
+  "input_bag_sha256": "a62049da1c893b0f75d6b188a01411efa5cca0f90233a396e5e49a21c4189008",
+  "metadata_receipt_sha256": "fa72bc369905853f206c1f91044ce646a7ab3e25718b3760447ee6c7bf5580f4",
+  "pixel_stamp_stream_sha256": "1a50cb0bd75e1025653c9b4b5a1725f950a79654597a9d8b52206e7e709af7c4",
+  "raw_archive": "/mnt/data/AQUA-FE_WS/datasets/full_downloads/aqualoc/Archaeological_site_sequences/archaeo_sequence_3_raw_data.tar.gz",
+  "raw_archive_sha256": "ad1e239bc7dff43a5c3d608a105019bf588919e9313eb9ac9b1f407e4cf1cfac",
+  "reference_sha256": "dba801368583702ba648cf29b0b1834195e4984b620da13fabf7d9f6ffa931f7",
+  "run_slug": "coe1_a03_00000_00900",
+  "start_index": 0,
+  "status": "PREPARED",
+  "wall_s": 54.50344439499895
+}
