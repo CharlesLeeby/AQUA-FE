@@ -800,3 +800,16 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion: 局部数量效应成立不能替代端到端净收益判断；不存在当前五窗L-all/B实用改善。完整六窗结论待Cemetery。
 - Open questions: 更多观测如何改变初始化与尺度，哪些实际残差参与风险？仅现有日志不足作纯因果归因。
 - Next experiment: 仅完成Cemetery固定12次，然后给出一个后续方向，不自动扩展。
+
+
+## 2026-09-08 — 添加式数量假设的完整六窗结论
+- Research question: 完整保留KLT后，六条并发配额是否压低当前合格XFeat流的后端净收益？
+- Hypothesis: 放开公开配额应形成更大实际剂量；若六条是主要瓶颈，应在完整B上形成稳健收益。
+- Motivation / related baseline: 避免replacement删除KLT混杂；同一B、同一正式XFeat源及同二进制。
+- Proposed idea / why it might work: 仅公开配额不同，持续有效链可提供更多视觉约束。
+- Assumptions: 全24输入和72接收核对；固定六开发窗、三技术重复、COLMAP/proxy支撑；Cemetery结构修复及额外源尝试明确披露。
+- Potential failure cases: 初始化/尺度变化、错误或相关约束、时间预算、来源q差异及宿主调度；不能从已加残差数推独立信息。
+- Evidence: Confirmed fact：六窗发布和后端候选残差剂量均显著数值增加（倍率见CSV，不是统计显著性）；数量对比只有A08达到实用改善，L-all/B零改善、A09/A02/A08三退化；C-all/B在A02/Bus改善。Bus异常重复完整保留，最大资格834且无容量裁剪。证据report.md/comparisons.csv/backend_results.csv/source_supply.csv/36组common_support。
+- Current conclusion: 当前有限生成器的剂量问题已有效检验；“此前只是六条太少”不足以解释完整KLT条件下的净收益缺失。局部数量效应与总体添加机制支持必须分开。不提升C-all为主方法，不改变protected KLT主线。
+- Open questions: 哪些初始化/尺度和约束使用变化导致学习添加风险？当前非共享初始化/非等资源来源比较不足以作纯因果归因，相关解释为Hypothesis / Inference。
+- Next experiment: 本轮停止。唯一后续建议为现有逐ID、初始化与尺度日志的失稳归因审计；新增预算/窗口/时机变体Not evaluated.且不自动执行。

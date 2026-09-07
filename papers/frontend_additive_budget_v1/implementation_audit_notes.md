@@ -30,3 +30,5 @@ C-all的GFTT检测器为正常参数、没有按学习结果筛选或降低检�
 7. solver诊断范围为estimator.optimization中的常规非线性ceres::Solve；初始化SfM内部的求解时间、触限与停止原因没有单独日志，Unknown。Bus异常重复的“达到预算0次”仅指已记录的常规优化，不能据此排除初始化求解预算或时序影响。初始化视觉/IMU结构不一致的日志尝试数另列，不能与最终初始化失败、reset次数混用。
 
 8. frontend receipt.source_commit读取的是该次完成时worktree的HEAD；运行期间可提交本任务文档，因此它不是单独的源实现版本标识。原始源实现以d1c793a及source_and_backend_lock.json的逐文件哈希为准；Cemetery另加38e5881中的恢复overlay与cemetery_recovery_lock.json。报告发布commit另列，不能混作实验源身份。
+
+9. 后端peak_node_rss_bytes是播放循环每0.5秒采样的已观测RSS峰值，不含严格的全生命周期高水位保证；前端peak_rss_kib来自进程ru_maxrss。GPU峰值内存Unknown。生成阶段计时从runner的generation计时起点算起，不把它冒充整个shell/导入/校验命令的总耗时。

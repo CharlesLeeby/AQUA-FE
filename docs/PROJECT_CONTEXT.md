@@ -295,3 +295,6 @@ papers/frontend_admission_continuation_v1/report.md and docs/CODEX_HANDOFF.md.
 
 
 2026-09-08 additive_budget_v1：全部24前端独立读回通过，Cemetery结构恢复有效（首失败保留）；五窗60回放完成。A08数量对比实用改善但仍差于B，H07无实用变化，Bus有保留的异常重复。主方法/后端门不变，完整判定待Cemetery。详checkpoint_frontend_complete.md。
+
+
+2026-09-08 — additive_budget_v1完整矩阵COMPLETE：独立分支exp/additive-budget-v1-20260907完成24前端/72新正式回放；36组共同支撑与evo全部通过，原KLT/源映射/逐ID接收及锁身份验收通过。L-all/L6仅A08实用改善，其余5不确定；L-all/B零实用改善、A09/A02/A08三实用退化。C-all/B在A02/Bus改善但来源q/剂量/成本混杂，未提升为主方法。Cemetery一份无效源保留，索引关联修复后正式流有效；共7源尝试，不是全窗一次生成。容量未扩展，最大实际资格834。源池仅A08 XFeat触800限制；停止数量扩展，本任务队列已结束。唯一建议：已有日志的初始化/尺度失稳归因审计。完整依据docs/CODEX_HANDOFF_ADDITIVE_BUDGET.md和papers/frontend_additive_budget_v1/report.md；不改变原研究主线。

@@ -880,3 +880,19 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: 跨来源q/成本混杂、非独占宿主、初始化SfM计时Unknown、私有ID确切死亡原因Unknown；source_commit为完成时HEAD，源身份以锁哈希为准。
 - Interpretation: Confirmed fact为已完成窗口；全六窗效果结论Not evaluated.，不扩预算或研究方向。
 - Next steps: 完成Cemetery12次，复核完整72分母并生成最终报告/图/远端同步。
+
+
+## 2026-09-08 — additive_budget_v1完整矩阵验收与发布
+- Date: 2026-09-08
+- Task objective: 回答保留完整KLT时，取消同源XFeat六条公开配额是否增加剂量并获得后端净收益。
+- Problem / motivation: 防止上游隐含裁剪、KLT变动、空动作、容量限制或技术波动伪装数量效果。
+- Files changed: 独立任务实现/恢复/分析/报告脚本，papers/frontend_additive_budget_v1协议与锁、24/72/30行主表、9756逐帧行、42595逐公开ID寿命行、源供给/拒绝/q/资源表、36组支撑/evo紧凑摘要、前后端receipts、最终锁复核、分析包/两图/report/decision；独立HANDOFF和项目研究日志。
+- Implementation: 原B只读复用；单一正式XFeat流供L6/L-all、正常GFTT对照；独立二进制只加诊断/边界检查，容量未改变；全部导出坐标/q/速度/原B和72次逐ID接收核对。
+- Technical decisions: 无新数量档位、窗口、网络、时机搜索或方法提升；fixed-scale proper SE3 APE和严格1s位置增量RPE，三技术重复中位/极差，完整六窗和所有负结果。
+- Experiments performed: 24前端/72新正式回放完成；36组共同支撑与evo、72运行有效性/完整接收、源/依赖/后端及30窗口输入配置哈希通过。原五项发布契约测试此前通过，相关冻结源码最终哈希未变；新增真实输入关联与全量读回验证覆盖恢复。
+- Quantitative results: L-all/L6=1改善/0退化/5不确定；L6/B=0/3/3；L-all/B=0/3/3；C-all/B=2/0/4；L-all/C-all=0/3/3。六窗发布倍率1.92778–48.6853，候选残差中位倍率1.44839–45.9306；最大优化资格834<1000。每次初始化事件1、reset/failure detection代理0；独立lost-tracking真实次数Unknown。精确结果见comparisons.csv/backend_results.csv，窗口/配置/指标/支撑均可回查。
+- Qualitative observations: A08数量有实用改善但仍劣于B；Bus异常重复未删除；C-all的A02/Bus改善仅支持整个传统添加方案。
+- Failed attempts: Cemetery首源INVALID_SOURCE_ALIGNMENT保留，后续一行帧索引关联修复独立冻结，第二份为正式流；源生成共7次尝试。原ROS导入环境错误和首次诊断构建anchor错误已保留历史；WAITING_RESOURCE不计算法失败，没有额外最好重复。
+- Known issues: COLMAP/proxy非独立GT、开发窗选择、非共享初始化、来源q/剂量/成本混杂、非排他宿主；私有ID确切死亡原因/初始化SfM计时/GPU峰值/严格全生命周期后端RSS/精确solver停止原因Unknown或Not evaluated.。
+- Interpretation: Confirmed fact：剂量增加成立，但本六窗L-all/B无实用净收益；“只因六条太少”的统一解释不获支持。初始化/尺度、相关/错误约束及固定预算机制仍为Hypothesis / Inference。
+- Next steps: 已结束本轮实验；只建议对已保存的逐ID/初始化/尺度日志做一次失稳归因审计，不自动扩数量或时机变体。最终仅发布任务范围文件，报告发布commit与实验源身份分开，push后四文件远端逐字节读回。

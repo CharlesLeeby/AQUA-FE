@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "frontend_cells": 24,
+  "backend_replays": 72,
+  "pairwise_comparisons": 30,
+  "support_groups": 36,
+  "per_id_received_repeats": 72,
+  "frame_count_rows": 9756,
+  "public_lifecycle_rows": 42595,
+  "figure_visual_review": "PASS: labels visible and legend does not obscure data",
+  "markdown_links": "PASS",
+  "analysis_provenance": "PASS",
+  "owned_ros_vins_processes": []
+}

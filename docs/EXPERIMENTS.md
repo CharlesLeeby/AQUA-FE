@@ -714,3 +714,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Validity/common support: 五窗六类支撑各PASS并经evo核对；技术3不作独立样本。Cemetery后端Not evaluated.。
 - Interpretation/conclusion: 量对照确实形成；当前局部相对L6改善不能解释为对B稳定净收益。
 - Follow-up: 仅完成Cemetery原12次；不新增预算/窗口/补最好重复。
+
+
+## additive_budget_v1_final_matrix — 2026-09-08
+- Status/scientific role: COMPLETE；六个已知结果开发窗的固定添加式数量对照，非held-out结论。
+- Git commit/branch: 源d1c793a8d56b3f8efe2ed3b3d770b706e692dbdc；后端/评估2297bb837dac69ff587ec052425539cdd01a17dc；Cemetery恢复38e58813f82495e2e8c60a173b55610d401b1c77；exp/additive-budget-v1-20260907。报告发布commit另见该条所属发布版本。
+- Dataset/sequence/window: A09 6000–6800、A02 0–900、Bus s180 d45、A08 2700–3600、Cemetery s135 d45、H07 0–1000；准确输入/stride/校准/IMU见原windows.csv和source锁，不由名称换算时间。
+- Environment/exact config: environment_audit.json/resource_execution_schedule.json/source_and_backend_lock.json/backend_execution_lock_v2.json/evaluation_lock.json；后端同一二进制，容量1000、原solver合同，正式播放rate1，CPU2,3,8,9。非排他宿主限制另列。
+- Baseline/proposed: 同一原KLT B加L6/L-all/C-all；L6/L-all同一正式XFeat流；六窗四臂各3技术重复。
+- Commands/artifacts: run_additive_budget_v1.py、Cemetery恢复overlay、execute_additive_budget_matrix.py、analyze_additive_budget_v1.py、audit_additive_budget_delivery.py、report_additive_budget_v1.py；运行根/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1；backend_receipts.json保存逐次命令、配置/输入/日志哈希；report.md、comparisons.csv、backend_results.csv为主结果。
+- Metrics/results: fixed-scale proper SE3 APE RMSE、严格1s全局对齐位置增量RPE；72初始化事件均1、reset/failure检测代理0、72接收完整，coverage/轨迹长度/资格/残差/solver/RSS逐次列出。L-all/L6=1/0/5、L6/B=0/3/3、L-all/B=0/3/3、C-all/B=2/0/4、L-all/C-all=0/3/3（改善/退化/不确定）。最大资格834，发布倍率1.92778–48.6853，残差中位倍率1.44839–45.9306。
+- Validity/common support: 24输入结构/身份、72运行/逐ID接收、36组共同支撑/evo、全部锁和30窗口输入配置哈希通过。每项两臂6轨迹支撑与主表四臂12轨迹支撑不混用。
+- Interpretation: 更多剂量成立，只有A08数量比较有实用改善且仍差于B；Bus L-all异常23.252566m重复保留。C-all正例仅整体方案证据，来源q/数量/成本不等。
+- Conclusion: 本六窗不支持L-all相对完整KLT有实用净收益；不宣称增加学习候选永远无用，也不推总体正例率。
+- Failed/negative records: Cemetery首源无效保留并重建，共7源尝试、6正式共同流；0额外正式回放；WAITING_RESOURCE单列，不剔除负结果。
+- Follow-up: 对保存日志做一次初始化/尺度失稳归因审计；不自动新扫窗、改预算或时机。独立ATE口径、精确lost-tracking事件、GPU峰值和初始化SfM耗时Not evaluated./Unknown。

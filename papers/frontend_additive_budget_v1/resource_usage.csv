@@ -64,9 +64,21 @@ a08_2700_3600,C-all,backend,65.52858007300529,,117456.0,,,1,440,409,0.054741868
 a08_2700_3600,C-all,backend,65.53337045900116,,116064.0,,,2,440,408,0.053024254
 a08_2700_3600,C-all,backend,65.6448776969919,,115948.0,,,3,440,409,0.055216207
 afrl_cemetery_s135_d045,B,frontend,REUSED,1.8287630780105246,1313852,shared two-source generation; L6 and L-all share one inference stream,"{""classical_gftt_eligibility_s"": 17.03107653715415, ""classical_gftt_tracking_generation_s"": 144.73455168701184, ""image_preprocessing_s"": 58.97997197274526, ""xfeat_eligibility_s"": 19.74137568610604, ""xfeat_tracking_generation_s"": 143.1673520469194}",,,,
+afrl_cemetery_s135_d045,B,backend,65.0416489400086,,95432.0,,,1,345,117,0.043513997
+afrl_cemetery_s135_d045,B,backend,65.0291363389988,,95144.0,,,2,345,120,0.044088093
+afrl_cemetery_s135_d045,B,backend,65.1336914650019,,95232.0,,,3,345,126,0.043414579
 afrl_cemetery_s135_d045,L6,frontend,385.40297932500835,7.042233075000695,1313852,shared two-source generation; L6 and L-all share one inference stream,"{""classical_gftt_eligibility_s"": 17.03107653715415, ""classical_gftt_tracking_generation_s"": 144.73455168701184, ""image_preprocessing_s"": 58.97997197274526, ""xfeat_eligibility_s"": 19.74137568610604, ""xfeat_tracking_generation_s"": 143.1673520469194}",,,,
+afrl_cemetery_s135_d045,L6,backend,65.03787633599131,,93720.0,,,1,345,126,0.044175041
+afrl_cemetery_s135_d045,L6,backend,65.04101873798936,,94280.0,,,2,345,128,0.045840445
+afrl_cemetery_s135_d045,L6,backend,64.83676574300625,,96492.0,,,3,345,145,0.046332958
 afrl_cemetery_s135_d045,L-all,frontend,385.40297932500835,7.678542034002021,1313852,shared two-source generation; L6 and L-all share one inference stream,"{""classical_gftt_eligibility_s"": 17.03107653715415, ""classical_gftt_tracking_generation_s"": 144.73455168701184, ""image_preprocessing_s"": 58.97997197274526, ""xfeat_eligibility_s"": 19.74137568610604, ""xfeat_tracking_generation_s"": 143.1673520469194}",,,,
+afrl_cemetery_s135_d045,L-all,backend,64.83755859499797,,102296.0,,,1,345,161,0.048054633
+afrl_cemetery_s135_d045,L-all,backend,64.73522848499124,,95944.0,,,2,345,144,0.045015041
+afrl_cemetery_s135_d045,L-all,backend,65.1335541360022,,96736.0,,,3,345,152,0.047421131
 afrl_cemetery_s135_d045,C-all,frontend,385.40297932500835,7.356698324991157,1313852,shared two-source generation; L6 and L-all share one inference stream,"{""classical_gftt_eligibility_s"": 17.03107653715415, ""classical_gftt_tracking_generation_s"": 144.73455168701184, ""image_preprocessing_s"": 58.97997197274526, ""xfeat_eligibility_s"": 19.74137568610604, ""xfeat_tracking_generation_s"": 143.1673520469194}",,,,
+afrl_cemetery_s135_d045,C-all,backend,65.04753592899942,,97188.0,,,1,345,141,0.043725137
+afrl_cemetery_s135_d045,C-all,backend,64.93404098499741,,96772.0,,,2,345,141,0.046666222
+afrl_cemetery_s135_d045,C-all,backend,64.94419167599699,,95336.0,,,3,345,128,0.045176865
 h07_0_1000,B,frontend,REUSED,2.5379706289968453,1389588,shared two-source generation; L6 and L-all share one inference stream,"{""classical_gftt_eligibility_s"": 20.467658758949256, ""classical_gftt_tracking_generation_s"": 151.41647593813832, ""image_preprocessing_s"": 47.10979095233779, ""xfeat_eligibility_s"": 34.60193400127173, ""xfeat_tracking_generation_s"": 179.12221239955397}",,,,
 h07_0_1000,B,backend,69.85223990099621,,95688.0,,,1,489,143,0.044684239
 h07_0_1000,B,backend,69.94717591900553,,95812.0,,,2,489,147,0.045671491

@@ -1,0 +1,14 @@
+{
+  "verified_at": "2026-09-08T00:58:15.198210",
+  "status": "PASS",
+  "checks": {
+    "original_backend_files": 46,
+    "frozen_source_files": 88,
+    "frozen_dependency_files": 20,
+    "backend_execution_lock_v2.json": 181,
+    "cemetery_recovery_lock.json": 5,
+    "window_input_config_identity_checks": 30
+  },
+  "backend_receipts": 72,
+  "source_identity": "d1c793a plus Cemetery recovery overlay 38e5881; report commit separate"
+}

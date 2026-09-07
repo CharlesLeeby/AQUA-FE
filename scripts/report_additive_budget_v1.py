@@ -71,6 +71,7 @@ def main():
     net=decision['all_comparison_counts']['L-all_vs_B']
     decision['answer']+=(f"L-all相对完整B：实用改善{net.get('PRACTICAL_GAIN',0)}窗，"
                          f"实用退化{net.get('PRACTICAL_LOSS',0)}窗。")
+    decision['answer']=decision.get('main_question_answer',decision['answer'])
     (PAPER/'decision.json').write_text(json.dumps(decision, ensure_ascii=False, indent=2)+'\n')
 
     out = PAPER/'analysis-output'
@@ -94,7 +95,7 @@ def main():
     fig.suptitle('Full four-arm common support; median and range of 3 technical replays')
     fig.savefig(figures/'01-four-arm-ape.png', dpi=180)
     plt.close(fig)
-    fig, axes = plt.subplots(1, 2, figsize=(12, 4.8), constrained_layout=True)
+    fig, axes = plt.subplots(1, 2, figsize=(12, 5.2))
     x = np.arange(6)
     for i, a in enumerate(ARMS[1:]):
         axes[0].bar(x+(i-1)*.24, [num(f[s,a]['total_published']) for s in slugs], width=.23, color=COLORS[i+1], label=a)
@@ -104,7 +105,9 @@ def main():
         ax.set(xticks=x, xticklabels=LABELS, title=title, yscale='symlog')
         ax.tick_params(axis='x', rotation=25)
         ax.grid(axis='y', alpha=.2)
-        ax.legend()
+    handles,legend_labels=axes[0].get_legend_handles_labels()
+    fig.legend(handles,legend_labels,loc='lower center',ncol=3,bbox_to_anchor=(.5,.015))
+    fig.subplots_adjust(left=.065,right=.985,bottom=.24,top=.83,wspace=.24)
     fig.suptitle('Dose and actual backend use; repeated residual blocks are not independent observations')
     fig.savefig(figures/'02-dose-and-use.png', dpi=180)
     plt.close(fig)
@@ -134,7 +137,7 @@ def main():
     (out/'stats-appendix.md').write_text('\n\n'.join(stats)+'\n')
     catalog = '''图1：figures/01-four-arm-ape.png。目的：比较完整四臂固定尺度精度和技术波动。
 来源：frontend_audit.csv中的all_four共同支撑汇总。点为三重复中位数，误差条为最小—最大；每窗独立纵轴。
-需注意：A09的大尺度漂移不能被其他窗的米级结果掩盖，单窗小差必须与该窗重复范围一起解释。
+需注意：A09相对参考的严重尺度失配不能被其他窗的米级结果掩盖，单窗小差必须与该窗重复范围一起解释。
 决策含义：是否存在稳定改善，或仅方向变化；不可用此图替代两臂专属共同支撑的冻结判断。
 检查：四臂完整、未绘制无效精度、单位为米、图注没有置信区间或独立样本宣称。
 
@@ -172,14 +175,17 @@ def main():
         '完整数量对照如下，方向变化不自动等同实用改善：', '', quantity_text, '',
         '\n'.join(contrast_counts), '',
         '以上是六个目的性开发窗的描述计数，不是总体成功率。五类固定对比的全部30行及精确数值见[comparisons.csv](comparisons.csv)。APE与RPE必须使用同一对比的共同支撑；主表是另行计算的四臂共同支撑。初始化成功仅表示日志事件，不代表尺度可靠或定位准确。',
-        '', '原始KLT在全部合并中保持时间戳、ID、相机、坐标、速度和原通道；移除追加尾部可序列化重建B，非feature消息一致。六窗L6/L-all各只读同一份XFeat流，按源ID和精确时间戳核对观测子集。公开间断后新ID，无未来寿命选择或历史倒填。',
+        'C-all在A02、Bus相对B达到实用改善，其他四窗不确定。当前结果允许说传统添加方案也可产生收益；不能声称学习来源不可替代，亦不能在剂量/q/成本不同的条件下作纯来源因果比较。',
+        '', '必须保留的负结果：Bus的L-all/L6专属共同支撑中，L-all三重复APE为23.252566、0.042619、0.043909m，首重复明显失稳，不能用中位数下降掩盖。A09四臂均与参考存在严重尺度失配；A08虽L-all/L6达到实用改善，学习两臂仍明显差于完整B。这些是端到端观察，具体机制为Hypothesis / Inference，详[Bus检查点](checkpoint_bus.md)、[A08检查点](checkpoint_a08.md)和逐次表。',
+        '', '原始KLT在全部合并中保持时间戳、ID、相机、坐标、速度和原通道；移除追加尾部可序列化重建B，非feature消息一致。六窗L6/L-all各只读同一份XFeat流，按源ID和精确时间戳核对观测子集。公开间断后新ID，无未来寿命选择或历史倒填。[逐帧数量](frontend_frame_counts.csv)包含9756行；[独立读回核验](delivery_readback_audit.csv)直接核对源坐标/q、速度及后端逐ID接收。',
         '', 'all仅针对top_k=2048、每次最多60新种子、私有池最多800的冻结生成器。正常GFTT候选使用1024角点供给，其他通用跟踪/几何/去重共享。实际源池限额事件与拒绝统计见[source_supply.csv](source_supply.csv)、[rejection_summary.csv](rejection_summary.csv)。没有根据效果改门或静默裁剪全部臂。',
         '', '共享两源生成耗时在同窗三添加臂重复展示，仅实际执行一次，不能相加。图像尺寸/实测原始帧数、模块计时及进程峰值RSS见[frontend_window_resources.csv](frontend_window_resources.csv)。B生成耗时为Unknown（只读复用）；表中B合并时间主要是读回审计，后端时间为三重复墙钟中位，含ROS启动、播放、排空与收尾。L6/L-all共用完整XFeat推理，不可声称6条配额减少本轮网络推理成本。A09及A02前段源生成尚未固定CPU亲和；宿主非排他，Bus部分运行期间另有编译任务，严格无干扰性能排名Not evaluated.。',
         '', '后端四臂使用同一只读诊断二进制，容量仍1000，无容量扩展；实际逐ID接收、>=4观测资格、真正加入问题的投影残差、solver用时及RSS见[backend_results.csv](backend_results.csv)。计数可跨优化重复使用观测；可运行不等于正确尺度。工程保护结果保留在72行分母。solver接近上限为elapsed>=95%预算，实际达到为elapsed>=预算，不能据此唯一识别停止原因。',
-        '逐臂三重复的最小/中位/最大汇总见[backend_arm_summary.csv](backend_arm_summary.csv)，包含首次位姿延迟、实际使用、容量、solver、RSS和尺度。公开ID数、>=4及>=10观测长链见[frontend_audit.csv](frontend_audit.csv)，逐链寿命见[candidate_lifecycle.csv](candidate_lifecycle.csv)。',
+        'Confirmed fact：72次最终运行检查、36组共同支撑/evo均通过，逐ID接收72/72完整；最大实际优化资格834<1000，没有容量扩展或静默裁剪。solver统计仅覆盖常规非线性优化，初始化SfM求解耗时/触限为Unknown。完整源/依赖/后端/30项窗口输入配置哈希复核见[frozen_contract_final_verification.json](frozen_contract_final_verification.json)。',
+        '后端RSS为播放期间每0.5秒采样的已观测峰值，非全生命周期严格峰值；GPU峰值内存Unknown。逐臂三重复的最小/中位/最大汇总见[backend_arm_summary.csv](backend_arm_summary.csv)，包含首次位姿延迟、实际使用、容量、solver、RSS和尺度。公开ID数、>=4及>=10观测长链见[frontend_audit.csv](frontend_audit.csv)，逐链寿命见[candidate_lifecycle.csv](candidate_lifecycle.csv)。',
         '', '三重复按中位数和全范围报告。未执行总体显著性推断，依据及效应量见[统计附录](analysis-output/stats-appendix.md)。六窗是已知结果的开发窗，参考为COLMAP/proxy；添加观测从同一起点介入，可改变初始化，不能主张共同初始化后的纯跟踪效应。',
         '', '![四臂精度](analysis-output/figures/01-four-arm-ape.png)',
-        '图1用于核对各窗精度和技术波动。误差条不是置信区间；A09尺度漂移必须保留，不能只强调初始化成功。预注册的胜负仍以两臂专属共同支撑为准。',
+        '图1用于核对各窗精度和技术波动。误差条不是置信区间；A09相对参考的尺度失配必须保留，不能只强调初始化成功。预注册的胜负仍以两臂专属共同支撑为准。',
         '', '![公开剂量和实际残差使用](analysis-output/figures/02-dose-and-use.png)',
         '图2区分“发布了更多点”与“后端实际用了多少约束”。二者都不能直接证明新增独立信息或定位收益。',
         '', '已知实现边界：[implementation_audit_notes.md](implementation_audit_notes.md)。XFeat与C的冻结vins_safe来源映射不同，实际q范围见[source_weight_audit.csv](source_weight_audit.csv)，加上供给与耗时不同，仅允许整个来源方案比较。逐私有ID的确切死亡原因Unknown；有按类累计FB/NCC/边界死亡和几何/质量/去重拒绝，不能逐链唯一归因。receipt.started_at实际为收尾写入时间；墙钟用时有效，精确启动墙钟Unknown。',

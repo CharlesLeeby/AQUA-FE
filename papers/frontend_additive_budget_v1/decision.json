@@ -1,15 +1,50 @@
 {
-  "status": "IN_PROGRESS",
+  "status": "COMPLETE",
   "frontend_completed": 24,
   "frontend_total": 24,
-  "backend_attempted": 60,
-  "backend_completed": 60,
+  "backend_attempted": 72,
+  "backend_completed": 72,
   "backend_planned": 72,
   "reused_replays": 0,
   "quantity_contrast_sufficient_windows": 6,
   "quantity_practical_gain_windows": 1,
   "quantity_practical_loss_windows": 0,
   "results_boundary": "six outcome-known development windows; three technical repeats are not independent samples; COLMAP/proxy reference",
-  "answer": "Unknown; full matrix pending",
-  "next_step": "完成同一冻结合同的剩余矩阵。"
+  "answer": "取消6条并发配额确实增加了实际剂量，但仅A08相对L6达到实用改善；六窗L-all相对完整B均无实用改善，其中三窗实用退化。",
+  "next_step": "用已保存的逐ID、初始化和尺度日志做一次失稳归因审计，重点检查Bus异常重复及A02/A08学习添加退化；不自动扩数量或新增时机变体。",
+  "quantity_comparison_counts": {
+    "SMALL_OR_UNCERTAIN": 5,
+    "PRACTICAL_GAIN": 1
+  },
+  "source_generation_attempts": 7,
+  "invalid_source_generation_attempts": 1,
+  "failed_or_invalid_backend_runs": 0,
+  "all_comparison_counts": {
+    "L-all_vs_L6": {
+      "SMALL_OR_UNCERTAIN": 5,
+      "PRACTICAL_GAIN": 1
+    },
+    "L6_vs_B": {
+      "PRACTICAL_LOSS": 3,
+      "SMALL_OR_UNCERTAIN": 3
+    },
+    "L-all_vs_B": {
+      "PRACTICAL_LOSS": 3,
+      "SMALL_OR_UNCERTAIN": 3
+    },
+    "C-all_vs_B": {
+      "SMALL_OR_UNCERTAIN": 4,
+      "PRACTICAL_GAIN": 2
+    },
+    "L-all_vs_C-all": {
+      "PRACTICAL_LOSS": 3,
+      "SMALL_OR_UNCERTAIN": 3
+    }
+  },
+  "main_question_answer": "取消6条并发配额确实增加了实际剂量，但仅A08相对L6达到实用改善；六窗L-all相对完整B均无实用改善，其中三窗实用退化。",
+  "practical_net_benefit_vs_B_supported": false,
+  "isolated_quantity_gain_window": "a08_2700_3600",
+  "retained_instability": "Bus L-all repeat1 APE23.252566m on L-all/L6 support; other two about0.043m; no exclusion or extra replay",
+  "source_protocol_deviation": "Cemetery invalid first source attempt retained; one frame-index overlay before its backend; second generation is sole formal shared stream",
+  "host_exclusivity": "Unknown; prestart replay checks and fixed own CPU affinity, no continuous host-wide exclusivity proof"
 }

@@ -1,0 +1,15 @@
+{
+  "script_sha256": "5b6476e5175b57ddcd5d6b51ed46944ae3b130a9ecb1abc37d28402dec37a066",
+  "inputs": {
+    "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_additive_budget_v1/frontend_audit.csv": "01b3de2a306b05866b1f403c7ed251da40ba894dd884beb24375975e8a0cf5aa",
+    "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_additive_budget_v1/backend_results.csv": "b9250aa2fb8b97453f5acd62429c04b4ffe49152b589e84a58325356943542d6",
+    "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_additive_budget_v1/comparisons.csv": "46e5ae1629a8b74495a315494fe6640af605a9d3700af5e39974ff6cc5215842",
+    "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_additive_budget_v1/source_supply.csv": "3adc8c2dc92248965830bff45ce9cb8905c9b6f0e5ae751b6777dc3d639baeab",
+    "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_additive_budget_v1/source_weight_audit.csv": "7d1a27f6514c9eafe67bd1b3477ef1cab6e1eab95dd2e89736d6f9d27bdd94e5",
+    "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_additive_budget_v1/frontend_window_resources.csv": "afc9d3f3bfc95d2996ecd62743a7973d6b8aee84b207b3e018debe77eb7d184d"
+  },
+  "figures": {
+    "02-dose-and-use.png": "2144023bf31bd4de6a3cd824af9271464dbda2d8c537e3cb03263cdd61b0f141",
+    "01-four-arm-ape.png": "e5327bd418c40fc8eeb7d4fda1d6c0ed7ccd3a5266986bc8fa318cdf825dbe9e"
+  }
+}
