@@ -948,3 +948,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion:stable small-change neutral case,not a practicalpositive. Per-feature utility is Not evaluated.
 - Open questions:which candidate-set or backend-state signals distinguish neutral from useful/harmful additions?
 - Next experiment:complete fixed H01–H05 windows;then utility/risk research only.
+
+
+## 2026-09-08 — H01 separates action dose from practical benefit
+- Research question:can substantial received classical candidate action yield a neutral backend accuracy outcome?
+- Hypothesis:many eligible/residual observations need not change the set-level error meaningfully when the baseline is already stable.
+- Motivation:avoid equating candidate receipt or residual count with utility.
+- Related baseline:freshKLT Harbor01[0,900),same frozen Harbor family backend.
+- Proposed idea:retain the nonzero-action neutral contrast and its actual receipt/residual evidence.
+- Why it might work:provides a concrete counterexample to interpreting an active sidecar as an effective sidecar.
+- Assumptions:fixed accuracy contract,proxy reference and technicalrepeat limitations remain binding.
+- Potential failure cases:calling neutral zero-action,claiming every receivedcandidate helped,or hiding the small error increases.
+- Evidence:Confirmed fact.H01C20127publishedobservations/2498IDs and124110actualresidualblocks eachrepeat;APE median increases0.000758894m,RPE0.000134727m;ownsupport42poses/41RPEpairs,evo/receiptsPASS. Exact paths in case_registry.csv and common_support/coe1_h01_00000_00900/C-all_vs_B.
+- Current conclusion:SMALL_OR_UNCERTAIN with stable baseline and substantial action. Per-feature utility remains Not evaluated.
+- Open questions:which candidate/state properties distinguish this neutral case from the positive and severe-negative sets?
+- Next experiment:finish remaining4frozenA windows;then utility/risk mechanism analysis only.

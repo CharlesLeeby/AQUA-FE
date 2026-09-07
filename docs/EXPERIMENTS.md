@@ -864,3 +864,19 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Interpretation:stable baseline and small mixed metric changes;relative improvement alone does not satisfy the practical definition.
 - Conclusion:SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN,retained in neutral list.
 - Follow-up:complete H01–H05,then final case handoff;no parameter search or BatchB.
+
+
+## coe1_H01_initial_window — 2026-09-08
+- Experiment ID:classical_opportunity_expansion_v1/coe1_h01_00000_00900.
+- Date/status/scientific role:2026-09-08;COMPLETE comparison,SMALL_OR_UNCERTAIN/NONE;fixed classical control.
+- Git commit/branch:292fe54d3c9ca69ed25823f324ae1cc679cc0e18 reporting checkpoint;H01replays began underae5afea8499992074823e86651aac045f09e881f;exp/classical-opportunity-expansion-v1-20260908,unchanged source locks.
+- Dataset/window:AQUALOC Harbor01raw[0,900),exact timestamps/input/reference hashes in frozen roster and preparation receipt.
+- Environment/configuration:registered ROSNoetic/Python3.8,port12691,guarded1000capacity,.04s/8iterations,serialCPU2,3,8,9,unchanged Harbor-family configuration.
+- Baseline:fresh completeKLT B350cap/every2offset1/adaptive_clahe/vins_safe.
+- Proposed modification:frozen C-all append-only classical candidates;allB/nonfeature messages preserved.
+- Commands/artifacts:run_classical_opportunity_expansion.py --window coe1_h01_00000_00900 --arm B|C-all --repeat 1|2|3 via registered controller. Runtime /media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_h01_00000_00900;published common_support/coe1_h01_00000_00900/C-all_vs_B and case/backend tables.
+- Metrics/results:APEmin/median/maxB0.07076470/0.07076473/0.07089799m,C0.07120079/0.07152362/0.07155176m;RPEB0.00997389/0.00997393/0.01007549m,C0.00993253/0.01010866/0.01014479m. C20127observations/2498IDs,life3median/159maxobservations,124110actualcandidate residualblocksperrepeat.
+- Validity/common support:all6runability/per-IDreceiptsPASS;42poses,41s,93.3333%coverage,41RPEpairs,evo<1e-6m;maxactualeligible482<1000;firstpose2.449259sbotharms;losttrackingtruthUnknown,logproxiesseparate.
+- Interpretation:small error increases with substantial confirmed intervention;neutral is not null action.
+- Conclusion:SMALL_OR_UNCERTAIN,not a practicalpositive/loss or independent no-harm population claim.
+- Follow-up:finish H02–H05 and retain this nonzero-action neutral case for utility/risk research.

@@ -1,7 +1,7 @@
 # Classical expansion mechanism handoff — partial checkpoint
 
-Status: Batch A7/12windows resolved,42/72formalreplays. This is a case interpretation
-checkpoint, not the final analysis/report. The remaining five A windows must complete.
+Status: Batch A8/12windows resolved,48/72formalreplays. This is a case interpretation
+checkpoint, not the final analysis/report. The remaining four A windows must complete.
 The registered Batch B gate is already impossible because two severe regressions exist.
 
 All labels below refer to the **whole C candidate set versus B for this cold-start window**.
@@ -35,3 +35,5 @@ A06 `coe1_a06_00000_00900` is SMALL_OR_UNCERTAIN / DIRECTIONAL_GAIN,with BAPE2.0
 A07 `coe1_a07_00000_00900` is the second PRACTICAL_GAIN/ROBUST_PRACTICAL_GAIN: BAPE3.042555/3.044412/3.053754m versus C0.17339477/0.17339578/0.17340055m;BRPE0.68196793/0.68220301/0.68298444m versus C0.10670231/0.10670485/0.10670487m. Support36poses/38s/80%/34RPEpairs,evo/receiptsPASS. C30732observations/4890IDs,life3median/121maxobservations;firstposeabout0.200searlier. Baseline fittedscale0.289838versusC0.896614 remains diagnostic context. Positives now crossA04/A07;2severe cases still fail the registered riskbound.
 
 A10 `coe1_a10_00000_00900` is a stable SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN case: APEmedian0.06007548→0.05661839m(reduction3.457mm<10mmabsolute practicalfloor),RPE0.05224253→0.05369101m(increase1.448mmwithin guard). Support40poses/39s/93.0233%/39RPEpairs,evo/receiptsPASS. C8287observations/1460IDs,life2median/72maxobservations;firstposeequal. This neutral case differs from A06 baseline-instability uncertainty.
+
+H01 `coe1_h01_00000_00900` is a nonzero-action SMALL_OR_UNCERTAIN case: C20127observations/2498IDs and124110actualresidualblocks eachrepeat;APEmedian0.07076473→0.07152362m,RPE0.00997393→0.01010866m. Support42poses/41s/93.3333%/41RPEpairs,evo/receiptsPASS. Firstposeequal,repeat ranges small. Do not treat its neutral classification as absence of intervention or use residual counts as utility labels.

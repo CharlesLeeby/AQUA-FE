@@ -1,12 +1,12 @@
 # Classical additive opportunity expansion 独立交接
 
-2026-09-08；状态：**Batch A IN_PROGRESS，7/12 窗完成，42/72 次正式 replay 完成。**
+2026-09-08；状态：**Batch A IN_PROGRESS，8/12 窗完成，48/72 次正式 replay 完成。**
 
 首窗 `coe1_a01_00000_00900`：**PRACTICAL_LOSS / SEVERE_REGRESSION**。自身六轨迹共同支撑36 poses、35s、coverage81.818%、35对严格1s RPE；evo检查通过。B APE min/median/max=0.114753/0.155037/0.155037m；C=0.510393/0.554981/0.658114m。B RPE=0.015997/0.020657/0.020657m；C=0.064600/0.070127/0.083283m。全部6次runability和逐ID接收PASS，实际最大优化资格610<1000，未扩容/删KLT。
 
 C追加50545次观测，1017公开ID，寿命中位26、最长435；首个位姿相对参考延迟由6.248s变为7.249s，视觉/IMU对齐拒绝日志次数2→7。两臂重复波动均保留。尺度/初始化变化是同时观察到的现象，不是已经证明的致因。这个新负例不能删除或用于调整C。
 
-A03也已完成并出现严重退化：BAPE中位0.858028m，CAPE2854.46348m；自身42poses/41s/95.4545%/41RPEpairs，evo与6次逐ID/runability均PASS。A04已完成并获PRACTICAL_GAIN/ROBUST_PRACTICAL_GAIN，但B数值异常：BAPE中位743.154m，C0.113799m；支撑31/44poses=70.4545%，evo/receiptsPASS，C首姿更晚约2.900s。A05六次运行/逐ID均PASS，但共同位姿27<30，归NOT_EVALUABLE，不比较APE/RPE。A06为SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN：CAPE中位0.950726m，B151.785956m，但B范围181.441203m超过中位改善150.835229m，不能升级practical。A07也为PRACTICAL_GAIN/ROBUST_PRACTICAL_GAIN：APE中位3.044412→0.173396m，RPE0.682203→0.106705m，36poses/80%/34RPEpairs，evo/receiptsPASS。A10为SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN：APE中位0.060075→0.056618m，改善3.46mm低于1cm绝对门限；RPE增加1.45mm仍在护栏内。剩余Batch A5窗pending；H01前端正在执行。两次严重退化已使Batch B进入条件不成立，但必须继续完整A分母。必须完成全部12窗后再按冻结门决定Batch B，不可因首个严重退化提前换窗/停掉其余A窗。当前最终科学结论 **Unknown**。A/B合计24窗清单已在任何新C/后端结果前一次冻结，Batch B尚未激活。
+A03也已完成并出现严重退化：BAPE中位0.858028m，CAPE2854.46348m；自身42poses/41s/95.4545%/41RPEpairs，evo与6次逐ID/runability均PASS。A04已完成并获PRACTICAL_GAIN/ROBUST_PRACTICAL_GAIN，但B数值异常：BAPE中位743.154m，C0.113799m；支撑31/44poses=70.4545%，evo/receiptsPASS，C首姿更晚约2.900s。A05六次运行/逐ID均PASS，但共同位姿27<30，归NOT_EVALUABLE，不比较APE/RPE。A06为SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN：CAPE中位0.950726m，B151.785956m，但B范围181.441203m超过中位改善150.835229m，不能升级practical。A07也为PRACTICAL_GAIN/ROBUST_PRACTICAL_GAIN：APE中位3.044412→0.173396m，RPE0.682203→0.106705m，36poses/80%/34RPEpairs，evo/receiptsPASS。A10为SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN：APE中位0.060075→0.056618m，改善3.46mm低于1cm绝对门限；RPE增加1.45mm仍在护栏内。H01为SMALL_OR_UNCERTAIN：C追加20127观测/2498ID，APE中位仅增加0.759mm、RPE增加0.135mm；42poses/93.3333%/41RPEpairs，evo/receiptsPASS。剩余Batch A4窗pending；H02前端正在执行。两次严重退化已使Batch B进入条件不成立，但必须继续完整A分母。必须完成全部12窗后再按冻结门决定Batch B，不可因首个严重退化提前换窗/停掉其余A窗。当前最终科学结论 **Unknown**。A/B合计24窗清单已在任何新C/后端结果前一次冻结，Batch B尚未激活。
 
 独立 worktree `/home/ma/AQUA-FE_WS_classical_opportunity_expansion_v1`，分支 `exp/classical-opportunity-expansion-v1-20260908`，基准49c0247。清单冻结881dad7、执行冻结8f323ba、控制器964db5b、Python3.8兼容入口d162b73；均已推送并远端读回。旧主工作区/旧实验源码与结果不改。
 

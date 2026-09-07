@@ -1089,3 +1089,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues:small set-level APE change with slight RPE worsening is not a demonstrated practicalgain;per-feature utility remains Unknown.
 - Interpretation:current7/12A,42/72replays:2robust/practicalgains,2losses,2uncertain/small,1NOT_EVALUABLE,2severe,0structuralfailures. A10 provides a different neutral context from unstablebaselineA06.
 - Next steps:complete H01–H05 and final full-denominator report without BatchB/tuning.
+
+
+## 2026-09-08 — H01 neutral outcome with substantial received candidate action
+- Task objective: complete the first Harbor case under the unchanged frozen method.
+- Problem / motivation: distinguish neutral accuracy from zero intervention or missing candidate receipt.
+- Files changed: expansion tables/common_support/capacity, case/independent handoffs and work/experiment/research logs.
+- Implementation: H01[0,900),fresh B/Ceach3technicalrepeats;unchanged Harbor configuration and own-support/evo/classification.
+- Technical decisions: retain SMALL_OR_UNCERTAIN/NONE,with small positive C-B errors;do not call the case zero-action or a practicalloss.
+- Experiments performed:coe1_h01_00000_00900,AQUALOC Harbor01,6formalreplays.
+- Quantitative results:APEmin/median/maxB0.07076470/0.07076473/0.07089799m,C0.07120079/0.07152362/0.07155176m;RPEB0.00997389/0.00997393/0.01007549m,C0.00993253/0.01010866/0.01014479m. Support42poses/41s/93.3333%/41RPEpairs,evo<1e-6m. C20127observations/2498IDs,life3median/159maxobservations,actualresidual124110perrepeat.
+- Qualitative observations:both arms stable;firstpose2.449259s and misalignment count6 match. FittedscalesB1.055339,C1.056086. All6runability/per-IDreceiptsPASS,maxactualeligible482<1000.
+- Failed attempts:none in this case.
+- Known issues:small error increases remain visible;nonzero candidate receipts/residuals do not establish useful constraints or per-feature labels.
+- Interpretation:current8/12A,48/72replays:2robust/practicalgains,2losses,3small/uncertain,1NOT_EVALUABLE,2severe,0structuralfailures. H01 is a nonzero-action neutral mechanism case.
+- Next steps:finish H02–H05 without tuning or BatchB.
