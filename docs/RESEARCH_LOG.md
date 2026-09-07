@@ -933,3 +933,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion:local positive opportunity recurs across two sequences,but the registered acceptable-risk condition is not met. Final full-denominator decision still awaits the remaining6A windows.
 - Open questions:what utility/risk mechanisms separate positives from negatives without merely adding more candidates?
 - Next experiment:complete A10/H01–H05 under frozen contract,then only observation-utility/risk mechanism research;no BatchB or C-all tuning.
+
+
+## 2026-09-08 — A10 supplies a stable small-change neutral contrast
+- Research question:does frozen C addition yield a practical benefit when the fresh baseline is already stable and close to the reference scale?
+- Hypothesis:extra received observations can produce small mixed changes without meaningful overall improvement.
+- Motivation:complement pathologicalbaseline/negative cases with a stable neutral case and preserve the absolute practical threshold.
+- Related baseline:fresh fullKLT onA10[0,900);A06 is a different uncertainty case driven by extreme baseline variance.
+- Proposed idea:retain A10 as SMALL_OR_UNCERTAIN,with directionalAPE tier and RPE increase visible.
+- Why it might work:separates small changes from the larger but unstable A06 contrast,without claiming all neutral cases share one mechanism.
+- Assumptions:the inherited0.01m absoluteAPE floor applies even when relative reduction exceeds5%;RPEguard unchanged.
+- Potential failure cases:reporting percentage-only improvement,ignoring slightRPEworsening,or treating extra residual count as proof of utility.
+- Evidence:Confirmed fact.A10APEmedian0.06007548→0.05661839m,RPE0.05224253→0.05369101m;40commonposes/39RPEpairs,evo/receiptsPASS;C8287publishedobservations and28898actualresidualblocks perrepeat. Exact ranges in case_registry.csv/common_support.
+- Current conclusion:stable small-change neutral case,not a practicalpositive. Per-feature utility is Not evaluated.
+- Open questions:which candidate-set or backend-state signals distinguish neutral from useful/harmful additions?
+- Next experiment:complete fixed H01–H05 windows;then utility/risk research only.

@@ -2,9 +2,9 @@
 
 Status: IN_PROGRESS; scientific decision: Unknown.
 
-1. New prospective C-all physical windows replayed: 6; replay attempts: 36.
+1. New prospective C-all physical windows replayed: 7; replay attempts: 42.
 2. Activated roster: 12 sequence-held-out / 0 window-held-out relative to the six C-all development windows; broader project exposure retained.
-3. Full activated denominator: {"PRACTICAL_LOSS": 2, "PRACTICAL_GAIN": 2, "NOT_EVALUABLE": 1, "SMALL_OR_UNCERTAIN": 1, "PENDING": 6}.
+3. Full activated denominator: {"PRACTICAL_LOSS": 2, "PRACTICAL_GAIN": 2, "NOT_EVALUABLE": 1, "SMALL_OR_UNCERTAIN": 2, "PENDING": 5}.
 4. ROBUST_PRACTICAL_GAIN: 2.
 5. Practical positive sequences: ["A04", "A07"].
 6. Severe regression windows: 2.
@@ -22,7 +22,7 @@ Status: IN_PROGRESS; scientific decision: Unknown.
 | coe1_a05_00000_00900 | A | NOT_EVALUABLE | NONE | Not evaluated. | Not evaluated. | False | INVALID_COMMON_SUPPORT |
 | coe1_a06_00000_00900 | A | SMALL_OR_UNCERTAIN | DIRECTIONAL_GAIN | 2.05039 / 151.786 / 183.492 | 0.948918 / 0.950726 / 0.970376 | False |  |
 | coe1_a07_00000_00900 | A | PRACTICAL_GAIN | ROBUST_PRACTICAL_GAIN | 3.04255 / 3.04441 / 3.05375 | 0.173395 / 0.173396 / 0.173401 | False |  |
-| coe1_a10_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |
+| coe1_a10_00000_00900 | A | SMALL_OR_UNCERTAIN | DIRECTIONAL_GAIN | 0.0598424 / 0.0600755 / 0.0604784 | 0.05649 / 0.0566184 / 0.0566204 | False |  |
 | coe1_h01_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |
 | coe1_h02_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |
 | coe1_h03_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |

@@ -1059,3 +1059,33 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues:baseline scale discrepancy remains material;fittedscale is diagnostic and does not establish root cause. A07 overlaps broader project history while remaining outside sixCdeveloperwindows.
 - Interpretation:6/12A and36/72replays complete:2practical/robustgains acrossA04/A07,2losses,1uncertain,1NOT_EVALUABLE,2severe,0structural failures. Local positive opportunity is observed across sequences;acceptable-risk generalization condition still fails.
 - Next steps:finish A10/H01/H02/H03/H04/H05;do not activate B or tune C-all.
+
+
+## 2026-09-08 — Final batch-decision consistency audit preparation
+- Task objective: ensure the final report, saved Batch A gate and immutable batch snapshot agree.
+- Problem / motivation: cross-sequence positives must not cause the previously fixed severe-risk bound to be overlooked during final aggregation.
+- Files changed: scripts/audit_classical_opportunity_final.py and this log.
+- Implementation: verify the Batch A gate's evidence hash against checkpoint_batch_A/window_outcomes.csv; compare actual A gain/severe/structural counts; check activated batches and recompute the registered final decision from retained cases.
+- Technical decisions: reporting/integrity checks only; no gate, classification, candidate pipeline, backend or replay changes. Small gate receipt is exported with other final receipts.
+- Experiments performed: Not evaluated.; script is compiled but cannot run until the batch controller exits and final decision is COMPLETE.
+- Quantitative results: Not evaluated. for this final audit; no additional replay launched.
+- Qualitative observations: local positive recurrence and acceptable-risk transfer are distinct conditions.
+- Failed attempts: none in audit preparation.
+- Known issues: full runtime execution of the audit remains pending.
+- Interpretation: prepares a check of the existing registered decision, not a new scientific criterion.
+- Next steps: finish active Batch A, run audit/supplement/analysis bundle and review final report.
+
+
+## 2026-09-08 — A10 stable small-change neutral case
+- Task objective: finish the seventh frozen window and retain an ordinary small-change control case.
+- Problem / motivation: a relative APE decrease must also pass the inherited absolute practical threshold.
+- Files changed: expansion result/common-support/capacity tables, mechanism/independent handoffs and work/experiment/research logs; previously compiled final gate-consistency audit is included in this checkpoint.
+- Implementation: fixed B/Ceach3technicalrepeats with own six-trajectory support;unchanged evaluation and classification.
+- Technical decisions: retain SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN because0.003457089m APE reduction is below0.01m,while0.001448478m RPE increase is within the frozen guard. No threshold adjustment.
+- Experiments performed:coe1_a10_00000_00900,AQUALOC archaeology10[0,900),6formalreplays.
+- Quantitative results:APEmin/median/maxB0.05984241/0.06007548/0.06047836m,C0.05649002/0.05661839/0.05662045m;RPEB0.05223652/0.05224253/0.05225060m,C0.05367140/0.05369101/0.05369167m. Support40poses/39s/93.0233%/39RPEpairs,evo<1e-6m. C8287observations/1460IDs,lifetime2median/72maxobservations.
+- Qualitative observations:both arms are stable and fitted scales are near1(B1.012156,C0.996563). Firstposedelay2.949710s matches;misalignment countsB5,C6. Cactualresidual28898perrepeat,maxeligible429<1000;all6runability/per-IDreceiptsPASS.
+- Failed attempts:none;no scientific accuracy failure or support exclusion.
+- Known issues:small set-level APE change with slight RPE worsening is not a demonstrated practicalgain;per-feature utility remains Unknown.
+- Interpretation:current7/12A,42/72replays:2robust/practicalgains,2losses,2uncertain/small,1NOT_EVALUABLE,2severe,0structuralfailures. A10 provides a different neutral context from unstablebaselineA06.
+- Next steps:complete H01–H05 and final full-denominator report without BatchB/tuning.

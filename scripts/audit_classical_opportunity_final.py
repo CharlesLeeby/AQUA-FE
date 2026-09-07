@@ -129,11 +129,29 @@ def main():
     assert replay_count == decision['backend_attempted']
     assert Counter(r['classification'] for r in audited) == Counter(decision['classification_counts'])
     assert len(audited) == decision['physical_windows_planned']
+    gate = receipt(RUNTIME / 'batch_A_gate.json', Path('batch_A_gate.json'))
+    check(PAPER / 'checkpoint_batch_A/window_outcomes.csv', gate['evidence_window_outcomes_sha256'])
+    a_cases = [c for c in cases.values() if c['batch'] == 'A']
+    a_gain = sum(c['classification'] == 'PRACTICAL_GAIN' for c in a_cases)
+    a_severe = sum(c['severe_regression'] == 'True' for c in a_cases)
+    a_structural = sum(c['structural_failure'] == 'True' for c in a_cases)
+    assert len(a_cases) == 12
+    assert gate['practical_gain'] == a_gain and gate['severe_regression'] == a_severe and gate['structural_failure_windows'] == a_structural
+    assert gate['execute_batch_B'] == (a_gain >= 1 and a_severe <= 1 and a_structural < 2)
+    assert gate['execute_batch_B'] == ('B' in decision['activated_batches'])
+    active_cases = [c for c in cases.values() if c['batch'] in decision['activated_batches']]
+    positives = [c for c in active_cases if c['classification'] == 'PRACTICAL_GAIN']
+    severe = sum(c['severe_regression'] == 'True' for c in active_cases)
+    structural = sum(c['structural_failure'] == 'True' for c in active_cases)
+    confirmed = len(positives) >= 2 and len({c['sequence'] for c in positives}) >= 2 and severe <= 1 and structural < 2
+    expected_decision = 'CLASSICAL_ADDITIVE_OPPORTUNITY_CONFIRMED' if confirmed else 'ADDITIVE_OPPORTUNITY_NOT_GENERALIZED'
+    assert decision['scientific_decision'] == expected_decision
     result = {'status': 'PASS' if not failures else 'INTEGRITY_FAILURE',
               'formal_replay_count': replay_count, 'physical_window_count': len(audited),
               'unique_artifact_hashes_checked': len(checked), 'windows': audited,
               'hash_mismatches': failures, 'source_locks_verified': True,
               'classification_recalculation': 'same frozen function; exact match for all valid comparisons',
+              'registered_gate_and_final_decision_consistency': True,
               'foreign_host_exclusivity': 'Unknown; prestart process/port checks only, no claim of continuous host exclusivity',
               'script_sha256': sha(Path(__file__))}
     output.write_text(json.dumps(result, indent=2) + '\n')

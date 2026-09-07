@@ -1,7 +1,7 @@
 # Classical expansion mechanism handoff — partial checkpoint
 
-Status: Batch A6/12windows resolved,36/72formalreplays. This is a case interpretation
-checkpoint, not the final analysis/report. The remaining six A windows must complete.
+Status: Batch A7/12windows resolved,42/72formalreplays. This is a case interpretation
+checkpoint, not the final analysis/report. The remaining five A windows must complete.
 The registered Batch B gate is already impossible because two severe regressions exist.
 
 All labels below refer to the **whole C candidate set versus B for this cold-start window**.
@@ -33,3 +33,5 @@ A05 `coe1_a05_00000_00900` is retained as NOT_EVALUABLE:27commonposes<30required
 A06 `coe1_a06_00000_00900` is SMALL_OR_UNCERTAIN / DIRECTIONAL_GAIN,with BAPE2.050386/151.785956/183.491589m versus C0.948918/0.950726/0.970376m(min/median/max). Median reduction150.835229m does not exceed181.441203m armrange;do not promote this case to practicalgain. Support37poses/36s/84.0909%/36RPEpairs,evo/receiptsPASS. Retain as baseline-instability context,even though allCAPE/RPErepeats are lower.
 
 A07 `coe1_a07_00000_00900` is the second PRACTICAL_GAIN/ROBUST_PRACTICAL_GAIN: BAPE3.042555/3.044412/3.053754m versus C0.17339477/0.17339578/0.17340055m;BRPE0.68196793/0.68220301/0.68298444m versus C0.10670231/0.10670485/0.10670487m. Support36poses/38s/80%/34RPEpairs,evo/receiptsPASS. C30732observations/4890IDs,life3median/121maxobservations;firstposeabout0.200searlier. Baseline fittedscale0.289838versusC0.896614 remains diagnostic context. Positives now crossA04/A07;2severe cases still fail the registered riskbound.
+
+A10 `coe1_a10_00000_00900` is a stable SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN case: APEmedian0.06007548→0.05661839m(reduction3.457mm<10mmabsolute practicalfloor),RPE0.05224253→0.05369101m(increase1.448mmwithin guard). Support40poses/39s/93.0233%/39RPEpairs,evo/receiptsPASS. C8287observations/1460IDs,life2median/72maxobservations;firstposeequal. This neutral case differs from A06 baseline-instability uncertainty.

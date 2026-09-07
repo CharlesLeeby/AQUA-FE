@@ -848,3 +848,19 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Interpretation:second stable positive on a different sequence,with baseline scale error still visible;no independent population inference or per-feature utility label.
 - Conclusion:ROBUST_PRACTICAL_GAIN onA07. The2severe cases already observed still prohibitBatchB despite2cross-sequencepositives.
 - Follow-up:finish remaining6A windows and handoff complete positive/negative/uncertain/reference-limited pool to utility/risk research.
+
+
+## coe1_A10_initial_window — 2026-09-08
+- Experiment ID:classical_opportunity_expansion_v1/coe1_a10_00000_00900.
+- Date/status/scientific role:2026-09-08;COMPLETE comparison,SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN;fixed classical control.
+- Git commit/branch:ae5afea8499992074823e86651aac045f09e881f;exp/classical-opportunity-expansion-v1-20260908;frozen runner/mathematical identities unchanged.
+- Dataset/window:AQUALOC archaeology10raw[0,900),exact timestamps/reference/input identities in frozen roster and preparation receipt.
+- Environment/configuration:registered ROSNoetic/Python3.8,port12691,guarded1000capacity,.04s/8iterations,serialCPU2,3,8,9,unchanged family calibration/hash locks.
+- Baseline:fresh completeKLT B350cap/every2offset1/adaptive_clahe/vins_safe.
+- Proposed modification:unchanged C-all adds eligible classical candidates while preserving allB and nonfeature messages.
+- Commands/artifacts:run_classical_opportunity_expansion.py --window coe1_a10_00000_00900 --arm B|C-all --repeat 1|2|3 via registered controller. Runtime /media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_a10_00000_00900;published common_support/coe1_a10_00000_00900/C-all_vs_B and case/backend tables.
+- Metrics/results:APEmin/median/maxB0.05984241/0.06007548/0.06047836m,C0.05649002/0.05661839/0.05662045m;RPEB0.05223652/0.05224253/0.05225060m,C0.05367140/0.05369101/0.05369167m. APEreduction0.003457089m<0.01m;RPEincrease0.001448478m within guard. C8287observations/1460IDs,lifetime2median/72maxobservations.
+- Validity/common support:6/6runability/per-IDreceiptsPASS;40poses,39s,93.0233%coverage,39RPEpairs,evo<1e-6m;maxactualeligible429<1000,Cresidual28898perrepeat;firstposedelay2.949710sbotharms;losttrackingtruthUnknown,logproxiesseparate.
+- Interpretation:stable baseline and small mixed metric changes;relative improvement alone does not satisfy the practical definition.
+- Conclusion:SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN,retained in neutral list.
+- Follow-up:complete H01–H05,then final case handoff;no parameter search or BatchB.
