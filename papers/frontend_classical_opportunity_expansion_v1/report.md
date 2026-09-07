@@ -2,11 +2,11 @@
 
 Status: IN_PROGRESS; scientific decision: Unknown.
 
-1. New prospective C-all physical windows replayed: 2; replay attempts: 12.
+1. New prospective C-all physical windows replayed: 3; replay attempts: 18.
 2. Activated roster: 12 sequence-held-out / 0 window-held-out relative to the six C-all development windows; broader project exposure retained.
-3. Full activated denominator: {"PRACTICAL_LOSS": 2, "PENDING": 10}.
-4. ROBUST_PRACTICAL_GAIN: 0.
-5. Practical positive sequences: [].
+3. Full activated denominator: {"PRACTICAL_LOSS": 2, "PRACTICAL_GAIN": 1, "PENDING": 9}.
+4. ROBUST_PRACTICAL_GAIN: 1.
+5. Practical positive sequences: ["A04"].
 6. Severe regression windows: 2.
 7. Candidate dose/lifetime/initialization comparison with old A02/Bus: pending final case interpretation; exact new fields in case_registry.csv and old tables remain frozen.
 8. Batch B activated: False. Exact unactivated windows remain in the registry.
@@ -18,7 +18,7 @@ Status: IN_PROGRESS; scientific decision: Unknown.
 |---|---|---|---|---|---|---|---|
 | coe1_a01_00000_00900 | A | PRACTICAL_LOSS | NONE | 0.114753 / 0.155037 / 0.155037 | 0.510393 / 0.554981 / 0.658114 | True |  |
 | coe1_a03_00000_00900 | A | PRACTICAL_LOSS | NONE | 0.854467 / 0.858028 / 0.861665 | 2781.32 / 2854.46 / 2867.04 | True |  |
-| coe1_a04_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |
+| coe1_a04_00000_00900 | A | PRACTICAL_GAIN | ROBUST_PRACTICAL_GAIN | 743.154 / 743.154 / 837.552 | 0.113788 / 0.113799 / 0.113804 | False |  |
 | coe1_a05_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |
 | coe1_a06_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |
 | coe1_a07_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |

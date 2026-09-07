@@ -784,3 +784,19 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Interpretation: initialized output continuity and successful delivery do not imply accurate VIO. Extremely large C errors occur in all3technicalrepeats and remain in the registered denominator.
 - Conclusion: second severe new negative in Batch A prevents Batch B admission; all remaining10A windows still required.
 - Follow-up: complete frozen Batch A, then final set-level case handoff; no rerun, XFeat arm or parameter adjustment.
+
+
+## coe1_A04_initial_window — 2026-09-08
+- Experiment ID: classical_opportunity_expansion_v1/coe1_a04_00000_00900.
+- Date/status/scientific role:2026-09-08,COMPLETE per-window comparison;PRACTICAL_GAIN/ROBUST_PRACTICAL_GAIN;fixed classical control/probe.
+- Git commit/branch:e59c4fdfac30640a1308dc8657d363ed8143a541 report checkpoint;execution started undera5eec9e7604f3b66af6ca27bed0a22448f365f66;exp/classical-opportunity-expansion-v1-20260908;method source locks unchanged.
+- Dataset/window:AQUALOC archaeology04raw[0,900),exact timestamps in frozen roster.
+- Environment/configuration:ROSNoetic/Python3.8,ROS12691,guarded1000capacity,.04s/8iterations,CPU2,3,8,9,identical sensor-family backend source except runtime paths.
+- Baseline:fresh completeKLT B350cap/every2offset1/adaptive_clahe/vins_safe.
+- Proposed modification:frozen C-all appending classical candidates;no source/q/gate/backend/evaluator change.
+- Commands/artifacts:registered batch controller invokes run_classical_opportunity_expansion.py --window coe1_a04_00000_00900 --arm B|C-all --repeat 1|2|3. Runtime /media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_a04_00000_00900;published common_support/coe1_a04_00000_00900/C-all_vs_B and case_registry/backend_results tables in expansion paper directory.
+- Metrics/results:BAPE743.154136/743.154136/837.552376m,CAPE0.11378774/0.11379938/0.11380400m;BRPE90.424742/90.424742/102.934309m,CRPE0.13762984/0.13763328/0.13763494m(allmin/median/max). Fixed properSE3/strict1s positional-delta RPE. C57373observations,4843IDs,2971ge4,1745ge10,life6median/195maxobservations.
+- Validity/common support:all6runability and exactper-IDreceiptsPASS,maxactualeligible564<1000;31commonposes,35s,coverage70.4545%,2segments,29RPEpairs,evo<1e-6m. Cfirstpose2.899775s later thanB;Ccoverage82.6143%,B89.2058%;losttrackingtruthUnknown,logproxiesseparate.
+- Interpretation:robust range-separated improvement over a numerically diverged baseline;common support just exceeds frozen bound. This supports a specific rescue case, not unqualified routine accuracy gain.
+- Conclusion:first new practical/robust positive,one positive sequence;2existingsevere regressions still prohibitBatchB.
+- Follow-up:finish9remainingA windows;handoff baseline-anomaly case to utility/risk mechanisms without tuning C-all.

@@ -1,7 +1,7 @@
 window_id,run_slug,sequence,heldout_type,heldout_scope,batch,start_index,end_index_exclusive,classification,reason,severe_regression,positive_level,new_C_failure,structural_failure,backend_attempted,APE_delta_m,APE_delta_pct,RPE_delta_m,RPE_delta_pct,APE_repeat_range_threshold,RPE_repeat_range_threshold,RPE_guard_m
 coe1_a01_00000_00900,coe1_a01_00000_00900,A01,sequence-held-out,six_C_all_development_windows,A,0,900,PRACTICAL_LOSS,,True,NONE,False,False,6,0.39994416751147377,257.96730621614734,0.04946954594349774,239.4766253903855,0.1477212554349705,0.018683697140455563,0.018683697140455563
 coe1_a03_00000_00900,coe1_a03_00000_00900,A03,sequence-held-out,six_C_all_development_windows,A,0,900,PRACTICAL_LOSS,,True,NONE,False,False,6,2853.6054513891504,332577.0168706386,277.207709795188,351110.4057550522,85.72727867649428,7.5533454487055,7.5533454487055
-coe1_a04_00000_00900,coe1_a04_00000_00900,A04,sequence-held-out,six_C_all_development_windows,A,0,900,PENDING,,False,NONE,False,False,0,,,,,,,
+coe1_a04_00000_00900,coe1_a04_00000_00900,A04,sequence-held-out,six_C_all_development_windows,A,0,900,PRACTICAL_GAIN,,False,ROBUST_PRACTICAL_GAIN,False,False,6,-743.0403362422487,-99.98468697418468,-90.28710857317002,-99.84779244949345,94.39824056936288,12.509566830059086,12.509566830059086
 coe1_a05_00000_00900,coe1_a05_00000_00900,A05,sequence-held-out,six_C_all_development_windows,A,0,900,PENDING,,False,NONE,False,False,0,,,,,,,
 coe1_a06_00000_00900,coe1_a06_00000_00900,A06,sequence-held-out,six_C_all_development_windows,A,0,900,PENDING,,False,NONE,False,False,0,,,,,,,
 coe1_a07_00000_00900,coe1_a07_00000_00900,A07,sequence-held-out,six_C_all_development_windows,A,0,900,PENDING,,False,NONE,False,False,0,,,,,,,

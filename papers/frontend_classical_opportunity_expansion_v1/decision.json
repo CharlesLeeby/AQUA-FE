@@ -4,16 +4,19 @@
     "A"
   ],
   "physical_windows_planned": 12,
-  "physical_windows_replayed": 2,
-  "backend_attempted": 12,
+  "physical_windows_replayed": 3,
+  "backend_attempted": 18,
   "classification_counts": {
     "PRACTICAL_LOSS": 2,
-    "PENDING": 10
+    "PRACTICAL_GAIN": 1,
+    "PENDING": 9
   },
   "severe_regression_count": 2,
   "structural_failure_windows": 0,
-  "robust_practical_gain_count": 0,
-  "practical_positive_sequences": [],
+  "robust_practical_gain_count": 1,
+  "practical_positive_sequences": [
+    "A04"
+  ],
   "scientific_decision": "Unknown",
   "next_step": "Complete the frozen active batch and registered decision; no tuning or substitutions."
 }

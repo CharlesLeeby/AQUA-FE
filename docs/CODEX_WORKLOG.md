@@ -999,3 +999,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: final runtime audit and rendered-figure review remain outstanding until all active windows resolve.
 - Interpretation: implementation prepares traceable reporting only; it supplies no new scientific outcome.
 - Next steps: complete Batch A, run finalization sequence, inspect figures and write the final Chinese report/hand-off.
+
+
+## 2026-09-08 — A04 first robust positive, with baseline numerical anomaly
+- Task objective: complete the third registered B/C case and retain its positive evidence with the correct baseline context.
+- Problem / motivation: an apparent large percentage improvement must be distinguished from routine stable-baseline tracking gains.
+- Files changed: expansion current tables, common_support/coe1_a04_00000_00900, capacity audit, case_mechanism_handoff.md, independent handoff and project/research/experiment logs.
+- Implementation: fixed B/C3technicalrepeats each; inherited own-support/evo/classifier; no extra run or method change.
+- Technical decisions: retain the frozen ROBUST_PRACTICAL_GAIN descriptor and separately describe the baseline numerical anomaly and marginal common-support coverage. Do not reopen Batch B after already observing2severe cases.
+- Experiments performed: AQUALOC archaeology04[0,900), coe1_a04_00000_00900;6formalreplays.
+- Quantitative results: BAPE min/median/max743.154136/743.154136/837.552376m; CAPE0.11378774/0.11379938/0.11380400m. BRPE90.424742/90.424742/102.934309m; CRPE0.13762984/0.13763328/0.13763494m. Support31/44poses,35s,70.4545%,2segments,29RPEpairs;evo<1e-6m. C57373observations/4843IDs,medianlife6,max195observations.
+- Qualitative observations: Cfirstpose7.648394s versus B4.748619s; fittedscaleC0.958281versusB0.00103576. C trajectorycoverage82.6143% versus B89.2058%. All6runability/exactreceiptsPASS; maximum actualeligible564<1000.
+- Failed attempts: none; large B numerical error is retained as part of the positive contrast, not reclassified as missing output.
+- Known issues: gain is conditional on a pathological B trajectory and own support barely above70%; root cause Unknown. Proxy reference and three technical repeats do not establish broad efficacy.
+- Interpretation: Confirmed fact. first new robust/practical positive; partial totals1gain/2loss/0neutral,2severe,0structuralfailures,3of12Aresolved. Severe-risk bound still excludes Batch B and acceptable-generalization confirmation.
+- Next steps: complete remaining9A windows and retain A04 as a baseline-anomaly mechanism case.

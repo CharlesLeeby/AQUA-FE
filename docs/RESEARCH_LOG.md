@@ -873,3 +873,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion: second severe C-all regression outside its six developers. Mechanistic explanation remains Hypothesis / Inference. No acceptable-generalization confirmation can meet the frozen severe-count bound after this result; complete Batch A is still needed for honest case counts.
 - Open questions: which set-level temporal/geometric properties distinguish any later positive/neutral cases from A01/A03?
 - Next experiment: finish remaining frozen Batch A windows; do not activate B; pass complete evidence to observation-utility / risk mechanism research.
+
+
+## 2026-09-08 — A04 opportunity exists as a baseline-anomaly rescue
+- Research question: do new fixed-C positive opportunities appear after the first two severe negatives?
+- Hypothesis: extra constraints can rescue some cold-start configurations while destabilizing others.
+- Motivation: characterize the positive set faithfully instead of hiding its pathological baseline behind a large percentage gain.
+- Related baseline:fresh completeKLT on A04[0,900);oldA02/Busremain development controls.
+- Proposed idea:keep the registered robust label and attach baseline/initialization/common-support context for mechanism research.
+- Why it might work:range separation plus preserved receipts identifies a reproducible set-level contrast even when absolute baseline quality is poor.
+- Assumptions:own support/evo valid;fittedscale is diagnostic;technicalrepeat stability is not independent replication.
+- Potential failure cases:claiming routine tracking improvement from rescue of a diverged baseline, overlooking later C initialization or marginal support, assigning each C feature a positive utility label.
+- Evidence:Confirmed fact.A04CAPE median0.113799mversusB743.154136m;CRPE0.137633mversusB90.424742m;three C repeats narrowly stable. Support31/44poses=70.4545%,29RPEpairs,evoPASS. See case_registry.csv/common_support and case_mechanism_handoff.md.
+- Current conclusion:a new robust/practical candidate-set positive exists outside sixCdevelopers;acceptable-risk generalization remains unsupported by the2severe cases. Cause of opposite outcomes acrossA03/A04isHypothesis / Inference.
+- Open questions:which initialization/observation-utility properties distinguish the rescue and harm cases?
+- Next experiment:finish remaining frozenBatchA;then observation-utility/risk analysis only,without newC tuning or BatchB.
