@@ -1,0 +1,49 @@
+{
+  "AA_behavior_gate": "FAIL; this is an integrity QA PASS, not behavioral equivalence",
+  "checks": [
+    {
+      "check": "frozen_additive_paper_files",
+      "count": 57,
+      "status": "PASS"
+    },
+    {
+      "check": "original_source_and_external_backend_hashes",
+      "count": 134,
+      "status": "PASS"
+    },
+    {
+      "check": "six_extractions_source_dose_phase_and_output_hashes",
+      "count": 6,
+      "status": "PASS"
+    },
+    {
+      "check": "AA_6_receipts_received_IDs_and_configs",
+      "count": 6,
+      "status": "PASS"
+    },
+    {
+      "check": "no_formal_diagnostic_after_failed_AA",
+      "count": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "diagnostic_source_build_execution_lock",
+      "count": 51,
+      "status": "PASS"
+    },
+    {
+      "check": "handoff_report_local_links",
+      "status": "PASS"
+    },
+    {
+      "check": "own_backend_processes_finished",
+      "count": 0,
+      "status": "PASS"
+    }
+  ],
+  "information_summary_rows": 336,
+  "new_formal_replays": 0,
+  "observation_rows": 1341840,
+  "source_summary_rows": 126,
+  "status": "PASS"
+}

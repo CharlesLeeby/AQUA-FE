@@ -748,3 +748,29 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Potential failure cases / Interpretation：全秩影子子空间、未知深度、非独立样本/q混杂可能使任何单指标不可判别。
 - Conclusion / Open questions：Unknown，尚无在线准入量证据。
 - Next steps / Next experiment：先完整既有数据审计；缺失状态才做日志后端及B A/A，不自动开发router。
+
+
+## 2026-09-08 / OBSUTILITY-v1 / 既有数据机制审计与A/A停止
+
+- Task objective / Research question：区分可跟踪、几何互补、初始化风险与水下场景真实性；不实现评分或router。
+- Problem / Motivation：完整KLT下L-all三窗退化而C-all两窗改善，数量/实际残差已充分增加，需机制与判别性证据。
+- Files changed：本分支scripts/{analyze,build,run,report,audit,inspect}_observation_utility相关独立脚本；papers/frontend_observation_utility_audit_v1全部交付；docs/CODEX_HANDOFF_OBSERVATION_UTILITY.md及项目日志。没有原workspace、旧证据分支或外部后端写入。
+- Implementation：旧72日志receipt/log/vio/use核验；六窗2439输出时刻共1,341,840个B/X/C观测行；两模型×原q/q=1的相对B信息代理；pre/post-init按三技术重复分组；首准入可用性单独审计；原图固定帧查看；一手文献定向核查。
+- Technical decisions：保留所有trace/logdet/min-eigen/weak-direction/condition指标；完整VIO Fisher与逐点因果标签Unknown；科学单位是物理窗，不能把大量观测或3重复当独立样本。矩阵PSD不等于约束无偏。
+- Experiment ID / status / scientific role：OBSUTILITY-v1，existing-data COMPLETE；日志诊断A/A FAIL并停止正式矩阵；development机制发现/工程控制，不是新算法有效性实验。
+- Git commit / branch：提取及诊断源码07e59b5933ca6c7b1c19906a19ff1f5adf30c3a2，问题冻结2bc23263e7f6dc39329373fc78bc9098f1e19109；exp/observation-utility-audit-v1-20260908。源证据49c0247，历史初始化54cc31f。
+- Dataset / window / baseline：沿用原六窗windows.csv；B完整KLT、L-all XFeat、C-all正常GFTT，L6仅引用原剂量比较。无新窗口/生成器/特征bag/权重臂。
+- Environment / exact configuration：原ROS Noetic/冻结输入与VINS数学配置，OMP/BLAS/MKL线程1；A/A端口12681、CPU2,3,8,9；离线提取CPU0,6或1,7；runtime /media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1。宿主非排他。
+- Commands / artifacts：analyze_observation_utility_v1.py --logs/--window/--summarize；build_observation_utility_backend.py；run_observation_utility_diagnostics.py --freeze/--aa；admission与delivery独立audit脚本；report脚本。具体命令、路径及失败见reproduction.md/diagnostic_gate_report.md。
+- Experiments performed：原72回放只读分析；新增A02/A08/Bus B各一对冻结/诊断版，共6工程回放；0/27正式diagnostic；0新算法实验。
+- Quantitative results：126行来源/阶段汇总、336行信息汇总、922条旧日志事件；六窗X/C局部motion偏差中位倍率a09_6000_6800 1.34592, a02_0_900 1.66452, afrl_bus_s180_d045 2.3537, a08_2700_3600 1.22185, afrl_cemetery_s135_d045 1.16334, h07_0_1000 1.53643（精确值以window_mechanism_summary.csv为准）。A02/A08单位q集合flow logdet X/C分别6.1644/2.4276、5.4192/3.5573，信息proxy更高仍退化。原q全分布独立保留。
+- Initialization：A02 B/C对齐拒绝7，L-all10/10/17；Bus B/C0，L-all3；A08三臂0且首输出同刻。最终Sim3不是内部scale。
+- A/A metrics / validity：三对时刻/条数相等，但未对齐位置max差.0048271006m、283237.349854m、.0828399596m均超过冻结1e-5m；角误差也超1e-5rad。0对PASS。六receipts/逐ID接收/数学配置hash核验PASS不等于行为门PASS。
+- Common-support / trajectory accuracy：只引用原pair-specific有效精度对比；新A/A未做APE/RPE，Not evaluated.。真实lost-tracking与内部scale/gravity/谱Unknown。无删除/择优重跑旧23m Bus异常。
+- Failed attempts：diagnostic_build_v1因const调用非const endFrame编译失败，完整源码/日志保留；v2改为只读字段计算后构建成功。首次分析覆盖ROS PYTHONPATH导致import失败，修正环境后成功。三对A/A失败全部保留，禁止正式诊断。A08本次异常出现在未经修改的冻结版B（位置范数max283235.520028m），诊断版3.667543m；不能单归因日志补丁。
+- Qualitative observations：固定图可见非均匀照明和不同空间分布，但无颗粒/焦散/折射真实标签。A02/A08 XFeat光度变化反而较小，Bus C寿命中位更短。motion排序也出现在无实用退化控制窗，缺乏特异性。
+- Hypothesis / Why it might work：观测集合通过关键帧/SfM/对齐路径影响状态，可能比普通可跟踪性更重要；当前只获得关联，尚不能分解尺度因果机制。
+- Assumptions / Potential failure cases：零gyro-bias、单位深度、邻域真实深度、不同q与供给混杂；首准入缺前合格记录，双帧motion可用数0；后续记录不能冒充首次准入信号。时间预算/构建一致性可能影响A/A，独立原因Unknown。
+- Evidence / Current conclusion / Interpretation：PARTIAL_MECHANISM，解释类别E；在线判别仍为F边界。没有达到开发risk-aware admission的五项最低证据，不训练、不调阈值、不推广为主方法。
+- Known issues / Open questions：内部初始化状态因A/A失败无有效补齐；q影响终局尚未独立控制；真实水下标签、逐点causal utility、独立GT/未知窗泛化Not evaluated.。
+- Next steps / Next experiment / Follow-up：唯一下一步为冻结B回放确定性与日志侵入性审计，先查清本次A08冻结版异常再恢复初始化内部诊断；暂不开发router，本轮不执行下一项。

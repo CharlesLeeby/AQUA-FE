@@ -1,0 +1,112 @@
+{
+  "windows": [
+    {
+      "baseline_sha256": "6de8ffe9226c1c786bbd80b53049f2f4f1f58c2859808034b60b5dca171884ff",
+      "frames": 400,
+      "input_sha256": "8f1e411795baf70ca989ad882088050f44072cdaf89423d00b6ec52086dbf394",
+      "orientation_unavailable": 0,
+      "outputs": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/a09_6000_6800/candidate_summary.csv": "c39f6a1acb97cc773c6e6f4cdf0013a585290728b2b9b86c646ec14e9a54997d",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/a09_6000_6800/frame_summary.csv": "968693faa268f73174429ecb7e4b07a26507dface582b068df4dbc855b6820cb",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/a09_6000_6800/information_frames.csv": "7a1885da141f25ca548d5df889ee8c4e532eb0e021358da0f33f622731530e72",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/a09_6000_6800/information_summary.csv": "4b74774cf454cc4a22427dde5514ccd65fcc8caa0c860392f3d48bd367d6bc10",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/a09_6000_6800/observations.csv.gz": "db43e82afa349f8e869d158a505e536896d7017f018914f23658a290e3bdcd6d"
+      },
+      "run_slug": "a09_6000_6800",
+      "script_sha256": "1d3bec58d2211a5e8b9f6fc16ec2556acec2d50b6166e6cd0df7816be2821d54",
+      "source_commit": "07e59b5933ca6c7b1c19906a19ff1f5adf30c3a2",
+      "source_receipt_sha256": "fabadc3bfd94f2a0d654df7f821128a7c8e866fe167f99e1209b50b4e4b7fa65",
+      "wall_s": 166.2737768520019
+    },
+    {
+      "baseline_sha256": "5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520",
+      "frames": 450,
+      "input_sha256": "ab0fa69eddce3bde6cb03efecf3c4fcafdd3d66e53691b9a2eaa1f531ee660db",
+      "orientation_unavailable": 0,
+      "outputs": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/a02_0_900/candidate_summary.csv": "cd8265ef82e84a7eebd5d15e1adb37ea0bb049f9c7ddfb1f83dc3a7d4221e480",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/a02_0_900/frame_summary.csv": "25e9c92a8b20b5bf9aced5447edce05552d58afb5d038c35abc85dbc10803720",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/a02_0_900/information_frames.csv": "c6f0a9d6f0a8eca199b4879abd92c0e5d80543382541e404832c31862baa1421",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/a02_0_900/information_summary.csv": "091b7b6b73ee8ea4b22b4259829170f11450279b4552275d67a44c349513ed69",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/a02_0_900/observations.csv.gz": "b7e8c3b5dd550a2ecbd96f8949bf10b19144528b037e154576fa522df48be572"
+      },
+      "run_slug": "a02_0_900",
+      "script_sha256": "1d3bec58d2211a5e8b9f6fc16ec2556acec2d50b6166e6cd0df7816be2821d54",
+      "source_commit": "07e59b5933ca6c7b1c19906a19ff1f5adf30c3a2",
+      "source_receipt_sha256": "b3c1691cd8b1dbe68f8e69472740bda8043f0818655f2bb4064d46b94f971ecb",
+      "wall_s": 249.58483762999822
+    },
+    {
+      "baseline_sha256": "9e4d546cb799f516d933944e9715d1551affe381ab2f0171876cebb95d01ae84",
+      "frames": 282,
+      "input_sha256": "fa24e8d2b31e4242f572e068a0139ee61e6e201dca0bbb2a5b3089a1f714729d",
+      "orientation_unavailable": 0,
+      "outputs": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/afrl_bus_s180_d045/candidate_summary.csv": "e5a92ddbaf278a96d187858bea518a6f5ecda7500dba9f323f9c4635a6798d38",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/afrl_bus_s180_d045/frame_summary.csv": "73bddb073d664b1a461f75715f2d4b3ecdbcf60f18863dec9b463552b879d9d0",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/afrl_bus_s180_d045/information_frames.csv": "8503870faa6721f414bc4a930cc66bec849d3c0d1fd70a53b3e4ed43747d552d",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/afrl_bus_s180_d045/information_summary.csv": "1b6b6c6d3c1876c90ddab044ff0fe6a7b053eb75cced1f82fa5fb87d7a458950",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/afrl_bus_s180_d045/observations.csv.gz": "3740e775f886a6139f6131a94c1b20bafed450790869b5e9eedea5806c4c4d79"
+      },
+      "run_slug": "afrl_bus_s180_d045",
+      "script_sha256": "1d3bec58d2211a5e8b9f6fc16ec2556acec2d50b6166e6cd0df7816be2821d54",
+      "source_commit": "07e59b5933ca6c7b1c19906a19ff1f5adf30c3a2",
+      "source_receipt_sha256": "69c6ab2a06c350f21c4dceb5b87cd0b5a0a01750ad087a91f9e48035f009f7c9",
+      "wall_s": 68.57350030700036
+    },
+    {
+      "baseline_sha256": "17305db38262a2ed4c7fa05b6269c9ea50592de07387517dfec798cf086ceae9",
+      "frames": 450,
+      "input_sha256": "81f248d14a336fbd2c1f9309e84fe818da892f2de3ab434b1df475707b133deb",
+      "orientation_unavailable": 0,
+      "outputs": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/a08_2700_3600/candidate_summary.csv": "4a0ac638d2d72ee56918166e2aa39bec9db68212848135daf2b23f33c171a487",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/a08_2700_3600/frame_summary.csv": "579c53929ab5f9566d26a12fc448cdeb6c6ea73b7c5520bd5e20e48a736dda1f",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/a08_2700_3600/information_frames.csv": "6314f725b267cf7f49e976279ddef25654c013e966a6606a18e7074ea6fcbe63",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/a08_2700_3600/information_summary.csv": "8eb978e7a2a64d04538f0d2d9c651fb985a6e232e09afdc31faa25d31d93a21d",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/a08_2700_3600/observations.csv.gz": "aadc3c6244ebadb364b03b21212eda6c520347c7d732a265f0224439d16f7122"
+      },
+      "run_slug": "a08_2700_3600",
+      "script_sha256": "1d3bec58d2211a5e8b9f6fc16ec2556acec2d50b6166e6cd0df7816be2821d54",
+      "source_commit": "07e59b5933ca6c7b1c19906a19ff1f5adf30c3a2",
+      "source_receipt_sha256": "d3c80dd4ceaeac9ecb4960e64d8bc2598fe40ccca031b3b5440eb8c4e0315077",
+      "wall_s": 313.5813429629925
+    },
+    {
+      "baseline_sha256": "c144ba971b2d7fc1b73980f9d1336d508f823db26f448f803df747536688169e",
+      "frames": 357,
+      "input_sha256": "7ab621a9e7937bd99965e23c5686f4aa2095e2460f4ff03b8c7de0289c1a3bea",
+      "orientation_unavailable": 0,
+      "outputs": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/afrl_cemetery_s135_d045/candidate_summary.csv": "1bb5d753af97300bf115df18ce2b88c3c8d2f8998d1d715f4e0f7eb879d9ed7d",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/afrl_cemetery_s135_d045/frame_summary.csv": "621a77d28c247eaef01328f10a05c2020123f5a3caece1c4194d1f0114f9e7ef",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/afrl_cemetery_s135_d045/information_frames.csv": "0a4cbdb81fb0f6dd02ca12af08d7ed9e96c4ea19f0dd59863a74d70a3db845b2",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/afrl_cemetery_s135_d045/information_summary.csv": "e7e0207aea3f290a2c0db797a4e638377c00b0ea6021ccc1e80352714f8afcfe",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/afrl_cemetery_s135_d045/observations.csv.gz": "fe35aaaf30403321539a64c428835f4260fe1bc76332e70dac0281e9222b516c"
+      },
+      "run_slug": "afrl_cemetery_s135_d045",
+      "script_sha256": "1d3bec58d2211a5e8b9f6fc16ec2556acec2d50b6166e6cd0df7816be2821d54",
+      "source_commit": "07e59b5933ca6c7b1c19906a19ff1f5adf30c3a2",
+      "source_receipt_sha256": "cfa5282e30ac6128eb09e355f8bdf0c7961bd5c0437bb0b136b7fc956818d96a",
+      "wall_s": 81.83171632399899
+    },
+    {
+      "baseline_sha256": "d2572daad26a0a626cf4f013c3dfafd872edaffc3bf41c302ff1406c07246358",
+      "frames": 500,
+      "input_sha256": "fea8ebf74ee94f9074d4c3cdba0cdc2b9e6d6fae3f5d5c14a11c84c3d3c7a798",
+      "orientation_unavailable": 0,
+      "outputs": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/h07_0_1000/candidate_summary.csv": "79b0af38a7ebf0868baee3cdf3b879423ea724e927ec637d22772d9faf42a1e0",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/h07_0_1000/frame_summary.csv": "e7ca722ba2e8a0e119aac543d94c97c86436d55190bd0fc3aeae72d6592dc432",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/h07_0_1000/information_frames.csv": "7aedbcd96145069e129dceeac2bae067afc5b7061609dd5170df115eb5bffe44",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/h07_0_1000/information_summary.csv": "138a3e64992d2c542b2a9de583e7a19d662019176768cbf38d4eadf0a72170a4",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/existing_data/h07_0_1000/observations.csv.gz": "70c525ea1ab7bf290b686449ccb580b39a130ed060e79ee941da77359bcf900c"
+      },
+      "run_slug": "h07_0_1000",
+      "script_sha256": "1d3bec58d2211a5e8b9f6fc16ec2556acec2d50b6166e6cd0df7816be2821d54",
+      "source_commit": "07e59b5933ca6c7b1c19906a19ff1f5adf30c3a2",
+      "source_receipt_sha256": "0d01d52708d322fd4d98e93c57123f0ade288f0a23bcce46e0162561070ce563",
+      "wall_s": 126.94884874499985
+    }
+  ]
+}

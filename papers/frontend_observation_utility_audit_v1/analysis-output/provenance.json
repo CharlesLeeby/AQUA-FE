@@ -1,0 +1,38 @@
+{
+  "artifacts": {
+    "papers/frontend_observation_utility_audit_v1/admission_cohort_summary.csv": "1f0103e41228183a15843491d351acf40d5366253bce27e45166b9938b3f07a2",
+    "papers/frontend_observation_utility_audit_v1/analysis-output/figures/01-source-contrasts.png": "6416e1baa750558d2fb8e761910eeec4201ef6ba452beefb66c8f58772fdd4ef",
+    "papers/frontend_observation_utility_audit_v1/analysis-output/figures/02-shadow-information.png": "c39ac92fdeee69a695f678a2473a1fe05093af1d84674cd40d9bbcdc7903ed3b",
+    "papers/frontend_observation_utility_audit_v1/analysis-output/figures/03-fixed-image-audit.png": "7e485db90583d3a868fbf76d874ec642dd395717168c3257557590d466f4eb1c",
+    "papers/frontend_observation_utility_audit_v1/analysis-output/figures/04-initialization-association.png": "60fe847d0a58bd7e14ea782328fa570f310f4f461d02d5af39e350b0780038c2",
+    "papers/frontend_observation_utility_audit_v1/candidate_source_comparison.csv": "7adcd80078c65670afcb7944277d6da6957d823fb41d33d75c90582eec7a17cf",
+    "papers/frontend_observation_utility_audit_v1/diagnostic_aa.csv": "f35ace87e20c25b88f97d331b9c9ee7dbf1412ddaaa9818a6f1583971d657aa0",
+    "papers/frontend_observation_utility_audit_v1/diagnostic_engineering_results.csv": "35ab3bdfe83c6601e20f487130e694f8795b03c6569811c1a4c428d6a03bcc86",
+    "papers/frontend_observation_utility_audit_v1/existing_initialization_summary.csv": "b237e6ac9c329080b62ec4f8c79293b9f2a4b398c8a099de3eab0d51bdf060b3",
+    "papers/frontend_observation_utility_audit_v1/first_admission_availability.csv": "8eb2214c66e5426da28baa9640c589f8465ce98239fca6c0384037f49e30b90d",
+    "papers/frontend_observation_utility_audit_v1/first_admission_information_summary.csv": "c798dfdf8e00f1e3ddc82fac8d726efcd731e70a0b391fcac2e258836f4a4509",
+    "papers/frontend_observation_utility_audit_v1/first_output_state_audit.csv": "34484ddd043c6157d3ccba4186feb245a6ede1f7bae864daba3c0fbb3bb50801",
+    "papers/frontend_observation_utility_audit_v1/information_geometry_summary.csv": "a4357d740ee1171ab2724210d2541f3a54f8e511b1da81c8345c34a5cd4a3937",
+    "papers/frontend_observation_utility_audit_v1/initialization_attempts.csv": "08c4bb2c1a318b32e1178d275084f751a61d0f0a5464a99843f155c1174c724d",
+    "papers/frontend_observation_utility_audit_v1/prior_a02_initialization_log_audit.csv": "ef92decb395f8f95c79a43afa91daaf47031620765b4146e4b087dc4d143dfbe",
+    "papers/frontend_observation_utility_audit_v1/underwater_reliability_audit.csv": "df066b4a60ed57d928849c39fa33de30b8fe6cc34e580bd7967e338c262bc3fc",
+    "papers/frontend_observation_utility_audit_v1/window_mechanism_summary.csv": "2ce416f6a34e039b858005faaa881b77798bbd5cc830dd2dec7f3c8bade397f4"
+  },
+  "audit_script_sha256": {
+    "scripts/analyze_observation_utility_v1.py": "1d3bec58d2211a5e8b9f6fc16ec2556acec2d50b6166e6cd0df7816be2821d54",
+    "scripts/audit_observation_utility_admission.py": "9d0d690152f4f8e34215180ad9999fe6f3f9f65801274146791434547032a4e5",
+    "scripts/audit_observation_utility_delivery.py": "5b48257719677d49959e9d52bb967c4d24fad5a4df4d0d6c4f581fd8b1b5564e",
+    "scripts/build_observation_utility_backend.py": "6999d2915e8aa0ea23457013bb2e0434f4c2a0e3ba3a4bb9f3c2ffb1b1098e4e",
+    "scripts/inspect_observation_utility_images.py": "27b12f7120bd5881368adbf69316d160bbe09d926f45ed16f07cd2480b067846",
+    "scripts/report_observation_utility_v1.py": "bb97f73774db02d818dd63aef19c92da8fc68f1ec550ba09ef57006e9f8b959f",
+    "scripts/run_observation_utility_diagnostics.py": "5420a425c5ed0e3eb6696ae9021a804fc657ec04f55984652b0fc49cb1e951ed",
+    "scripts/verify_observation_utility_math.py": "f20a1beb1d1dcc15281964183773f5e8c377736d41ebd894eb2e639098124f97"
+  },
+  "audit_source_commit": "UNCOMMITTED supplement; base HEAD=07e59b5933ca6c7b1c19906a19ff1f5adf30c3a2; exact script hashes recorded",
+  "base_commit": "49c02471716e8ac960e35dd9dd44ef6fbb1428c6",
+  "initial_extraction_and_diagnostic_commit": "07e59b5933ca6c7b1c19906a19ff1f5adf30c3a2",
+  "new_aa_engineering_replays": 6,
+  "new_formal_diagnostic_replays": 0,
+  "report_script_sha256": "bb97f73774db02d818dd63aef19c92da8fc68f1ec550ba09ef57006e9f8b959f",
+  "window_unit": 6
+}

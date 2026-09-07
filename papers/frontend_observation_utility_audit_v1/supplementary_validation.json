@@ -1,0 +1,11 @@
+{
+  "PSD_direct_logdet_and_diminishing_returns": "PASS",
+  "finite_difference_unit_depth_jacobian_max_error": 3.6198155584088454e-11,
+  "first_published_state_source_hashes": "PASS",
+  "initial_exploratory_math_receipt_sha256": "a1217a9bcf8e3c9acdbae670978b07f0936b66370aa51079321a6fdbd355134d",
+  "original_first_published_states_checked": 36,
+  "physical_information_or_initialization_validity": "Not evaluated.",
+  "pure_rotation_epipolar_null": "PASS",
+  "status": "PASS",
+  "verification_script_sha256": "f20a1beb1d1dcc15281964183773f5e8c377736d41ebd894eb2e639098124f97"
+}

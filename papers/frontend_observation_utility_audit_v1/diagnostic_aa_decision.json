@@ -1,0 +1,56 @@
+{
+  "diagnostic_state_usable_for_mechanism": false,
+  "formal_authorized": false,
+  "formal_replay_count": 0,
+  "results": [
+    {
+      "alignment": "none",
+      "diagnostic_path": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a02_0_900/B/repeat1/vins_output/vio.csv",
+      "diagnostic_sha256": "5e02e4ced7f8b31884c8b3a1ed11ad30143bfc466cd1846b06953b98c6462fce",
+      "exact_timestamps": true,
+      "frozen_path": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a02_0_900/B/repeat1/vins_output/vio.csv",
+      "frozen_sha256": "bed52e3b353f731beecec73d98b68762cac19cbaa1fcadbb7ba404a4f9a3a843",
+      "orientation_max_rad": 0.0030695139034558326,
+      "poses_diagnostic": 421,
+      "poses_frozen": 421,
+      "position_max_m": 0.004827100579022557,
+      "run_slug": "a02_0_900",
+      "status": "FAIL",
+      "tolerance_m": 1e-05,
+      "tolerance_rad": 1e-05
+    },
+    {
+      "alignment": "none",
+      "diagnostic_path": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a08_2700_3600/B/repeat1/vins_output/vio.csv",
+      "diagnostic_sha256": "29e4d38d54e79f854c238f2d3163167538adf305def6b00b66fb1daa1f0eb1d8",
+      "exact_timestamps": true,
+      "frozen_path": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a08_2700_3600/B/repeat1/vins_output/vio.csv",
+      "frozen_sha256": "9cd656cb80da8a5fc45bbde0fe0ecc1fbf864d5de1c1ae51750c1e463dbaa0cf",
+      "orientation_max_rad": 3.1385583828363353,
+      "poses_diagnostic": 440,
+      "poses_frozen": 440,
+      "position_max_m": 283237.34985372494,
+      "run_slug": "a08_2700_3600",
+      "status": "FAIL",
+      "tolerance_m": 1e-05,
+      "tolerance_rad": 1e-05
+    },
+    {
+      "alignment": "none",
+      "diagnostic_path": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/afrl_bus_s180_d045/B/repeat1/vins_output/vio.csv",
+      "diagnostic_sha256": "77020c5a54039ae22c600c5447cea5f054e514e7cf80c8fbd1387085b359d649",
+      "exact_timestamps": true,
+      "frozen_path": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/afrl_bus_s180_d045/B/repeat1/vins_output/vio.csv",
+      "frozen_sha256": "f24f09cecc60529f448df5806194e2725a39a44b27ad6e6218a50c64b58a3cee",
+      "orientation_max_rad": 0.015732795274185453,
+      "poses_diagnostic": 266,
+      "poses_frozen": 266,
+      "position_max_m": 0.08283995956058889,
+      "run_slug": "afrl_bus_s180_d045",
+      "status": "FAIL",
+      "tolerance_m": 1e-05,
+      "tolerance_rad": 1e-05
+    }
+  ],
+  "status": "FAIL"
+}

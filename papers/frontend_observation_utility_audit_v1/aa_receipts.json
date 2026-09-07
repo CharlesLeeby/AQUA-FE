@@ -1,0 +1,403 @@
+{
+  "engineering_runs": [
+    {
+      "config_math": "PASS",
+      "receipt": {
+        "arm": "B",
+        "artifacts": {
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a02_0_900/B/repeat1/backend_use.csv": "54a12dbdaf6e5e021179c1fff18f18cd4b98fb865bc7c922f3161b3ef4ac0d17",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a02_0_900/B/repeat1/play.log": "e6d0bf73254d45a10fc948067f41e672645f7131573fcf759f81da150423e7f0",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a02_0_900/B/repeat1/ros_home/roscore-12681.pid": "54d2b28e7d7800cec62985fa5d0527fe971507a71ab30bdfc609346b0732ca25",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a02_0_900/B/repeat1/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a02_0_900/B/repeat1/ros_logs/062f6188-aae8-11f1-b66e-f55576d0c46b/master.log": "38c6359ce76574476a4b0afea49fba0f81d7bada8cc84a5e9831b66d65c3d2d1",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a02_0_900/B/repeat1/ros_logs/062f6188-aae8-11f1-b66e-f55576d0c46b/roslaunch-qiu-833517.log": "b4beb0bba0e7ee21971ee1937ad651375a6c3cb8d27c5fbee1d5d4eaaee3ee06",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a02_0_900/B/repeat1/ros_logs/062f6188-aae8-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "89cc15edc83aad28cfd20f8b836d93565e484f52b28f1202697587938acdfca2",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a02_0_900/B/repeat1/ros_logs/062f6188-aae8-11f1-b66e-f55576d0c46b/rosout.log": "fa18a679324908978e975ceab59a341a0a894cfc215f15fc991aacde637a4bbd",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a02_0_900/B/repeat1/roscore.log": "0ff675c6bd1f7e615d7da72b25ef1b265ba551eb27c60e1ce3a42d74a1cc7684",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a02_0_900/B/repeat1/vins.log": "e408b0dd9e4242f1ac2fe997a9ea60a1cebcd07bc5ba63a31426fcbb25826902",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a02_0_900/B/repeat1/vins.yaml": "da2520f1e11f3f453df25c3cff488f6f9d8a162e6d724db7d092431f728df680",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a02_0_900/B/repeat1/vins_output/vio.csv": "bed52e3b353f731beecec73d98b68762cac19cbaa1fcadbb7ba404a4f9a3a843"
+        },
+        "backend_lock_sha256": "521476ce246c6f21651d78b8d64c4603cebcee7864ad7ab48900fb9178f5d103",
+        "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+        "canonical_source_sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1",
+        "capacity_preflight_status": "PASS",
+        "commands": [
+          [
+            "roscore",
+            "-p",
+            "12681"
+          ],
+          [
+            "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a02_0_900/B/repeat1/vins.yaml"
+          ],
+          [
+            "/opt/ros/noetic/lib/rosbag/play",
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a02_0_900_klt/features.bag",
+            "--clock",
+            "--rate",
+            "1.0",
+            "--delay",
+            "3",
+            "--quiet"
+          ]
+        ],
+        "config_sha256": "da2520f1e11f3f453df25c3cff488f6f9d8a162e6d724db7d092431f728df680",
+        "error": "",
+        "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a02_0_900_klt/features.bag",
+        "feature_bag_sha256": "5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520",
+        "peak_node_rss_bytes": 100937728,
+        "repeat": 1,
+        "resource_pre": {
+          "available_memory_bytes": 26278600704,
+          "free_bytes": {
+            "/home/ma/AQUA-FE_WS_observation_utility_v1": 16525094912,
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 28016934912
+          }
+        },
+        "run_slug": "a02_0_900",
+        "started_at": "2026-09-07T18:15:58.617404+00:00",
+        "status": "COMPLETE",
+        "wall_s": 64.998214043997
+      },
+      "receipt_sha256": "1e1898b03922bff8430eca80697f7d7b5981ae82235ee9196c741ffad6dd3135",
+      "received_per_ID": "PASS",
+      "variant": "frozen",
+      "window": "a02_0_900"
+    },
+    {
+      "config_math": "PASS",
+      "receipt": {
+        "arm": "B",
+        "artifacts": {
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a08_2700_3600/B/repeat1/backend_use.csv": "17e3b59f0f92e199c9e9c7478a200f37efccb2a17aae19a7ab8c2f6af76606e4",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a08_2700_3600/B/repeat1/play.log": "6c5510945b87c1abeb4b2bd887e4b3869a62d957e3a788f282aa391e593b13e3",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a08_2700_3600/B/repeat1/ros_home/roscore-12681.pid": "90456e9009f27f76a8d622d42afbbbf305d4e3ca9e0138ff9c20af477cdead27",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a08_2700_3600/B/repeat1/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a08_2700_3600/B/repeat1/ros_logs/543d7068-aae8-11f1-b66e-f55576d0c46b/master.log": "b07e8e2e635ef8431bbcb5088231eca288c41384b16a99b709da80931d717709",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a08_2700_3600/B/repeat1/ros_logs/543d7068-aae8-11f1-b66e-f55576d0c46b/roslaunch-qiu-836093.log": "e0518b245dd7c3016b6e8df0ef74b1c88fb831bb86189c39c0905d4a77718532",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a08_2700_3600/B/repeat1/ros_logs/543d7068-aae8-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "fb67e564eca1e9e76d82d8b7da3932db19c320d3e2bc753b4ad9cce1ff106a19",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a08_2700_3600/B/repeat1/ros_logs/543d7068-aae8-11f1-b66e-f55576d0c46b/rosout.log": "b541240e30169c633f986033fe17cd3c1cba0414282bfd8e4ff9128c16bb8d53",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a08_2700_3600/B/repeat1/roscore.log": "1b66c645deb01e1dcc0503f2b63d6aecdcfe5bd5bbc4cf0e7ab4d55ebe109007",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a08_2700_3600/B/repeat1/vins.log": "011dab7ca9aafa78ba105535927f09b773e5d49693b8b9d4fd654e26bb05d89e",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a08_2700_3600/B/repeat1/vins.yaml": "f2d743dbc7b86844bc2acc13b0cc10a396989de50cbfa987491c999a51245640",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a08_2700_3600/B/repeat1/vins_output/vio.csv": "9cd656cb80da8a5fc45bbde0fe0ecc1fbf864d5de1c1ae51750c1e463dbaa0cf"
+        },
+        "backend_lock_sha256": "521476ce246c6f21651d78b8d64c4603cebcee7864ad7ab48900fb9178f5d103",
+        "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+        "canonical_source_sha256": "783f5c621c79c1c02da2c9719d5a3c3fbb4900e42ae59437af627d4b05ca675d",
+        "capacity_preflight_status": "PASS",
+        "commands": [
+          [
+            "roscore",
+            "-p",
+            "12681"
+          ],
+          [
+            "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a08_2700_3600/B/repeat1/vins.yaml"
+          ],
+          [
+            "/opt/ros/noetic/lib/rosbag/play",
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+            "--clock",
+            "--rate",
+            "1.0",
+            "--delay",
+            "3",
+            "--quiet"
+          ]
+        ],
+        "config_sha256": "f2d743dbc7b86844bc2acc13b0cc10a396989de50cbfa987491c999a51245640",
+        "error": "",
+        "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+        "feature_bag_sha256": "17305db38262a2ed4c7fa05b6269c9ea50592de07387517dfec798cf086ceae9",
+        "peak_node_rss_bytes": 104955904,
+        "repeat": 1,
+        "resource_pre": {
+          "available_memory_bytes": 25792253952,
+          "free_bytes": {
+            "/home/ma/AQUA-FE_WS_observation_utility_v1": 16405590016,
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 27953827840
+          }
+        },
+        "run_slug": "a08_2700_3600",
+        "started_at": "2026-09-07T18:18:10.045307+00:00",
+        "status": "COMPLETE",
+        "wall_s": 65.44883605500218
+      },
+      "receipt_sha256": "0467ffb2b380fa150cd4193afc870b6a7ea2a756d66b0fc6b671e09760cee33f",
+      "received_per_ID": "PASS",
+      "variant": "frozen",
+      "window": "a08_2700_3600"
+    },
+    {
+      "config_math": "PASS",
+      "receipt": {
+        "arm": "B",
+        "artifacts": {
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/afrl_bus_s180_d045/B/repeat1/backend_use.csv": "97716c58d5b404d869c8936897731fb5f8f2edc4fdc6161b11becfc47d9b354d",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/afrl_bus_s180_d045/B/repeat1/play.log": "b1699b325e5dd628e57ccddabfa3e46d8ea2a7f178c143e305535d94b8f5dcf8",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/afrl_bus_s180_d045/B/repeat1/ros_home/roscore-12681.pid": "5ab539f11c2b4033edf98c099bbdfa3b9db99f71c8c7b4822dd77cbaf9b379bd",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/afrl_bus_s180_d045/B/repeat1/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/afrl_bus_s180_d045/B/repeat1/ros_logs/a29677fa-aae8-11f1-b66e-f55576d0c46b/master.log": "80e3afba462634aa32ea9b9c8785dfff638681eac454257baadb68f84c05b645",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/afrl_bus_s180_d045/B/repeat1/ros_logs/a29677fa-aae8-11f1-b66e-f55576d0c46b/roslaunch-qiu-838385.log": "ced0fbb33267195a36c65b12ad8202bf8cb03885b898f1396715fcc8e57ed972",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/afrl_bus_s180_d045/B/repeat1/ros_logs/a29677fa-aae8-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "2866994b3b2984a5c8d7aebdbc09ed1496ff887dd3137159d069e256a67b4874",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/afrl_bus_s180_d045/B/repeat1/ros_logs/a29677fa-aae8-11f1-b66e-f55576d0c46b/rosout.log": "5678112f9eb243f16195f54aba8b59ccb4900935471c40f11c07cc0f7fc0d442",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/afrl_bus_s180_d045/B/repeat1/roscore.log": "ce0aad44bfcc2010b4df057b85c89090ff1c91fb0177b94e34578dbd7ce1affd",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/afrl_bus_s180_d045/B/repeat1/vins.log": "143c420e5a98949b98fa6c864134b3849d7c4adc191a42099435981ef2e91100",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/afrl_bus_s180_d045/B/repeat1/vins.yaml": "ecb1a27f9c776a68f393c43397c6d5cbcb1db8459d883788270b9607d31edeb7",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/afrl_bus_s180_d045/B/repeat1/vins_output/vio.csv": "f24f09cecc60529f448df5806194e2725a39a44b27ad6e6218a50c64b58a3cee"
+        },
+        "backend_lock_sha256": "521476ce246c6f21651d78b8d64c4603cebcee7864ad7ab48900fb9178f5d103",
+        "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+        "canonical_source_sha256": "cb9a252cdb0864aad843b7c6ad050f74ce0c1c07760df8963238d188364052f1",
+        "capacity_preflight_status": "PASS",
+        "commands": [
+          [
+            "roscore",
+            "-p",
+            "12681"
+          ],
+          [
+            "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/afrl_bus_s180_d045/B/repeat1/vins.yaml"
+          ],
+          [
+            "/opt/ros/noetic/lib/rosbag/play",
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/afrl_cave_v31/external_klt_every2_acv1_afrl_bus_s180_d045_klt/features.bag",
+            "--clock",
+            "--rate",
+            "1.0",
+            "--delay",
+            "3",
+            "--quiet"
+          ]
+        ],
+        "config_sha256": "ecb1a27f9c776a68f393c43397c6d5cbcb1db8459d883788270b9607d31edeb7",
+        "error": "",
+        "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/afrl_cave_v31/external_klt_every2_acv1_afrl_bus_s180_d045_klt/features.bag",
+        "feature_bag_sha256": "9e4d546cb799f516d933944e9715d1551affe381ab2f0171876cebb95d01ae84",
+        "peak_node_rss_bytes": 90943488,
+        "repeat": 1,
+        "resource_pre": {
+          "available_memory_bytes": 26395684864,
+          "free_bytes": {
+            "/home/ma/AQUA-FE_WS_observation_utility_v1": 16397627392,
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 27894042624
+          }
+        },
+        "run_slug": "afrl_bus_s180_d045",
+        "started_at": "2026-09-07T18:20:20.727104+00:00",
+        "status": "COMPLETE",
+        "wall_s": 64.67711654400046
+      },
+      "receipt_sha256": "69133a9a36f45d64348cce629f1387c7e564a739d9e61184d51abddd4328146c",
+      "received_per_ID": "PASS",
+      "variant": "frozen",
+      "window": "afrl_bus_s180_d045"
+    },
+    {
+      "config_math": "PASS",
+      "receipt": {
+        "arm": "B",
+        "artifacts": {
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a02_0_900/B/repeat1/backend_use.csv": "8cc378e71c6622072119c13c3d0e4e720a5a0a61cddc9d786f48baa3954f68f4",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a02_0_900/B/repeat1/play.log": "7a7587c07b451443a13c2e9725eb3893cdb42b3b7897115a91dafa2ef742ff3b",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a02_0_900/B/repeat1/ros_home/roscore-12681.pid": "af3a3acc8a85e6cc2aa5801afee5dc6f43a270d56e7c12f721fca43635c2892d",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a02_0_900/B/repeat1/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a02_0_900/B/repeat1/ros_logs/2d391166-aae8-11f1-b66e-f55576d0c46b/master.log": "2e86f31b5e85611be4f520ccd574bafc40367728b8e274de9c71df1ed914d6b2",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a02_0_900/B/repeat1/ros_logs/2d391166-aae8-11f1-b66e-f55576d0c46b/roslaunch-qiu-834811.log": "90c288e842b4c81a55897011b3c18f6b4a7cd7cb8217f2b86c2de314745b1154",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a02_0_900/B/repeat1/ros_logs/2d391166-aae8-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "88f9a8ac083287f178c62f736dd743fd6c565d7d0d1e8d42ad44760d713600d3",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a02_0_900/B/repeat1/ros_logs/2d391166-aae8-11f1-b66e-f55576d0c46b/rosout.log": "40702aa6e6c8c5ebec7a7c1ebe9396d29f54801c28044de33be7dc0f4e5a0cca",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a02_0_900/B/repeat1/roscore.log": "f9b23d120ecbfe4a62b265bcc9280965c070e5f1057cb04dcdaff11a194ae930",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a02_0_900/B/repeat1/utility.csv": "9a8c6f7d6ab64c9ce51e411548ac65a8be0b170607571af71733a8ec338aeaea",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a02_0_900/B/repeat1/vins.log": "51e09da99993a1a65dca6b2874308b052bbbb258917d91404ba1bf6fe7bbfe0a",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a02_0_900/B/repeat1/vins.yaml": "02c962ba912269236cb21d5453e3d29c76635d39e3ebb5620f719616c856efb5",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a02_0_900/B/repeat1/vins_output/vio.csv": "5e02e4ced7f8b31884c8b3a1ed11ad30143bfc466cd1846b06953b98c6462fce"
+        },
+        "backend_lock_sha256": "5e2ac36a8b86a8db01ec8568a8ed80cdc9935dee47364d4ae551f3b18761dab0",
+        "binary_sha256": "beaf645169b8bfd880a8393ff0fa4b464243abf0e7fa9d28264caa148ae4c6c6",
+        "canonical_source_sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1",
+        "capacity_preflight_status": "PASS",
+        "commands": [
+          [
+            "roscore",
+            "-p",
+            "12681"
+          ],
+          [
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/diagnostic_build_v2/bin/vins_node",
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a02_0_900/B/repeat1/vins.yaml"
+          ],
+          [
+            "/opt/ros/noetic/lib/rosbag/play",
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a02_0_900_klt/features.bag",
+            "--clock",
+            "--rate",
+            "1.0",
+            "--delay",
+            "3",
+            "--quiet"
+          ]
+        ],
+        "config_sha256": "02c962ba912269236cb21d5453e3d29c76635d39e3ebb5620f719616c856efb5",
+        "error": "",
+        "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a02_0_900_klt/features.bag",
+        "feature_bag_sha256": "5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520",
+        "peak_node_rss_bytes": 103792640,
+        "repeat": 1,
+        "resource_pre": {
+          "available_memory_bytes": 26254888960,
+          "free_bytes": {
+            "/home/ma/AQUA-FE_WS_observation_utility_v1": 16524611584,
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 27986325504
+          }
+        },
+        "run_slug": "a02_0_900",
+        "started_at": "2026-09-07T18:17:04.148418+00:00",
+        "status": "COMPLETE",
+        "wall_s": 64.99200580999604
+      },
+      "receipt_sha256": "b2d6e90d754dc8f0fb6854882ae3e15488434b6222c56951284d878d2ff67979",
+      "received_per_ID": "PASS",
+      "variant": "diagnostic",
+      "window": "a02_0_900"
+    },
+    {
+      "config_math": "PASS",
+      "receipt": {
+        "arm": "B",
+        "artifacts": {
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a08_2700_3600/B/repeat1/backend_use.csv": "0c46c57eca62643c719ca850bdd3e033e5d702c30a12dfb1356c1b48b7990bb4",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a08_2700_3600/B/repeat1/play.log": "ed08a8c5156890ffeff480f07975d89810bbbd18fc9be54099d6428d1ade5ac8",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a08_2700_3600/B/repeat1/ros_home/roscore-12681.pid": "d70ee372f020159528f43254b96dfaf89b99c060fee862e13c1c2a894d79897b",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a08_2700_3600/B/repeat1/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a08_2700_3600/B/repeat1/ros_logs/7b8f933a-aae8-11f1-b66e-f55576d0c46b/master.log": "853a7cea64e56c1ddf09b61f6449a5aa700870182fba212066c1a78360eff192",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a08_2700_3600/B/repeat1/ros_logs/7b8f933a-aae8-11f1-b66e-f55576d0c46b/roslaunch-qiu-837270.log": "970ec60e66c1bf4cbf070b9c6a9c77a30628bb4f8d1c76c0b4ee840b755c26a4",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a08_2700_3600/B/repeat1/ros_logs/7b8f933a-aae8-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "ee4b024c39a905fa3b0447640cbf2b63465489580c080cd4ddd4e5f6ab1796a1",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a08_2700_3600/B/repeat1/ros_logs/7b8f933a-aae8-11f1-b66e-f55576d0c46b/rosout.log": "6e7d596eece14a455cdf3b5e04b7f3d30390a3e0df66641aa24467fab7f3553f",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a08_2700_3600/B/repeat1/roscore.log": "3e0b7fa9c330e492bc227c0ccbc21fe07cead082b8ebd598ecdf386409715412",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a08_2700_3600/B/repeat1/utility.csv": "c90ba3b02aefc5eaca2cbb13d8e47101d8f20f524d17a244401551ab240df26d",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a08_2700_3600/B/repeat1/vins.log": "e5cd077527c4d9565bdaeb606d34c506d703681295029243eabb78c2657d4c6d",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a08_2700_3600/B/repeat1/vins.yaml": "bc6681edc8f4e943e661a4245092b95db31f7451fac77f335d299dafce2cc0b2",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a08_2700_3600/B/repeat1/vins_output/vio.csv": "29e4d38d54e79f854c238f2d3163167538adf305def6b00b66fb1daa1f0eb1d8"
+        },
+        "backend_lock_sha256": "5e2ac36a8b86a8db01ec8568a8ed80cdc9935dee47364d4ae551f3b18761dab0",
+        "binary_sha256": "beaf645169b8bfd880a8393ff0fa4b464243abf0e7fa9d28264caa148ae4c6c6",
+        "canonical_source_sha256": "783f5c621c79c1c02da2c9719d5a3c3fbb4900e42ae59437af627d4b05ca675d",
+        "capacity_preflight_status": "PASS",
+        "commands": [
+          [
+            "roscore",
+            "-p",
+            "12681"
+          ],
+          [
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/diagnostic_build_v2/bin/vins_node",
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a08_2700_3600/B/repeat1/vins.yaml"
+          ],
+          [
+            "/opt/ros/noetic/lib/rosbag/play",
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+            "--clock",
+            "--rate",
+            "1.0",
+            "--delay",
+            "3",
+            "--quiet"
+          ]
+        ],
+        "config_sha256": "bc6681edc8f4e943e661a4245092b95db31f7451fac77f335d299dafce2cc0b2",
+        "error": "",
+        "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+        "feature_bag_sha256": "17305db38262a2ed4c7fa05b6269c9ea50592de07387517dfec798cf086ceae9",
+        "peak_node_rss_bytes": 102453248,
+        "repeat": 1,
+        "resource_pre": {
+          "available_memory_bytes": 26632302592,
+          "free_bytes": {
+            "/home/ma/AQUA-FE_WS_observation_utility_v1": 16404205568,
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 27925819392
+          }
+        },
+        "run_slug": "a08_2700_3600",
+        "started_at": "2026-09-07T18:19:15.532351+00:00",
+        "status": "COMPLETE",
+        "wall_s": 64.98299635300646
+      },
+      "receipt_sha256": "cb5a751fe6f03eeae865b938bb680e9e367b2e9b4d757273ba177dd36a889bc8",
+      "received_per_ID": "PASS",
+      "variant": "diagnostic",
+      "window": "a08_2700_3600"
+    },
+    {
+      "config_math": "PASS",
+      "receipt": {
+        "arm": "B",
+        "artifacts": {
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/afrl_bus_s180_d045/B/repeat1/backend_use.csv": "23af5a7ee4cc6b47454417694ecc0052221b85444e108041d8c02ce1f53909e6",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/afrl_bus_s180_d045/B/repeat1/play.log": "748f2f641b0e1372195a1e677998654700680380f1dfd8f578e9eec1ecc062ef",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/afrl_bus_s180_d045/B/repeat1/ros_home/roscore-12681.pid": "be943d8ad0f071eaa3df04ceec716d1d2b27ea820f1ffd15a83c908c0e719226",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/afrl_bus_s180_d045/B/repeat1/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/afrl_bus_s180_d045/B/repeat1/ros_logs/c9687e82-aae8-11f1-b66e-f55576d0c46b/master.log": "9d534285dc240e0b8df80d421b2467e7f1151ebd974bde676f91e061185e4983",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/afrl_bus_s180_d045/B/repeat1/ros_logs/c9687e82-aae8-11f1-b66e-f55576d0c46b/roslaunch-qiu-839314.log": "4fa5d612d52a6567ee4a37651d074d054c1cf65f0e8934ef54fc8d5d204bcfc6",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/afrl_bus_s180_d045/B/repeat1/ros_logs/c9687e82-aae8-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "d3f68befdd192d10197e55968d2c0e728b8c33c9adf1dcb7c210dad429f218a1",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/afrl_bus_s180_d045/B/repeat1/ros_logs/c9687e82-aae8-11f1-b66e-f55576d0c46b/rosout.log": "d39e0ade3c1cfb897431adb50824d4daa90f0d33977dea7c28fa509732584be1",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/afrl_bus_s180_d045/B/repeat1/roscore.log": "74564c57da643131aab8bb2133229ec8fb9576053fbcb7a16cb7cd6fe011b7c6",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/afrl_bus_s180_d045/B/repeat1/utility.csv": "6947bbe9b9692fba4b5037434a5e5ce1bf81357bb9968610dd02c2f5e6b1d6de",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/afrl_bus_s180_d045/B/repeat1/vins.log": "6e3eafe472e06f8748c4c07a1415ee19a5ba69e037afcac4fd8075ad4de538d2",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/afrl_bus_s180_d045/B/repeat1/vins.yaml": "b57846644db0c44dbf499e670a07b41cc2f2e52a60d06f7705e50ad6b36f9eb5",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/afrl_bus_s180_d045/B/repeat1/vins_output/vio.csv": "77020c5a54039ae22c600c5447cea5f054e514e7cf80c8fbd1387085b359d649"
+        },
+        "backend_lock_sha256": "5e2ac36a8b86a8db01ec8568a8ed80cdc9935dee47364d4ae551f3b18761dab0",
+        "binary_sha256": "beaf645169b8bfd880a8393ff0fa4b464243abf0e7fa9d28264caa148ae4c6c6",
+        "canonical_source_sha256": "cb9a252cdb0864aad843b7c6ad050f74ce0c1c07760df8963238d188364052f1",
+        "capacity_preflight_status": "PASS",
+        "commands": [
+          [
+            "roscore",
+            "-p",
+            "12681"
+          ],
+          [
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/diagnostic_build_v2/bin/vins_node",
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/afrl_bus_s180_d045/B/repeat1/vins.yaml"
+          ],
+          [
+            "/opt/ros/noetic/lib/rosbag/play",
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/afrl_cave_v31/external_klt_every2_acv1_afrl_bus_s180_d045_klt/features.bag",
+            "--clock",
+            "--rate",
+            "1.0",
+            "--delay",
+            "3",
+            "--quiet"
+          ]
+        ],
+        "config_sha256": "b57846644db0c44dbf499e670a07b41cc2f2e52a60d06f7705e50ad6b36f9eb5",
+        "error": "",
+        "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/afrl_cave_v31/external_klt_every2_acv1_afrl_bus_s180_d045_klt/features.bag",
+        "feature_bag_sha256": "9e4d546cb799f516d933944e9715d1551affe381ab2f0171876cebb95d01ae84",
+        "peak_node_rss_bytes": 90390528,
+        "repeat": 1,
+        "resource_pre": {
+          "available_memory_bytes": 26044301312,
+          "free_bytes": {
+            "/home/ma/AQUA-FE_WS_observation_utility_v1": 16408412160,
+            "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 27872710656
+          }
+        },
+        "run_slug": "afrl_bus_s180_d045",
+        "started_at": "2026-09-07T18:21:28.385688+00:00",
+        "status": "COMPLETE",
+        "wall_s": 67.22317651699996
+      },
+      "receipt_sha256": "74b554647ef7ebc9fcfe8f2b54be366ae410383e8209f3ca98187ca5d1389f96",
+      "received_per_ID": "PASS",
+      "variant": "diagnostic",
+      "window": "afrl_bus_s180_d045"
+    }
+  ]
+}

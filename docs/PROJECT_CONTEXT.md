@@ -298,3 +298,12 @@ papers/frontend_admission_continuation_v1/report.md and docs/CODEX_HANDOFF.md.
 
 
 2026-09-08 — additive_budget_v1完整矩阵COMPLETE：独立分支exp/additive-budget-v1-20260907完成24前端/72新正式回放；36组共同支撑与evo全部通过，原KLT/源映射/逐ID接收及锁身份验收通过。L-all/L6仅A08实用改善，其余5不确定；L-all/B零实用改善、A09/A02/A08三实用退化。C-all/B在A02/Bus改善但来源q/剂量/成本混杂，未提升为主方法。Cemetery一份无效源保留，索引关联修复后正式流有效；共7源尝试，不是全窗一次生成。容量未扩展，最大实际资格834。源池仅A08 XFeat触800限制；停止数量扩展，本任务队列已结束。唯一建议：已有日志的初始化/尺度失稳归因审计。完整依据docs/CODEX_HANDOFF_ADDITIVE_BUDGET.md和papers/frontend_additive_budget_v1/report.md；不改变原研究主线。
+
+
+## 2026-09-08 独立observation utility/risk机制审计
+
+PARTIAL_MECHANISM：六窗/原72日志和1,341,840观测只读审计完成。A02/Bus初始化路径关联成立，但A08首输出同刻仍退化；q=1几何shadow信息较大并不保证净收益；局部motion偏差在六窗均XFeat较大，包括不退化控制窗，尚无特异的在线准入量。真实水下类别/逐点因果效用Unknown。
+
+新增6次B A/A工程验证全部不满足严格门，0次正式diagnostic；A08本次冻结版B严重发散，原72结果保持原样。这削弱了将三次技术重复范围理解为所有重放稳定边界的可能，不能单归因日志补丁。内部scale/gravity/条件谱仍无有效补充。
+
+主方法/proposed_safe与contribution_sparse不变，无新router、权重或窗口。唯一下一步转为冻结B回放确定性与日志侵入性审计，再恢复初始化机制诊断；没有自动执行该下一步。入口docs/CODEX_HANDOFF_OBSERVATION_UTILITY.md；报告papers/frontend_observation_utility_audit_v1/report.md。

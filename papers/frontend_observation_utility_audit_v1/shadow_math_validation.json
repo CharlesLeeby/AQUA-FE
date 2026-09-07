@@ -1,0 +1,8 @@
+{
+  "PSD_and_diminishing_returns": "PASS",
+  "finite_difference_unit_depth_jacobian_max_error": 4.11333189731522e-11,
+  "pure_rotation_epipolar_null": "PASS",
+  "script_sha256": "1d3bec58d2211a5e8b9f6fc16ec2556acec2d50b6166e6cd0df7816be2821d54",
+  "statistical_inference": "Not evaluated.",
+  "status": "PASS"
+}

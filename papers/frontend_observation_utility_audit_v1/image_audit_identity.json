@@ -1,0 +1,53 @@
+{
+  "figure_sha256": "7e485db90583d3a868fbf76d874ec642dd395717168c3257557590d466f4eb1c",
+  "images": [
+    {
+      "frame": 10,
+      "particle_caustic_label": "Unknown",
+      "raw_image_sha256": "fb5202510efff94584c82704db47f6f8f1f0871d678d5e98c7b5fb5e50407bbf",
+      "run_slug": "a02_0_900",
+      "selection": "fixed output10 and midpoint; no outcome or outlier selection",
+      "stamp_ns": 1542828792786086144
+    },
+    {
+      "frame": 225,
+      "particle_caustic_label": "Unknown",
+      "raw_image_sha256": "c759e1089c61620f726b7a5c750c73c5bb07da3c52e18a9f036e080694b87fa8",
+      "run_slug": "a02_0_900",
+      "selection": "fixed output10 and midpoint; no outcome or outlier selection",
+      "stamp_ns": 1542828814282399136
+    },
+    {
+      "frame": 10,
+      "particle_caustic_label": "Unknown",
+      "raw_image_sha256": "39f7e472e808d9cb4a5a566c16678b844ce04b2e46cdb7c65ce122e519492b6b",
+      "run_slug": "a08_2700_3600",
+      "selection": "fixed output10 and midpoint; no outcome or outlier selection",
+      "stamp_ns": 1542885097172932976
+    },
+    {
+      "frame": 225,
+      "particle_caustic_label": "Unknown",
+      "raw_image_sha256": "13ae742fda4c35031e10f2884f6ddb35373fda5ddbe9e4abf563fbe85e7f59b3",
+      "run_slug": "a08_2700_3600",
+      "selection": "fixed output10 and midpoint; no outcome or outlier selection",
+      "stamp_ns": 1542885118670527536
+    },
+    {
+      "frame": 10,
+      "particle_caustic_label": "Unknown",
+      "raw_image_sha256": "0855ff7e43d98705c9a124b2c094820f8e2ab36e3b60577b6fc89bc10bf63964",
+      "run_slug": "afrl_bus_s180_d045",
+      "selection": "fixed output10 and midpoint; no outcome or outlier selection",
+      "stamp_ns": 1494876661391133500
+    },
+    {
+      "frame": 141,
+      "particle_caustic_label": "Unknown",
+      "raw_image_sha256": "855670621dea787b0f266006d189a19896fb0c8b14dd2b99378c4e1780a20156",
+      "run_slug": "afrl_bus_s180_d045",
+      "selection": "fixed output10 and midpoint; no outcome or outlier selection",
+      "stamp_ns": 1494876682280302399
+    }
+  ]
+}
