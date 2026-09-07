@@ -1,0 +1,77 @@
+{
+  "schema": "classical-opportunity-expansion-v1",
+  "base_commit": "49c02471716e8ac960e35dd9dd44ef6fbb1428c6",
+  "sequences": [
+    "A01",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07",
+    "A10",
+    "H01",
+    "H02",
+    "H03",
+    "H04",
+    "H05"
+  ],
+  "selection": "two earliest structurally eligible nonoverlapping 900-frame windows per sequence; ascending sequence order",
+  "batch_A": [
+    "coe1_a01_00000_00900",
+    "coe1_a03_00000_00900",
+    "coe1_a04_00000_00900",
+    "coe1_a05_00000_00900",
+    "coe1_a06_00000_00900",
+    "coe1_a07_00000_00900",
+    "coe1_a10_00000_00900",
+    "coe1_h01_00000_00900",
+    "coe1_h02_00000_00900",
+    "coe1_h03_00000_00900",
+    "coe1_h04_00000_00900",
+    "coe1_h05_00000_00900"
+  ],
+  "batch_B": [
+    "coe1_a01_00900_01800",
+    "coe1_a03_00900_01800",
+    "coe1_a04_00900_01800",
+    "coe1_a05_00900_01800",
+    "coe1_a06_00900_01800",
+    "coe1_a07_00900_01800",
+    "coe1_a10_00900_01800",
+    "coe1_h01_00900_01800",
+    "coe1_h02_00900_01800",
+    "coe1_h03_00900_01800",
+    "coe1_h04_00900_01800",
+    "coe1_h05_00900_01800"
+  ],
+  "arms": [
+    "B",
+    "C-all"
+  ],
+  "technical_repeats": [
+    1,
+    2,
+    3
+  ],
+  "max_replays": 144,
+  "metadata_receipts": {
+    "A01": "1b9a2f9742abef3f39cba52c602b9c1ee8c81659c56a47bc6178b2c024ac7fdd",
+    "A03": "fa72bc369905853f206c1f91044ce646a7ab3e25718b3760447ee6c7bf5580f4",
+    "A04": "f619e616c3b01453bebbf2076d21b5ff64e31dae5d99d1aea9a64fd9af89e119",
+    "A05": "e05cd94b06b05c3955ab08092ccf9faab15206172b7b2dc24956cd0d7fbbbe1f",
+    "A06": "a8d4c8a94e447ff4a162950e458effdf6c26613c4b23a4a666abe8aebfa68d10",
+    "A07": "7e39af7e2956450ae5ab4e128000a46d4ce13e101e863574c1ace400e977b4f1",
+    "A10": "93a6fac768f29789b815d731eba3c75e0ff2f2595218e7b4d18540c2c360b6cb",
+    "H01": "273692bf5d8b0041f0867d9a86d2af1e150ad391cf46eb482c53d3a7aea3e660",
+    "H02": "4ed2e7a003794f5f5476a5933fd0b5f231e3dc436f3a6287d05ca561ac60f70d",
+    "H03": "936dc441b0af9174964f4f1a06edb72b937cdeab2de47a497f48d9a21ad0e2ba",
+    "H04": "81a3f0ef695d8619d39455704588fb0e4f224e1a1ec55a8a97f01c6446d10063",
+    "H05": "96014ec2a4fae6992603783f5748f865cda943ad3be239073ab8f7cf5b97b783"
+  },
+  "batch_B_gate": {
+    "min_practical_gain": 1,
+    "max_severe_regression": 1,
+    "systematic_structural_failure": false
+  },
+  "outcome_status": "Not evaluated."
+}

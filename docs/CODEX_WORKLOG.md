@@ -896,3 +896,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: COLMAP/proxy非独立GT、开发窗选择、非共享初始化、来源q/剂量/成本混杂、非排他宿主；私有ID确切死亡原因/初始化SfM计时/GPU峰值/严格全生命周期后端RSS/精确solver停止原因Unknown或Not evaluated.。
 - Interpretation: Confirmed fact：剂量增加成立，但本六窗L-all/B无实用净收益；“只因六条太少”的统一解释不获支持。初始化/尺度、相关/错误约束及固定预算机制仍为Hypothesis / Inference。
 - Next steps: 已结束本轮实验；只建议对已保存的逐ID/初始化/尺度日志做一次失稳归因审计，不自动扩数量或时机变体。最终仅发布任务范围文件，报告发布commit与实验源身份分开，push后四文件远端逐字节读回。
+
+## 2026-09-08 — Classical opportunity expansion: prospective roster freeze
+
+- Task objective: execute the newly authorized fixed-C-all opportunity expansion in an isolated worktree.
+- Problem / motivation: the old six outcome-known windows give C-all 2/0/4 practical gain/loss/uncertain, not a natural positive rate; learned quantity contrast was already sufficient.
+- Files changed: new experiment preregistration, full window roster, sequence inventory, batch plan, roster enumerator, this worklog, RESEARCH_LOG, PROJECT_CONTEXT, and independent handoff.
+- Implementation: full archive structural enumeration for 12 deterministic AQUALOC sequences, fixed 900-frame length/stride, two earliest eligible windows per sequence for A/B.
+- Technical decisions: no C method or evaluation change; half-open index ranges avoid shared boundary image; preserve COLMAP and broader-history exposure caveats.
+- Experiments performed: structural inventory only; no C generation or backend replay. Accuracy: Not evaluated.
+- Quantitative results: 112 enumerated candidates, 100 structurally eligible, 12 incomplete tails; 24 selected windows, 12 per batch from 12 physical sequences. These are roster counts from window_roster_frozen.csv, not accuracy results.
+- Qualitative observations: partial reference coverage is retained (including A05 first window), not used as a quality-based rejection. Sequence-held-out is explicitly relative to the six C-all development windows, not the whole project history.
+- Failed attempts: initial metadata enumerator encountered Python 3.8 str.removeprefix absence before data extraction; corrected the string operation. Both console logs retained under the new runtime root; no experiment output overwritten.
+- Known issues: foreign observation-utility VINS replay observed at initial resource check; WAITING_RESOURCE is not FAIL. System and runtime storage floors remain mandatory.
+- Interpretation: a new prospective fixed-method case-discovery test; no positive-rate or effectiveness conclusion yet.
+- Next steps: push/read back both batch rosters, freeze isolated execution adapters, then run all executable Batch A slots and apply the unchanged metric contract.

@@ -298,3 +298,7 @@ papers/frontend_admission_continuation_v1/report.md and docs/CODEX_HANDOFF.md.
 
 
 2026-09-08 — additive_budget_v1完整矩阵COMPLETE：独立分支exp/additive-budget-v1-20260907完成24前端/72新正式回放；36组共同支撑与evo全部通过，原KLT/源映射/逐ID接收及锁身份验收通过。L-all/L6仅A08实用改善，其余5不确定；L-all/B零实用改善、A09/A02/A08三实用退化。C-all/B在A02/Bus改善但来源q/剂量/成本混杂，未提升为主方法。Cemetery一份无效源保留，索引关联修复后正式流有效；共7源尝试，不是全窗一次生成。容量未扩展，最大实际资格834。源池仅A08 XFeat触800限制；停止数量扩展，本任务队列已结束。唯一建议：已有日志的初始化/尺度失稳归因审计。完整依据docs/CODEX_HANDOFF_ADDITIVE_BUDGET.md和papers/frontend_additive_budget_v1/report.md；不改变原研究主线。
+
+## 2026-09-08 — Independently authorized classical opportunity expansion
+
+A new fixed-method experimental branch/worktree starts at additive release 49c0247: `exp/classical-opportunity-expansion-v1-20260908`, `/home/ma/AQUA-FE_WS_classical_opportunity_expansion_v1`. Prior continuation/additive outputs and conclusions remain frozen. New scope is B/C only, 24 preregistered windows in two batches (12 sequences), 72 Batch A replays and at most 72 conditional Batch B replays. C-all is a classical control, not the proposed innovation. See `papers/frontend_classical_opportunity_expansion_v1/preregistration.md` and `docs/CODEX_HANDOFF_CLASSICAL_EXPANSION.md`. New accuracy Not evaluated.; held-out labels refer to the six C-all development windows and do not assert globally unseen project data.

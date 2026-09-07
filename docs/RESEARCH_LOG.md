@@ -813,3 +813,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion: 当前有限生成器的剂量问题已有效检验；“此前只是六条太少”不足以解释完整KLT条件下的净收益缺失。局部数量效应与总体添加机制支持必须分开。不提升C-all为主方法，不改变protected KLT主线。
 - Open questions: 哪些初始化/尺度和约束使用变化导致学习添加风险？当前非共享初始化/非等资源来源比较不足以作纯因果归因，相关解释为Hypothesis / Inference。
 - Next experiment: 本轮停止。唯一后续建议为现有逐ID、初始化与尺度日志的失稳归因审计；新增预算/窗口/时机变体Not evaluated.且不自动执行。
+
+## 2026-09-08 — Independent classical additive opportunity question
+
+- Research question: can fixed C-all produce practical VIO benefits outside its six development windows with limited severe regressions?
+- Hypothesis: useful additional classical observations may create reproducible end-to-end opportunities without learned-source necessity.
+- Motivation: old C-all positives A02/Bus and the sufficiently dosed L-all negatives warrant mechanism cases, not detector tuning.
+- Related baseline: complete KLT B, frozen additive-budget C-all at 49c0247.
+- Proposed idea: two prospectively fixed batches of 12 windows, 12 physical sequences, all outcomes retained.
+- Why it might work: Hypothesis / Inference — additional valid constraints may improve geometry or initialization; they may also destabilize it.
+- Assumptions: same input/backbone, unchanged source/q/backend contracts; COLMAP is a proxy and old project exposure persists outside the C development set.
+- Potential failure cases: cold-start failure, scale anomaly, sparse reference/common support, candidate capacity failure, severe single-repeat instability, foreign host load.
+- Evidence: Confirmed fact — old C-all/B counts 2 gain/0 loss/4 uncertain; new 112-candidate structural roster and two fixed 12-window batches. New accuracy: Not evaluated.
+- Current conclusion: Unknown; neither confirmation nor lack of generalization is established. Old NO_EXPANSION decisions are unchanged.
+- Open questions: cross-sequence repeatability, candidate lifetime/initialization differences, negative case mechanisms.
+- Next experiment: full frozen Batch A B/C three technical repeats, followed only by the preregistered conditional Batch B.
