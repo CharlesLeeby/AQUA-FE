@@ -1029,3 +1029,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: no defensible positive/negative accuracy label for this window. Full batch remains incomplete; case supplement/full figures still not executed.
 - Interpretation: current4/12A windows,24/72formal replays:1practical gain,2practical loss,1NOT_EVALUABLE,2severe,0structural failures.
 - Next steps: continue A06 and remaining frozen windows; retain A05 as a reference-limited, unlabeled utility case.
+
+
+## 2026-09-08 — A06 directional improvement remains uncertain under the frozen range rule
+- Task objective: complete the fifth registered case and retain a neutral/uncertain example without changing the inherited practical definition.
+- Problem / motivation: a large median reduction must not override a failed preregistered repeat-range condition.
+- Files changed: expansion current tables/common_support/capacity, case_mechanism_handoff, independent handoff and research/experiment logs.
+- Implementation: fixed B/C bags,3technicalrepeats each,own six-trajectory support and original classifier;no extra repeats or threshold changes.
+- Technical decisions: SMALL_OR_UNCERTAIN with DIRECTIONAL_GAIN,although C ranges are lower than B ranges. The APE median reduction150.835229m is not greater than the maximum arm range181.441203m; the practical-gain gate therefore fails.
+- Experiments performed:coe1_a06_00000_00900,AQUALOC archaeology06[0,900),6formalreplays.
+- Quantitative results:BAPE min/median/max2.050386/151.785956/183.491589m;C0.948918/0.950726/0.970376m. BRPE0.342113/19.136619/22.941066m;C0.184863/0.187006/0.187112m. Own support37poses/36s/84.0909%/36RPEpairs,evo<1e-6m. C6697observations/1275IDs,lifetime3median/55maxobservations.
+- Qualitative observations:B has extreme technical instability;Cfirstpose6.449473s versusB4.449896s,misalignment log counts31versus22. C actual residual blocks14772eachrepeat,all6runability/receiptsPASS,maxactualeligible487<1000.
+- Failed attempts:none;uncertainty from technical dispersion is retained in the neutral case list.
+- Known issues:neutral classification here means insufficient evidence under the frozen practical rule,not a numerically small change. Baseline instability and causal mechanism remain unresolved;proxy reference limits all accuracy interpretation.
+- Interpretation:current5/12A,30/72replays:1practicalgain,2loss,1uncertain,1NOT_EVALUABLE,2severe. Do not promote A06 to practical/robust gain after seeing its favorable direction.
+- Next steps:complete remaining7A windows;handoff baseline-instability case with exact ranges.

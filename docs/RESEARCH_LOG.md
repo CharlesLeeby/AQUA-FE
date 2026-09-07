@@ -903,3 +903,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion:APE/RPE comparison Not evaluated. Reference-limited,not a confirmed positive/negative candidate set.
 - Open questions:per-feature utility and this window's true relative accuracy remain Unknown.
 - Next experiment:continue the already frozen remaining8BatchA windows;no replacement of A05.
+
+
+## 2026-09-08 — A06 demonstrates why direction and practical status stay separate
+- Research question:how should a large favorable median difference be treated when the baseline varies even more across technical repeats?
+- Hypothesis:unstable cold-start baselines can create large apparent median gains that fail the inherited conservative evidence threshold.
+- Motivation:keep the preregistered practical classification independent of desirable-looking results.
+- Related baseline:fresh fullKLT on A06[0,900);A04 is a separate numerically abnormalbaseline rescue positive.
+- Proposed idea:retain directional improvement as a descriptive tier and put A06 in the uncertain list,with allrepeat ranges.
+- Why it might work:preserves traceable evidence without turning technicalvariation into independent replication or overriding the frozen range guard.
+- Assumptions:the unchanged maximum-arm-range condition is binding even when allCvalues are below allBvalues.
+- Potential failure cases:calling every median decline a practicalgain,ignoring baseline instability,or introducing a new rule because A06 looks favorable.
+- Evidence:Confirmed fact.APE medianreduction150.835229m<repeat-range181.441203m;B2.050386–183.491589m,C0.948918–0.970376m. Own support37poses/36RPEpairs,evoPASS;see common_support/coe1_a06_00000_00900/C-all_vs_B and case_registry.csv.
+- Current conclusion:SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN. Initialization delay increases coexist with both negative A01 and positive A04 outcomes,so delay direction alone does not distinguish these cases;this is a descriptive observation,not a tested risk predictor.
+- Open questions:which observation/backend-state mechanisms explain the different outcomes and baseline instability?
+- Next experiment:finish remaining7registeredA windows;then handoff to observation-utility/risk research only.

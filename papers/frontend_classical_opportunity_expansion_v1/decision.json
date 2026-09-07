@@ -4,13 +4,14 @@
     "A"
   ],
   "physical_windows_planned": 12,
-  "physical_windows_replayed": 4,
-  "backend_attempted": 24,
+  "physical_windows_replayed": 5,
+  "backend_attempted": 30,
   "classification_counts": {
     "PRACTICAL_LOSS": 2,
     "PRACTICAL_GAIN": 1,
     "NOT_EVALUABLE": 1,
-    "PENDING": 8
+    "SMALL_OR_UNCERTAIN": 1,
+    "PENDING": 7
   },
   "severe_regression_count": 2,
   "structural_failure_windows": 0,

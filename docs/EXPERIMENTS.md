@@ -816,3 +816,19 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Interpretation:structural availability of reference did not guarantee evaluation eligibility;the preselected window remains in the full denominator.
 - Conclusion:NOT_EVALUABLE with exact minimum-pose violation;neither a C gain nor a C loss,not a backend failure.
 - Follow-up:continue remaining8A windows;retain as reference-limited case,without substitution or threshold changes.
+
+
+## coe1_A06_initial_window — 2026-09-08
+- Experiment ID:classical_opportunity_expansion_v1/coe1_a06_00000_00900.
+- Date/status/scientific role:2026-09-08;COMPLETE comparison,SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN;frozen classical control.
+- Git commit/branch:fd4ec2b0619f2b56b3cf3b3e7b2543f983a2340e;exp/classical-opportunity-expansion-v1-20260908;frozen method/runner identities unchanged.
+- Dataset/window:AQUALOC archaeology06raw[0,900),existing sample rawarchive,exact input/reference identity in preparation receipt and frozen roster.
+- Environment/configuration:ROSNoetic/Python3.8,port12691,guarded1000capacity,.04s/8iterations,serialCPU2,3,8,9,inherited family calibration/hash locks.
+- Baseline:fresh completeKLT B,350cap,every2offset1,adaptive_clahe,vins_safe.
+- Proposed modification:frozen C-all classical addition retaining allBobservations/nonfeature messages.
+- Commands/artifacts:registered controller invokes run_classical_opportunity_expansion.py --window coe1_a06_00000_00900 --arm B|C-all --repeat 1|2|3. Runtime /media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_a06_00000_00900;published common_support/coe1_a06_00000_00900/C-all_vs_B and case/backend tables.
+- Metrics/results:APE min/median/max B2.050386/151.785956/183.491589m,C0.948918/0.950726/0.970376m;RPE B0.342113/19.136619/22.941066m,C0.184863/0.187006/0.187112m. Maximum APE repeat range181.441203m exceeds150.835229m median reduction,so practicalgain not met. C6697observations/1275IDs,lifetime3median/55maxobservations.
+- Validity/common support:all6runability/per-IDreceiptsPASS;37poses,36s,84.0909%coverage,36RPEpairs,evo<1e-6m. C/Bfirstposedelay6.449473/4.449896s;C/Bcoverage85.3404/89.8854%;Cresidual14772perrepeat,maxactualeligible487<1000;losttrackingtruthUnknown,logproxiesseparate.
+- Interpretation:large directional improvement with unstablebaseline;do not relabel as practicalgain using a post-hoc criterion.
+- Conclusion:SMALL_OR_UNCERTAIN;useful baseline-instability/initialization-context case,not a registered positive.
+- Follow-up:continue remaining7A windows;no tuning,extra repeats or BatchB.

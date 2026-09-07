@@ -1,7 +1,7 @@
 # Classical expansion mechanism handoff — partial checkpoint
 
-Status: Batch A4/12windows resolved,24/72formalreplays. This is a case interpretation
-checkpoint, not the final analysis/report. The remaining eight A windows must complete.
+Status: Batch A5/12windows resolved,30/72formalreplays. This is a case interpretation
+checkpoint, not the final analysis/report. The remaining seven A windows must complete.
 The registered Batch B gate is already impossible because two severe regressions exist.
 
 All labels below refer to the **whole C candidate set versus B for this cold-start window**.
@@ -29,3 +29,5 @@ these contrasts and all later neutral/failure cases. Do not tune C-all, add lear
 search nearby windows, or reuse the whole-window sign as a per-feature training label.
 
 A05 `coe1_a05_00000_00900` is retained as NOT_EVALUABLE:27commonposes<30required,26s/26RPEpairs. All6runability/receiptsPASS; the27-point reference grid has100%coverage but covers only26.996555s of reference span. No set-level positive/negative utility label is assigned. See its own common_support summary.
+
+A06 `coe1_a06_00000_00900` is SMALL_OR_UNCERTAIN / DIRECTIONAL_GAIN,with BAPE2.050386/151.785956/183.491589m versus C0.948918/0.950726/0.970376m(min/median/max). Median reduction150.835229m does not exceed181.441203m armrange;do not promote this case to practicalgain. Support37poses/36s/84.0909%/36RPEpairs,evo/receiptsPASS. Retain as baseline-instability context,even though allCAPE/RPErepeats are lower.

@@ -3,7 +3,7 @@ coe1_a01_00000_00900,coe1_a01_00000_00900,A01,sequence-held-out,six_C_all_develo
 coe1_a03_00000_00900,coe1_a03_00000_00900,A03,sequence-held-out,six_C_all_development_windows,A,0,900,PRACTICAL_LOSS,,True,NONE,False,False,6,2853.6054513891504,332577.0168706386,277.207709795188,351110.4057550522,85.72727867649428,7.5533454487055,7.5533454487055
 coe1_a04_00000_00900,coe1_a04_00000_00900,A04,sequence-held-out,six_C_all_development_windows,A,0,900,PRACTICAL_GAIN,,False,ROBUST_PRACTICAL_GAIN,False,False,6,-743.0403362422487,-99.98468697418468,-90.28710857317002,-99.84779244949345,94.39824056936288,12.509566830059086,12.509566830059086
 coe1_a05_00000_00900,coe1_a05_00000_00900,A05,sequence-held-out,six_C_all_development_windows,A,0,900,NOT_EVALUABLE,INVALID_COMMON_SUPPORT,False,NONE,False,False,6,,,,,,,
-coe1_a06_00000_00900,coe1_a06_00000_00900,A06,sequence-held-out,six_C_all_development_windows,A,0,900,PENDING,,False,NONE,False,False,0,,,,,,,
+coe1_a06_00000_00900,coe1_a06_00000_00900,A06,sequence-held-out,six_C_all_development_windows,A,0,900,SMALL_OR_UNCERTAIN,,False,DIRECTIONAL_GAIN,False,False,6,-150.83522906605626,-99.37364003268472,-18.949613055791552,-99.02278456516528,181.44120275200834,22.59895293543207,22.59895293543207
 coe1_a07_00000_00900,coe1_a07_00000_00900,A07,sequence-held-out,six_C_all_development_windows,A,0,900,PENDING,,False,NONE,False,False,0,,,,,,,
 coe1_a10_00000_00900,coe1_a10_00000_00900,A10,sequence-held-out,six_C_all_development_windows,A,0,900,PENDING,,False,NONE,False,False,0,,,,,,,
 coe1_h01_00000_00900,coe1_h01_00000_00900,H01,sequence-held-out,six_C_all_development_windows,A,0,900,PENDING,,False,NONE,False,False,0,,,,,,,
