@@ -918,3 +918,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion:SMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN. Initialization delay increases coexist with both negative A01 and positive A04 outcomes,so delay direction alone does not distinguish these cases;this is a descriptive observation,not a tested risk predictor.
 - Open questions:which observation/backend-state mechanisms explain the different outcomes and baseline instability?
 - Next experiment:finish remaining7registeredA windows;then handoff to observation-utility/risk research only.
+
+
+## 2026-09-08 — Cross-sequence positive opportunity coexists with unacceptable registered risk
+- Research question:does positive fixed-C opportunity recur beyond one new sequence,and does that suffice for confirmation?
+- Hypothesis:some cold-start cases benefit repeatedly while other cases suffer severe harm;positive recurrence and acceptable risk are different requirements.
+- Motivation:avoid either erasing positive evidence because of negatives or relaxing the severe bound after obtaining positives.
+- Related baseline:freshKLT onA07[0,900);prior newpositiveA04 and severe negativesA01/A03.
+- Proposed idea:retain A07 as the second robust positive and preserve the already failed severe-risk gate.
+- Why it might work:separates the existence of local opportunity from the registered claim of acceptable-risk transfer.
+- Assumptions:window-level effects only;three technicalrepeats do not establish independent replication;COLMAP proxy and broader project history remain disclosed.
+- Potential failure cases:interpreting2gains as overallconfirmation,calling2severe cases acceptable after fixing<=1before results,or claiming no opportunity exists despite observed positives.
+- Evidence:Confirmed fact.A07APE3.044412m→0.173396mmedian,RPE0.682203m→0.106705mmedian,narrowranges;36commonposes/34RPEpairs,evo/receiptsPASS. A04/A07 form2positive sequences;A01/A03 remain2severe negatives.
+- Current conclusion:local positive opportunity recurs across two sequences,but the registered acceptable-risk condition is not met. Final full-denominator decision still awaits the remaining6A windows.
+- Open questions:what utility/risk mechanisms separate positives from negatives without merely adding more candidates?
+- Next experiment:complete A10/H01–H05 under frozen contract,then only observation-utility/risk mechanism research;no BatchB or C-all tuning.

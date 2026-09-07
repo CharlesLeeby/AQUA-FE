@@ -832,3 +832,19 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Interpretation:large directional improvement with unstablebaseline;do not relabel as practicalgain using a post-hoc criterion.
 - Conclusion:SMALL_OR_UNCERTAIN;useful baseline-instability/initialization-context case,not a registered positive.
 - Follow-up:continue remaining7A windows;no tuning,extra repeats or BatchB.
+
+
+## coe1_A07_initial_window — 2026-09-08
+- Experiment ID:classical_opportunity_expansion_v1/coe1_a07_00000_00900.
+- Date/status/scientific role:2026-09-08;COMPLETE comparison,PRACTICAL_GAIN/ROBUST_PRACTICAL_GAIN;frozen classical additive probe.
+- Git commit/branch:6135930c9726cb9d1a00160c8c99652d9525c18e;exp/classical-opportunity-expansion-v1-20260908;frozen source/config/backend identities unchanged.
+- Dataset/window:AQUALOC archaeology07raw[0,900),exact timestamps in frozen roster;broader project exposure retained separately.
+- Environment/configuration:registered ROSNoetic/Python3.8,port12691,guarded1000capacity,.04s/8iterations,serialCPU2,3,8,9,unchanged sensorfamily configuration.
+- Baseline:fresh completeKLT B350cap/every2offset1/adaptive_clahe/vins_safe.
+- Proposed modification:frozen C-all append-only classical candidates;no change to algorithm,gates,q,backend or evaluation.
+- Commands/artifacts:registered controller invokes run_classical_opportunity_expansion.py --window coe1_a07_00000_00900 --arm B|C-all --repeat 1|2|3. Runtime /media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/backend/coe1_a07_00000_00900;published common_support/coe1_a07_00000_00900/C-all_vs_B and case/backend tables.
+- Metrics/results:APEmin/median/maxB3.042555/3.044412/3.053754m,C0.17339477/0.17339578/0.17340055m;RPEB0.68196793/0.68220301/0.68298444m,C0.10670231/0.10670485/0.10670487m. C30732observations/4890IDs,life3median/121maxobservations,2197ge4/897ge10.
+- Validity/common support:all6runability/per-IDreceiptsPASS;36poses,38s,80%coverage,2segments,34RPEpairs,evo<1e-6m;maxactualeligible521<1000;Cresidual131448perrepeat;Cfirstpose0.199943searlier;losttrackingtruthUnknown,logproxiesseparate.
+- Interpretation:second stable positive on a different sequence,with baseline scale error still visible;no independent population inference or per-feature utility label.
+- Conclusion:ROBUST_PRACTICAL_GAIN onA07. The2severe cases already observed still prohibitBatchB despite2cross-sequencepositives.
+- Follow-up:finish remaining6A windows and handoff complete positive/negative/uncertain/reference-limited pool to utility/risk research.

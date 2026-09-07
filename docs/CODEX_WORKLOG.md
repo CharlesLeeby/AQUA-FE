@@ -1044,3 +1044,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues:neutral classification here means insufficient evidence under the frozen practical rule,not a numerically small change. Baseline instability and causal mechanism remain unresolved;proxy reference limits all accuracy interpretation.
 - Interpretation:current5/12A,30/72replays:1practicalgain,2loss,1uncertain,1NOT_EVALUABLE,2severe. Do not promote A06 to practical/robust gain after seeing its favorable direction.
 - Next steps:complete remaining7A windows;handoff baseline-instability case with exact ranges.
+
+
+## 2026-09-08 — A07 adds a second robust positive across sequences
+- Task objective: complete the sixth fixed window and test whether prospective positive cases occur on more than one sequence.
+- Problem / motivation: retain a second positive without relaxing the separate severe-risk bound.
+- Files changed: expansion current tables/common_support/capacity, case mechanism handoff, independent handoff and required work/experiment/research/project logs.
+- Implementation: B/Ceach3technicalrepeats,own six-trajectory support,unchanged fixed-scale/evo/classification contract.
+- Technical decisions: recognize ROBUST_PRACTICAL_GAIN on A07;do not reactivate Batch B because two severe cases remain above its <=1bound.
+- Experiments performed:coe1_a07_00000_00900,AQUALOC archaeology07[0,900),6formalreplays.
+- Quantitative results:BAPE min/median/max3.042555/3.044412/3.053754m;C0.17339477/0.17339578/0.17340055m. BRPE0.68196793/0.68220301/0.68298444m;C0.10670231/0.10670485/0.10670487m. Support36poses/45gridpoints,38s,80%coverage,2segments,34RPEpairs,evo<1e-6m. C30732observations/4890IDs,2197ge4,897ge10,lifetime3median/121maxobservations.
+- Qualitative observations:both arms' repeat ranges are narrow;Bfittedscale0.289838 versusC0.896614;Cfirstpose5.049252s versusB5.249194s,about0.200searlier. No visual–IMU misalignment rejection logged. All6runability/per-IDreceiptsPASS;Cresidual131448perrepeat,maxactualeligible521<1000.
+- Failed attempts:none in this window;earlier negative and reference-limited cases remain unchanged.
+- Known issues:baseline scale discrepancy remains material;fittedscale is diagnostic and does not establish root cause. A07 overlaps broader project history while remaining outside sixCdeveloperwindows.
+- Interpretation:6/12A and36/72replays complete:2practical/robustgains acrossA04/A07,2losses,1uncertain,1NOT_EVALUABLE,2severe,0structural failures. Local positive opportunity is observed across sequences;acceptable-risk generalization condition still fails.
+- Next steps:finish A10/H01/H02/H03/H04/H05;do not activate B or tune C-all.

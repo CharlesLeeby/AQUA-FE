@@ -2,11 +2,11 @@
 
 Status: IN_PROGRESS; scientific decision: Unknown.
 
-1. New prospective C-all physical windows replayed: 5; replay attempts: 30.
+1. New prospective C-all physical windows replayed: 6; replay attempts: 36.
 2. Activated roster: 12 sequence-held-out / 0 window-held-out relative to the six C-all development windows; broader project exposure retained.
-3. Full activated denominator: {"PRACTICAL_LOSS": 2, "PRACTICAL_GAIN": 1, "NOT_EVALUABLE": 1, "SMALL_OR_UNCERTAIN": 1, "PENDING": 7}.
-4. ROBUST_PRACTICAL_GAIN: 1.
-5. Practical positive sequences: ["A04"].
+3. Full activated denominator: {"PRACTICAL_LOSS": 2, "PRACTICAL_GAIN": 2, "NOT_EVALUABLE": 1, "SMALL_OR_UNCERTAIN": 1, "PENDING": 6}.
+4. ROBUST_PRACTICAL_GAIN: 2.
+5. Practical positive sequences: ["A04", "A07"].
 6. Severe regression windows: 2.
 7. Candidate dose/lifetime/initialization comparison with old A02/Bus: pending final case interpretation; exact new fields in case_registry.csv and old tables remain frozen.
 8. Batch B activated: False. Exact unactivated windows remain in the registry.
@@ -21,7 +21,7 @@ Status: IN_PROGRESS; scientific decision: Unknown.
 | coe1_a04_00000_00900 | A | PRACTICAL_GAIN | ROBUST_PRACTICAL_GAIN | 743.154 / 743.154 / 837.552 | 0.113788 / 0.113799 / 0.113804 | False |  |
 | coe1_a05_00000_00900 | A | NOT_EVALUABLE | NONE | Not evaluated. | Not evaluated. | False | INVALID_COMMON_SUPPORT |
 | coe1_a06_00000_00900 | A | SMALL_OR_UNCERTAIN | DIRECTIONAL_GAIN | 2.05039 / 151.786 / 183.492 | 0.948918 / 0.950726 / 0.970376 | False |  |
-| coe1_a07_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |
+| coe1_a07_00000_00900 | A | PRACTICAL_GAIN | ROBUST_PRACTICAL_GAIN | 3.04255 / 3.04441 / 3.05375 | 0.173395 / 0.173396 / 0.173401 | False |  |
 | coe1_a10_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |
 | coe1_h01_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |
 | coe1_h02_00000_00900 | A | PENDING | NONE | Not evaluated. | Not evaluated. | False |  |

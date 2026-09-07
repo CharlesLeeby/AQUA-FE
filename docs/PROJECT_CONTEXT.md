@@ -314,3 +314,7 @@ Confirmed fact: the independent classical opportunity expansion has resolved A01
 
 ### 2026-09-08 classical expansion: first robust positive at A04
 Confirmed fact:A04[0,900)adds onePRACTICAL_GAIN/ROBUST_PRACTICAL_GAIN,with a numerically abnormal baseline(BAPE743.154136mmedian,C0.113799m). Own support31/44poses=70.4545%,29RPEpairs,evo/receiptsPASS;Cfirstpose2.900slater. Interpret as a baseline-anomaly rescue case. Current3/12A:1gain,2loss,2severe;BatchB stillexcluded by severe-risk bound. Finish remaining9A and preserve the full case pool. See expansion case_mechanism_handoff.md. No old conclusions or main method changed.
+
+
+### 2026-09-08 classical expansion midpoint: two cross-sequence robust positives, risk bound still failed
+Confirmed fact:6/12BatchA windows and36/72formalreplays complete. A04 andA07 arePRACTICAL_GAIN/ROBUST_PRACTICAL_GAIN;A01/A03 arePRACTICAL_LOSS/SEVERE_REGRESSION;A06 isSMALL_OR_UNCERTAIN/DIRECTIONAL_GAIN;A05 isNOT_EVALUABLE(27commonposes<30). A07APE median3.044412→0.173396m,RPE0.682203→0.106705m,ownsupport/evo/receiptsPASS. Local positive opportunity exists across two sequences,but2severe cases violate the frozen<=1riskbound;BatchB remains excluded. Finish the remaining6A windows before finalcomplete-denominatorreport. OldNO_EXPANSION/additive conclusions and main method remain unchanged. See expansion case_mechanism_handoff.md and exact case_registry.csv.
