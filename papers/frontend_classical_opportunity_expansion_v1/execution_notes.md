@@ -1,0 +1,9 @@
+# Execution notes before the first new backend
+
+2026-09-08. Roster freeze 881dad7 and method/execution freeze 8f323ba were pushed and read back from the remote branch. Exact six old C/B practical and severe classifications were reproduced by the new classifier; boundary checks cover the absolute threshold, RPE-only loss, repeat-range veto, and robust descriptor. No new C-all accuracy was inspected.
+
+The frozen dataset shell unconditionally derives its own RUN_DIR, despite the wrapper exporting that environment variable. Before the A01 baseline completed, task-local path aliases were installed: its planned feature/metrics paths point to its already running task-local leaf output; subsequent leaf output directories point to their planned task-local baseline directories. Original data, old outputs and frozen scripts are unchanged. Exact mapping is retained in runtime `baseline_output_path_mapping.json`. This is an output-path integration repair with no retry, no pixel/feature change and no replay.
+
+One frontend worker uses the fixed 0,6 affinity. A separate serial backend worker uses 2,3,8,9 and waits for the frontend independent-delivery receipt and capacity audit. Frontend preparation can overlap a backend replay; no two task backends run concurrently. Both stages respect the inherited resource floors. Foreign replays produce WAITING_RESOURCE. The advisory task lock cannot guarantee foreign tasks cooperate; no claim of full host exclusivity is made.
+
+The batch controller is separately hashed before launch. It retains errors and does not regenerate partial input/source outputs automatically. Per-window backend receipts are immutable and define technical attempts; a resume validates a receipt rather than adding a repeat.

@@ -729,3 +729,17 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Conclusion: 本六窗不支持L-all相对完整KLT有实用净收益；不宣称增加学习候选永远无用，也不推总体正例率。
 - Failed/negative records: Cemetery首源无效保留并重建，共7源尝试、6正式共同流；0额外正式回放；WAITING_RESOURCE单列，不剔除负结果。
 - Follow-up: 对保存日志做一次初始化/尺度失稳归因审计；不自动新扫窗、改预算或时机。独立ATE口径、精确lost-tracking事件、GPU峰值和初始化SfM耗时Not evaluated./Unknown。
+
+## EXP-20260908-CLASSICAL-OPPORTUNITY-V1 — Batch A activated
+
+- Date: 2026-09-08; status IN_PROGRESS; scientific role: frozen classical additive control opportunity expansion.
+- Git: exp/classical-opportunity-expansion-v1-20260908; roster 881dad7; source/execution 8f323ba; base 49c0247.
+- Dataset/window: A01/A03/A04/A05/A06/A07/A10/H01/H02/H03/H04/H05; each Batch A [0,900), Batch B [900,1800), actual times in frozen roster. Sequence-held-out only relative to six C-all development windows; broader historical exposure possible.
+- Environment/configuration: ROS Noetic, aquafe_cuda Python, frozen B archived exporter and additive PrivatePool/ClassicalGfttMatcher/Publisher; old A02/H07 family camera/backend snapshots; guarded binary e231871e...68aadd, capacity1000, solver .04s/8, loop_closure0, multiple_thread0, ROS12691.
+- Baseline: fresh complete KLT B. Modification: exact C-all adds candidates, removes no KLT; no learned arm or changed detector/gate/q/backend.
+- Commands/artifacts: `scripts/run_classical_opportunity_expansion.py --window coe1_a01_00000_00900 --frontend`; `scripts/execute_classical_opportunity_batch.py --batch A`; runtime `/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1`; paper tables in corresponding papers directory. Exact commands retained in receipts/controller logs.
+- Metrics: fixed-scale proper SE(3) APE RMSE, strict 1s translational RPE guardrail, min/median/max of three technical repeats; initialization/coverage, fitted scale diagnostic, feature counts, lifetimes, actual per-ID receipt/residual/capacity/runtime, reset/lost proxies.
+- Results: Not evaluated. Formal replay count at entry creation 0; planned Batch A72 and conditional Batch B72.
+- Validity/common support: source/metric identities locked; per-message B reconstruction, raw-frame association, per-ID encoding/delivery and capacity audit required before replay; six-trajectory comparison support >=30 poses, >=10s, >=70% coverage, >=10 RPE pairs, evo check. New common support Not evaluated.
+- Interpretation/conclusion: prospective fixed-C case pool only; no effectiveness/population positive-rate conclusion.
+- Follow-up: resolve all Batch A windows, commit/push/readback checkpoint, then exact conditional Batch B. No replacement windows or repeated scientific attempts.

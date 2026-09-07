@@ -911,3 +911,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: foreign observation-utility VINS replay observed at initial resource check; WAITING_RESOURCE is not FAIL. System and runtime storage floors remain mandatory.
 - Interpretation: a new prospective fixed-method case-discovery test; no positive-rate or effectiveness conclusion yet.
 - Next steps: push/read back both batch rosters, freeze isolated execution adapters, then run all executable Batch A slots and apply the unchanged metric contract.
+
+## 2026-09-08 — Frozen execution and Batch A startup
+
+- Task objective: turn the remotely frozen 24-window roster into a B/C-only, receipt-driven run.
+- Problem / motivation: reuse C-all and exact metric rules while redirecting every output and isolating backend resource usage.
+- Files changed: new run/analyze/controller scripts, source/backend/evaluation/controller locks, execution notes, this worklog and EXPERIMENTS.
+- Implementation: import original candidate/merger and backend leaf unchanged; only remove unused XFeat/L arms, add the already audited raw-frame association guard, and redirect task paths. New sequential archive materialization preserves inherited exact timestamp, IMU and reference message constructors.
+- Technical decisions: fresh B; exact old archived exporter; no backend build/change; inherited guarded capacity=1000; own ROS12691; one frontend plus serial backend worker. Original shell output path override is aligned with task-local filesystem aliases, without rerunning the first baseline.
+- Experiments performed: compilation, all six original C/B classification reproductions, four boundary/range classification checks; first new raw input preparation and B export underway.
+- Quantitative results: classifier 6/6 old comparisons agree; new accuracy Not evaluated. Run identity locks at 8f323ba, roster at 881dad7; both remote readbacks PASS.
+- Qualitative observations: archives contain real timestamp spans close to 45 s; raw input and reference coverage retain exact per-window boundaries.
+- Failed attempts: no C or backend attempt failed at this checkpoint; Python3.8 metadata compatibility attempt remains recorded in prior entry.
+- Known issues: old shell ignores RUN_DIR override (path aliases recorded); foreign task load can exist; host exclusivity Unknown.
+- Interpretation: structural execution readiness and inherited classification equivalence are not effectiveness evidence.
+- Next steps: finish first B/C export and independent readback; serial Batch A repeats and full-denominator analysis; publish Batch A before conditional B.

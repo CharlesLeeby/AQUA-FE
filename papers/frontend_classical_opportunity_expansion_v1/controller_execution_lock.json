@@ -1,0 +1,11 @@
+{
+  "script": "scripts/execute_classical_opportunity_batch.py",
+  "sha256": "05ec1e91a539ea9def1c39ed3711100207030d2b8cab76a7788bdefcb51aa543",
+  "batch_order": [
+    "A",
+    "conditional_B"
+  ],
+  "first_external_frontend_pid": 846846,
+  "backend_parallelism": 1,
+  "frontend_parallelism": 1
+}
