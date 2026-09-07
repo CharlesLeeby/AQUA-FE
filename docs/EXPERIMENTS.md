@@ -677,3 +677,16 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Validity/common support: 12个接收完整、388poses、覆盖96.75%；38共同poses/37秒/95%/37RPE对；evo通过。未触发1000容量保护；有轨迹与初始化日志不代表定位可靠。
 - Interpretation/conclusion: 剂量对照充分但A09未获净收益；L-all vs L6双升而未达实用变化门，两学习添加臂对B实用退化。所有臂严重尺度漂移；不把尺度对齐诊断替代fixed-scale主结果。
 - Follow-up: 保留负例，继续固定其余五窗；不扩窗、不调参。
+
+
+## additive_budget_v1_A02_complete — 2026-09-07
+- Status and scientific role: COMPLETE，该开发窗24臂窗矩阵的一部分；非独立测试集。
+- Git commit / branch: 冻结源实现d1c793a，执行锁2297bb8；当前报告基于d1ddd0f / exp/additive-budget-v1-20260907。
+- Dataset/window: windows.csv中A02 0–900原输入与every_n/frame_offset。
+- Environment/config: source_and_backend_lock.json、backend_execution_lock_v2.json；同一诊断二进制、容量1000、原solver预算、CPU2,3,8,9。
+- Baseline/proposed: 完整共享B，额外L6/L-all/C-all；三技术重复。
+- Commands/artifacts: scripts/execute_additive_budget_matrix.py --start-window a02_0_900；运行根frontend_additive_budget_v1/backend/a02_0_900；checkpoint_a02.md、backend_results.csv、comparisons.csv、common_support/a02_0_900/。
+- Metrics/results: L-all/L6 APE0.9945315745/0.9446784214m，RPE0.09277713305/0.08783911084m，SMALL_OR_UNCERTAIN；L6/B、L-all/B实用退化；C-all/B实用改善；L-all/C-all实用退化。
+- Validity/common support: 全12接收完整、初始化/覆盖通过；各对比6轨迹和四臂12轨迹支撑通过，evo通过。不同支撑数值不混用。
+- Interpretation/conclusion: 发布和实际残差差异充分，当前学习数量收益未获支持；C-all结果不能外推等资源来源优越性。
+- Follow-up: 仅继续原矩阵。ATE单独口径、lost tracking真实事件、精确solver停止原因Not evaluated./Unknown；详列字段不臆造。

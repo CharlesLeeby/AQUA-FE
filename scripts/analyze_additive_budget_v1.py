@@ -45,6 +45,7 @@ def backend_stats(target):
     result['initialization_log_first']=init[0] if init else ''
     result['initialization_log_first']=re.sub(r'\x1b\[[0-9;]*m','',result['initialization_log_first'])
     use=Counter();idsets=defaultdict(set);times=defaultdict(Counter);max_solver=0.;solver_calls=0;solver_near_limit=0;solver_sum=0.;solver_at_limit=0
+    solver_budgets=Counter();solver_iterations=Counter();solver_terminations=Counter()
     if (target/'backend_use.csv').exists():
         for row in csv.reader((target/'backend_use.csv').open()):
             kind=row[0]
@@ -52,6 +53,7 @@ def backend_stats(target):
                 elapsed,limit=float(row[2]),float(row[3]);solver_calls+=1
                 max_solver=max(max_solver,elapsed);solver_near_limit+=elapsed>=.95*limit
                 solver_sum+=elapsed;solver_at_limit+=elapsed>=limit
+                solver_budgets[row[3]]+=1;solver_iterations[row[4]]+=1;solver_terminations[row[5]]+=1
             elif kind in ('received','eligible','residual'):
                 tid=int(row[2]);n=int(row[3]);label='candidate' if tid>=10_000_000 else 'KLT'
                 use[kind+'_'+label]+=n if kind in ('received','residual') else 1
@@ -64,6 +66,12 @@ def backend_stats(target):
     result.update(solver_calls=solver_calls,solver_near_time_limit_count=solver_near_limit,
                   solver_at_or_above_time_limit_count=solver_at_limit,solver_total_s=solver_sum,
                   solver_mean_s=solver_sum/solver_calls if solver_calls else '',
+                  solver_near_limit_fraction=solver_near_limit/solver_calls if solver_calls else '',
+                  solver_at_or_above_limit_fraction=solver_at_limit/solver_calls if solver_calls else '',
+                  solver_budget_histogram_json=json.dumps(solver_budgets,sort_keys=True),
+                  solver_iteration_histogram_json=json.dumps(solver_iterations,sort_keys=True),
+                  solver_termination_integer_histogram_json=json.dumps(solver_terminations,sort_keys=True),
+                  exact_solver_stop_reason='Unknown',
                   max_solver_s=max_solver,max_actual_eligible=max(times['eligible'].values(),default=0))
     source_counts=Counter()
     with rosbag.Bag(receipt['feature_bag']) as bag:

@@ -833,3 +833,20 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: 来源方案比较受剂量、成本及来源权重混杂；精确私有终止原因Unknown。
 - Interpretation: 不可宣称纯检测器隔离或等资源learned优越；L6/all数量控制仍成立。
 - Next steps: 完成原矩阵，报告全部混杂与负例。
+
+
+## 2026-09-07 — additive_budget_v1 A02完整检查点
+
+- Date: 2026-09-07
+- Task objective: 完成固定添加式数量对照的A02四臂三技术重复并保持完整分母。
+- Problem / motivation: 检查大剂量是否仅增加发布，还是实际进入优化并改善定位。
+- Files changed: papers/frontend_additive_budget_v1/checkpoint_a02.md、汇总CSV/共同支撑摘要；scripts/summarize_additive_budget_sources.py、scripts/report_additive_budget_v1.py及分析用solver直方图；独立交接与研究记录。
+- Implementation: 只读分析冻结receipt，增加来源供给/拒绝/q/用时汇总及完整矩阵后的报告渲染；不改源流、后端或评估锁。
+- Technical decisions: 三重复中位/全范围；五对比各自共同支撑；精确solver停止原因Unknown。
+- Experiments performed: A02 0–900，B/L6/L-all/C-all各3；该窗12次全部运行与共同支撑有效；源分析已完成A09/A02/Bus。
+- Quantitative results: L-all/L6发布116129/2688，实际残差中位598167/14340；最大优化资格834<1000。L-all/L6 APE0.994532/0.944678m，SMALL_OR_UNCERTAIN；两学习臂对B实用退化，C-all对B实用改善，详见checkpoint_a02.md及comparisons.csv。
+- Qualitative observations: 大剂量已进入后端，但未形成预注册数量收益；初始化时刻与solver接近预算频率均发生变化。
+- Failed attempts: 此阶段后端因其他窗口VINS短暂WAITING_RESOURCE，未计成算法失败，资源释放后恢复Bus。未新增或重跑最好结果。
+- Known issues: 来源q映射、初始化和非等资源混杂；私有ID精确死亡原因及solver确切停止原因Unknown。
+- Interpretation: Confirmed fact仅限开发窗端到端结果；机制为Hypothesis / Inference，全矩阵结论仍Not evaluated.
+- Next steps: 完成Bus/A08/Cemetery/H07剩余固定回放，不改门或窗口。

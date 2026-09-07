@@ -1,0 +1,67 @@
+{
+  "arms": {
+    "B": {
+      "arbitrary_keyframe_depth_bound": 700,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/afrl_cave_v31/external_klt_every2_acv1_afrl_bus_s180_d045_klt/features.bag",
+      "feature_bag_sha256": "9e4d546cb799f516d933944e9715d1551affe381ab2f0171876cebb95d01ae84",
+      "feature_messages": 282,
+      "gaps": [],
+      "max_consecutive11_ge4": 426,
+      "max_consecutive11_ids": 2028,
+      "max_per_message": 350,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 23809,
+      "whole_window_ge4": 5800
+    },
+    "C-all": {
+      "arbitrary_keyframe_depth_bound": 776,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/afrl_bus_s180_d045/C-all.bag",
+      "feature_bag_sha256": "fc326689f22785ea5e1d209ad6c75cb8af238f8e0709c82af19d1efcd1d3fc87",
+      "feature_messages": 282,
+      "gaps": [],
+      "max_consecutive11_ge4": 442,
+      "max_consecutive11_ids": 2047,
+      "max_per_message": 388,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 24561,
+      "whole_window_ge4": 5989
+    },
+    "L-all": {
+      "arbitrary_keyframe_depth_bound": 760,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/afrl_bus_s180_d045/L-all.bag",
+      "feature_bag_sha256": "169bfc0a3591b2da99bce3a1871c5cda7ba2d30b673d010fe1f9ab8a43ab697b",
+      "feature_messages": 282,
+      "gaps": [],
+      "max_consecutive11_ge4": 436,
+      "max_consecutive11_ids": 2062,
+      "max_per_message": 380,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 24700,
+      "whole_window_ge4": 6051
+    },
+    "L6": {
+      "arbitrary_keyframe_depth_bound": 712,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/afrl_bus_s180_d045/L6.bag",
+      "feature_bag_sha256": "0940a076b832127a25b0966608b942cf937e4890d30df9a0eab8ea32a5ac5502",
+      "feature_messages": 282,
+      "gaps": [],
+      "max_consecutive11_ge4": 432,
+      "max_consecutive11_ids": 2054,
+      "max_per_message": 356,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 24207,
+      "whole_window_ge4": 5924
+    }
+  },
+  "capacity_modified": false,
+  "proof": "WINDOW_SIZE=10; continuous public IDs remain contiguous under frame removal; every length>=4 interval among indices0..10 intersects {3,7}; depth_count<=2*max_input_count. Whole-window count is only a looser bound.",
+  "run_slug": "afrl_bus_s180_d045"
+}

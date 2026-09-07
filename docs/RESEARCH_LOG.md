@@ -761,3 +761,16 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion: A09高剂量未提供净收益；对L6差异SMALL_OR_UNCERTAIN，对B两学习添加臂PRACTICAL_LOSS。Hypothesis / Inference: 尺度异常/初始化可能主导，但未完成因果归因。
 - Open questions: 其余固定五窗、候选使用率与成本的差异。
 - Next experiment: 按原合同完成剩余五窗；不围绕A09调参。
+
+
+## 2026-09-07 — A02添加数量与求解压力
+- Research question: 取消6条公开配额是否把有效观测剂量转成更好轨迹？
+- Hypothesis: 更多持续观测可能增加约束，也可能改变初始化或在固定solver预算下增加风险。
+- Motivation / related baseline: A02同一原B，源流及XFeat q完全共享。
+- Proposed idea / why it might work: 本轮只加不删数量对照，长链应有机会提供更多优化约束。
+- Assumptions: 原B精确保留、无未来选择、同二进制与共同支撑；技术重复不独立。
+- Potential failure cases: 初始化、错误/相关约束、来源权重及求解时间混杂。
+- Evidence: Confirmed fact：L-all实际残差中位598167，L6为14340；数量比较SMALL_OR_UNCERTAIN；学习两臂对B实用退化，C-all对B改善。L-all接近预算401/412、400/412、365/391；详checkpoint_a02.md。
+- Current conclusion: 该窗不支持“只因加得少所以未获益”；精确退化机制为Hypothesis / Inference。
+- Open questions: 何种初始化/约束/求解变化解释现象？其余四窗结果尚未齐备。
+- Next experiment: 不新增实验，只完成冻结六窗四臂矩阵。

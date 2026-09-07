@@ -17,6 +17,21 @@ a09_6000_6800,C-all,backend,60.41607802499493,,87552.0,,,2,388,19,0.036069276
 a09_6000_6800,C-all,backend,60.52363471800345,,87344.0,,,3,388,16,0.035660694
 a02_0_900,B,frontend,REUSED,2.3419095999997808,1626392,shared two-source generation; L6 and L-all share one inference stream,"{""classical_gftt_eligibility_s"": 58.18547729009879, ""classical_gftt_tracking_generation_s"": 305.66267043419066, ""image_preprocessing_s"": 173.8962354562973, ""xfeat_eligibility_s"": 143.36678228413803, ""xfeat_tracking_generation_s"": 406.6552294982248}",,,,
 a02_0_900,B,backend,64.97736083800555,,101232.0,,,1,421,104,0.04861175
+a02_0_900,B,backend,65.03257176700572,,97844.0,,,2,421,113,0.046880625
+a02_0_900,B,backend,64.952297722004,,99780.0,,,3,421,109,0.049409218
 a02_0_900,L6,frontend,1111.6117192219972,10.229005264991429,1626392,shared two-source generation; L6 and L-all share one inference stream,"{""classical_gftt_eligibility_s"": 58.18547729009879, ""classical_gftt_tracking_generation_s"": 305.66267043419066, ""image_preprocessing_s"": 173.8962354562973, ""xfeat_eligibility_s"": 143.36678228413803, ""xfeat_tracking_generation_s"": 406.6552294982248}",,,,
+a02_0_900,L6,backend,64.73267774099077,,102512.0,,,1,407,223,0.050653745
+a02_0_900,L6,backend,65.03831403600634,,101796.0,,,2,407,216,0.046766036
+a02_0_900,L6,backend,64.93261078599608,,101428.0,,,3,407,222,0.047182594
 a02_0_900,L-all,frontend,1111.6117192219972,18.45441820200358,1626392,shared two-source generation; L6 and L-all share one inference stream,"{""classical_gftt_eligibility_s"": 58.18547729009879, ""classical_gftt_tracking_generation_s"": 305.66267043419066, ""image_preprocessing_s"": 173.8962354562973, ""xfeat_eligibility_s"": 143.36678228413803, ""xfeat_tracking_generation_s"": 406.6552294982248}",,,,
+a02_0_900,L-all,backend,64.9321017809998,,118932.0,,,1,412,401,0.052778679
+a02_0_900,L-all,backend,65.04914847599866,,116936.0,,,2,412,400,0.053749916
+a02_0_900,L-all,backend,64.93035842999234,,117732.0,,,3,391,365,0.05470171
 a02_0_900,C-all,frontend,1111.6117192219972,12.351352280005813,1626392,shared two-source generation; L6 and L-all share one inference stream,"{""classical_gftt_eligibility_s"": 58.18547729009879, ""classical_gftt_tracking_generation_s"": 305.66267043419066, ""image_preprocessing_s"": 173.8962354562973, ""xfeat_eligibility_s"": 143.36678228413803, ""xfeat_tracking_generation_s"": 406.6552294982248}",,,,
+a02_0_900,C-all,backend,64.83547721301147,,106888.0,,,1,421,219,0.049519316
+a02_0_900,C-all,backend,64.72957585800032,,107236.0,,,2,421,214,0.048171711
+a02_0_900,C-all,backend,64.93575847600005,,107036.0,,,3,421,214,0.049887043
+afrl_bus_s180_d045,B,frontend,REUSED,1.290750191998086,1249588,shared two-source generation; L6 and L-all share one inference stream,"{""classical_gftt_eligibility_s"": 8.38332753299619, ""classical_gftt_tracking_generation_s"": 98.07112342894834, ""image_preprocessing_s"": 44.106291786869406, ""xfeat_eligibility_s"": 6.958167818025686, ""xfeat_tracking_generation_s"": 99.93322773603722}",,,,
+afrl_bus_s180_d045,L6,frontend,264.0078119279933,5.850150307000149,1249588,shared two-source generation; L6 and L-all share one inference stream,"{""classical_gftt_eligibility_s"": 8.38332753299619, ""classical_gftt_tracking_generation_s"": 98.07112342894834, ""image_preprocessing_s"": 44.106291786869406, ""xfeat_eligibility_s"": 6.958167818025686, ""xfeat_tracking_generation_s"": 99.93322773603722}",,,,
+afrl_bus_s180_d045,L-all,frontend,264.0078119279933,5.8055210589955095,1249588,shared two-source generation; L6 and L-all share one inference stream,"{""classical_gftt_eligibility_s"": 8.38332753299619, ""classical_gftt_tracking_generation_s"": 98.07112342894834, ""image_preprocessing_s"": 44.106291786869406, ""xfeat_eligibility_s"": 6.958167818025686, ""xfeat_tracking_generation_s"": 99.93322773603722}",,,,
+afrl_bus_s180_d045,C-all,frontend,264.0078119279933,5.714580660991487,1249588,shared two-source generation; L6 and L-all share one inference stream,"{""classical_gftt_eligibility_s"": 8.38332753299619, ""classical_gftt_tracking_generation_s"": 98.07112342894834, ""image_preprocessing_s"": 44.106291786869406, ""xfeat_eligibility_s"": 6.958167818025686, ""xfeat_tracking_generation_s"": 99.93322773603722}",,,,

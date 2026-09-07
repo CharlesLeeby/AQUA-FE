@@ -13,3 +13,6 @@
 A09前端四臂完成；L6=2251、L-all=42018、C-all=22392次追加观测，KLT逐字段保持。backend B/repeat1预启动遇到WAITING_RESOURCE，尚无正式replay。剩余五窗源流在本轮终端会话顺序执行；不要重复启动，先查进程/receipt。准确状态见report和decision。
 
 A09正式12/12完成且共同支撑/evo通过：更多剂量未改善净收益，两学习添加臂对B实用退化。A02前端4臂完成，后端控制器等待/顺序执行；AFRL Bus源流运行中。见checkpoint_a09.md。恢复前检查 execute_additive_budget_matrix.py 与 frontend进程，不重复启动。
+
+
+2026-09-07追加：A02全12次完成且共同支撑/evo通过，详checkpoint_a02.md。Bus回放推进，A08源生成中；完整矩阵最终判断仍待完成。A09检查点d1ddd0f已push，四个远端文件SHA256读回一致，见sync_d1ddd0f.json。
