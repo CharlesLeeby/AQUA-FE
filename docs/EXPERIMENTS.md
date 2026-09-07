@@ -743,3 +743,15 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Validity/common support: source/metric identities locked; per-message B reconstruction, raw-frame association, per-ID encoding/delivery and capacity audit required before replay; six-trajectory comparison support >=30 poses, >=10s, >=70% coverage, >=10 RPE pairs, evo check. New common support Not evaluated.
 - Interpretation/conclusion: prospective fixed-C case pool only; no effectiveness/population positive-rate conclusion.
 - Follow-up: resolve all Batch A windows, commit/push/readback checkpoint, then exact conditional Batch B. No replacement windows or repeated scientific attempts.
+
+## EXP-20260908-CLASSICAL-SOURCE-EQUIVALENCE — COMPLETE / structural probe
+
+- Date: 2026-09-08; branch exp/classical-opportunity-expansion-v1-20260908 at 964db5b; source base49c0247.
+- Dataset/window: old development A02 input first40 raw frames, 20 output records; not counted as a new opportunity window.
+- Environment/configuration: aquafe_cuda Python, ROS Noetic, OpenCV threads1, NumPy seed0, fixed CPU0,6, unchanged ClassicalGfttMatcher/PrivatePool, same camera and B messages.
+- Baseline: saved additive-budget dual-source C JSONL, SHA256934a7cc7...ef888. Proposed modification: execute only its classical private pool; no candidate/gate/q changes.
+- Commands/artifacts: exact bounded Python orchestration recorded in session; result/provenance papers/frontend_classical_opportunity_expansion_v1/classical_source_equivalence_probe.json; old input/source paths in receipt.
+- Metrics/results: full JSON-record equality20/20, candidate observations822; observed wall26.726 s, not an isolated timing comparison.
+- Validity/common support: exact dictionary equality; backend common support/APE/RPE Not evaluated. Backend replay count0.
+- Interpretation/conclusion: bounded execution equivalence PASS, not effectiveness evidence or a new outcome sample.
+- Follow-up: continue registered new-window source/receipt gates and Batch A backend matrix.

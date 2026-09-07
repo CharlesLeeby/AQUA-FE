@@ -926,3 +926,16 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: old shell ignores RUN_DIR override (path aliases recorded); foreign task load can exist; host exclusivity Unknown.
 - Interpretation: structural execution readiness and inherited classification equivalence are not effectiveness evidence.
 - Next steps: finish first B/C export and independent readback; serial Batch A repeats and full-denominator analysis; publish Batch A before conditional B.
+
+## 2026-09-08 — Bounded C-source equivalence audit
+
+- Task objective: verify removing unused XFeat orchestration does not change C source records.
+- Problem / motivation: method freeze requires executable equivalence evidence beyond matching detector parameter names.
+- Files changed: new classical_source_equivalence_probe.json and append-only work/experiment logs; no method files changed.
+- Implementation/technical decisions: run unchanged classical pool alone against old A02 input/B on exactly first 40 raw frames and compare complete record dictionaries to saved frozen dual-source C stream.
+- Experiments performed: bounded frontend structural equivalence, no new physical evaluation window and no backend replay.
+- Quantitative results: 20/20 complete source records and 822 published-eligible candidate observations match exactly; observed probe wall time 26.726 s with another task-local baseline export on the same fixed frontend affinity (not a performance benchmark). Artifact: papers/frontend_classical_opportunity_expansion_v1/classical_source_equivalence_probe.json.
+- Qualitative observations: coordinates, q, IDs, age, rejection counters and geometry reasons all match on this bounded prefix.
+- Failed attempts: none. Known issues: this is a bounded-prefix check, not a full six-window regeneration.
+- Interpretation: Confirmed fact — prefix identity; new-window backend effectiveness Not evaluated.
+- Next steps: complete the frozen Batch A readiness gates and repeats.

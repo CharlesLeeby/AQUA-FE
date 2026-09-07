@@ -1,0 +1,12 @@
+{
+  "matched_candidate_observations": 822,
+  "matched_source_records": 20,
+  "new_C_backend_replays": 0,
+  "old_baseline": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a02_0_900_klt/features.bag",
+  "old_input": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_same_backend_confirmatory_v3/prepared/a02_0_900/input.bag",
+  "old_source_stream": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a02_0_900/classical_gftt_source.jsonl",
+  "old_source_stream_sha256": "934a7cc76b18bd047ce6943539eb394706b6b4fe730cdf61731e8f2e289ef888",
+  "scope": "C-only pool vs saved frozen dual-source C records; old A02 first40 raw frames, not a new scientific window/replay",
+  "status": "PASS",
+  "wall_s": 26.726036798994755
+}
