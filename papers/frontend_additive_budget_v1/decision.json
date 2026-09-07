@@ -1,6 +1,15 @@
 {
-  "status": "SOURCE_CONTRACT_FROZEN",
-  "backend": "Not evaluated.",
-  "answer": "Unknown.",
-  "next_step": "完成结构与容量探针，随后固定六窗四臂。"
+  "status": "IN_PROGRESS",
+  "frontend_completed": 4,
+  "frontend_total": 24,
+  "backend_attempted": 0,
+  "backend_completed": 0,
+  "backend_planned": 72,
+  "reused_replays": 0,
+  "quantity_contrast_sufficient_windows": 1,
+  "quantity_practical_gain_windows": 0,
+  "quantity_practical_loss_windows": 0,
+  "results_boundary": "six outcome-known development windows; three technical repeats are not independent samples; COLMAP/proxy reference",
+  "answer": "Unknown; full matrix pending",
+  "next_step": "完成同一冻结合同的剩余矩阵。"
 }

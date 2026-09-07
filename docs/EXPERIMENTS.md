@@ -650,3 +650,19 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Validity: 4/4 all-nine common supports, 38–42 poses / 37–41 s / 93.33%–95% / strict 1 s RPE; evo delta <5e-7 m. Same-grid v2/current/KLT comparison also 4/4 PASS. No parameter/gate/backend change.
 - Interpretation: A09 fixed-scale versus v2 improves 12.44%/16.47%, while Sim(3) errors increase; A02 improves about 10% relative to v2 but retains severe KLT regression. Learned is not proven necessary; matched also improves the positive-window baseline.
 - Conclusion/follow-up: frozen NO_EXPANSION; stop this single policy experiment, preserve negative/partial history and publish. No additional parameter variant or twelve-window extension.
+
+## EXP-20260907-ADDITIVE-BUDGET-V1 — A09 结构探针检查点
+- Date: 2026-09-07。
+- Status and scientific role: A09四臂FRONTEND_COMPLETE；后端WAITING_RESOURCE；独立已知结果开发窗数量机制实验。
+- Git commit and branch: source合同 d1c793a8d56b3f8efe2ed3b3d770b706e692dbdc，运行中发布2297bb8；exp/additive-budget-v1-20260907。精确运行模块哈希见source_and_backend_lock.json。
+- Dataset and sequence/window: A09 6000–6800；windows.csv原帧偏移1/every_n2，输入801图像，400输出时刻。
+- Environment and exact configuration: Python aquafe_cuda；XFeat2048/.82、GFTT1024；seed60/pool800；adaptive_clahe；锁文件及输入相机哈希完整。
+- Baseline: 原KLT最多350，已审计bag SHA6de8ffe9…884ff只读复用。
+- Proposed modification: L6/L-all共享一次源流、C-all独立传统源；完整KLT只加不删，无50次/短时替换窗口。
+- Commands and artifacts: scripts/run_additive_budget_v1.py --window a09_6000_6800；scripts/audit_additive_budget_capacity.py同窗；runtime `/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a09_6000_6800/receipt.json`；公开 frontend_audit.csv/candidate_lifecycle.csv/capacity/a09_6000_6800.json。
+- Metrics: 追加观测、并发、公开寿命、编码/主干一致性、容量上界；APE/RPE、初始化和后端运行成本 Not evaluated。
+- Results: L6=2251次/253ID/最长96次，346帧触顶；L-all=42018次/2555ID/最长192次，337帧>6，最多262并发；C-all=22392次/1474ID/最长188次，最多152并发。
+- Validity checks and common support: 三添加臂全部KLT序列化重建、非feature一致、L6源ID/时间子集通过；四臂公开ID无断续复用。连续11帧>=4次ID最多B377/L6384/L-all638/C-all522；不是实际后端使用量。共同支撑 Not evaluated。
+- Interpretation: Confirmed fact: A09剂量对照充分。Hypothesis / Inference: 更多有效后端约束是否改善仍未知。
+- Conclusion: 尚不能回答净收益，未晋升主方法。
+- Follow-up: 其余五窗源流正在顺序执行；后端等待外部VINS任务释放资源，不终止其他任务。

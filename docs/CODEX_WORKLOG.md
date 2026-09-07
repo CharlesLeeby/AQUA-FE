@@ -793,3 +793,17 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: 真实solver资源/容量需运行后读日志；无独立GT。
 - Interpretation: 容量预检与工程诊断不构成学习收益证据。
 - Next steps: 完成第一窗输出及容量审计，资源允许后串行后端。
+
+## 2026-09-07 — additive-budget-v1 A09已完成单元
+- Task objective: 第一完整合同结构探针，不筛选后端好结果。
+- Problem / motivation: 确认取消6配额实际增大剂量且不破坏KLT。
+- Files changed: 前端审计、逐公开链、资源与完整分母报告、容量JSON、资源等待记录、分析脚本。
+- Implementation: 对三添加bag序列化读回；共同源流哈希相同；独立ID连续性/容量审计。
+- Technical decisions: A09输出计入24臂窗；原B只读复用。后端资源冲突不算算法失败。
+- Experiments performed: EXP-20260907-ADDITIVE-BUDGET-V1前端A09四臂。
+- Quantitative results: 详见该实验条目及receipt；L6 2251、L-all42018、C-all22392次，KLT不变。
+- Qualitative observations: L-all供给明显超过6；保守容量上界大于1000不能推断实际越界。
+- Failed attempts: 后端启动前检查返回WAITING_RESOURCE，无本任务VINS启动。
+- Known issues: APE/RPE/优化使用量 Not evaluated；逐ID精确私有终止原因Unknown，按类累计拒绝有源流证据。
+- Interpretation: 只支持剂量差已形成，不能支持收益。
+- Next steps: 固定五窗继续，正式后端串行且需资源空闲。

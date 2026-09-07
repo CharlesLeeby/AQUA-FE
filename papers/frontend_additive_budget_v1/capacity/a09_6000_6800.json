@@ -1,0 +1,67 @@
+{
+  "arms": {
+    "B": {
+      "arbitrary_keyframe_depth_bound": 700,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a09_6000_6800_klt/features.bag",
+      "feature_bag_sha256": "6de8ffe9226c1c786bbd80b53049f2f4f1f58c2859808034b60b5dca171884ff",
+      "feature_messages": 400,
+      "gaps": [],
+      "max_consecutive11_ge4": 377,
+      "max_consecutive11_ids": 1986,
+      "max_per_message": 350,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 19477,
+      "whole_window_ge4": 3220
+    },
+    "C-all": {
+      "arbitrary_keyframe_depth_bound": 1004,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a09_6000_6800/C-all.bag",
+      "feature_bag_sha256": "00b20e828bcc0974bea0bcb01712cc265130284d001c4d67d1bee6734e9abbb0",
+      "feature_messages": 400,
+      "gaps": [],
+      "max_consecutive11_ge4": 522,
+      "max_consecutive11_ids": 1989,
+      "max_per_message": 502,
+      "public_gap_count": 0,
+      "status": "GUARDED_CAPACITY_PROBE_REQUIRED",
+      "unique_ids": 20951,
+      "whole_window_ge4": 3975
+    },
+    "L-all": {
+      "arbitrary_keyframe_depth_bound": 1224,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a09_6000_6800/L-all.bag",
+      "feature_bag_sha256": "e0c5de737d82af40a4a565d10d6f1b9921a68ecda3ecab2b9b6e0f4baee66cf8",
+      "feature_messages": 400,
+      "gaps": [],
+      "max_consecutive11_ge4": 638,
+      "max_consecutive11_ids": 2004,
+      "max_per_message": 612,
+      "public_gap_count": 0,
+      "status": "GUARDED_CAPACITY_PROBE_REQUIRED",
+      "unique_ids": 22032,
+      "whole_window_ge4": 4914
+    },
+    "L6": {
+      "arbitrary_keyframe_depth_bound": 712,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a09_6000_6800/L6.bag",
+      "feature_bag_sha256": "6906e7fdc3a4cf349840c3f732550e5169dcc6ff8886d7a58a23e2a2c366e706",
+      "feature_messages": 400,
+      "gaps": [],
+      "max_consecutive11_ge4": 384,
+      "max_consecutive11_ids": 2002,
+      "max_per_message": 356,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 19730,
+      "whole_window_ge4": 3347
+    }
+  },
+  "capacity_modified": false,
+  "proof": "WINDOW_SIZE=10; continuous public IDs remain contiguous under frame removal; every length>=4 interval among indices0..10 intersects {3,7}; depth_count<=2*max_input_count. Whole-window count is only a looser bound.",
+  "run_slug": "a09_6000_6800"
+}

@@ -1,25 +1,25 @@
-run_slug,arm,status
-a09_6000_6800,B,Not evaluated.
-a09_6000_6800,L6,Not evaluated.
-a09_6000_6800,L-all,Not evaluated.
-a09_6000_6800,C-all,Not evaluated.
-a02_0_900,B,Not evaluated.
-a02_0_900,L6,Not evaluated.
-a02_0_900,L-all,Not evaluated.
-a02_0_900,C-all,Not evaluated.
-afrl_bus_s180_d045,B,Not evaluated.
-afrl_bus_s180_d045,L6,Not evaluated.
-afrl_bus_s180_d045,L-all,Not evaluated.
-afrl_bus_s180_d045,C-all,Not evaluated.
-a08_2700_3600,B,Not evaluated.
-a08_2700_3600,L6,Not evaluated.
-a08_2700_3600,L-all,Not evaluated.
-a08_2700_3600,C-all,Not evaluated.
-afrl_cemetery_s135_d045,B,Not evaluated.
-afrl_cemetery_s135_d045,L6,Not evaluated.
-afrl_cemetery_s135_d045,L-all,Not evaluated.
-afrl_cemetery_s135_d045,C-all,Not evaluated.
-h07_0_1000,B,Not evaluated.
-h07_0_1000,L6,Not evaluated.
-h07_0_1000,L-all,Not evaluated.
-h07_0_1000,C-all,Not evaluated.
+run_slug,arm,status,backbone_exact,capacity_status,chains_ge10,chains_ge4,conservative_depth_id_bound,feature_bag,feature_messages,frames_at_six,frames_over_six,lifetime_max,lifetime_median,max_11_frame_id_union,max_concurrent,max_total,merge_wall_s,public_ids,sha256,source_stream_sha256,total_published,unique_ids,zero_action_identity,image_shape,frontend_receipt,frontend_receipt_sha256,source_counters_json
+a09_6000_6800,B,COMPLETE,True,CAPACITY_REVIEW_REQUIRED,0,0,3220,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a09_6000_6800_klt/features.bag,400,0,0,0,0,1986,0,350,2.2717845870065503,0,6de8ffe9226c1c786bbd80b53049f2f4f1f58c2859808034b60b5dca171884ff,,0,19477,True,"[608, 968]",/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a09_6000_6800/receipt.json,fabadc3bfd94f2a0d654df7f821128a7c8e866fe167f99e1209b50b4e4b7fa65,
+a09_6000_6800,L6,COMPLETE,True,CAPACITY_REVIEW_REQUIRED,62,127,3347,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a09_6000_6800/L6.bag,400,346,0,96,4.0,2002,6,356,9.622054577004747,253,6906e7fdc3a4cf349840c3f732550e5169dcc6ff8886d7a58a23e2a2c366e706,dfd5969337680354b26b80ece349cfb8bc1960f30ecd171d64c8befc6f306820,2251,19730,False,"[608, 968]",/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a09_6000_6800/receipt.json,fabadc3bfd94f2a0d654df7f821128a7c8e866fe167f99e1209b50b4e4b7fa65,"{""backward_fail"": 2, ""border_fail"": 681, ""eligible_observations"": 42018, ""fb_fail"": 416, ""forward_fail"": 14, ""generation_calls"": 400, ""generator_seed_limit"": 38812, ""matcher_output"": 538203, ""ncc_fail"": 14815, ""peak_pool"": 772, ""processed_frames"": 801, ""seed_boundary"": 2327, ""seed_duplicate_private"": 480384, ""seeds_created"": 16680}"
+a09_6000_6800,L-all,COMPLETE,True,CAPACITY_REVIEW_REQUIRED,1103,1694,4914,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a09_6000_6800/L-all.bag,400,9,337,192,7.0,2004,262,612,12.351131567003904,2555,e0c5de737d82af40a4a565d10d6f1b9921a68ecda3ecab2b9b6e0f4baee66cf8,dfd5969337680354b26b80ece349cfb8bc1960f30ecd171d64c8befc6f306820,42018,22032,False,"[608, 968]",/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a09_6000_6800/receipt.json,fabadc3bfd94f2a0d654df7f821128a7c8e866fe167f99e1209b50b4e4b7fa65,"{""backward_fail"": 2, ""border_fail"": 681, ""eligible_observations"": 42018, ""fb_fail"": 416, ""forward_fail"": 14, ""generation_calls"": 400, ""generator_seed_limit"": 38812, ""matcher_output"": 538203, ""ncc_fail"": 14815, ""peak_pool"": 772, ""processed_frames"": 801, ""seed_boundary"": 2327, ""seed_duplicate_private"": 480384, ""seeds_created"": 16680}"
+a09_6000_6800,C-all,COMPLETE,True,CAPACITY_REVIEW_REQUIRED,480,755,3975,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a09_6000_6800/C-all.bag,400,4,286,188,4.0,1989,152,502,10.071170889001223,1474,00b20e828bcc0974bea0bcb01712cc265130284d001c4d67d1bee6734e9abbb0,cfac470f49479d20c058ee2cf46d7d917264f9c6cfb9fe6b066f7d1643b2d3ae,22392,20951,False,"[608, 968]",/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a09_6000_6800/receipt.json,fabadc3bfd94f2a0d654df7f821128a7c8e866fe167f99e1209b50b4e4b7fa65,"{""backward_fail"": 2, ""border_fail"": 802, ""eligible_observations"": 22392, ""fb_fail"": 281, ""forward_fail"": 14, ""generation_calls"": 400, ""generator_seed_limit"": 26469, ""matcher_output"": 408521, ""ncc_fail"": 15367, ""peak_pool"": 557, ""processed_frames"": 801, ""seed_boundary"": 7258, ""seed_duplicate_private"": 357776, ""seeds_created"": 17018}"
+a02_0_900,B,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+a02_0_900,L6,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+a02_0_900,L-all,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+a02_0_900,C-all,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_bus_s180_d045,B,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_bus_s180_d045,L6,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_bus_s180_d045,L-all,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_bus_s180_d045,C-all,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+a08_2700_3600,B,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+a08_2700_3600,L6,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+a08_2700_3600,L-all,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+a08_2700_3600,C-all,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_cemetery_s135_d045,B,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_cemetery_s135_d045,L6,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_cemetery_s135_d045,L-all,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+afrl_cemetery_s135_d045,C-all,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+h07_0_1000,B,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+h07_0_1000,L6,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+h07_0_1000,L-all,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,
+h07_0_1000,C-all,Not evaluated.,,,,,,,,,,,,,,,,,,,,,,,,,

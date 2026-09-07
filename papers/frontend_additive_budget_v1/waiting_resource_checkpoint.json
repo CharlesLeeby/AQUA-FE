@@ -1,0 +1,13 @@
+{
+  "arm": "B",
+  "other_processes": [
+    {
+      "command": "/mnt/data/Dataset_pool/_root_space_evacuated_20260824/workspace_VINS-Fusion_3-15-WS/devel/lib/vins/vins_node /home/ma/SLAM/VINS-Fusion_3-15-WS/experiments/wall_prior_consistency_20260907/transport/pool-validation-r1/runs/172529/candidate/supported_r1/typed_dvl/172529/generated_172529_typed_dvl_shift_m085375_dvltd_p0000ms_dvldata_smoke.yaml ",
+      "pid": 576628
+    }
+  ],
+  "repeat": 1,
+  "run_slug": "a09_6000_6800",
+  "status": "WAITING_RESOURCE",
+  "artifact": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/waiting_resource_1788794173139860925.json"
+}
