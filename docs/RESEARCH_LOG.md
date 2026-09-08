@@ -1053,3 +1053,12 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion: Hypothesis / Inference. No efficacy or novelty claim.
 - Open questions: controlled false accepts, incremental recovery beyond C, natural chain persistence and backend net gain.
 - Next experiment: fixed A02/A08/H02200-frame frontend contract, then at most A02/H02 B/C/L×3 only if all entry conditions pass.
+
+
+## 2026-09-09 — Original-point learned recovery: no increment over conventional retry
+- Question / hypothesis: can frozen XFeat local motion recover the original failed KLT point beyond a larger-window LK retry? Motivation was recovery correctness rather than more learned births or q tuning. Baseline B original KLT; comparator C fixed31/4 retry; L uses a local affine initial guess then the same final checks.
+- Why it might work / assumptions: local correspondences could disambiguate motion while seeded LK retains original-point identity; assumes enough consistent local support and observable original texture. Failure cases include occlusion, boundary, mixed/insufficient motion support, or C already solving recoverable cases.
+- Confirmed facts: frozen48 synthetic pairs give L835/C2488 correct recoveries from6532 visible B failures; L0 wrong accepts. Paired natural C148/L8, L-only0; actual L11 events with3 reaching4 public outputs. Gates fail. Exact evidence: papers/frontend_learned_klt_recovery_v1/report.md, frontend_results.csv, recovery_events.csv and decision.json.
+- Inference / evidence boundary: this version rejects many natural supports and contributes no measured increment beyond C. Gate reason names do not independently prove physical cross-surface motion. Natural identity correctness and backend effect remain Unknown / Not evaluated.; synthetic evidence cannot establish them.
+- Current conclusion / open questions: NO_LEARNED_INCREMENT; secondary REAL_RECOVERY_NOT_ESTABLISHED. Does not disprove every learned recovery mechanism, but no tuning/alternate mechanism is justified within this closed task. Old classical/q/continuation conclusions unchanged.
+- Next experiment: none authorized automatically; archive this version, no candidate for validation window.

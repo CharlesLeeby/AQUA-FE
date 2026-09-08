@@ -335,3 +335,7 @@ Read papers/frontend_classical_opportunity_expansion_v1/report.md, case_registry
 
 ## 2026-09-08 — 用户收缩本窗口职责
 Classical expansion在9c1c8c2封口，旧两个决策与完整分母不变。本窗口改为“已有候选方法的快速跨案例验证”，不继续重复observation-utility/risk审计或独立开发映射。固定候选发布6ddca8e5的A02/A08无实用KLT净收益，入口状态CANDIDATE_NOT_READY；H02/A01未启动，新回放/复用均0，Not evaluated.。仅等待主规划窗口另行发布合格候选，不轮询。详见docs/CODEX_HANDOFF_CLASSICAL_EXPANSION.md新增段及papers/frontend_fast_cross_case_validation_v1/source_neutral_quality_v1/report.md。
+
+
+## 2026-09-09 — Independently authorized learned same-frame recovery closed
+The user superseded the prior intake-only scope with one original-point recovery implementation and fixed frontend comparison. Freeze915716d on exp/learned-klt-recovery-v1-20260909 completed48 controlled pairs and A02/A08/H02×200raw development frames. Confirmed fact: L835 vs C2488 correct synthetic recoveries; no natural L-only event, only3 actual L recovery events reaching4 public observations. Decision NO_LEARNED_INCREMENT with secondary REAL_RECOVERY_NOT_ESTABLISHED. Backend0new/0reused, APE/RPE Not evaluated.; natural identity Unknown. Version stopped without tuning/expansion and no PROMISING handoff. See docs/CODEX_HANDOFF_LEARNED_RECOVERY.md. Existing method/profile, source-neutral q, additive/continuation and classical freeze conclusions remain unchanged.

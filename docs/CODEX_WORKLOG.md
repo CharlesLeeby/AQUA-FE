@@ -1226,3 +1226,15 @@ Validation addendum: final staged bytes/provenance, lifecycle joint keys/counts,
 - Known issues: geometry/reference insufficiency rejects recovery; natural per-point truth Unknown; external VINS process detected, not touched.
 - Interpretation: executable mechanism and frozen test contract ready; effectiveness Not evaluated.
 - Next steps: push protocol and run the one fixed frontend matrix; backend only on gate pass, <=18 new replays.
+
+
+## 2026-09-09 — Learned same-frame KLT recovery v1 completed
+- Objective / motivation: close one original-point learned-recovery implementation and direct comparison, without tuning or further audit work.
+- Files changed: new same_frame_recovery.py, frontend runner and five behavioral tests (freeze915716d); final summarizer, papers/frontend_learned_klt_recovery_v1/{frontend_results.csv,recovery_events.csv,decision.json,report.md,samples/*}, independent handoff and required logs. Existing KLT/q/backend/old evidence unchanged.
+- Implementation / technical decisions: original KLT lost hooks; fixed local affine XFeat initial flow followed by original-point31/4 LK; identical final C/L checks; separate paired B failures, evolving350-cap outputs and offline continuation. One inference per adjacent transition. Cost accounting removes in-call matcher cost before charging it once.
+- Experiments performed: 48 controlled pairs plus A02[0,200),A08[2700,2900),H02[0,200), three evolving arms per window. All completed. Five behavioral tests pass; paired event inputs and actual output lifetimes independently checked. VINS0new/0reused, APE/RPE Not evaluated.
+- Quantitative results: controlled L835 correct/835 accepted vs C2488/2502, visible failures6532; L invisible false0/1839. Natural paired C148/L8 of2857 B failures, L-only0; actual C171/L11 recovery events, L3 chains>=4outputs. Exact windows/metrics/latencies in report and CSV.
+- Qualitative observations: fixed8 available examples across12 category slots inspected; local texture sometimes plausible, physical identity Unknown. Missing L-only groups retained. Raw/model acceptance is not physical identity proof.
+- Failed attempts: no formal execution failure, no replay or parameter retries. Frozen practical increment and natural-chain gates fail.
+- Known issues / interpretation: synthetic correctness does not establish natural accuracy; shared-hardware timings are descriptive. NO_LEARNED_INCREMENT with secondary REAL_RECOVERY_NOT_ESTABLISHED. No backend benefit or safety claim.
+- Next steps: archive this version and stop; no candidate handoff for external validation.
