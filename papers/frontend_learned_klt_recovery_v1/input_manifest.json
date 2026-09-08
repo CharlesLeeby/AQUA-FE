@@ -1,0 +1,200 @@
+{
+  "base_commit": "7931b8f3c1a44a1da0502cdd15e033f51f5bd105",
+  "runtime": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_learned_klt_recovery_v1",
+  "windows": [
+    {
+      "sequence": "A02",
+      "development_role": "outcome-known development; not held-out",
+      "raw_start": 0,
+      "raw_end_exclusive": 200,
+      "bag_image_offset": 0,
+      "raw_count": 200,
+      "first_stamp_ns": 1542828791736012032,
+      "last_stamp_ns": 1542828801684024384,
+      "image_shape": [
+        608,
+        968
+      ],
+      "input_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_same_backend_confirmatory_v3/prepared/a02_0_900/input.bag",
+      "image_topic": "/camera/image_raw",
+      "camera": "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_admission_continuation_v1/backend_config_snapshots/a02_0_900/aqualoc_archaeo02_pinhole.yaml",
+      "backend_config_source": "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_admission_continuation_v1/backend_config_snapshots/a02_0_900/vins_same_backend.yaml",
+      "parent_run_slug": "a02_0_900",
+      "manifest_source": "papers/frontend_additive_budget_v1/source_and_backend_lock.json"
+    },
+    {
+      "sequence": "A08",
+      "development_role": "outcome-known development; not held-out",
+      "raw_start": 2700,
+      "raw_end_exclusive": 2900,
+      "bag_image_offset": 0,
+      "raw_count": 200,
+      "first_stamp_ns": 1542885096123085488,
+      "last_stamp_ns": 1542885106071532624,
+      "image_shape": [
+        608,
+        968
+      ],
+      "input_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_same_backend_confirmatory_v3/prepared/a08_2700_3600/input.bag",
+      "image_topic": "/camera/image_raw",
+      "camera": "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_admission_continuation_v1/backend_config_snapshots/a08_2700_3600/aqualoc_archaeo08_pinhole.yaml",
+      "backend_config_source": "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_admission_continuation_v1/backend_config_snapshots/a08_2700_3600/vins_same_backend.yaml",
+      "parent_run_slug": "a08_2700_3600",
+      "manifest_source": "papers/frontend_additive_budget_v1/source_and_backend_lock.json"
+    },
+    {
+      "sequence": "H02",
+      "development_role": "outcome-known development; not held-out",
+      "raw_start": 0,
+      "raw_end_exclusive": 200,
+      "bag_image_offset": 0,
+      "raw_count": 200,
+      "first_stamp_ns": 1523958586902587138,
+      "last_stamp_ns": 1523958596855225535,
+      "image_shape": [
+        512,
+        640
+      ],
+      "input_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/prepared/coe1_h02_00000_00900/input.bag",
+      "image_topic": "/camera/image_raw",
+      "camera": "/home/ma/AQUA-FE_WS_classical_opportunity_expansion_v1/papers/frontend_admission_continuation_v1/backend_config_snapshots/h07_0_1000/aqualoc_harbor07_kannala.yaml",
+      "backend_config_source": "/home/ma/AQUA-FE_WS_classical_opportunity_expansion_v1/papers/frontend_admission_continuation_v1/backend_config_snapshots/h07_0_1000/vins_same_backend.yaml",
+      "parent_run_slug": "coe1_h02_00000_00900",
+      "manifest_source": "papers/frontend_classical_opportunity_expansion_v1/source_and_backend_lock.json"
+    }
+  ],
+  "preprocessing": "adaptive_clahe",
+  "process_every_raw_frame": true,
+  "public_every_n": 2,
+  "public_frame_offset": 1,
+  "klt": {
+    "max_features": 350,
+    "min_distance": 18,
+    "quality_level": 0.01,
+    "block_size": 7,
+    "lk_win_size": 21,
+    "lk_max_level": 3,
+    "fb_threshold": 1.0,
+    "min_ncc": 0.65,
+    "patch_radius": 5,
+    "border": 8,
+    "q_min": 0.05,
+    "compute_track_metadata": true,
+    "vectorized_ncc": false
+  },
+  "recovery": {
+    "win_size": 31,
+    "max_level": 4,
+    "iterations": 40,
+    "min_current_distance": 8.0,
+    "min_reference": 8,
+    "max_epipolar_error": 2.5,
+    "max_homography_error": 5.0,
+    "support_radius": 80.0,
+    "support_max": 24,
+    "support_min": 6,
+    "affine_ransac_px": 2.0,
+    "affine_min_inlier_fraction": 0.75,
+    "affine_p90_px": 3.0,
+    "affine_max_condition": 100.0,
+    "affine_min_scale": 0.5,
+    "affine_max_scale": 2.0
+  },
+  "xfeat": {
+    "repo_path": "/mnt/data/AQUA-FE_WS/external_tools/accelerated_features",
+    "top_k": 2048,
+    "semi_dense": false,
+    "min_cossim": 0.82,
+    "confidence_mode": "cosine",
+    "cache_sparse_features": true,
+    "weights": "weights/xfeat.pt"
+  },
+  "seed": 20260909,
+  "controlled_base_offsets": [
+    0,
+    50,
+    100,
+    150
+  ],
+  "controlled_cases": [
+    {
+      "name": "small",
+      "dx": 3,
+      "dy": -2,
+      "angle": 0.5,
+      "scale": 1.0,
+      "illumination": false,
+      "occlusion": false
+    },
+    {
+      "name": "large",
+      "dx": 80,
+      "dy": -48,
+      "angle": 4.0,
+      "scale": 1.02,
+      "illumination": false,
+      "occlusion": false
+    },
+    {
+      "name": "illumination_blur",
+      "dx": 24,
+      "dy": -16,
+      "angle": 2.0,
+      "scale": 1.0,
+      "illumination": true,
+      "occlusion": false
+    },
+    {
+      "name": "outside_occluded",
+      "dx": 64,
+      "dy": 24,
+      "angle": 2.0,
+      "scale": 1.0,
+      "illumination": false,
+      "occlusion": true
+    }
+  ],
+  "controlled_illumination": {
+    "gain_min": 0.65,
+    "gain_max": 1.25,
+    "bias_amplitude": 20,
+    "gaussian_sigma": 1.2
+  },
+  "occlusion_rectangle_fraction": [
+    0.35,
+    0.25,
+    0.65,
+    0.75
+  ],
+  "occlusion_patch_guard_px": 6,
+  "correct_pixel_tolerance": 2.0,
+  "frontend_gate": {
+    "min_visible_B_failures": 200,
+    "min_L_correct_precision": 0.95,
+    "max_L_wrong_accept_rate": 0.01,
+    "max_L_wrong_accept_rate_increase_vs_C": 0.005,
+    "max_L_invisible_accept_rate": 0.01,
+    "min_correct_increment_count": 20,
+    "min_correct_increment_rate": 0.05,
+    "min_sequences_with_correct_increment": 2,
+    "min_natural_L_stream_chains_ge4_outputs": 10,
+    "min_natural_sequences_with_L_chains_ge4_outputs": 2,
+    "min_paired_L_only_continuation_chains_ge4_outputs": 5
+  },
+  "sample_rule": "lowest SHA256(sequence/raw_index/track_id) in each paired category per sequence; one event per group",
+  "backend": {
+    "windows": [
+      "A02 raw [0,900)",
+      "H02 raw [0,900)"
+    ],
+    "arms": [
+      "B",
+      "C",
+      "L"
+    ],
+    "repeats_per_arm": 3,
+    "max_new_replays": 18,
+    "activated_only_after_frontend_gate": true,
+    "baseline_reuse": "Not evaluated.; fresh all-three arms allowed within 18 maximum"
+  }
+}

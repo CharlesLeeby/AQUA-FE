@@ -1038,3 +1038,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion: Confirmed fact. Local practical opportunity exists outside the six developer windows, but acceptable-risk generalization does not meet the frozen contract. ADDITIVE_OPPORTUNITY_NOT_GENERALIZED; EXPANSION_STOPPED_AFTER_BATCH_A. Hypothesis / Inference. A single dose/lifetime/initialization-delay descriptor is unlikely to suffice for safe utility prediction; no causal rule has been demonstrated.
 - Open questions: individual candidate utility, causal sources of numerical divergence, role of timing and optimization budget, generalization to independently unseen data and independent GT remain Unknown / Not evaluated.
 - Next experiment: only a separately specified observation-utility/risk mechanism study; current cases are outcome-known development evidence for a mechanism informed by them. Stop additive-observation primary-hypothesis expansion; no further C-all tuning/window search/learned expansion in this task.
+
+
+## 2026-09-09 — Original-point same-frame recovery hypothesis
+- Research question: can XFeat motion initialize LK at a genuinely lost old point better than ordinary larger-window retry?
+- Hypothesis: local verified correspondences may move LK into the correct basin without transferring another keypoint's identity.
+- Motivation: require direct pixel correctness evidence instead of merely longer ID lifetime.
+- Related baseline: original KLT350 and existing31/4 traditional retry; old endpoint-association recovery and fail-open SP/LG coordinate adapter are distinct.
+- Proposed idea: local affine initial motion, original-point LK refinement, common FB/NCC/border/identity/geometry gate, then normal GFTT.
+- Why it might work: broad learned matches may guide large-motion/appearance-change failures while subpixel refinement preserves the original query.
+- Assumptions: verified local motion is coherent, original point remains visible, raw frames adjacent.
+- Potential failure cases: parallax boundaries, repetitive texture, occlusion, insufficient support, wrong geometric references; surviving IDs alone are not proof.
+- Evidence: unit behavior checks pass; formal controlled/natural/backend results Not evaluated.
+- Current conclusion: Hypothesis / Inference. No efficacy or novelty claim.
+- Open questions: controlled false accepts, incremental recovery beyond C, natural chain persistence and backend net gain.
+- Next experiment: fixed A02/A08/H02200-frame frontend contract, then at most A02/H02 B/C/L×3 only if all entry conditions pass.

@@ -1211,3 +1211,18 @@ Validation addendum: final staged bytes/provenance, lifecycle joint keys/counts,
 - Known issues: 此候选不合格；等待主规划窗口另行发布合格候选，不能以聊天描述替代。
 - Interpretation: 这是依赖入口拒绝，不是H02/A01实测失败；旧classical结论与全部产物保持原样。
 - Next steps: 仅本次真实依赖阻塞检查点提交/推送并回读report/comparison；随后结束，不反复轮询或扩展任务。
+
+
+## 2026-09-09 — Learned recovery v1 implementation and protocol freeze
+- Task objective: implement one original-point same-frame learned KLT recovery and test correctness before conditional backend work.
+- Problem / motivation: existing matcher recovery associates a nearby endpoint; new task requires relocating the same physical point, with classical retry control.
+- Files changed: same_frame_recovery.py, run_learned_recovery_frontend.py, test_same_frame_recovery.py, learned-recovery protocol/input manifest/handoff and task logs.
+- Implementation: subclass original KLT at _track_existing, before inherited GFTT replenishment; local affine XFeat motion initializes original-point LK, common C/L final checks, unchanged KLT quality principle. Full forward-failure lost-state captured in wrapper without changing old tracker.
+- Technical decisions: fixed31/4 classical search and learned refinement; no new quotas/source weighting, only contiguous frames; common B-failure events separated from evolving streams and offline follow-up. Fixed truth tolerance and entry gates before data results.
+- Experiments performed: five independent key unit tests PASS (query vs endpoint, original-point accuracy/identity, deficient/degenerate support, B exact preservation, full-failure/no dead-ID revival). Formal frontend/backend: Not evaluated.
+- Quantitative results: input metadata fixes3×200 raw frames; synthetic12 base images×4 fixed cases. No formal outcome yet.
+- Qualitative observations: existing SP/LG seeded-raw adapter is fail-open occurrence-preserving and differs from requested lost-KLT same-frame recovery; no novelty claim.
+- Failed attempts: none in tests; target XFeat interface found at xfeat_adapter.py, not guessed filename.
+- Known issues: geometry/reference insufficiency rejects recovery; natural per-point truth Unknown; external VINS process detected, not touched.
+- Interpretation: executable mechanism and frozen test contract ready; effectiveness Not evaluated.
+- Next steps: push protocol and run the one fixed frontend matrix; backend only on gate pass, <=18 new replays.
