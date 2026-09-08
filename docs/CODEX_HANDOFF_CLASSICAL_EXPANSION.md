@@ -26,3 +26,14 @@
 - Python 3.8 兼容适配、旧 wrapper 路径映射和有限前缀等价探针见 execution_notes；早期失败/初版图表均保留。脚本只做执行兼容与报告，没有改变 C-all、后端或评价合同。
 
 唯一下一步为 observation-utility / risk mechanism research。停止把 additive observation 作为主要研究假设继续扩展；保留局部机会和严重负例，并为新机制另行预注册独立验证。不得把窗口集合级正负标签传播为每个 candidate 的 utility；COLMAP/proxy 不是独立 GT，总体自然正例率和因果机制 Not evaluated.。
+
+
+## 2026-09-08 — 角色收缩：已有候选方法的快速跨案例验证
+
+本段覆盖上文关于本窗口继续机制研究的后续安排。Classical expansion 以9c1c8c2封口，ADDITIVE_OPPORTUNITY_NOT_GENERALIZED / EXPANSION_STOPPED_AFTER_BATCH_A及全部旧分母不变；无Batch B、C-all调参或重复机制审计。
+
+检查固定候选发布 `6ddca8e5f3a0fb2a64f50bf6e5427d8b7c59986f`（source-neutral-quality-v1，源码 `94e59f5598580eb72f7588d776fdce12d529130f`）：上游结论 SOURCE_MAPPING_NOT_MAIN_EXPLANATION，A02/A08无超过KLT的实用净收益，A02有严重退化。故本次 **CANDIDATE_NOT_READY**，新回放0、复用0，固定H02/A01均Not evaluated.。不重造映射、不启动后端、不轮询。
+
+本窗口保留 **READY_FOR_CANDIDATE** 角色，仅接收另一个窗口正式发布且满足净收益进入条件的候选；之后才按固定H02/A01、三个臂、最多18次上限冻结执行。当前执行到此结束，后续交回主规划窗口。独立分支 `exp/fast-cross-case-validation-v1-20260908`。
+
+[简短报告](../papers/frontend_fast_cross_case_validation_v1/source_neutral_quality_v1/report.md) · [比较状态](../papers/frontend_fast_cross_case_validation_v1/source_neutral_quality_v1/comparison.csv) · [上游固定交接](https://github.com/CharlesLeeby/AQUA-FE/blob/6ddca8e5f3a0fb2a64f50bf6e5427d8b7c59986f/docs/CODEX_HANDOFF_FAST_LEARNED_TEST.md)。

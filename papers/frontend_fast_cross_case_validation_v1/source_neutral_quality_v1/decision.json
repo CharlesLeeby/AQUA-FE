@@ -1,0 +1,31 @@
+{
+  "status": "CANDIDATE_NOT_READY",
+  "dependency_check": "COMPLETE",
+  "role": "已有候选方法的快速跨案例验证",
+  "role_readiness": "READY_FOR_CANDIDATE",
+  "candidate_release_commit": "6ddca8e5f3a0fb2a64f50bf6e5427d8b7c59986f",
+  "candidate_source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+  "candidate_branch": "exp/source-neutral-quality-v1-20260908",
+  "candidate_report": "https://github.com/CharlesLeeby/AQUA-FE/blob/6ddca8e5f3a0fb2a64f50bf6e5427d8b7c59986f/papers/frontend_source_neutral_quality_v1/report.md",
+  "candidate_comparison": "https://github.com/CharlesLeeby/AQUA-FE/blob/6ddca8e5f3a0fb2a64f50bf6e5427d8b7c59986f/papers/frontend_source_neutral_quality_v1/comparison.csv",
+  "candidate_conversion_script": "https://github.com/CharlesLeeby/AQUA-FE/blob/6ddca8e5f3a0fb2a64f50bf6e5427d8b7c59986f/scripts/convert_source_neutral_quality_v1.py",
+  "candidate_configuration": "https://github.com/CharlesLeeby/AQUA-FE/blob/6ddca8e5f3a0fb2a64f50bf6e5427d8b7c59986f/papers/frontend_source_neutral_quality_v1/run_plan.json",
+  "upstream_decision": "SOURCE_MAPPING_NOT_MAIN_EXPLANATION",
+  "reason": "No practical improvement versus L-original and no practical net gain versus KLT in A02/A08; A02 candidate/B is a severe accuracy regression.",
+  "validation_activated": false,
+  "new_formal_replays": 0,
+  "reused_formal_replays": 0,
+  "xfeat_source_generations": 0,
+  "B_reuse_eligibility": "Not evaluated.",
+  "validation_decision": "Not evaluated.",
+  "fixed_development_windows": [
+    "coe1_h02_00000_00900",
+    "coe1_a01_00000_00900"
+  ],
+  "classical_release_commit": "9c1c8c2363708e3d95a6850fc9591356e0f1f30e",
+  "classical_decisions_preserved": [
+    "ADDITIVE_OPPORTUNITY_NOT_GENERALIZED",
+    "EXPANSION_STOPPED_AFTER_BATCH_A"
+  ],
+  "next_step": "End this execution. Await a separately published eligible candidate from the primary planning window; no polling, tuning or expansion."
+}

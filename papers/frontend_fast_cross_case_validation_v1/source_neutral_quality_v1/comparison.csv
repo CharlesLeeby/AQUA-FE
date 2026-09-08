@@ -1,0 +1,5 @@
+window_id,comparison,status,candidate_APE_min_m,candidate_APE_median_m,candidate_APE_max_m,reference_APE_min_m,reference_APE_median_m,reference_APE_max_m,candidate_RPE_min_m,candidate_RPE_median_m,candidate_RPE_max_m,reference_RPE_min_m,reference_RPE_median_m,reference_RPE_max_m,practical,severe_regression,reason
+coe1_h02_00000_00900,L-candidate_vs_L-original,Not evaluated.,,,,,,,,,,,,,Not evaluated.,Not evaluated.,UPSTREAM_NO_PRACTICAL_NET_GAIN; validation not activated
+coe1_h02_00000_00900,L-candidate_vs_B,Not evaluated.,,,,,,,,,,,,,Not evaluated.,Not evaluated.,UPSTREAM_NO_PRACTICAL_NET_GAIN; validation not activated
+coe1_a01_00000_00900,L-candidate_vs_L-original,Not evaluated.,,,,,,,,,,,,,Not evaluated.,Not evaluated.,UPSTREAM_NO_PRACTICAL_NET_GAIN; validation not activated
+coe1_a01_00000_00900,L-candidate_vs_B,Not evaluated.,,,,,,,,,,,,,Not evaluated.,Not evaluated.,UPSTREAM_NO_PRACTICAL_NET_GAIN; validation not activated
