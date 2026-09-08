@@ -1,1 +1,1406 @@
-[]
+[
+  {
+    "receipt": {
+      "arm": "B",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat1/backend_use.csv": "4e4c653c0173a72f918a481325d52ba9c47d6d0e120ac63a563f8c08d75eb96b",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat1/play.log": "f269723f3dce2080fd93a0ea07224a950b9c319f6f671b520b41185325c92073",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat1/ros_home/roscore-12691.pid": "197413952604c04b2f3ba80a85fd8b8cd436225892c269de5cc365783eda7b3e",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat1/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat1/ros_logs/027d0af8-ab61-11f1-b66e-f55576d0c46b/master.log": "fa38fd07480a2b9639cf0427de7e107f4d2784aa13d315da78064ba834359e1d",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat1/ros_logs/027d0af8-ab61-11f1-b66e-f55576d0c46b/roslaunch-qiu-989781.log": "a8ae42049d9164befe25fe820d1400527829b569a344cbe5abc61b6c5ed0f23d",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat1/ros_logs/027d0af8-ab61-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "95a0db56e33534f9f76a69544700346460c72725316f8de4bddbfeb7c18e51b7",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat1/ros_logs/027d0af8-ab61-11f1-b66e-f55576d0c46b/rosout.log": "1fd575be68e75b10de0594b20c32a6723ae7cf8a3646ae0e90f29f85dbcf0dd7",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat1/roscore.log": "00fd03821c508cbbe180c4eb02533057ab95a57514dfe924551210283d30b19f",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat1/vins.log": "a02af967a0c47da6d4abc43cc79a3c8191578d89891a67ddfa97f7c2a42c2dc5",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat1/vins.yaml": "389aea8b131d361e3f5f5f3c312e19ce71af7f23d96162c5f885c5be41ee5c68",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat1/vins_output/vio.csv": "4cea20995a509735614f102ed8e7694b0d001b99f433d362759461197361ab91"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1",
+      "capacity_preflight_status": "PASS",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat1/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a02_0_900_klt/features.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "389aea8b131d361e3f5f5f3c312e19ce71af7f23d96162c5f885c5be41ee5c68",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a02_0_900_klt/features.bag",
+      "feature_bag_sha256": "5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520",
+      "peak_node_rss_bytes": 103772160,
+      "repeat": 1,
+      "resource_pre": {
+        "available_memory_bytes": 25554579456,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15401533440,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 23446937600
+        }
+      },
+      "run_slug": "a02_0_900",
+      "started_at": "2026-09-08T08:42:01.592740+00:00",
+      "status": "COMPLETE",
+      "wall_s": 65.04518726401147
+    },
+    "task_check": {
+      "arm": "B",
+      "ended_at": "2026-09-08T08:42:02.325942+00:00",
+      "exact_started_at": "2026-09-08T08:40:56.263923+00:00",
+      "excursion_limit_m": 45.647005337699866,
+      "raw_motion": {
+        "excursion_m": 4.653178326359307,
+        "finite": true,
+        "poses": 421
+      },
+      "received_per_ID_complete": true,
+      "repeat": 1,
+      "run_slug": "a02_0_900",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  },
+  {
+    "receipt": {
+      "arm": "B",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat2/backend_use.csv": "a4e0f7f4d3d5ad4b938363df65c81d1dd4dff8fc1bd95e58d2d47ac8a21cb5e3",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat2/play.log": "6cdff8ee8ab1c738f915eef86cd468fc841f93405723bd9f92620d565f8e0e22",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat2/ros_home/roscore-12691.pid": "2beb7eb31a5e7335772ab0eecaaf101913aa68c6a80a0123d52f9b06876fd45f",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat2/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat2/ros_logs/2a3ba0ae-ab61-11f1-b66e-f55576d0c46b/master.log": "059e98cfd4a594c0b146a85950d5e76b38633dcafb1e58cc2a8cbfac66407bd0",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat2/ros_logs/2a3ba0ae-ab61-11f1-b66e-f55576d0c46b/roslaunch-qiu-990880.log": "c574b17d6c8576b8bd124fe5a74e74aac7a0a3065f60f208d80af19682e3eef9",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat2/ros_logs/2a3ba0ae-ab61-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "2c3ca19d25c0a65f7d5bbf1f04b49fb674415b530970b84c3ab13ab64ff821b3",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat2/ros_logs/2a3ba0ae-ab61-11f1-b66e-f55576d0c46b/rosout.log": "e130af059955f749ba5c2a02a38a44a5067c6b06bc87994cd0f5d74f503c3b0a",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat2/roscore.log": "ea8f87b4b9a5c71274c859827fa7e6ff2d3b70ffa29ee7d4d5479c25ac866856",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat2/vins.log": "ca2e213014e2a2aaeca7f1301824530e8ccaa1520f7980c6b6d18b3fa1efc901",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat2/vins.yaml": "e27fd7fa596febe2b234033f161ea361cb56c389b7dc04cccef708135a07a430",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat2/vins_output/vio.csv": "fbbb04364e112ed5f7822216a080b0bd4275221190a215e0cbc6a18587ace36f"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1",
+      "capacity_preflight_status": "PASS",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat2/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a02_0_900_klt/features.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "e27fd7fa596febe2b234033f161ea361cb56c389b7dc04cccef708135a07a430",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a02_0_900_klt/features.bag",
+      "feature_bag_sha256": "5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520",
+      "peak_node_rss_bytes": 99213312,
+      "repeat": 2,
+      "resource_pre": {
+        "available_memory_bytes": 25559629824,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15401455616,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 23428698112
+        }
+      },
+      "run_slug": "a02_0_900",
+      "started_at": "2026-09-08T08:43:08.292707+00:00",
+      "status": "COMPLETE",
+      "wall_s": 65.04288226101198
+    },
+    "task_check": {
+      "arm": "B",
+      "ended_at": "2026-09-08T08:43:08.929813+00:00",
+      "exact_started_at": "2026-09-08T08:42:02.970273+00:00",
+      "excursion_limit_m": 45.647005337699866,
+      "raw_motion": {
+        "excursion_m": 4.675492836578835,
+        "finite": true,
+        "poses": 421
+      },
+      "received_per_ID_complete": true,
+      "repeat": 2,
+      "run_slug": "a02_0_900",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  },
+  {
+    "receipt": {
+      "arm": "B",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat3/backend_use.csv": "abc1443e71323dab5a4c278c5e6b32bd8c9254e8063d7da6d987892f9dbca994",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat3/play.log": "3cf4e289c39347be483679a754a634e840a1ee03e17ce71072b50373dfcb70e2",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat3/ros_home/roscore-12691.pid": "37219ed447906b80a9b40f5a89934dd73cbb029be22b8ed1e14ab5ae806cf9f6",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat3/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat3/ros_logs/51ec9f36-ab61-11f1-b66e-f55576d0c46b/master.log": "3c0e5f94140aa59459b8dc85ea0d9165a64cc2c4da16782d168759a05d3b3835",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat3/ros_logs/51ec9f36-ab61-11f1-b66e-f55576d0c46b/roslaunch-qiu-992028.log": "1d22dd47d3adc3aa6e31c49b1ccd18da91c398e6e942fe6c7e13f3605ef834f5",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat3/ros_logs/51ec9f36-ab61-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "95ee5af35355e0882bdfa308cace8150a878c1b3c7c32372cfe39c9e2dbfedfb",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat3/ros_logs/51ec9f36-ab61-11f1-b66e-f55576d0c46b/rosout.log": "fbc1a07f9fc062ed1f2153dc31b2a759555489057dfe80c7e5c731afe23acc14",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat3/roscore.log": "2d9c1e22730f3732f807efee943c6e52cc4bfa8214f8626885eac0920f971d1f",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat3/vins.log": "24d7e7fafd4d0786b05969108882ac4cc5aadd373a349efc91d7f7b5131780b9",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat3/vins.yaml": "86f8f16976be6fe36f4ebbb1064e01979d8e11d04919a2c96f55dad715710b8a",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat3/vins_output/vio.csv": "39d3d1f54223ae28b6ce83b81f7fe1022cb57af6d9dac92417d13e2cb19219d3"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1",
+      "capacity_preflight_status": "PASS",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/B/repeat3/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a02_0_900_klt/features.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "86f8f16976be6fe36f4ebbb1064e01979d8e11d04919a2c96f55dad715710b8a",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a02_0_900_klt/features.bag",
+      "feature_bag_sha256": "5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520",
+      "peak_node_rss_bytes": 99495936,
+      "repeat": 3,
+      "resource_pre": {
+        "available_memory_bytes": 25362886656,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15393566720,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 23410458624
+        }
+      },
+      "run_slug": "a02_0_900",
+      "started_at": "2026-09-08T08:44:14.678441+00:00",
+      "status": "COMPLETE",
+      "wall_s": 64.83944765399792
+    },
+    "task_check": {
+      "arm": "B",
+      "ended_at": "2026-09-08T08:44:15.353419+00:00",
+      "exact_started_at": "2026-09-08T08:43:09.581153+00:00",
+      "excursion_limit_m": 45.647005337699866,
+      "raw_motion": {
+        "excursion_m": 4.652731984168011,
+        "finite": true,
+        "poses": 421
+      },
+      "received_per_ID_complete": true,
+      "repeat": 3,
+      "run_slug": "a02_0_900",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  },
+  {
+    "receipt": {
+      "arm": "L-original",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat1/backend_use.csv": "a7ae902e8ed86727e683441742801904be1bd757c43a1b9603352e39d9036e0c",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat1/play.log": "5437c10a15ef1d7a4a4fc7ef20eead8290c6aa5d19a9e43a34dc68920d685f7f",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat1/ros_home/roscore-12691.pid": "639247b2963884bec058ecdfb95b5b785877d4785a46833c05632c287a426039",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat1/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat1/ros_logs/f184be20-ab61-11f1-b66e-f55576d0c46b/master.log": "f530987eb624bff73f59ff84e768357988cea1f0497b623b2cfc700dede77dc3",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat1/ros_logs/f184be20-ab61-11f1-b66e-f55576d0c46b/roslaunch-qiu-996225.log": "1b50c06d5768aab1dc3c45e219a58962a42bcaf3510e92a332ce6636656ade41",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat1/ros_logs/f184be20-ab61-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "ce547319dae6eb37c713c416de813328950f5b46d32636ed71217488a130f4f5",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat1/ros_logs/f184be20-ab61-11f1-b66e-f55576d0c46b/rosout.log": "64232bd5bb5d5aef2b35370b0fd0fd996ab794efd222f2489a3ce48620da9652",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat1/roscore.log": "e0928e4256753b988e0ed7c2c2a0ffdd5662dbaede7cb11ac81a8ac1ff2eac4b",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat1/vins.log": "9046c8e65e894ee449e545b121898b088fb50abf4de7a897b0cbdf80f29c87dd",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat1/vins.yaml": "640a88280d73f92f0994b5cb2caa15f661baf84699180ada859fb76401dda30b",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat1/vins_output/vio.csv": "39ba71446c3fd8464278dbe8e12ba452b456c259979c05fad35ea9d4e463d035"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1",
+      "capacity_preflight_status": "GUARDED_CAPACITY_PROBE_REQUIRED",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat1/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a02_0_900/L-all.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "640a88280d73f92f0994b5cb2caa15f661baf84699180ada859fb76401dda30b",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a02_0_900/L-all.bag",
+      "feature_bag_sha256": "4b61e0c58f83861183b459806920a87820973818345178db2ac1d3de993dc172",
+      "peak_node_rss_bytes": 120242176,
+      "repeat": 1,
+      "resource_pre": {
+        "available_memory_bytes": 25471127552,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15389024256,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 23336751104
+        }
+      },
+      "run_slug": "a02_0_900",
+      "started_at": "2026-09-08T08:48:42.632788+00:00",
+      "status": "COMPLETE",
+      "wall_s": 65.04025173498667
+    },
+    "task_check": {
+      "arm": "L-original",
+      "ended_at": "2026-09-08T08:48:43.815908+00:00",
+      "exact_started_at": "2026-09-08T08:47:37.336842+00:00",
+      "excursion_limit_m": 45.647005337699866,
+      "raw_motion": {
+        "excursion_m": 0.1908395978302197,
+        "finite": true,
+        "poses": 412
+      },
+      "received_per_ID_complete": true,
+      "repeat": 1,
+      "run_slug": "a02_0_900",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  },
+  {
+    "receipt": {
+      "arm": "L-original",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat2/backend_use.csv": "6c62eeef28bc61da59a3e7674cbb9e08c0fc8d50021f179275502292368a74df",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat2/play.log": "f6f9d484c438b76a7828ba61bd9a642c55d11353eb669c3b8caa46370ea4af00",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat2/ros_home/roscore-12691.pid": "6da8e229ee8486dce2d9087446ebdb991dda1d1b6e46e708a443ca8914ba7e79",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat2/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat2/ros_logs/695a05a4-ab62-11f1-b66e-f55576d0c46b/master.log": "2d38fdd058c66bcf3fd1593fa5e8840980126a26a8ec063348b5b911b4bccbf4",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat2/ros_logs/695a05a4-ab62-11f1-b66e-f55576d0c46b/roslaunch-qiu-999298.log": "64ac085554b44313dc1265f21cb66e16c6b2adacf543f7c313a4c28ad9fd58c4",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat2/ros_logs/695a05a4-ab62-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "b4afe191dd6b10739cc7a0303ccbbad81043d3107fb824584c5f09b70341f2c9",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat2/ros_logs/695a05a4-ab62-11f1-b66e-f55576d0c46b/rosout.log": "86d42af3956ef02a0d7ec3a208057c5682491d5a4428589a74f1d2979b074670",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat2/roscore.log": "2c94e0a7a8ffd98ac5804e863860ca8461eca8442d926438827c9dcca85a2747",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat2/vins.log": "ad49544b7ab63e385f6d8a518f95cef99c6bdb9ccb0275b9ba79bd6bb0870265",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat2/vins.yaml": "12f37ac6042d64c6a6b83aa63b0455384e588accbe806e5c0fec9fdca9f0e35d",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat2/vins_output/vio.csv": "58157e55598769a90f6dc95caab00606d90fdde284c46d5a08106872c31269d8"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1",
+      "capacity_preflight_status": "GUARDED_CAPACITY_PROBE_REQUIRED",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat2/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a02_0_900/L-all.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "12f37ac6042d64c6a6b83aa63b0455384e588accbe806e5c0fec9fdca9f0e35d",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a02_0_900/L-all.bag",
+      "feature_bag_sha256": "4b61e0c58f83861183b459806920a87820973818345178db2ac1d3de993dc172",
+      "peak_node_rss_bytes": 121417728,
+      "repeat": 2,
+      "resource_pre": {
+        "available_memory_bytes": 25526149120,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15386718208,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 23242010624
+        }
+      },
+      "run_slug": "a02_0_900",
+      "started_at": "2026-09-08T08:52:03.568880+00:00",
+      "status": "COMPLETE",
+      "wall_s": 64.94241242000135
+    },
+    "task_check": {
+      "arm": "L-original",
+      "ended_at": "2026-09-08T08:52:04.680071+00:00",
+      "exact_started_at": "2026-09-08T08:50:58.332320+00:00",
+      "excursion_limit_m": 45.647005337699866,
+      "raw_motion": {
+        "excursion_m": 0.17948653124956201,
+        "finite": true,
+        "poses": 412
+      },
+      "received_per_ID_complete": true,
+      "repeat": 2,
+      "run_slug": "a02_0_900",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  },
+  {
+    "receipt": {
+      "arm": "L-original",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat3/backend_use.csv": "185e8f27de1e0e77b5b61878df642a13e72fba67118151db8aad551389acb65c",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat3/play.log": "0d477404334280b01dffa117a34199375c874da9cd9d763f47860e54fac9adbd",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat3/ros_home/roscore-12691.pid": "8a7e7dacbacecf5efbc53f9836a62b85a0c28d6b611826f2bf776a6b774c89a8",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat3/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat3/ros_logs/9138b232-ab62-11f1-b66e-f55576d0c46b/master.log": "5a96a991d55a9c19751d2627999e602e3b24e3d576a79476568eb166c819d9d4",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat3/ros_logs/9138b232-ab62-11f1-b66e-f55576d0c46b/roslaunch-qiu-1000291.log": "ffb04ad4f24be5942647ca9d1404afb77e05ce9c4c9f0b8bc414454a58dc57d8",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat3/ros_logs/9138b232-ab62-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "ee642e723e4986c6800447c655cf0ae10e4fbe4c1a310781ad32a653a32bc630",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat3/ros_logs/9138b232-ab62-11f1-b66e-f55576d0c46b/rosout.log": "7c81f44b7cf6e0a62830302d25dfcd6abfb83f005a543aa2052c18c87a2301f6",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat3/roscore.log": "35787faa0dd951e840d64522fd9f2152b22feef495326c0cabb6352506336297",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat3/vins.log": "0bb5cbe9fbfcf2fc5ce0e521ab58938768db409ae06f95ed2c1b3c944eb01da0",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat3/vins.yaml": "b836252e363576e861a820d7685e8cb408d480d7d9d02d80aca4da582dd3a640",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat3/vins_output/vio.csv": "7735b4dfe7c8b7a0f608b41cfec5006acf94571d08ef470a53dd2cc9de32dc10"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1",
+      "capacity_preflight_status": "GUARDED_CAPACITY_PROBE_REQUIRED",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-original/repeat3/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a02_0_900/L-all.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "b836252e363576e861a820d7685e8cb408d480d7d9d02d80aca4da582dd3a640",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a02_0_900/L-all.bag",
+      "feature_bag_sha256": "4b61e0c58f83861183b459806920a87820973818345178db2ac1d3de993dc172",
+      "peak_node_rss_bytes": 120504320,
+      "repeat": 3,
+      "resource_pre": {
+        "available_memory_bytes": 25533665280,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15386673152,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 23210278912
+        }
+      },
+      "run_slug": "a02_0_900",
+      "started_at": "2026-09-08T08:53:10.666712+00:00",
+      "status": "COMPLETE",
+      "wall_s": 65.14642596399062
+    },
+    "task_check": {
+      "arm": "L-original",
+      "ended_at": "2026-09-08T08:53:11.828694+00:00",
+      "exact_started_at": "2026-09-08T08:52:05.254487+00:00",
+      "excursion_limit_m": 45.647005337699866,
+      "raw_motion": {
+        "excursion_m": 0.1872630881941233,
+        "finite": true,
+        "poses": 412
+      },
+      "received_per_ID_complete": true,
+      "repeat": 3,
+      "run_slug": "a02_0_900",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  },
+  {
+    "receipt": {
+      "arm": "L-neutral",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat1/backend_use.csv": "722d8244f1f66e5235baf11fa1807bfc5d0f894545f2ab099f5a44ed765e7a37",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat1/play.log": "4155c7db66b9b2386e31cd382573b35a398784f8d13876dbbad4a202e873601d",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat1/ros_home/roscore-12691.pid": "2eb17a9563f9a6805c7b3e59586c18fd482de71ebb74200ad66555a80e2f7aee",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat1/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat1/ros_logs/198d74de-ab62-11f1-b66e-f55576d0c46b/master.log": "b69f9c183bd23be41e647c9198036f3310e82999d3ee0a52d66c3cd36c0e7043",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat1/ros_logs/198d74de-ab62-11f1-b66e-f55576d0c46b/roslaunch-qiu-997237.log": "79151223303eb15344eea73e1e23d5b4cb42432ec016ff41ab31cc3ada257760",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat1/ros_logs/198d74de-ab62-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "0544ffe8ca7834315b6677c2a50bd82a4478d4205190f00d860de5309a00dfa3",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat1/ros_logs/198d74de-ab62-11f1-b66e-f55576d0c46b/rosout.log": "62221dc7df8c49076d4826b34e214e4295900d7b3943ca031e7aee75133e962b",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat1/roscore.log": "d332be7d534eef0181cc97dbce482982ab5ac2f2039ac64b518980729afb1699",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat1/vins.log": "2cb4d418b77af7e9e36e91c4d3e779c34cf7eef49e057bf66a5cf1a9b1aa827a",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat1/vins.yaml": "f178d1a28ff01e493ed05cbd0370fff76d24e05d6709197ae75de8c9c25173ea",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat1/vins_output/vio.csv": "f9c488b501498488c52af216860f545d7040be3f99f4426aff6ae3949c2421c3"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1",
+      "capacity_preflight_status": "GUARDED_CAPACITY_PROBE_REQUIRED",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat1/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/frontend/a02_0_900/L-neutral.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "f178d1a28ff01e493ed05cbd0370fff76d24e05d6709197ae75de8c9c25173ea",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/frontend/a02_0_900/L-neutral.bag",
+      "feature_bag_sha256": "436d6503a4469ee5ade5d2dbea3b320239c2a8e25857e2919ea1530de790f234",
+      "peak_node_rss_bytes": 119627776,
+      "repeat": 1,
+      "resource_pre": {
+        "available_memory_bytes": 25520824320,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15388987392,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 23305011200
+        }
+      },
+      "run_slug": "a02_0_900",
+      "started_at": "2026-09-08T08:49:49.613195+00:00",
+      "status": "COMPLETE",
+      "wall_s": 64.8520788269816
+    },
+    "task_check": {
+      "arm": "L-neutral",
+      "ended_at": "2026-09-08T08:49:50.726996+00:00",
+      "exact_started_at": "2026-09-08T08:48:44.450994+00:00",
+      "excursion_limit_m": 45.647005337699866,
+      "raw_motion": {
+        "excursion_m": 0.18475096346162853,
+        "finite": true,
+        "poses": 412
+      },
+      "received_per_ID_complete": true,
+      "repeat": 1,
+      "run_slug": "a02_0_900",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  },
+  {
+    "receipt": {
+      "arm": "L-neutral",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat2/backend_use.csv": "f73f1aa8124aa747e1215df53839ce14d96dacd007c6da4659771d8298ef7e19",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat2/play.log": "d5f01db8883ecdd981a370b92f112c97ae1be21839f922a5334fc53c9850a9f0",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat2/ros_home/roscore-12691.pid": "4e8e7f3222e67162398b17541dac5726c9d245f75711546930b4d5ace760382f",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat2/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat2/ros_logs/416dc63e-ab62-11f1-b66e-f55576d0c46b/master.log": "b4892a6f52d00a7ac0677032363e98da5db4dae1e96819589422c1ce4dfa3899",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat2/ros_logs/416dc63e-ab62-11f1-b66e-f55576d0c46b/roslaunch-qiu-998235.log": "8867d8bab2d010d1e06538acf5885cfb7a78b3c4ae559e6258caabf47c2ffef9",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat2/ros_logs/416dc63e-ab62-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "50bfa3d99830322f581dde319f03c6d71ade5ceb8e2f2a94abc03ff70bcb4ead",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat2/ros_logs/416dc63e-ab62-11f1-b66e-f55576d0c46b/rosout.log": "cc05cf019827746d2957c4eae10eff3cee0b8c43bf646fda1efc87e20f72fba5",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat2/roscore.log": "55e6d4d6b340dc5be0182c67f639ffa2bf5334b38c441725fa5c67a7e1a986c9",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat2/vins.log": "11e476ea7ea367d4c6e6c64096e614617c4aedf99dd441e2012345d8cfeef6d7",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat2/vins.yaml": "4f9243ec97f63e4ce32a1fd13e4beb90b4c37a4c916e26b1e602ac852c95c919",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat2/vins_output/vio.csv": "1b6ee426cdcce356dfe4d8743999477758799ce49e2c23d58c000c6b568bcda9"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1",
+      "capacity_preflight_status": "GUARDED_CAPACITY_PROBE_REQUIRED",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat2/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/frontend/a02_0_900/L-neutral.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "4f9243ec97f63e4ce32a1fd13e4beb90b4c37a4c916e26b1e602ac852c95c919",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/frontend/a02_0_900/L-neutral.bag",
+      "feature_bag_sha256": "436d6503a4469ee5ade5d2dbea3b320239c2a8e25857e2919ea1530de790f234",
+      "peak_node_rss_bytes": 115646464,
+      "repeat": 2,
+      "resource_pre": {
+        "available_memory_bytes": 25551060992,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15386992640,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 23273664512
+        }
+      },
+      "run_slug": "a02_0_900",
+      "started_at": "2026-09-08T08:50:56.599854+00:00",
+      "status": "COMPLETE",
+      "wall_s": 64.9432221360039
+    },
+    "task_check": {
+      "arm": "L-neutral",
+      "ended_at": "2026-09-08T08:50:57.686076+00:00",
+      "exact_started_at": "2026-09-08T08:49:51.368921+00:00",
+      "excursion_limit_m": 45.647005337699866,
+      "raw_motion": {
+        "excursion_m": 0.1876839633532924,
+        "finite": true,
+        "poses": 412
+      },
+      "received_per_ID_complete": true,
+      "repeat": 2,
+      "run_slug": "a02_0_900",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  },
+  {
+    "receipt": {
+      "arm": "L-neutral",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat3/backend_use.csv": "af04f6deb7b729cb37f2ac07f9739d8c73d601b9eef24ba89559973f8d6b807d",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat3/play.log": "c1cad7c5c2b0a6ecc7a9e4e23731efcc0c481dc4a4042e0687b2ccf2eec38c2d",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat3/ros_home/roscore-12691.pid": "a56907a4b27987976615a2e64d4ec0197d4502192283b0c73ae35964cb62fb65",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat3/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat3/ros_logs/b93ffb14-ab62-11f1-b66e-f55576d0c46b/master.log": "c72cc180ced328f83a13aa3bd64dd6f9c34d46656d612856d646ad1d6b1e19cf",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat3/ros_logs/b93ffb14-ab62-11f1-b66e-f55576d0c46b/roslaunch-qiu-1001342.log": "d8b7fb0675a9fd85104d5773b97cc1c5d3cef073593430574a9ebaa943407358",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat3/ros_logs/b93ffb14-ab62-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "bc6336b07561985c9e723a88a73363c9a145e4e64770687a06fbdb79e45b3c2e",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat3/ros_logs/b93ffb14-ab62-11f1-b66e-f55576d0c46b/rosout.log": "aaac3490932a80ae62760bddc73010c3298aa4b549788e2a438e9c593c3e2e4f",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat3/roscore.log": "562edc7632c9fddf042b22e8d8dcdfb1d9c69f903e1134e7eaa583ed3761b137",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat3/vins.log": "afbf3991e3e76f3473e9cf9a82612c669ac46ce2a344eb0b794e8657c34df171",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat3/vins.yaml": "c7fd7970ac5e24b09c0be50164fd43f7ada19354dd9f27f63099814ff2a83243",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat3/vins_output/vio.csv": "e20bff7d3b676368ccbc4d1bc9a444a6206440882ee0b5222193749259c26cfc"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1",
+      "capacity_preflight_status": "GUARDED_CAPACITY_PROBE_REQUIRED",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a02_0_900/L-neutral/repeat3/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/frontend/a02_0_900/L-neutral.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "c7fd7970ac5e24b09c0be50164fd43f7ada19354dd9f27f63099814ff2a83243",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/frontend/a02_0_900/L-neutral.bag",
+      "feature_bag_sha256": "436d6503a4469ee5ade5d2dbea3b320239c2a8e25857e2919ea1530de790f234",
+      "peak_node_rss_bytes": 118898688,
+      "repeat": 3,
+      "resource_pre": {
+        "available_memory_bytes": 25447907328,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15391334400,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 23178600448
+        }
+      },
+      "run_slug": "a02_0_900",
+      "started_at": "2026-09-08T08:54:17.625164+00:00",
+      "status": "COMPLETE",
+      "wall_s": 64.9466499859991
+    },
+    "task_check": {
+      "arm": "L-neutral",
+      "ended_at": "2026-09-08T08:54:18.920281+00:00",
+      "exact_started_at": "2026-09-08T08:53:12.417598+00:00",
+      "excursion_limit_m": 45.647005337699866,
+      "raw_motion": {
+        "excursion_m": 0.1859940109250833,
+        "finite": true,
+        "poses": 412
+      },
+      "received_per_ID_complete": true,
+      "repeat": 3,
+      "run_slug": "a02_0_900",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  },
+  {
+    "receipt": {
+      "arm": "B",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat1/backend_use.csv": "1488e0e4cd4e0647dd4b0d9920fb38dcc0dac5c9bd183c877edbdf88a87ad205",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat1/play.log": "53720e73acd3539cd6a28818558e163395582dcd4a9c0de7910eaf48a7ac900c",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat1/ros_home/roscore-12691.pid": "277f48c2b45855033d461e492ee41f32e7e2b8ab7de7bdd1409b2a87a11828ed",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat1/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat1/ros_logs/797e2f38-ab61-11f1-b66e-f55576d0c46b/master.log": "499f89e07d04cf385bd2a25407399b019527dd21711599e521c8b043ddf61c34",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat1/ros_logs/797e2f38-ab61-11f1-b66e-f55576d0c46b/roslaunch-qiu-993081.log": "55b1d6cb5e6e6ff21d5f7064358f0282f63f9d0f81a7f0e58762f01733bb8ed7",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat1/ros_logs/797e2f38-ab61-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "fa964d85beff28ab98488490b36fa307e58bf823904ff1edb98659afa4a9bb97",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat1/ros_logs/797e2f38-ab61-11f1-b66e-f55576d0c46b/rosout.log": "cfcd39b844db32175a17c3c33ee24b8a8cc88cbadbf1b7951f82b7066331a002",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat1/roscore.log": "cf291145c408849574c6d0ced5570ab1c1fa566331ae3d8d9fcd065b38c8fa3c",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat1/vins.log": "f2f7a5038e2095a2a238f95124fde38c9d8ba3790488761b47b7bcc0720050b4",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat1/vins.yaml": "4a996651c2bdec8284fbdd6f728b9771164e53ba818189fd3190717196c2ff26",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat1/vins_output/vio.csv": "3c1c0181a262fc3f5335927ef127ccf2c9d08aba031264d610141f721546622f"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "783f5c621c79c1c02da2c9719d5a3c3fbb4900e42ae59437af627d4b05ca675d",
+      "capacity_preflight_status": "PASS",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat1/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "4a996651c2bdec8284fbdd6f728b9771164e53ba818189fd3190717196c2ff26",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+      "feature_bag_sha256": "17305db38262a2ed4c7fa05b6269c9ea50592de07387517dfec798cf086ceae9",
+      "peak_node_rss_bytes": 103727104,
+      "repeat": 1,
+      "resource_pre": {
+        "available_memory_bytes": 25384927232,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15393497088,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 23392219136
+        }
+      },
+      "run_slug": "a08_2700_3600",
+      "started_at": "2026-09-08T08:45:21.759396+00:00",
+      "status": "COMPLETE",
+      "wall_s": 65.54303436700138
+    },
+    "task_check": {
+      "arm": "B",
+      "ended_at": "2026-09-08T08:45:22.478592+00:00",
+      "exact_started_at": "2026-09-08T08:44:15.959717+00:00",
+      "excursion_limit_m": 36.58058836650936,
+      "raw_motion": {
+        "excursion_m": 1.7876061900206095,
+        "finite": true,
+        "poses": 440
+      },
+      "received_per_ID_complete": true,
+      "repeat": 1,
+      "run_slug": "a08_2700_3600",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  },
+  {
+    "receipt": {
+      "arm": "B",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat2/backend_use.csv": "d8ae79f0eca20fe3cc4b35907c33097ae5a65c50c69e68d3de265c9f4c201243",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat2/play.log": "e00c09a79164d6d49543a351e39a0fcfda055b8098e977b95a44e7741233468b",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat2/ros_home/roscore-12691.pid": "86df92fdb52e3a5cd46016beb84706b5cfa243b0f855790566d813ce1bdc5055",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat2/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat2/ros_logs/a18d95fe-ab61-11f1-b66e-f55576d0c46b/master.log": "1a0ff038a38c582fa33528b9f2990079f8893752f0561ffc4071879384464c07",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat2/ros_logs/a18d95fe-ab61-11f1-b66e-f55576d0c46b/roslaunch-qiu-994135.log": "407f283039436a2a58e0a3ce2562c047081396eb23ef00f55a590dc0e6b81d73",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat2/ros_logs/a18d95fe-ab61-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "a871d114eaf845080440e7bd009a6cd0c90a55f93e2ef66cea54ce9c83d18c11",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat2/ros_logs/a18d95fe-ab61-11f1-b66e-f55576d0c46b/rosout.log": "05ba9b039d727b8445891a2c34711d54454c37957a320f80809ac05444140e59",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat2/roscore.log": "fa9f48f52cadc2a3ea99b1517a35e6fef211d0ad6f568d0f88f7d3558186c42f",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat2/vins.log": "e1a50d6e7e861c31f8fe7060cebbf8970635556b063757d208be81939451529a",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat2/vins.yaml": "db0be1900b1be933d817058a89b2f03672e2648e39b9f1afd706fcd56c3aaff5",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat2/vins_output/vio.csv": "d403709a4b66cb7bb82013e2ba0887622f806425ad8f3ef7992331ab3291eaf9"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "783f5c621c79c1c02da2c9719d5a3c3fbb4900e42ae59437af627d4b05ca675d",
+      "capacity_preflight_status": "PASS",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat2/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "db0be1900b1be933d817058a89b2f03672e2648e39b9f1afd706fcd56c3aaff5",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+      "feature_bag_sha256": "17305db38262a2ed4c7fa05b6269c9ea50592de07387517dfec798cf086ceae9",
+      "peak_node_rss_bytes": 103518208,
+      "repeat": 2,
+      "resource_pre": {
+        "available_memory_bytes": 25483546624,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15389208576,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 23373733888
+        }
+      },
+      "run_slug": "a08_2700_3600",
+      "started_at": "2026-09-08T08:46:29.065350+00:00",
+      "status": "COMPLETE",
+      "wall_s": 65.63884990598308
+    },
+    "task_check": {
+      "arm": "B",
+      "ended_at": "2026-09-08T08:46:29.714781+00:00",
+      "exact_started_at": "2026-09-08T08:45:23.137567+00:00",
+      "excursion_limit_m": 36.58058836650936,
+      "raw_motion": {
+        "excursion_m": 3.668106199852998,
+        "finite": true,
+        "poses": 440
+      },
+      "received_per_ID_complete": true,
+      "repeat": 2,
+      "run_slug": "a08_2700_3600",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  },
+  {
+    "receipt": {
+      "arm": "B",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat3/backend_use.csv": "80d1b9e7969f605019b5ec8f2a761018998c9d350cc26ec5667fee1e5295d188",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat3/play.log": "285eb8fd46c2e613c861f888e3350897db9c3585764496e4623e51fca9ea4c9e",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat3/ros_home/roscore-12691.pid": "9eef076d2371a2c98f482a979941d0c93730ca4fcdd9b6e123a082049b91c993",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat3/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat3/ros_logs/c991f400-ab61-11f1-b66e-f55576d0c46b/master.log": "6711453b44b370a73e5b8aec4269c8de160e54643e2ccd5f7508c0c1fb7b582c",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat3/ros_logs/c991f400-ab61-11f1-b66e-f55576d0c46b/roslaunch-qiu-995199.log": "842b07a2791eac77644cd4ba2d3a36d21a59174b3de1754c81b329e60f9012ed",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat3/ros_logs/c991f400-ab61-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "08ea4d6491acdf48226cd0ad16793e20f9087ac8d2135cc4b6d560a9a0c829ba",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat3/ros_logs/c991f400-ab61-11f1-b66e-f55576d0c46b/rosout.log": "d89d5f817ff1307a4d5b08ef5319eeda40a1a16667be1fbdfb83d03d915dcce7",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat3/roscore.log": "bc3477edefb8548534cdd686786f915993f5215f8f532e7ab73eab0d9f0ca8e9",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat3/vins.log": "79941deddbbe5117f825d524baab3bed44e016fe0a848168232b07a79e6342e4",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat3/vins.yaml": "43ec59aee055a3104371f387acbe4e425d060b86c8eaed60584b218e3f9d44cc",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat3/vins_output/vio.csv": "0e47af6efe854291457325c1d1781631bd33002ba416c8b1a9a71487012ad95a"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "783f5c621c79c1c02da2c9719d5a3c3fbb4900e42ae59437af627d4b05ca675d",
+      "capacity_preflight_status": "PASS",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat3/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "43ec59aee055a3104371f387acbe4e425d060b86c8eaed60584b218e3f9d44cc",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+      "feature_bag_sha256": "17305db38262a2ed4c7fa05b6269c9ea50592de07387517dfec798cf086ceae9",
+      "peak_node_rss_bytes": 101474304,
+      "repeat": 3,
+      "resource_pre": {
+        "available_memory_bytes": 25477386240,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15389130752,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 23355244544
+        }
+      },
+      "run_slug": "a08_2700_3600",
+      "started_at": "2026-09-08T08:47:36.104750+00:00",
+      "status": "COMPLETE",
+      "wall_s": 65.5400708859961
+    },
+    "task_check": {
+      "arm": "B",
+      "ended_at": "2026-09-08T08:47:36.751548+00:00",
+      "exact_started_at": "2026-09-08T08:46:30.315319+00:00",
+      "excursion_limit_m": 36.58058836650936,
+      "raw_motion": {
+        "excursion_m": 3.661488451449766,
+        "finite": true,
+        "poses": 440
+      },
+      "received_per_ID_complete": true,
+      "repeat": 3,
+      "run_slug": "a08_2700_3600",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  },
+  {
+    "receipt": {
+      "arm": "L-original",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat1/backend_use.csv": "54040ae1941344cb2230a474738f5da5defaac847a38ebcb00d9823e4830218b",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat1/play.log": "019766ccd3d9bb09b2c9de15428cdc354e1806a603805a7e88a696858bf33f4f",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat1/ros_home/roscore-12691.pid": "f29ca6cc33b19e456f9372ab2ac7c8192247d91abacc2dab300330d5ccc21fa3",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat1/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat1/ros_logs/e146217e-ab62-11f1-b66e-f55576d0c46b/master.log": "4bf2ce9239a3003d88dded30ceff4b067e738a1c67c828de41dd04ede1537844",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat1/ros_logs/e146217e-ab62-11f1-b66e-f55576d0c46b/roslaunch-qiu-1002387.log": "485d487646d37ab74160ad4aae75fd7c826c6ad2b1feb5da7c0c2dc3778e9728",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat1/ros_logs/e146217e-ab62-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "a762303a625cb49616729152faf7f727e9483b39ef46b888e87777a224e1e617",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat1/ros_logs/e146217e-ab62-11f1-b66e-f55576d0c46b/rosout.log": "635b615a3d221595e5b4b0941c7abc1cda957be85389d7673ea29269a40db372",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat1/roscore.log": "e3a6e3f49b6ca505248ddaf90b41b029598cfb71898e6b44c5cc8f87fd33cd53",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat1/vins.log": "7019d3f55435286deb770e0c8e7e3a0059a216bb5c91a9e6c905bd098369c5a0",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat1/vins.yaml": "bb06cc400d1b444f0e03e562244d8d4be836be8cdc784d8912557dbc3abbd8d7",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat1/vins_output/vio.csv": "012c75b2d69eb9347f1507ee7f110d7b97837df204148314de26afa6103de493"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "783f5c621c79c1c02da2c9719d5a3c3fbb4900e42ae59437af627d4b05ca675d",
+      "capacity_preflight_status": "GUARDED_CAPACITY_PROBE_REQUIRED",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat1/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a08_2700_3600/L-all.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "bb06cc400d1b444f0e03e562244d8d4be836be8cdc784d8912557dbc3abbd8d7",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a08_2700_3600/L-all.bag",
+      "feature_bag_sha256": "94e630edbadc8862ea66d54f51f51779b48a40431bb64eac4d29271871589a5d",
+      "peak_node_rss_bytes": 122023936,
+      "repeat": 1,
+      "resource_pre": {
+        "available_memory_bytes": 25149411328,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15394480128,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 23147003904
+        }
+      },
+      "run_slug": "a08_2700_3600",
+      "started_at": "2026-09-08T08:55:25.311089+00:00",
+      "status": "COMPLETE",
+      "wall_s": 65.50259900599485
+    },
+    "task_check": {
+      "arm": "L-original",
+      "ended_at": "2026-09-08T08:55:26.628739+00:00",
+      "exact_started_at": "2026-09-08T08:54:19.532347+00:00",
+      "excursion_limit_m": 36.58058836650936,
+      "raw_motion": {
+        "excursion_m": 1.5004282477013022,
+        "finite": true,
+        "poses": 440
+      },
+      "received_per_ID_complete": true,
+      "repeat": 1,
+      "run_slug": "a08_2700_3600",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  },
+  {
+    "receipt": {
+      "arm": "L-original",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat2/backend_use.csv": "c7bb06caa07bf5642b3da8c08ac1685b0d5b600b9811e3706550af6169bc1129",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat2/play.log": "fa9f48b94a2731edca578c5d660c13fd802597309a189d4c8378606b5ae10e4a",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat2/ros_home/roscore-12691.pid": "bb40e224d8ae553717a93dc4580660ef3becb874d541fb5f502f9fcfcb463b2a",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat2/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat2/ros_logs/5a27aa18-ab63-11f1-b66e-f55576d0c46b/master.log": "300eed8bd4782919d54f62b2f01c92dd52318a8d86de1d6649821dc65222082e",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat2/ros_logs/5a27aa18-ab63-11f1-b66e-f55576d0c46b/roslaunch-qiu-1005873.log": "7ad981a0b6a2e3ea5f63bc17d3da928261131bc2316e59fdbde43d4996352439",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat2/ros_logs/5a27aa18-ab63-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "39efcb55fb5d4c30394d42a389526134cec6e888a3a78ffe7ae71ea45a3c6231",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat2/ros_logs/5a27aa18-ab63-11f1-b66e-f55576d0c46b/rosout.log": "d00f15a1dd825057778866d1c010ef0e443fa95d6d93dd6bcf3be109ba594f16",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat2/roscore.log": "584783bc900ab81135451109557523ae5f388ed754e46117923625e913f01c30",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat2/vins.log": "13546394d57f812c736db804220740c7ee095521825cc3c7696cc6d5b732187b",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat2/vins.yaml": "bd9c138fe4111ede808efaccd366219acb5a601db7660a9e385a5005b7624963",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat2/vins_output/vio.csv": "3d9ce49b1d5fd053459acc0ba928cb34890af463da74d6ef6709ea37bb0a6371"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "783f5c621c79c1c02da2c9719d5a3c3fbb4900e42ae59437af627d4b05ca675d",
+      "capacity_preflight_status": "GUARDED_CAPACITY_PROBE_REQUIRED",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat2/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a08_2700_3600/L-all.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "bd9c138fe4111ede808efaccd366219acb5a601db7660a9e385a5005b7624963",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a08_2700_3600/L-all.bag",
+      "feature_bag_sha256": "94e630edbadc8862ea66d54f51f51779b48a40431bb64eac4d29271871589a5d",
+      "peak_node_rss_bytes": 122462208,
+      "repeat": 2,
+      "resource_pre": {
+        "available_memory_bytes": 25644879872,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15393357824,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 23038754816
+        }
+      },
+      "run_slug": "a08_2700_3600",
+      "started_at": "2026-09-08T08:58:48.096620+00:00",
+      "status": "COMPLETE",
+      "wall_s": 65.4579459859815
+    },
+    "task_check": {
+      "arm": "L-original",
+      "ended_at": "2026-09-08T08:58:49.340454+00:00",
+      "exact_started_at": "2026-09-08T08:57:42.356101+00:00",
+      "excursion_limit_m": 36.58058836650936,
+      "raw_motion": {
+        "excursion_m": 1.9066748029226168,
+        "finite": true,
+        "poses": 440
+      },
+      "received_per_ID_complete": true,
+      "repeat": 2,
+      "run_slug": "a08_2700_3600",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  },
+  {
+    "receipt": {
+      "arm": "L-original",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat3/backend_use.csv": "e15aa8bbc7b18d0209c7f8b47a08d4d85f4e1ce5e7783847f5adc4da4a0238d3",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat3/play.log": "18d0620b8c531d240b0c6b199391147212f6db1f8d6db284314393fdcba4dfb0",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat3/ros_home/roscore-12691.pid": "92452e5ba717153ded507f3560938daaea24d6441ffc08e5b334afac75642b8c",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat3/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat3/ros_logs/826b44a8-ab63-11f1-b66e-f55576d0c46b/master.log": "cae57e1b1127f9680d2adc774f5d97261a1eb9a72070947538901f342b16f4bf",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat3/ros_logs/826b44a8-ab63-11f1-b66e-f55576d0c46b/roslaunch-qiu-1006992.log": "406107e17d24328904cf265e9233f06a533cdc238f6f051b2ce6ebd9d49ecfba",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat3/ros_logs/826b44a8-ab63-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "5df2a723d6d7c4e8d750cbb718ca7df7f7c2f9edc7916048eb325c1e31272d93",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat3/ros_logs/826b44a8-ab63-11f1-b66e-f55576d0c46b/rosout.log": "e616da36ac4207f488dd58cb1d421459d18474f06a4c67c3826dd3cb0e9dfe91",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat3/roscore.log": "8e9daeb01cda2d23edfd89a02139b362c244ec8e0b6fbf4834700702b7f9ed0f",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat3/vins.log": "436cb13294105cb09565835846f686445d8f9e7ca0e0cd2b6507f64e400e04bf",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat3/vins.yaml": "b187ea3bfb9138766e04c3898ef4c7f05e0ab7b3384bd594055eaefb526feb97",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat3/vins_output/vio.csv": "63b199aecc9a61e1e45bf525fd0c53096a0b898569ca9b978bd52bb624173a24"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "783f5c621c79c1c02da2c9719d5a3c3fbb4900e42ae59437af627d4b05ca675d",
+      "capacity_preflight_status": "GUARDED_CAPACITY_PROBE_REQUIRED",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-original/repeat3/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a08_2700_3600/L-all.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "b187ea3bfb9138766e04c3898ef4c7f05e0ab7b3384bd594055eaefb526feb97",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/frontend/a08_2700_3600/L-all.bag",
+      "feature_bag_sha256": "94e630edbadc8862ea66d54f51f51779b48a40431bb64eac4d29271871589a5d",
+      "peak_node_rss_bytes": 123416576,
+      "repeat": 3,
+      "resource_pre": {
+        "available_memory_bytes": 25789026304,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15392526336,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 23002673152
+        }
+      },
+      "run_slug": "a08_2700_3600",
+      "started_at": "2026-09-08T08:59:55.736879+00:00",
+      "status": "COMPLETE",
+      "wall_s": 65.54811559800874
+    },
+    "task_check": {
+      "arm": "L-original",
+      "ended_at": "2026-09-08T08:59:56.997667+00:00",
+      "exact_started_at": "2026-09-08T08:58:49.922938+00:00",
+      "excursion_limit_m": 36.58058836650936,
+      "raw_motion": {
+        "excursion_m": 1.8324975276654536,
+        "finite": true,
+        "poses": 440
+      },
+      "received_per_ID_complete": true,
+      "repeat": 3,
+      "run_slug": "a08_2700_3600",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  },
+  {
+    "receipt": {
+      "arm": "L-neutral",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat1/backend_use.csv": "6ca4aba4d64ad40d1af98d44281a2ba53cfc97af8fb585c3b98be5c953cd3acd",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat1/play.log": "08cf65125168647fa01914a9a86759d39208c8cf2e9f15b29f1cbd756a6e0f33",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat1/ros_home/roscore-12691.pid": "79a4a9895a007657bae09723b73832ca7fd4036aa1d253b2dcf5a2f41daa33e3",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat1/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat1/ros_logs/099cd78a-ab63-11f1-b66e-f55576d0c46b/master.log": "cccf52e713c071147cb2bf578beaaa3db5ec03003c0ff8249eeabf2060a708f9",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat1/ros_logs/099cd78a-ab63-11f1-b66e-f55576d0c46b/roslaunch-qiu-1003473.log": "254c4fb2b774b1412e805f22302eb9d3aae4f22f2935e48e2613d129e5c328da",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat1/ros_logs/099cd78a-ab63-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "439305d705f895afadcb0b75d05a79980383541db2242c4fadc1d0c2724428ee",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat1/ros_logs/099cd78a-ab63-11f1-b66e-f55576d0c46b/rosout.log": "d97e2b82ae949059057a0261ae805ab2880930390b0866de9f4fcfbafbd483a8",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat1/roscore.log": "b50896242cc1b0fb47b092a1707eba7ae07daba5894f9a184816186dea0fe094",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat1/vins.log": "9fead994f6f1598545654165ef9ca2f62fdbed8516fc0ad2f043052ddefa778d",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat1/vins.yaml": "b924905fb156cd3f9e673606c1cfd28a42c6faa1975d87d23c92c0151db426e5",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat1/vins_output/vio.csv": "b4823b01d357e2bc884a0f9c9fba619dbae3caccb7921074ddb42dd7ed9684a2"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "783f5c621c79c1c02da2c9719d5a3c3fbb4900e42ae59437af627d4b05ca675d",
+      "capacity_preflight_status": "GUARDED_CAPACITY_PROBE_REQUIRED",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat1/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/frontend/a08_2700_3600/L-neutral.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "b924905fb156cd3f9e673606c1cfd28a42c6faa1975d87d23c92c0151db426e5",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/frontend/a08_2700_3600/L-neutral.bag",
+      "feature_bag_sha256": "30421d5cbeef98287f7928bff258c9f1b9aa11a4d8ac240854da269058b81224",
+      "peak_node_rss_bytes": 122179584,
+      "repeat": 1,
+      "resource_pre": {
+        "available_memory_bytes": 25604186112,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15394447360,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 23110918144
+        }
+      },
+      "run_slug": "a08_2700_3600",
+      "started_at": "2026-09-08T08:56:33.041012+00:00",
+      "status": "COMPLETE",
+      "wall_s": 65.53904971000156
+    },
+    "task_check": {
+      "arm": "L-neutral",
+      "ended_at": "2026-09-08T08:56:34.262585+00:00",
+      "exact_started_at": "2026-09-08T08:55:27.239010+00:00",
+      "excursion_limit_m": 36.58058836650936,
+      "raw_motion": {
+        "excursion_m": 1.8883835480113673,
+        "finite": true,
+        "poses": 440
+      },
+      "received_per_ID_complete": true,
+      "repeat": 1,
+      "run_slug": "a08_2700_3600",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  },
+  {
+    "receipt": {
+      "arm": "L-neutral",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat2/backend_use.csv": "ffc242714130513e0352d31868f09c7c793502b5d904839bf9ce4de322f11966",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat2/play.log": "4dc000262dafc15a4a4f9e2fb93738b2b537a9362cd9280c97efe3cdcbb1c74b",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat2/ros_home/roscore-12691.pid": "37d87d3a2c2f4b05172999d15a1b9d81e3fa23e9af6de9dde36c4bed9ec1d1cf",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat2/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat2/ros_logs/31e87456-ab63-11f1-b66e-f55576d0c46b/master.log": "8dd54c301f8ce25aa6c49712dc18955e03f92d5f6192216c651e32fdd3c2d383",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat2/ros_logs/31e87456-ab63-11f1-b66e-f55576d0c46b/roslaunch-qiu-1004616.log": "3928c368843306f015ece6634f15c1b12eee33abb22e6cfe68b68e0581807f5d",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat2/ros_logs/31e87456-ab63-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "5a8e09a7037bc753fb051326692af07725466ff447f817d006299d06155bc854",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat2/ros_logs/31e87456-ab63-11f1-b66e-f55576d0c46b/rosout.log": "36765f7d86983a243e57acad0ec5235e0073c12dbf30f9af4866faa927ed3879",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat2/roscore.log": "26cc3e5eb4ff9e3d37338787cb6cd31abd136d860630bfc2c56a1fcde5033912",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat2/vins.log": "91d10834ff1be1713077274a2ab29fe498e657dfffacfe18bc9261b0a0e45219",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat2/vins.yaml": "5a4c64386ed25ac65a429c0e6ae582e3a65a80678f32eeec129c9e38064ac54b",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat2/vins_output/vio.csv": "5a362e3992166e4778852eee4bf1c343cf94042106b76619122fe511a1106614"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "783f5c621c79c1c02da2c9719d5a3c3fbb4900e42ae59437af627d4b05ca675d",
+      "capacity_preflight_status": "GUARDED_CAPACITY_PROBE_REQUIRED",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat2/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/frontend/a08_2700_3600/L-neutral.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "5a4c64386ed25ac65a429c0e6ae582e3a65a80678f32eeec129c9e38064ac54b",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/frontend/a08_2700_3600/L-neutral.bag",
+      "feature_bag_sha256": "30421d5cbeef98287f7928bff258c9f1b9aa11a4d8ac240854da269058b81224",
+      "peak_node_rss_bytes": 121217024,
+      "repeat": 2,
+      "resource_pre": {
+        "available_memory_bytes": 25710104576,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15394242560,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 23074836480
+        }
+      },
+      "run_slug": "a08_2700_3600",
+      "started_at": "2026-09-08T08:57:40.460805+00:00",
+      "status": "COMPLETE",
+      "wall_s": 65.34534329100279
+    },
+    "task_check": {
+      "arm": "L-neutral",
+      "ended_at": "2026-09-08T08:57:41.755700+00:00",
+      "exact_started_at": "2026-09-08T08:56:34.850726+00:00",
+      "excursion_limit_m": 36.58058836650936,
+      "raw_motion": {
+        "excursion_m": 1.8803319558258855,
+        "finite": true,
+        "poses": 440
+      },
+      "received_per_ID_complete": true,
+      "repeat": 2,
+      "run_slug": "a08_2700_3600",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  },
+  {
+    "receipt": {
+      "arm": "L-neutral",
+      "artifacts": {
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat3/backend_use.csv": "e40636eff9ff9eb7459105e26724523eccbb095bdf9ba5efd04f613b612a1580",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat3/play.log": "16abb95723635696206107545477ec941ed472f7136a9fbdb1e985ddb09f88c2",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat3/ros_home/roscore-12691.pid": "ad8b622229a2606d494b1154f72412afad1d19f2cb58b39a65656dc617602c3e",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat3/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat3/ros_logs/aac1aa32-ab63-11f1-b66e-f55576d0c46b/master.log": "6a24b7d44bda423851a2c473f7178e2e6098e492662f367574cfc73c3475fc7d",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat3/ros_logs/aac1aa32-ab63-11f1-b66e-f55576d0c46b/roslaunch-qiu-1008084.log": "e551cc38a02096ce999c0d5ce3a66f71b67bbfa1723090f1300de91cdce5e029",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat3/ros_logs/aac1aa32-ab63-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "2f26a6bf9b2839bf26b8641634efe9c196013047aa40804ada45b2ac107fb709",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat3/ros_logs/aac1aa32-ab63-11f1-b66e-f55576d0c46b/rosout.log": "3b5372e91c90e36781c432b191580b291d856b10d260dc820268f32c2916098f",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat3/roscore.log": "4ba5b2f70de72883d5e3e8ed0ddf4ae34dce68a5623c3044164f62892931a986",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat3/vins.log": "0c6a6f51fb20ed6eb97abe3b900672e4d95dd693ad5315bc4a9e4b7d404f0481",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat3/vins.yaml": "96547daa4fc469d2d0aaccb1637ea5ffd5d60bed220b024ed7ee71fb18c1adb9",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat3/vins_output/vio.csv": "da335f9ebde6f0b3e92d2d9b5c505f72f294de8feeafa114eb5b74fe790c3d92"
+      },
+      "backend_lock_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+      "canonical_source_sha256": "783f5c621c79c1c02da2c9719d5a3c3fbb4900e42ae59437af627d4b05ca675d",
+      "capacity_preflight_status": "GUARDED_CAPACITY_PROBE_REQUIRED",
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/L-neutral/repeat3/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/frontend/a08_2700_3600/L-neutral.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "config_sha256": "96547daa4fc469d2d0aaccb1637ea5ffd5d60bed220b024ed7ee71fb18c1adb9",
+      "error": "",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/frontend/a08_2700_3600/L-neutral.bag",
+      "feature_bag_sha256": "30421d5cbeef98287f7928bff258c9f1b9aa11a4d8ac240854da269058b81224",
+      "peak_node_rss_bytes": 121954304,
+      "repeat": 3,
+      "resource_pre": {
+        "available_memory_bytes": 25743699968,
+        "free_bytes": {
+          "/home/ma/AQUA-FE_WS_source_neutral_quality_v1": 15387013120,
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1": 22966595584
+        }
+      },
+      "run_slug": "a08_2700_3600",
+      "started_at": "2026-09-08T09:01:03.292766+00:00",
+      "status": "COMPLETE",
+      "wall_s": 65.43644535698695
+    },
+    "task_check": {
+      "arm": "L-neutral",
+      "ended_at": "2026-09-08T09:01:04.568679+00:00",
+      "exact_started_at": "2026-09-08T08:59:57.590769+00:00",
+      "excursion_limit_m": 36.58058836650936,
+      "raw_motion": {
+        "excursion_m": 2.164151559156613,
+        "finite": true,
+        "poses": 440
+      },
+      "received_per_ID_complete": true,
+      "repeat": 3,
+      "run_slug": "a08_2700_3600",
+      "severe_anomaly": false,
+      "source_commit": "94e59f5598580eb72f7588d776fdce12d529130f",
+      "status": "PASS"
+    }
+  }
+]

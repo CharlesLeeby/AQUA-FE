@@ -787,3 +787,19 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Failed attempts / known issues / potential failures：本阶段无失败实验；基线可能重现数量级异常，单次直接工程检查后无原因则停止，不放宽旧A/A或选择重跑。
 - Interpretation / evidence / conclusion：Confirmed fact为输入单变量干预成立；效果为Unknown，不宣称创新或成功。原实验/外部后端不修改。
 - Next steps / next experiment / follow-up：原二进制完成18次小矩阵；仅真实净收益才进入预先冻结的新六窗，其他决策立即停止权重扩展。
+
+
+## 2026-09-08 — SOURCE-NEUTRAL-v1 / 18次开发矩阵结束
+- Objective / Research question：同一KLT与XFeat观测集合，仅去除来源专用q映射，能否解释原添加方案退化。
+- Motivation / hypothesis / baseline：隔离实现混杂；B完整KLT、L-original原L-all、L-neutral通用映射。没有新网络、筛点、来源标签伪装或默认方法变更。
+- Files / implementation / technical decisions：独立五主文件、运行/评价receipts与FAST_LEARNED_TEST交接；转换/原runner封装/测试均冻结。最终文字明确A08基线不稳定与工程异常、精度退化的区别，不改评价门。
+- Experiment ID / date / status / scientific role：SOURCE-NEUTRAL-v1，2026-09-08，COMPLETE，两个已知结果development窗；branch exp/source-neutral-quality-v1-20260908；实验源码94e59f5598580eb72f7588d776fdce12d529130f。
+- Dataset / environment / exact configuration：A02[0,900)、A08[2700,3600)，每臂3次共18；前6次B兼作基线检查。原additive冻结二进制/动态库与数学YAML，CPU2,3,8,9、线程1、端口12691。q=.80地板、现有通用fallback及age/FB/NCC/raw_quality公式，其他输入逐字段保持。
+- Commands / artifacts：convert_source_neutral_quality_v1.py --window；run_source_neutral_quality_v1.py prepare/run；report_source_neutral_quality_v1.py。runtime /media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1；主表papers/frontend_source_neutral_quality_v1/{results,comparison}.csv。
+- Experiments / quantitative results：18/18完成，追加验证0，新窗0/36；A02 neutral/original APE1.053459/1.052953m（+0.048%），A08 .533472/.547467m（−2.56%），两者均SMALL_OR_UNCERTAIN。neutral/B在A02为1.053459/.163524m，PRACTICAL_LOSS且严重退化；A08 .533472/.061873m，但B范围.060390–.560903m使该比较不确定。两窗零实用净收益。
+- Validity / metrics / common support：18次初始化/输出/逐ID接收通过；全部12个L臂有非零候选残差消费。6组共同支撑与evo通过，A02/A08均为41/43样本、40/42个严格1s RPE对，覆盖91.11%/95.56%。主指标fixed-scale SE3 APE，RPE护栏、Sim3仅诊断；全部重复见results.csv。
+- Failed attempts / known issues：没有非有限/接收/数量级工程异常，没有失败重跑。A08 B第1次精度波动明显，原样保留；不将工程运行PASS称数值确定，不宣称A08 neutral/B精度优劣。初始化内部原因Unknown，独立lost-tracking与真实GT仍Unknown。
+- Qualitative observations / evidence：单变量输入转换可运行，但没有达到实用改善门；降低名义候选权重没有解决A02大幅退化，A08小幅中位改善未超过技术波动。
+- Interpretation / current conclusion：SOURCE_MAPPING_NOT_MAIN_EXPLANATION。Confirmed fact仅限两窗未观察到实用改善；不证明q永远无作用，不包装为方法成功，不提升为主方法。
+- Assumptions / potential failure cases / open questions：已知开发窗、三次技术重复、proxy参考及初始化数值波动限制因果外推；不追加无界内部诊断。
+- Next steps / next experiment / follow-up：停止来源映射权重排查，保留原配置，不扩窗、不扫描q常数。已按用户授权范围结束小实验。

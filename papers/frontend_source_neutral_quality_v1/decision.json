@@ -1,12 +1,23 @@
 {
-  "decision": "NOT_EVALUATED",
-  "formal_replays_completed": 0,
+  "decision": "SOURCE_MAPPING_NOT_MAIN_EXPLANATION",
+  "formal_replays_completed": 18,
   "formal_replays_planned": 18,
-  "baseline_usable": false,
+  "baseline_usable": true,
   "severe_anomalies": [],
   "new_window_replays": 0,
   "extension_started": false,
-  "source_commits": [],
+  "source_commits": [
+    "94e59f5598580eb72f7588d776fdce12d529130f"
+  ],
   "internal_cause": "Unknown",
-  "next_step": "按冻结顺序完成本轮18次正式回放。"
+  "next_step": "停止来源映射权重排查，保留原配置，不扩窗、不扫描q常数。",
+  "baseline_usable_definition": "All six B runs passed frozen runability and catastrophic-excursion checks; this does not assert numerical stability.",
+  "baseline_numerical_stability": {
+    "A02": "APE 0.163416–0.169357 m",
+    "A08": "APE 0.060390–0.560903 m; no neutral/B precision ranking under the frozen repeat-range gate"
+  },
+  "severe_accuracy_regressions": [
+    "A02 L-neutral vs B"
+  ],
+  "interpretation": "No practical improvement from this mapping ablation in these two development windows; not proof that q never influences VIO."
 }

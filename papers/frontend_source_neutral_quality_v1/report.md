@@ -1,42 +1,44 @@
-本轮实际完成 **0/18次正式replay**，其中B基线0/6次。DECISION：**NOT_EVALUATED**。
+本轮实际完成 **18/18次正式replay**，其中B基线6/6次。DECISION：**SOURCE_MAPPING_NOT_MAIN_EXPLANATION**。
 
-- 基线是否足够可靠：Not evaluated.；沿用有效轨迹、接收完整性和重复范围，未要求旧A/A的1e-5m一致。
+- 基线：6次均通过冻结运行门。A02 APE范围0.163416–0.169357 m；A08为0.060390–0.560903 m，波动明显，因此对A08的neutral/B不下精度优劣结论。运行可用不等于数值稳定。
 - 唯一改动：同一L-all候选的quality与派生sigma；锁定源码的通用映射，原始质量/年龄/FB/NCC不变，真实XFeat标签不变。
-- 相对L-original：见下表两窗的全部实用判定及误差变化；不以较低中位数替代重复范围门。
-- 相对KLT净收益：0个窗口通过实用收益门（完整分母2；未评估槽位不能视为失败或成功）。
-- 严重异常：0次，全部列入results.csv；内部原因Unknown。
+- 相对L-original：A02 APE增加0.000505 m（0.048%）；A08降低0.013995 m（2.56%），低于5%门槛且小于0.109348 m重复极差。两窗均无实用改善。
+- 相对KLT净收益：0/2。A02明确实用退化；A08虽中位APE更差，但重复范围门给出SMALL_OR_UNCERTAIN，不能把它解释为无害或等价。
+- 严重异常：非有限/接收/数量级工程异常0次；精度严重退化在A02 neutral/B成立。A08 B第1次APE为0.560903 m，完整保留，未被中位数隐藏；内部原因Unknown。
 - 新窗口：未启动，0/36；仅首轮PROMISING允许扩展。
-- 唯一下一步：按冻结顺序完成本轮18次正式回放。
+- 唯一下一步：停止来源映射权重排查，保留原配置，不扩窗、不扫描q常数。
 
 | 窗口 | 比较 | neutral APE(m) | 参考APE(m) | APE变化(m/%) | RPE变化(m) | 判定 |
 |---|---|---:|---:|---|---:|---|
-| a02_0_900 | L-neutral_vs_L-original | Unknown | Unknown | Unknown / Unknown | Unknown | Not evaluated. |
-| a02_0_900 | L-neutral_vs_B | Unknown | Unknown | Unknown / Unknown | Unknown | Not evaluated. |
-| a08_2700_3600 | L-neutral_vs_L-original | Unknown | Unknown | Unknown / Unknown | Unknown | Not evaluated. |
-| a08_2700_3600 | L-neutral_vs_B | Unknown | Unknown | Unknown / Unknown | Unknown | Not evaluated. |
+| a02_0_900 | L-neutral_vs_L-original | 1.05346 | 1.05295 | 0.000505359 / 0.0479945 | 2.12708e-05 | SMALL_OR_UNCERTAIN |
+| a02_0_900 | L-neutral_vs_B | 1.05346 | 0.163524 | 0.889934 / 544.222 | 0.0705993 | PRACTICAL_LOSS |
+| a08_2700_3600 | L-neutral_vs_L-original | 0.533472 | 0.547467 | -0.0139946 / -2.55625 | -0.00093535 | SMALL_OR_UNCERTAIN |
+| a08_2700_3600 | L-neutral_vs_B | 0.533472 | 0.0618734 | 0.471598 / 762.199 | 0.0254534 | SMALL_OR_UNCERTAIN |
 
 | 窗口 | 臂 | 重复 | APE(m) | 严格1s RPE(m) | Sim3诊断尺度 | 状态 |
 |---|---|---:|---:|---:|---:|---|
-| a02_0_900 | B | 1 | Unknown | Unknown | Unknown | Not evaluated. |
-| a02_0_900 | B | 2 | Unknown | Unknown | Unknown | Not evaluated. |
-| a02_0_900 | B | 3 | Unknown | Unknown | Unknown | Not evaluated. |
-| a02_0_900 | L-original | 1 | Unknown | Unknown | Unknown | Not evaluated. |
-| a02_0_900 | L-original | 2 | Unknown | Unknown | Unknown | Not evaluated. |
-| a02_0_900 | L-original | 3 | Unknown | Unknown | Unknown | Not evaluated. |
-| a02_0_900 | L-neutral | 1 | Unknown | Unknown | Unknown | Not evaluated. |
-| a02_0_900 | L-neutral | 2 | Unknown | Unknown | Unknown | Not evaluated. |
-| a02_0_900 | L-neutral | 3 | Unknown | Unknown | Unknown | Not evaluated. |
-| a08_2700_3600 | B | 1 | Unknown | Unknown | Unknown | Not evaluated. |
-| a08_2700_3600 | B | 2 | Unknown | Unknown | Unknown | Not evaluated. |
-| a08_2700_3600 | B | 3 | Unknown | Unknown | Unknown | Not evaluated. |
-| a08_2700_3600 | L-original | 1 | Unknown | Unknown | Unknown | Not evaluated. |
-| a08_2700_3600 | L-original | 2 | Unknown | Unknown | Unknown | Not evaluated. |
-| a08_2700_3600 | L-original | 3 | Unknown | Unknown | Unknown | Not evaluated. |
-| a08_2700_3600 | L-neutral | 1 | Unknown | Unknown | Unknown | Not evaluated. |
-| a08_2700_3600 | L-neutral | 2 | Unknown | Unknown | Unknown | Not evaluated. |
-| a08_2700_3600 | L-neutral | 3 | Unknown | Unknown | Unknown | Not evaluated. |
+| a02_0_900 | B | 1 | 0.163416 | 0.0229596 | 0.877773 | PASS |
+| a02_0_900 | B | 2 | 0.169357 | 0.0232491 | 0.873293 | PASS |
+| a02_0_900 | B | 3 | 0.163524 | 0.0230068 | 0.877774 | PASS |
+| a02_0_900 | L-original | 1 | 1.05205 | 0.0934882 | 21.9523 | PASS |
+| a02_0_900 | L-original | 2 | 1.05603 | 0.0937891 | 23.7817 | PASS |
+| a02_0_900 | L-original | 3 | 1.05295 | 0.0935848 | 22.3453 | PASS |
+| a02_0_900 | L-neutral | 1 | 1.0535 | 0.0936355 | 22.6112 | PASS |
+| a02_0_900 | L-neutral | 2 | 1.05301 | 0.0935791 | 22.3677 | PASS |
+| a02_0_900 | L-neutral | 3 | 1.05346 | 0.0936061 | 22.5915 | PASS |
+| a08_2700_3600 | B | 1 | 0.560903 | 0.0586164 | 2.16836 | PASS |
+| a08_2700_3600 | B | 2 | 0.0603903 | 0.0311928 | 1.04969 | PASS |
+| a08_2700_3600 | B | 3 | 0.0618734 | 0.0312169 | 1.05156 | PASS |
+| a08_2700_3600 | L-original | 1 | 0.637719 | 0.0648407 | 2.58407 | PASS |
+| a08_2700_3600 | L-original | 2 | 0.528371 | 0.0562664 | 2.02981 | PASS |
+| a08_2700_3600 | L-original | 3 | 0.547467 | 0.0576056 | 2.10835 | PASS |
+| a08_2700_3600 | L-neutral | 1 | 0.533472 | 0.0566703 | 2.05042 | PASS |
+| a08_2700_3600 | L-neutral | 2 | 0.535614 | 0.0568339 | 2.05918 | PASS |
+| a08_2700_3600 | L-neutral | 3 | 0.459044 | 0.0511549 | 1.78678 | PASS |
 
 逐次表采用三臂九轨迹共同支撑；两项主比较采用各自六轨迹共同支撑，精确min/max/极差与有效性见[comparison.csv](comparison.csv)。原始未对齐位移、初始化/接收/残差计数、覆盖与运行时间见[results.csv](results.csv)，全部运行receipts见[receipts/runs.json](receipts/runs.json)。
+
+Confirmed fact：本轮去掉来源专用映射没有产生实用改善；不能据此证明q在所有情形都无作用。原q已从同一raw_quality/age/FB/NCC逐float32复现，候选实际残差消费在全部12个L臂运行中非零。
 
 这是两个已知结果development窗上的实现混杂消融。三次技术重复不是独立科学样本；COLMAP/proxy非独立GT。q改变常规优化及边缘化，不能归因于初始SfM/视觉IMU对齐的直接q作用。没有C-all配对臂，不能宣称学习来源优于传统来源。旧A/A失败与旧72结果保持原样。
 

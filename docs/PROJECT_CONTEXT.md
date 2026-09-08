@@ -307,3 +307,6 @@ PARTIAL_MECHANISM：六窗/原72日志和1,341,840观测只读审计完成。A02
 新增6次B A/A工程验证全部不满足严格门，0次正式diagnostic；A08本次冻结版B严重发散，原72结果保持原样。这削弱了将三次技术重复范围理解为所有重放稳定边界的可能，不能单归因日志补丁。内部scale/gravity/条件谱仍无有效补充。
 
 主方法/proposed_safe与contribution_sparse不变，无新router、权重或窗口。唯一下一步转为冻结B回放确定性与日志侵入性审计，再恢复初始化机制诊断；没有自动执行该下一步。入口docs/CODEX_HANDOFF_OBSERVATION_UTILITY.md；报告papers/frontend_observation_utility_audit_v1/report.md。
+
+
+2026-09-08 — SOURCE-NEUTRAL-v1：按“结果优先、审计有上限、一个任务一个可检验问题”完成A02/A08三臂三重复共18次。只有候选quality/sigma改变；通用映射相对原L-all在A02几乎不变、A08 APE下降2.56%但未过实用/重复范围门，相对KLT零实用净收益。DECISION=SOURCE_MAPPING_NOT_MAIN_EXPLANATION。A08 B存在.060390–.560903m APE波动，保留全部重复并停止该窗精度优劣解读；工程门通过不等于确定性。主方法不改，终止本轮权重排查，不扩窗或扫描常数。入口docs/CODEX_HANDOFF_FAST_LEARNED_TEST.md。
