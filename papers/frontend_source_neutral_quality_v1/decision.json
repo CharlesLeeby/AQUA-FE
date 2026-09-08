@@ -1,0 +1,12 @@
+{
+  "decision": "NOT_EVALUATED",
+  "formal_replays_completed": 0,
+  "formal_replays_planned": 18,
+  "baseline_usable": false,
+  "severe_anomalies": [],
+  "new_window_replays": 0,
+  "extension_started": false,
+  "source_commits": [],
+  "internal_cause": "Unknown",
+  "next_step": "按冻结顺序完成本轮18次正式回放。"
+}

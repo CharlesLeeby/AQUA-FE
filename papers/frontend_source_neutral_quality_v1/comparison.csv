@@ -1,0 +1,5 @@
+run_slug,comparison,status,common_support_artifact
+a02_0_900,L-neutral_vs_L-original,Not evaluated.,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/evaluation/a02_0_900/L-neutral_vs_L-original
+a02_0_900,L-neutral_vs_B,Not evaluated.,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/evaluation/a02_0_900/L-neutral_vs_B
+a08_2700_3600,L-neutral_vs_L-original,Not evaluated.,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/evaluation/a08_2700_3600/L-neutral_vs_L-original
+a08_2700_3600,L-neutral_vs_B,Not evaluated.,/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/evaluation/a08_2700_3600/L-neutral_vs_B

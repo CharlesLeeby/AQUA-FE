@@ -774,3 +774,16 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Evidence / Current conclusion / Interpretation：PARTIAL_MECHANISM，解释类别E；在线判别仍为F边界。没有达到开发risk-aware admission的五项最低证据，不训练、不调阈值、不推广为主方法。
 - Known issues / Open questions：内部初始化状态因A/A失败无有效补齐；q影响终局尚未独立控制；真实水下标签、逐点causal utility、独立GT/未知窗泛化Not evaluated.。
 - Next steps / Next experiment / Follow-up：唯一下一步为冻结B回放确定性与日志侵入性审计，先查清本次A08冻结版异常再恢复初始化内部诊断；暂不开发router，本轮不执行下一项。
+
+
+## 2026-09-08 — SOURCE-NEUTRAL-v1 / 协议冻结
+- Objective / Research question：只检验XFeat来源专用可靠度映射是否部分造成添加方案退化；结果优先、审计有上限。
+- Motivation / Hypothesis / baseline：同一B与L-all仅换通用q，检验实现混杂；可能降低有偏约束影响，也可能无效或更差。初始SfM不直接读q，内部原因Unknown。
+- Files / Implementation / decisions：独立转换、原runner薄封装、报告与两项一致性测试；papers/frontend_source_neutral_quality_v1五主文件、必要plan/receipts及FAST_LEARNED_TEST交接。原q逐float32复现，新bag仅候选quality/sigma改变，真实来源/KLT全部字段保留。
+- Experiment ID / date / status / role：SOURCE-NEUTRAL-v1，2026-09-08，PROTOCOL_FROZEN；已知结果development，exp/source-neutral-quality-v1-20260908，源基于90646d6，执行源码为本冻结提交。
+- Environment / dataset / configuration：A02[0,900)、A08[2700,3600)，原manifest及additive冻结二进制/动态库；端口12691，CPU2,3,8,9，线程1，18次正式replay含6次B。顺序/阈值见protocol.md和run_plan.json。
+- Experiments / commands / quantitative results：转换脚本--window逐窗完成，2项测试PASS；A02/A08候选116129/130866个，q中位.920000017→.863251090/.869057059。轨迹精度Not evaluated.，新正式回放0。
+- Artifacts / validity：runtime /media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1；转换receipts、源原始质量和磁盘读回一致。共同支撑尚Not evaluated.。
+- Failed attempts / known issues / potential failures：本阶段无失败实验；基线可能重现数量级异常，单次直接工程检查后无原因则停止，不放宽旧A/A或选择重跑。
+- Interpretation / evidence / conclusion：Confirmed fact为输入单变量干预成立；效果为Unknown，不宣称创新或成功。原实验/外部后端不修改。
+- Next steps / next experiment / follow-up：原二进制完成18次小矩阵；仅真实净收益才进入预先冻结的新六窗，其他决策立即停止权重扩展。
