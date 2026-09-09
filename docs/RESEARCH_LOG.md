@@ -788,3 +788,17 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Hypothesis / Inference.: the next useful attribution step is fixed-input/backend identity and replay stability, before a new observation-admission policy; solver timing/load/build explanations remain unconfirmed.
 - Open questions: exact A08 numerical fork, candidate-specific causal usefulness, and a benefit-preserving repair. Natural dataset positive rate and learned superiority remain Not evaluated.
 - Next experiment: none launched. First read existing A08 B receipts/input-clock/solver records; any further finite engineering comparison needs its own freeze and must not replace old outcomes or reactivate stopped matrices.
+
+
+## 2026-09-10 — Fixed input is not fixed realized optimizer work
+
+- Research question: did the A08 anomalous baseline receive different observations, or where does its replay first visibly diverge?
+- Hypothesis/motivation: wall-clock solver limits may alter realized optimization work; a baseline instability must be separated from frontend interventions before further attribution.
+- Related baseline/proposed idea: all7same-binary existing B records from the three predefined experiments, plus1separate diagnostic-binary reference. Read existing receipts and solver traces only, not a new algorithm.
+- Why useful/assumptions: identical recorded visual delivery and full output timestamp vectors allow same-event comparisons. Rounded saved poses and logged residual topology do not specify full numeric optimizer state.
+- Confirmed facts: file/lock identities pass; all8visual receipt sequences match. In anomalous frozen B versus first additive B, first6saved poses agree; output7 has7versus6iteration entries and firstsavedpositiondifference, with identical40msbudget and loggedtopology. Firsttopologydifference201 and budgetbranch206 are later.
+- Additional evidence: other same-binary repeats first differ at outputs1/3/5/21; all21pairs exceed strict equality. Source uses both maxiterations8 and wall-clock32/40ms. CeresNO_CONVERGENCE does not distinguish which bound without message/step records.
+- Potential failures/limits: actual historical loaded-library maps, IMU consumption and CPU load not available perA08run; sub-print differences and unloggedSfMstate can precede visible fork. Later huge drift cannot be attributed to one skipped update by chronology alone.
+- Current conclusion: solver-work variation localized; time-budget mediation isHypothesis / Inference., not confirmed isolated cause. This does not overturn A02 deletion sufficiency or excuse source-specific regressions.
+- Open questions: exact stoppingcause/pre-solve difference, whether controlled original-budget repeats are stable, and whether useful candidate contribution survives reliable evaluation.
+- Next experiment: suggest separately frozen3same-input/backend/YAML engineering repeats with original budgets and per-run environment/load evidence. Not started; no policy tuning/old27matrix/reactivating stopped extension.

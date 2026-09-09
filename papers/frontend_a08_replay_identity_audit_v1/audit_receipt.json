@@ -1,0 +1,428 @@
+{
+  "diagnostic_reference": {
+    "pair": {
+      "anchor": "additive_r1",
+      "other": "utility_diagnostic_r1",
+      "same_frozen_binary": false,
+      "exact_pose_timestamps": true,
+      "received_records_equal": true,
+      "poses": 440,
+      "max_direct_position_delta_m": 0.0006506919393999494,
+      "max_direct_orientation_delta_rad": 0.007360685946402679,
+      "first_position_difference_pose_1based": 22,
+      "first_old_AA_tolerance_exceedance_pose_1based": 22,
+      "first_iteration_count_difference_pose_1based": 9,
+      "first_topology_difference_pose_1based": "",
+      "first_solver_budget_difference_pose_1based": "",
+      "old_AA_tolerance_pass": false,
+      "first_iteration_header_ns": "1542885097974655744",
+      "anchor_entries": 8,
+      "other_entries": 9,
+      "anchor_duration_s": 0.032099367,
+      "other_duration_s": 0.028923079,
+      "anchor_budget_s": 0.032,
+      "other_budget_s": 0.032,
+      "anchor_termination": 1,
+      "other_termination": 1,
+      "prefix_topology_equal": true,
+      "anchor_trace_line": 13229,
+      "other_trace_line": 13229
+    },
+    "events": [
+      {
+        "anchor": "additive_r1",
+        "other": "utility_diagnostic_r1",
+        "pose_1based": 9,
+        "header_ns": "1542885097974655744",
+        "sensor_seconds_after_first": 0.80172288,
+        "position_delta_m": 0.0,
+        "orientation_delta_rad": 0.0,
+        "anchor_solver": {
+          "timestamp": "1542885097.974655867",
+          "header_ns": "1542885097974655744",
+          "duration_s": 0.032099367,
+          "budget_s": 0.032,
+          "entries": 8,
+          "termination": 1,
+          "trace_line": 13229
+        },
+        "other_solver": {
+          "timestamp": "1542885097.974655867",
+          "header_ns": "1542885097974655744",
+          "duration_s": 0.028923079,
+          "budget_s": 0.032,
+          "entries": 9,
+          "termination": 1,
+          "trace_line": 13229
+        },
+        "topology_equal": true
+      },
+      {
+        "anchor": "additive_r1",
+        "other": "utility_diagnostic_r1",
+        "pose_1based": 22,
+        "header_ns": "1542885099272534016",
+        "sensor_seconds_after_first": 2.099601152,
+        "position_delta_m": 0.0006246599074696571,
+        "orientation_delta_rad": 0.007360685946402679,
+        "anchor_solver": {
+          "timestamp": "1542885099.272533894",
+          "header_ns": "1542885099272534016",
+          "duration_s": 0.04052094,
+          "budget_s": 0.04,
+          "entries": 5,
+          "termination": 1,
+          "trace_line": 27926
+        },
+        "other_solver": {
+          "timestamp": "1542885099.272533894",
+          "header_ns": "1542885099272534016",
+          "duration_s": 0.040784035,
+          "budget_s": 0.04,
+          "entries": 6,
+          "termination": 1,
+          "trace_line": 27926
+        },
+        "topology_equal": true
+      }
+    ]
+  },
+  "lock_drift": [],
+  "provenance": [
+    {
+      "run_id": "additive_r1",
+      "events": [
+        {
+          "line": 25,
+          "text": "[ WARN] [1788797054.569666235, 1542885097.288074934]: gyroscope bias initial calibration -0.000552984   0.00909836   -0.0607808"
+        },
+        {
+          "line": 26,
+          "text": "[ INFO] [1788797054.454844988, 1542885097.167421647]: IMU excitation not enouth!"
+        },
+        {
+          "line": 27,
+          "text": "[ INFO] [1788797054.611547128, 1542885097.328302779]: Initialization finish!"
+        }
+      ],
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12671"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/backend/a08_2700_3600/B/repeat1/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "source_lock_bytes_sha256": "856a531c0c04651b01cbb8f96937894ed3094bd22d4ee5f3cbdd390a728ed8e6",
+      "note": "receipt.started_at is emitted after completion in frozen runner, not start time"
+    },
+    {
+      "run_id": "additive_r2",
+      "events": [
+        {
+          "line": 25,
+          "text": "[ WARN] [1788797120.497526226, 1542885097.289796916]: gyroscope bias initial calibration -0.000552984   0.00909836   -0.0607808"
+        },
+        {
+          "line": 26,
+          "text": "[ INFO] [1788797120.380828744, 1542885097.169103096]: IMU excitation not enouth!"
+        },
+        {
+          "line": 27,
+          "text": "[ INFO] [1788797120.540785621, 1542885097.330024799]: Initialization finish!"
+        }
+      ],
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12671"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/backend/a08_2700_3600/B/repeat2/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "source_lock_bytes_sha256": "856a531c0c04651b01cbb8f96937894ed3094bd22d4ee5f3cbdd390a728ed8e6",
+      "note": "receipt.started_at is emitted after completion in frozen runner, not start time"
+    },
+    {
+      "run_id": "additive_r3",
+      "events": [
+        {
+          "line": 25,
+          "text": "[ WARN] [1788797186.455020183, 1542885097.287953963]: gyroscope bias initial calibration -0.000552984   0.00909836   -0.0607808"
+        },
+        {
+          "line": 26,
+          "text": "[ INFO] [1788797186.341413339, 1542885097.167255354]: IMU excitation not enouth!"
+        },
+        {
+          "line": 27,
+          "text": "[ INFO] [1788797186.496479998, 1542885097.328184551]: Initialization finish!"
+        }
+      ],
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12671"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_additive_budget_v1/backend/a08_2700_3600/B/repeat3/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "source_lock_bytes_sha256": "856a531c0c04651b01cbb8f96937894ed3094bd22d4ee5f3cbdd390a728ed8e6",
+      "note": "receipt.started_at is emitted after completion in frozen runner, not start time"
+    },
+    {
+      "run_id": "utility_frozen_r1",
+      "events": [
+        {
+          "line": 25,
+          "text": "[ WARN] [1788805036.421109980, 1542885097.288297558]: gyroscope bias initial calibration -0.000552984   0.00909836   -0.0607808"
+        },
+        {
+          "line": 26,
+          "text": "[ INFO] [1788805036.301848118, 1542885097.167565402]: IMU excitation not enouth!"
+        },
+        {
+          "line": 27,
+          "text": "[ INFO] [1788805036.468675762, 1542885097.338614821]: Initialization finish!"
+        }
+      ],
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12681"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/frozen/backend/a08_2700_3600/B/repeat1/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "source_lock_bytes_sha256": "521476ce246c6f21651d78b8d64c4603cebcee7864ad7ab48900fb9178f5d103",
+      "note": "receipt.started_at is emitted after completion in frozen runner, not start time"
+    },
+    {
+      "run_id": "utility_diagnostic_r1",
+      "events": [
+        {
+          "line": 25,
+          "text": "[ WARN] [1788805102.263457001, 1542885097.288202847]: gyroscope bias initial calibration -0.000552984   0.00909836   -0.0607808"
+        },
+        {
+          "line": 26,
+          "text": "[ INFO] [1788805102.147731926, 1542885097.167422128]: IMU excitation not enouth!"
+        },
+        {
+          "line": 27,
+          "text": "[ INFO] [1788805102.309023603, 1542885097.328434109]: Initialization finish!"
+        }
+      ],
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12681"
+        ],
+        [
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/diagnostic_build_v2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_observation_utility_audit_v1/aa/diagnostic/backend/a08_2700_3600/B/repeat1/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "source_lock_bytes_sha256": "5e2ac36a8b86a8db01ec8568a8ed80cdc9935dee47364d4ae551f3b18761dab0",
+      "note": "receipt.started_at is emitted after completion in frozen runner, not start time"
+    },
+    {
+      "run_id": "quality_r1",
+      "events": [
+        {
+          "line": 25,
+          "text": "[ WARN] [1788857068.030698193, 1542885097.288120328]: gyroscope bias initial calibration -0.000552984   0.00909836   -0.0607808"
+        },
+        {
+          "line": 26,
+          "text": "[ INFO] [1788857067.916648935, 1542885097.167425941]: IMU excitation not enouth!"
+        },
+        {
+          "line": 27,
+          "text": "[ INFO] [1788857068.080976512, 1542885097.338445389]: Initialization finish!"
+        }
+      ],
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat1/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "source_lock_bytes_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "note": "receipt.started_at is emitted after completion in frozen runner, not start time"
+    },
+    {
+      "run_id": "quality_r2",
+      "events": [
+        {
+          "line": 25,
+          "text": "[ WARN] [1788857135.134214610, 1542885097.278239775]: gyroscope bias initial calibration -0.000552984   0.00909836   -0.0607808"
+        },
+        {
+          "line": 26,
+          "text": "[ INFO] [1788857135.024012647, 1542885097.167574022]: IMU excitation not enouth!"
+        },
+        {
+          "line": 27,
+          "text": "[ INFO] [1788857135.175633521, 1542885097.318494452]: Initialization finish!"
+        }
+      ],
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat2/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "source_lock_bytes_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "note": "receipt.started_at is emitted after completion in frozen runner, not start time"
+    },
+    {
+      "run_id": "quality_r3",
+      "events": [
+        {
+          "line": 25,
+          "text": "[ WARN] [1788857202.276603249, 1542885097.288667855]: gyroscope bias initial calibration -0.000552984   0.00909836   -0.0607808"
+        },
+        {
+          "line": 26,
+          "text": "[ INFO] [1788857202.162272677, 1542885097.167935857]: IMU excitation not enouth!"
+        },
+        {
+          "line": 27,
+          "text": "[ INFO] [1788857202.318674511, 1542885097.328910815]: Initialization finish!"
+        }
+      ],
+      "commands": [
+        [
+          "roscore",
+          "-p",
+          "12691"
+        ],
+        [
+          "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_source_neutral_quality_v1/backend/a08_2700_3600/B/repeat3/vins.yaml"
+        ],
+        [
+          "/opt/ros/noetic/lib/rosbag/play",
+          "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+          "--clock",
+          "--rate",
+          "1.0",
+          "--delay",
+          "3",
+          "--quiet"
+        ]
+      ],
+      "source_lock_bytes_sha256": "2129de2cc1b6388623566c098edaff79079d565206047b8f09f6441cde5443f2",
+      "note": "receipt.started_at is emitted after completion in frozen runner, not start time"
+    }
+  ],
+  "source_identity": {
+    "backend_config_source": "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_admission_continuation_v1/backend_config_snapshots/a08_2700_3600/vins_same_backend.yaml",
+    "backend_config_source_sha256": "783f5c621c79c1c02da2c9719d5a3c3fbb4900e42ae59437af627d4b05ca675d",
+    "baseline_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+    "baseline_sha256": "17305db38262a2ed4c7fa05b6269c9ea50592de07387517dfec798cf086ceae9",
+    "camera": "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_admission_continuation_v1/backend_config_snapshots/a08_2700_3600/aqualoc_archaeo08_pinhole.yaml",
+    "camera_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5"
+  },
+  "audit_script_sha256": "476ce8c5bc446e4394427d396f7adbd77ca614df117975d55a1c7fef7218875c",
+  "scope_sha256": "0c4ff720e337d51491b3929d419c34b1b9c7dba420adcdc49c8207c43585eb3e",
+  "derived_sha256": {
+    "identity.csv": "d00be451aed91d97d33eac2084287382e818a8ecb4cd51b81386121be505f2e4",
+    "pairwise_direct_differences.csv": "146b11e8e651d4a0386d511c8f6e23510760f21a013db0eaa89aa3f0316a5c73",
+    "first_fork_events.json": "e22949d6c1d77e24d9ae2b1fa60e7703e9618da8294c43a26e5f04a4a7a9a9b9"
+  }
+}

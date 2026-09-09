@@ -704,3 +704,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Validity/common support: no new common-support comparison. All original gates/failures remain; no cross-contract metric pooling or new positive-rate estimate. Raw bags/full environment were not reaudited.
 - Interpretation/conclusion: no supported simple remedy ready for main-method promotion/extension; explicit fallback blocks identified deletion but retains zero learned contribution.
 - Follow-up: retain frozen stops; proposed bounded fixed-B A08 replay identity/stability audit, not started this turn. Not evaluated.
+
+
+## AUDIT-20260910-A08-EXISTING-REPLAYS
+
+- Date/status/role: 2026-09-10T01:12:23+08:00; COMPLETE_READ_ONLY, retrospective engineering diagnosis, not an independent-window experiment.
+- Source identity: main@f6f8feec66c2faf1f59cdb67c1e817028a3bccaf plus exact audit script/scope SHA in audit_receipt; report publication on codex/aqua-fe-evidence-20260905. Original evidence refs49c0247/90646d6/6ddca8e, not rewritten.
+- Dataset: AQUALOC A08[2700,3600); additive B r1–3, utility frozen/diagnostic B r1, quality B r1–3. All8 retained, diagnostic binary singled out;7same-binary records generate21dependent engineering pairs.
+- Environment/configuration: original bag17305db3..., nodee231871e..., lib86c1f977..., fixed math YAML and camera; original32/40ms,8iterations,rate1,drain8. Different original ROS ports recorded. Actual historical full environment/IMU deliveryUnknown.
+- Baseline/modification: anchor fixed to first additive B r1; no input/backend/method change, no newreplay, no newAPE/RPE/scale fit/evo.
+- Command/artifacts: python3 -B scripts/audit_a08_existing_replays.py; unittest test_a08_replay_audit.py; papers/frontend_a08_replay_identity_audit_v1/ including identity.csv,21pair table, first_fork_events.json, receipt/decision.
+- Results:5/5tests;97artifact and1471lock-entry checks pass. All8receive450frames/157500features and emit440same-header poses. All21pairs exceed original1e-5m/rad strict A/A equality; not21runability failures. Utility-frozen initial saved6poses agree, firstposition/iteration fork7,loggedtopology201,budgetbranch206. Maxdirectdelta283237.349446m is notAPE.
+- Validity: whole timestamp vector exact; 3520solver/VIO serialized headers verified. Original common support/APE decisions unchanged. Observation tuples/blocks agree at firstfork; numeric residual/Jacobian identity remainsUnknown.
+- Failed attempt: relative lock-path resolution falsealarm, corrected with owner-root and test; provisional artifacts retained, pair/event tables unchanged.
+- Interpretation/conclusion: actual optimization work varies despite fixed inputs/settings. Time-budget/host-load mediation not independently demonstrated; no repair/superiority claim.
+- Follow-up: propose only3bounded original-budget engineering repeats with runtime identity/load receipts;0started. Original stopped27diagnostic matrix and frontend NO_EXPANSION remain.

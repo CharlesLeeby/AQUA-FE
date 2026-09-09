@@ -332,3 +332,19 @@ Only suggested successor: bounded replay-identity/stability attribution from
 existing A08 records before any new policy. No stopped matrix is reactivated.
 See papers/frontend_cross_route_evidence_review_20260910/report.md and the
 updated docs/CODEX_HANDOFF.md for pinned public evidence and limits.
+
+
+## 2026-09-10 latest — A08 earliest visible replay fork localized
+
+Read-only audit of8existing A08B records completed (7same diagnostic backend,
+1different logging binary);0newreplays/algorithms/windows.97receipt artifacts and
+1471lock entries pass after correcting this analyzer's relative-lock-path handling.
+All8record157500visual observations in450frames and440identical pose-header times.
+The anomalous frozenB and additiveB-r1 first differ at output7:7versus6Ceres
+iteration entries under the same40msbudget; recordedtopology differs at201,
+budgetbranch at206. This establishes variable optimizer work, not the isolated
+cause of final divergence. Full numerical state/actualhistoricalIMU/load remain
+Unknown; original A02deletion evidence and NO_EXPANSION remain unchanged.
+Only suggested nextstep:3bounded original-budget A08engineering repeats with
+per-run runtime identity/load receipts;notstarted. Do not restart the old27matrix.
+Report: papers/frontend_a08_replay_identity_audit_v1/report.md.

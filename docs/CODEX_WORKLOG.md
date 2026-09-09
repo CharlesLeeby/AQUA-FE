@@ -829,3 +829,19 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: A08 frozen-B numerical anomaly and exact repeat sensitivity remain Unknown; source audit does not revalidate all raw artifacts. No gain-preserving repair or new-window extension.
 - Interpretation: current guard remains fallback-only. Avoid repeating already tested simple remedies; no pooled win rate or learned-superiority claim.
 - Next steps: publish this bounded index; retain all frozen stops. The sole proposed research follow-up is an A08 fixed-B identity/stability audit starting with existing records, not another admission variant.
+
+
+## 2026-09-10 — Read-only A08 fixed-input replay identity and first-fork diagnosis
+
+- Date: 2026-09-10T01:12:23+08:00.
+- Objective/problem: user agreed to investigate A08 frozen-KLT replay instability before another frontend policy; prior A/A could not isolate logging effects.
+- Files changed: scripts/audit_a08_existing_replays.py; tests/test_a08_replay_audit.py; papers/frontend_a08_replay_identity_audit_v1/ scope, compact evidence, decision and hashes; handoff and required logs/context.
+- Implementation: fixed roster of8existing A08 B records in additive/utility/quality; verify receipts and locks, compare all21same-binary pairs, match all solver/VIO timestamp vectors and locate first iteration/position/topology/budget differences. No new replay or estimator changes.
+- Technical decisions:7same diagnostic-capacity1000 backend records plus1different logging backend kept separate. Direct pose differences are engineering quantities, not APE/RPE. Relative lock paths resolve against original execution owner; numeric headers retain original double serialization identity.
+- Experiments performed: retrospective engineering analysis only;5unit tests;0newfrontend/VIOruns/methodvariants/windows.
+- Quantitative results:8/8records verified,97receipt artifacts,1471lock entries with0finaldrift; all8have450feature frames/157500observations and440poses with same time vector. All21same-binary pairs exceed old strict A/A tolerance. Anomalous utility-frozen first differs from anchor at output7 (0.599826176s):7vs6iteration entries, same40msbudget,46.989671vs41.455725ms. Topology differs only at201, budget branch at206.
+- Observations: baseline source/bag/node/library/math YAML/camera and received visual-record identity do not imply identical optimizer work. Raw max position norm283235.520m is not proxy APE. Sub-print-resolution internal state and actual historical IMU delivery/environment remainUnknown.
+- Failed attempts: first analyzer resolved a relative utility-script lock against main cwd, producing2false MISSING rows. Original-owner/current Git source hashes matched; fixed this analyzer, added regression test, retained first4derived files under attempts/relative_lock_path_probe. Numeric pair/event outputs are byte-identical before/after. No historical artifact changed.
+- Known issues: exact Ceres termination message, pre-solve numeric state and host-load causality unavailable. Full historical loaded maps not captured for these A08 runs. No gain-preserving algorithm repair.
+- Interpretation: solver work variation confirmed; time-budget mediation of eventual divergence is stillHypothesis / Inference. Do not excuse all frontend losses as environment noise or invalidate A02 deletion sufficiency.
+- Next steps: publish completed read-only stage; sole suggested successor is separately frozen3same-input/backend/YAML engineering repeats under original budgets with per-run environment receipts. Not started; no reopening old27matrix or frontend search.
