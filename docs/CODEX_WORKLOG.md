@@ -1238,3 +1238,14 @@ Validation addendum: final staged bytes/provenance, lifecycle joint keys/counts,
 - Failed attempts: no formal execution failure, no replay or parameter retries. Frozen practical increment and natural-chain gates fail.
 - Known issues / interpretation: synthetic correctness does not establish natural accuracy; shared-hardware timings are descriptive. NO_LEARNED_INCREMENT with secondary REAL_RECOVERY_NOT_ESTABLISHED. No backend benefit or safety claim.
 - Next steps: archive this version and stop; no candidate handoff for external validation.
+
+
+## 2026-09-10 — SEA-RAFT screening intake: not started, missing prior protocol
+- Objective / motivation: execute newly authorized independent direct-flow capability screening, distinct from archived XFeat recovery.
+- Files changed: papers/frontend_searaft_screening_v1/{status.json,report.md,controlled_pair_source.json}; docs/CODEX_HANDOFF_SEARAFT_SCREENING.md and appended work/research/context logs.
+- Implementation / technical decisions: created isolated worktree/branch; fetched official pristine SEA-RAFT source9137517; retained only48-pair input/query definitions. No chosen model, weights, gates, or replacement old protocol.
+- Experiments / quantitative results: weights_loaded=false; real inferred pairs0/48; coordinate validation, controlled/natural results Not evaluated.; VINS0. No experiment or model inference ran.
+- Qualitative observations: no existing local SEA-RAFT process/artifact or remote screening branch found. Existing foreign VINS untouched.
+- Failed attempts: initial SSH read-only branch lookup stalled; HTTPS lookup completed with no matching branch; only that owned stalled lookup was terminated.
+- Known issues / interpretation: preceding full SEA-RAFT prompt unavailable in visible conversation/attachments/relevant records, so its required config/checkpoint/settings/gates remain Unknown. NOT_STARTED with concrete BLOCKED_MISSING_PRIOR_PROTOCOL, not a negative capability finding.
+- Next steps: user supplies missing original contract; verify actual weight loading and coordinate mapping, then run48fixed pairs. No old rerun/analysis.

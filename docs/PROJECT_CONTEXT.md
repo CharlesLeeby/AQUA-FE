@@ -339,3 +339,7 @@ Classical expansion在9c1c8c2封口，旧两个决策与完整分母不变。本
 
 ## 2026-09-09 — Independently authorized learned same-frame recovery closed
 The user superseded the prior intake-only scope with one original-point recovery implementation and fixed frontend comparison. Freeze915716d on exp/learned-klt-recovery-v1-20260909 completed48 controlled pairs and A02/A08/H02×200raw development frames. Confirmed fact: L835 vs C2488 correct synthetic recoveries; no natural L-only event, only3 actual L recovery events reaching4 public observations. Decision NO_LEARNED_INCREMENT with secondary REAL_RECOVERY_NOT_ESTABLISHED. Backend0new/0reused, APE/RPE Not evaluated.; natural identity Unknown. Version stopped without tuning/expansion and no PROMISING handoff. See docs/CODEX_HANDOFF_LEARNED_RECOVERY.md. Existing method/profile, source-neutral q, additive/continuation and classical freeze conclusions remain unchanged.
+
+
+## 2026-09-10 — Current task moved to independent SEA-RAFT measurement screening
+User explicitly authorized SEA-RAFT MEASUREMENT CAPABILITY SCREENING, papers/frontend_searaft_screening_v1. Current status NOT_STARTED: official source acquired but no specified checkpoint loaded,0/48pairs inferred; missing preceding full model/settings/gate contract is the concrete dependency. Isolated branch exp/searaft-screening-v1-20260910, handoff docs/CODEX_HANDOFF_SEARAFT_SCREENING.md. This is separate authorization and is not prohibited by old recovery stop rules. Old recovery remains archived; no new measurement or backend conclusion exists.

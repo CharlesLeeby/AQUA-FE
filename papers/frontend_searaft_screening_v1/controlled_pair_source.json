@@ -1,0 +1,141 @@
+{
+  "windows": [
+    {
+      "sequence": "A02",
+      "development_role": "outcome-known development; not held-out",
+      "raw_start": 0,
+      "raw_end_exclusive": 200,
+      "bag_image_offset": 0,
+      "raw_count": 200,
+      "first_stamp_ns": 1542828791736012032,
+      "last_stamp_ns": 1542828801684024384,
+      "image_shape": [
+        608,
+        968
+      ],
+      "input_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_same_backend_confirmatory_v3/prepared/a02_0_900/input.bag",
+      "image_topic": "/camera/image_raw",
+      "camera": "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_admission_continuation_v1/backend_config_snapshots/a02_0_900/aqualoc_archaeo02_pinhole.yaml",
+      "backend_config_source": "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_admission_continuation_v1/backend_config_snapshots/a02_0_900/vins_same_backend.yaml",
+      "parent_run_slug": "a02_0_900",
+      "manifest_source": "papers/frontend_additive_budget_v1/source_and_backend_lock.json"
+    },
+    {
+      "sequence": "A08",
+      "development_role": "outcome-known development; not held-out",
+      "raw_start": 2700,
+      "raw_end_exclusive": 2900,
+      "bag_image_offset": 0,
+      "raw_count": 200,
+      "first_stamp_ns": 1542885096123085488,
+      "last_stamp_ns": 1542885106071532624,
+      "image_shape": [
+        608,
+        968
+      ],
+      "input_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_same_backend_confirmatory_v3/prepared/a08_2700_3600/input.bag",
+      "image_topic": "/camera/image_raw",
+      "camera": "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_admission_continuation_v1/backend_config_snapshots/a08_2700_3600/aqualoc_archaeo08_pinhole.yaml",
+      "backend_config_source": "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_admission_continuation_v1/backend_config_snapshots/a08_2700_3600/vins_same_backend.yaml",
+      "parent_run_slug": "a08_2700_3600",
+      "manifest_source": "papers/frontend_additive_budget_v1/source_and_backend_lock.json"
+    },
+    {
+      "sequence": "H02",
+      "development_role": "outcome-known development; not held-out",
+      "raw_start": 0,
+      "raw_end_exclusive": 200,
+      "bag_image_offset": 0,
+      "raw_count": 200,
+      "first_stamp_ns": 1523958586902587138,
+      "last_stamp_ns": 1523958596855225535,
+      "image_shape": [
+        512,
+        640
+      ],
+      "input_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/prepared/coe1_h02_00000_00900/input.bag",
+      "image_topic": "/camera/image_raw",
+      "camera": "/home/ma/AQUA-FE_WS_classical_opportunity_expansion_v1/papers/frontend_admission_continuation_v1/backend_config_snapshots/h07_0_1000/aqualoc_harbor07_kannala.yaml",
+      "backend_config_source": "/home/ma/AQUA-FE_WS_classical_opportunity_expansion_v1/papers/frontend_admission_continuation_v1/backend_config_snapshots/h07_0_1000/vins_same_backend.yaml",
+      "parent_run_slug": "coe1_h02_00000_00900",
+      "manifest_source": "papers/frontend_classical_opportunity_expansion_v1/source_and_backend_lock.json"
+    }
+  ],
+  "seed": 20260909,
+  "controlled_base_offsets": [
+    0,
+    50,
+    100,
+    150
+  ],
+  "controlled_cases": [
+    {
+      "name": "small",
+      "dx": 3,
+      "dy": -2,
+      "angle": 0.5,
+      "scale": 1.0,
+      "illumination": false,
+      "occlusion": false
+    },
+    {
+      "name": "large",
+      "dx": 80,
+      "dy": -48,
+      "angle": 4.0,
+      "scale": 1.02,
+      "illumination": false,
+      "occlusion": false
+    },
+    {
+      "name": "illumination_blur",
+      "dx": 24,
+      "dy": -16,
+      "angle": 2.0,
+      "scale": 1.0,
+      "illumination": true,
+      "occlusion": false
+    },
+    {
+      "name": "outside_occluded",
+      "dx": 64,
+      "dy": 24,
+      "angle": 2.0,
+      "scale": 1.0,
+      "illumination": false,
+      "occlusion": true
+    }
+  ],
+  "controlled_illumination": {
+    "gain_min": 0.65,
+    "gain_max": 1.25,
+    "bias_amplitude": 20,
+    "gaussian_sigma": 1.2
+  },
+  "occlusion_rectangle_fraction": [
+    0.35,
+    0.25,
+    0.65,
+    0.75
+  ],
+  "occlusion_patch_guard_px": 6,
+  "correct_pixel_tolerance": 2.0,
+  "klt": {
+    "max_features": 350,
+    "min_distance": 18,
+    "quality_level": 0.01,
+    "block_size": 7,
+    "lk_win_size": 21,
+    "lk_max_level": 3,
+    "fb_threshold": 1.0,
+    "min_ncc": 0.65,
+    "patch_radius": 5,
+    "border": 8,
+    "q_min": 0.05,
+    "compute_track_metadata": true,
+    "vectorized_ncc": false
+  },
+  "role": "Read-only source for the requested fixed 48 image pairs and initial KLT queries; not a SEA-RAFT method or acceptance protocol.",
+  "source_commit": "3bd6cc62a81edf2bb12e377a201499ebc8e62c11",
+  "source_file": "papers/frontend_learned_klt_recovery_v1/input_manifest.json"
+}
