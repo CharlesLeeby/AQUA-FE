@@ -1,0 +1,106 @@
+{
+  "files": {
+    "papers/frontend_a02_init_trace_repair_v1/repair_contract.md": "2d1b9d2cbf0112177f424f25d565a62a91b8ebd1cf1a908f1633f75f9f258da5",
+    "scripts/validate_classical_observation_guard.py": "5bf036b8e3265f304f8d09f7b5c7e3eeb13d1d21b90baf339adad23efe78e2e0",
+    "tests/test_classical_observation_guard.py": "84f22a5e0c98b68ff21b40403f78c42bb0e2d89cf2565fbda1c43bd9beb0f23b",
+    "uw_frontend/ros/classical_observation_guard.py": "b2f485da041c2b95c50505e5d22d6e143e56abe745ac364d486cf79de2cc2a28"
+  },
+  "roster": [
+    {
+      "arm": "continuation_xfeat",
+      "baseline": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a09_6000_6800_klt/features.bag",
+      "baseline_sha256": "6de8ffe9226c1c786bbd80b53049f2f4f1f58c2859808034b60b5dca171884ff",
+      "proposed": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_acv1_a09_6000_6800_continuation_xfeat/features.bag",
+      "proposed_sha256": "629db0467020a06635db8d2236150dc4fa921446c71326082f78be9df09a5845",
+      "window": "a09_6000_6800"
+    },
+    {
+      "arm": "continuation_splg",
+      "baseline": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a09_6000_6800_klt/features.bag",
+      "baseline_sha256": "6de8ffe9226c1c786bbd80b53049f2f4f1f58c2859808034b60b5dca171884ff",
+      "proposed": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_superpoint_lightglue_every2_acv1_a09_6000_6800_continuation_splg/features.bag",
+      "proposed_sha256": "6de8ffe9226c1c786bbd80b53049f2f4f1f58c2859808034b60b5dca171884ff",
+      "window": "a09_6000_6800"
+    },
+    {
+      "arm": "continuation_xfeat",
+      "baseline": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a02_0_900_klt/features.bag",
+      "baseline_sha256": "5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520",
+      "proposed": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_acv1_a02_0_900_continuation_xfeat/features.bag",
+      "proposed_sha256": "8973fddc448f8c56558884b4ce5bb625906f367a4a73f379b473770460fcaad0",
+      "window": "a02_0_900"
+    },
+    {
+      "arm": "continuation_splg",
+      "baseline": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a02_0_900_klt/features.bag",
+      "baseline_sha256": "5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520",
+      "proposed": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_superpoint_lightglue_every2_acv1_a02_0_900_continuation_splg/features.bag",
+      "proposed_sha256": "52766b961162d8179016dfdce508b1e758eabbc05aa45ef98ba648965ea38d3c",
+      "window": "a02_0_900"
+    },
+    {
+      "arm": "continuation_xfeat",
+      "baseline": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/afrl_cave_v31/external_klt_every2_acv1_afrl_bus_s180_d045_klt/features.bag",
+      "baseline_sha256": "9e4d546cb799f516d933944e9715d1551affe381ab2f0171876cebb95d01ae84",
+      "proposed": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/afrl_cave_v31/external_hybrid_xfeat_every2_acv1_afrl_bus_s180_d045_continuation_xfeat/features.bag",
+      "proposed_sha256": "34ec601a13843c7a39d53a95eb7bedc8db4086b1e6683921b2507cd7a5356442",
+      "window": "afrl_bus_s180_d045"
+    },
+    {
+      "arm": "continuation_splg",
+      "baseline": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/afrl_cave_v31/external_klt_every2_acv1_afrl_bus_s180_d045_klt/features.bag",
+      "baseline_sha256": "9e4d546cb799f516d933944e9715d1551affe381ab2f0171876cebb95d01ae84",
+      "proposed": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/afrl_cave_v31/external_hybrid_superpoint_lightglue_every2_acv1_afrl_bus_s180_d045_continuation_splg/features.bag",
+      "proposed_sha256": "9e4d546cb799f516d933944e9715d1551affe381ab2f0171876cebb95d01ae84",
+      "window": "afrl_bus_s180_d045"
+    },
+    {
+      "arm": "continuation_xfeat",
+      "baseline": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+      "baseline_sha256": "17305db38262a2ed4c7fa05b6269c9ea50592de07387517dfec798cf086ceae9",
+      "proposed": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_xfeat_every2_acv1_a08_2700_3600_continuation_xfeat/features.bag",
+      "proposed_sha256": "17305db38262a2ed4c7fa05b6269c9ea50592de07387517dfec798cf086ceae9",
+      "window": "a08_2700_3600"
+    },
+    {
+      "arm": "continuation_splg",
+      "baseline": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+      "baseline_sha256": "17305db38262a2ed4c7fa05b6269c9ea50592de07387517dfec798cf086ceae9",
+      "proposed": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_hybrid_superpoint_lightglue_every2_acv1_a08_2700_3600_continuation_splg/features.bag",
+      "proposed_sha256": "17305db38262a2ed4c7fa05b6269c9ea50592de07387517dfec798cf086ceae9",
+      "window": "a08_2700_3600"
+    },
+    {
+      "arm": "continuation_xfeat",
+      "baseline": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/afrl_cave_v31/external_klt_every2_acv1_afrl_cemetery_s135_d045_klt/features.bag",
+      "baseline_sha256": "c144ba971b2d7fc1b73980f9d1336d508f823db26f448f803df747536688169e",
+      "proposed": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/afrl_cave_v31/external_hybrid_xfeat_every2_acv1_afrl_cemetery_s135_d045_continuation_xfeat/features.bag",
+      "proposed_sha256": "c144ba971b2d7fc1b73980f9d1336d508f823db26f448f803df747536688169e",
+      "window": "afrl_cemetery_s135_d045"
+    },
+    {
+      "arm": "continuation_splg",
+      "baseline": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/afrl_cave_v31/external_klt_every2_acv1_afrl_cemetery_s135_d045_klt/features.bag",
+      "baseline_sha256": "c144ba971b2d7fc1b73980f9d1336d508f823db26f448f803df747536688169e",
+      "proposed": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/afrl_cave_v31/external_hybrid_superpoint_lightglue_every2_acv1_afrl_cemetery_s135_d045_continuation_splg/features.bag",
+      "proposed_sha256": "c144ba971b2d7fc1b73980f9d1336d508f823db26f448f803df747536688169e",
+      "window": "afrl_cemetery_s135_d045"
+    },
+    {
+      "arm": "continuation_xfeat",
+      "baseline": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_real_vins/external_klt_every2_acv1_h07_0_1000_klt/features.bag",
+      "baseline_sha256": "d2572daad26a0a626cf4f013c3dfafd872edaffc3bf41c302ff1406c07246358",
+      "proposed": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_real_vins/external_hybrid_xfeat_every2_acv1_h07_0_1000_continuation_xfeat/features.bag",
+      "proposed_sha256": "d2572daad26a0a626cf4f013c3dfafd872edaffc3bf41c302ff1406c07246358",
+      "window": "h07_0_1000"
+    },
+    {
+      "arm": "continuation_splg",
+      "baseline": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_real_vins/external_klt_every2_acv1_h07_0_1000_klt/features.bag",
+      "baseline_sha256": "d2572daad26a0a626cf4f013c3dfafd872edaffc3bf41c302ff1406c07246358",
+      "proposed": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_real_vins/external_hybrid_superpoint_lightglue_every2_acv1_h07_0_1000_continuation_splg/features.bag",
+      "proposed_sha256": "d2572daad26a0a626cf4f013c3dfafd872edaffc3bf41c302ff1406c07246358",
+      "window": "h07_0_1000"
+    }
+  ]
+}

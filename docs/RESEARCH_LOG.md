@@ -760,3 +760,16 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Hypothesis / Inference: changed visual structure plus stateful failed attempts can lead to the observed different scale agreement. Bias-update persistence is a possible pathway, not an independently demonstrated bug or a validated fix.
 - Open questions: exact gravity/scale rejection values, per-ID residual usage, three-only/single-donor sufficiency and rollback's separate effect remain Unknown. Post-hoc Sim3 scale is not an initializer measurement.
 - Next experiment: propose only a separately authorized numerical-logging diagnostic on unchanged original KLT/delete inputs. No new algorithm, window search or automatic relaxation of NO_EXPANSION.
+
+
+## 2026-09-09 — Scale-sign fork confirmed; safety repair does not preserve benefit
+
+- Research question: which numerical initialization check differs after donor deletion, and can the identified destructive operation be prevented without claiming unmeasured benefit?
+- Hypothesis/motivation: age-1 deletion can remove useful birth constraints; protecting only mature tracks is not backend no-harm. Baseline is exact fresh KLT, intervention the registered eight-observation deletion.
+- Proposed idea/why: observe original binary's already compiled scale/gravity diagnostics; then enforce full classical-observation identity at a separate output boundary, using current/past data only.
+- Assumptions/failure cases: logging may affect time-budgeted solver scheduling; independent SFM gauges make accepted internal scales non-comparable to final proxy-fitted scale. Additions in true vacancies may still hurt VIO. KLT fallback also retains KLT failures.
+- Evidence — Confirmed facts:6/6 traces complete; KLT rejects7 negative scales then accepts8, delete rejects3 then accepts4, gravity within original gate. Accepted refined0.033247/0.034290; first VIO headers equal old records. Same-grid newAPE0.140174/1.104454m preserves strong harmful direction despite wider KLT range.
+- Evidence — repair:9tests and12 complete input-stream checks pass. All guard outputs exactlyKLT,0learned; original four active arms blocked at frame2. Original A02 harm prevented by identity fallback, but original A09/Bus positive effects disappear too.
+- Current conclusion: full observation preservation repairs the tested destructive path, not the scientific objective of harmless learned enhancement. This repeats the existing safe-baseline tradeoff with an explicit enforced guard, not a new source of positive windows.
+- Unknown/open questions: per-ID actual residual use, individual/three-observation deletion sufficiency, detailed SFM/PNP trajectory and independent bias rollback contribution. No claim that the internal initial scale itself was twice wrong.
+- Next experiment/decision: none automatically authorized beyond this bounded repair; SAFE_FALLBACK_ONLY/NO_EXPANSION. Preserve old negatives, publish the lost gains, and do not relabel zero learning action as success.

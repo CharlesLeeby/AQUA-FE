@@ -676,3 +676,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Metrics boundary: old fixed APE/RPE KLT0.141317/0.022697 versus delete1.073158/0.102008; same old table's Sim3 APE0.060774/0.045444 and scales0.898634/0.513513. Proxy, not independent GT; fitted scale is not internal initialization scale.
 - Conclusion: the no-harm interpretation of newborn deletion is unsupported; actual first-SFM temporal input differs even when earliest window/RANSAC pose is unchanged. Exact numerical mediation remains Unknown.
 - Follow-up: 0 new frontend/VIO runs, 0 new physical windows, no repair or expansion. A separate logging-only initialization diagnostic requires explicit authorization and protocol.
+
+
+### EXP-20260909-A02-INIT-TRACE — Numerical initialization fork and safety repair
+
+- Date/status/scientific role: 2026-09-09; COMPLETE / SAFE_FALLBACK_ONLY / NO_EXPANSION. Outcome-known development diagnostic, not held-out.
+- Git/branch: runtime main@f6f8feec66c2faf1f59cdb67c1e817028a3bccaf plus manifest/repair-lock exact files; later publication codex/aqua-fe-evidence-20260905 is not the runtime source commit.
+- Dataset/windows: diagnostic A02 0–900, original KLT and eight-donor-delete bags; guard A09/A02/Bus/A08/Cemetery/H07 original six-window roster, two learned arms each.
+- Environment/configuration: same frozen node/lib/YAML/camera; diagnostic only VINS_INITIAL_DIAGNOSTICS=1, no other init override, original1x replay/delay/drain. Guard <=350, complete classical observation identity protection. Proxy, not independent GT.
+- Baseline/modification: diagnostic adds logging only; safety guard rejects destructive classical changes and causally latches KLT fallback. No backend algorithm, original exporter or gate rewritten.
+- Commands/artifacts: python3 -B scripts/run_a02_initialization_trace.py; scripts/analyze_a02_initialization_trace.py; unittest test_classical_observation_guard.py; scripts/validate_classical_observation_guard.py. papers/frontend_a02_init_trace_repair_v1/ and Data offload same-name runtime contain actual manifest, logs, VIO, guarded bags and receipts.
+- Results: six new diagnostic replays all init/coverage PASS; KLT8 attempts/7negative-scale rejects, delete4/3, three repeats each. Refined scale0.033247/0.034290. Fixed APE/RPE medians0.140174/0.022646 vs1.104454/0.104535m. No gravity rejection. Same first VIO timestamps and rejection counts as old runs; numerical errors are not byte-identical.
+- Validity/common support: new6+old6 jointly42poses,41s,93.33%,41strict1s RPE pairs; proper fixed-scale and explicit Sim3; evo maximum4.88e-7m. All six original input/config/camera/binary identities verified; original results not overwritten.
+- Guard validation:9/9 tests;12/12 paired existing streams become exact-KLT output bags, four original action cells first blocked at output2.0WIN/12TIE/0LOSS/0FAIL,0learned observations.18 unique identity-valid KLT records reused in36 references; not36replays. No new tracking/replay for guard, no matched control needed for zero action.
+- Interpretation/conclusion: harmful deletion is blocked but A09/Bus benefit is lost. This is safe fallback only; gain-preserving algorithm repair not achieved. No independent-GT/superiority/natural-positive-rate claim, no new positive physical window.
+- Failed attempts/follow-up: three guard startup path/environment issues before any evaluated cell/lock; fixed and retained in worklog. Stop replacement enhancement and expansion; no second variant.

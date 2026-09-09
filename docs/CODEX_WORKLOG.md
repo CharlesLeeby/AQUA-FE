@@ -797,3 +797,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: no historical per-ID residual trace or internal scale/gravity values; no three-only deletion VIO test, no independent rollback-effect test, no implemented repair.
 - Interpretation: direct eight-observation deletion sufficiency remains; first relative-pose/RANSAC/window explanations are ruled out for the first successful step, while the first SFM multiframe input differs. Later scale/bias mediation remains an inference.
 - Next steps: publish the diagnosis, retain NO_EXPANSION; seek explicit authority for one separately specified logging-only initialization diagnostic, not another method variant.
+
+
+## 2026-09-09 — A02 numerical trace and explicit classical-observation safety guard
+
+- Objective/problem: user authorized locating and repairing the A02 regression; newborn-only protection had not protected initialization constraints.
+- Files changed: papers/frontend_a02_init_trace_repair_v1/ compact protocol/results; scripts/{run_a02_initialization_trace.py,run_a02_initialization_trace_cell.sh,analyze_a02_initialization_trace.py,validate_classical_observation_guard.py}; uw_frontend/ros/classical_observation_guard.py; tests/test_classical_observation_guard.py; handoff and required logs.
+- Implementation: existing compiled logging switch only, six serial existing-input diagnostic replays; independent current-message guard protects every KLT observation and latches fallback after destructive proposals. Frozen exporters, backend and old results unchanged.
+- Technical decisions: no scale/gravity/bias gate changes; no age exemption, future lifetime, per-window outcome routing, second policy search or expanded roster. Guard is a safety fallback, not a new learned claim.
+- Experiments: 6/6 A02 diagnostic replays complete; 9/9 tests; 12/12 guard checks on existing paired streams from six development windows. No new frontend tracking; guard maps 18 unique existing KLT replays to 36 references, no new guard VIO replay.
+- Quantitative results: KLT accepts alignment attempt8 after7 negative-linear-scale rejections; delete accepts4 after3, all repeats. Refined scales0.033247/0.034290. New fixed APE medians0.140174/1.104454 m, RPE0.022646/0.104535 m; all12 old/new support42poses/41s/41pairs, evo<4.88e-7m. Guard returns12 exact-KLT bags,0learned observations,12TIE.
+- Qualitative observations: direct deletion is sufficient for harm; observed numerical fork is scale sign, not gravity tolerance. Guard blocks A02 harm but also sacrifices A09/Bus gains. Internal scale is not final proxy-fitted scale.
+- Failed attempts: guard invocation initially lacked project Python path; replacing PYTHONPATH removed ROS imports; relative __file__ broke lock path generation. Corrected before lock/first guard evaluation; no scored run discarded.
+- Known issues: logging/current scheduling changes numerical trajectory range; per-ID residuals, single/three-donor sufficiency and bias rollback mediation remain Unknown. Gain-preserving algorithm repair is not complete.
+- Interpretation: SAFE_FALLBACK_ONLY, not effectiveness. Old continuation remains2WIN/8TIE/2LOSS; guarded0WIN/12TIE/0LOSS is zero learning contribution. New-window validation0.
+- Next steps: publish full evidence; use explicit safety boundary only and stop this startup-replacement line without automatic expansion/another variant.

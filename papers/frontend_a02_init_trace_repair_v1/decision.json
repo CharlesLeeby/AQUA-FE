@@ -1,0 +1,23 @@
+{
+  "experiment_id": "EXP-20260909-A02-INIT-TRACE",
+  "status": "COMPLETE",
+  "decision": "SAFE_FALLBACK_ONLY_NO_EXPANSION",
+  "new_diagnostic_replays": 6,
+  "diagnostic_physical_windows": 1,
+  "guard_physical_development_windows": 6,
+  "guard_arm_windows": 12,
+  "new_frontend_tracking_runs": 0,
+  "new_guard_backend_replays": 0,
+  "unique_reused_klt_replays": 18,
+  "mapped_replay_references": 36,
+  "guard_outcomes": {"WIN": 0, "TIE": 12, "LOSS": 0, "FAIL": 0},
+  "guard_published_learned_observations": 0,
+  "new_positive_physical_windows": 0,
+  "new_window_validation_completed": 0,
+  "harmful_deletion_blocked_in_guarded_outputs": true,
+  "a09_bus_gains_preserved": false,
+  "gain_preserving_algorithm_repair_completed": false,
+  "frozen_exp012_result_changed": false,
+  "external_backend_modified": false,
+  "next_step": "Use the explicit safety fallback only; stop this startup replacement line and do not expand or automatically try a second variant."
+}

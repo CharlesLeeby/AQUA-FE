@@ -297,3 +297,20 @@ validated repair. No new VIO/frontend run or method variant; NO_EXPANSION remain
 Current diagnosis: papers/frontend_admission_continuation_v1/a02_degradation_mechanism.md.
 Only proposed next diagnostic is separately authorized logging of initialization
 numerics on unchanged original inputs; not a reopened method/parameter search.
+
+
+## 2026-09-09 current update — numerical fork known, guard is fallback only
+
+EXP-20260909-A02-INIT-TRACE is COMPLETE / SAFE_FALLBACK_ONLY / NO_EXPANSION.
+Six original-input logging-only VINS replays completed without external code,
+build, YAML or algorithm changes. KLT accepts the eighth alignment, donor-delete
+the fourth; all rejected linear scales are negative, gravity stays within gate.
+Accepted internal refined scales0.033247/0.034290 are not final proxy-fitted scale.
+Independent ClassicalObservationGuard now protects all KLT birth/carried
+observations and latches fallback on destructive changes. Nine tests and12
+existing-stream validations pass; all12 output bags equalKLT. This blocks the
+A02 intervention but sacrifices A09/Bus rescue, with0learned observations.
+Gain-preserving algorithm repair remains incomplete; no main-method promotion,
+no new positive physical window, no new-window extension. Eighteen unique old
+KLT replays are reused in36 mappings; the only new VIO runs are six diagnostics.
+Report: papers/frontend_a02_init_trace_repair_v1/report.md; fixed entry docs/CODEX_HANDOFF.md.

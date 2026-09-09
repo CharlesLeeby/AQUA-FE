@@ -1,0 +1,89 @@
+{
+  "cell_script_sha256": "3e010774acc510c6e35b098a36da245ffe5759fc873f31d18c08b65c48e36d6d",
+  "diagnostic_env": {
+    "VINS_INITIAL_DIAGNOSTICS": "1"
+  },
+  "preregistration_sha256": "db3c3899ce947145fada6bd4d67c62447f4ef694b15f363adcf8c07d92c9ab64",
+  "runner_sha256": "2dec4d31863e77de211f8feadd35d11a871eb930ca2cc80d1c2a687cfec2a0ec",
+  "runs": [
+    {
+      "arm": "klt",
+      "camera_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/aqualoc_archaeo02_pinhole.yaml",
+      "camera_config_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+      "canonical_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/vins_same_backend.yaml",
+      "canonical_config_sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_gmrv2_a02_0_900_klt/features.bag",
+      "feature_bag_sha256": "5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520",
+      "repeat": 1,
+      "run_dir": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a02_init_trace_repair_v1/klt/repeat1",
+      "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+      "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278"
+    },
+    {
+      "arm": "donor_delete_only",
+      "camera_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/aqualoc_archaeo02_pinhole.yaml",
+      "camera_config_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+      "canonical_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/vins_same_backend.yaml",
+      "canonical_config_sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/a02_0_900/features_donor_delete_only.bag",
+      "feature_bag_sha256": "f0efea06f922f0515464be068c9678b358060c899021355f89e6532822034fcb",
+      "repeat": 1,
+      "run_dir": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a02_init_trace_repair_v1/donor_delete_only/repeat1",
+      "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+      "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278"
+    },
+    {
+      "arm": "klt",
+      "camera_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/aqualoc_archaeo02_pinhole.yaml",
+      "camera_config_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+      "canonical_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/vins_same_backend.yaml",
+      "canonical_config_sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_gmrv2_a02_0_900_klt/features.bag",
+      "feature_bag_sha256": "5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520",
+      "repeat": 2,
+      "run_dir": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a02_init_trace_repair_v1/klt/repeat2",
+      "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+      "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278"
+    },
+    {
+      "arm": "donor_delete_only",
+      "camera_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/aqualoc_archaeo02_pinhole.yaml",
+      "camera_config_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+      "canonical_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/vins_same_backend.yaml",
+      "canonical_config_sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/a02_0_900/features_donor_delete_only.bag",
+      "feature_bag_sha256": "f0efea06f922f0515464be068c9678b358060c899021355f89e6532822034fcb",
+      "repeat": 2,
+      "run_dir": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a02_init_trace_repair_v1/donor_delete_only/repeat2",
+      "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+      "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278"
+    },
+    {
+      "arm": "klt",
+      "camera_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/aqualoc_archaeo02_pinhole.yaml",
+      "camera_config_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+      "canonical_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/vins_same_backend.yaml",
+      "canonical_config_sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_gmrv2_a02_0_900_klt/features.bag",
+      "feature_bag_sha256": "5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520",
+      "repeat": 3,
+      "run_dir": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a02_init_trace_repair_v1/klt/repeat3",
+      "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+      "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278"
+    },
+    {
+      "arm": "donor_delete_only",
+      "camera_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/aqualoc_archaeo02_pinhole.yaml",
+      "camera_config_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+      "canonical_config": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/backend_canonical/a02_0_900/vins_same_backend.yaml",
+      "canonical_config_sha256": "a0d5aad32120b2ab419c3216fbbf908ee4cdbed4c5d7c483b131b3df67da5af1",
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2_donor_delete_diagnostic/a02_0_900/features_donor_delete_only.bag",
+      "feature_bag_sha256": "f0efea06f922f0515464be068c9678b358060c899021355f89e6532822034fcb",
+      "repeat": 3,
+      "run_dir": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a02_init_trace_repair_v1/donor_delete_only/repeat3",
+      "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+      "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278"
+    }
+  ],
+  "schema": "aqua-fe-a02-init-trace-v1"
+}
