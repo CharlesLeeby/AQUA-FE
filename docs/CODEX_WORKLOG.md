@@ -812,3 +812,20 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: logging/current scheduling changes numerical trajectory range; per-ID residuals, single/three-donor sufficiency and bias rollback mediation remain Unknown. Gain-preserving algorithm repair is not complete.
 - Interpretation: SAFE_FALLBACK_ONLY, not effectiveness. Old continuation remains2WIN/8TIE/2LOSS; guarded0WIN/12TIE/0LOSS is zero learning contribution. New-window validation0.
 - Next steps: publish full evidence; use explicit safety boundary only and stop this startup-replacement line without automatic expansion/another variant.
+
+
+## 2026-09-10 — Consolidate already completed independent routes before further work
+
+- Date: 2026-09-10T00:23:00+08:00.
+- Task objective: continue AQUA-FE without reopening frozen failed variants or repeating other workspaces' completed experiments.
+- Problem / motivation: the main handoff covered only replacement/guard; independent additive, quality, recovery, classical expansion and utility reports existed on other branches, whose inherited generic handoffs were stale.
+- Files changed: papers/frontend_cross_route_evidence_review_20260910/{report.md,source_inventory.csv}; docs/CODEX_HANDOFF.md and the four scoped project logs/context.
+- Implementation: read exact committed reports/protocols/decisions/CSV via git show; recount additive classifications and classical roster; compare 24 GitHub raw files byte-for-byte with local Git objects. Link pinned evidence rather than merge code or duplicate reports.
+- Technical decisions: separate original 350-budget frozen backend from capacity1000 additive diagnostic contracts. Evidence commits are not automatically experiment-source commits. Preserve all original labels and pending/invalid windows.
+- Experiments performed: Not evaluated. No new frontend, replay, trajectory evaluation, method variant or validation window; this is a read-only evidence review.
+- Quantitative results: 24/24 public-file identity checks PASS. Previously completed additive L-all/B is0 practical gain/3loss/3small-uncertain across6windows; classical BatchA is3gain/2loss/6small-uncertain/1not-evaluable across12, with12 additional NOT_ACTIVATED rows,72 existing replays. These are not this turn's new results.
+- Qualitative observations: more published/residual-used learning observations and full KLT preservation do not alone guarantee useful backend influence. Classical positives cannot be counted as learned positives. Recovery's controlled correctness does not establish an increment over classical retry.
+- Failed attempts: default SSH Git read stalled; stopped only this task's SSH process. Per-command GitHub SSH443 with existing host identity verification succeeds; origin and persistent Git configuration unchanged.
+- Known issues: A08 frozen-B numerical anomaly and exact repeat sensitivity remain Unknown; source audit does not revalidate all raw artifacts. No gain-preserving repair or new-window extension.
+- Interpretation: current guard remains fallback-only. Avoid repeating already tested simple remedies; no pooled win rate or learned-superiority claim.
+- Next steps: publish this bounded index; retain all frozen stops. The sole proposed research follow-up is an A08 fixed-B identity/stability audit starting with existing records, not another admission variant.

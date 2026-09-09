@@ -773,3 +773,18 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion: full observation preservation repairs the tested destructive path, not the scientific objective of harmless learned enhancement. This repeats the existing safe-baseline tradeoff with an explicit enforced guard, not a new source of positive windows.
 - Unknown/open questions: per-ID actual residual use, individual/three-observation deletion sufficiency, detailed SFM/PNP trajectory and independent bias rollback contribution. No claim that the internal initial scale itself was twice wrong.
 - Next experiment/decision: none automatically authorized beyond this bounded repair; SAFE_FALLBACK_ONLY/NO_EXPANSION. Preserve old negatives, publish the lost gains, and do not relabel zero learning action as success.
+
+
+## 2026-09-10 — Reconcile failed simple-remedy hypotheses across independent contracts
+
+- Research question: is another dose, q-mapping or learned-recovery variant justified as the immediate repair?
+- Hypothesis/motivation: missing cross-branch context could make completed negative experiments appear to be unexplored improvements.
+- Related baselines: original fixed350 KLT/replacement/guard; separately authorized capacity1000 additive B/L/C; classical retry in the recovery frontend.
+- Proposed idea/why: consolidate exact frozen evidence and stop conditions before selecting any new intervention. This is reasoning/identity review, not a new algorithm.
+- Assumptions/failure cases: contracts, supports and classification rules differ; outcome-known windows overlap. Never pool repeats or import classical/diagnostic positives into the learned main table.
+- Evidence — Confirmed facts: 24 committed report/protocol/decision/table files match GitHub readback. Additive learned quantity contrast is sufficient but L-all/B gives0 practical gains; neutral-q2window test gives no practical mapping gain; learned recovery fails its increment gate. Classical12window batch has3gains and2severe losses, stopping expansion.
+- Evidence boundary: source tables retain12 NOT_ACTIVATED BatchB rows and A05's invalid27-pose support. Existing utility A/A compares different binaries and fails all3pairs; it does not isolate logging causality. No new internal-state or APE computation here.
+- Current conclusion: A02 deletion sufficiency and guard fallback remain valid only within their tested contracts. Observation preservation and persistence are not demonstrated sufficient conditions for backend benefit. No unified harmless learned enhancement has been validated.
+- Hypothesis / Inference.: the next useful attribution step is fixed-input/backend identity and replay stability, before a new observation-admission policy; solver timing/load/build explanations remain unconfirmed.
+- Open questions: exact A08 numerical fork, candidate-specific causal usefulness, and a benefit-preserving repair. Natural dataset positive rate and learned superiority remain Not evaluated.
+- Next experiment: none launched. First read existing A08 B receipts/input-clock/solver records; any further finite engineering comparison needs its own freeze and must not replace old outcomes or reactivate stopped matrices.

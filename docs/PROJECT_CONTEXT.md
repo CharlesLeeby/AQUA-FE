@@ -314,3 +314,21 @@ Gain-preserving algorithm repair remains incomplete; no main-method promotion,
 no new positive physical window, no new-window extension. Eighteen unique old
 KLT replays are reused in36 mappings; the only new VIO runs are six diagnostics.
 Report: papers/frontend_a02_init_trace_repair_v1/report.md; fixed entry docs/CODEX_HANDOFF.md.
+
+
+## 2026-09-10 — Cross-branch evidence consolidated, not a new method result
+
+The main replacement/guard stop remains in force. The current index now links
+five independent routes at exact commits: additive dose, observation utility,
+source-neutral q, learned KLT recovery, and classical opportunity expansion.
+They must not be pooled into the original fixed350 same-backend table: the
+additive-derived VIO runs use a separate capacity1000 diagnostic contract.
+Their already completed results do not validate a benefit-preserving learned
+repair. Classical BatchA has3practical gains/2severe losses/6small-uncertain/
+1not-evaluable across12windows, not a learned or natural positive-rate estimate.
+This turn adds0experiments/variants/windows;24published source files match
+remote bytes. A08 fixed-B numerical variability remains unresolved.
+Only suggested successor: bounded replay-identity/stability attribution from
+existing A08 records before any new policy. No stopped matrix is reactivated.
+See papers/frontend_cross_route_evidence_review_20260910/report.md and the
+updated docs/CODEX_HANDOFF.md for pinned public evidence and limits.

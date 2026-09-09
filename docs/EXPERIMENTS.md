@@ -691,3 +691,16 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Guard validation:9/9 tests;12/12 paired existing streams become exact-KLT output bags, four original action cells first blocked at output2.0WIN/12TIE/0LOSS/0FAIL,0learned observations.18 unique identity-valid KLT records reused in36 references; not36replays. No new tracking/replay for guard, no matched control needed for zero action.
 - Interpretation/conclusion: harmful deletion is blocked but A09/Bus benefit is lost. This is safe fallback only; gain-preserving algorithm repair not achieved. No independent-GT/superiority/natural-positive-rate claim, no new positive physical window.
 - Failed attempts/follow-up: three guard startup path/environment issues before any evaluated cell/lock; fixed and retained in worklog. Stop replacement enhancement and expansion; no second variant.
+
+
+## REVIEW-20260910-CROSS-ROUTE — Existing evidence only
+
+- Date/status/scientific role: 2026-09-10; COMPLETE / READ_ONLY_REVIEW, not a new benchmark or replay experiment.
+- Git identity: main source workspace f6f8feec66c2faf1f59cdb67c1e817028a3bccaf plus preserved dirty work; report publication based on4a23a49e73969b90cfa3d0a8bae173330147a16b on codex/aqua-fe-evidence-20260905. Individual evidence commits and file SHA-256 are in source_inventory.csv, not substituted for experiment-source identities.
+- Dataset/window/config/baseline: exact six evidence packages' own manifests; no new data or arm. Fixed350 main and capacity1000 diagnostic additive contracts stay separate.
+- Proposed modification: documentation/index only; no algorithm, input, parameter, gate or environment change.
+- Commands/artifacts: git show of report/decision/protocol/CSV; CSV label recount; GitHub raw byte equality; papers/frontend_cross_route_evidence_review_20260910/.
+- Metrics/results:24/24 remote source file checks PASS;0 new frontend/replay/trajectory analyses/windows. Previous classical roster has24 rows:12executed(72replays),12NOT_ACTIVATED; executed classes3gain/2loss/6small-uncertain/1not-evaluable. Existing additive classifications independently recounted, unchanged.
+- Validity/common support: no new common-support comparison. All original gates/failures remain; no cross-contract metric pooling or new positive-rate estimate. Raw bags/full environment were not reaudited.
+- Interpretation/conclusion: no supported simple remedy ready for main-method promotion/extension; explicit fallback blocks identified deletion but retains zero learned contribution.
+- Follow-up: retain frozen stops; proposed bounded fixed-B A08 replay identity/stability audit, not started this turn. Not evaluated.
