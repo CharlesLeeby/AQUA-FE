@@ -1,11 +1,18 @@
 {
   "task": "SEA-RAFT",
-  "status": "RUNNING",
-  "phase": "MODEL_LOCKED_AWAITING_FREEZE",
+  "status": "COMPLETE",
+  "phase": "FINALIZED",
   "official_weights_loaded": true,
-  "real_inferred_pairs": 0,
+  "real_inferred_pairs": 48,
   "planned_controlled_pairs": 48,
-  "interface_pairs": 2,
-  "prior_blocker_resolved": true,
-  "pid": 2262760
+  "decision": "CONTROLLED_GAIN_ONLY",
+  "natural_status": "COMPLETE",
+  "backend_replays": 0,
+  "controlled_pairs_completed": 48,
+  "natural_pairs_completed": 528,
+  "interface_pairs_completed": 2,
+  "real_inferred_pairs_total": 578,
+  "successful_model_loads": 1,
+  "failed_model_load_attempts": 1,
+  "prior_blocker_resolved": true
 }

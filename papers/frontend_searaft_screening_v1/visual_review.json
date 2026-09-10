@@ -1,0 +1,26 @@
+{
+  "review_completed": true,
+  "reviewer": "Assistant visual inspection of the three frozen sample panels",
+  "selection_rule": "one lowest SHA256(sequence/raw_index/track_id) per sequence/category; all 12 chosen events retained",
+  "physical_identity": "Unknown for every sampled point; no independent natural pixel truth",
+  "panels": [
+    {
+      "sequence": "A02",
+      "path": "samples/A02_natural_samples.png",
+      "clear_identity_error": false,
+      "note": "S-only raw90 ID171 lies at the bottom border; C and S endpoints are close and admission differs near the boundary. Both S-only and C-only examples fail the first offline continuation step. The both-accepted raw37 ID293 patch appears locally consistent and continues3steps. Blurred texture prevents exact physical identity confirmation."
+    },
+    {
+      "sequence": "A08",
+      "path": "samples/A08_natural_samples.png",
+      "clear_identity_error": false,
+      "note": "S-only raw2785 ID239 and C-only raw2735 ID250 are boundary cases with nearby endpoints; none of the shown accepted endpoints completes an offline step. The both-accepted raw2718 ID301 coordinates differ within blurred repetitive texture. All physical identities remain Unknown."
+    },
+    {
+      "sequence": "H02",
+      "path": "samples/H02_natural_samples.png",
+      "clear_identity_error": false,
+      "note": "S-only raw190 ID2232 follows a roughly consistent local outline near the top border and passes3offline steps; C forward endpoint is nearby but reverse LK fails its FB gate. C-only raw189 ID1268 has S FB near1.01px versus the frozen1px cutoff. These are local use opportunities, not independent proof of physical identity or drift-free tracking."
+    }
+  ]
+}
