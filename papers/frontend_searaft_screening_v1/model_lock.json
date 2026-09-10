@@ -1,0 +1,150 @@
+{
+  "task": "SEA-RAFT",
+  "official_source_commit": "9137517ba24e628442aec097d3afe71d03503b75",
+  "model": {
+    "model": "MemorySlices/Tartan-C-T-TSKH-spring540x960-M",
+    "revision": "eb97ef34ba5d856c3fa2cdcd073150c057ac8b69",
+    "url": "https://huggingface.co/MemorySlices/Tartan-C-T-TSKH-spring540x960-M/resolve/eb97ef34ba5d856c3fa2cdcd073150c057ac8b69/model.safetensors",
+    "path": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_screening_v1/model/model.safetensors",
+    "sha256": "cb8cfbf14c5e0f6734b64add383708b7ff68cc6089a0007c67165d4761346102"
+  },
+  "official_config": "config/eval/spring-M.json",
+  "inference_config": {
+    "name": "spring-M",
+    "dataset": "spring",
+    "gpus": [
+      0
+    ],
+    "use_var": true,
+    "var_min": 0,
+    "var_max": 10,
+    "pretrain": "resnet34",
+    "initial_dim": 64,
+    "block_dims": [
+      64,
+      128,
+      256
+    ],
+    "radius": 4,
+    "dim": 128,
+    "num_blocks": 2,
+    "iters": 4,
+    "image_size": [
+      540,
+      960
+    ],
+    "scale": -1,
+    "batch_size": 1,
+    "epsilon": 1e-08,
+    "lr": 0.0004,
+    "wdecay": 1e-05,
+    "dropout": 0,
+    "clip": 1.0,
+    "gamma": 0.85,
+    "num_steps": 120000,
+    "restore_ckpt": null,
+    "coarse_config": null
+  },
+  "loading": {
+    "strict_state_audit": true,
+    "upstream_loader": "utils.utils.load_ckpt",
+    "state_tensors": 472,
+    "exact_state_match": true,
+    "restored_shared_aliases": {
+      "cnet.layer2.0.downsample.1.bias": "cnet.layer2.0.bn3.bias",
+      "cnet.layer2.0.downsample.1.num_batches_tracked": "cnet.layer2.0.bn3.num_batches_tracked",
+      "cnet.layer2.0.downsample.1.running_mean": "cnet.layer2.0.bn3.running_mean",
+      "cnet.layer2.0.downsample.1.running_var": "cnet.layer2.0.bn3.running_var",
+      "cnet.layer2.0.downsample.1.weight": "cnet.layer2.0.bn3.weight",
+      "cnet.layer3.0.downsample.1.bias": "cnet.layer3.0.bn3.bias",
+      "cnet.layer3.0.downsample.1.num_batches_tracked": "cnet.layer3.0.bn3.num_batches_tracked",
+      "cnet.layer3.0.downsample.1.running_mean": "cnet.layer3.0.bn3.running_mean",
+      "cnet.layer3.0.downsample.1.running_var": "cnet.layer3.0.bn3.running_var",
+      "cnet.layer3.0.downsample.1.weight": "cnet.layer3.0.bn3.weight",
+      "fnet.layer2.0.downsample.1.bias": "fnet.layer2.0.bn3.bias",
+      "fnet.layer2.0.downsample.1.num_batches_tracked": "fnet.layer2.0.bn3.num_batches_tracked",
+      "fnet.layer2.0.downsample.1.running_mean": "fnet.layer2.0.bn3.running_mean",
+      "fnet.layer2.0.downsample.1.running_var": "fnet.layer2.0.bn3.running_var",
+      "fnet.layer2.0.downsample.1.weight": "fnet.layer2.0.bn3.weight",
+      "fnet.layer3.0.downsample.1.bias": "fnet.layer3.0.bn3.bias",
+      "fnet.layer3.0.downsample.1.num_batches_tracked": "fnet.layer3.0.bn3.num_batches_tracked",
+      "fnet.layer3.0.downsample.1.running_mean": "fnet.layer3.0.bn3.running_mean",
+      "fnet.layer3.0.downsample.1.running_var": "fnet.layer3.0.bn3.running_var",
+      "fnet.layer3.0.downsample.1.weight": "fnet.layer3.0.bn3.weight"
+    },
+    "local_pth": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_screening_v1/model/Tartan-C-T-TSKH-spring540x960-M.pth",
+    "local_pth_sha256": "8962f9dc675c7c250775a6eacf398b9a890d39c59bb1ecc4cccfad77742b97ac",
+    "parameters": 19663876,
+    "load_s": 2.999065994983539
+  },
+  "official_weights_loaded": true,
+  "model_load_count": 1,
+  "precision": "FP32",
+  "tf32": false,
+  "device": "cuda:0",
+  "gpu": "NVIDIA GeForce GTX 1650",
+  "python": "3.8.10 (default, Mar 18 2025, 20:04:55) \n[GCC 9.4.0]",
+  "torch": "2.2.2+cu121",
+  "torchvision": "0.17.2+cpu",
+  "huggingface_hub": "0.36.2",
+  "safetensors": "0.5.3",
+  "opencv": "4.2.0",
+  "numpy": "1.24.4",
+  "environment": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_screening_v1/env/bin/python",
+  "threads": 1,
+  "original_longest_edge_cap": null,
+  "fallback_oom": null,
+  "interface_pairs": [
+    {
+      "name": "identity",
+      "finite_fraction": 1.0,
+      "median_displacement": [
+        0.0003009098581969738,
+        0.003744312096387148
+      ],
+      "median_target_error_px": 0.004478611312604483,
+      "timing": {
+        "preprocess_s": 0.07288951304508373,
+        "forward_gpu_s": 2.6161804579896852,
+        "backward_gpu_s": 0.14653137000277638,
+        "restore_transfer_s": 0.01603019400499761,
+        "peak_allocated_bytes": 312413184,
+        "peak_reserved_bytes": 419430400,
+        "network_height": 304,
+        "network_width": 484,
+        "sampling_s": 0.0011340700439177454,
+        "fb_checks_s": 0.00032015598844736814
+      }
+    },
+    {
+      "name": "translation",
+      "finite_fraction": 1.0,
+      "median_displacement": [
+        11.993757247924805,
+        -7.997217416763306
+      ],
+      "median_target_error_px": 0.02563453710895068,
+      "timing": {
+        "preprocess_s": 0.01535408099880442,
+        "forward_gpu_s": 0.13379146700026467,
+        "backward_gpu_s": 0.12905535195022821,
+        "restore_transfer_s": 0.011551480973139405,
+        "peak_allocated_bytes": 312287232,
+        "peak_reserved_bytes": 419430400,
+        "network_height": 304,
+        "network_width": 484,
+        "sampling_s": 0.0005814209580421448,
+        "fb_checks_s": 0.00031126500107347965
+      }
+    }
+  ],
+  "interface_pair_count": 2,
+  "real_controlled_pairs": 0,
+  "deterministic_coordinate_tests": "3 PASS",
+  "flow_coordinates": "Original pixels; exact W/Wnet and H/Hnet; network internal unpad retained",
+  "protocol_sha256": "d86b640696107709207f57cb231455faee1a1eb2ca07f266e1e76446ad8d4b27",
+  "loading_attempts": 2,
+  "successful_model_loads": 1,
+  "failed_load_log": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_screening_v1/failed_model_load_attempt_1/run_console.log",
+  "successful_load_log": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_screening_v1/run_console_attempt2.log"
+}

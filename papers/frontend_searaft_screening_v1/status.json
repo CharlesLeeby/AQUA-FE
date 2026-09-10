@@ -1,36 +1,11 @@
 {
-  "task": "SEA-RAFT MEASUREMENT CAPABILITY SCREENING",
-  "date": "2026-09-10",
-  "status": "NOT_STARTED",
-  "phase": "BLOCKED_MISSING_PRIOR_PROTOCOL",
-  "official_weights_loaded": false,
+  "task": "SEA-RAFT",
+  "status": "RUNNING",
+  "phase": "MODEL_LOCKED_AWAITING_FREEZE",
+  "official_weights_loaded": true,
   "real_inferred_pairs": 0,
   "planned_controlled_pairs": 48,
-  "official_config": null,
-  "official_weights": null,
-  "coordinate_transform_validation": "Not evaluated.",
-  "controlled_measurement_results": "Not evaluated.",
-  "natural_measurement_results": "Not evaluated.",
-  "backend_replays": 0,
-  "existing_local_progress_found": false,
-  "existing_remote_screening_branch_found": false,
-  "official_source_repository": "https://github.com/princeton-vl/SEA-RAFT",
-  "official_source_commit": "9137517ba24e628442aec097d3afe71d03503b75",
-  "official_source_local": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_screening_v1/official_SEA-RAFT",
-  "worktree": "/home/ma/AQUA-FE_WS_searaft_screening_v1",
-  "branch": "exp/searaft-screening-v1-20260910",
-  "blocking_reason": "The preceding full SEA-RAFT prompt is absent from available conversation, attached texts and relevant project records; the specified official configuration/checkpoint and screening protocol cannot be identified.",
-  "missing_information": [
-    "Specified official configuration and matching checkpoint",
-    "Previously authorized preprocessing/inference settings and validity checks",
-    "Controlled capability gate and conditional natural-fragment protocol"
-  ],
-  "next_action": "Obtain missing prior protocol, freeze that exact contract, then verify actual weight loading and coordinate transforms before 48 controlled pairs.",
-  "completed_preparation": [
-    "Checked workspace/processes and local/remote existing progress",
-    "Created isolated task worktree",
-    "Obtained official source without modifying it",
-    "Retained fixed pair input definitions without running or reanalyzing old experiments"
-  ],
-  "not_experiment_results": true
+  "interface_pairs": 2,
+  "prior_blocker_resolved": true,
+  "pid": 2262760
 }

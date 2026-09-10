@@ -1,11 +1,7 @@
-# SEA-RAFT measurement capability screening v1 — 未开始
+# SEA-RAFT screening v1 — 运行中，协议/模型已锁定
 
-当前任务是SEA-RAFT独立直接光流筛选。**官方权重未加载，真实图像对推理0/48；网络原始位移和固定检查后的可用测量均Not evaluated.。** 自然片段未启动，VINS未启动。本文件是具体阻塞记录，不是实验完成或能力判断。
+指定spring-M权重已实际加载；正式受控推理0/48，接口检查2对已完成。恒等/已知(12,-8)平移误差中位分别0.00448/0.02563原px。使用原评价尺寸、FP32、scale−1、iters4、cuda:0、batch1，未触发备用最长边640。受控能力/自然片段/后端收益均Not evaluated.。
 
-具体阻塞：当前可见对话、附件文字及项目相关交接中未找到用户所指的上一份完整SEA-RAFT提示词，因此无法确定其指定官方配置/对应权重、推理预处理设置和筛选通过门槛。已向用户请求补齐；没有自行选择其他配置或借用旧恢复协议的停止阈值。
+首次HF严格加载因共享BN计数器别名兼容问题失败并保留日志；仅将指定HF快照的共享bn3值原样补齐downsample.1别名，使用官方本地pth加载工具。全部472状态张量在加载前后检查key/shape/精确数值，无关键权重缺失，成功实例在全程复用。详见model_lock.json。训练0、VINS0、SEA-RAFT checkpoint1。
 
-已确认本地无SEA-RAFT运行进程/筛选产物，GitHub查询无已有对应分支。独立工作区为`/home/ma/AQUA-FE_WS_searaft_screening_v1`，分支`exp/searaft-screening-v1-20260910`。官方源码已获取，固定源版本为[9137517](https://github.com/princeton-vl/SEA-RAFT/tree/9137517ba24e628442aec097d3afe71d03503b75)，本机位于`/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_screening_v1/official_SEA-RAFT`。获取源码不代表模型加载或完成真实推理。
-
-48对固定输入及变换仅作为输入定义保存在[controlled_pair_source.json](controlled_pair_source.json)。未读取或重新分析旧实验结果，未生成旧报告。旧恢复目录与代码保持封存；其结果不作为SEA-RAFT结果。另一个窗口的VINS进程保持运行，未干预。
-
-唯一下一步：补齐上一份指定合同，再验证实际权重加载、像素坐标变换和原始流输出，开始固定48对。正式筛选须分开报告网络直接预测与固定检查后测量；相同查询点比较KLT/强LK重试；是否进入三个自然短片段完全按补齐的原协议决定。当前没有能力结论，也没有结果CSV。
+完整合同task_instructions.md与冻结门protocol.md已落盘。下一步是释放当前进程执行48对受控筛选，只有filtered门通过才进入三个原自然短片段。旧缺合同检查点在checkpoints/7d44681_missing_contract/，该阻塞已解除，不再等待其他提示词。

@@ -1249,3 +1249,13 @@ Validation addendum: final staged bytes/provenance, lifecycle joint keys/counts,
 - Failed attempts: initial SSH read-only branch lookup stalled; HTTPS lookup completed with no matching branch; only that owned stalled lookup was terminated.
 - Known issues / interpretation: preceding full SEA-RAFT prompt unavailable in visible conversation/attachments/relevant records, so its required config/checkpoint/settings/gates remain Unknown. NOT_STARTED with concrete BLOCKED_MISSING_PRIOR_PROTOCOL, not a negative capability finding.
 - Next steps: user supplies missing original contract; verify actual weight loading and coordinate mapping, then run48fixed pairs. No old rerun/analysis.
+
+
+## 2026-09-10 — SEA-RAFT full contract resolved; protocol and actual model lock
+- Objective/motivation: execute specified spring-M direct-flow screening; full task saved in papers/frontend_searaft_screening_v1/task_instructions.md, old missing-contract checkpoint preserved.
+- Files/implementation: new searaft_points interface, input preparation/runner/measurement/natural helpers and coordinate/gate tests; new protocol/model lock; state/report/handoff updated. No old XFeat or backend edit.
+- Decisions: official9137517, HF eb97ef34 revision, FP32 iters4 scale−1 batch1; retain original evaluation sizes (peak allocated312MB, noOOM). B/C old preprocessing; S mono8 copied3channels. Protocol freezes all subgroup denominators/gates and conditional natural continuity checks before formal results.
+- Experiments/results: actual full checkpoint loaded with472 exact-matching state tensors;2 interface pairs, identity median0.00448px and translation median0.02563px; formal0/48, capability Not evaluated., VINS0/training0.
+- Failed attempt: safetensors strict loader emitted artificial unexpected shared BN counter aliases; checkpoint itself has no such extra entries. Preserved failure log; same checkpoint converted losslessly to official localpth path by restoring20shared aliases, exhaustive pre/post checks. No model/threshold change.
+- Known issues/interpretation: interface checks establish loading/coordinate viability, not capability gain; successful network instance remains alive for all正式queries. Natural identity Unknown.
+- Next: run48pairs and only conditional natural stage, then publish decision and stop.
