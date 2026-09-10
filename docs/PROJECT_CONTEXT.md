@@ -347,3 +347,6 @@ User explicitly authorized SEA-RAFT MEASUREMENT CAPABILITY SCREENING, papers/fro
 
 ## 2026-09-10 — SEA-RAFT screening complete, old missing-contract block resolved
 完整新合同已保存至 papers/frontend_searaft_screening_v1/task_instructions.md。指定官方 spring-M 已实际加载，完成 48 对受控测试及三个 200 raw 帧自然片段（528 个需要的相邻对），0 VINS、0 训练、1 checkpoint。Confirmed fact: 共同 B 失败集中过滤后 S 正确接受 6525，C 为 2672，但 S 误收不可见点 309 次；部分 large/illumination 分组通过，遮挡分组全部失败。自然 S-only 通过三步检查的数量为 A02/A08/H02 = 0/0/20，未达到冻结的至少两序列门。最终 CONTROLLED_GAIN_ONLY，保留 H02 局部机会，停止本轮扩展和自动集成。模型/协议冻结 commit 2833851；入口 docs/CODEX_HANDOFF_SEARAFT_SCREENING.md。自然物理身份及真实漂移 Unknown，后端收益 Not evaluated.；旧实验保持封存。
+
+## 2026-09-10 — Independent SEA-RAFT correspondence evidence check closed
+Fixed11×11 subpixel NCC on cached predictions reduced check errors199→18 while retaining98.64% correct recovery and advantage over C0/C1. Residual invisible-label error1.91% exceeds frozen1%; decision EVIDENCE_GATE_NOT_SUPPORTED. H02 retained7/20 old three-step opportunities,3 with current visible structure support; all20 C/S endpoints≤2px, natural physical identity Unknown. No new inference/training/VINS; no parameter or window expansion. Entry docs/CODEX_HANDOFF_SEARAFT_EVIDENCE_CHECK.md; old CONTROLLED_GAIN_ONLY and old artifacts remain unchanged. Current next step is archive this version, not automatic integration.

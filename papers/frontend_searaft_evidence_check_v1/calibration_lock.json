@@ -1,0 +1,15 @@
+{
+  "input_commit": "a2f3bedcc2e4f98bd18f99a3601d70433de42aa7",
+  "freeze_commit": "12310f47e31b86764bb67e2920bc9171e0c38391",
+  "quantity": "mixture marginal mean absolute error scale proxy, original px",
+  "calibration_S0_correct": 3204,
+  "finite_scales": 3204,
+  "threshold_px": 2.009056118129148,
+  "quantile_rule": "ascending order statistic ceil(.95*N), accept <= threshold",
+  "retained_correct": 3044,
+  "selected_with_calibration_labels": true,
+  "ncc_threshold": 0.65,
+  "patch_size": 11,
+  "minimum_patch_std": 1.0,
+  "auxiliary_combined_with_ncc": false
+}
