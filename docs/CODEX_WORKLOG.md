@@ -1270,3 +1270,10 @@ Validation addendum: final staged bytes/provenance, lifecycle joint keys/counts,
 - Failed attempts: one initial HF strict-loading compatibility failure, preserved; same official checkpoint aliases losslessly materialized,472state tensors exactly verified. No formal inference failure or OOM. Final report helper initially referenced a missing C_only_3steps summary key; fixed by counting the already saved natural event CSV, without rerunning inference.
 - Known issues/interpretation: invisibility false accepts309/1839 exceed global guard; natural persistent exclusive opportunity only H02 (20events), below frozen cross-sequence minimum. Drift/physical identity/backend correctnessUnknown, no safety or novelty claim. CONTROLLED_GAIN_ONLY; positive controlled capability and H02 opportunity retained.
 - Next: archive and stop this version; no automatic integration, tuning or new-window screen.
+
+## 2026-09-10 — SEA-RAFT evidence check protocol freeze
+- Objective/motivation: test whether fixed current-image patch evidence reduces invisible accepts while retaining direct-flow measurement advantage, using only a2f3bed outputs.
+- Files/implementation: saved full independent task and protocol; new evidence handoff, old handoff link only. Existing idle worktree switched to exp/searaft-evidence-check-v1-20260910; unrelated running backend untouched.
+- Technical decisions: mono8 11×11 subpixel NCC≥.65; per-patch std>1 gray level; fixed 24/24 base split, one auxiliary model-scale threshold from calibration labels, at most30 natural event reviews. Existing rounded NCC cannot implement subpixel contract, so use a separate small function with the same normalization formula.
+- Experiments/results: Not evaluated.; new inference/training/VINS0. All48 pair images and600 natural frames exist; old predictions and labels available. No failed attempt or data blocker.
+- Interpretation/limits/next: protocol frozen before new scores; old CONTROLLED_GAIN_ONLY unchanged. Implement and numerically check the function, then one formal evaluation and finite visual review; natural identity remains Unknown.

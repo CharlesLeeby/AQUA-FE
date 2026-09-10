@@ -13,3 +13,5 @@
 唯一汇总复现命令（无需推理）：在此worktree执行`/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_screening_v1/env/bin/python scripts/finalize_searaft_screening.py`。可执行推理接口为uw_frontend/matchers/searaft_points.py:SeaRaftPoints.predict_points；正式runner保留已完成目录防覆盖，不重复启动。
 
 唯一下一步：封存本轮结果，不直接系统集成、不追加模型/阈值/片段。既有受控能力及H02局部机会可供主规划窗口读取，但本轮没有PROMISING发布条件。旧XFeat与classical等实验保持封存。
+
+另行授权的新任务：[SEA-RAFT 对应点图像证据验证](CODEX_HANDOFF_SEARAFT_EVIDENCE_CHECK.md)。旧筛选结果与 CONTROLLED_GAIN_ONLY 保持不变。
