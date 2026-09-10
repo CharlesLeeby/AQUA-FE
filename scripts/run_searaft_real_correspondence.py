@@ -292,6 +292,8 @@ def summarize():
     s_cost=[sum(float(r[k]) for k in ['preprocess_s','forward_gpu_s','backward_gpu_s','restore_transfer_s','sampling_s','fb_checks_s']) for r in timing]
     state=dict(task='SEA-RAFT REAL CORRESPONDENCE CHECK',decision='REFERENCE_PENDING',status='INFERENCE_AND_MATERIALS_COMPLETE',
         pairs_completed=12,queries_completed=len(predicted),reference_confirmed=0,reference_pending=len(refs),
+        query_freeze_commit='637322c3c1b3c4450610b16b669a4c6840a8e0c0',
+        accuracy_metrics='Not evaluated.; all independent reference fields pending',
         old_decisions_unchanged=['CONTROLLED_GAIN_ONLY','EVIDENCE_GATE_NOT_SUPPORTED'],
         source_selection='4x2 source-only grid; same points across t+1/t+10; no target outcome selection',
         reference_status='No independent human/target pixel labels available; coordinates intentionally blank, no model-generated GT.',
@@ -314,16 +316,18 @@ def summarize():
         if r['level']=='sequence_gap':
             lines.append('| {} | {}/{} | {}/{} | {}/{} | {}/{} | {} | 0确认，{}待核对 |'.format(r['group'],r['image_pairs'],r['queries'],r['C0_accepted'],r['S0_accepted'],r['C1_accepted'],r['S1_accepted'],r['C1_only_accepted'],r['S1_only_accepted'],r['similar_endpoint_gate_difference'],r['queries']))
     lines += ['','上述均为接受数，**不是正确对应数**。原始EPE、中位/p95、≤2px正确率、错误接受、S/C独有正确均为 Not evaluated.，comparison对应单元格留空。没有将AMBIGUOUS当错误，也没有用FB/NCC/后续LK或位姿投影自证身份。','',
+        '本批固定patch门没有额外改变接受集合（C1=C0、S1=S0）；不能把NCC通过当作身份确认。', '',
         '实际时间间隔（来自原纳秒stamp，秒）：','',
-        '| 源 | t+1 | t+10 | 盲态材料 |', '|---|---:|---:|---|']
+        '| 源及待核对ID | t+1 | t+10 | 盲态材料 |', '|---|---:|---:|---|']
     for seq in SEQUENCES:
         for offset in [40,120]:
             rr=[r for r in manifest if r['sequence']==seq and int(r['source_offset'])==offset]
             dt=[float(next(r['delta_time_s'] for r in rr if int(r['gap_frames'])==g)) for g in [1,10]]
             sheet=rr[0]['blind_sheet']
-            lines.append('| {} offset{} | {:.9f} | {:.9f} | [{}]({}) |'.format(seq,offset,*dt,Path(sheet).name,sheet))
+            ids=[r['query_id'].rsplit('_',1)[1] for r in rr if r['gap_frames']=='1' and r['cell_status']=='SELECTED']
+            lines.append('| {} offset{} ({}) | {:.9f} | {:.9f} | [{}]({}) |'.format(seq,offset,','.join(ids),*dt,Path(sheet).name,sheet))
     lines += ['','t+10属于人为降低取样频率条件，不能当作原相邻帧收益。查询取自源图4×2网格，边缘≥16px；同一源共享两种gap的点。旧输出只存奇数公开帧，因此从39/119已存B点恢复到40/120，仅一次原KLT/GFTT源帧处理；不读取后续输赢筛选。源内局部ID不冒充旧未公开补点ID。','',
-        '待用户核对的具体内容：编辑 [reference_annotations.csv](reference_annotations.csv) 的全部{}行（六个源组、所选query各两个目标间隔；A02_s120_q1与A08_s040_q1为空格，不补选）。使用上表blind/中的源query ID和两个全幅目标图，填写 reference_status（VISIBLE_CORRESPONDENCE / OCCLUDED_OR_OUT_OF_VIEW / AMBIGUOUS）、标注者身份和human_confirmed；可见时另填目标原px坐标及uncertainty_px。无法辨认的保留AMBIGUOUS，不猜亚像素位置。当前PENDING、空坐标不是人工或模型标注提议。参考完成前避免查看algorithm/预测对照图，以减少提示偏差。'.format(len(refs)),'',
+        '待用户核对的具体内容：编辑 [reference_annotations.csv](reference_annotations.csv) 的全部{}行（六个源组、所选query各两个目标间隔；A02_s120_q1与A08_s040_q1为空格，不补选）。使用上表blind/中的源query ID和两个全幅目标图，填写 reference_status（VISIBLE_CORRESPONDENCE / OCCLUDED_OR_OUT_OF_VIEW / AMBIGUOUS）、标注者身份和human_confirmed；可见时另填目标原px坐标及uncertainty_px。原PNG路径见pair_query_manifest的target_image；应填写原图坐标，不是拼图截图像素坐标。无法辨认的保留AMBIGUOUS，不猜亚像素位置。当前PENDING、空坐标不是人工或模型标注提议。参考完成前避免查看algorithm/预测对照图，以减少提示偏差。'.format(len(refs)),'',
         '预测：[predictions.csv](predictions.csv)；完整选择与输入：[pair_query_manifest.csv](pair_query_manifest.csv)；分组状态：[comparison.csv](comparison.csv)；决定及加载记录：[decision.json](decision.json)。盲态图与算法图分别位于blind/和algorithm/，目标展示始终全幅，未按预测位置裁剪。','',
         '计算代价：S完整正反向测量首对{:.1f}ms（冷启动），其余11对中位/p95={:.1f}/{:.1f}ms；C raw中位{:.1f}ms，原传统预处理中位{:.1f}ms另列。S为整图，C只有每对最多8查询；仅描述本次开销，不把接受数当准确率或做不同负载的严格性能排名。'.format(state['S_bidirectional_first_pair_ms'],state['S_bidirectional_remaining_median_ms'],state['S_bidirectional_remaining_p95_ms'],state['C_raw_median_ms'],state['C_preprocessing_median_ms']),'',
         '完整授权与固定设置：[task_instructions.md](task_instructions.md)、[protocol.md](protocol.md)。所有图像均为开发数据；相关查询不是独立场景。','',
