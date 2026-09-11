@@ -24,7 +24,12 @@ def main():
         if path.exists():assert json.loads(path.read_text())==plan
         else:save(path,plan)
         for row in plan:
-            if row['mapped_to']!=row['arm']:continue
+            if row['mapped_to']!=row['arm']:
+                # Local evaluator alias only; backend_plan explicitly records
+                # that no R replay was performed for identical full inputs.
+                alias=RT/'backend'/row['run_slug']/row['arm']
+                if not alias.exists():alias.symlink_to(row['mapped_to'],target_is_directory=True)
+                continue
             runner.run(row['run_slug'],row['arm'],row['repeat'])
         print('FIXED_MATRIX_COMPLETE',sum(p['arm']==p['mapped_to'] for p in plan),flush=True)
 
