@@ -26,3 +26,17 @@ A08原raw索引为2700+offset。A02_s120_q1和A08_s040_q1为空格，不补选�
 当前无推理可恢复。仅重新生成待确认汇总的命令：`PYTHONPATH=.:scripts /media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_screening_v1/env/bin/python scripts/run_searaft_real_correspondence.py summarize`；predict拒绝重复已存在缓存。获得人工参考后应直接评价保存预测及标注不确定性，脚本会阻止静默沿用待确认结果，不重新推理。
 
 唯一下一步：人工盲态核对这些固定点，然后判断真实位移增量；不换图、不追加网络运行、不自动接入VINS。
+
+## 2026-09-11 — 离线点选与直接评价已就绪
+
+当前用户入口改为 [annotate.html](../papers/frontend_searaft_real_correspondence_v1/annotate.html)，下载/本地双击打开；不再要求手填 CSV。18 张原 PNG 和固定 92 项已嵌入，无网络、模型或 bag 依赖；页面只含源点和人工参考，按原 manifest 顺序展示。先输入标注者，右图点选并给出原像素不确定性，或明确标不可见/无法判断，再人工确认本项。支持缩放平移、清除、保存、CSV 导出和导入恢复。实际标注条件会记录用户已看汇总数量及其声明的逐点图查看情况，不宣称严格双盲。
+
+使用步骤及完整命令：[annotation_usage.md](../papers/frontend_searaft_real_correspondence_v1/annotation_usage.md)；本轮恢复入口：[annotation_task.md](../papers/frontend_searaft_real_correspondence_v1/annotation_task.md)。导出的 `reference_annotations.user.csv` 放在实验目录，与 annotate.html 同级，保留原空模板。
+
+```bash
+python3 /home/ma/AQUA-FE_WS_searaft_screening_v1/scripts/evaluate_searaft_annotations.py --annotations /home/ma/AQUA-FE_WS_searaft_screening_v1/papers/frontend_searaft_real_correspondence_v1/reference_annotations.user.csv
+```
+
+评价入口不导入推理模块：先将用户 CSV 原字节保存到新的 `annotation_evaluations/<UTC时间>/reference_snapshot.csv`，再读取保存预测。逐点误差、保守范围、接受状态以及完整/分组分母写入独立结果目录。部分标注输出 PARTIAL，未知/AMBIGUOUS 不当作 TIE、安全或失败；独有正确接受与位移增量分开。新脚本替代旧 summarize 的人工参考阻止分支，无需改动原脚本。
+
+已完成必要软件检查：原图坐标经留白/缩放/平移往返与 DPI=2 实际点击、CSV 导出导入、草稿恢复；误差区间和 PARTIAL/快照检查通过。所有假坐标仅存在临时测试样本。本轮 0 模型加载、0 新预测、0 VINS，尚无真实人工标注，旧 REFERENCE_PENDING 和原始文件不变。唯一下一步为用户点选确认，然后执行上述命令；不自动轮询或扩大实验。

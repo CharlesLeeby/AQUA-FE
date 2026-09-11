@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'">
+<title>SEA-RAFT · 固定对应点人工核对</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#111923;color:#ecf0f4;font:15px/1.5 system-ui,sans-serif}main{max-width:1700px;margin:auto;padding:16px}h1{font-size:21px;margin:0 0 8px}p{margin:7px 0}.muted{color:#bac8d6}.bar,.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:10px 0}button,input,select{font:inherit;border:1px solid #586675;border-radius:5px;padding:7px 10px;background:#202f3d;color:#fff}button{cursor:pointer}button:hover{background:#354a5b}button:disabled{opacity:.4;cursor:default}.primary{background:#12694f}.views{display:grid;grid-template-columns:1fr 1fr;gap:12px}.panel{min-width:0;background:#1a2531;border:1px solid #384b5d;border-radius:6px;padding:9px}.panel .bar{margin:0 0 7px}.viewport{height:48vh;min-height:280px;max-height:650px;width:100%;display:block;touch-action:none;cursor:crosshair;background:#090d12}details{background:#1a2531;padding:9px 12px;border-radius:6px}ul{margin:6px 0;padding-left:23px}#message{min-height:25px;color:#ffdb83}#identity{width:150px}#radius{width:95px}#progress{font-weight:600}#coordinate{font-variant-numeric:tabular-nums}footer{border-top:1px solid #384b5d;margin-top:12px;padding-top:6px}label{display:inline-flex;gap:6px;align-items:center}@media(max-width:850px){.views{grid-template-columns:1fr}.viewport{height:38vh}}input[type=file]{max-width:260px}
+</style>
+<main>
+<h1>固定真实对应点 · 离线人工核对</h1>
+<p class="muted">左侧找当前查询点，右侧点击同一物理位置。滚轮缩放，按住拖动平移；“全幅”恢复整张图。显示与导出均使用原图像素坐标。</p>
+<div class="bar">
+<label>标注者 <input id="identity" placeholder="姓名或代号" autocomplete="off"></label>
+<label>此前是否看过逐点算法图？ <select id="exposure"><option value="">请选择一次</option><option value="not_seen">未看过</option><option value="seen">看过</option><option value="unknown">不确定</option></select></label>
+</div>
+<details open><summary>标注口径与保存提醒</summary><ul>
+<li>明确找到同一结构：选 VISIBLE 并在目标图点选。</li>
+<li>确知被遮挡或移出画面：选 OCCLUDED_OR_OUT_OF_VIEW。</li>
+<li>模糊、重复纹理、无法确认或只是没找到：选 AMBIGUOUS。不必为完成进度猜位置；不能因为算法拒绝就标不可见。</li>
+<li>不确定性半径使用原像素，是人工可辨认范围，不是 95% 置信区间。选择 1、2、4 像素或自行填写。</li>
+<li>本页不载入算法预测。已知用户看过汇总接受数量，因此不宣称严格双盲；上方另记逐点图的实际查看情况。</li>
+<li><strong>关闭前务必“导出 CSV”</strong>。本地保存仅作备份，不能替代导出。只有点击“人工确认本项”才会写入 human_confirmed。</li>
+</ul></details>
+<div class="views">
+<section class="panel"><div class="bar"><strong id="sourceTitle">源图 · 当前查询点</strong><button data-view="source" data-action="out">−</button><button data-view="source" data-action="in">＋</button><button data-view="source" data-action="fit">全幅</button></div><canvas id="source" class="viewport"></canvas></section>
+<section class="panel"><div class="bar"><strong id="targetTitle">目标原图 · 点选对应</strong><button data-view="target" data-action="out">−</button><button data-view="target" data-action="in">＋</button><button data-view="target" data-action="fit">全幅</button></div><canvas id="target" class="viewport"></canvas></section>
+</div>
+<footer>
+<p id="progress"></p><p id="current"></p>
+<div class="controls">
+<label>状态 <select id="status"><option value="PENDING">PENDING · 尚未处理</option><option value="VISIBLE_CORRESPONDENCE">VISIBLE_CORRESPONDENCE · 找到对应</option><option value="OCCLUDED_OR_OUT_OF_VIEW">OCCLUDED_OR_OUT_OF_VIEW · 确知不可见</option><option value="AMBIGUOUS">AMBIGUOUS · 无法判断 / 没找到</option></select></label>
+<label>不确定性 <select id="radiusPreset"><option value="">请选择</option><option value="1">1 px</option><option value="2">2 px</option><option value="4">4 px</option><option value="custom">自定义</option></select><input id="radius" type="number" min="0.001" step="any" placeholder="原 px"></label>
+<span id="coordinate"></span></div>
+<div class="controls"><button id="previous">上一项</button><button id="next">下一项（不确认）</button><button id="clear">清除当前标注</button><button id="confirm" class="primary">人工确认本项并下一项</button></div>
+<div class="controls"><button id="save">保存进度到本机</button><button id="export" class="primary">导出 CSV</button><label>导入 CSV 继续 <input id="import" type="file" accept=".csv,text/csv"></label></div>
+<p id="message" role="status"></p>
+</footer>
+</main>
+<script id="blind-data" type="application/json">__BLIND_DATA__</script>
+<script>
+'use strict';
+const DATA=JSON.parse(document.getElementById('blind-data').textContent);
+const FIELDS=DATA.fields, BASE=DATA.items;
+const KEY='aqua-real-correspondence-26bc69e-annotation-v1';
+const $=id=>document.getElementById(id);
+const joint=r=>r.pair_id+'|'+r.query_id;
+const allowed=['PENDING','VISIBLE_CORRESPONDENCE','OCCLUDED_OR_OUT_OF_VIEW','AMBIGUOUS'];
+let rows=BASE.map(r=>Object.fromEntries(FIELDS.map(k=>[k,r[k]??'']))), index=0, dirty=false;
+const images={};
+const message=text=>{$('message').textContent=text;};
+const finite=v=>String(v).trim()!==''&&Number.isFinite(Number(v));
+const isConfirmed=r=>String(r.human_confirmed).toLowerCase()==='true';
+function csvText(records){const quote=v=>'"'+String(v??'').replace(/"/g,'""')+'"';return '\uFEFF'+[FIELDS,...records.map(r=>FIELDS.map(f=>r[f]??''))].map(r=>r.map(quote).join(',')).join('\r\n')+'\r\n';}
+function parseCSV(text){
+ text=text.replace(/^\uFEFF/,'');const result=[];let row=[],field='',quoted=false;
+ for(let i=0;i<text.length;i++){const c=text[i];if(quoted){if(c==='"'){if(text[i+1]==='"'){field+='"';i++;}else quoted=false;}else field+=c;}
+ else if(c==='"'){if(field!=='')throw Error('CSV 引号格式错误');quoted=true;}
+ else if(c===','){row.push(field);field='';}
+ else if(c==='\n'||c==='\r'){if(c==='\r'&&text[i+1]==='\n')i++;row.push(field);if(row.some(v=>v!==''))result.push(row);row=[];field='';}
+ else field+=c;}
+ if(quoted)throw Error('CSV 引号未闭合');if(field!==''||row.length){row.push(field);result.push(row);}return result;
+}
+function validate(record,base,allowDraft=false){
+ for(const f of ['pair_id','query_id','sequence','source_raw','target_raw','gap_frames','blind_sheet'])if(record[f]!==base[f])throw Error('固定身份不匹配：'+joint(base)+' '+f);
+ for(const f of ['source_x','source_y'])if(!finite(record[f])||Math.abs(Number(record[f])-Number(base[f]))>1e-6)throw Error('源坐标不匹配：'+joint(base));
+ if(!allowed.includes(record.reference_status))throw Error('未知状态：'+joint(base));
+ if(!['true','false'].includes(String(record.human_confirmed).toLowerCase()))throw Error('human_confirmed 应为 True/False');
+ const kind=record.annotation_kind.toLowerCase();if(kind&&(!/^(human|manual)/.test(kind)||/(proposal|model|assistant)/.test(kind)))throw Error('只能导入人工参考或未确认人工草稿，不能导入模型提议：'+joint(base));
+ if(record.reference_status==='VISIBLE_CORRESPONDENCE'){
+  if(!(allowDraft&&!isConfirmed(record)&&record.target_x===''&&record.target_y==='')&&(!finite(record.target_x)||!finite(record.target_y)||Number(record.target_x)<0||Number(record.target_x)>base.width-1||Number(record.target_y)<0||Number(record.target_y)>base.height-1))throw Error('可见点需有效目标原图坐标：'+joint(base));
+  if(!(allowDraft&&!isConfirmed(record)&&record.uncertainty_px==='')&&(!finite(record.uncertainty_px)||Number(record.uncertainty_px)<=0))throw Error('可见点需正的不确定性半径：'+joint(base));
+ } else if([record.target_x,record.target_y,record.uncertainty_px].some(v=>v!==''))throw Error('非可见项应清空坐标及不确定性：'+joint(base));
+ if(isConfirmed(record)&&(record.reference_status==='PENDING'||!record.annotator_identity.trim()||!record.annotation_kind.trim()))throw Error('人工确认需状态、身份与标注来源：'+joint(base));
+}
+function importText(text,allowDraft=false){
+ const parsed=parseCSV(text), headers=parsed.shift()||[];
+ if(new Set(headers).size!==headers.length||FIELDS.slice(0,17).some(f=>!headers.includes(f))||headers.some(f=>!FIELDS.includes(f)))throw Error('请导入本工具的参考 CSV，字段不兼容');
+ const map=new Map();for(const r of parsed){if(r.length!==headers.length)throw Error('CSV 列数错误');const item=Object.fromEntries(FIELDS.map(f=>[f,headers.includes(f)?r[headers.indexOf(f)]:'']));const k=joint(item);if(map.has(k))throw Error('重复联合键：'+k);map.set(k,item);}
+ if(map.size!==BASE.length)throw Error('CSV 必须保留全部 92 项，未处理项为 PENDING');
+ const next=BASE.map(b=>{const r=map.get(joint(b));if(!r)throw Error('缺少：'+joint(b));validate(r,b,allowDraft);return r;});
+ rows=next;index=Math.max(0,rows.findIndex(r=>!isConfirmed(r)));dirty=true;persist();render();message('已导入全部 92 项，确认状态按原 CSV 保留。');
+}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify({rows,index,identity:$('identity').value,exposure:$('exposure').value,dirty}));return true;}catch(e){message('浏览器本地保存不可用，请使用导出 CSV。');return false;}}
+function edited(){const r=rows[index];r.human_confirmed='False';r.human_confirmed_at='';r.annotator_identity='';r.annotation_kind='';r.annotation_conditions='';dirty=true;persist();renderCounts();}
+function renderCounts(){const n=rows.filter(isConfirmed).length;$('progress').textContent=`第 ${index+1} / ${rows.length} 项 · 人工已确认 ${n} / ${rows.length} · ${isConfirmed(rows[index])?'本项已确认':'本项尚未确认'}`;}
+function pointText(){const r=rows[index];$('coordinate').textContent=finite(r.target_x)&&finite(r.target_y)?`目标原图：(${Number(r.target_x).toFixed(2)}, ${Number(r.target_y).toFixed(2)}) px`:'目标尚未点选';}
+class View {
+ constructor(id){this.canvas=$(id);this.id=id;this.image=null;this.s=1;this.x=0;this.y=0;this.pointer=null;
+  new ResizeObserver(()=>this.resize()).observe(this.canvas);
+  this.canvas.addEventListener('wheel',e=>{e.preventDefault();const p=this.local(e);this.zoom(Math.exp(-e.deltaY*.0015),p.x,p.y);},{passive:false});
+  this.canvas.addEventListener('pointerdown',e=>{if(e.button!==0)return;this.canvas.setPointerCapture(e.pointerId);this.pointer={startX:e.clientX,startY:e.clientY,lastX:e.clientX,lastY:e.clientY,moved:false};});
+  this.canvas.addEventListener('pointermove',e=>{const p=this.pointer;if(!p)return;if(Math.hypot(e.clientX-p.startX,e.clientY-p.startY)>4)p.moved=true;if(p.moved){this.x+=e.clientX-p.lastX;this.y+=e.clientY-p.lastY;this.draw();}p.lastX=e.clientX;p.lastY=e.clientY;});
+  this.canvas.addEventListener('pointerup',e=>{const p=this.pointer;this.pointer=null;if(p&&!p.moved&&this.id==='target'){const q=this.toImage(e.clientX,e.clientY);if(q)selectPoint(q);}});
+  this.canvas.addEventListener('pointercancel',()=>{this.pointer=null;});
+ }
+ local(e){const r=this.canvas.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top};}
+ // x/y are CSS pixels; raster pixel centers are at image coordinates + 0.5.
+ toImage(clientX,clientY){const r=this.canvas.getBoundingClientRect();const x=(clientX-r.left-this.x)/this.s-.5,y=(clientY-r.top-this.y)/this.s-.5;return this.image&&x>=-1e-7&&y>=-1e-7&&x<=this.image.width-1+1e-7&&y<=this.image.height-1+1e-7?{x:Math.max(0,Math.min(this.image.width-1,x)),y:Math.max(0,Math.min(this.image.height-1,y))}:null;}
+ toClient(x,y){const r=this.canvas.getBoundingClientRect();return{x:r.left+this.x+(x+.5)*this.s,y:r.top+this.y+(y+.5)*this.s};}
+ resize(){const rect=this.canvas.getBoundingClientRect(),dpr=window.devicePixelRatio||1;this.canvas.width=Math.round(rect.width*dpr);this.canvas.height=Math.round(rect.height*dpr);this.fit();}
+ setImage(img){if(this.image!==img){this.image=img;this.fit();}else this.draw();}
+ fit(){if(!this.image)return;const r=this.canvas.getBoundingClientRect();this.s=Math.min(r.width/this.image.width,r.height/this.image.height);this.x=(r.width-this.image.width*this.s)/2;this.y=(r.height-this.image.height*this.s)/2;this.draw();}
+ zoom(factor,cx,cy){if(!this.image)return;const r=this.canvas.getBoundingClientRect();cx=cx??r.width/2;cy=cy??r.height/2;const fit=Math.min(r.width/this.image.width,r.height/this.image.height),next=Math.min(fit*32,Math.max(fit*.25,this.s*factor)),ratio=next/this.s;this.x=cx-(cx-this.x)*ratio;this.y=cy-(cy-this.y)*ratio;this.s=next;this.draw();}
+ draw(){const ctx=this.canvas.getContext('2d'),rect=this.canvas.getBoundingClientRect();ctx.setTransform(this.canvas.width/rect.width,0,0,this.canvas.height/rect.height,0,0);ctx.clearRect(0,0,rect.width,rect.height);if(!this.image)return;ctx.drawImage(this.image,this.x,this.y,this.image.width*this.s,this.image.height*this.s);const r=rows[index],px=this.id==='source'?Number(r.source_x):Number(r.target_x),py=this.id==='source'?Number(r.source_y):Number(r.target_y);if(this.id==='target'&&(!finite(r.target_x)||r.reference_status!=='VISIBLE_CORRESPONDENCE'))return;const x=this.x+(px+.5)*this.s,y=this.y+(py+.5)*this.s;ctx.strokeStyle='#111';ctx.lineWidth=4;ctx.beginPath();ctx.arc(x,y,7,0,2*Math.PI);ctx.moveTo(x-12,y);ctx.lineTo(x+12,y);ctx.moveTo(x,y-12);ctx.lineTo(x,y+12);ctx.stroke();ctx.strokeStyle=this.id==='source'?'#ffdb54':'#64ffcf';ctx.lineWidth=2;ctx.stroke();ctx.font='bold 14px system-ui';ctx.fillStyle=ctx.strokeStyle;ctx.strokeStyle='#111';ctx.lineWidth=3;const label=this.id==='source'?r.query_id:'人工点';ctx.strokeText(label,x+13,y-13);ctx.fillText(label,x+13,y-13);}
+}
+const views={source:new View('source'),target:new View('target')};
+function render(){const b=BASE[index],r=rows[index];$('status').value=r.reference_status;$('radius').value=r.uncertainty_px;$('radiusPreset').value=['1','2','4'].includes(String(r.uncertainty_px))?String(r.uncertainty_px):(r.uncertainty_px===''?'':'custom');$('radius').disabled=$('radiusPreset').disabled=r.reference_status!=='VISIBLE_CORRESPONDENCE';$('current').textContent=`pair_id: ${r.pair_id}  |  query_id: ${r.query_id}  |  raw ${r.source_raw} → ${r.target_raw}`;$('sourceTitle').textContent='源图 · '+b.source_image;$('targetTitle').textContent='目标原图 · '+b.target_image;$('previous').disabled=index===0;$('next').disabled=index===rows.length-1;renderCounts();pointText();views.source.setImage(images[b.source_image]);views.target.setImage(images[b.target_image]);}
+function selectPoint(p){const r=rows[index];r.target_x=String(p.x);r.target_y=String(p.y);r.reference_status='VISIBLE_CORRESPONDENCE';edited();render();}
+function navigate(delta){index=Math.max(0,Math.min(rows.length-1,index+delta));persist();render();message('');}
+$('previous').onclick=()=>navigate(-1);$('next').onclick=()=>navigate(1);
+$('status').onchange=()=>{const r=rows[index];r.reference_status=$('status').value;if(r.reference_status!=='VISIBLE_CORRESPONDENCE'){r.target_x=r.target_y=r.uncertainty_px='';}edited();render();};
+$('radiusPreset').onchange=()=>{if($('radiusPreset').value!=='custom'){$('radius').value=$('radiusPreset').value;rows[index].uncertainty_px=$('radius').value;edited();}else $('radius').focus();};
+$('radius').oninput=()=>{rows[index].uncertainty_px=$('radius').value;$('radiusPreset').value=['1','2','4'].includes($('radius').value)?$('radius').value:'custom';edited();};
+$('clear').onclick=()=>{rows[index]=Object.fromEntries(FIELDS.map(k=>[k,BASE[index][k]??'']));rows[index].reference_status='PENDING';rows[index].target_x=rows[index].target_y=rows[index].uncertainty_px='';edited();render();message('本项已清空，保留为 PENDING。');};
+$('confirm').onclick=()=>{try{const r=rows[index],name=$('identity').value.trim(),exposure=$('exposure').value;if(!name||!exposure)throw Error('请先填写标注者，并选择此前是否看过逐点算法图。');if(r.reference_status==='PENDING')throw Error('请选择状态；无法确认时使用 AMBIGUOUS。');validate(r,BASE[index]);r.annotator_identity=name;r.annotation_kind='HUMAN_OFFLINE_CLICK';r.annotation_conditions='aggregate_counts_seen=true; individual_predictions='+exposure+'; not_strict_double_blind=true';r.human_confirmed='True';r.human_confirmed_at=new Date().toISOString();dirty=true;const last=index===rows.length-1;if(!last)index++;persist();render();message(last?'已确认最后一项；请导出 CSV。':'已人工确认上一项。');}catch(e){message(e.message);}};
+$('identity').oninput=$('exposure').onchange=()=>persist();
+$('save').onclick=()=>{if(persist())message('已保存到本浏览器；关闭前仍请导出 CSV。');};
+$('export').onclick=()=>{try{const exported=rows.map((r,i)=>{const copy={...r};if(!isConfirmed(copy)&&(copy.reference_status==='VISIBLE_CORRESPONDENCE')&&(!finite(copy.target_x)||!finite(copy.target_y)||!finite(copy.uncertainty_px)||Number(copy.uncertainty_px)<=0)){copy.reference_status='PENDING';copy.target_x=copy.target_y=copy.uncertainty_px='';copy.notes=(copy.notes?copy.notes+'; ':'')+'Incomplete visible draft omitted from export; not human confirmed.';}validate(copy,BASE[i]);return copy;});const blob=new Blob([csvText(exported)],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='reference_annotations.user.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);dirty=false;persist();message('CSV 下载已发起；请确认文件已保存。原空模板不会被覆盖。');}catch(e){message(e.message);}};
+$('import').onchange=async e=>{try{const f=e.target.files[0];if(!f)return;if(dirty&&!window.confirm('导入将替换本页进度。若未导出，请先取消并导出。继续导入？'))return;importText(await f.text());const names=[...new Set(rows.filter(isConfirmed).map(r=>r.annotator_identity))];if(names.length===1)$('identity').value=names[0];persist();}catch(err){message(err.message);}finally{e.target.value='';}};
+for(const b of document.querySelectorAll('[data-view]'))b.onclick=()=>{const v=views[b.dataset.view];if(b.dataset.action==='fit')v.fit();else v.zoom(b.dataset.action==='in'?1.5:1/1.5);};
+window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue='关闭前请导出 CSV';}});
+async function start(){try{await Promise.all(Object.entries(DATA.images).map(([name,src])=>new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>{images[name]=img;resolve();};img.onerror=()=>reject(Error('嵌入图像加载失败：'+name));img.src=src;})));let cached=null;try{cached=localStorage.getItem(KEY);}catch(e){message('本地缓存不可用；可正常标注并导出 CSV。');}if(cached){try{const c=JSON.parse(cached);importText(csvText(c.rows),true);index=Math.max(0,Math.min(rows.length-1,Number(c.index)||0));$('identity').value=c.identity||'';$('exposure').value=c.exposure||'';dirty=Boolean(c.dirty);message('已恢复本机进度；仍须显式导出 CSV。');}catch(e){message('本地进度未载入：'+e.message+'。可导入已导出的 CSV。');}}render();}catch(e){message(e.message);}}
+start();
+</script>
+</html>
