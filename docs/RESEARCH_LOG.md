@@ -1151,3 +1151,18 @@ Interpretation: UNSAFE_OR_UNRESOLVED; the proposed deletion does not solve the d
 - Evidence: Confirmed fact: all12 fixed actual V1 pair checks pass after correcting a diagnostic denominator bug; actual cache smoke has finite loss/nonzero gradient and zero model exactlyB. Old MIMIR failure is unchanged.
 - Current conclusion: supervision blocker removed for this separate TartanAir task only; method effectiveness Not evaluated pending formal training.
 - Open questions / next experiment: single frozen P/T training and held-out six-block measurement; no new dataset or hyperparameter search.
+
+
+## 2026-09-12 — Actual temporal refinement result with alternative supervision
+- Research question: can the unchanged temporal error loss improve bounded coordinates on fixed KLT tracks beyond B and the same pointwise-only P?
+- Hypothesis: T improves B coordinatep95 by20% and P temporal-changep95 by5%, without fixed-block harm; underwater transfer is a later conditional question.
+- Motivation: replace unavailable MIMIR labels with authorized fixed officialTartanAirV1 geometry so the original method can actually be tested.
+- Related baseline: B originalKLT, P identical model/initialization/batches/optimizer with temporalweight0; originalmodel211554 parameters, fixed31px patches and±2px bound.
+- Proposed idea: original reference/previous/current shared-patch residual predictor, T temporalweight.5; no new architecture or loss.
+- Why it might work: Hypothesis / Inference: reference appearance and consistent true-error differences might reduce accumulated KLT drift.
+- Assumptions: birth-anchored world points and official masks/geometric visibility supply usable static correspondences; all invalid rows preserved; no label leakage in inference.
+- Potential failure cases: dynamic/mask inaccuracies, KLT identity mistakes, error outside correction range, short-track/birth prevalence, train/test image/motion differences and underwater domain gap.
+- Evidence: Confirmed fact: 279305 train labels/68302 tracks, P/T5000 updates each; independent initialization/batch identity checks pass. Held-out test166791 labels/84061 tracks: B/P/T EPEp95=1.6136/1.6895/1.6312px; T/P temporal-changep95 improves1.24%, below5%; final100-frame block p95regresses26.67%. Older-age groups show some lowerp95 for P/T but overall and young-age results worsen. B median0 arises from50.40% birth anchors and is explicitly disclosed.
+- Current conclusion: NO_TEMPORAL_REFINEMENT_GAIN for this fixed protocol. Required temporal incremental gain not supported; do not call all pointwise/learned refinement ineffective. Usable learned weights exist, but no established overall measurement or underwater gain. Original MIMIR failure remains separate.
+- Open questions: causal explanation of age/scene differences and potential underwater transfer remain Unknown; they are not authorization for another fit or backend run.
+- Next experiment: none under this task; stop/archive this version. Evidence papers/frontend_temporal_observation_refinement_tartanair_v1/report.md and decision.json.

@@ -1,10 +1,545 @@
 {
-  "status": "IN_PROGRESS",
-  "stage": "fixed_data_geometry_probe",
+  "status": "COMPLETE",
+  "decision": "NO_TEMPORAL_REFINEMENT_GAIN",
+  "dataset": "TartanAir V1 generic 3D simulation; not underwater evidence",
   "prior_mimir_decision": "SUPERVISION_UNAVAILABLE",
   "training_updates": {
-    "P": 0,
-    "T": 0
+    "P": 5000,
+    "T": 5000
   },
-  "new_backend_replays": 0
+  "training_runs": {
+    "P": 1,
+    "T": 1
+  },
+  "new_backend_replays": 0,
+  "backend_gate_passed": false,
+  "gates": {
+    "common_support": true,
+    "t_vs_b_p95_20pct": false,
+    "t_vs_b_over2_no_increase": true,
+    "t_vs_p_temporal_p95_5pct": false,
+    "t_vs_p_epe_p95_no_increase": true,
+    "all_fixed_blocks": false
+  },
+  "block_checks": [
+    {
+      "block": "0:100",
+      "support": true,
+      "p95_no_regression": true,
+      "over2_no_regression": true
+    },
+    {
+      "block": "100:200",
+      "support": true,
+      "p95_no_regression": true,
+      "over2_no_regression": true
+    },
+    {
+      "block": "200:300",
+      "support": true,
+      "p95_no_regression": true,
+      "over2_no_regression": true
+    },
+    {
+      "block": "300:400",
+      "support": true,
+      "p95_no_regression": true,
+      "over2_no_regression": true
+    },
+    {
+      "block": "400:500",
+      "support": true,
+      "p95_no_regression": true,
+      "over2_no_regression": true
+    },
+    {
+      "block": "500:600",
+      "support": true,
+      "p95_no_regression": false,
+      "over2_no_regression": true
+    }
+  ],
+  "test_summary": {
+    "B": {
+      "sequence": "endofworld/Easy/P000",
+      "group_type": "sequence",
+      "group": "all",
+      "arm": "B",
+      "observations": 209862,
+      "valid_labels": 166791,
+      "valid_tracks": 84061,
+      "invalid_labels": 43071,
+      "invalid_reasons": "{\"depth_discontinuity\": 15464, \"invalid_or_sky_depth\": 2628, \"occluded_or_depth_mismatch\": 2, \"official_mask_nonzero\": 10018, \"out_of_view\": 2, \"prior_invalid\": 14657, \"unconfirmed_last_birth\": 300}",
+      "epe_median_px": 0.0,
+      "epe_p90_px": 0.9963911771774292,
+      "epe_p95_px": 1.6135649681091309,
+      "over_1px_ratio": 0.099531749315011,
+      "over_2px_ratio": 0.03670461835470739,
+      "temporal_pairs": 82730,
+      "temporal_error_change_median_px": 0.15244202315807343,
+      "temporal_error_change_p95_px": 0.7225188612937927,
+      "zero_correction_ratio": 1.0,
+      "correction_median_px": 0.0,
+      "correction_p90_px": 0.0,
+      "correction_p95_px": 0.0,
+      "correction_axis_abs_max_px": 0.0,
+      "patch_unavailable": 35598,
+      "baseline_error_outside_axis_2px": 5314
+    },
+    "P": {
+      "sequence": "endofworld/Easy/P000",
+      "group_type": "sequence",
+      "group": "all",
+      "arm": "P",
+      "observations": 209862,
+      "valid_labels": 166791,
+      "valid_tracks": 84061,
+      "invalid_labels": 43071,
+      "invalid_reasons": "{\"depth_discontinuity\": 15464, \"invalid_or_sky_depth\": 2628, \"occluded_or_depth_mismatch\": 2, \"official_mask_nonzero\": 10018, \"out_of_view\": 2, \"prior_invalid\": 14657, \"unconfirmed_last_birth\": 300}",
+      "epe_median_px": 0.2985116243362427,
+      "epe_p90_px": 1.1647180318832397,
+      "epe_p95_px": 1.689463496208191,
+      "over_1px_ratio": 0.12690133160662145,
+      "over_2px_ratio": 0.03594918191029492,
+      "temporal_pairs": 82730,
+      "temporal_error_change_median_px": 0.18959278613328934,
+      "temporal_error_change_p95_px": 0.7418273866176606,
+      "zero_correction_ratio": 0.1696257540669583,
+      "correction_median_px": 0.21914638578891754,
+      "correction_p90_px": 0.9741921126842498,
+      "correction_p95_px": 1.3770406424999233,
+      "correction_axis_abs_max_px": 1.9999785423278809,
+      "patch_unavailable": 35598,
+      "baseline_error_outside_axis_2px": 5314
+    },
+    "T": {
+      "sequence": "endofworld/Easy/P000",
+      "group_type": "sequence",
+      "group": "all",
+      "arm": "T",
+      "observations": 209862,
+      "valid_labels": 166791,
+      "valid_tracks": 84061,
+      "invalid_labels": 43071,
+      "invalid_reasons": "{\"depth_discontinuity\": 15464, \"invalid_or_sky_depth\": 2628, \"occluded_or_depth_mismatch\": 2, \"official_mask_nonzero\": 10018, \"out_of_view\": 2, \"prior_invalid\": 14657, \"unconfirmed_last_birth\": 300}",
+      "epe_median_px": 0.30392885208129883,
+      "epe_p90_px": 1.1140674352645874,
+      "epe_p95_px": 1.6312223672866821,
+      "over_1px_ratio": 0.11897524446762715,
+      "over_2px_ratio": 0.03438434927544052,
+      "temporal_pairs": 82730,
+      "temporal_error_change_median_px": 0.187479667365551,
+      "temporal_error_change_p95_px": 0.7326374173164377,
+      "zero_correction_ratio": 0.1696257540669583,
+      "correction_median_px": 0.2279166504740715,
+      "correction_p90_px": 0.8880741596221923,
+      "correction_p95_px": 1.2657796382904039,
+      "correction_axis_abs_max_px": 1.9999768733978271,
+      "patch_unavailable": 35598,
+      "baseline_error_outside_axis_2px": 5314
+    }
+  },
+  "training": [
+    {
+      "arm": "P",
+      "updates": 5000,
+      "best_step": 4000,
+      "validation_p95_px": 8.784821462631228,
+      "train_frames": 1934,
+      "train_valid_labels": 279305,
+      "train_valid_tracks": 68302,
+      "train_pairs": 211003,
+      "parameters": 211554,
+      "training_wall_s": 206.168971591047,
+      "checkpoint": "/mnt/data/AQUA-FE_WS/experiments/temporal_refinement_tartanair_v1/training/P_best.pt",
+      "checkpoint_sha256": "262fccefd08fd0d5b170e0e423a8d963e0907d05c7897c154b7b922018392ec0",
+      "curve": "/mnt/data/AQUA-FE_WS/experiments/temporal_refinement_tartanair_v1/training/P_curve.csv",
+      "inference_wall_s": 3.366187041043304,
+      "inference_ms_per_frame": 5.610311735072173,
+      "peak_gpu_memory_mb": 62.44873046875,
+      "boundary": "cached causal patches + transfer + network; excludes image IO, KLT and patch extraction"
+    },
+    {
+      "arm": "T",
+      "updates": 5000,
+      "best_step": 4500,
+      "validation_p95_px": 8.844387292861938,
+      "train_frames": 1934,
+      "train_valid_labels": 279305,
+      "train_valid_tracks": 68302,
+      "train_pairs": 211003,
+      "parameters": 211554,
+      "training_wall_s": 138.67023503500968,
+      "checkpoint": "/mnt/data/AQUA-FE_WS/experiments/temporal_refinement_tartanair_v1/training/T_best.pt",
+      "checkpoint_sha256": "1ed40a6a37507997b534865f410fa8a3115ec7b1380f7c53d3b386e62b3f6cf8",
+      "curve": "/mnt/data/AQUA-FE_WS/experiments/temporal_refinement_tartanair_v1/training/T_curve.csv",
+      "inference_wall_s": 2.3692501980112866,
+      "inference_ms_per_frame": 3.948750330018811,
+      "peak_gpu_memory_mb": 62.44873046875,
+      "boundary": "cached causal patches + transfer + network; excludes image IO, KLT and patch extraction"
+    }
+  ],
+  "cache_summary": [
+    {
+      "sequence": "abandonedfactory/Easy/P000",
+      "role": "train",
+      "frames": 1200,
+      "observations": 397729,
+      "tracks": 92652,
+      "valid_labels": 257383,
+      "valid_tracks": 60681,
+      "invalid_reasons": {
+        "official_mask_nonzero": 12705,
+        "valid": 257383,
+        "depth_discontinuity": 18285,
+        "prior_invalid": 105845,
+        "invalid_or_sky_depth": 3415,
+        "out_of_view": 15,
+        "occluded_or_depth_mismatch": 10,
+        "unconfirmed_last_birth": 71
+      },
+      "patch_reasons": {
+        "valid": 297916,
+        "patch_out_of_bounds": 32122,
+        "reference_or_previous_patch_invalid": 67691
+      },
+      "wall_s": 194.56288618402323
+    },
+    {
+      "sequence": "amusement/Easy/P001",
+      "role": "train",
+      "frames": 734,
+      "observations": 256900,
+      "tracks": 99130,
+      "valid_labels": 21922,
+      "valid_tracks": 7621,
+      "invalid_reasons": {
+        "valid": 21922,
+        "depth_discontinuity": 91543,
+        "official_mask_nonzero": 2035,
+        "prior_invalid": 141333,
+        "occluded_or_depth_mismatch": 43,
+        "out_of_view": 1,
+        "unconfirmed_last_birth": 23
+      },
+      "patch_reasons": {
+        "valid": 203911,
+        "patch_out_of_bounds": 25480,
+        "reference_or_previous_patch_invalid": 27509
+      },
+      "wall_s": 125.25163273402723
+    },
+    {
+      "sequence": "carwelding/Easy/P001",
+      "role": "validation",
+      "frames": 600,
+      "observations": 201502,
+      "tracks": 49491,
+      "valid_labels": 81830,
+      "valid_tracks": 19282,
+      "invalid_reasons": {
+        "official_mask_nonzero": 6935,
+        "valid": 81830,
+        "depth_discontinuity": 25301,
+        "prior_invalid": 87256,
+        "occluded_or_depth_mismatch": 145,
+        "out_of_view": 10,
+        "unconfirmed_last_birth": 25
+      },
+      "patch_reasons": {
+        "valid": 155203,
+        "patch_out_of_bounds": 18942,
+        "reference_or_previous_patch_invalid": 27357
+      },
+      "wall_s": 96.59107980399858
+    },
+    {
+      "sequence": "endofworld/Easy/P000",
+      "role": "test",
+      "frames": 600,
+      "observations": 209862,
+      "tracks": 111694,
+      "valid_labels": 166791,
+      "valid_tracks": 84061,
+      "invalid_reasons": {
+        "depth_discontinuity": 15464,
+        "valid": 166791,
+        "invalid_or_sky_depth": 2628,
+        "official_mask_nonzero": 10018,
+        "prior_invalid": 14657,
+        "occluded_or_depth_mismatch": 2,
+        "out_of_view": 2,
+        "unconfirmed_last_birth": 300
+      },
+      "patch_reasons": {
+        "valid": 174264,
+        "patch_out_of_bounds": 23557,
+        "reference_or_previous_patch_invalid": 12041
+      },
+      "wall_s": 106.5987268880126
+    }
+  ],
+  "cache_sha256": "84fda3bce1f185ae22e269e0fe8b39767e36c9dcf0fb76ac7842f3bc2e98dc0e",
+  "initial_state_sha256": "7ecc3dc20a03f0a8c99a01aea4fb5ebccb6f2d38c863bc14f49c3f4ab6d096c4",
+  "batch_schedule_sha256": "bdf7fcd83844b280bb8aefc35e3620c8542e7298982969f99b0924b644e642ab",
+  "validation_curves": {
+    "P": [
+      {
+        "step": 0,
+        "validation_p95_px": 9.052715492248536,
+        "loss": null
+      },
+      {
+        "step": 250,
+        "validation_p95_px": 9.006643247604377,
+        "loss": 0.7956297993659973
+      },
+      {
+        "step": 500,
+        "validation_p95_px": 8.986358499526984,
+        "loss": 0.8240649700164795
+      },
+      {
+        "step": 750,
+        "validation_p95_px": 8.94254965782166,
+        "loss": 0.7242181897163391
+      },
+      {
+        "step": 1000,
+        "validation_p95_px": 8.859473943710329,
+        "loss": 0.6775828003883362
+      },
+      {
+        "step": 1250,
+        "validation_p95_px": 8.838219738006597,
+        "loss": 0.506745457649231
+      },
+      {
+        "step": 1500,
+        "validation_p95_px": 8.830924892425537,
+        "loss": 0.6668426394462585
+      },
+      {
+        "step": 1750,
+        "validation_p95_px": 8.887180471420288,
+        "loss": 0.8113794326782227
+      },
+      {
+        "step": 2000,
+        "validation_p95_px": 8.852271080017095,
+        "loss": 0.6024373769760132
+      },
+      {
+        "step": 2250,
+        "validation_p95_px": 8.864352083206176,
+        "loss": 0.9524909853935242
+      },
+      {
+        "step": 2500,
+        "validation_p95_px": 8.863574218750003,
+        "loss": 0.4574553966522217
+      },
+      {
+        "step": 2750,
+        "validation_p95_px": 8.838428926467902,
+        "loss": 0.47492122650146484
+      },
+      {
+        "step": 3000,
+        "validation_p95_px": 8.845835113525396,
+        "loss": 0.5383858680725098
+      },
+      {
+        "step": 3250,
+        "validation_p95_px": 8.8447024345398,
+        "loss": 0.595236599445343
+      },
+      {
+        "step": 3500,
+        "validation_p95_px": 8.867887830734256,
+        "loss": 0.6015905141830444
+      },
+      {
+        "step": 3750,
+        "validation_p95_px": 8.79928345680237,
+        "loss": 0.4939457178115845
+      },
+      {
+        "step": 4000,
+        "validation_p95_px": 8.784821462631228,
+        "loss": 0.33780428767204285
+      },
+      {
+        "step": 4250,
+        "validation_p95_px": 8.828760433197022,
+        "loss": 0.702315092086792
+      },
+      {
+        "step": 4500,
+        "validation_p95_px": 8.844405508041385,
+        "loss": 0.7169595956802368
+      },
+      {
+        "step": 4750,
+        "validation_p95_px": 8.855799150466924,
+        "loss": 0.6638306379318237
+      },
+      {
+        "step": 5000,
+        "validation_p95_px": 8.88452653884888,
+        "loss": 0.3939583897590637
+      }
+    ],
+    "T": [
+      {
+        "step": 0,
+        "validation_p95_px": 9.052715492248536,
+        "loss": null
+      },
+      {
+        "step": 250,
+        "validation_p95_px": 9.028701543807992,
+        "loss": 0.8361390829086304
+      },
+      {
+        "step": 500,
+        "validation_p95_px": 9.00190172195435,
+        "loss": 0.8419473767280579
+      },
+      {
+        "step": 750,
+        "validation_p95_px": 8.987139225006104,
+        "loss": 0.7984969019889832
+      },
+      {
+        "step": 1000,
+        "validation_p95_px": 8.91170740127564,
+        "loss": 0.678609311580658
+      },
+      {
+        "step": 1250,
+        "validation_p95_px": 8.9045687198639,
+        "loss": 0.5760650038719177
+      },
+      {
+        "step": 1500,
+        "validation_p95_px": 8.8986563205719,
+        "loss": 0.6753992438316345
+      },
+      {
+        "step": 1750,
+        "validation_p95_px": 8.95228610038758,
+        "loss": 0.846581220626831
+      },
+      {
+        "step": 2000,
+        "validation_p95_px": 8.98160610198975,
+        "loss": 0.65562903881073
+      },
+      {
+        "step": 2250,
+        "validation_p95_px": 8.87742681503296,
+        "loss": 0.9837158918380737
+      },
+      {
+        "step": 2500,
+        "validation_p95_px": 8.859612655639657,
+        "loss": 0.4907667934894562
+      },
+      {
+        "step": 2750,
+        "validation_p95_px": 8.899839544296269,
+        "loss": 0.5127949714660645
+      },
+      {
+        "step": 3000,
+        "validation_p95_px": 8.898313331604008,
+        "loss": 0.5566747784614563
+      },
+      {
+        "step": 3250,
+        "validation_p95_px": 8.91487278938294,
+        "loss": 0.5857517719268799
+      },
+      {
+        "step": 3500,
+        "validation_p95_px": 8.886444520950327,
+        "loss": 0.6431387066841125
+      },
+      {
+        "step": 3750,
+        "validation_p95_px": 8.92070817947388,
+        "loss": 0.5456461310386658
+      },
+      {
+        "step": 4000,
+        "validation_p95_px": 8.883220767974857,
+        "loss": 0.34088966250419617
+      },
+      {
+        "step": 4250,
+        "validation_p95_px": 8.859805965423588,
+        "loss": 0.8082658052444458
+      },
+      {
+        "step": 4500,
+        "validation_p95_px": 8.844387292861938,
+        "loss": 0.7455617189407349
+      },
+      {
+        "step": 4750,
+        "validation_p95_px": 8.871325159072882,
+        "loss": 0.783093273639679
+      },
+      {
+        "step": 5000,
+        "validation_p95_px": 8.844423437118532,
+        "loss": 0.43603840470314026
+      }
+    ]
+  },
+  "p_vs_b_p95_relative_reduction": -0.04703778874674147,
+  "t_vs_b_p95_relative_reduction": -0.010943097753444153,
+  "t_vs_p_temporal_p95_relative_reduction": 0.012388285289822276,
+  "next_step": "停止并归档本固定版本；不第二次训练，不进入A02/H02，不据此否定所有学习精化。",
+  "measurement_artifact_verification": {
+    "passed": true,
+    "arms": [
+      {
+        "arm": "B",
+        "observations": 209862,
+        "identity_time_q_sigma_exact": true,
+        "pixel_normalized_velocity_consistent": true,
+        "invalid_patch_zero": true,
+        "recomputed_p95_px": 1.6135649681091309
+      },
+      {
+        "arm": "P",
+        "observations": 209862,
+        "identity_time_q_sigma_exact": true,
+        "pixel_normalized_velocity_consistent": true,
+        "invalid_patch_zero": true,
+        "recomputed_p95_px": 1.689463496208191
+      },
+      {
+        "arm": "T",
+        "observations": 209862,
+        "identity_time_q_sigma_exact": true,
+        "pixel_normalized_velocity_consistent": true,
+        "invalid_patch_zero": true,
+        "recomputed_p95_px": 1.6312223672866821
+      }
+    ],
+    "birth_valid_labels": 84061,
+    "valid_labels": 166791,
+    "unchanged_model_from_base": true,
+    "scope": "saved simulation observation artifacts; no ROS bag or real physical timestamps tested"
+  },
+  "learning_curves": "learning_curves.csv (42 fixed validation checkpoints); complete 5001-row per-arm curves retained at training paths",
+  "interpretation": {
+    "confirmed": "训练完成；T未通过原测量门，P/T总体测试p95均劣于B；较老轨迹年龄组可见坐标p95下降，不能据此声称总体有效。",
+    "temporal_increment": "T相对P时序变化p95下降1.2388%，低于5%门，时序项的要求增益未获支持。",
+    "system": "Not evaluated. 原进入条件未满足，新VINS=0，未开展真实feature-bag适配/回放。",
+    "scope": "TartanAir通用三维模拟；不构成水下实测证据。旧MIMIR SUPERVISION_UNAVAILABLE保持。"
+  }
 }

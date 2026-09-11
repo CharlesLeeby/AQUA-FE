@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "arms": [
+    {
+      "arm": "B",
+      "observations": 209862,
+      "identity_time_q_sigma_exact": true,
+      "pixel_normalized_velocity_consistent": true,
+      "invalid_patch_zero": true,
+      "recomputed_p95_px": 1.6135649681091309
+    },
+    {
+      "arm": "P",
+      "observations": 209862,
+      "identity_time_q_sigma_exact": true,
+      "pixel_normalized_velocity_consistent": true,
+      "invalid_patch_zero": true,
+      "recomputed_p95_px": 1.689463496208191
+    },
+    {
+      "arm": "T",
+      "observations": 209862,
+      "identity_time_q_sigma_exact": true,
+      "pixel_normalized_velocity_consistent": true,
+      "invalid_patch_zero": true,
+      "recomputed_p95_px": 1.6312223672866821
+    }
+  ],
+  "birth_valid_labels": 84061,
+  "valid_labels": 166791,
+  "unchanged_model_from_base": true,
+  "scope": "saved simulation observation artifacts; no ROS bag or real physical timestamps tested"
+}

@@ -1,6 +1,6 @@
 # Project Context
 
-Last updated: 2026-09-07
+Last updated: 2026-09-12
 
 ## Research Topic
 
@@ -371,3 +371,7 @@ Fixed MIMIR training candidates could not supply verified metric multi-frame lab
 
 ### 2026-09-12 — User-authorized TartanAir V1 supervision substitution
 Continue the same temporal-refinement algorithm from39d1662 in independent branch/worktree. New fixedfour-scene data split under papers/frontend_temporal_observation_refinement_tartanair_v1. MIMIR oldSUPERVISION_UNAVAILABLE remains; no furtherMIMIR probing. ActualP/T training then unchanged measurement/system gates are the priority; no underwater claim fromTartanAir.
+
+
+## 2026-09-12 — Alternative-supervision temporal refinement completed and stopped
+User-authorized TartanAirV1 source replacement completed, algorithm unchanged from39d1662. Actual train279305 valid labels/68302 tracks; P/T each5000 updates once, validation-best checkpoints4000/4500. Fixed endofworld/Easy/P000[0,600) test166791 valid labels/84061 tracks, same209862 B observations: EPEp95 B/P/T1.6136/1.6895/1.6312px. T/P temporal improvement1.24%<5%, T/B coordinatep95 and final100-frame-block no-harm fail. Decision NO_TEMPORAL_REFINEMENT_GAIN; newVINS0. Usable cache generator and trained weights exist, but no overall simulated improvement or underwater-system benefit established. Some older-age coordinate improvements retained; do not generalize failure to all learned refinement. Original MIMIR SUPERVISION_UNAVAILABLE and all prior SEA-RAFT stops remain unchanged. Current task next step: stop/archive this fixed version, no retrain or backend. Entry docs/CODEX_HANDOFF_TEMPORAL_OBSERVATION_REFINEMENT.md; report papers/frontend_temporal_observation_refinement_tartanair_v1/report.md; artifacts /mnt/data/AQUA-FE_WS/experiments/temporal_refinement_tartanair_v1. This is a bounded authorized research branch, not promotion to the protected main frontend method.

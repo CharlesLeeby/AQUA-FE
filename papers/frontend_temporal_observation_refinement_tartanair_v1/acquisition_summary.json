@@ -1,0 +1,48 @@
+{
+  "source": "official TartanAir V1 selected members only",
+  "complete": true,
+  "files": 9414,
+  "bytes": 7738506200,
+  "sequences": [
+    {
+      "sequence": "abandonedfactory/Easy/P000",
+      "files": 3603,
+      "bytes": 2959313690,
+      "modalities": {
+        "image_left": 1200,
+        "depth_left": 1200,
+        "flow": 1202
+      }
+    },
+    {
+      "sequence": "amusement/Easy/P001",
+      "files": 2205,
+      "bytes": 1812751618,
+      "modalities": {
+        "image_left": 734,
+        "depth_left": 734,
+        "flow": 736
+      }
+    },
+    {
+      "sequence": "carwelding/Easy/P001",
+      "files": 1803,
+      "bytes": 1483170157,
+      "modalities": {
+        "image_left": 600,
+        "depth_left": 600,
+        "flow": 602
+      }
+    },
+    {
+      "sequence": "endofworld/Easy/P000",
+      "files": 1803,
+      "bytes": 1483270735,
+      "modalities": {
+        "image_left": 600,
+        "depth_left": 600,
+        "flow": 602
+      }
+    }
+  ]
+}
