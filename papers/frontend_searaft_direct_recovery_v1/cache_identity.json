@@ -1,0 +1,18 @@
+{
+  "base_commit": "1138fab635910d3e1c34d57f99dab84c6ff8e9f5",
+  "cache_rule": "same frozen input bag and adjacent raw stamps; exact coordinate key, no ID or spatial-neighbor approximation",
+  "coordinates": "original raw pixels",
+  "inputs": {
+    "A02": {
+      "input_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_same_backend_confirmatory_v3/prepared/a02_0_900/input.bag",
+      "sha256": "ab0fa69eddce3bde6cb03efecf3c4fcafdd3d66e53691b9a2eaa1f531ee660db"
+    },
+    "H02": {
+      "input_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_classical_opportunity_expansion_v1/prepared/coe1_h02_00000_00900/input.bag",
+      "sha256": "09ddfb8e9f5c80d2f2d1073737095812f9499dd710115577b3e971b0d9c87ae1"
+    }
+  },
+  "model_loading_sha256": "de8dcdb9ebc972a30c10a90aad9db9a6582480e79e07efd08b60a18f0a4edc45",
+  "old_runtime": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1",
+  "preprocessing": "raw mono8 repeated to RGB; official scale -1"
+}

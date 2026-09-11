@@ -102,7 +102,7 @@ def backend_stats(target):
     return result
 
 
-def evaluate(w,arms,backend):
+def evaluate(w,arms,backend,target_paths=None):
     name='all_four' if len(arms)==4 else arms[0]+'_vs_'+arms[1]
     out=PAPER/'common_support'/w['run_slug']/name
     targets=[(arm,r) for arm in arms for r in range(1,4)]
@@ -119,7 +119,7 @@ def evaluate(w,arms,backend):
                  '--output-dir',str(out),'--run-evo']
         input_hashes={}
         for arm,r in targets:
-            target=RUNTIME/'backend'/w['run_slug']/arm/f'repeat{r}'
+            target=(target_paths or {}).get((arm,r),RUNTIME/'backend'/w['run_slug']/arm/f'repeat{r}')
             alias=arm+'_r'+str(r)
             command+=['--arm',alias+'='+str(target/'vins_output/vio.csv'),'--arm-config',alias+'='+str(target/'vins.yaml')]
             input_hashes[str(target/'vins_output/vio.csv')]=sha(target/'vins_output/vio.csv')

@@ -18,6 +18,17 @@ def table(path,rows):
         w=csv.DictWriter(f,fieldnames=list(dict.fromkeys(k for r in rows for k in r)));w.writeheader();w.writerows(rows)
 
 
+def non_feature_digest(path):
+    import rosbag
+    digest=hashlib.sha256()
+    with rosbag.Bag(str(path)) as bag:
+        topics=[t for t in bag.get_type_and_topic_info().topics if t!=FEATURE]
+        for topic,msg,stamp in bag.read_messages(topics=topics):
+            payload=io.BytesIO();msg.serialize(payload)
+            digest.update(topic.encode()+b'\0'+str(stamp.to_nsec()).encode()+b'\0'+payload.getvalue())
+    return digest.hexdigest()
+
+
 def freeze():
     import rosbag
     RT.mkdir(exist_ok=False);(RT/'tmp').mkdir()
@@ -63,6 +74,17 @@ class Predictor:
             self.old[(r['sequence'],int(r['raw_index']),int(r['stamp_ns']),float(r['previous_x']),float(r['previous_y']))]=r
         self.counts=Counter();self.timing=[]
 
+    def load_model(self):
+        if self.model is None:
+            import torch
+            from uw_frontend.matchers.searaft_points import SeaRaftPoints
+            torch.set_num_threads(1);torch.manual_seed(20260909);torch.backends.cudnn.benchmark=False
+            torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False
+            self.model=SeaRaftPoints(SOURCE/'official_SEA-RAFT',SOURCE/'model')
+            lock=json.loads((ROOT/'papers/frontend_searaft_screening_v1/model_lock.json').read_text())
+            assert self.model.config==lock['inference_config'] and self.model.loading['local_pth_sha256']==lock['loading']['local_pth_sha256']
+            save(RT/'model_loading.json',dict(loading=self.model.loading,config=self.model.config))
+
     def __call__(self,previous,current,points):
         if self.cache_only:
             path=RT/'network'/self.sequence/(str(self.raw_index)+'.npz')
@@ -81,15 +103,7 @@ class Predictor:
             result=dict(points=np.asarray([[float(r['S_x']),float(r['S_y'])] for r in found]),fb_error=np.asarray([float(r['S_fb']) for r in found]))
             self.reused_pairs+=1;mode='REUSED_SPARSE_EXACT_QUERY'
         else:
-            if self.model is None:
-                import torch
-                from uw_frontend.matchers.searaft_points import SeaRaftPoints
-                torch.set_num_threads(1);torch.manual_seed(20260909);torch.backends.cudnn.benchmark=False
-                torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False
-                self.model=SeaRaftPoints(SOURCE/'official_SEA-RAFT',SOURCE/'model')
-                lock=json.loads((ROOT/'papers/frontend_searaft_screening_v1/model_lock.json').read_text())
-                assert self.model.config==lock['inference_config'] and self.model.loading['local_pth_sha256']==lock['loading']['local_pth_sha256']
-                save(RT/'model_loading.json',dict(loading=self.model.loading,config=self.model.config))
+            self.load_model()
             result=self.model.predict_points(previous,current,points)
             self.new_pairs+=1;mode='NEW_REQUIRED_QUERY_SET'
         self.counts[self.sequence,mode]+=1
@@ -101,7 +115,7 @@ class Predictor:
         return result
 
 
-def frontend(cache_only=False):
+def frontend(cache_only=False,arm_names=('B','C','R'),contrast=('C','R'),provider_factory=Predictor):
     import rosbag
     from cv_bridge import CvBridge
     from uw_frontend.ros.export_vins_features import _image_msg_to_gray,_preprocess_gray,_load_pinhole_camera,_tracks_to_vins_pointcloud
@@ -110,10 +124,10 @@ def frontend(cache_only=False):
     from uw_frontend.tracking.searaft_system_recovery import SeaRaftSystemTracker
     from audit_additive_budget_capacity import audit_bag
     cv2.setNumThreads(1);np.random.seed(20260909)
-    conf=json.loads((PAPER/'input_manifest.json').read_text());provider=Predictor(cache_only);summaries=[]
+    conf=json.loads((PAPER/'input_manifest.json').read_text());provider=provider_factory(cache_only);summaries=[]
     for w in conf['windows']:
         seq=w['sequence'];folder=RT/'frontend'/w['run_slug'];folder.mkdir(parents=True,exist_ok=False)
-        camera=_load_pinhole_camera(Path(w['camera']));trackers={a:SeaRaftSystemTracker(a,KltConfig(**conf['klt']),provider if a=='R' else None) for a in ['B','C','R']}
+        camera=_load_pinhole_camera(Path(w['camera']));trackers={a:SeaRaftSystemTracker(a,KltConfig(**conf['klt']),provider if a in ('R','D') else None) for a in arm_names}
         clouds={a:{} for a in trackers};previous_public={a:set() for a in trackers};ended={a:set() for a in trackers}
         events=[];active={a:defaultdict(list) for a in trackers};frames=[];public_rows=[];preprocessing=0.;start=time.perf_counter();previous_stamp=None
         old_clouds={}
@@ -146,12 +160,13 @@ def frontend(cache_only=False):
                         cloud=_tracks_to_vins_pointcloud(tracks,msg.header.stamp,camera,dt,**conf['backend_quality'])
                         assert len(cloud.points)==len(tracks) and len(tracks)<=350
                         assert np.isfinite(tracks.points).all()
+                        assert all(np.isfinite(c.values).all() for c in cloud.channels), 'Non-finite export channel'
                         clouds[arm][stamp]=cloud
                         for tid in live:
                             for e in active[arm].get(tid,[]):e['public_observations_after']+=1
                         for j,tid in enumerate(tracks.ids):
                             public_rows.append(dict(sequence=seq,arm=arm,raw_index=i,stamp_ns=stamp,track_id=int(tid),x=float(tracks.points[j,0]),y=float(tracks.points[j,1]),age=int(tracks.ages[j]),has_S_history=any(e['source']=='S' for e in active[arm].get(int(tid),[]))))
-                if not (np.array_equal(current['C'].points[current['C'].ages==1],current['R'].points[current['R'].ages==1])):gftt_diff+=1
+                if not (np.array_equal(current[contrast[0]].points[current[contrast[0]].ages==1],current[contrast[1]].points[current[contrast[1]].ages==1])):gftt_diff+=1
                 if publish:
                     def serial(m):
                         f=io.BytesIO();m.serialize(f);return f.getvalue()
@@ -160,27 +175,28 @@ def frontend(cache_only=False):
                     for k in ['id','p_u','p_v']:
                         if not np.array_equal(np.asarray(bc[k],np.float32),np.asarray(nc[k],np.float32)):baseline_mismatch[k]+=1
                     if serial(b)!=serial(baseline):baseline_mismatch['serialized']+=1
-                    if serial(clouds['C'][stamp])!=serial(clouds['R'][stamp]):diff_CR+=1
+                    if serial(clouds[contrast[0]][stamp])!=serial(clouds[contrast[1]][stamp]):diff_CR+=1
                     previous_stamp=msg.header.stamp.to_sec()
                 if i%100==0:print('CACHED_EXPORT_PROGRESS' if cache_only else 'FRONTEND_PROGRESS',seq,i,'S_recovered',sum(e['source']=='S' for e in events),'historical_new_pairs' if cache_only else 'new_network_pairs',provider.new_pairs,flush=True)
         assert i>=899 and len(clouds['B'])==450
         table(folder/'recovery_events.csv',events) if events else (folder/'recovery_events.csv').write_text('sequence,arm,raw_index,stamp_ns,track_id,source,public_observations_after,termination\n')
         table(folder/'frames.csv',frames);table(folder/'public_tracks.csv',public_rows);table(RT/'network_timing.csv',provider.timing)
-        arms={}
+        arms={};non_feature_identity=non_feature_digest(w['baseline_bag'])
         for arm in trackers:
             output=folder/(arm+'.bag')
             with rosbag.Bag(w['baseline_bag']) as oldbag,rosbag.Bag(str(output),'w') as newbag:
                 for topic,msg,t in oldbag.read_messages():
                     if topic==FEATURE:msg=clouds[arm][msg.header.stamp.to_nsec()]
                     newbag.write(topic,msg,t)
-            arms[arm]=dict(feature_bag=str(output),sha256=sha(output))
+            assert non_feature_digest(output)==non_feature_identity, 'Non-feature messages changed'
+            arms[arm]=dict(feature_bag=str(output),sha256=sha(output),non_feature_sha256=non_feature_identity)
             ee=[e for e in events if e['arm']==arm]
             ff=[r for r in frames if r['arm']==arm]
             summaries.append(dict(sequence=seq,arm=arm,raw_frames=900,public_frames=450,C_recoveries=sum(e['source']=='C' for e in ee),S_recoveries=sum(e['source']=='S' for e in ee),
                 S_recoveries_public_ge1=sum(e['source']=='S' and e['public_observations_after']>=1 for e in ee),S_recoveries_public_ge4=sum(e['source']=='S' and e['public_observations_after']>=4 for e in ee),
                 S_recovery_unique_ids=len({e['track_id'] for e in ee if e['source']=='S'}),frontend_wall_s=sum(r['wall_s'] for r in ff),shared_preprocessing_s=preprocessing,
-                network_new_pairs=provider.counts[seq,'NEW_REQUIRED_QUERY_SET'] if arm=='R' else 0,network_reused_pairs=provider.counts[seq,'REUSED_SPARSE_EXACT_QUERY'] if arm=='R' else 0,
-                forward_calls=2*provider.counts[seq,'NEW_REQUIRED_QUERY_SET'] if arm=='R' else 0,C_R_different_feature_frames=diff_CR,C_R_different_GFTT_frames=gftt_diff,baseline_mismatch=json.dumps(dict(baseline_mismatch)),physical_correctness='Unknown'))
+                network_new_pairs=provider.counts[seq,'NEW_REQUIRED_QUERY_SET'] if arm in ('R','D') else 0,network_reused_pairs=provider.counts[seq,'REUSED_SPARSE_EXACT_QUERY'] if arm in ('R','D') else 0,
+                forward_calls=2*provider.counts[seq,'NEW_REQUIRED_QUERY_SET'] if arm in ('R','D') else 0,**{'_'.join(contrast)+'_different_feature_frames':diff_CR,'_'.join(contrast)+'_different_GFTT_frames':gftt_diff},baseline_mismatch=json.dumps(dict(baseline_mismatch)),physical_correctness='Unknown'))
         capacity={arm:audit_bag(item['feature_bag']) for arm,item in arms.items()}
         assert all(c['status']=='PASS' for c in capacity.values())
         save(PAPER/'capacity'/(w['run_slug']+'.json'),dict(arms=capacity))
@@ -190,15 +206,15 @@ def frontend(cache_only=False):
             assert (folder/'recovery_events.csv').read_bytes()==(original/'recovery_events.csv').read_bytes()
             assert (folder/'public_tracks.csv').read_bytes()==(original/'public_tracks.csv').read_bytes()
             old_summary=list(csv.DictReader((RT/'pre_velocity_fix/recovery_summary.csv').open()))
-            for r in summaries[-3:]:
+            for r in summaries[-len(arm_names):]:
                 old_r=next(v for v in old_summary if v['sequence']==seq and v['arm']==r['arm'])
                 r['cached_reexport_wall_s']=r['frontend_wall_s']
                 r['frontend_wall_s']=float(old_r['frontend_wall_s'])
                 r['shared_preprocessing_s']=float(old_r['shared_preprocessing_s'])
-        save(folder/'receipt.json',dict(sequence=seq,arms=arms,C_R_different_feature_frames=diff_CR,baseline_mismatch=dict(baseline_mismatch),input_structural_pass=True,wall_s=time.perf_counter()-start,
+        save(folder/'receipt.json',dict(sequence=seq,arms=arms,**{'_'.join(contrast)+'_different_feature_frames':diff_CR},baseline_mismatch=dict(baseline_mismatch),input_structural_pass=True,wall_s=time.perf_counter()-start,
             recovery_events=str(folder/'recovery_events.csv'),public_tracks=str(folder/'public_tracks.csv')))
         table(PAPER/'recovery_summary.csv',summaries)
-        print('FRONTEND_COMPLETE',seq,json.dumps(summaries[-3:]),flush=True)
+        print('FRONTEND_COMPLETE',seq,json.dumps(summaries[-len(arm_names):]),flush=True)
     save(RT/'frontend_complete.json',dict(new_network_pairs=provider.new_pairs,reused_network_pairs=provider.reused_pairs,forward_calls=2*provider.new_pairs,model_loads=1 if cache_only else int(provider.model is not None),additional_inference_in_export_repair=0 if cache_only else None))
 
 

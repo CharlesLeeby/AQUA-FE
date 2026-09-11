@@ -30,4 +30,25 @@ class RecoveryTest(unittest.TestCase):
         tr.frame_index=3
         with self.assertRaises(ValueError):tr.process_raw(im,im,score_image_quality(im),5,5)
 
+class DirectRecoveryTest(unittest.TestCase):
+    def test_direct_never_calls_strong_lk_and_preserves_success(self):
+        im=np.random.RandomState(7).randint(0,256,(80,80),dtype=np.uint8)
+        old=np.array([[20,20],[35,35],[50,50]],np.float32)
+        ordinary=TrackSet(ids=np.array([10]),prev_points=old[:1].copy(),points=old[:1].copy(),ages=np.array([3]),fb_errors=np.zeros(1),ncc_scores=np.ones(1),local_texture=np.ones(1),qualities=np.ones(1),sources=['klt'])
+        def ordinary_step(tr,*args):
+            tr.points,tr.ids,tr.ages=ordinary.points.copy(),ordinary.ids.copy(),ordinary.ages.copy()
+            return ordinary
+        seen=[]
+        def predict(a,b,p):
+            seen.append(p.copy());return dict(points=p.copy(),fb_error=np.zeros(len(p)))
+        tr=SeaRaftSystemTracker('D',KltConfig(),predict)
+        tr.points=old.copy();tr.ids=np.array([10,11,12]);tr.ages=np.array([2,2,2]);tr.raw_previous=tr.raw_current=im;tr.frame_stats={}
+        with patch.object(KltTracker,'_track_existing',ordinary_step),patch('uw_frontend.tracking.searaft_system_recovery.strong_lk',side_effect=AssertionError('D executed strong LK')):
+            result=tr._track_existing(im,im,score_image_quality(im))
+        np.testing.assert_array_equal(seen[0],old[1:])
+        np.testing.assert_array_equal(result.points,old)
+        np.testing.assert_array_equal(result.ids,[10,11,12])
+        np.testing.assert_array_equal(result.qualities[:1],ordinary.qualities)
+        self.assertEqual([e['source'] for e in tr.events],['S','S'])
+
 if __name__=='__main__':unittest.main()

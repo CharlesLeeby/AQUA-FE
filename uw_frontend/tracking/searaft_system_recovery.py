@@ -28,7 +28,7 @@ def recovery_tracks(points, ids, ages, predicted, fb, ncc, accepted, cur, qualit
 class SeaRaftSystemTracker(KltTracker):
     def __init__(self, arm, config, predictor=None):
         super().__init__(config)
-        if arm not in ('B','C','R'):
+        if arm not in ('B','C','R','D'):
             raise ValueError(arm)
         self.arm, self.predictor = arm, predictor
         self.raw_previous = self.raw_current = None
@@ -42,7 +42,7 @@ class SeaRaftSystemTracker(KltTracker):
             raise ValueError('Recovery requires adjacent raw frames and strictly increasing stamps')
         self.raw_current = raw
         self.events = []
-        self.frame_stats = dict(ordinary_failed=0,C_recovered=0,S_attempted=0,S_recovered=0,C_seconds=0.,S_seconds=0.)
+        self.frame_stats = dict(ordinary_failed=0,C_recovered=0,S_attempted=0,S_recovered=0,C_seconds=0.,S_seconds=0.,strong_lk_calls=0)
         result = super().process(processed,quality)
         self.raw_previous = raw
         self.frame_index, self.stamp_ns = frame_index, stamp_ns
@@ -57,16 +57,20 @@ class SeaRaftSystemTracker(KltTracker):
         if self.arm=='B' or not np.any(lost):
             return ordinary
         p, ti, age = old[lost],ids[lost],ages[lost]
-        cx, cf, seconds = strong_lk(previous,current,p,np.ones(2))
-        ce = check_correspondence_evidence(self.raw_previous,self.raw_current,p,cx)
-        ca = common_mask(p,cx,cf,current.shape)&ce['evidence_accepted']
-        recovered = recovery_tracks(p,ti,age,cx,cf,ce['ncc'],ca,current,quality,self.config)
-        self.frame_stats.update(C_recovered=len(recovered),C_seconds=seconds)
-        for j in np.flatnonzero(ca):
-            self.events.append(dict(track_id=int(ti[j]),source='C',previous_x=float(p[j,0]),previous_y=float(p[j,1]),
-                x=float(cx[j,0]),y=float(cx[j,1]),fb=float(cf[j]),ncc=float(ce['ncc'][j]),physical_correctness='Unknown'))
-        combined = self._append_tracks(ordinary,recovered)
-        if self.arm=='R' and np.any(~ca):
+        ca = np.zeros(len(p),dtype=bool)
+        combined = ordinary
+        if self.arm!='D':
+            cx, cf, seconds = strong_lk(previous,current,p,np.ones(2))
+            ce = check_correspondence_evidence(self.raw_previous,self.raw_current,p,cx)
+            ca = common_mask(p,cx,cf,current.shape)&ce['evidence_accepted']
+            recovered = recovery_tracks(p,ti,age,cx,cf,ce['ncc'],ca,current,quality,self.config)
+            self.frame_stats.update(C_recovered=len(recovered),C_seconds=seconds)
+            for j in np.flatnonzero(ca):
+                self.events.append(dict(track_id=int(ti[j]),source='C',previous_x=float(p[j,0]),previous_y=float(p[j,1]),
+                    x=float(cx[j,0]),y=float(cx[j,1]),fb=float(cf[j]),ncc=float(ce['ncc'][j]),physical_correctness='Unknown'))
+            combined = self._append_tracks(ordinary,recovered)
+            self.frame_stats['strong_lk_calls'] = 1
+        if self.arm in ('R','D') and np.any(~ca):
             remain = ~ca
             tick = time.perf_counter()
             s = self.predictor(self.raw_previous,self.raw_current,p[remain])
