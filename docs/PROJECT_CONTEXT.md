@@ -359,3 +359,7 @@ The user prioritized a finite system experiment over completing92-point annotati
 
 ## 2026-09-11 — Direct SEA-RAFT recovery deletion ablation closed
 User-authorized direct_recovery_v1 completed12fresh B/D replays on H02/A02 raw[0,900). D deletes strongLK without other method changes. Decision UNSAFE_OR_UNRESOLVED: H02 benefit lost (D/B medianAPE0.350326/0.102702m); A02 improves over oldR but remains severe loss to freshB (0.506198/0.145545m). All D repeats worse than worst respectiveB; input/receive/common-support checks pass. Current SEA-RAFT same-frame recovery combination line is closed: no automatic threshold/order/model/window changes or annotation. Entry docs/CODEX_HANDOFF_SEARAFT_DIRECT_RECOVERY.md. Old18-run UNSAFE_OR_UNRESOLVED and CONTROLLED_GAIN_ONLY/EVIDENCE_GATE_NOT_SUPPORTED/REFERENCE_PENDING remain frozen. This is development evidence with proxy/initialization/GFTT and cross-batch limits, not general proof about all learned measurements.
+
+
+### 2026-09-11 — Authorized new bounded coordinate-refinement prototype
+User starts temporal observation refinement v1 in isolated worktree from a743558. Same KLT IDs/observations, P/T fixed small model, MIMIR-only supervision first; A02/H02 ≤18 replays only after measurement gate. All previous SEA-RAFT stop conclusions remain. See docs/CODEX_HANDOFF_TEMPORAL_OBSERVATION_REFINEMENT.md. No validated gain yet; Not evaluated.

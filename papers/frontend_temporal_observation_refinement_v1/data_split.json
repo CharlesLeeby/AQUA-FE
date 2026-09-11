@@ -1,0 +1,55 @@
+{
+  "selection_rule": "Sort scene names lexicographically, first two scenes train, third validation, fourth test; first lexicographic complete RGB+pose+calibration sequence per scene. No outcome-based fallback if supervision unavailable.",
+  "scope": "cross-scene within MIMIR-UW; no real held-out claim",
+  "deduplication": "only identical timestamp/file duplicates, before indexing",
+  "sequences": [
+    {
+      "role": "train",
+      "sequence": "OceanFloor/track0_dark",
+      "camera": "cam0",
+      "start_index": 0,
+      "end_index": 1200,
+      "stride": 1,
+      "source": "/mnt/data/AQUA-FE_WS/datasets/mimir_uw/slam_subset/OceanFloor/track0_dark/auv0/rgb/cam0/data.csv",
+      "source_sha256": "eebd005e854f3703de3c1fbf3011c8d9c6bdfa4de33ffc5e21435233a4b2cc42",
+      "supervision_status": "pending depth/segmentation retrieval and geometry validation"
+    },
+    {
+      "role": "train",
+      "sequence": "SandPipe/track0_dark",
+      "camera": "cam0",
+      "start_index": 0,
+      "end_index": 1200,
+      "stride": 1,
+      "source": "/mnt/data/AQUA-FE_WS/datasets/mimir_uw/slam_subset/SandPipe/track0_dark/auv0/rgb/cam0/data.csv",
+      "source_sha256": "d402fef3e6d1f69762b2b827f17464c42b2b968a4cb59c80bc6896fa8ad61218",
+      "supervision_status": "pending depth/segmentation retrieval and geometry validation"
+    },
+    {
+      "role": "validation",
+      "sequence": "SeaFloor/track0",
+      "camera": "cam0",
+      "start_index": 0,
+      "end_index": 600,
+      "stride": 1,
+      "source": "/mnt/data/AQUA-FE_WS/datasets/mimir_uw/slam_subset/SeaFloor/track0/auv0/rgb/cam0/data.csv",
+      "source_sha256": "392396c751cae4e936f8979edf3985cd038d62a2b6a234b18cd85c07a2e03c22",
+      "supervision_status": "pending depth/segmentation retrieval and geometry validation"
+    },
+    {
+      "role": "test",
+      "sequence": "SeaFloor_Algae/track0",
+      "camera": "cam0",
+      "start_index": 0,
+      "end_index": 600,
+      "stride": 1,
+      "source": "/mnt/data/AQUA-FE_WS/datasets/mimir_uw/slam_subset/SeaFloor_Algae/track0/auv0/rgb/cam0/data.csv",
+      "source_sha256": "e90eaa57c0d53605b46b20aaaf1f630d4c0528b9433bf43ab59fc1678532b167",
+      "supervision_status": "pending depth/segmentation retrieval and geometry validation"
+    }
+  ],
+  "excluded_from_training": [
+    "A02",
+    "H02"
+  ]
+}

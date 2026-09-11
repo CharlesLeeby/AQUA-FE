@@ -1344,3 +1344,18 @@ Objective/motivation: test whether removing strong LK retains H02 benefit and av
 - Failed attempts: no failed formal export/replay or re-run. Earlier pre-execution editing corrections are recorded in protocol entry. No serialization repair/new inference repeat.
 - Qualitative/known issues: removing LK worsens H02 versus oldR, improves A02 versus oldR but remains severe loss to fresh B. B variation and old-batch differences retained; per-point correctnessUnknown, proxy/initialization/GFTT limits. Existing residual logs confirm recovered-history ID participation, not per-event causal contribution.
 - Interpretation/next: UNSAFE_OR_UNRESOLVED. Close current SEA-RAFT same-frame recovery combination line; no parameter/window/model/order/gate expansion or annotation. Old results unchanged. Detailed evidence: papers/frontend_searaft_direct_recovery_v1/report.md,results.csv,comparison.csv,recovery_summary.csv.
+
+
+## 2026-09-11 — Temporal observation refinement v1 protocol freeze
+- Task objective: test bounded learned coordinate correction on an unchanged KLT observation set.
+- Problem / motivation: user requests a runnable small learning method with verified simulation supervision and conditional system evidence; old recovery line remains closed.
+- Files changed: task_instructions.md, protocol.md, data_split.json, decision.json, report.md, task handoff and project logs.
+- Implementation: isolated worktree from a743558; verbatim request saved first; fixed four scene split and one P/T experiment.
+- Technical decisions: same KLT stream; zero initialized bounded head; temporal error difference loss; no backend before measurement gate.
+- Experiments performed: Not evaluated. Read-only local MIMIR inventory and official remote ZIP range probe.
+- Quantitative results: training 0 updates, backend 0 replays; local depth/segmentation imagery absent in old SLAM subset.
+- Qualitative observations: original workspace is dirty and untouched; official range endpoint available.
+- Failed attempts: none at protocol stage.
+- Known issues: depth convention, semantic mapping, and pose-camera geometry need verification before labels.
+- Interpretation: Hypothesis / Inference only, no established drift cause or learned effectiveness.
+- Next steps: inspect/download only fixed sequence required supervision; stop if unverifiable.

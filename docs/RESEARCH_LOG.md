@@ -1096,3 +1096,18 @@ Current conclusion/open questions: this combination fails the finite development
 Research question/hypothesis: removing strong LK before SEA-RAFT might retain H02 gain and remove A02 severe harm. Motivation: answer one system-design question through deletion, with no changed gates/model/reliability. Baseline fresh original KLT; D sends ordinary failures directly to frozen SEA-RAFT and advances its own causal trajectory/GFTT. Assumptions/failure cases: strong LK may select a different survival set; false recovery, altered GFTT and initialization remain possible, physical truthUnknown.
 Confirmed facts:12fresh B/D replays complete; D/B medianAPE H02 0.350326/0.102702m,A02 0.506198/0.145545m. Every D repeat has higherAPE/RPE than worst corresponding B. OldR re-evaluation H02 0.026602m,A02 1.157391m: deletion loses H02 gain, alleviates A02 old harm but not net loss to freshB. Recovery10360/71events reaches public support10214/44; input/receive/common-support gates pass. See direct_recovery_v1 report/results/comparison.
 Interpretation: UNSAFE_OR_UNRESOLVED; the proposed deletion does not solve the design problem. Exact causal reason remainsUnknown because initialization and futureGFTT are not isolated; event count or residual participation is not a substitute for system gain. Cross-batch comparisons cannot independently isolate LK causality. Current conclusion: close this SEA-RAFT same-frame recovery combination line; preserve all old negative/reference results. Open question: general learned-measurement utility is not settled by two development windows. Next experiment: none; no automatic order/gate/model/window search or annotation.
+
+
+## 2026-09-11 — New authorized temporal observation refinement hypothesis
+- Research question: can bounded coordinate correction on identical KLT tracks improve real correspondence error and fixed VINS?
+- Hypothesis: temporal error supervision reduces accumulated measurement error beyond per-frame supervision.
+- Motivation: user closes same-frame recovery and requests a small supervised prototype.
+- Related baseline: unchanged B KLT; P same network with per-frame supervision only; KLTNet prior reference-patch refinement.
+- Proposed idea: zero initialized shared patch residual encoder, fixed ±2px per-axis corrections; T adds error-difference loss.
+- Why it might work: fixed identity reference may retain information lost in successive KLT updates (Hypothesis / Inference).
+- Assumptions: trustworthy static 3D correspondence, causal inputs, no feedback to B state.
+- Potential failure cases: incorrect depth/pose semantics, occlusion, nonrigid algae, baseline errors beyond range, sim-to-real gap.
+- Evidence: Confirmed fact: local MIMIR subset omitted depth/segmentation. Official sources describe available depth and segmentation; verification pending.
+- Current conclusion: no effectiveness conclusion; all previous stop decisions remain.
+- Open questions: valid supervision and independent sequence gain.
+- Next experiment: frozen protocol in papers/frontend_temporal_observation_refinement_v1/protocol.md.
