@@ -53,14 +53,28 @@ def freeze():
 
 
 class Predictor:
-    def __init__(self):
+    def __init__(self,cache_only=False):
         self.model=None;self.new_pairs=self.reused_pairs=0;self.sequence=None;self.raw_index=None;self.stamp_ns=None
+        self.cache_only=cache_only
+        if cache_only:
+            self.previous_timing={(r['sequence'],int(r['raw_index'])):r for r in csv.DictReader((RT/'pre_velocity_fix/network_timing.csv').open())}
         self.old={}
         for r in csv.DictReader((ROOT/'papers/frontend_searaft_screening_v1/natural_results.csv').open()):
             self.old[(r['sequence'],int(r['raw_index']),int(r['stamp_ns']),float(r['previous_x']),float(r['previous_y']))]=r
         self.counts=Counter();self.timing=[]
 
     def __call__(self,previous,current,points):
+        if self.cache_only:
+            path=RT/'network'/self.sequence/(str(self.raw_index)+'.npz')
+            with np.load(path) as saved:
+                assert np.array_equal(points,saved['previous_points']), 'Cached query set must match exactly; inference prohibited'
+                result=dict(points=saved['predicted_points'].copy(),fb_error=saved['fb_error'].copy())
+            row=self.previous_timing[self.sequence,self.raw_index]
+            assert int(row['stamp_ns'])==self.stamp_ns
+            self.timing.append(row);self.counts[self.sequence,row['mode']]+=1
+            self.new_pairs+=row['mode']=='NEW_REQUIRED_QUERY_SET'
+            self.reused_pairs+=row['mode']=='REUSED_SPARSE_EXACT_QUERY'
+            return result
         found=[self.old.get((self.sequence,self.raw_index,self.stamp_ns,float(p[0]),float(p[1]))) for p in points]
         tick=time.perf_counter()
         if all(r is not None for r in found):
@@ -87,7 +101,7 @@ class Predictor:
         return result
 
 
-def frontend():
+def frontend(cache_only=False):
     import rosbag
     from cv_bridge import CvBridge
     from uw_frontend.ros.export_vins_features import _image_msg_to_gray,_preprocess_gray,_load_pinhole_camera,_tracks_to_vins_pointcloud
@@ -96,7 +110,7 @@ def frontend():
     from uw_frontend.tracking.searaft_system_recovery import SeaRaftSystemTracker
     from audit_additive_budget_capacity import audit_bag
     cv2.setNumThreads(1);np.random.seed(20260909)
-    conf=json.loads((PAPER/'input_manifest.json').read_text());provider=Predictor();summaries=[]
+    conf=json.loads((PAPER/'input_manifest.json').read_text());provider=Predictor(cache_only);summaries=[]
     for w in conf['windows']:
         seq=w['sequence'];folder=RT/'frontend'/w['run_slug'];folder.mkdir(parents=True,exist_ok=False)
         camera=_load_pinhole_camera(Path(w['camera']));trackers={a:SeaRaftSystemTracker(a,KltConfig(**conf['klt']),provider if a=='R' else None) for a in ['B','C','R']}
@@ -126,7 +140,9 @@ def frontend():
                     if publish:
                         assert not live.intersection(ended[arm]),'Publicly ended ID resurrected'
                         ended[arm]|=previous_public[arm]-live;previous_public[arm]=live
-                        dt=None if previous_stamp is None else (stamp-previous_stamp)*1e-9
+                        # Match original export's ROS epoch float subtraction,
+                        # including its rounding, rather than integer-ns dt.
+                        dt=None if previous_stamp is None else max(1e-6,msg.header.stamp.to_sec()-previous_stamp)
                         cloud=_tracks_to_vins_pointcloud(tracks,msg.header.stamp,camera,dt,**conf['backend_quality'])
                         assert len(cloud.points)==len(tracks) and len(tracks)<=350
                         assert np.isfinite(tracks.points).all()
@@ -145,7 +161,7 @@ def frontend():
                         if not np.array_equal(np.asarray(bc[k],np.float32),np.asarray(nc[k],np.float32)):baseline_mismatch[k]+=1
                     if serial(b)!=serial(baseline):baseline_mismatch['serialized']+=1
                     if serial(clouds['C'][stamp])!=serial(clouds['R'][stamp]):diff_CR+=1
-                    previous_stamp=stamp
+                    previous_stamp=msg.header.stamp.to_sec()
                 if i%100==0:print('FRONTEND_PROGRESS',seq,i,'S_recovered',sum(e['source']=='S' for e in events),'new_network_pairs',provider.new_pairs,flush=True)
         assert i>=899 and len(clouds['B'])==450
         table(folder/'recovery_events.csv',events) if events else (folder/'recovery_events.csv').write_text('sequence,arm,raw_index,stamp_ns,track_id,source,public_observations_after,termination\n')
@@ -168,15 +184,25 @@ def frontend():
         capacity={arm:audit_bag(item['feature_bag']) for arm,item in arms.items()}
         assert all(c['status']=='PASS' for c in capacity.values())
         save(PAPER/'capacity'/(w['run_slug']+'.json'),dict(arms=capacity))
-        assert not any(baseline_mismatch[k] for k in ['id','p_u','p_v']), 'Original B coordinates/IDs differ; inspect before backend'
+        assert not baseline_mismatch, 'Original B serialization differs; inspect before backend'
+        if cache_only:
+            original=RT/'pre_velocity_fix/frontend'/w['run_slug']
+            assert (folder/'recovery_events.csv').read_bytes()==(original/'recovery_events.csv').read_bytes()
+            assert (folder/'public_tracks.csv').read_bytes()==(original/'public_tracks.csv').read_bytes()
+            old_summary=list(csv.DictReader((RT/'pre_velocity_fix/recovery_summary.csv').open()))
+            for r in summaries[-3:]:
+                old_r=next(v for v in old_summary if v['sequence']==seq and v['arm']==r['arm'])
+                r['cached_reexport_wall_s']=r['frontend_wall_s']
+                r['frontend_wall_s']=float(old_r['frontend_wall_s'])
+                r['shared_preprocessing_s']=float(old_r['shared_preprocessing_s'])
         save(folder/'receipt.json',dict(sequence=seq,arms=arms,C_R_different_feature_frames=diff_CR,baseline_mismatch=dict(baseline_mismatch),input_structural_pass=True,wall_s=time.perf_counter()-start,
             recovery_events=str(folder/'recovery_events.csv'),public_tracks=str(folder/'public_tracks.csv')))
         table(PAPER/'recovery_summary.csv',summaries)
         print('FRONTEND_COMPLETE',seq,json.dumps(summaries[-3:]),flush=True)
-    save(RT/'frontend_complete.json',dict(new_network_pairs=provider.new_pairs,reused_network_pairs=provider.reused_pairs,forward_calls=2*provider.new_pairs,model_loads=int(provider.model is not None)))
+    save(RT/'frontend_complete.json',dict(new_network_pairs=provider.new_pairs,reused_network_pairs=provider.reused_pairs,forward_calls=2*provider.new_pairs,model_loads=1 if cache_only else int(provider.model is not None),additional_inference_in_export_repair=0 if cache_only else None))
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('stage',choices=['freeze','frontend']);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('stage',choices=['freeze','frontend']);p.add_argument('--cached-export',action='store_true');a=p.parse_args()
     if a.stage=='freeze':freeze()
-    else:frontend()
+    else:frontend(a.cached_export)

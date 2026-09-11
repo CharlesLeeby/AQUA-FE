@@ -11,3 +11,5 @@
 **评价与停止。** 每窗B/C/R各3次，保留全部。主指标fixed-scale proper SE(3) APE RMSE；严格1秒平移RPE护栏；各比较6轨共同支撑≥30pose、≥10s、≥70%覆盖、≥10个严格1s pair，evo一致≤1e-6m。沿旧recovery协议：APE改善≥max(对照中位5%,.01m)且大于两臂最大极差；RPE增量≤max(对照中位5%,.005m,两臂RPE最大极差)。反向APE同门或RPE越界为损失；APE/RPE增量>max(对照10%,绝对下限,极差)或新失败为严重。每个R单次相对B与C各中位超过max(10%,.01m APE/.005m RPE)单列严重异常，不被中位掩盖；基线极差超过同10%/绝对阈值标不稳定并限制结论。
 
 必须分别R/B、R/C；支持不同的比较不混作同一绝对数。无R/C输入差异→NO_LEARNED_INTERVENTION；严重退化/新增失败/无效支持/明显不稳定→UNSAFE_OR_UNRESOLVED；至少一窗R同时胜B/C且另一窗均无实用损失/严重异常→PROMISING_SYSTEM_COMPONENT；只胜B未胜C→CLASSICAL_RECOVERY_EXPLAINS_GAIN；其余有效有干预→NO_SYSTEM_INCREMENT。不可运行保留具体原因，不以重试挑结果。完成固定矩阵立即停，不调整任何参数，不扩大或要求人工标注。逐点真实正确性Unknown，系统改善也不将其改为正确。
+
+导出实现修正（后端结果前）：原export使用 `feature_stamp.to_sec() - previous_public_stamp.to_sec()`。初次集成用了整数ns差转秒，导致速度通道末位不同。保留初次导出在runtime/pre_velocity_fix；所有已保存网络查询严格只读复用，再导出恢复原浮点时间口径。完整B序列必须逐字节匹配原baseline，恢复事件及公开ID/坐标必须与修正前相同。该修正不改变跟踪、模型、阈值或q，也不增加网络推理。修正的额外CPU耗时单列。
