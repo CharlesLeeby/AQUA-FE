@@ -1,0 +1,10 @@
+{
+  "status": "IN_PROGRESS",
+  "stage": "fixed_data_geometry_probe",
+  "prior_mimir_decision": "SUPERVISION_UNAVAILABLE",
+  "training_updates": {
+    "P": 0,
+    "T": 0
+  },
+  "new_backend_replays": 0
+}

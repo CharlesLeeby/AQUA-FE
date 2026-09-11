@@ -1126,3 +1126,18 @@ Interpretation: UNSAFE_OR_UNRESOLVED; the proposed deletion does not solve the d
 - Current conclusion: SUPERVISION_UNAVAILABLE for fixed candidates; zero valid labels means no temporal-refinement performance inference. Synthetic projection tests passed, real projections Not evaluated. Earlier SEA-RAFT closure untouched.
 - Open questions: usable metric decoding or corrected depth source and real camera-pose convention.
 - Next experiment: only after verified MIMIR correction, check actual static multi-frame projections; no automatic alternative dataset, parameter search or VINS replay.
+
+
+## 2026-09-12 — Authorized supervision-source substitution
+- Research question: unchanged bounded temporal coordinate refinement on KLT tracks.
+- Hypothesis: temporal supervision improves real3D correspondence beyond framewise fit.
+- Motivation: user explicitly substitutes TartanAirV1 for unavailableMIMIR without changing algorithm.
+- Related baseline: originalKLT B and originalshared-patch P; oldMIMIR result staysSUPERVISION_UNAVAILABLE.
+- Proposed idea: same model/loss, verifiedV1 depth/pose/static-mask labels.
+- Why it might work: trustworthygeneric3D labels enable the originally planned test; underwater transfer remains a separate hypothesis.
+- Assumptions: V1depth=metricplanez, cameraNED→world, exactrow/index alignment, officialmask semantics with geometric visibility cross-check.
+- Potential failure cases: coordinateaxis error, occlusion/dynamicmask imperfections, model limits, sim-to-real gap.
+- Evidence: Confirmed fact: officialV1 format/ZIP member names support fixed4scene subset; actualgeometry pending.
+- Current conclusion: no method gain yet; data authorization supersedes oldMIMIR-only restriction.
+- Open questions: validlabels and T/P incremental gain.
+- Next experiment: papers/frontend_temporal_observation_refinement_tartanair_v1/protocol.md; no additional source or hyperparameter search.

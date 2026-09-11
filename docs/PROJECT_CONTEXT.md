@@ -367,3 +367,7 @@ User starts temporal observation refinement v1 in isolated worktree from a743558
 
 ### 2026-09-11 — Temporal observation refinement v1 stopped: SUPERVISION_UNAVAILABLE
 Fixed MIMIR training candidates could not supply verified metric multi-frame labels: actual depth probes are constant or mostly1 with unresolved encoding. See papers/frontend_temporal_observation_refinement_v1/report.md and decision.json. Small211554-parameter prototype and7 contract tests exist, but no trained weights, coordinate result, or VINS gain; P/T updates0, replay0. This is not a claim every MIMIR sequence is unusable and not a failed learned-method result. Sole next step: verified depth/geometry correction before fitting. Old SEA-RAFT stops remain.
+
+
+### 2026-09-12 — User-authorized TartanAir V1 supervision substitution
+Continue the same temporal-refinement algorithm from39d1662 in independent branch/worktree. New fixedfour-scene data split under papers/frontend_temporal_observation_refinement_tartanair_v1. MIMIR oldSUPERVISION_UNAVAILABLE remains; no furtherMIMIR probing. ActualP/T training then unchanged measurement/system gates are the priority; no underwater claim fromTartanAir.

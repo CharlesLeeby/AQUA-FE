@@ -1,0 +1,77 @@
+{
+  "version": "TartanAir V1",
+  "selection_rule": "sorted distinct scene then Easy then first complete sequence; all selected windows start 0, stride1; no model outcome selection",
+  "sequences": [
+    {
+      "sequence": "abandonedfactory/Easy/P000",
+      "role": "train",
+      "camera": "left",
+      "source_frames": 2176,
+      "start_index": 0,
+      "end_index": 1200,
+      "stride": 1,
+      "source": "/mnt/data/AQUA-FE_WS/experiments/temporal_refinement_tartanair_v1/data/abandonedfactory/Easy/P000"
+    },
+    {
+      "sequence": "amusement/Easy/P001",
+      "role": "train",
+      "camera": "left",
+      "source_frames": 734,
+      "start_index": 0,
+      "end_index": 734,
+      "stride": 1,
+      "source": "/mnt/data/AQUA-FE_WS/experiments/temporal_refinement_tartanair_v1/data/amusement/Easy/P001"
+    },
+    {
+      "sequence": "carwelding/Easy/P001",
+      "role": "validation",
+      "camera": "left",
+      "source_frames": 976,
+      "start_index": 0,
+      "end_index": 600,
+      "stride": 1,
+      "source": "/mnt/data/AQUA-FE_WS/experiments/temporal_refinement_tartanair_v1/data/carwelding/Easy/P001"
+    },
+    {
+      "sequence": "endofworld/Easy/P000",
+      "role": "test",
+      "camera": "left",
+      "source_frames": 1548,
+      "start_index": 0,
+      "end_index": 600,
+      "stride": 1,
+      "source": "/mnt/data/AQUA-FE_WS/experiments/temporal_refinement_tartanair_v1/data/endofworld/Easy/P000"
+    }
+  ],
+  "scope": "four distinct synthetic scenes; not underwater evidence",
+  "intrinsics": [
+    [
+      320,
+      0,
+      320
+    ],
+    [
+      0,
+      320,
+      240
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "resolution": [
+    640,
+    480
+  ],
+  "distortion": "none",
+  "depth": "metric optical z (plane depth)",
+  "pose": "camera NED to fixed world; tx ty tz qx qy qz qw; row i corresponds to image i",
+  "frame_clock": "ordinal image index only; no invented physical timestamps",
+  "mask": "official flow mask: 0 valid, >0 invalid, keep codes without inventing class names",
+  "excluded_from_training": [
+    "A02",
+    "H02"
+  ]
+}

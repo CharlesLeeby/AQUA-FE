@@ -1374,3 +1374,18 @@ Objective/motivation: test whether removing strong LK retains H02 benefit and av
 - Known issues: metric depth, actual camera/pose geometry, valid static occlusion labels unresolved; no trained weights; real inference/trajectory metrics Not evaluated.
 - Interpretation: SUPERVISION_UNAVAILABLE for this fixed v1, not a negative method-performance result or a claim every MIMIR sequence is unusable. Synthetic numerical tests are not dataset geometry validation.
 - Next steps: obtain a verified MIMIR depth/geometry fix or authoritative conversion and validate actual projections before any training; do not tune A02/H02.
+
+
+## 2026-09-12 — TartanAir supervision substitution freeze
+- Task objective: unblock actual temporal-refinement learning by authorized TartanAir V1 supervision substitution.
+- Problem / motivation: previous MIMIR labels unavailable; user prohibits further MIMIR repair and requests actual P/T training.
+- Files changed: new task instructions/protocol/data_split/decision; selective download wrapper; handoff and mandatory logs.
+- Implementation: isolated worktree from39d1662; read-only targeted local search found no TartanAir; inspect official selective ZIP directories; reuse existing range/CRC helpers.
+- Technical decisions: same211554-parameter model/loss/optimizer/seed/step/gates; first four distinct scene names, Easy and first complete sequence; left-only plus mask, three reference flows per sequence; no generic downloader platform.
+- Experiments performed: official modality directory completeness checks and connectivity probes; formal P/T and VINS Not evaluated.
+- Quantitative results:1934 training frames planned,600 validation,600 test;9414 selected files,2424381049 compressed bytes,7738506200 extracted bytes; preliminary76 files46881005 compressed bytes. Authoritative plan: /mnt/data/AQUA-FE_WS/experiments/temporal_refinement_tartanair_v1/download_plan.json.
+- Qualitative observations: both official AirLab and HuggingFace range endpoints work; NED pose and plane depth explicitly documented.
+- Failed attempts: none at protocol freeze.
+- Known issues: actual geometric consistency must pass before cache/fit; no physical timestamps supplied byV1 pose rows.
+- Interpretation: Hypothesis / Inference remains untested; TartanAir is generic3D simulation, not underwater evidence. MIMIR old stop preserved.
+- Next steps: fixed actual-data projection check, cache production, exactly oneP/T fit, unchanged measurement gate.
