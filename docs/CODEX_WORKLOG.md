@@ -1389,3 +1389,18 @@ Objective/motivation: test whether removing strong LK retains H02 benefit and av
 - Known issues: actual geometric consistency must pass before cache/fit; no physical timestamps supplied byV1 pose rows.
 - Interpretation: Hypothesis / Inference remains untested; TartanAir is generic3D simulation, not underwater evidence. MIMIR old stop preserved.
 - Next steps: fixed actual-data projection check, cache production, exactly oneP/T fit, unchanged measurement gate.
+
+
+## 2026-09-12 — TartanAir real geometry and executable cache stage
+- Task objective: unblock the unchanged temporal model with actual verified V1 supervision.
+- Problem / motivation: old MIMIR remains SUPERVISION_UNAVAILABLE; a format description alone cannot train the model.
+- Files changed: TartanAir download/geometry/cache/evaluation scripts, dataset geometry helper, original trainer cache adapter, four tests, small geometry/smoke evidence and handoff/logs.
+- Implementation: birth-anchored immutable world points, persistent invalid states, raw official masks plus geometric visibility; compact exact float32 patch bank; per-sequence download/cache overlap.
+- Technical decisions: unchanged model, optimizer/loss/seed/batches; no GT in inference; no semantic whitelist transfer; all B observations retained. Original MIMIR trainer default preserved with explicit new --split option.
+- Experiments performed: 12 actual image/depth/pose/flow pairs across the four frozen scenes; two-frame actual cache/gradient smoke per scene; 11 key tests passed.
+- Quantitative results: flow projection p95 1.09e-7 to 1.05e-6px, eligible depth consistency 0.98024–1.0; zero model equals B in all four smokes, finite loss and nonzero head gradient. Training cache 654629 B rows completed; formal training waiting for validation cache at this stage; VINS 0.
+- Qualitative observations: actual V1 depth float32 despite documentation saying 16-bit; optical-to-NED permutation matches official flow, with no MIMIR extrinsics.
+- Failed attempts: initial geometry diagnostic used a denominator including target-invalid depth queries; retained geometry_check.json at the artifact root records that failure. Corrected diagnostic excludes target-invalid queries from consistency denominator; label thresholds and method gates unchanged. Corrected artifact is geometry_check_corrected.json.
+- Known issues: official dynamic/occlusion masks are an available validity signal, not proof of perfect staticness; underwater transfer Not evaluated.
+- Interpretation: Confirmed fact: usable real V1 automatic labels and model gradient path exist. No trained effectiveness conclusion yet.
+- Next steps: finish fixed caches, P/T each once5000 updates, original measurement gate before any VINS.

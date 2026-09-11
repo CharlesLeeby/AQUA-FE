@@ -1,0 +1,300 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "sequence": "abandonedfactory/Easy/P000",
+      "pair": [
+        0,
+        1
+      ],
+      "queries": 4256,
+      "source_valid": 4066,
+      "visible_valid": 4041,
+      "target_depth_eligible": 4042,
+      "depth_consistency_fraction": 0.999752597723899,
+      "official_flow_error_median_px": 5.286868489789995e-07,
+      "official_flow_error_p95_px": 1.0466859132973718e-06,
+      "projection_roundtrip_max_px": 8.924385646561992e-13,
+      "warp_gray_absolute_error_median": 14.0,
+      "mask_histogram": {
+        "0": 293486,
+        "1": 12,
+        "10": 2440,
+        "100": 11262
+      },
+      "depth_dtype_on_disk": "float32",
+      "pass": true
+    },
+    {
+      "sequence": "abandonedfactory/Easy/P000",
+      "pair": [
+        10,
+        11
+      ],
+      "queries": 4256,
+      "source_valid": 4057,
+      "visible_valid": 4014,
+      "target_depth_eligible": 4015,
+      "depth_consistency_fraction": 0.9997509339975094,
+      "official_flow_error_median_px": 4.342435251885289e-07,
+      "official_flow_error_p95_px": 9.167300459903849e-07,
+      "projection_roundtrip_max_px": 1.0677308455087934e-12,
+      "warp_gray_absolute_error_median": 4.0,
+      "mask_histogram": {
+        "0": 292589,
+        "10": 1254,
+        "100": 13357
+      },
+      "depth_dtype_on_disk": "float32",
+      "pass": true
+    },
+    {
+      "sequence": "abandonedfactory/Easy/P000",
+      "pair": [
+        20,
+        21
+      ],
+      "queries": 4256,
+      "source_valid": 4095,
+      "visible_valid": 4053,
+      "target_depth_eligible": 4053,
+      "depth_consistency_fraction": 1.0,
+      "official_flow_error_median_px": 1.6446887800913342e-07,
+      "official_flow_error_p95_px": 4.6993106355032976e-07,
+      "projection_roundtrip_max_px": 1.2117878796179981e-12,
+      "warp_gray_absolute_error_median": 5.0,
+      "mask_histogram": {
+        "0": 303529,
+        "1": 20,
+        "10": 481,
+        "100": 3170
+      },
+      "depth_dtype_on_disk": "float32",
+      "pass": true
+    },
+    {
+      "sequence": "amusement/Easy/P001",
+      "pair": [
+        0,
+        1
+      ],
+      "queries": 4256,
+      "source_valid": 1459,
+      "visible_valid": 1160,
+      "target_depth_eligible": 1168,
+      "depth_consistency_fraction": 0.9931506849315068,
+      "official_flow_error_median_px": 3.599274370088098e-07,
+      "official_flow_error_p95_px": 8.771973090158265e-07,
+      "projection_roundtrip_max_px": 5.407599016518943e-13,
+      "warp_gray_absolute_error_median": 3.0,
+      "mask_histogram": {
+        "0": 273831,
+        "1": 16272,
+        "10": 4531,
+        "100": 12566
+      },
+      "depth_dtype_on_disk": "float32",
+      "pass": true
+    },
+    {
+      "sequence": "amusement/Easy/P001",
+      "pair": [
+        10,
+        11
+      ],
+      "queries": 4256,
+      "source_valid": 1566,
+      "visible_valid": 1320,
+      "target_depth_eligible": 1321,
+      "depth_consistency_fraction": 0.9992429977289932,
+      "official_flow_error_median_px": 5.197727185363366e-07,
+      "official_flow_error_p95_px": 9.55136497465656e-07,
+      "projection_roundtrip_max_px": 3.410605131648481e-13,
+      "warp_gray_absolute_error_median": 4.0,
+      "mask_histogram": {
+        "0": 278693,
+        "1": 11872,
+        "10": 866,
+        "100": 15769
+      },
+      "depth_dtype_on_disk": "float32",
+      "pass": true
+    },
+    {
+      "sequence": "amusement/Easy/P001",
+      "pair": [
+        20,
+        21
+      ],
+      "queries": 4256,
+      "source_valid": 1670,
+      "visible_valid": 1465,
+      "target_depth_eligible": 1470,
+      "depth_consistency_fraction": 0.9965986394557823,
+      "official_flow_error_median_px": 1.2424541019070768e-07,
+      "official_flow_error_p95_px": 4.646109403262387e-07,
+      "projection_roundtrip_max_px": 4.0990372275064023e-13,
+      "warp_gray_absolute_error_median": 2.0,
+      "mask_histogram": {
+        "0": 291659,
+        "1": 9749,
+        "10": 2279,
+        "100": 3513
+      },
+      "depth_dtype_on_disk": "float32",
+      "pass": true
+    },
+    {
+      "sequence": "carwelding/Easy/P001",
+      "pair": [
+        0,
+        1
+      ],
+      "queries": 4256,
+      "source_valid": 3017,
+      "visible_valid": 2729,
+      "target_depth_eligible": 2784,
+      "depth_consistency_fraction": 0.9802442528735632,
+      "official_flow_error_median_px": 2.9399843680386736e-07,
+      "official_flow_error_p95_px": 9.364874003840983e-07,
+      "projection_roundtrip_max_px": 2.898457019905882e-13,
+      "warp_gray_absolute_error_median": 3.0,
+      "mask_histogram": {
+        "0": 257618,
+        "1": 4556,
+        "10": 12292,
+        "100": 32734
+      },
+      "depth_dtype_on_disk": "float32",
+      "pass": true
+    },
+    {
+      "sequence": "carwelding/Easy/P001",
+      "pair": [
+        10,
+        11
+      ],
+      "queries": 4256,
+      "source_valid": 3165,
+      "visible_valid": 2971,
+      "target_depth_eligible": 2973,
+      "depth_consistency_fraction": 0.9993272788429196,
+      "official_flow_error_median_px": 2.3473187876532079e-07,
+      "official_flow_error_p95_px": 8.02759602234783e-07,
+      "projection_roundtrip_max_px": 2.382173337059642e-13,
+      "warp_gray_absolute_error_median": 3.0,
+      "mask_histogram": {
+        "0": 270419,
+        "1": 353,
+        "10": 6053,
+        "100": 30375
+      },
+      "depth_dtype_on_disk": "float32",
+      "pass": true
+    },
+    {
+      "sequence": "carwelding/Easy/P001",
+      "pair": [
+        20,
+        21
+      ],
+      "queries": 4256,
+      "source_valid": 3004,
+      "visible_valid": 2786,
+      "target_depth_eligible": 2801,
+      "depth_consistency_fraction": 0.9946447697250982,
+      "official_flow_error_median_px": 2.1455569841929176e-07,
+      "official_flow_error_p95_px": 7.484274021533892e-07,
+      "projection_roundtrip_max_px": 3.989177016483779e-13,
+      "warp_gray_absolute_error_median": 3.0,
+      "mask_histogram": {
+        "0": 272235,
+        "1": 967,
+        "10": 18112,
+        "100": 15886
+      },
+      "depth_dtype_on_disk": "float32",
+      "pass": true
+    },
+    {
+      "sequence": "endofworld/Easy/P000",
+      "pair": [
+        0,
+        1
+      ],
+      "queries": 4256,
+      "source_valid": 2871,
+      "visible_valid": 2783,
+      "target_depth_eligible": 2785,
+      "depth_consistency_fraction": 0.9992818671454219,
+      "official_flow_error_median_px": 4.172061186341259e-07,
+      "official_flow_error_p95_px": 9.368159398853226e-07,
+      "projection_roundtrip_max_px": 4.856703836433968e-13,
+      "warp_gray_absolute_error_median": 6.0,
+      "mask_histogram": {
+        "0": 287888,
+        "1": 274,
+        "10": 2146,
+        "100": 16892
+      },
+      "depth_dtype_on_disk": "float32",
+      "pass": true
+    },
+    {
+      "sequence": "endofworld/Easy/P000",
+      "pair": [
+        10,
+        11
+      ],
+      "queries": 4256,
+      "source_valid": 3131,
+      "visible_valid": 2988,
+      "target_depth_eligible": 2990,
+      "depth_consistency_fraction": 0.9993311036789297,
+      "official_flow_error_median_px": 4.896739070324786e-07,
+      "official_flow_error_p95_px": 9.973255147199028e-07,
+      "projection_roundtrip_max_px": 9.165725883006586e-13,
+      "warp_gray_absolute_error_median": 5.0,
+      "mask_histogram": {
+        "0": 285544,
+        "1": 681,
+        "10": 351,
+        "100": 20624
+      },
+      "depth_dtype_on_disk": "float32",
+      "pass": true
+    },
+    {
+      "sequence": "endofworld/Easy/P000",
+      "pair": [
+        20,
+        21
+      ],
+      "queries": 4256,
+      "source_valid": 2284,
+      "visible_valid": 2115,
+      "target_depth_eligible": 2122,
+      "depth_consistency_fraction": 0.9967012252591895,
+      "official_flow_error_median_px": 4.182004191209498e-08,
+      "official_flow_error_p95_px": 1.0894507591959837e-07,
+      "projection_roundtrip_max_px": 7.757616949650231e-13,
+      "warp_gray_absolute_error_median": 5.0,
+      "mask_histogram": {
+        "0": 304623,
+        "1": 725,
+        "100": 1852
+      },
+      "depth_dtype_on_disk": "float32",
+      "pass": true
+    }
+  ],
+  "supervision_checks": {
+    "metric_depth_encoding": "PASS",
+    "pose_frame_and_direction": "PASS",
+    "camera_extrinsics": "PASS",
+    "timestamp_alignment": "PASS",
+    "occlusion_and_static_masks": "PASS",
+    "real_projection_examples": "PASS"
+  },
+  "boundary": "V1 official flow agrees with independent projection, depth/visibility cross-checked on fixed real files. Official masks define valid static support; not proof of perfect masks or underwater performance."
+}

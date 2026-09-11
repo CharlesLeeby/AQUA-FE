@@ -1038,3 +1038,16 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Interpretation: cannot equate finite depth arrays with verified3D labels. Public issue4 reports constant maps but has no author resolution; issue3 closure is not a geometry fix. No claim all sequences defective.
 - Conclusion: SUPERVISION_UNAVAILABLE; measurement/backend gates not reached. Seven unit tests passed but are not scientific gain evidence.
 - Follow-up: obtain verified depth encoding/geometry correction before any new fit; retain all old stops.
+
+
+## TA-TOR-V1-GEOMETRY-20260912
+- Date / status / scientific role: 2026-09-12; completed supervision verification and zero-model smoke, not a method-effectiveness experiment.
+- Git commit / branch: ea5fbcb; exp/temporal-observation-refinement-tartanair-v1-20260912 (cache-overlap wait flag pending stage commit).
+- Dataset / window: TartanAir V1 abandonedfactory/Easy/P000, amusement/Easy/P001, carwelding/Easy/P001, endofworld/Easy/P000; fixed pairs0→1,10→11,20→21; cache smoke frames0,1 each.
+- Environment / exact configuration: system Python3.8, OpenCV4.2, Torch2.2.2+cpu; 640×480 K=(320,320,320,240), optical z meters, camera NED→world. Frozen new protocol and original KLT config.
+- Baseline / proposed: unchanged original KLT B; zero-initialized original211554-parameter refiner, no optimizer step.
+- Commands / artifacts: PYTHONPATH=. python3 scripts/check_tartanair_temporal_geometry.py --split papers/frontend_temporal_observation_refinement_tartanair_v1/data_split.json --output /mnt/data/AQUA-FE_WS/experiments/temporal_refinement_tartanair_v1/geometry_check_corrected.json; actual results papers/frontend_temporal_observation_refinement_tartanair_v1/{geometry_check,cache_smoke}.json. Raw retained artifacts /mnt/data/AQUA-FE_WS/experiments/temporal_refinement_tartanair_v1/{geometry_check.json,geometry_check_corrected.json,cache_smoke.json}; cache production command recorded in final report.
+- Metrics / results: 12/12 corrected real checks pass; flow EPEp95 1.09e-7–1.05e-6px, depth consistency on eligible queries0.98024–1.0. Four smokes each zero model exactlyB, finite loss and nonzero head gradient; 11/11 unit tests pass separately.
+- Validity / common support: all projection comparisons on same valid image/depth/mask pixels. Initial incorrect denominator report retained; no frozen label or measurement thresholds altered. This does not evaluate learned coordinates or trajectories; APE/RPE/coverage/runtime system metrics Not evaluated.
+- Interpretation / conclusion: real geometric labels usable; MIMIR remains unavailable. No underwater or learned-effectiveness claim.
+- Follow-up: one fixed P/T fit and same-observation held-out simulation measurement.

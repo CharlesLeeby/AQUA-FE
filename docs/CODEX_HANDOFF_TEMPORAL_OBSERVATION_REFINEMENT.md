@@ -20,4 +20,4 @@
 ## 2026-09-12：替代监督来源（TartanAir V1）
 用户明确授权监督来源替换，算法合同不变。新分支exp/temporal-observation-refinement-tartanair-v1-20260912，新工作区/home/ma/AQUA-FE_WS_temporal_refinement_tartanair_v1。原MIMIR SUPERVISION_UNAVAILABLE不覆盖。
 
-[新协议](../papers/frontend_temporal_observation_refinement_tartanair_v1/protocol.md) · [新划分](../papers/frontend_temporal_observation_refinement_tartanair_v1/data_split.json) · [新决策](../papers/frontend_temporal_observation_refinement_tartanair_v1/decision.json)。状态：固定小子集，真实投影校验进行中，随后实际P/T训练。
+[新协议](../papers/frontend_temporal_observation_refinement_tartanair_v1/protocol.md) · [新划分](../papers/frontend_temporal_observation_refinement_tartanair_v1/data_split.json) · [新决策](../papers/frontend_temporal_observation_refinement_tartanair_v1/decision.json)。阶段状态：四场景12组实际投影检查通过；真实缓存生成器、零模型/梯度检查及11项关键测试通过。训练缓存已完成，验证/测试缓存构建中；P/T单次训练已排队。几何检查首次分母实现错误及修正均留存，未改变标签或方法判据。

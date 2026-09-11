@@ -1,0 +1,46 @@
+[
+  {
+    "sequence": "abandonedfactory/Easy/P000",
+    "frames": 2,
+    "observations": 692,
+    "valid_labels": 468,
+    "pairs": 161,
+    "loss": 0.34759747982025146,
+    "head_gradient_norm": 0.010575166903436184,
+    "zero_model_exact_B": true,
+    "optimizer_updates": 0
+  },
+  {
+    "sequence": "amusement/Easy/P001",
+    "frames": 2,
+    "observations": 700,
+    "valid_labels": 79,
+    "pairs": 21,
+    "loss": 0.5019968748092651,
+    "head_gradient_norm": 0.006876668892800808,
+    "zero_model_exact_B": true,
+    "optimizer_updates": 0
+  },
+  {
+    "sequence": "carwelding/Easy/P001",
+    "frames": 2,
+    "observations": 700,
+    "valid_labels": 303,
+    "pairs": 120,
+    "loss": 0.1761275976896286,
+    "head_gradient_norm": 0.005063113756477833,
+    "zero_model_exact_B": true,
+    "optimizer_updates": 0
+  },
+  {
+    "sequence": "endofworld/Easy/P000",
+    "frames": 2,
+    "observations": 700,
+    "valid_labels": 351,
+    "pairs": 104,
+    "loss": 0.1305372565984726,
+    "head_gradient_norm": 0.010393860749900341,
+    "zero_model_exact_B": true,
+    "optimizer_updates": 0
+  }
+]

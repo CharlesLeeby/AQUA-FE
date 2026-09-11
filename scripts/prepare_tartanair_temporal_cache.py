@@ -98,6 +98,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--split',type=Path,required=True);p.add_argument('--geometry',type=Path,required=True)
     p.add_argument('--output',type=Path,required=True)
+    p.add_argument('--wait-for-download',action='store_true',help='Overlap this task cache generation with its already-running selective downloader.')
     args=p.parse_args();split=json.loads(args.split.read_text());geometry=json.loads(args.geometry.read_text())
     if not geometry['passed']:raise ValueError('actual geometry did not pass')
     require_verified_supervision(geometry['supervision_checks'])
@@ -109,6 +110,13 @@ def main():
         parts=[];offset=0
         for spec in split['sequences']:
             if spec['role']!=role:continue
+            if args.wait_for_download:
+                marker=Path(spec['source']).parents[3]/'ranges'/(spec['sequence'].split('/')[0]+'_Easy_flow_mask_full.receipt.json')
+                deadline=time.monotonic()+3600
+                if not marker.exists():print('waiting for verified source members',spec['sequence'],flush=True)
+                while not marker.exists():
+                    if time.monotonic()>deadline:raise TimeoutError('download receipt unavailable: '+str(marker))
+                    time.sleep(5)
             data,summary=sequence_cache(spec,config);summaries.append(summary)
             data['patch_indices']+=offset;offset+=len(data['patch_bank']);parts.append(data)
         data={key:np.concatenate([part[key] for part in parts]) for key in parts[0]}

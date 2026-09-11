@@ -1141,3 +1141,13 @@ Interpretation: UNSAFE_OR_UNRESOLVED; the proposed deletion does not solve the d
 - Current conclusion: no method gain yet; data authorization supersedes oldMIMIR-only restriction.
 - Open questions: validlabels and T/P incremental gain.
 - Next experiment: papers/frontend_temporal_observation_refinement_tartanair_v1/protocol.md; no additional source or hyperparameter search.
+
+
+## 2026-09-12 — Verified alternative supervision, unchanged hypothesis
+- Research question / hypothesis: does the original temporal loss improve fixed KLT correspondence beyond the same pointwise model?
+- Motivation / related baseline: execute the previously blocked B/P/T experiment using authorized generic simulation labels.
+- Proposed idea / why it might work: original bounded shared-patch correction; no algorithm redesign. Hypothesis / Inference: reference appearance may constrain KLT drift.
+- Assumptions / potential failure cases: official flow masks and depth consistency identify usable static points; approximate masks, depth boundaries, model correction range and domain transfer remain limits.
+- Evidence: Confirmed fact: all12 fixed actual V1 pair checks pass after correcting a diagnostic denominator bug; actual cache smoke has finite loss/nonzero gradient and zero model exactlyB. Old MIMIR failure is unchanged.
+- Current conclusion: supervision blocker removed for this separate TartanAir task only; method effectiveness Not evaluated pending formal training.
+- Open questions / next experiment: single frozen P/T training and held-out six-block measurement; no new dataset or hyperparameter search.
