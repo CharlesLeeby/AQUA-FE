@@ -1,0 +1,5 @@
+sequence,arm,raw_frames,public_frames,C_recoveries,S_recoveries,S_recoveries_public_ge1,S_recoveries_public_ge4,S_recovery_unique_ids,frontend_wall_s,shared_preprocessing_s,network_new_pairs,network_reused_pairs,forward_calls,B_D_different_feature_frames,B_D_different_GFTT_frames,baseline_mismatch,physical_correctness,cached_queries,new_queries,pairs_with_cached_queries,prediction_sampling_wall_s,strong_lk_calls,S_history_public_observations,cpu_tracking_recovery_wall_excluding_provider_s,S_event_public_continuation_min,S_event_public_continuation_median,S_event_public_continuation_max
+H02,B,900,450,0,0,0,0,0,42.048035433806945,112.58202820859151,0,0,0,449,894,{},Unknown,0,0,0,0,0,0,42.048035433806945,,,
+H02,D,900,450,0,10360,10214,9390,1295,213.23330822767457,112.58202820859151,897,2,1794,449,894,{},Unknown,2823,11620,662,170.30580765852937,0,70663,42.927500569145195,0,33.0,274
+A02,B,900,450,0,0,0,0,0,46.18206013384042,499.77996368700406,0,0,0,443,594,{},Unknown,0,0,0,0,0,0,46.18206013384042,,,
+A02,D,900,450,0,71,44,19,65,109.78638807986863,499.77996368700406,172,658,344,443,594,{},Unknown,2116,224,810,61.96817722066771,0,806,47.81821085920092,0,1,211

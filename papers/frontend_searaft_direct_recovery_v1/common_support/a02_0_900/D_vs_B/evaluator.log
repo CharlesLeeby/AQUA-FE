@@ -1,0 +1,1 @@
+{"output": "/home/ma/AQUA-FE_WS_searaft_direct_recovery_v1/papers/frontend_searaft_direct_recovery_v1/common_support/a02_0_900/D_vs_B", "support": {"ape_valid": true, "common_coverage": 0.8888888888888888, "common_span_s": 39.0, "grid_count": 45, "matched_count": 40, "rpe_pairs": 39, "rpe_valid": true, "segment_count": 1, "window_duration_s": 44.9928353279829}}

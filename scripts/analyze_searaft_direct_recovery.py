@@ -87,6 +87,10 @@ def main():
         pub=list(csv.DictReader((RT/'frontend'/next(w['run_slug'] for w in windows if w['sequence']==r['sequence'])/'public_tracks.csv').open()))
         r['S_history_public_observations']=sum(x['arm']==r['arm'] and x['has_S_history']=='True' for x in pub)
         r['cpu_tracking_recovery_wall_excluding_provider_s']=float(r['frontend_wall_s'])-r['prediction_sampling_wall_s']
+        event_path=RT/'frontend'/next(w['run_slug'] for w in windows if w['sequence']==r['sequence'])/'recovery_events.csv'
+        lengths=[int(e['public_observations_after']) for e in csv.DictReader(event_path.open()) if e['arm']==r['arm'] and e['source']=='S']
+        for stat,value in [('min',min(lengths) if lengths else ''),('median',float(np.median(lengths)) if lengths else ''),('max',max(lengths) if lengths else '')]:
+            r['S_event_public_continuation_'+stat]=value
     table(PAPER/'recovery_summary.csv',recovery)
     d=dict(status='COMPLETE',decision=decision,base_commit=BASE_COMMIT,new_backend_replays=sum(p['arm']==p['mapped_to'] for p in plan),
         identical_input_mappings=sum(p['arm']!=p['mapped_to'] for p in plan),historical_baselines_in_primary=0,auxiliary_old_C_R_replays_read=12,
@@ -95,6 +99,8 @@ def main():
         frontend_total_wall_s=sum(f['wall_s'] for f in fronts),physical_correspondence_correctness='Unknown',
         ordinary_B_repeat_variation='Reported and used in practical-range threshold; not alone classified as implementation failure',
         next_step='Stop this ablation. If unsupported, close current SEA-RAFT same-frame recovery combination line; no tuning, expansion or annotation.')
+    d['backend_total_wall_s']=sum(float(b['wall_s']) for b in back if b['batch']=='DIRECT_NEW')
+    d['current_same_frame_recovery_line_closed']=decision!='DIRECT_RECOVERY_PROMISING'
     save(PAPER/'decision.json',d)
     save(PAPER/'execution_provenance.json',dict(frontends=fronts,network=d['network'],model_loading=loading,base_commit=BASE_COMMIT,runtime=str(RT)))
     lines=['# SEA-RAFT direct recovery ablation','',f"**{decision}**。固定两窗消融已结束。",'']

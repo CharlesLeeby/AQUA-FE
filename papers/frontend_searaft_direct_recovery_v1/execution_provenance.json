@@ -1,0 +1,135 @@
+{
+  "backend_commit": "c63f38a85766aaa2753605f8cc492219be264f10",
+  "base_commit": "1138fab635910d3e1c34d57f99dab84c6ff8e9f5",
+  "branch": "exp/searaft-direct-recovery-v1-20260911",
+  "commands": [
+    "source /opt/ros/noetic/setup.bash",
+    "PYTHONPATH=.:scripts:$PYTHONPATH OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_screening_v1/env/bin/python scripts/run_searaft_direct_recovery.py freeze",
+    "same environment plus TORCH_HOME=/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_screening_v1/torch_cache HF_HUB_OFFLINE=1: scripts/run_searaft_direct_recovery.py frontend",
+    "same Python/ROS/threads: scripts/run_searaft_direct_recovery.py backend",
+    "same Python/ROS/threads: scripts/analyze_searaft_direct_recovery.py"
+  ],
+  "frontends": [
+    {
+      "B_D_different_feature_frames": 449,
+      "arms": {
+        "B": {
+          "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_direct_recovery_v1/frontend/h02_0_900/B.bag",
+          "non_feature_sha256": "6690f38f05a800eee5c4f736b93ece161de70e379ca25c7c5b3da74e0031b1d3",
+          "sha256": "607114fde2be71c6d9021f17b8c8379df808b44e739851dd355a17905fc62034"
+        },
+        "D": {
+          "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_direct_recovery_v1/frontend/h02_0_900/D.bag",
+          "non_feature_sha256": "6690f38f05a800eee5c4f736b93ece161de70e379ca25c7c5b3da74e0031b1d3",
+          "sha256": "b11abb6a60c703fb076ad22e38275aea2e09689efdf90f520e2180c8dea8e270"
+        }
+      },
+      "baseline_mismatch": {},
+      "input_structural_pass": true,
+      "public_tracks": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_direct_recovery_v1/frontend/h02_0_900/public_tracks.csv",
+      "recovery_events": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_direct_recovery_v1/frontend/h02_0_900/recovery_events.csv",
+      "sequence": "H02",
+      "wall_s": 398.0465659640031
+    },
+    {
+      "B_D_different_feature_frames": 443,
+      "arms": {
+        "B": {
+          "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_direct_recovery_v1/frontend/a02_0_900/B.bag",
+          "non_feature_sha256": "971e682f2b7a61cb114370eae90cd851699eb6964e5d0281e998cf4ceb7e4422",
+          "sha256": "5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520"
+        },
+        "D": {
+          "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_direct_recovery_v1/frontend/a02_0_900/D.bag",
+          "non_feature_sha256": "971e682f2b7a61cb114370eae90cd851699eb6964e5d0281e998cf4ceb7e4422",
+          "sha256": "bec839f0b62349aa09e051da8f1a2a73753d713d6a3753bb89290b94774894ce"
+        }
+      },
+      "baseline_mismatch": {},
+      "input_structural_pass": true,
+      "public_tracks": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_direct_recovery_v1/frontend/a02_0_900/public_tracks.csv",
+      "recovery_events": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_direct_recovery_v1/frontend/a02_0_900/recovery_events.csv",
+      "sequence": "A02",
+      "wall_s": 695.4619255230064
+    }
+  ],
+  "model_loading": {
+    "config": {
+      "batch_size": 1,
+      "block_dims": [
+        64,
+        128,
+        256
+      ],
+      "clip": 1.0,
+      "coarse_config": null,
+      "dataset": "spring",
+      "dim": 128,
+      "dropout": 0,
+      "epsilon": 1e-08,
+      "gamma": 0.85,
+      "gpus": [
+        0
+      ],
+      "image_size": [
+        540,
+        960
+      ],
+      "initial_dim": 64,
+      "iters": 4,
+      "lr": 0.0004,
+      "name": "spring-M",
+      "num_blocks": 2,
+      "num_steps": 120000,
+      "pretrain": "resnet34",
+      "radius": 4,
+      "restore_ckpt": null,
+      "scale": -1,
+      "use_var": true,
+      "var_max": 10,
+      "var_min": 0,
+      "wdecay": 1e-05
+    },
+    "loading": {
+      "exact_state_match": true,
+      "load_s": 7.686967597051989,
+      "local_pth": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_screening_v1/model/Tartan-C-T-TSKH-spring540x960-M.pth",
+      "local_pth_sha256": "8962f9dc675c7c250775a6eacf398b9a890d39c59bb1ecc4cccfad77742b97ac",
+      "parameters": 19663876,
+      "restored_shared_aliases": {
+        "cnet.layer2.0.downsample.1.bias": "cnet.layer2.0.bn3.bias",
+        "cnet.layer2.0.downsample.1.num_batches_tracked": "cnet.layer2.0.bn3.num_batches_tracked",
+        "cnet.layer2.0.downsample.1.running_mean": "cnet.layer2.0.bn3.running_mean",
+        "cnet.layer2.0.downsample.1.running_var": "cnet.layer2.0.bn3.running_var",
+        "cnet.layer2.0.downsample.1.weight": "cnet.layer2.0.bn3.weight",
+        "cnet.layer3.0.downsample.1.bias": "cnet.layer3.0.bn3.bias",
+        "cnet.layer3.0.downsample.1.num_batches_tracked": "cnet.layer3.0.bn3.num_batches_tracked",
+        "cnet.layer3.0.downsample.1.running_mean": "cnet.layer3.0.bn3.running_mean",
+        "cnet.layer3.0.downsample.1.running_var": "cnet.layer3.0.bn3.running_var",
+        "cnet.layer3.0.downsample.1.weight": "cnet.layer3.0.bn3.weight",
+        "fnet.layer2.0.downsample.1.bias": "fnet.layer2.0.bn3.bias",
+        "fnet.layer2.0.downsample.1.num_batches_tracked": "fnet.layer2.0.bn3.num_batches_tracked",
+        "fnet.layer2.0.downsample.1.running_mean": "fnet.layer2.0.bn3.running_mean",
+        "fnet.layer2.0.downsample.1.running_var": "fnet.layer2.0.bn3.running_var",
+        "fnet.layer2.0.downsample.1.weight": "fnet.layer2.0.bn3.weight",
+        "fnet.layer3.0.downsample.1.bias": "fnet.layer3.0.bn3.bias",
+        "fnet.layer3.0.downsample.1.num_batches_tracked": "fnet.layer3.0.bn3.num_batches_tracked",
+        "fnet.layer3.0.downsample.1.running_mean": "fnet.layer3.0.bn3.running_mean",
+        "fnet.layer3.0.downsample.1.running_var": "fnet.layer3.0.bn3.running_var",
+        "fnet.layer3.0.downsample.1.weight": "fnet.layer3.0.bn3.weight"
+      },
+      "state_tensors": 472,
+      "strict_state_audit": true,
+      "upstream_loader": "utils.utils.load_ckpt"
+    }
+  },
+  "network": {
+    "additional_inference_in_export_repair": null,
+    "forward_calls": 2138,
+    "model_loads": 1,
+    "new_network_pairs": 1069,
+    "reused_network_pairs": 660
+  },
+  "protocol_and_frontend_commit": "4b74161e178ef37e1c39d140b3240303921f984b",
+  "runtime": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_direct_recovery_v1"
+}

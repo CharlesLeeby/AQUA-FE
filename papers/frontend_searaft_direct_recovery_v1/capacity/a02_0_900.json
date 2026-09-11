@@ -1,0 +1,34 @@
+{
+  "arms": {
+    "B": {
+      "arbitrary_keyframe_depth_bound": 700,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_direct_recovery_v1/frontend/a02_0_900/B.bag",
+      "feature_bag_sha256": "5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520",
+      "feature_messages": 450,
+      "gaps": [],
+      "max_consecutive11_ge4": 375,
+      "max_consecutive11_ids": 412,
+      "max_per_message": 350,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 2221,
+      "whole_window_ge4": 1718
+    },
+    "D": {
+      "arbitrary_keyframe_depth_bound": 700,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_direct_recovery_v1/frontend/a02_0_900/D.bag",
+      "feature_bag_sha256": "bec839f0b62349aa09e051da8f1a2a73753d713d6a3753bb89290b94774894ce",
+      "feature_messages": 450,
+      "gaps": [],
+      "max_consecutive11_ge4": 373,
+      "max_consecutive11_ids": 412,
+      "max_per_message": 350,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 2202,
+      "whole_window_ge4": 1714
+    }
+  }
+}

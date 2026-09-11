@@ -1,0 +1,26 @@
+{
+  "auxiliary_old_C_R_replays_read": 12,
+  "backend_total_wall_s": 779.8854621400242,
+  "base_commit": "1138fab635910d3e1c34d57f99dab84c6ff8e9f5",
+  "cached_queries": 4939,
+  "current_same_frame_recovery_line_closed": true,
+  "decision": "UNSAFE_OR_UNRESOLVED",
+  "frontend_total_wall_s": 1093.5084914870095,
+  "historical_baselines_in_primary": 0,
+  "identical_input_mappings": 0,
+  "model_load_s": 7.686967597051989,
+  "network": {
+    "additional_inference_in_export_repair": null,
+    "forward_calls": 2138,
+    "model_loads": 1,
+    "new_network_pairs": 1069,
+    "reused_network_pairs": 660
+  },
+  "new_backend_replays": 12,
+  "new_queries": 11844,
+  "next_step": "Close the current SEA-RAFT same-frame recovery combination line. No further tuning, model/window search, execution-order changes or annotation task.",
+  "ordinary_B_repeat_variation": "Reported and used in practical-range threshold; not alone classified as implementation failure",
+  "physical_correspondence_correctness": "Unknown",
+  "prediction_sampling_wall_s": 232.2739848791971,
+  "status": "COMPLETE"
+}
