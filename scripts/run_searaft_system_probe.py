@@ -162,7 +162,7 @@ def frontend(cache_only=False):
                     if serial(b)!=serial(baseline):baseline_mismatch['serialized']+=1
                     if serial(clouds['C'][stamp])!=serial(clouds['R'][stamp]):diff_CR+=1
                     previous_stamp=msg.header.stamp.to_sec()
-                if i%100==0:print('FRONTEND_PROGRESS',seq,i,'S_recovered',sum(e['source']=='S' for e in events),'new_network_pairs',provider.new_pairs,flush=True)
+                if i%100==0:print('CACHED_EXPORT_PROGRESS' if cache_only else 'FRONTEND_PROGRESS',seq,i,'S_recovered',sum(e['source']=='S' for e in events),'historical_new_pairs' if cache_only else 'new_network_pairs',provider.new_pairs,flush=True)
         assert i>=899 and len(clouds['B'])==450
         table(folder/'recovery_events.csv',events) if events else (folder/'recovery_events.csv').write_text('sequence,arm,raw_index,stamp_ns,track_id,source,public_observations_after,termination\n')
         table(folder/'frames.csv',frames);table(folder/'public_tracks.csv',public_rows);table(RT/'network_timing.csv',provider.timing)

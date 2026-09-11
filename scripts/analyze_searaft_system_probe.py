@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Reuse fixed common-support metrics and retain every technical repeat."""
-import csv,json
+import csv,json,bisect
 from collections import Counter
 import numpy as np
 from run_searaft_system_probe import ROOT,PAPER,RT,table,save
@@ -32,13 +32,18 @@ def compare(summary,control):
 
 
 def attribution(target,public):
-    # Microsecond key tolerates only epoch floating-point serialization error;
-    # frames are ~50 ms apart. This does not interpolate observations.
-    keys={(round(int(r['stamp_ns'])*1e-9,6),int(r['track_id'])) for r in public if r['arm']=='R' and r['has_S_history']=='True'}
+    # Match only original public stamps within 1us epoch serialization error;
+    # frames are ~50ms apart. No observation interpolation or time shifting.
+    keys={(int(r['stamp_ns']),int(r['track_id'])) for r in public if r['arm']=='R' and r['has_S_history']=='True'}
+    stamps=sorted({int(r['stamp_ns']) for r in public if r['arm']=='R'})
     seen=set();count=Counter();ids={k:set() for k in ('received','eligible','residual')}
     for r in csv.reader((target/'backend_use.csv').open()):
         if r[0] not in ids:continue
-        key=(round(float(r[1]),6),int(r[2]))
+        ns=round(float(r[1])*1e9);i=bisect.bisect_left(stamps,ns)
+        candidates=stamps[max(0,i-1):i+1]
+        stamp=min(candidates,key=lambda s:abs(s-ns))
+        if abs(stamp-ns)>1000:continue
+        key=(stamp,int(r[2]))
         if key in keys:
             count[r[0]]+=int(r[3]) if r[0]!='eligible' else 1
             ids[r[0]].add(key[1])
@@ -60,6 +65,11 @@ def main():
                 item=next(p for p in plan if (p['run_slug'],p['arm'],p['repeat'])==(slug,arm,rep))
                 target=RT/'backend'/slug/item['mapped_to']/f'repeat{rep}'
                 b=base.backend_stats(target)
+                # This experiment preserves original IDs for recovery. The old
+                # additive runner's >=1e7 source bucket cannot identify SEA-RAFT.
+                for k in list(b):
+                    if '_candidate' in k:del b[k]
+                    elif '_KLT' in k:b[k.replace('_KLT','_original_ids')]=b.pop(k)
                 b.update(sequence=w['sequence'],arm=arm,mapped_to=item['mapped_to'])
                 if arm=='R':b.update(attribution(target,public))
                 backend[slug,arm,rep]=b;back.append(b)
@@ -112,10 +122,14 @@ def main():
             def fmt(metric):return f"{c[arm+'_'+metric]:.6f} [{c[arm+'_'+metric+'_min']:.6f},{c[arm+'_'+metric+'_max']:.6f}]"
             lines.append(f"|{c['sequence']} / {c['comparison']}|{arm}|{fmt('APE')}|{fmt('RPE')}|")
     lines+=['', '完整24条比较内重复记录见 results.csv；18条实际/映射运行身份、初始化、接收、求解和覆盖见 backend_results.csv；冻结护栏判定见 comparison.csv。', '',
-        '## 实际介入与代价', '', '|窗口|R中的强LK恢复|学习恢复|至少1次/4次后续公开|新推理对/缓存对|R前端耗时s|改变GFTT的raw帧|', '|---|---:|---:|---:|---:|---:|---:|']
+        '## 实际介入与代价', '', '|窗口|R中的强LK恢复|学习恢复|R总恢复减C总恢复|至少1次/4次后续公开|新推理对/缓存对|R前端耗时s|改变GFTT的raw帧|', '|---|---:|---:|---:|---:|---:|---:|---:|']
     for r in recovery:
-        if r['arm']=='R':lines.append(f"|{r['sequence']}|{r['C_recoveries']}|{r['S_recoveries']}|{r['S_recoveries_public_ge1']}/{r['S_recoveries_public_ge4']}|{r['network_new_pairs']}/{r['network_reused_pairs']}|{float(r['frontend_wall_s']):.2f}|{r['C_R_different_GFTT_frames']}|")
+        if r['arm']=='R':
+            c=next(v for v in recovery if v['sequence']==r['sequence'] and v['arm']=='C')
+            net_recovery=int(r['C_recoveries'])+int(r['S_recoveries'])-int(c['C_recoveries'])
+            lines.append(f"|{r['sequence']}|{r['C_recoveries']}|{r['S_recoveries']}|{net_recovery}|{r['S_recoveries_public_ge1']}/{r['S_recoveries_public_ge4']}|{r['network_new_pairs']}/{r['network_reused_pairs']}|{float(r['frontend_wall_s']):.2f}|{r['C_R_different_GFTT_frames']}|")
     lines+=['', '恢复为事件数，同ID可多次恢复。前端耗时包含该臂跟踪和恢复，不含三臂共享预处理；逐臂详情见 recovery_summary.csv。',
+        '导出修正另用缓存重新走CPU前端，新增网络调用0；两窗修正导出的总墙钟分别为 '+', '.join(f"{f['sequence']} {f['wall_s']:.2f}s" for f in fronts)+'。初次速度末位不一致的导出完整保存在 runtime/pre_velocity_fix，未用于后端。',
         '接收诊断通过公开ID与时间关联；eligible/residual只能证明具有恢复历史的轨迹在该求解时刻进入相应层，不能将同ID的每个因子归因给某一次学习恢复。个别对应的物理正确性仍为 Unknown。', '',
         '## 边界和复现', '',
         '包含初始化影响；恢复改变后续GFTT集合。COLMAP/proxy参考不是独立真值，本次不是held-out或机器人部署验证。即使轨迹改善也不证明逐点正确，不作为SEA-RAFT+NCC论文创新声明。',
