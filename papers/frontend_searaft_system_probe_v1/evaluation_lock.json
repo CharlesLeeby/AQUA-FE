@@ -1,0 +1,8 @@
+{
+  "papers/frontend_additive_budget_v1/capacity_and_evaluation_addendum.md": "d4ea809bd5475aeb253ba289b8ac5cf7c1c6591fe57f3880d5457b64aca3e89f",
+  "scripts/evaluate_additive_budget_v1.py": "3d648bd96c487e217c08db8d5657824ef05e4071bca1d11f87b561bf23b5c556",
+  "scripts/evaluate_vins_common_support.py": "ab6f2b5c1a10a41463657edee2724c022fc0248dc885096acb336e602384c110",
+  "scripts/evaluate_vins_common_support_dual_scale.py": "52b945ef78b09959f3a2d2558a1046ea09a0de8fa05c1accf679645c354e65d2",
+  "scripts/evaluate_vins_common_support_epoch_v2.py": "3c455299b23157cc749b474b9460ca4a408b3bee516e9d1bf2109f253cf89f91",
+  "scripts/trajectory_eval_core.py": "aa9ac4da81df7298d1f1c369548ca98a57235916004337cad66f4cf331560635"
+}

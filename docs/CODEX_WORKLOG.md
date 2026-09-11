@@ -1313,3 +1313,11 @@ Validation addendum: final staged bytes/provenance, lifecycle joint keys/counts,
 - Failed attempts/fixes: initial exact-edge roundtrip exposed floating-point rejection at the image border; fixed numerical clipping within 1e-7 px only. Browser automation initially stalled at reload with the unsaved-export reminder; the isolated test suppresses that prompt while testing saved-state restoration. No production inference or reference files were affected.
 - Known issues/interpretation: local browser storage is not portable; explicit CSV export remains required. Human uncertainty is not a confidence interval, and previous exposure to aggregate counts prevents a strict double-blind claim. Zero model loads, new predictions, training or VINS; original reports and inputs remain frozen.
 - Next: user opens annotate.html, confirms correspondences or ambiguity, exports reference_annotations.user.csv, then runs the documented evaluator. No polling or extra experiments.
+
+## 2026-09-11 — SEA-RAFT system probe protocol/integration
+- Objective/motivation: finite system increment after strong classical recovery; human92-point reference is not a prerequisite.
+- Files: new system_probe paper directory, recovery tracker, runner, focused test, independent handoff.
+- Implementation/decisions: original KLT, existing31/4 retry, then frozen SEA-RAFT and patch evidence; same-frame ID recovery before GFTT, unchanged recovery quality formula. Separate worktree and runtime.
+- Validation: priority/ID unit test passed; H02/A02 first public B outputs exactly match baseline serialization. Initial quality mismatch failed preflight; restored original raw_degradation fusion, then passed. No model or backend executed: Not evaluated.
+- Known limits/interpretation: development windows, initialization included, proxy trajectory reference, individual correspondence truth Unknown; recovered IDs can alter future GFTT.
+- Next: full frontend export then fixed maximum18 backend matrix under frozen protocol.
