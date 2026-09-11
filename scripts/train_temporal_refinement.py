@@ -4,7 +4,8 @@
 NPZ: patches[N,3,31,31] float32 raw gray/255, history[N,4] original px,
 patch_valid[N], baseline[N,2], truth[N,2], label_valid[N], frame[N], id[N],
 sequence[N]. Metadata JSON: role, cache_sha256, supervision_checks.
-The preparation of a verified MIMIR cache is unavailable in this v1 result.
+Alternatively patch_bank[N,31,31] plus patch_indices[N,3] stores the exact
+same float32 triplets without duplicating reference/previous patches.
 """
 from __future__ import annotations
 import argparse
@@ -22,13 +23,36 @@ from uw_frontend.temporal_refinement import PatchRefiner, paired_loss, require_v
 SEED = 20260911
 
 
-def load_cache(path, role):
+class PatchTriplets:
+    def __init__(self, bank, indices):
+        if bank.ndim != 3 or bank.shape[1:] != (31,31) or indices.ndim != 2 or indices.shape[1] != 3:
+            raise ValueError('invalid compact patch bank')
+        if indices.size and (indices.min()<0 or indices.max()>=len(bank)):
+            raise ValueError('patch reference outside bank')
+        self.bank, self.indices = bank, indices
+        self.shape = (len(indices),3,31,31)
+
+    def __getitem__(self, index):
+        return self.bank[self.indices[index]]
+
+
+def file_sha256(path):
+    digest = hashlib.sha256()
+    with path.open('rb') as stream:
+        for block in iter(lambda: stream.read(1024**2),b''):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def load_cache(path, role, split_path=None):
     meta = json.loads(path.with_suffix('.json').read_text())
     require_verified_supervision(meta['supervision_checks'])
-    if meta['role'] != role or meta['cache_sha256'] != hashlib.sha256(path.read_bytes()).hexdigest():
+    if meta['role'] != role or meta['cache_sha256'] != file_sha256(path):
         raise ValueError('cache role or identity mismatch')
     with np.load(path, allow_pickle=False) as src:
         a = {key: src[key] for key in src.files}
+    if 'patch_bank' in a:
+        a['patches'] = PatchTriplets(a.pop('patch_bank'),a.pop('patch_indices'))
     n = len(a['baseline'])
     for key, shape in [('patches', (n, 3, 31, 31)), ('history', (n, 4)),
                        ('baseline', (n, 2)), ('truth', (n, 2))]:
@@ -37,7 +61,7 @@ def load_cache(path, role):
     for key in ['patch_valid', 'label_valid', 'frame', 'id', 'sequence']:
         if a[key].shape != (n,):
             raise ValueError('invalid row mapping: ' + key)
-    split_path = Path(__file__).resolve().parents[1] / 'papers/frontend_temporal_observation_refinement_v1/data_split.json'
+    split_path = split_path or Path(__file__).resolve().parents[1] / 'papers/frontend_temporal_observation_refinement_v1/data_split.json'
     expected = {s['sequence']: s for s in json.loads(split_path.read_text())['sequences'] if s['role'] == role}
     if set(a['sequence']) != set(expected):
         raise ValueError('cache sequences differ from frozen split')
@@ -88,8 +112,9 @@ def main():
     parser.add_argument('--validation', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--device', default='cpu')
+    parser.add_argument('--split', type=Path, default=None, help='Explicit authorized frozen split; old MIMIR default preserved.')
     args = parser.parse_args()
-    train, val = load_cache(args.train, 'train'), load_cache(args.validation, 'validation')
+    train, val = load_cache(args.train, 'train',args.split), load_cache(args.validation, 'validation',args.split)
     if set(train['sequence']) & set(val['sequence']):
         raise ValueError('sequence leakage')
     pairs = consecutive_pairs(train)
@@ -103,6 +128,8 @@ def main():
         torch.manual_seed(SEED)
         rng = np.random.default_rng(SEED)
         model = PatchRefiner().to(args.device)
+        initial_digest = hashlib.sha256(b''.join(x.detach().cpu().numpy().tobytes() for x in model.state_dict().values())).hexdigest()
+        batch_digest = hashlib.sha256()
         optimizer = torch.optim.Adam(model.parameters(), lr=.001, betas=(.9, .999), eps=1e-8, weight_decay=0)
         best, best_step = float('inf'), None
         started = time.perf_counter()
@@ -114,6 +141,7 @@ def main():
                 if step:
                     model.train()
                     idx = pairs[rng.integers(len(pairs), size=128)].reshape(-1)
+                    batch_digest.update(idx.tobytes())
                     delta = model(torch.as_tensor(train['patches'][idx], device=args.device).float(),
                                   torch.as_tensor(train['history'][idx], device=args.device).float(),
                                   torch.as_tensor(train['patch_valid'][idx], device=args.device)).reshape(-1, 2, 2)
@@ -135,11 +163,14 @@ def main():
                         best, best_step = score, step
                         torch.save(dict(state_dict=model.state_dict(), step=step, arm=arm, seed=SEED,
                                         validation_p95=score), args.output / (arm + '_best.pt'))
+                    print(json.dumps(dict(arm=arm,step=step,validation_p95=score,best_step=best_step)),flush=True)
                 metrics['wall_s'] = time.perf_counter() - started
                 writer.writerow(metrics)
                 stream.flush()
         (args.output / (arm + '_summary.json')).write_text(json.dumps(dict(
             arm=arm, updates=5000, best_step=best_step, validation_p95=best,
+            initial_state_sha256=initial_digest,batch_schedule_sha256=batch_digest.hexdigest(),
+            valid_training_pairs=len(pairs),device=args.device,torch_version=str(torch.__version__),
             wall_s=time.perf_counter() - started), indent=2) + '\n')
 
 
