@@ -1,0 +1,125 @@
+{
+  "arms": {
+    "C_r1": {
+      "fixed_se3": {
+        "ape_abs_diff_m": 1.841210198749721e-07,
+        "evo_ape_rmse_m": 0.699117,
+        "evo_segmented_rpe_rmse_m": 0.071261,
+        "primary_ape_rmse_m": 0.6991168158789801,
+        "primary_rpe_rmse_m": 0.07126104623810182,
+        "rpe_abs_diff_m": 4.623810181958454e-08,
+        "rpe_pair_count": 39
+      },
+      "sim3": {
+        "ape_abs_diff_m": 2.0081747283476337e-07,
+        "evo_ape_rmse_m": 0.027625,
+        "evo_segmented_rpe_rmse_m": 0.012129,
+        "primary_ape_rmse_m": 0.027624799182527165,
+        "primary_rpe_rmse_m": 0.012128727006016898,
+        "rpe_abs_diff_m": 2.7299398310150214e-07,
+        "rpe_pair_count": 39
+      }
+    },
+    "C_r2": {
+      "fixed_se3": {
+        "ape_abs_diff_m": 4.3121163595394307e-07,
+        "evo_ape_rmse_m": 1.15363,
+        "evo_segmented_rpe_rmse_m": 0.130568,
+        "primary_ape_rmse_m": 1.1536304312116359,
+        "primary_rpe_rmse_m": 0.13056805880739827,
+        "rpe_abs_diff_m": 5.8807398284344004e-08,
+        "rpe_pair_count": 39
+      },
+      "sim3": {
+        "ape_abs_diff_m": 1.5518481916165783e-09,
+        "evo_ape_rmse_m": 0.079558,
+        "evo_segmented_rpe_rmse_m": 0.026313,
+        "primary_ape_rmse_m": 0.07955799844815181,
+        "primary_rpe_rmse_m": 0.026313005378660395,
+        "rpe_abs_diff_m": 5.3786603955441326e-09,
+        "rpe_pair_count": 39
+      }
+    },
+    "C_r3": {
+      "fixed_se3": {
+        "ape_abs_diff_m": 2.4835686396329493e-07,
+        "evo_ape_rmse_m": 1.156964,
+        "evo_segmented_rpe_rmse_m": 0.130675,
+        "primary_ape_rmse_m": 1.156964248356864,
+        "primary_rpe_rmse_m": 0.1306746707340085,
+        "rpe_abs_diff_m": 3.292659914999607e-07,
+        "rpe_pair_count": 39
+      },
+      "sim3": {
+        "ape_abs_diff_m": 4.924409436196653e-07,
+        "evo_ape_rmse_m": 0.079651,
+        "evo_segmented_rpe_rmse_m": 0.026121,
+        "primary_ape_rmse_m": 0.07965149244094362,
+        "primary_rpe_rmse_m": 0.026120842483444612,
+        "rpe_abs_diff_m": 1.5751655538590037e-07,
+        "rpe_pair_count": 39
+      }
+    },
+    "R_r1": {
+      "fixed_se3": {
+        "ape_abs_diff_m": 4.2257333410233855e-08,
+        "evo_ape_rmse_m": 1.157199,
+        "evo_segmented_rpe_rmse_m": 0.13077299999999997,
+        "primary_ape_rmse_m": 1.1571990422573335,
+        "primary_rpe_rmse_m": 0.13077269884699547,
+        "rpe_abs_diff_m": 3.0115300450606064e-07,
+        "rpe_pair_count": 39
+      },
+      "sim3": {
+        "ape_abs_diff_m": 4.75489523976691e-07,
+        "evo_ape_rmse_m": 0.079666,
+        "evo_segmented_rpe_rmse_m": 0.026235,
+        "primary_ape_rmse_m": 0.07966552451047602,
+        "primary_rpe_rmse_m": 0.026235366978388585,
+        "rpe_abs_diff_m": 3.6697838858359977e-07,
+        "rpe_pair_count": 39
+      }
+    },
+    "R_r2": {
+      "fixed_se3": {
+        "ape_abs_diff_m": 1.6028336768947327e-07,
+        "evo_ape_rmse_m": 1.157391,
+        "evo_segmented_rpe_rmse_m": 0.130877,
+        "primary_ape_rmse_m": 1.1573911602833677,
+        "primary_rpe_rmse_m": 0.1308773678324005,
+        "rpe_abs_diff_m": 3.6783240051074806e-07,
+        "rpe_pair_count": 39
+      },
+      "sim3": {
+        "ape_abs_diff_m": 2.9559052334982017e-07,
+        "evo_ape_rmse_m": 0.079387,
+        "evo_segmented_rpe_rmse_m": 0.02635,
+        "primary_ape_rmse_m": 0.07938729559052335,
+        "primary_rpe_rmse_m": 0.02634953658436853,
+        "rpe_abs_diff_m": 4.634156314693716e-07,
+        "rpe_pair_count": 39
+      }
+    },
+    "R_r3": {
+      "fixed_se3": {
+        "ape_abs_diff_m": 3.677059636775226e-07,
+        "evo_ape_rmse_m": 1.161471,
+        "evo_segmented_rpe_rmse_m": 0.129955,
+        "primary_ape_rmse_m": 1.1614713677059636,
+        "primary_rpe_rmse_m": 0.1299551907854967,
+        "rpe_abs_diff_m": 1.9078549670648037e-07,
+        "rpe_pair_count": 39
+      },
+      "sim3": {
+        "ape_abs_diff_m": 4.242001690607511e-07,
+        "evo_ape_rmse_m": 0.080105,
+        "evo_segmented_rpe_rmse_m": 0.025377,
+        "primary_ape_rmse_m": 0.08010457579983093,
+        "primary_rpe_rmse_m": 0.02537699594566836,
+        "rpe_abs_diff_m": 4.054331641245579e-09,
+        "rpe_pair_count": 39
+      }
+    }
+  },
+  "evo_version": "1.31.1"
+}

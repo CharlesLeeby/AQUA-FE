@@ -1,0 +1,49 @@
+{
+  "arms": {
+    "B": {
+      "arbitrary_keyframe_depth_bound": 700,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1/frontend/h02_0_900/B.bag",
+      "feature_bag_sha256": "607114fde2be71c6d9021f17b8c8379df808b44e739851dd355a17905fc62034",
+      "feature_messages": 450,
+      "gaps": [],
+      "max_consecutive11_ge4": 587,
+      "max_consecutive11_ids": 1320,
+      "max_per_message": 350,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 7705,
+      "whole_window_ge4": 4642
+    },
+    "C": {
+      "arbitrary_keyframe_depth_bound": 700,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1/frontend/h02_0_900/C.bag",
+      "feature_bag_sha256": "172272db4e7970ac543b9db911a80e82453e0811e9fabaa1fcba7f6e8658c925",
+      "feature_messages": 450,
+      "gaps": [],
+      "max_consecutive11_ge4": 566,
+      "max_consecutive11_ids": 1073,
+      "max_per_message": 350,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 4307,
+      "whole_window_ge4": 2928
+    },
+    "R": {
+      "arbitrary_keyframe_depth_bound": 700,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1/frontend/h02_0_900/R.bag",
+      "feature_bag_sha256": "b9327dded750569f530fa417ab822fd21ebcd54b3fb0ba429d5cb80c24e208a0",
+      "feature_messages": 450,
+      "gaps": [],
+      "max_consecutive11_ge4": 414,
+      "max_consecutive11_ids": 562,
+      "max_per_message": 350,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 3474,
+      "whole_window_ge4": 2556
+    }
+  }
+}

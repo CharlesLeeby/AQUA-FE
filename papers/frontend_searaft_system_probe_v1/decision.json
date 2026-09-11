@@ -1,0 +1,30 @@
+{
+  "decision": "UNSAFE_OR_UNRESOLVED",
+  "historical_replays_reused": 0,
+  "identical_input_mappings": 0,
+  "network": {
+    "additional_inference_in_export_repair": 0,
+    "forward_calls": 2710,
+    "model_loads": 1,
+    "new_network_pairs": 1355,
+    "reused_network_pairs": 203
+  },
+  "new_replays": 18,
+  "next_step": "Stop this fixed probe; no automatic expansion or tuning. Return system evidence to the user.",
+  "old_conclusions": [
+    "CONTROLLED_GAIN_ONLY",
+    "EVIDENCE_GATE_NOT_SUPPORTED",
+    "REFERENCE_PENDING"
+  ],
+  "physical_correspondence_correctness": "Unknown",
+  "severe_or_unresolved": true,
+  "status": "COMPLETE",
+  "technical_repeats": 3,
+  "window_count": 2,
+  "observed_risks": [
+    "H02 C APE 1017.991709\u20131030.084500m; cause Unknown; limits healthy-classical-control interpretation",
+    "A02 all R repeats severely worse than B; no practical R/C increment",
+    "B repeat instability in both windows; C repeat instability in A02"
+  ],
+  "interpretation": "Local H02 R/B improvement is present; the two-window system combination is not supported because of severe A02 regression and control anomalies. No thresholds changed and no replay added."
+}

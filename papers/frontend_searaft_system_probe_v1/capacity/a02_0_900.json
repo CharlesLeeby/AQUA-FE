@@ -1,0 +1,49 @@
+{
+  "arms": {
+    "B": {
+      "arbitrary_keyframe_depth_bound": 700,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1/frontend/a02_0_900/B.bag",
+      "feature_bag_sha256": "5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520",
+      "feature_messages": 450,
+      "gaps": [],
+      "max_consecutive11_ge4": 375,
+      "max_consecutive11_ids": 412,
+      "max_per_message": 350,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 2221,
+      "whole_window_ge4": 1718
+    },
+    "C": {
+      "arbitrary_keyframe_depth_bound": 700,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1/frontend/a02_0_900/C.bag",
+      "feature_bag_sha256": "7877350a2a6602f4460e88d19f1376f69af442f16bbb0962d72255d1009311a2",
+      "feature_messages": 450,
+      "gaps": [],
+      "max_consecutive11_ge4": 373,
+      "max_consecutive11_ids": 415,
+      "max_per_message": 350,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 2216,
+      "whole_window_ge4": 1718
+    },
+    "R": {
+      "arbitrary_keyframe_depth_bound": 700,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1/frontend/a02_0_900/R.bag",
+      "feature_bag_sha256": "7e67090415a26a9a313c1baf6ed263cb085ee92f009e8c93aa9e648ef601b049",
+      "feature_messages": 450,
+      "gaps": [],
+      "max_consecutive11_ge4": 373,
+      "max_consecutive11_ids": 411,
+      "max_per_message": 350,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 2202,
+      "whole_window_ge4": 1713
+    }
+  }
+}

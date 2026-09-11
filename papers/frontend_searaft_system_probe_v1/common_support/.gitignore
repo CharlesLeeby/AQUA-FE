@@ -1,0 +1,7 @@
+*
+!*/
+!.gitignore
+!common_support_summary.json
+!evo_crosscheck.json
+!evaluation_receipt.json
+!evaluator.log

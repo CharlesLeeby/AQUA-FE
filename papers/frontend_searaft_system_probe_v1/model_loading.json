@@ -1,0 +1,70 @@
+{
+  "config": {
+    "batch_size": 1,
+    "block_dims": [
+      64,
+      128,
+      256
+    ],
+    "clip": 1.0,
+    "coarse_config": null,
+    "dataset": "spring",
+    "dim": 128,
+    "dropout": 0,
+    "epsilon": 1e-08,
+    "gamma": 0.85,
+    "gpus": [
+      0
+    ],
+    "image_size": [
+      540,
+      960
+    ],
+    "initial_dim": 64,
+    "iters": 4,
+    "lr": 0.0004,
+    "name": "spring-M",
+    "num_blocks": 2,
+    "num_steps": 120000,
+    "pretrain": "resnet34",
+    "radius": 4,
+    "restore_ckpt": null,
+    "scale": -1,
+    "use_var": true,
+    "var_max": 10,
+    "var_min": 0,
+    "wdecay": 1e-05
+  },
+  "loading": {
+    "exact_state_match": true,
+    "load_s": 9.709989186027087,
+    "local_pth": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_screening_v1/model/Tartan-C-T-TSKH-spring540x960-M.pth",
+    "local_pth_sha256": "8962f9dc675c7c250775a6eacf398b9a890d39c59bb1ecc4cccfad77742b97ac",
+    "parameters": 19663876,
+    "restored_shared_aliases": {
+      "cnet.layer2.0.downsample.1.bias": "cnet.layer2.0.bn3.bias",
+      "cnet.layer2.0.downsample.1.num_batches_tracked": "cnet.layer2.0.bn3.num_batches_tracked",
+      "cnet.layer2.0.downsample.1.running_mean": "cnet.layer2.0.bn3.running_mean",
+      "cnet.layer2.0.downsample.1.running_var": "cnet.layer2.0.bn3.running_var",
+      "cnet.layer2.0.downsample.1.weight": "cnet.layer2.0.bn3.weight",
+      "cnet.layer3.0.downsample.1.bias": "cnet.layer3.0.bn3.bias",
+      "cnet.layer3.0.downsample.1.num_batches_tracked": "cnet.layer3.0.bn3.num_batches_tracked",
+      "cnet.layer3.0.downsample.1.running_mean": "cnet.layer3.0.bn3.running_mean",
+      "cnet.layer3.0.downsample.1.running_var": "cnet.layer3.0.bn3.running_var",
+      "cnet.layer3.0.downsample.1.weight": "cnet.layer3.0.bn3.weight",
+      "fnet.layer2.0.downsample.1.bias": "fnet.layer2.0.bn3.bias",
+      "fnet.layer2.0.downsample.1.num_batches_tracked": "fnet.layer2.0.bn3.num_batches_tracked",
+      "fnet.layer2.0.downsample.1.running_mean": "fnet.layer2.0.bn3.running_mean",
+      "fnet.layer2.0.downsample.1.running_var": "fnet.layer2.0.bn3.running_var",
+      "fnet.layer2.0.downsample.1.weight": "fnet.layer2.0.bn3.weight",
+      "fnet.layer3.0.downsample.1.bias": "fnet.layer3.0.bn3.bias",
+      "fnet.layer3.0.downsample.1.num_batches_tracked": "fnet.layer3.0.bn3.num_batches_tracked",
+      "fnet.layer3.0.downsample.1.running_mean": "fnet.layer3.0.bn3.running_mean",
+      "fnet.layer3.0.downsample.1.running_var": "fnet.layer3.0.bn3.running_var",
+      "fnet.layer3.0.downsample.1.weight": "fnet.layer3.0.bn3.weight"
+    },
+    "state_tensors": 472,
+    "strict_state_audit": true,
+    "upstream_loader": "utils.utils.load_ckpt"
+  }
+}

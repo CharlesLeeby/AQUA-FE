@@ -1,0 +1,63 @@
+{
+  "first_inference_source_commit": "1d677b79844a59d495b1e63c3c92503a48c22120",
+  "cached_export_source_commit": "02afc3add086e60adad8c8bfceb72d71ecda868f",
+  "backend_adapter_source_commit": "02afc3add086e60adad8c8bfceb72d71ecda868f",
+  "runtime": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1",
+  "network": {
+    "additional_inference_in_export_repair": 0,
+    "forward_calls": 2710,
+    "model_loads": 1,
+    "new_network_pairs": 1355,
+    "reused_network_pairs": 203
+  },
+  "frontends": [
+    {
+      "C_R_different_feature_frames": 416,
+      "arms": {
+        "B": {
+          "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1/frontend/a02_0_900/B.bag",
+          "sha256": "5ebe451810a735ee37b40f244aca0162e37e398e2f5de13d76222d3d1e616520"
+        },
+        "C": {
+          "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1/frontend/a02_0_900/C.bag",
+          "sha256": "7877350a2a6602f4460e88d19f1376f69af442f16bbb0962d72255d1009311a2"
+        },
+        "R": {
+          "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1/frontend/a02_0_900/R.bag",
+          "sha256": "7e67090415a26a9a313c1baf6ed263cb085ee92f009e8c93aa9e648ef601b049"
+        }
+      },
+      "baseline_mismatch": {},
+      "input_structural_pass": true,
+      "public_tracks": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1/frontend/a02_0_900/public_tracks.csv",
+      "recovery_events": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1/frontend/a02_0_900/recovery_events.csv",
+      "sequence": "A02",
+      "wall_s": 738.867062565987
+    },
+    {
+      "C_R_different_feature_frames": 430,
+      "arms": {
+        "B": {
+          "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1/frontend/h02_0_900/B.bag",
+          "sha256": "607114fde2be71c6d9021f17b8c8379df808b44e739851dd355a17905fc62034"
+        },
+        "C": {
+          "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1/frontend/h02_0_900/C.bag",
+          "sha256": "172272db4e7970ac543b9db911a80e82453e0811e9fabaa1fcba7f6e8658c925"
+        },
+        "R": {
+          "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1/frontend/h02_0_900/R.bag",
+          "sha256": "b9327dded750569f530fa417ab822fd21ebcd54b3fb0ba429d5cb80c24e208a0"
+        }
+      },
+      "baseline_mismatch": {},
+      "input_structural_pass": true,
+      "public_tracks": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1/frontend/h02_0_900/public_tracks.csv",
+      "recovery_events": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1/frontend/h02_0_900/recovery_events.csv",
+      "sequence": "H02",
+      "wall_s": 315.8372303340002
+    }
+  ],
+  "export_repair_archive": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_searaft_system_probe_v1/pre_velocity_fix",
+  "export_repair_scope": "Only original ROS epoch-float dt arithmetic; cached query sets, recovery events and public tracks identical; no new inference"
+}
