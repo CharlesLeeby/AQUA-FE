@@ -363,3 +363,7 @@ User-authorized direct_recovery_v1 completed12fresh B/D replays on H02/A02 raw[0
 
 ### 2026-09-11 — Authorized new bounded coordinate-refinement prototype
 User starts temporal observation refinement v1 in isolated worktree from a743558. Same KLT IDs/observations, P/T fixed small model, MIMIR-only supervision first; A02/H02 ≤18 replays only after measurement gate. All previous SEA-RAFT stop conclusions remain. See docs/CODEX_HANDOFF_TEMPORAL_OBSERVATION_REFINEMENT.md. No validated gain yet; Not evaluated.
+
+
+### 2026-09-11 — Temporal observation refinement v1 stopped: SUPERVISION_UNAVAILABLE
+Fixed MIMIR training candidates could not supply verified metric multi-frame labels: actual depth probes are constant or mostly1 with unresolved encoding. See papers/frontend_temporal_observation_refinement_v1/report.md and decision.json. Small211554-parameter prototype and7 contract tests exist, but no trained weights, coordinate result, or VINS gain; P/T updates0, replay0. This is not a claim every MIMIR sequence is unusable and not a failed learned-method result. Sole next step: verified depth/geometry correction before fitting. Old SEA-RAFT stops remain.

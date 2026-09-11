@@ -1,7 +1,405 @@
 {
-  "status": "IN_PROGRESS",
-  "decision": null,
-  "stage": "protocol_frozen_supervision_pending",
-  "training_updates": 0,
-  "new_backend_replays": 0
+  "status": "COMPLETE",
+  "decision": "SUPERVISION_UNAVAILABLE",
+  "scope": "Fixed v1 MIMIR training candidates; not a claim that every MIMIR sequence is unusable",
+  "base_commit": "a743558f52a2704df3d6b1111ae15b697711dfae",
+  "protocol_commit": "790467d",
+  "branch": "exp/temporal-observation-refinement-v1-20260911",
+  "model_parameters": 211554,
+  "model_status": "Implemented and unit-tested; untrained",
+  "training_updates": {
+    "P": 0,
+    "T": 0
+  },
+  "training_runs": 0,
+  "checkpoint": null,
+  "valid_truth_observations": 0,
+  "new_backend_replays": 0,
+  "measurement_gain": "Not evaluated.",
+  "temporal_increment": "Not evaluated.",
+  "system_gain": "Not evaluated.",
+  "inference_cost": "Not evaluated. No real sequence model inference.",
+  "tests": {
+    "command": "PYTHONPATH=. python3 -m unittest discover -s tests -p test_temporal_refinement.py -v",
+    "passed": 7
+  },
+  "supervision": {
+    "artifact_root": "/mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1",
+    "audit_path": "/mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1/supervision_audit.json",
+    "audit_sha256": "2dba087f551d60ac9f637f33ea7d68b683d736c15e7b49f71adc81dd0d57cdf9",
+    "decoded_depth_files": 15,
+    "constant_depth_files": 12,
+    "coverage": [
+      {
+        "sequence": "OceanFloor/track0_dark",
+        "role": "train",
+        "window": [
+          0,
+          1200
+        ],
+        "selected_depth_members": 1200,
+        "constant_sample_size_crc_matches": 933,
+        "boundary": "ZIP directory signature match, not full decoding of all members",
+        "status": "supervision unverified"
+      },
+      {
+        "sequence": "SandPipe/track0_dark",
+        "role": "train",
+        "window": [
+          0,
+          1200
+        ],
+        "selected_depth_members": 1200,
+        "constant_sample_size_crc_matches": 1185,
+        "boundary": "ZIP directory signature match, not full decoding of all members",
+        "status": "supervision unverified"
+      },
+      {
+        "sequence": "SeaFloor/track0",
+        "role": "validation",
+        "status": "Not evaluated."
+      },
+      {
+        "sequence": "SeaFloor_Algae/track0",
+        "role": "test",
+        "status": "Not evaluated."
+      }
+    ],
+    "checks": {
+      "metric_depth_encoding": "Unknown",
+      "pose_frame_and_direction": "Unknown",
+      "camera_extrinsics": "Unknown",
+      "timestamp_alignment": "Not evaluated.",
+      "occlusion_and_static_masks": "Not evaluated.",
+      "real_projection_examples": "Not evaluated."
+    },
+    "independent_constant_decode": "720 540 65535 65535 1",
+    "decoded_files": [
+      {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1/supervision/OceanFloor/track0_dark/auv0/depth/cam0/data/1662138209585822464.exr",
+        "archive_member": "OceanFloor/track0_dark/auv0/depth/cam0/data/1662138209585822464.exr",
+        "file_bytes": 3948,
+        "sha256": "0f1e46788cc87f769829a976b5cdd9e37e1fdb9d555b16c2fcd3f47168c0f557",
+        "crc32": 2817123033,
+        "shape": [
+          540,
+          720
+        ],
+        "decoded_dtype": "float32",
+        "exr_channels_header_hex": "59000100000000000000010000000100000000",
+        "min": 1.0,
+        "max": 1.0,
+        "pixels": 388800,
+        "equal_one_pixels": 388800,
+        "finite_pixels": 388800,
+        "unique_values": 1,
+        "label_status": "REJECTED_UNVERIFIED_DEPTH_ENCODING"
+      },
+      {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1/supervision/OceanFloor/track0_dark/auv0/depth/cam0/data/1662138209624823296.exr",
+        "archive_member": "OceanFloor/track0_dark/auv0/depth/cam0/data/1662138209624823296.exr",
+        "file_bytes": 3948,
+        "sha256": "0f1e46788cc87f769829a976b5cdd9e37e1fdb9d555b16c2fcd3f47168c0f557",
+        "crc32": 2817123033,
+        "shape": [
+          540,
+          720
+        ],
+        "decoded_dtype": "float32",
+        "exr_channels_header_hex": "59000100000000000000010000000100000000",
+        "min": 1.0,
+        "max": 1.0,
+        "pixels": 388800,
+        "equal_one_pixels": 388800,
+        "finite_pixels": 388800,
+        "unique_values": 1,
+        "label_status": "REJECTED_UNVERIFIED_DEPTH_ENCODING"
+      },
+      {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1/supervision/OceanFloor/track0_dark/auv0/depth/cam0/data/1662138210017831680.exr",
+        "archive_member": "OceanFloor/track0_dark/auv0/depth/cam0/data/1662138210017831680.exr",
+        "file_bytes": 3948,
+        "sha256": "0f1e46788cc87f769829a976b5cdd9e37e1fdb9d555b16c2fcd3f47168c0f557",
+        "crc32": 2817123033,
+        "shape": [
+          540,
+          720
+        ],
+        "decoded_dtype": "float32",
+        "exr_channels_header_hex": "59000100000000000000010000000100000000",
+        "min": 1.0,
+        "max": 1.0,
+        "pixels": 388800,
+        "equal_one_pixels": 388800,
+        "finite_pixels": 388800,
+        "unique_values": 1,
+        "label_status": "REJECTED_UNVERIFIED_DEPTH_ENCODING"
+      },
+      {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1/supervision/OceanFloor/track0_dark/auv0/depth/cam0/data/1662138210065832704.exr",
+        "archive_member": "OceanFloor/track0_dark/auv0/depth/cam0/data/1662138210065832704.exr",
+        "file_bytes": 3948,
+        "sha256": "0f1e46788cc87f769829a976b5cdd9e37e1fdb9d555b16c2fcd3f47168c0f557",
+        "crc32": 2817123033,
+        "shape": [
+          540,
+          720
+        ],
+        "decoded_dtype": "float32",
+        "exr_channels_header_hex": "59000100000000000000010000000100000000",
+        "min": 1.0,
+        "max": 1.0,
+        "pixels": 388800,
+        "equal_one_pixels": 388800,
+        "finite_pixels": 388800,
+        "unique_values": 1,
+        "label_status": "REJECTED_UNVERIFIED_DEPTH_ENCODING"
+      },
+      {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1/supervision/OceanFloor/track0_dark/auv0/depth/cam0/data/1662138214019917056.exr",
+        "archive_member": "OceanFloor/track0_dark/auv0/depth/cam0/data/1662138214019917056.exr",
+        "file_bytes": 3948,
+        "sha256": "0f1e46788cc87f769829a976b5cdd9e37e1fdb9d555b16c2fcd3f47168c0f557",
+        "crc32": 2817123033,
+        "shape": [
+          540,
+          720
+        ],
+        "decoded_dtype": "float32",
+        "exr_channels_header_hex": "59000100000000000000010000000100000000",
+        "min": 1.0,
+        "max": 1.0,
+        "pixels": 388800,
+        "equal_one_pixels": 388800,
+        "finite_pixels": 388800,
+        "unique_values": 1,
+        "label_status": "REJECTED_UNVERIFIED_DEPTH_ENCODING"
+      },
+      {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1/supervision/OceanFloor/track0_dark/auv0/depth/cam0/data/1662138214061917952.exr",
+        "archive_member": "OceanFloor/track0_dark/auv0/depth/cam0/data/1662138214061917952.exr",
+        "file_bytes": 3948,
+        "sha256": "0f1e46788cc87f769829a976b5cdd9e37e1fdb9d555b16c2fcd3f47168c0f557",
+        "crc32": 2817123033,
+        "shape": [
+          540,
+          720
+        ],
+        "decoded_dtype": "float32",
+        "exr_channels_header_hex": "59000100000000000000010000000100000000",
+        "min": 1.0,
+        "max": 1.0,
+        "pixels": 388800,
+        "equal_one_pixels": 388800,
+        "finite_pixels": 388800,
+        "unique_values": 1,
+        "label_status": "REJECTED_UNVERIFIED_DEPTH_ENCODING"
+      },
+      {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1/supervision/OceanFloor/track0_dark/auv0/depth/cam0/data/1662138214604929536.exr",
+        "archive_member": "OceanFloor/track0_dark/auv0/depth/cam0/data/1662138214604929536.exr",
+        "file_bytes": 6104,
+        "sha256": "887913a0e8215abef9cfca2cf2f5bf937aeb1b721ad612bf4dd07d8d4422febb",
+        "crc32": 3120845797,
+        "shape": [
+          540,
+          720
+        ],
+        "decoded_dtype": "float32",
+        "exr_channels_header_hex": "59000100000000000000010000000100000000",
+        "min": 0.9970703125,
+        "max": 1.01953125,
+        "pixels": 388800,
+        "equal_one_pixels": 387859,
+        "finite_pixels": 388800,
+        "unique_values": 22,
+        "label_status": "REJECTED_UNVERIFIED_DEPTH_ENCODING"
+      },
+      {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1/supervision/OceanFloor/track0_dark/auv0/depth/cam0/data/1662138242106516224.exr",
+        "archive_member": "OceanFloor/track0_dark/auv0/depth/cam0/data/1662138242106516224.exr",
+        "file_bytes": 15278,
+        "sha256": "a9723c613c20fd4e845fb4bbe5ce5d4ce85c59f7b3432f1a1939cbedb5f23093",
+        "crc32": 810424185,
+        "shape": [
+          540,
+          720
+        ],
+        "decoded_dtype": "float32",
+        "exr_channels_header_hex": "59000100000000000000010000000100000000",
+        "min": 0.87060546875,
+        "max": 1.8095703125,
+        "pixels": 388800,
+        "equal_one_pixels": 377985,
+        "finite_pixels": 388800,
+        "unique_values": 494,
+        "label_status": "REJECTED_UNVERIFIED_DEPTH_ENCODING"
+      },
+      {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1/supervision/OceanFloor/track0_dark/auv0/depth/cam0/data/1662138256113815040.exr",
+        "archive_member": "OceanFloor/track0_dark/auv0/depth/cam0/data/1662138256113815040.exr",
+        "file_bytes": 6501,
+        "sha256": "ae6e8be04b0e7873f1a25a8957a96910829fa6b68badb729a800089797f58b6e",
+        "crc32": 1523993489,
+        "shape": [
+          540,
+          720
+        ],
+        "decoded_dtype": "float32",
+        "exr_channels_header_hex": "59000100000000000000010000000100000000",
+        "min": 0.9912109375,
+        "max": 1.111328125,
+        "pixels": 388800,
+        "equal_one_pixels": 386710,
+        "finite_pixels": 388800,
+        "unique_values": 111,
+        "label_status": "REJECTED_UNVERIFIED_DEPTH_ENCODING"
+      },
+      {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1/supervision/SandPipe/track0_dark/auv0/depth/cam0/data/1662063934494348032.exr",
+        "archive_member": "SandPipe/track0_dark/auv0/depth/cam0/data/1662063934494348032.exr",
+        "file_bytes": 3948,
+        "sha256": "0f1e46788cc87f769829a976b5cdd9e37e1fdb9d555b16c2fcd3f47168c0f557",
+        "crc32": 2817123033,
+        "shape": [
+          540,
+          720
+        ],
+        "decoded_dtype": "float32",
+        "exr_channels_header_hex": "59000100000000000000010000000100000000",
+        "min": 1.0,
+        "max": 1.0,
+        "pixels": 388800,
+        "equal_one_pixels": 388800,
+        "finite_pixels": 388800,
+        "unique_values": 1,
+        "label_status": "REJECTED_UNVERIFIED_DEPTH_ENCODING"
+      },
+      {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1/supervision/SandPipe/track0_dark/auv0/depth/cam0/data/1662063934536348928.exr",
+        "archive_member": "SandPipe/track0_dark/auv0/depth/cam0/data/1662063934536348928.exr",
+        "file_bytes": 3948,
+        "sha256": "0f1e46788cc87f769829a976b5cdd9e37e1fdb9d555b16c2fcd3f47168c0f557",
+        "crc32": 2817123033,
+        "shape": [
+          540,
+          720
+        ],
+        "decoded_dtype": "float32",
+        "exr_channels_header_hex": "59000100000000000000010000000100000000",
+        "min": 1.0,
+        "max": 1.0,
+        "pixels": 388800,
+        "equal_one_pixels": 388800,
+        "finite_pixels": 388800,
+        "unique_values": 1,
+        "label_status": "REJECTED_UNVERIFIED_DEPTH_ENCODING"
+      },
+      {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1/supervision/SandPipe/track0_dark/auv0/depth/cam0/data/1662063934938357504.exr",
+        "archive_member": "SandPipe/track0_dark/auv0/depth/cam0/data/1662063934938357504.exr",
+        "file_bytes": 3948,
+        "sha256": "0f1e46788cc87f769829a976b5cdd9e37e1fdb9d555b16c2fcd3f47168c0f557",
+        "crc32": 2817123033,
+        "shape": [
+          540,
+          720
+        ],
+        "decoded_dtype": "float32",
+        "exr_channels_header_hex": "59000100000000000000010000000100000000",
+        "min": 1.0,
+        "max": 1.0,
+        "pixels": 388800,
+        "equal_one_pixels": 388800,
+        "finite_pixels": 388800,
+        "unique_values": 1,
+        "label_status": "REJECTED_UNVERIFIED_DEPTH_ENCODING"
+      },
+      {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1/supervision/SandPipe/track0_dark/auv0/depth/cam0/data/1662063934977358336.exr",
+        "archive_member": "SandPipe/track0_dark/auv0/depth/cam0/data/1662063934977358336.exr",
+        "file_bytes": 3948,
+        "sha256": "0f1e46788cc87f769829a976b5cdd9e37e1fdb9d555b16c2fcd3f47168c0f557",
+        "crc32": 2817123033,
+        "shape": [
+          540,
+          720
+        ],
+        "decoded_dtype": "float32",
+        "exr_channels_header_hex": "59000100000000000000010000000100000000",
+        "min": 1.0,
+        "max": 1.0,
+        "pixels": 388800,
+        "equal_one_pixels": 388800,
+        "finite_pixels": 388800,
+        "unique_values": 1,
+        "label_status": "REJECTED_UNVERIFIED_DEPTH_ENCODING"
+      },
+      {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1/supervision/SandPipe/track0_dark/auv0/depth/cam0/data/1662063938850440960.exr",
+        "archive_member": "SandPipe/track0_dark/auv0/depth/cam0/data/1662063938850440960.exr",
+        "file_bytes": 3948,
+        "sha256": "0f1e46788cc87f769829a976b5cdd9e37e1fdb9d555b16c2fcd3f47168c0f557",
+        "crc32": 2817123033,
+        "shape": [
+          540,
+          720
+        ],
+        "decoded_dtype": "float32",
+        "exr_channels_header_hex": "59000100000000000000010000000100000000",
+        "min": 1.0,
+        "max": 1.0,
+        "pixels": 388800,
+        "equal_one_pixels": 388800,
+        "finite_pixels": 388800,
+        "unique_values": 1,
+        "label_status": "REJECTED_UNVERIFIED_DEPTH_ENCODING"
+      },
+      {
+        "path": "/mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1/supervision/SandPipe/track0_dark/auv0/depth/cam0/data/1662063938898441984.exr",
+        "archive_member": "SandPipe/track0_dark/auv0/depth/cam0/data/1662063938898441984.exr",
+        "file_bytes": 3948,
+        "sha256": "0f1e46788cc87f769829a976b5cdd9e37e1fdb9d555b16c2fcd3f47168c0f557",
+        "crc32": 2817123033,
+        "shape": [
+          540,
+          720
+        ],
+        "decoded_dtype": "float32",
+        "exr_channels_header_hex": "59000100000000000000010000000100000000",
+        "min": 1.0,
+        "max": 1.0,
+        "pixels": 388800,
+        "equal_one_pixels": 388800,
+        "finite_pixels": 388800,
+        "unique_values": 1,
+        "label_status": "REJECTED_UNVERIFIED_DEPTH_ENCODING"
+      }
+    ],
+    "downloaded_image_members": 21,
+    "compressed_image_member_bytes": 127802,
+    "extracted_image_member_bytes": 260744,
+    "transfer_accounting": "Compressed member bytes exclude remote central directories, HTTP headers, read-ahead and metadata. Total network bytes Unknown; first 12-file range receipt records actual body bytes."
+  },
+  "existing_local_source": "/mnt/data/AQUA-FE_WS/datasets/mimir_uw/slam_subset",
+  "unavailable": [
+    "Verified metric z/range/inverse-depth encoding including meaning of constant 1",
+    "Verified pose and optical-camera transform composed against actual geometry",
+    "Validated static/occlusion labels and real multi-frame projections"
+  ],
+  "preserved_boundaries": [
+    "Original workspace and external VINS unchanged",
+    "Old SEA-RAFT stop decisions preserved",
+    "No VINS/COLMAP pseudo-ground-truth",
+    "No outcome-selected sequence replacement",
+    "No raw data or weights committed"
+  ],
+  "sources": [
+    "https://zenodo.org/records/10406384",
+    "https://github.com/remaro-network/MIMIR-UW",
+    "https://github.com/remaro-network/MIMIR-UW/issues/4",
+    "https://github.com/remaro-network/MIMIR-UW/issues/3",
+    "https://arxiv.org/abs/2608.24544"
+  ],
+  "next_step": "先取得能验证米制深度编码、相机几何和跨帧投影的 MIMIR-UW 修复或明确官方说明；在此之前不重训、不跑 VINS、不调真实窗口。"
 }

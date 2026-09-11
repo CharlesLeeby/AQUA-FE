@@ -1,0 +1,3 @@
+arm,status,gradient_updates,training_sequences,valid_truth_observations,parameters,checkpoint,training_wall_s,reason
+P,NOT_STARTED,0,OceanFloor/track0_dark;SandPipe/track0_dark,0,211554,,,SUPERVISION_UNAVAILABLE
+T,NOT_STARTED,0,OceanFloor/track0_dark;SandPipe/track0_dark,0,211554,,,SUPERVISION_UNAVAILABLE

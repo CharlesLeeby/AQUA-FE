@@ -1,0 +1,13 @@
+sequence,role,window,arm,status,b_observations,valid_truth_observations,epe_median_px,epe_p90_px,epe_p95_px,over_1px_ratio,over_2px_ratio,temporal_error_change_p95_px,zero_correction_ratio,inference_ms,peak_gpu_memory_mb,reason
+OceanFloor/track0_dark,train,"[0,1200)",B,Not evaluated.,,0,,,,,,,,,,SUPERVISION_UNAVAILABLE; no B track export or model inference performed
+OceanFloor/track0_dark,train,"[0,1200)",P,Not evaluated.,,0,,,,,,,,,,SUPERVISION_UNAVAILABLE; no B track export or model inference performed
+OceanFloor/track0_dark,train,"[0,1200)",T,Not evaluated.,,0,,,,,,,,,,SUPERVISION_UNAVAILABLE; no B track export or model inference performed
+SandPipe/track0_dark,train,"[0,1200)",B,Not evaluated.,,0,,,,,,,,,,SUPERVISION_UNAVAILABLE; no B track export or model inference performed
+SandPipe/track0_dark,train,"[0,1200)",P,Not evaluated.,,0,,,,,,,,,,SUPERVISION_UNAVAILABLE; no B track export or model inference performed
+SandPipe/track0_dark,train,"[0,1200)",T,Not evaluated.,,0,,,,,,,,,,SUPERVISION_UNAVAILABLE; no B track export or model inference performed
+SeaFloor/track0,validation,"[0,600)",B,Not evaluated.,,0,,,,,,,,,,SUPERVISION_UNAVAILABLE; no B track export or model inference performed
+SeaFloor/track0,validation,"[0,600)",P,Not evaluated.,,0,,,,,,,,,,SUPERVISION_UNAVAILABLE; no B track export or model inference performed
+SeaFloor/track0,validation,"[0,600)",T,Not evaluated.,,0,,,,,,,,,,SUPERVISION_UNAVAILABLE; no B track export or model inference performed
+SeaFloor_Algae/track0,test,"[0,600)",B,Not evaluated.,,0,,,,,,,,,,SUPERVISION_UNAVAILABLE; no B track export or model inference performed
+SeaFloor_Algae/track0,test,"[0,600)",P,Not evaluated.,,0,,,,,,,,,,SUPERVISION_UNAVAILABLE; no B track export or model inference performed
+SeaFloor_Algae/track0,test,"[0,600)",T,Not evaluated.,,0,,,,,,,,,,SUPERVISION_UNAVAILABLE; no B track export or model inference performed

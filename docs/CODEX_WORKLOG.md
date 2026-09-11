@@ -1359,3 +1359,18 @@ Objective/motivation: test whether removing strong LK retains H02 benefit and av
 - Known issues: depth convention, semantic mapping, and pose-camera geometry need verification before labels.
 - Interpretation: Hypothesis / Inference only, no established drift cause or learned effectiveness.
 - Next steps: inspect/download only fixed sequence required supervision; stop if unverifiable.
+
+
+## 2026-09-11 — Temporal observation refinement v1 closes at supervision gate
+- Task objective: correct automatic supervision first, then a fixed small P/T learning comparison and conditional VINS matrix.
+- Problem / motivation: local MIMIR SLAM subset omitted depth and semantic images. A valid floating-point file is not necessarily valid metric supervision.
+- Files changed: uw_frontend/temporal_refinement.py; scripts/{audit_mimir_temporal_supervision,train_temporal_refinement,infer_temporal_refinement}.py; tests/test_temporal_refinement.py; task report/decision/training_summary.csv/measurement_results.csv; handoff; mandatory logs. Frozen protocol/data_split/task instructions preserved.
+- Implementation: 211,554-parameter causal three-patch model, zero head, bounded ±2px; fixed P/T trainer; generic coordinate/normalized/velocity adapter; rejection of unverified supervision; reproducible retained-file audit.
+- Technical decisions: do not guess z/range/inverse depth, feed constant maps as static scene geometry, use VINS/COLMAP pseudo-GT, or replace frozen sequences after seeing model outcomes. No verified MIMIR cache producer or validated ROS bag adapter is claimed.
+- Experiments performed: bounded official ZIP depth preflight; 7 analytical/contract tests; CLI help smoke; no formal learning or VINS.
+- Quantitative results: 15 depth files decoded, 12 wholly constant 1.0; 6 semantic PNGs retained; valid truth labels 0; P/T updates 0/0; replay 0/18. OceanFloor/SandPipe first1200 directory size+CRC matches to constant sample: 933/1185, not all-file decode counts. Artifacts: /mnt/data/AQUA-FE_WS/experiments/temporal_observation_refinement_v1/supervision_audit.json; exact per-file values in task decision.json.
+- Qualitative observations: independent ImageMagick constant-image check agrees; official issues provide no verified correction. Unknown whether upstream generation or encoding explains values. Validation/test supervision not downloaded after unresolved training supervision.
+- Failed attempts: MIMIR supervision verification did not pass; default SSH push stalled, only own SSH process stopped, normal push succeeded over per-command port443 without remote changes. No training reruns or failed optimizer jobs.
+- Known issues: metric depth, actual camera/pose geometry, valid static occlusion labels unresolved; no trained weights; real inference/trajectory metrics Not evaluated.
+- Interpretation: SUPERVISION_UNAVAILABLE for this fixed v1, not a negative method-performance result or a claim every MIMIR sequence is unusable. Synthetic numerical tests are not dataset geometry validation.
+- Next steps: obtain a verified MIMIR depth/geometry fix or authoritative conversion and validate actual projections before any training; do not tune A02/H02.

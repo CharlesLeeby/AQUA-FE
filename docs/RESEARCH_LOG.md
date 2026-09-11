@@ -1111,3 +1111,18 @@ Interpretation: UNSAFE_OR_UNRESOLVED; the proposed deletion does not solve the d
 - Current conclusion: no effectiveness conclusion; all previous stop decisions remain.
 - Open questions: valid supervision and independent sequence gain.
 - Next experiment: frozen protocol in papers/frontend_temporal_observation_refinement_v1/protocol.md.
+
+
+## 2026-09-11 — Temporal refinement supervision stop
+- Research question: can unchanged KLT observations benefit from time-consistent learned coordinate correction?
+- Hypothesis: T improves true correspondence over B and P; remains untested.
+- Motivation: avoid learning against a visually plausible but geometrically false label.
+- Related baseline: planned B KLT and P framewise shared-patch network; KLTNet prior art acknowledged.
+- Proposed idea: same frozen ±2px prototype, no research-direction change within this task.
+- Why it might work: fixed-reference appearance and error-change supervision may constrain accumulated measurement drift (Hypothesis / Inference).
+- Assumptions: valid depth-to-metric conversion, correct camera/world transform, static visibility masks.
+- Potential failure cases: constant/saturated/otherwise encoded depth produces fictional points; apparent alignment could be fitted rather than verified.
+- Evidence: Confirmed fact:12/15 downloaded depth samples are constant1.0; three diagnostics mostly1; retained SHA/CRC/extrema in decision. Unknown: physical encoding and cause. Zip signature counts do not prove byte identity of every unextracted file. Official issues are third-party reports without a verified fix.
+- Current conclusion: SUPERVISION_UNAVAILABLE for fixed candidates; zero valid labels means no temporal-refinement performance inference. Synthetic projection tests passed, real projections Not evaluated. Earlier SEA-RAFT closure untouched.
+- Open questions: usable metric decoding or corrected depth source and real camera-pose convention.
+- Next experiment: only after verified MIMIR correction, check actual static multi-frame projections; no automatic alternative dataset, parameter search or VINS replay.
