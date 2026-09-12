@@ -27,3 +27,13 @@
 实际几何12组检查与11项关键测试通过；首次几何诊断分母错误及修正完整保留，未更换序列或调整判据。B/P/T209,862条观测的ID/帧序/q/sigma一致性与误差重算通过。较老轨迹局部p95改善与总体失败均保留；模拟数据不构成水下实测证据。
 
 唯一下一步：停止并归档本固定版本；不自动第二轮训练、改损失/数据或进行A02/H02回放。上方旧MIMIR SUPERVISION_UNAVAILABLE及其历史下一步原样保留，不代表本轮仍等待MIMIR修复。
+
+
+## 2026-09-12 — 独立出生参考边界诊断（无训练）
+原版本仍 **NO_TEMPORAL_REFINEMENT_GAIN**，MIMIR仍 **SUPERVISION_UNAVAILABLE**。基于cd615f0结果之后提出的开发诊断，仅对保存预测的实际出生观测置零；更新/网络推理/VINS/下载=0/0/0/0。完整B历史可辨认出生，三分割左截断均0，非出生预测逐值不变。
+
+测试B/P/T/P-anchor/T-anchor总体p95=1.6136/1.6895/1.6312/1.6695/1.6237px；非出生T/Bp95下降6.95%，但中位、均值、>1比例及非出生时序劣于B。T-anchor完整时序p95从T0.7326升至0.8292px，[500,600)块仍退化26.07%；原20%、5%和跨块三门仍失败。测试侧表明仅出生修复不足，不支持稳定跟踪净收益或真实系统收益。
+
+唯一诊断决定：**DIAGNOSTIC_UNRESOLVED**，因为原training/只留验证汇总与权重，没有验证集逐观测P/T预测，完整双分割分解无法在零推理约束下重建；测试可计算结果已全部保留。结束此固定计算，不自动补推理、重训、扩审计或进入VINS。
+
+[一页报告](../papers/frontend_temporal_observation_refinement_tartanair_v1/anchor_consistency_check/report.md) · [比较表](../papers/frontend_temporal_observation_refinement_tartanair_v1/anchor_consistency_check/comparison.csv) · [数组分析脚本](../papers/frontend_temporal_observation_refinement_tartanair_v1/anchor_consistency_check/analyze.py)。旧decision、checkpoint及预测未改。

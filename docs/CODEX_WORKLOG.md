@@ -1419,3 +1419,18 @@ Objective/motivation: test whether removing strong LK retains H02 benefit and av
 - Known issues: official masks/depth labels approximate static validity; only fixed sampled pairs checked, not entire-scene proof. Real underwater domain transfer, feature-bag adapter, APE/RPE and backend behavior Not evaluated. Cached-input inference timing excludes image IO/KLT/patch generation.
 - Interpretation: Confirmed fact: NO_TEMPORAL_REFINEMENT_GAIN under this fixed TartanAir protocol. This is neither an MIMIR training success nor proof all learned refinement is ineffective.
 - Next steps: stop and archive this fixed version; no automatic retraining, new source, or backend replay. Local artifacts /mnt/data/AQUA-FE_WS/experiments/temporal_refinement_tartanair_v1; report papers/frontend_temporal_observation_refinement_tartanair_v1/report.md.
+
+
+## 2026-09-12 — Fixed birth-anchor saved-prediction diagnostic
+- Task objective: a single decision-relevant birth-only ablation; no model/threshold/data search.
+- Problem / motivation: B birth error is zero by world-point anchoring, while saved learned outputs can move that reference.
+- Files changed: only new anchor_consistency_check/{task_instructions.md,analyze.py,comparison.csv,report.md} and related handoff/project logs; original task outputs untouched.
+- Implementation: NumPy-only cache lineage and saved-prediction analysis, five fixed arms, all/birth/nonbirth, three temporal groups and every100-frame block. Missing validation arms explicitly MISSING_PREDICTIONS. No patch bank/checkpoint loaded.
+- Technical decisions: birth from sequence+ID+frame−stored_age in complete B history; no validity/GT-based selection. Reset only actual birth delta, including invalid-label rows; all other rows identical. Original six gates recomputed unchanged.
+- Experiments performed: one offline saved-array diagnostic on fixed test predictions; validation B decomposition and all three cache lineage checks. A small array assertion verifies that frame100/block entry and left-truncated first observations are not redefined as births.
+- Quantitative results: optimization/inference/VINS/download0/0/0/0. Test all209862 rows,166791 valid labels;84061 valid births and82730 valid nonbirth rows. B/P/T/P-anchor/T-anchorp95=1.6136/1.6895/1.6312/1.6695/1.6237px. Original B/P/T metrics and six gates exactly reproduced. T-anchor temporalp95=.8292 versus T.7326 and B.7225; lastblockp95 ratio1.2607. All fixed gates retain original pass/fail state.
+- Qualitative observations: birthplace recovery removes avoidable birth error; nonbirthp95 has local gain but median/mean/>1/temporal metrics worsen versus B. Restoring birth alone is not learned tracking improvement.
+- Failed attempts: no failed optimizer/inference runs, none launched. Required validation observation predictions were never saved by original trainer; only scalar curves/checkpoints exist under original training/.
+- Known issues: validation P/T and anchor decompositions Not evaluated. Existing evaluation/{B,P,T}_observations.npz contain test endofworld only. No inference to fill missing files, no whole-dataset audit/hash.
+- Interpretation: DIAGNOSTIC_UNRESOLVED for complete requested validation/test diagnostic; available test evidence independently fails original gates. Original NO_TEMPORAL_REFINEMENT_GAIN and MIMIR SUPERVISION_UNAVAILABLE unchanged.
+- Next steps: end/archive this fixed calculation, no automatic follow-up model or backend work.

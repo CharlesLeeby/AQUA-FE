@@ -1166,3 +1166,13 @@ Interpretation: UNSAFE_OR_UNRESOLVED; the proposed deletion does not solve the d
 - Current conclusion: NO_TEMPORAL_REFINEMENT_GAIN for this fixed protocol. Required temporal incremental gain not supported; do not call all pointwise/learned refinement ineffective. Usable learned weights exist, but no established overall measurement or underwater gain. Original MIMIR failure remains separate.
 - Open questions: causal explanation of age/scene differences and potential underwater transfer remain Unknown; they are not authorization for another fit or backend run.
 - Next experiment: none under this task; stop/archive this version. Evidence papers/frontend_temporal_observation_refinement_tartanair_v1/report.md and decision.json.
+
+
+## 2026-09-12 — Birth reference restoration does not resolve test failures
+- Research question / hypothesis: does preserving the fixed birth reference remove avoidable error, and do saved nonbirth outputs already provide practical refinement?
+- Motivation / baseline: B birthGT equals its original pixel; frozenP/T can move that reference. Compare B/P/T and only-birth-zero counterparts, post hoc.
+- Proposed idea / why it might work: restore the original boundary condition without GT-gating nonbirth points; Hypothesis / Inference: this might explain some whole-sequence regression.
+- Assumptions / failure cases: full B birth history and saved predictions must exist; aggregate validation scores are insufficient. Birth-next temporal differences may worsen when a common offset is removed at birth only.
+- Evidence: Confirmed fact: complete history identifies births with zero left-truncated tracks. Birthzero lowers P/T testEPEsum19.71%/20.01%, but T-anchor overallp95=1.6237>B1.6136, full temporalp95 rises.7326→.8292, last100-frameblock regresses26.07%. NonbirthTp95 improves6.95% but median/mean/>1 ratio/temporal metrics worsen againstB. T/Pnonbirth temporal improvement1.55% and anchorfull2.34% do not meet5% frozen threshold.
+- Current conclusion: missing validation prediction arrays makes full task DIAGNOSTIC_UNRESOLVED; calculable test evidence still fails original gates. Births explain some avoidable error but not all deterioration or stable nonbirth net gain. No new generalization/underwater conclusion; original stops unchanged.
+- Open questions / next experiment: validation decomposition Not evaluated; no authorized inference to recover it. End this fixed calculation without automatic retraining or VINS.
