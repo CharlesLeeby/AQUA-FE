@@ -1,0 +1,31 @@
+{
+  "source_evidence_commit": "49c02471716e8ac960e35dd9dd44ef6fbb1428c6",
+  "windows": [
+    {
+      "arg_semantics": "frame_index_half_open",
+      "backend_config_source": "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_admission_continuation_v1/backend_config_snapshots/a08_2700_3600/vins_same_backend.yaml",
+      "backend_config_source_sha256": "783f5c621c79c1c02da2c9719d5a3c3fbb4900e42ae59437af627d4b05ca675d",
+      "baseline_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+      "baseline_receipt": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/frontend_receipt.json",
+      "baseline_receipt_sha256": "46208c0c4428aebca5abc8e554fb5dd8e0f40cda2f91c6751d69b584c0d9970c",
+      "baseline_sha256": "17305db38262a2ed4c7fa05b6269c9ea50592de07387517dfec798cf086ceae9",
+      "camera": "/home/ma/AQUA-FE_WS_additive_budget_v1/papers/frontend_admission_continuation_v1/backend_config_snapshots/a08_2700_3600/aqualoc_archaeo08_pinhole.yaml",
+      "camera_sha256": "045505013a5dbfb629bad8d3463bbbdacad965ebdcf3c590598121bd884e50a5",
+      "end_or_duration_arg": "3600",
+      "every_n": "2",
+      "family": "aqualoc_archaeology",
+      "frame_offset": "1",
+      "image_messages": 901,
+      "image_topic": "/camera/image_raw",
+      "input_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_same_backend_confirmatory_v3/prepared/a08_2700_3600/input.bag",
+      "input_bag_sha256": "81f248d14a336fbd2c1f9309e84fe818da892f2de3ab434b1df475707b133deb",
+      "known_outcome_boundary": "confirmatory_v3_large_late_splg_regression_development_only",
+      "order": "4",
+      "role": "stability_control",
+      "run_slug": "a08_2700_3600",
+      "sequence": "A08",
+      "start_arg": "2700",
+      "window_id": "aqualoc_archaeology:A08:0003"
+    }
+  ]
+}

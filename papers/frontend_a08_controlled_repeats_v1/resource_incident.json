@@ -1,0 +1,31 @@
+{
+  "status": "WAITING_RESOURCE",
+  "recorded_at": "2026-09-12T21:23:00+08:00",
+  "first_start_check": {
+    "receipt": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a08_controlled_repeats_v1/waiting_resource_1789219000529440420.json",
+    "repeat": 1,
+    "other_vins_pid": 3910612,
+    "own_replay_started": false
+  },
+  "r1_overlap": {
+    "evidence": "Two read-only ps tool snapshots during r1; own/other elapsed times 18/15 and 58/55 seconds respectively. Exact snapshot wall times were not recorded.",
+    "own_vins_pid": 3918601,
+    "other_vins_pid": 3918744,
+    "other_roscore_pid": 3918610,
+    "other_backend_workspace": "/home/ma/SLAM/VINS-Fusion_3-15-WS",
+    "other_run": "/media/ma/Data/wave_vins_intrinsics_zip_20260912/runs/air-full-r1/replay/typed_dvl/171342",
+    "quiet_host_condition": "NOT_SATISFIED",
+    "load_causal_sufficiency": "Not evaluated."
+  },
+  "second_start_check": {
+    "receipt": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a08_controlled_repeats_v1/waiting_resource_1789219086064897464.json",
+    "repeat": 2,
+    "other_vins_pid": 3918744,
+    "own_replay_started": false
+  },
+  "completed": 1,
+  "planned": 3,
+  "not_started": [2, 3],
+  "other_processes_killed_or_modified": false,
+  "automatic_extra_repeats": false
+}

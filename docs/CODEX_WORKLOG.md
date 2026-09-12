@@ -845,3 +845,19 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Known issues: exact Ceres termination message, pre-solve numeric state and host-load causality unavailable. Full historical loaded maps not captured for these A08 runs. No gain-preserving algorithm repair.
 - Interpretation: solver work variation confirmed; time-budget mediation of eventual divergence is stillHypothesis / Inference. Do not excuse all frontend losses as environment noise or invalidate A02 deletion sufficiency.
 - Next steps: publish completed read-only stage; sole suggested successor is separately frozen3same-input/backend/YAML engineering repeats under original budgets with per-run environment receipts. Not started; no reopening old27matrix or frontend search.
+
+
+## 2026-09-12 — A08 original-budget repeats, partial due to another replay
+
+- Date: 2026-09-12, Asia/Shanghai.
+- Objective/problem: continue the approved three bounded A08 engineering repeats after the first-fork audit, without a new frontend or backend modification.
+- Files changed: scripts/run_a08_controlled_repeats.py; tests/test_a08_controlled_repeats.py; papers/frontend_a08_controlled_repeats_v1/ protocol, lock, partial tables/identity/report; handoff and required logs.
+- Implementation: call immutable original additive runner with task paths/port only; outside-process environment/library snapshot and 5-second resource/load samples. Source/main f6f8fee plus exact lock SHA; legacy evidence49c0247.
+- Technical decisions: keep32/40ms,8iterations,CPU2/3/8/9,threads1,rate1/delay3/drain8. Preserve capacity1000 diagnostic boundary and original350 inputs. No APE/RPE or frontend win classification.
+- Experiments performed:4new tests+5existing tests PASS;1new KLT replay completed of3planned. No new frontend, algorithm version or physical window.
+- Quantitative results:440poses,450feature frames/157500observations,97.774% timestamp-span coverage. Newr1 actual process checksPASS,13load samples(1min load2.0–2.8). Versus fixed historical anchor first position/iteration difference at output3(9vs8entries); maxdirectposition difference0.355843060m, notAPE.
+- Observations: initial check blocked on another VINS; it exited andr1 started; another VINS then overlappedr1. Afterr1completed, r2precheck blocked; r2/r3notstarted. Startup-only check cannot guarantee exclusive replay.
+- Failed attempts: first prelaunch WAITING_RESOURCE(no ownnode); second-resource block afterr1. No rerun to replace contaminatedr1; no unrelated process killed. Current disk checkpassed, notoldBLOCKED_DISK.
+- Known issues: quiet-host conditionnotmet; no three-repeat conclusion. Exact solver-stop cause/prestate/actualIMUconsumptionUnknown. No gain-preserving repair.
+- Interpretation: solver workvariationagainobserved, notisolatedloadcausality or repairedbackend. OriginalA02deletion evidence/NO_EXPANSIONunchanged.
+- Next steps: publishPARTIALevidence; coordinate an exclusive replayperiod before originalr2/r3. Preserve this checkpoint; anyextra cleanreplacement needs separate authorization, no hidden retries.

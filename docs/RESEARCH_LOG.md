@@ -802,3 +802,16 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Current conclusion: solver-work variation localized; time-budget mediation isHypothesis / Inference., not confirmed isolated cause. This does not overturn A02 deletion sufficiency or excuse source-specific regressions.
 - Open questions: exact stoppingcause/pre-solve difference, whether controlled original-budget repeats are stable, and whether useful candidate contribution survives reliable evaluation.
 - Next experiment: suggest separately frozen3same-input/backend/YAML engineering repeats with original budgets and per-run environment/load evidence. Not started; no policy tuning/old27matrix/reactivating stopped extension.
+
+
+## 2026-09-12 — A launch-time idle check is not an exclusive replay interval
+
+- Research question: does the sameA08KLT under the original budget repeat consistently while other researchreplays are absent?
+- Hypothesis/motivation: actualsolverwork may vary underwall-clocklimits; first fill runtimeidentity/load evidence before another frontend policy.
+- Relatedbaseline/proposedidea:fixedadditiveB-r1anchor andexactly3sameinput/binary/YAMLnewrepeats; process-outsidetelemetry, noalgorithmchange.
+- Why it might work/assumptions: lower known contention and per-runloadedidentity can narrow confounding, but do not clamp hostload or prove complete numeric state equality.
+- Potential failurecases: otherworkspaces launchafterprecheck, logging overhead, unobservedSfM/IMUstate. Technicalrepeat is notanindependentwindow.
+- Confirmed facts: r1completed440poses withsamefeature-receiveddigest asanchor andverifiedactualnode/lib/affinity/threads. Firstsavedpositionanditerationforkatoutput3(9vs8entries). AnotherVINSdid overlap this replay; r2thenblocked byexistingjob.
+- Current conclusion:PARTIAL1/3, quiet-hostconditionnotmet. Startup-onlyprecheck is insufficient for an exclusive interval. Directdelta0.355843m is notAPE orlearnedgain. Neither absenceof283kmexcursion inonerun noriterationvariation provesrepair/loadcausality.
+- Open questions: original-budgetquietrepeatability; exactsolvertermination/prestate; usefulgain-preservingfrontendpolicy. Those remainUnknown/Not evaluated.
+- Next experiment: samefrozenr2/r3onlyaftercoordination, retainingcontaminatedr1andPARTIALevidence. Anyadditionalcleanrepeat must be explicit; do notreplacebadrecords, changebudgets, orreopenstopped27matrix.

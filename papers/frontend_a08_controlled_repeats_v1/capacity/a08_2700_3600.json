@@ -1,0 +1,20 @@
+{
+  "arms": {
+    "B": {
+      "arbitrary_keyframe_depth_bound": 700,
+      "capacity": 1000,
+      "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+      "feature_bag_sha256": "17305db38262a2ed4c7fa05b6269c9ea50592de07387517dfec798cf086ceae9",
+      "feature_messages": 450,
+      "gaps": [],
+      "max_consecutive11_ge4": 383,
+      "max_consecutive11_ids": 450,
+      "max_per_message": 350,
+      "public_gap_count": 0,
+      "status": "PASS",
+      "unique_ids": 2376,
+      "whole_window_ge4": 1688
+    }
+  },
+  "run_slug": "a08_2700_3600"
+}

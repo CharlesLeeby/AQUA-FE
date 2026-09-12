@@ -1,0 +1,18 @@
+{
+  "APE_RPE": "Not evaluated.",
+  "actual_new_replays": 1,
+  "backend_changed": false,
+  "completed_new_replays": 1,
+  "expansion": false,
+  "loaded_environment_checks": false,
+  "new_algorithm_versions": 0,
+  "new_frontend_runs": 0,
+  "new_new_comparable_pairs": 0,
+  "new_new_strict_AA_pass_pairs": 0,
+  "new_physical_windows": 0,
+  "physical_windows": 1,
+  "planned_new_replays": 3,
+  "prior_stops_unchanged": true,
+  "status": "PARTIAL_OR_IDENTITY_INCOMPLETE",
+  "time_budget_causal_sufficiency": "Not evaluated."
+}

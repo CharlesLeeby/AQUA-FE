@@ -1,7 +1,32 @@
 # AQUA-FE 固定交接入口
 
-更新时间：2026-09-10T01:12:23+08:00
+更新时间：2026-09-12T21:23:00+08:00
 发布分支：`codex/aqua-fe-evidence-20260905`（不是 main）
+
+## 9月12日最新：A08工程重复1/3，并发阻塞
+
+**EXP-20260912-A08-CONTROLLED-REPEATS：PARTIAL / WAITING_RESOURCE。**
+[报告](../papers/frontend_a08_controlled_repeats_v1/report.md)、
+[逐次结果](../papers/frontend_a08_controlled_repeats_v1/replay_results.csv)、
+[直接差异](../papers/frontend_a08_controlled_repeats_v1/pairwise.csv)、
+[协议/原预算](../papers/frontend_a08_controlled_repeats_v1/preregistration.md)、
+[执行锁](../papers/frontend_a08_controlled_repeats_v1/execution_lock.json)、
+[实际进程身份](../papers/frontend_a08_controlled_repeats_v1/process_identity.json)、
+[并发证据](../papers/frontend_a08_controlled_repeats_v1/resource_incident.json)、
+[决策](../papers/frontend_a08_controlled_repeats_v1/decision.json)。
+
+- 原输入/二进制/YAML/32–40ms/8迭代均未修改，9项相关测试通过。
+- 新r1收到450帧/157500观测，440个位姿、1次init标记；输出头跨度覆盖97.774%。
+  与历史锚点在第3次优化首次位置/迭代分叉（9条vs8条），最大直接位置差0.355843m。
+  这是未对齐工程差异，**不是APE、方法WIN或新正例**；APE/RPE本轮Not evaluated.
+- r1实际加载/亲和/线程检查PASS，但运行期间另一个工作区启动了VINS，
+  **不能称无并发条件的有效重复**。r2检查被对方进程阻塞，r2/r3尚未启动。
+  根盘/实验盘本次预检通过；不是旧BLOCKED_DISK。没有干预对方工作区或进程。
+- 不修饰为3/3或“发散已修复”，不补跑替换r1；时间预算/负载因果仍未隔离。
+  新前端/算法/物理窗口均0，主线NO_EXPANSION和旧负结果不变。
+- **唯一下一步：协调无其他VINS回放的时段，再按原顺序继续r2/r3。**
+  当前PARTIAL表保留，未来另加完成态快照；不自动恢复旧27次矩阵。
+  源码身份main@f6f8fee加execution_lock精确SHA；发布提交不冒充运行提交。
 
 ## 最新：A08固定输入重放的最早可见分叉
 

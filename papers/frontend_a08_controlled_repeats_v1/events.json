@@ -1,0 +1,58 @@
+[
+  {
+    "anchor": "historical_anchor",
+    "anchor_solver": {
+      "budget_s": 0.032,
+      "duration_s": 0.036204997,
+      "entries": 9,
+      "header_ns": "1542885097373145344",
+      "termination": 1,
+      "timestamp": "1542885097.373145342",
+      "trace_line": 6725
+    },
+    "header_ns": "1542885097373145344",
+    "orientation_delta_rad": 0.0004711664973520084,
+    "other": "new_r1",
+    "other_solver": {
+      "budget_s": 0.032,
+      "duration_s": 0.032161207,
+      "entries": 8,
+      "header_ns": "1542885097373145344",
+      "termination": 1,
+      "timestamp": "1542885097.373145342",
+      "trace_line": 6725
+    },
+    "pose_1based": 3,
+    "position_delta_m": 0.00726247203092721,
+    "sensor_seconds_after_first": 0.20021248,
+    "topology_equal": true
+  },
+  {
+    "anchor": "historical_anchor",
+    "anchor_solver": {
+      "budget_s": 0.04,
+      "duration_s": 0.041260863,
+      "entries": 6,
+      "header_ns": "1542885101072231936",
+      "termination": 1,
+      "timestamp": "1542885101.072232008",
+      "trace_line": 48250
+    },
+    "header_ns": "1542885101072231936",
+    "orientation_delta_rad": 0.006766378200527892,
+    "other": "new_r1",
+    "other_solver": {
+      "budget_s": 0.04,
+      "duration_s": 0.041045336,
+      "entries": 6,
+      "header_ns": "1542885101072231936",
+      "termination": 1,
+      "timestamp": "1542885101.072232008",
+      "trace_line": 48248
+    },
+    "pose_1based": 40,
+    "position_delta_m": 0.04775568447839483,
+    "sensor_seconds_after_first": 3.899299072,
+    "topology_equal": false
+  }
+]

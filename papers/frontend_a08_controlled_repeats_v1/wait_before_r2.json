@@ -1,0 +1,12 @@
+{
+  "arm": "B",
+  "other_processes": [
+    {
+      "command": "/home/ma/SLAM/VINS-Fusion_3-15-WS/experiments/wall_noharm_repair_20260907/plane-design/execution-r1/candidates/r8_shared_birth/runtime/vins_node /media/ma/Data/wave_vins_intrinsics_zip_20260912/runs/air-full-r1/replay/typed_dvl/171342/generated_171342_typed_dvl_shift_m085375_dvltd_p0000ms_dvldata_smoke.yaml ",
+      "pid": 3918744
+    }
+  ],
+  "repeat": 2,
+  "run_slug": "a08_2700_3600",
+  "status": "WAITING_RESOURCE"
+}

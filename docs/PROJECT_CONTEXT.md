@@ -348,3 +348,16 @@ Unknown; original A02deletion evidence and NO_EXPANSION remain unchanged.
 Only suggested nextstep:3bounded original-budget A08engineering repeats with
 per-run runtime identity/load receipts;notstarted. Do not restart the old27matrix.
 Report: papers/frontend_a08_replay_identity_audit_v1/report.md.
+
+
+## 2026-09-12 latest — A08 engineering repeats PARTIAL, concurrent-job blocker
+
+A08 original-budget diagnostic now has1/3newreplays completed; r2/r3notstarted.
+Source/bag/mathconfig and budgetsunchanged;9testsPASS; r1actualprocessidentityPASS,
+440poses/450frames/157500observations. Firstforkversushistoricalanchoratoutput3,
+9vs8iterationentries;maxdirectpositiondelta0.355843m isnotAPE.
+Anotherworkspace launchedVINSafterr1startupcheck andoverlappedr1; r2precheck
+blocked. This isnotquiet-host3repeatvalidation, noroldBLOCKED_DISK. Nootherjob
+wasmodified. PreservePARTIALdata; coordinateexclusiveperiodbeforeoriginalr2/r3.
+Noextrarepeat, algorithmrepair, newpositive/window orreleasedstoprule.
+Report:papers/frontend_a08_controlled_repeats_v1/report.md.

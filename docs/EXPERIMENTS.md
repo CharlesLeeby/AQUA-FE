@@ -719,3 +719,17 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Failed attempt: relative lock-path resolution falsealarm, corrected with owner-root and test; provisional artifacts retained, pair/event tables unchanged.
 - Interpretation/conclusion: actual optimization work varies despite fixed inputs/settings. Time-budget/host-load mediation not independently demonstrated; no repair/superiority claim.
 - Follow-up: propose only3bounded original-budget engineering repeats with runtime identity/load receipts;0started. Original stopped27diagnostic matrix and frontend NO_EXPANSION remain.
+
+
+## EXP-20260912-A08-CONTROLLED-REPEATS
+
+- Date/status/role:2026-09-12;PARTIAL/WAITING_RESOURCE, finiteengineeringrepeatability, notmethodbenchmark.
+- Git:main@f6f8feec66c2faf1f59cdb67c1e817028a3bccaf plus frozenwrapper/test/protocol hashes; originalexecutor evidence49c02471716e8ac960e35dd9dd44ef6fbb1428c6. Publicationbranch codex/aqua-fe-evidence-20260905.
+- Dataset/configuration: AQUALOCA08[2700,3600); existingKLTbag17305db3...,nodee231871e...,lib86c1f977...,sameYAML/camera;32/40ms/8iterations,CPU2/3/8/9,threads1,rate1/delay3/drain8,port12701.
+- Baseline/proposed:fixedhistoricaladditiveB-r1anchor;3plannednewBengineeringreplays, noalgorithm/inputdifference. Newprocess-outsidetelemetryonly.
+- Commands/artifacts:python3 -B scripts/run_a08_controlled_repeats.py freeze/run/analyze; tests/test_a08_controlled_repeats.py(4) andtest_a08_replay_audit.py(5). Paperfrontend_a08_controlled_repeats_v1;runtimeDataoffload samefamily.
+- Metrics/results:1/3newreplaysCOMPLETE;1initmarker/440poses/450receivedframes/157500observations;headspan43.893621248sover44.892880440s=97.774%. Maxdirectpositiondelta toanchor0.355843060m;firstposition/iterationfork3; actualprocessidentityPASS. APE/RPE/evo/runtimeFPS/frontendreliabilityNot evaluated.
+- Validity/common support:exact440headers andreceiveddigestmatchanchor; noalignmentorproxycomparison. ConcurrentexternalVINSstartedafterr1, soquiet-hostconditionNOT_SATISFIED. OldstrictAAtoleranceexceeded; notanewfrontendloss. r2/r3notstarted, nofailedwindowomission.
+- Failures:prelaunchblockedonce;secondstartcheckblocked afterr1. Resourceprecheckdisk/RAMpassed. Otherprocessesunchanged; noautomaticextrarepeats.
+- Interpretation/conclusion:PARTIAL, no3repeatstability/cause/repairclaim. Priorstoprulesunchanged; newphysicalwindows0.
+- Follow-up:coordinatequietreplayperiod, thenoriginalr2/r3; retainr1andthispartialsnapshot. Noautomaticbackendbudgetchange orfrontendrestart.

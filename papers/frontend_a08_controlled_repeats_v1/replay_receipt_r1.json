@@ -1,0 +1,63 @@
+{
+  "arm": "B",
+  "artifacts": {
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a08_controlled_repeats_v1/backend/a08_2700_3600/B/repeat1/backend_use.csv": "0d20c120adfaaf3f3b7924cf18fc581f281aa7eeffb463668fce8a580a30d2f1",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a08_controlled_repeats_v1/backend/a08_2700_3600/B/repeat1/play.log": "c26afaec9146fc87b248e9029a1d1fd222fb65ae2aca8d2a370cf9a4d52ee1df",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a08_controlled_repeats_v1/backend/a08_2700_3600/B/repeat1/ros_home/roscore-12701.pid": "9ae6291d128eff37726a6de8440399bfa7f7e5affd37e1ab7911cedb3998b535",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a08_controlled_repeats_v1/backend/a08_2700_3600/B/repeat1/ros_home/rospack_cache_18019822870472497271": "8fa6fcb741097f96b3c5ba8669c42e3213f96059ecef3db8feaba0e45a2fe646",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a08_controlled_repeats_v1/backend/a08_2700_3600/B/repeat1/ros_logs/3c01cee6-aeac-11f1-b66e-f55576d0c46b/master.log": "d236fb4e25fe52f0399929684dc9ad80bb792e5a12d4f1d15ca8582436de7a20",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a08_controlled_repeats_v1/backend/a08_2700_3600/B/repeat1/ros_logs/3c01cee6-aeac-11f1-b66e-f55576d0c46b/roslaunch-qiu-3918551.log": "6bd9de14d753464ad8c395c9869b930b3f2a1708f2fdd611f2a499dedda88019",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a08_controlled_repeats_v1/backend/a08_2700_3600/B/repeat1/ros_logs/3c01cee6-aeac-11f1-b66e-f55576d0c46b/rosout-1-stdout.log": "7f49887c6fc7665e891a9ca2b8292acc36f678543bc3cdb98eacce72a789c521",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a08_controlled_repeats_v1/backend/a08_2700_3600/B/repeat1/ros_logs/3c01cee6-aeac-11f1-b66e-f55576d0c46b/rosout.log": "202d7531c21b0903bfe98d68bbb33ba48084a18e0221bc63f2b3c7034fefdcab",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a08_controlled_repeats_v1/backend/a08_2700_3600/B/repeat1/roscore.log": "ebac54517f6e11c2f7d5b83fa0fe6fda347e3424378610fbf70c4f47bd46a6ea",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a08_controlled_repeats_v1/backend/a08_2700_3600/B/repeat1/vins.log": "23a0bedad3e41054bf07355a6037e76e7d449c35dba57af6a621db3b3e19ab4e",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a08_controlled_repeats_v1/backend/a08_2700_3600/B/repeat1/vins.yaml": "bfd2a30d2e7c902c54b874058f575b4baf08acc1dde2e64077e64d0ad2d12245",
+    "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a08_controlled_repeats_v1/backend/a08_2700_3600/B/repeat1/vins_output/vio.csv": "854940d8d41f8fa0de96d92237a4597ac2354f4d9034dee5a12eda00e7656355"
+  },
+  "backend_lock_sha256": "e25bdbbc628c656999d577100003c5f0e4f7028311c6bc79a54f6a8c83323490",
+  "binary_sha256": "e231871eaff26a757a5d396ef5df0ad4d488d55be1c8d0e8d0f1204d1068aadd",
+  "canonical_source_sha256": "783f5c621c79c1c02da2c9719d5a3c3fbb4900e42ae59437af627d4b05ca675d",
+  "capacity_preflight_status": "PASS",
+  "commands": [
+    [
+      "roscore",
+      "-p",
+      "12701"
+    ],
+    [
+      "/home/ma/AQUA-FE_WS_additive_budget_v1/artifacts/additive_budget_v1/backend_diagnostic_attempt2/bin/vins_node",
+      "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_a08_controlled_repeats_v1/backend/a08_2700_3600/B/repeat1/vins.yaml"
+    ],
+    [
+      "/opt/ros/noetic/lib/rosbag/play",
+      "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+      "--clock",
+      "--rate",
+      "1.0",
+      "--delay",
+      "3",
+      "--quiet"
+    ]
+  ],
+  "config_sha256": "bfd2a30d2e7c902c54b874058f575b4baf08acc1dde2e64077e64d0ad2d12245",
+  "error": "",
+  "feature_bag": "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_admission_continuation_v1/shadow_root/logs/aqualoc_archaeo_vins/external_klt_every2_acv1_a08_2700_3600_klt/features.bag",
+  "feature_bag_sha256": "17305db38262a2ed4c7fa05b6269c9ea50592de07387517dfec798cf086ceae9",
+  "peak_node_rss_bytes": 103227392,
+  "repeat": 1,
+  "resource_pre": {
+    "at": "2026-09-12T13:16:58.790152+00:00",
+    "available_memory": 26237890560,
+    "loadavg": [
+      1.82,
+      2.45,
+      2.42
+    ],
+    "root_free": 2255998976,
+    "runtime_free": 14538379264
+  },
+  "run_slug": "a08_2700_3600",
+  "started_at": "2026-09-12T13:18:04.341837+00:00",
+  "status": "COMPLETE",
+  "wall_s": 65.54958661203273
+}
