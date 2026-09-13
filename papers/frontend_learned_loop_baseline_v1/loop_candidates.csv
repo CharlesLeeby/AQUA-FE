@@ -1,0 +1,1 @@
+sequence_id,repeat,arm,query_id,query_time_s,candidate_id,candidate_time_s,rank,score,score_gate,selected_for_geometry,geometry_status,correctness
