@@ -1,0 +1,82 @@
+{
+  "registered_before_new_vio_or_learned_retrieval": true,
+  "role": "Read-only reference checks; no pose-direction selection by system error",
+  "provider": "https://huggingface.co/datasets/afrl-uw/stereo-vi-underwater-dataset",
+  "provider_scale_statement": "Known stereo baseline used for scale correction; these HF files differ from the older scale-ambiguous SVIn files.",
+  "references": {
+    "bus_outside": {
+      "sequence": "bus_outside",
+      "reference_sha256": "341770a61a2adae1135c4319bf858be32218ec406b446420d6a9a495b4a36bb7",
+      "config_sha256": "cb9a252cdb0864aad843b7c6ad050f74ce0c1c07760df8963238d188364052f1",
+      "intervals_total": 3387,
+      "valid_intervals": 3381,
+      "imu_samples": 58487,
+      "fixed_camera_imu_td_s": -0.00008121,
+      "no_estimator_or_learned_outputs_used": true,
+      "fitting": "none: no bias/offset/scale/rotation fit",
+      "validity": "positive dt<=1s and enclosed IMU support",
+      "convention_validated": false,
+      "pose_convention": "Unknown",
+      "interpretations": {
+        "as_world_T_cam0": {
+          "gyro_difference_rmse_rad_s": 0.031897677019523195,
+          "median_rad_s": 0.01352660892664218,
+          "p95_rad_s": 0.04812029431078561,
+          "per_axis_correlation": [
+            0.9431852517684505,
+            0.9541067418038951,
+            0.9779416082201543
+          ]
+        },
+        "inverse_direction": {
+          "gyro_difference_rmse_rad_s": 0.1574797143844867,
+          "median_rad_s": 0.09919889925875662,
+          "p95_rad_s": 0.31488388425372504,
+          "per_axis_correlation": [
+            -0.1520507182791701,
+            -0.014998487566104226,
+            0.11919459872102896
+          ]
+        }
+      },
+      "limitation": "Finite-interval gyro consistency is supporting evidence, not independent proof of camera origin/world pose convention; no automatic relabeling or trajectory score."
+    },
+    "cemetery": {
+      "sequence": "cemetery",
+      "reference_sha256": "cd34aa974c4561d270fcde3efc9badfebfab9b85622ab0a15289ffbf0981860f",
+      "config_sha256": "47a9e75a9c2076276d0068c2d3d38da697d931a1311138794842a9e1c388f23e",
+      "intervals_total": 2518,
+      "valid_intervals": 2510,
+      "imu_samples": 43400,
+      "fixed_camera_imu_td_s": 0.04280051428389464,
+      "no_estimator_or_learned_outputs_used": true,
+      "fitting": "none: no bias/offset/scale/rotation fit",
+      "validity": "positive dt<=1s and enclosed IMU support",
+      "convention_validated": false,
+      "pose_convention": "Unknown",
+      "interpretations": {
+        "as_world_T_cam0": {
+          "gyro_difference_rmse_rad_s": 0.050193238500672074,
+          "median_rad_s": 0.01382717168709173,
+          "p95_rad_s": 0.0724626238149868,
+          "per_axis_correlation": [
+            0.8061237072004129,
+            0.9630929619851211,
+            0.9533945451517073
+          ]
+        },
+        "inverse_direction": {
+          "gyro_difference_rmse_rad_s": 0.16434976753480982,
+          "median_rad_s": 0.10239760959135522,
+          "p95_rad_s": 0.3005490741450145,
+          "per_axis_correlation": [
+            -0.07133829246481228,
+            0.10694053203429807,
+            0.6662095711311455
+          ]
+        }
+      },
+      "limitation": "Finite-interval gyro consistency is supporting evidence, not independent proof of camera origin/world pose convention; no automatic relabeling or trajectory score."
+    }
+  }
+}

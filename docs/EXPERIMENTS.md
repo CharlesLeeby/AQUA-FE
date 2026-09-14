@@ -1118,3 +1118,14 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Failures: Python annotation import before model instantiation; empty initial frontend preparation directory and receipt self-hash bug retained. No failed VIO repeat.
 - Interpretation / conclusion: prior space blocker lifted for current stage, recovered original KLT source identity; no scientific loop conclusion. Initial root12267446272B, per-stage reserve+bounded allowance remains mandatory.
 - Follow-up: same complete Bus export then serial shared local/archive/C/L blocks; no additional model, changed threshold or substitute sequence.
+
+## 2026-09-15 — frontend_learned_loop_baseline_v1 native-time/reference prerequisite check
+
+- Status / role: prerequisite diagnostics while full Bus KLT export runs; no learned-loop or trajectory result.
+- Git / branch: ae4ed75 plus task-local pending adapter changes; exp/learned-loop-baseline-v1-20260914. Existing ROS noetic C++ time library, original VINS source read-only.
+- Dataset/config/baseline/modification: original full Bus/Cemetery input/reference, supplied calibrated body_T_cam0 and fixed td; no B/C/L methodological or numerical gate changes.
+- Commands/artifacts: scripts/tests/loop_ros_time_conversion_probe.cpp compiled as a standalone timestamp program; scripts/check_loop_reference_v1.py with exact paths/hashes in reference_checks.json; python3 -B -m unittest discover -s scripts/tests -p 'test_*loop*_v1.py'.
+- Metrics/results: all7338 native ROS timestamp conversions agree;0collision/max119ns conversion difference.24/24 tests pass. Bus3381/Cemetery2510 reference-IMU intervals; forward gyroRMSE.0318977/.0501932 versus inverse.1574797/.1643498rad/s.
+- Validity/common support: reference format consistency check only, no bias/offset fitting or reading proposed outcomes; exact camera origin/convention still Unknown. APE/RPE/init/coverage/Recall/system loops Not evaluated; added VIO0,model inference0,training0.
+- Interpretation/conclusion: exact deterministic native-time mapping is needed; gyro consistency favors forward orientation but is not automatic pose-convention certification or trajectory evidence.
+- Follow-up: same frozen shared local/graph matrix after complete valid KLT input, no additional direction or parameter search.

@@ -1211,3 +1211,14 @@ Interpretation: UNSAFE_OR_UNRESOLVED; the proposed deletion does not solve the d
 - Current conclusion: technical readiness improved; no evidence yet for L>C, L>B or learned-specific utility. Old frontend/refinement negative conclusions unchanged. Distinguish HF scale-corrected proxy files from different older SVIn scale-ambiguous files; never select pose convention by proposed outcome.
 - Open questions: complete reference orientation convention, pair-level loop truth, real keyframe archive and geometry/system outcome.
 - Next experiment: complete existing Bus export and the unchanged two-sequence shared-local matrix, not another design/search.
+
+## 2026-09-15 — Timestamp identity is not a nearest-neighbor tolerance
+
+- Research question/hypothesis: can original images and native solved map observations be joined without changing timestamps or inventing constraints? Native double conversion should explain nanosecond differences exactly.
+- Motivation/baseline/proposed idea: same VINS local publishers and original KLT feature stream; add deterministic forward identity mapping in the passive archive only.
+- Why it might work/assumptions: source feature_callback stores double time, pubKeyframe reconstructs ROS time; preserve this known conversion and verify one-to-one correspondence.
+- Potential failures: missing captured inputs, timestamp collisions, different native publisher behavior, missing original images; all must fail explicitly.
+- Evidence (Confirmed fact): all7338 complete Bus image headers match the independent installed ROS C++ conversion;7300integer values change by<=119ns, no collisions. No real archive had yet used the old join, so no historical experiment was rewritten.
+- Related reference check: calibrated raw gyro favors forward reference quaternion direction for both fixed sequences, without fitting or learned-output access. Inference only regarding complete world/camera pose semantics; exact export camera origin remains Unknown.
+- Current conclusion: implement the representation-level fix before local/graph execution, retain thresholds/measurements. Evaluator distinguishes available support from validated reference fields and uses separate fixed-scale/Sim3 metrics with evo checks.
+- Open questions/next experiment: real shared archive, native PnP/graph, independent pair correctness and reference convention; continue the single fixed matrix, not another frontend variant.

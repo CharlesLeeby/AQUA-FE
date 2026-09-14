@@ -18,6 +18,14 @@ def pose(x):
 
 
 class ArchiveContractTests(unittest.TestCase):
+    def test_native_time_round_trip_is_not_nearest_matching(self):
+        original = 1532199344712222464
+        mapping = archive.exact_header_map([original, original + 100000000])
+        self.assertEqual(mapping[archive.native_header_ns(original)], original)
+        self.assertEqual(len(mapping), 2)
+        with self.assertRaises(ValueError):
+            archive.exact_header_map([original, original + 1])
+
     def test_native_skip_and_stationary_policy(self):
         poses = {i + 1: pose(i) for i in range(14)}
         poses[12] = pose(10)

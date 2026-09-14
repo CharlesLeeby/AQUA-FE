@@ -4,12 +4,14 @@ from __future__ import annotations
 
 import argparse
 import datetime
+import hashlib
 import json
 import os
 from pathlib import Path
 import re
 import signal
 import socket
+import struct
 import subprocess
 import time
 import xmlrpc.client
@@ -108,6 +110,33 @@ def prepare_yaml(source: Path, output: Path) -> dict:
         camera_file=camera, camera_sha256=sha(output / camera), generated_yaml_sha256=sha(config))
 
 
+def passive_capture_audit(features: Path, capture: Path) -> dict:
+    """Compare received input streams without claiming estimator residual use."""
+    import rosbag
+    topics = ("/feature_tracker/feature", "/imu/imu")
+    def stream_identity(path):
+        hashes, counts, first = {t: hashlib.sha256() for t in topics}, dict.fromkeys(topics, 0), {}
+        with rosbag.Bag(str(path)) as bag:
+            for topic, raw, _ in bag.read_messages(topics=topics, raw=True):
+                data = raw[1]
+                hashes[topic].update(len(data).to_bytes(8, "little")); hashes[topic].update(data)
+                counts[topic] += 1
+                _, sec, ns = struct.unpack_from("<III", data)
+                first.setdefault(topic, sec * 10**9 + ns)
+        return dict(counts=counts, serialized_per_topic_sha256={t: hashes[t].hexdigest() for t in topics}, first_header_ns=first)
+    expected, received = stream_identity(features), stream_identity(capture)
+    first_odom = None
+    with rosbag.Bag(str(capture)) as bag:
+        for _, message, _ in bag.read_messages(topics=["/vins_estimator/odometry"]):
+            first_odom = message.header.stamp.to_nsec()
+            break
+    return dict(expected=expected, recorder_received=received, recorder_input_exact=expected == received,
+        first_nonlinear_odometry_header_ns=first_odom,
+        first_nonlinear_output_from_input_s=(first_odom - min(expected["first_header_ns"].values())) / 1e9 if first_odom else None,
+        initialization_time_definition="First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+        per_observation_estimator_residual_use="Unknown: a passive recorder is not an estimator residual-use trace")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--sequence", choices=tuple(YAML_SHAS), required=True)
@@ -138,9 +167,14 @@ def main() -> None:
     (output / "vins_output").mkdir()
     audit = prepare_yaml(args.canonical_yaml, output)
     env = ros_environment(output, args.port)
+    linkage = subprocess.check_output(["ldd", str(NODE)], env=env, text=True)
+    resolved = re.search(r"libvins_lib\.so\s+=>\s+(\S+)", linkage)
+    if "not found" in linkage or resolved is None or Path(resolved.group(1)).resolve() != LIB.resolve():
+        raise ValueError("Runtime does not resolve the checked frozen VINS library")
     identity = dict(status="REGISTERED_BEFORE_LOCAL_RUN", sequence=args.sequence, repeat=args.repeat,
         feature_bag_sha256=export["feature_bag_sha256"], canonical_yaml_sha256=YAML_SHAS[args.sequence],
         config_audit=audit, vins_node_sha256=NODE_SHA, vins_lib_sha256=LIB_SHA,
+        resolved_vins_library=str(Path(resolved.group(1)).resolve()),
         local_run_started=False, loop_feedback=False, shared_arms=["B", "C", "L"],
         playback_rate=1.0, playback_delay_s=3, post_play_s=8, capture_topics=CAPTURE_TOPICS,
         runner_sha256=sha(Path(__file__)), source_commit=subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
@@ -192,6 +226,15 @@ def main() -> None:
         initialization_log_detected="Initialization finish!" in log,
         vio_rows=sum(1 for line in vio.open() if line.strip()) if vio.exists() else 0,
         artifacts={p.name: sha(p) for p in (vio, output / "capture.bag", output / "vins.log") if p.is_file()})
+    if identity["status"] == "LOCAL_REPLAY_FINISHED":
+        try:
+            identity["passive_capture_audit"] = passive_capture_audit(args.features, output / "capture.bag")
+            if not identity["passive_capture_audit"]["recorder_input_exact"]:
+                identity.update(status="LOCAL_CAPTURE_INVALID", error="Recorder did not preserve complete input stream identity")
+                error = identity["error"]
+        except Exception as exc:
+            identity.update(status="LOCAL_CAPTURE_INVALID", error=str(exc))
+            error = str(exc)
     if identity["status"] == "LOCAL_REPLAY_FINISHED" and identity["vio_rows"] == 0:
         identity["status"] = "LOCAL_EMPTY_TRAJECTORY"
     with (output / "replay_receipt.json").open("x") as f:

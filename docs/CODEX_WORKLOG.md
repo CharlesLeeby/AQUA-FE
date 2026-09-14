@@ -1494,3 +1494,18 @@ Objective/motivation: test whether removing strong LK retains H02 benefit and av
 - Known issues: full input/archive/native system not yet complete; exact reference orientation convention and exhaustive pair correctness labels Unknown. Other workspace intermittently launches VINS, so no concurrent timed local solver.
 - Interpretation: readiness and genuine bounded computation, not learned-loop increment. Skill evidence separation kept all real system metrics Not evaluated; no stopped method reopened.
 - Next steps: finish current Bus export without restart, then same registered local/archive/C/L order if safe; publish only compact task files.
+
+## 2026-09-15 — Native header identity and guarded evaluation integration
+
+- Task objective: prepare a legal shared local archive and evaluator while the fixed full Bus frontend finishes; do not run fabricated keyframes or another method.
+- Problem / motivation: frozen VINS stores feature time as double and republishes ros::Time(double); an exact join to unconverted raw integer headers would miss real images. Python genpy truncation is not native C++ rounding.
+- Files changed: archive adapter/tests; standalone ROS-time test; VIO passive input audit/library resolution check; evaluate_loop_system_v1.py and six tests; small check_loop_reference_v1.py; timestamp_identity_addendum.md and reference_checks.json.
+- Implementation: unique exact forward mapping from captured feature headers to native headers; original image identity preserved separately. Reject collisions/missing identities, no nearest matching/tolerance. Compare recorder input per-topic serialized hashes and retain first native NON_LINEAR odometry feature time. No estimator/source/solver or KLT input changes.
+- Technical decisions: same integer1s common grid,30poses/10s/70% gates; proper fixed-scale alignment and explicitly separate Sim3, full-pose RPE never bridges missing seconds. Unknown reference conventions disable formal metrics, rather than selecting orientation by system error.
+- Experiments performed: native installed-ROS C++ timestamp conversion check on all7338 Bus image headers;24 unit tests; same-file passive hash logic check; read-only raw gyro/reference checks on two fixed sequences. No new VIO or learned image inference in this phase.
+- Quantitative results:7338/7338 conversion identities exact,7300changed native integer headers, maximum119ns,0collisions.10archive+8candidate+6evaluator tests pass. Forward-versus-inverse gyro-difference RMSE Bus.03190/.15748rad/s(3381intervals), Cemetery.05019/.16435rad/s(2510intervals), no fitted bias/offset/rotation/scale.
+- Qualitative observations: gyro strongly supports the forward orientation interpretation, but does not independently establish the generating camera origin/world pose export convention. Both numerical checks and residual uncertainty retained.
+- Failed attempts: old raw-integer archive join identified as an interface error before processing any real archive; no failed scientific output was overwritten. No VIO/model attempt consumed.
+- Known issues: real archive/PnP/graph still pending; proxy convention and true-loop label completeness remain explicitly unresolved; component cost is not system gain.
+- Interpretation: interface correctness improvement, not research-method tuning. Native timestamp representation is preserved, not edited to match a neighboring image.
+- Next steps: finish same full input; frozen Bus r1 local/archive/C/L when resource checks permit; no additional methodological variants.

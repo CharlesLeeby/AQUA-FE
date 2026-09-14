@@ -12,6 +12,7 @@ import argparse
 import csv
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 
@@ -19,8 +20,33 @@ import numpy as np
 
 POSE_TOPIC = "/vins_estimator/keyframe_pose"
 POINT_TOPIC = "/vins_estimator/keyframe_point"
+FEATURE_TOPIC = "/feature_tracker/feature"
 FIELDS = ["id", "timestamp_ns", "tx", "ty", "tz", "qw", "qx", "qy", "qz",
           "image", "points", "point_count", "image_sha256", "points_sha256"]
+
+
+def native_header_ns(original_ns: int) -> int:
+    """Exact ROS C++ Time(double(Time::toSec())) path, not nearest matching.
+
+    feature_callback -> inputFeature(double) -> Headers[] -> pubKeyframe.
+    C++ fromSec rounds positive fractional nanoseconds, unlike Python genpy's
+    truncation. Preserve both original and native-published timestamps.
+    """
+    sec, nsec = divmod(int(original_ns), 1000000000)
+    value = float(sec) + 1e-9 * float(nsec)
+    integer = math.floor(value)
+    fraction = math.floor((value - integer) * 1e9 + .5)
+    return integer * 1000000000 + fraction
+
+
+def exact_header_map(original_stamps):
+    result = {}
+    for stamp in original_stamps:
+        native = native_header_ns(stamp)
+        if native in result:
+            raise ValueError("Duplicate/colliding feature timestamp; no ambiguous image join")
+        result[native] = int(stamp)
+    return result
 
 
 def hash_file(path: Path) -> str:
@@ -85,6 +111,17 @@ def validate_archive(root: Path) -> dict:
     manifest = root / "keyframes.csv"
     if hash_file(manifest) != receipt.get("keyframes_csv_sha256"):
         raise ValueError("Archive roster hash mismatch")
+    if "header_identity_csv_sha256" in receipt:
+        mapping = root / "header_identity.csv"
+        if hash_file(mapping) != receipt["header_identity_csv_sha256"]:
+            raise ValueError("Original/native timestamp mapping identity mismatch")
+        with mapping.open() as f:
+            headers = list(csv.DictReader(f))
+        if len(headers) != receipt.get("keyframes"):
+            raise ValueError("Timestamp mapping count mismatch")
+        for row in headers:
+            if native_header_ns(int(row["original_feature_ns"])) != int(row["native_published_ns"]):
+                raise ValueError("Timestamp mapping does not reproduce the native publisher")
     with manifest.open(newline="") as stream:
         reader = csv.DictReader(stream)
         if reader.fieldnames != FIELDS:
@@ -92,6 +129,10 @@ def validate_archive(root: Path) -> dict:
         rows = list(reader)
     if not rows or len(rows) != receipt.get("keyframes"):
         raise ValueError("Archive keyframe count mismatch")
+    if "header_identity_csv_sha256" in receipt:
+        for row, mapping_row in zip(rows, headers):
+            if row["id"] != mapping_row["id"] or row["timestamp_ns"] != mapping_row["native_published_ns"]:
+                raise ValueError("Original/native timestamp mapping refers to another keyframe")
     previous = 0
     for i, row in enumerate(rows):
         stamp = int(row["timestamp_ns"])
@@ -146,10 +187,13 @@ def main() -> None:
 
     if args.output_dir.exists():
         raise SystemExit("Refusing to overwrite an archive or incomplete attempt")
-    poses, points = {}, {}
+    poses, points, original_features = {}, {}, []
     with rosbag.Bag(str(args.capture_bag), "r") as bag:
-        for topic, message, _ in bag.read_messages(topics=[POSE_TOPIC, POINT_TOPIC]):
+        for topic, message, _ in bag.read_messages(topics=[POSE_TOPIC, POINT_TOPIC, FEATURE_TOPIC]):
             stamp = message.header.stamp.to_nsec()
+            if topic == FEATURE_TOPIC:
+                original_features.append(stamp)
+                continue
             target = poses if topic == POSE_TOPIC else points
             if stamp <= 0 or stamp in target:
                 raise ValueError("Duplicate/nonpositive native header timestamp")
@@ -157,6 +201,10 @@ def main() -> None:
     stamps = select_roster(poses, points)
     if not stamps:
         raise SystemExit("No keyframes after native selection; do not fabricate an archive")
+    native_to_original = exact_header_map(original_features)
+    if not set(stamps).issubset(native_to_original):
+        raise ValueError("Native keyframe missing exact forward identity in captured original features")
+    original_to_native = {native_to_original[stamp]: stamp for stamp in stamps}
     args.output_dir.mkdir(parents=True, exist_ok=False)
     (args.output_dir / "images").mkdir()
     (args.output_dir / "points").mkdir()
@@ -171,12 +219,13 @@ def main() -> None:
     else:
         source = rosbag.Bag(str(args.images_bag), "r")
     with source as bag:
-        stream = (bag.read_messages(topics=[args.image_topic], selected_image_stamps=set(stamps))
+        stream = (bag.read_messages(topics=[args.image_topic], selected_image_stamps=set(original_to_native))
                   if args.raw_image_topic is not None else bag.read_messages(topics=[args.image_topic]))
         for _, message, _ in stream:
-            stamp = message.header.stamp.to_nsec()
-            if stamp not in stamp_to_id:
+            original_stamp = message.header.stamp.to_nsec()
+            if original_stamp not in original_to_native:
                 continue
+            stamp = original_to_native[original_stamp]
             if stamp in saved:
                 raise ValueError("Duplicate source image for a selected header timestamp")
             if message.encoding not in ("mono8", "8UC1"):
@@ -221,6 +270,11 @@ def main() -> None:
         writer = csv.DictWriter(stream, fieldnames=FIELDS, lineterminator="\n")
         writer.writeheader()
         writer.writerows(saved[stamp] for stamp in stamps)
+    mapping = args.output_dir / "header_identity.csv"
+    with mapping.open("x", newline="") as stream:
+        writer = csv.writer(stream, lineterminator="\n")
+        writer.writerow(["id", "original_feature_ns", "native_published_ns", "difference_ns"])
+        writer.writerows([i, native_to_original[stamp], stamp, stamp - native_to_original[stamp]] for i, stamp in enumerate(stamps))
     receipt = {
         "schema": "aqua-fe-native-keyframe-archive-v1",
         "status": "COMPLETE",
@@ -233,6 +287,8 @@ def main() -> None:
         "native_pose_messages": len(poses),
         "keyframes": len(stamps),
         "exact_image_join_missing": 0,
+        "header_identity_csv_sha256": hash_file(mapping),
+        "header_join": "unique exact forward ROS C++ double conversion from captured feature headers; no nearest neighbor or tolerance",
         "geometry_verified": "Not evaluated",
         "ground_truth_used": False,
         "raw_stream_input": args.raw_image_topic is not None,
