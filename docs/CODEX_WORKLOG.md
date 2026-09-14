@@ -1524,3 +1524,15 @@ Objective/motivation: test whether removing strong LK retains H02 benefit and av
 - Known issues: later first-sequence archives still need their full allowance; no blanket guarantee that every future stage fits.
 - Interpretation: accounting for retained artifacts, not tuning estimator behavior or weakening a scientific criterion.
 - Next steps: finish Bus r1 L graph, then continue the same registered local repeats with valid storage reuse.
+
+### 2026-09-15 — Learned-loop first real paired system block
+
+- Objective/problem: advance the frozen mature-component global association comparison beyond preparation; avoid inventing accuracy from unvalidated reference semantics.
+- Files changed: loop report/decision/handoff, system_results.csv, loop_candidates.csv, runtime_receipts.json; scripts/summarize_loop_baseline_v1.py and required research logs.
+- Implementation/decisions: compact aggregation of existing receipts/candidates only, all18planned rows retained; no estimator or retrieval algorithm change. KLT source3c50b742, local run7c08909, C/archiver4ee416e, L902a886; publication commit is separate.
+- Experiments/results: Bus r1 local3654poses,2430keyframes,init2.227895s,497commonposes/579s/92.037%coverage. C443attempts/0passes; L2198attempts/3passes. Full Cemetery frontend also complete. Bus r2 running, no duplicate replay.
+- Qualitative observations: accepted pairs show matching wheel/sidewall or bus-front structures; review already knew arm outcome, therefore formal correctness staysUnknown. C/B outputs identical; L changed global output, not proven improved accuracy.
+- Failed attempts: planned Cemetery pause found process already exited; no signal sent. Existing preparation failures retained. No new failed VIO at checkpoint.
+- Known issues: exact proxy camera pose convention unresolved; formalAPE/RPE/Sim3/trueRecallNot evaluated. CPU encoder timing not exclusive to process.
+- Interpretation: legal native constraints are an actual intermediate result, not a confirmed learned system win. Full denominator2sequences/6locals/18arms remains.
+- Next steps: finish existing fixed matrix, preserving all failures/unknowns, not adjust thresholds to seek a positive.

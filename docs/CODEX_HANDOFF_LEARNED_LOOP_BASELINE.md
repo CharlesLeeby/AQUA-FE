@@ -1,27 +1,31 @@
 # AQUA-FE：学习式水下回环基线交接
 
-更新：2026-09-15T01:41:05+08:00。实验：`frontend_learned_loop_baseline_v1`。
+更新：2026-09-15T03:51:00+08:00。实验：`frontend_learned_loop_baseline_v1`。
 实际分支：`exp/learned-loop-baseline-v1-20260914`，不是 main。
-**PARTIAL_FULL_KLT_EXPORT_RUNNING；系统增量 Not evaluated。**
+**PARTIAL_SYSTEM_MATRIX_RUNNING；Bus r1 已完成 B/C/L，r2 正在运行。**
 
 本任务已明确扩展到全局关联。旧加点/恢复/坐标精化停止结论全部保留，不重开。
 
 - **重访依据**：已预注册完整 AFRL Bus Outside、Cemetery，共2条序列；均有历史开发曝光。
   提供方描述重访，不等于有逐查询真回环标签。
-- **模型已真实加载**：官方DINOv2 ViT-S/14，配套32×384词典，175个张量等值检查通过。
-  只做1张合成黑图推理；真实关键帧推理0。词典拟合图像清单 Unknown。
-- **输入正在执行**：找回精确历史 KLT 源码，8帧探针均350个经典点、学习0；
-  完整 Bus 前端已启动，尚无完整输入成功回执。没有重复启动或重跑旧v2后端。
+- **模型已真实执行**：官方DINOv2 ViT-S/14，配套32×384词典，175个张量等值检查通过。
+  Bus r1 的2430张关键帧编码完成，CPU编码+VLAD累计511.77s（均值210.6ms/张）；
+  图处理C为21.02s、L为22.02s，独立优化耗时Unknown。词典拟合图像清单Unknown。
+- **完整输入齐全**：Bus7338张原图/58487条IMU；Cemetery7781张原图/43400条IMU。
+  原始KLT冻结代码未改，没有重跑旧v2；Cemetery导出结束，不是暂停状态。
 - **相同像素/消息**：流式输入与原转换128条消息逐字节一致；仅减少中间文件存储。
   后端31个顶层项只改输出目录，其余30项不变。相机标定未改。
-- **系统仍未评估**：局部VIO0/6、C/L图处理0/12、B/C/L完成0/18。
-  当前没有WIN/TIE/LOSS、APE/RPE或新增合法回环可报告。
-- **空间与并发**：初次根盘11.43GiB已通过模型阶段预算；每阶段继续必要预检。
-  另一个工作区间歇运行VINS，不干预它，不与其并发本任务的定时求解器。
+- **当前系统结果**：局部VIO完成1/6、另1次在运行；C/L完成2/12，B/C/L输出3/18。
+  Bus r1 初始化2.228s、3654个局部位姿、2430关键帧；共同支撑497姿态/579s，覆盖92.04%。
+  C选择443个候选、0通过；L选择2198个、3通过。C输出与B字节一致，L输出改变。
+  三个通过对的图像呈现相同轮胎/车头结构，但本次审阅并非严格盲审，正式正确性仍Unknown。
+- **不能声称精度收益**：参考具体位姿约定未独立确认，APE/RPE/尺度及真Recall@4均Not evaluated。
+  几何成立不自动证明正确回环，更不等于比传统方法精度好；当前无WIN/TIE/LOSS结论。
+- **资源**：每阶段保持原8GiB运行盘储备；已有图像硬链接/描述子按身份复用，不删除或迁移数据。
 
-唯一后续任务：完成当前完整 Bus 输入，再依冻结顺序运行共享局部输出及C/L。
+唯一后续任务：依冻结顺序完成剩余共享局部输出及C/L，不重复已完成单元。
 不换模型、阈值、序列，不把加载通过当学习增量。
-原生适配器已编译，但真实档案/几何/系统联调仍未完成。
+原生适配器已完成Bus r1真实档案/几何/图优化联调，其余矩阵尚未完成。
 proxy不是独立GT；本包相机姿态方向说明待核实，未知字段不猜测。
 
 ## 直接可读的证据与接口
@@ -30,9 +34,11 @@ proxy不是独立GT；本包相机姿态方向说明待核实，未知字段不�
 - [完整任务](../papers/frontend_learned_loop_baseline_v1/task_instructions.md) /
   [冻结协议](../papers/frontend_learned_loop_baseline_v1/protocol.md) /
   [两序列和有限检查清单](../papers/frontend_learned_loop_baseline_v1/sequence_manifest.csv)
-- [18行计划结果账本，尚未评估](../papers/frontend_learned_loop_baseline_v1/system_results.csv) /
-  [候选表（表头，尚未检索）](../papers/frontend_learned_loop_baseline_v1/loop_candidates.csv) /
+- [18行结果账本，含未运行行](../papers/frontend_learned_loop_baseline_v1/system_results.csv) /
+  [完整已执行候选表](../papers/frontend_learned_loop_baseline_v1/loop_candidates.csv) /
   [决策及实际计数](../papers/frontend_learned_loop_baseline_v1/decision.json)
+- [实际运行小回执、命令及身份](../papers/frontend_learned_loop_baseline_v1/runtime_receipts.json) /
+  [参考约定独立检查](../papers/frontend_learned_loop_baseline_v1/reference_checks.json)
 - [模型/输入实测小回执](../papers/frontend_learned_loop_baseline_v1/prerequisite_checks.json) /
   [执行身份锁](../papers/frontend_learned_loop_baseline_v1/execution_lock.json) /
   [流式输入附录](../papers/frontend_learned_loop_baseline_v1/streaming_input_addendum.md)
@@ -53,3 +59,5 @@ DINO源commit：`7764ea0f912e53c92e82eb78a2a1631e92725fc8`。
 本轮前端启动时HEAD为4bdef735，使用新增未提交的IO适配器，其字节身份在运行中检查点记录（不冒称启动前receipt）；
 不得把之后报告发布commit写成当时源码身份。报告发布SHA以实际push及远端读回回执为准。
 大数据、权重、缓存未提交；没有删除或搬迁历史产物。
+Bus r1局部运行源码提交7c08909；档案/C调用4ee416e；L调用902a886。
+这些是任务适配器运行身份，外部VINS二进制始终为同一4e91d8ac…，不等于文档发布SHA。

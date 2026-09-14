@@ -1222,3 +1222,13 @@ Interpretation: UNSAFE_OR_UNRESOLVED; the proposed deletion does not solve the d
 - Related reference check: calibrated raw gyro favors forward reference quaternion direction for both fixed sequences, without fitting or learned-output access. Inference only regarding complete world/camera pose semantics; exact export camera origin remains Unknown.
 - Current conclusion: implement the representation-level fix before local/graph execution, retain thresholds/measurements. Evaluator distinguishes available support from validated reference fields and uses separate fixed-scale/Sim3 metrics with evo checks.
 - Open questions/next experiment: real shared archive, native PnP/graph, independent pair correctness and reference convention; continue the single fixed matrix, not another frontend variant.
+
+### 2026-09-15 — First legal learned-loop constraints, not a system-win claim
+
+- Question/hypothesis/motivation: does pretrained retrieval find additional usable revisits beyond nativeBRIEF under identical local estimation? It may tolerate underwater appearance changes without changing KLT.
+- Baseline/idea: frozen B/C/L shared-local design; mature retrieval adapter, no novelty claim or new strategy.
+- Assumptions/failure cases: PnP acceptance may be a false loop; changed global path may worsen it; proxy semantics and reference exposure may be unclear; technical repeats are not new sequences.
+- Evidence/Confirmed fact: Bus r1 C0passes/443selected, L3passes/2198selected, same2430-keyframe archive/odometry edges. Lpathchanged,CequalsB.497commonposes and92.037%coverage pass numerical support.
+- Inference: wheel/sidewall and bus-front pairs visually support actual overlap. Review was not strictly blinded, so do not promote to independent correct-loop labels or trueRecall.
+- Current conclusion: native legal-constraint increment observed in one repeat; accuracy gain and practical learned system increment Not evaluated. Unresolved reference convention prevents inventing error scores; no silentSim3.
+- Open questions/next experiment: finish the registered matrix and retain unknowns; no threshold/model/sequence substitution or stopped local-route restart.

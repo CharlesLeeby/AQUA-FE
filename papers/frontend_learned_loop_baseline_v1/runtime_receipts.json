@@ -1,0 +1,409 @@
+{
+  "role": "Existing immutable runtime receipts; no new computation",
+  "sources": {
+    "experiments/learned_loop_baseline_v1/bus_outside_r1/replay_receipt.json": "9401b43cc684c0df597efcc504df86cac796bd7b3529613a2a8b44d7b49b3e0b",
+    "experiments/learned_loop_baseline_v1/bus_outside_r1/archive/archive_receipt.json": "de0ced8e8ba34f3b6fb05d2227ae997e2be371d5f0b1574a281bbf510f00b542",
+    "experiments/learned_loop_baseline_v1/bus_outside_r1/C/graph_receipt.json": "0ca545dd8f16e28194a6fa75c77dc4d4fae2a996311c7ab83b96cd58319f01d6",
+    "experiments/learned_loop_baseline_v1/bus_outside_r1/L/graph_receipt.json": "4d01196d1212d9bb61be89c13554f061b0a02d58dd32997db96bb870885a69c6",
+    "experiments/learned_loop_baseline_v1/bus_outside_r1/evaluation/evaluation.json": "9da551ce737858982c275abddfde7155ebe03a97906620987655140d47941b80",
+    "experiments/learned_loop_baseline_v1/bus_outside_r1/descriptors.json": "cab041b95ad0b34036a08cdc46b2f6b2b0422fe1c459c354759632a7a1c99ea1",
+    "experiments/learned_loop_baseline_v1/bus_outside_r2/replay_receipt.json": "3bd11be1182f7cf7b1816eb38f339f4b2dac713a3cf5cf5f83f1316eb564b97f"
+  },
+  "blocks": {
+    "bus_outside_r1": {
+      "local": {
+        "status": "LOCAL_REPLAY_FINISHED",
+        "sequence": "bus_outside",
+        "repeat": 1,
+        "feature_bag_sha256": "bd095b248c714e1420e36462aaa72d5560f7fd48fe59f812b98fd9d8cabb9c8a",
+        "canonical_yaml_sha256": "cb9a252cdb0864aad843b7c6ad050f74ce0c1c07760df8963238d188364052f1",
+        "config_audit": {
+          "keys": 31,
+          "unchanged_keys": 30,
+          "only_changed_key": "output_path",
+          "camera_file": "afrl_cave_cam0_pinhole.yaml",
+          "camera_sha256": "5856ee4b261d5b0d67021ef81ad0a0c5e8e6aa885184c68591530224b3645aee",
+          "generated_yaml_sha256": "0aa2ff7a9314c0ac9a05f4d3d694a1427ea5ec12241d8098a59ae3df1516cb09"
+        },
+        "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+        "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+        "resolved_vins_library": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/libvins_lib.so",
+        "local_run_started": true,
+        "loop_feedback": false,
+        "shared_arms": [
+          "B",
+          "C",
+          "L"
+        ],
+        "playback_rate": 1.0,
+        "playback_delay_s": 3,
+        "post_play_s": 8,
+        "capture_topics": [
+          "/vins_estimator/keyframe_pose",
+          "/vins_estimator/keyframe_point",
+          "/vins_estimator/odometry",
+          "/vins_estimator/extrinsic",
+          "/feature_tracker/feature",
+          "/imu/imu"
+        ],
+        "runner_sha256": "0cc8f0265093cf7774c639c04a52460440ec11b8c49fc84cda340074b21dc91d",
+        "source_commit": "7c08909bd65af5bec8b5ed163a85e058a6e678cd",
+        "started_at": "2026-09-15T02:11:48.394625+08:00",
+        "completed_at": "2026-09-15T02:21:48.585561+08:00",
+        "initialization_log_detected": true,
+        "vio_rows": 3654,
+        "artifacts": {
+          "vio.csv": "a39e6b4b7e2b9c871f1ebfdb64d95a1b9d04d8cfc6058e893f6b373905331ea6",
+          "capture.bag": "874228570bcd10d6d864b3e1ddbc75cd84a4fdae47d84284123b20867c27c2b8",
+          "vins.log": "ee7847e1d39f8fab168f9e9889dd194c108f6f990bbbe4bd927df95963d73388"
+        },
+        "passive_capture_audit": {
+          "expected": {
+            "counts": {
+              "/feature_tracker/feature": 3669,
+              "/imu/imu": 58487
+            },
+            "serialized_per_topic_sha256": {
+              "/feature_tracker/feature": "a08d5cbefc7914adc6736f2c2708044fad20c48ef84b65f1ba61e4d6344668b7",
+              "/imu/imu": "065870518ddace4088cd308df6461d5396a277480492acf287a5dd27940ea1da"
+            },
+            "first_header_ns": {
+              "/feature_tracker/feature": 1494876479721554599,
+              "/imu/imu": 1494876479846608931
+            }
+          },
+          "recorder_received": {
+            "counts": {
+              "/feature_tracker/feature": 3669,
+              "/imu/imu": 58487
+            },
+            "serialized_per_topic_sha256": {
+              "/feature_tracker/feature": "a08d5cbefc7914adc6736f2c2708044fad20c48ef84b65f1ba61e4d6344668b7",
+              "/imu/imu": "065870518ddace4088cd308df6461d5396a277480492acf287a5dd27940ea1da"
+            },
+            "first_header_ns": {
+              "/feature_tracker/feature": 1494876479721554599,
+              "/imu/imu": 1494876479846608931
+            }
+          },
+          "recorder_input_exact": true,
+          "first_nonlinear_odometry_header_ns": 1494876481949450016,
+          "first_nonlinear_output_from_input_s": 2.227895417,
+          "initialization_time_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+          "per_observation_estimator_residual_use": "Unknown: a passive recorder is not an estimator residual-use trace"
+        }
+      },
+      "archive": {
+        "schema": "aqua-fe-native-keyframe-archive-v1",
+        "status": "COMPLETE",
+        "pose_frame": "world_T_imu_body",
+        "points_layout": "little-endian float32 rows: world_XYZ,norm_xy,pixel_uv,feature_id",
+        "selection": "native first10 skip; skip_count0; distance strictly greater than0",
+        "capture_bag_sha256": "874228570bcd10d6d864b3e1ddbc75cd84a4fdae47d84284123b20867c27c2b8",
+        "images_bag_sha256": "ff17bc711d71668c775fbe0de0cb9305a2e02969a42e996b994b7863df79b10d",
+        "raw_bag_hash_reused_under_validated_index_identity": true,
+        "adapter_sha256": "05f428e6a72c854c15bc5f0d06f63b42de1c382c4b157a6911b665ed522da8df",
+        "adapter_commit": "4ee416e6f01276837dc418c1ce2038c2a434d40b",
+        "keyframes_csv_sha256": "4a3016abb8bac1e296b99f8de967e77f0d79723e11d4774b5aaf83ad718a3b01",
+        "native_pose_messages": 2440,
+        "keyframes": 2430,
+        "exact_image_join_missing": 0,
+        "header_identity_csv_sha256": "dc5ed46e357a24868a851890f6f0f624260d13a77c5d97b9d1847d2b9df4917b",
+        "header_join": "unique exact forward ROS C++ double conversion from captured feature headers; no nearest neighbor or tolerance",
+        "geometry_verified": "Not evaluated",
+        "ground_truth_used": false,
+        "raw_stream_input": true,
+        "image_storage": "shared content-addressed hardlink"
+      },
+      "C": {
+        "status": "GRAPH_COMPLETE",
+        "arm": "C",
+        "sequence": "bus_outside",
+        "repeat": 1,
+        "command": [
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/native_adapter_build_attempt2/build/aqua_native_loop_replay",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r1/archive",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r1/afrl_cave_cam0_pinhole.yaml",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r1/vins_same_backend.yaml",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_k10L6.bin",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_pattern.yml",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r1/C/native",
+          "C",
+          "bus_outside",
+          "1"
+        ],
+        "graph_started": true,
+        "binary_sha256": "e87f60c8d9b13f4c8db90a960b7a95610fb83ff609928db9ecc00f064cf6b027",
+        "shared_local_receipt_sha256": "9401b43cc684c0df597efcc504df86cac796bd7b3529613a2a8b44d7b49b3e0b",
+        "archive_roster_sha256": "4a3016abb8bac1e296b99f8de967e77f0d79723e11d4774b5aaf83ad718a3b01",
+        "camera_sha256": "5856ee4b261d5b0d67021ef81ad0a0c5e8e6aa885184c68591530224b3645aee",
+        "config_sha256": "0aa2ff7a9314c0ac9a05f4d3d694a1427ea5ec12241d8098a59ae3df1516cb09",
+        "brief_vocabulary_sha256": "753e7e126c588906ad16197892bdcd914f3a0971037c8f8aeb3c63418458b035",
+        "brief_pattern_sha256": "cb9e20bf47d7557cd22f7820524c3cb13b3a315c451d5665955336100177cafd",
+        "candidates_sha256": null,
+        "runner_sha256": "30326cc3fdca90045c8ce3f44546932f406ab9eab0b2ad1d2edb9ce99a7e00db",
+        "source_commit": "4ee416e6f01276837dc418c1ce2038c2a434d40b",
+        "started_at": "2026-09-15T02:26:36.057914+08:00",
+        "native_process_wall_s": 21.02119264600333,
+        "keyframes": 2430,
+        "verified_candidates": 0,
+        "rejected_candidates": 443,
+        "correctness": "Unknown",
+        "optimization_time_separate": "Unknown: native process wall includes other work",
+        "completed_at": "2026-09-15T02:26:58.762246+08:00",
+        "artifacts": {
+          "bow_candidates.csv": "0fc1c55c4ea6da5ee333b471dfa25b0a23003e615814e52d6fb1c42fb3a8b665",
+          "geometry.csv": "b4be1a65756e92908ee8455e64c70312bdbbf7b2284b6f4e5ca5e008eec0b4f7",
+          "global_body.tum": "8a4c62b8aa5d95a9a943988d02810030466111947d23ffd4a21c49a3e937a317",
+          "local_body.tum": "8a4c62b8aa5d95a9a943988d02810030466111947d23ffd4a21c49a3e937a317",
+          "native_path_updates.csv": "37d9185d643aac34e7389ea8c84e5e2912562094ea04abee74ec39be3575809e",
+          "processing.csv": "adf248c0eff69747abb7b8940528d5c007444bc694c9d51beb2496f60dc95927",
+          "raw_odometry_edges.csv": "9b0bcd8bab3a27affeb0c0ac0e84fb8c64200fff19977b7a530bc0dc6ea483dd"
+        }
+      },
+      "L": {
+        "status": "GRAPH_COMPLETE",
+        "arm": "L",
+        "sequence": "bus_outside",
+        "repeat": 1,
+        "command": [
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/native_adapter_build_attempt2/build/aqua_native_loop_replay",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r1/archive",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r1/afrl_cave_cam0_pinhole.yaml",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r1/vins_same_backend.yaml",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_k10L6.bin",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_pattern.yml",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r1/L/native",
+          "L",
+          "bus_outside",
+          "1",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r1/learned_candidates.csv"
+        ],
+        "graph_started": true,
+        "binary_sha256": "e87f60c8d9b13f4c8db90a960b7a95610fb83ff609928db9ecc00f064cf6b027",
+        "shared_local_receipt_sha256": "9401b43cc684c0df597efcc504df86cac796bd7b3529613a2a8b44d7b49b3e0b",
+        "archive_roster_sha256": "4a3016abb8bac1e296b99f8de967e77f0d79723e11d4774b5aaf83ad718a3b01",
+        "camera_sha256": "5856ee4b261d5b0d67021ef81ad0a0c5e8e6aa885184c68591530224b3645aee",
+        "config_sha256": "0aa2ff7a9314c0ac9a05f4d3d694a1427ea5ec12241d8098a59ae3df1516cb09",
+        "brief_vocabulary_sha256": "753e7e126c588906ad16197892bdcd914f3a0971037c8f8aeb3c63418458b035",
+        "brief_pattern_sha256": "cb9e20bf47d7557cd22f7820524c3cb13b3a315c451d5665955336100177cafd",
+        "candidates_sha256": "5ae6429ca8dadc72f29ecee389273b5be074dcbab0d36dad680237df9b2f2842",
+        "runner_sha256": "30326cc3fdca90045c8ce3f44546932f406ab9eab0b2ad1d2edb9ce99a7e00db",
+        "source_commit": "902a886049409825ca88bd169b88e00ef8ceaa04",
+        "started_at": "2026-09-15T02:49:49.841527+08:00",
+        "native_process_wall_s": 22.018607781967148,
+        "keyframes": 2430,
+        "verified_candidates": 3,
+        "rejected_candidates": 2195,
+        "correctness": "Unknown",
+        "optimization_time_separate": "Unknown: native process wall includes other work",
+        "completed_at": "2026-09-15T02:50:13.523685+08:00",
+        "artifacts": {
+          "bow_candidates.csv": "b9014d13497ab68fb826e5c889acbb74834ff31326994141dd682e94b20f2080",
+          "geometry.csv": "976b04bb1b526ac77936623cdb7a7122dbd4764368b86dc2733ae156aee36b8e",
+          "global_body.tum": "2c3e8a0f78089595ded930e3c49926a668d5e60e566f8c13edbc22915de34e1d",
+          "local_body.tum": "8a4c62b8aa5d95a9a943988d02810030466111947d23ffd4a21c49a3e937a317",
+          "native_path_updates.csv": "a7852077ec4c8205de15a55fb1f7f6fc08145e9f17c34d8e77073bb5fe43ee3b",
+          "processing.csv": "dbd0492f94b95db4bd8a2dc2d3d90bc65a0e76c16dd8f3c2332dccf054188942",
+          "raw_odometry_edges.csv": "9b0bcd8bab3a27affeb0c0ac0e84fb8c64200fff19977b7a530bc0dc6ea483dd"
+        }
+      },
+      "evaluation": {
+        "sequence": "bus_outside",
+        "repeat": 1,
+        "support": {
+          "common_pose_count": 497,
+          "common_span_s": 579.0,
+          "reference_evaluable_samples": 540,
+          "input_grid_samples": 585,
+          "common_reference_coverage": 0.9203703703703704,
+          "support_gate": "PASS"
+        },
+        "reference_identity": {
+          "sequence": "bus_outside",
+          "reference_sha256": "341770a61a2adae1135c4319bf858be32218ec406b446420d6a9a495b4a36bb7",
+          "config_sha256": "cb9a252cdb0864aad843b7c6ad050f74ce0c1c07760df8963238d188364052f1",
+          "intervals_total": 3387,
+          "valid_intervals": 3381,
+          "imu_samples": 58487,
+          "fixed_camera_imu_td_s": -8.121e-05,
+          "no_estimator_or_learned_outputs_used": true,
+          "fitting": "none: no bias/offset/scale/rotation fit",
+          "validity": "positive dt<=1s and enclosed IMU support",
+          "convention_validated": false,
+          "pose_convention": "Unknown",
+          "interpretations": {
+            "as_world_T_cam0": {
+              "gyro_difference_rmse_rad_s": 0.031897677019523195,
+              "median_rad_s": 0.01352660892664218,
+              "p95_rad_s": 0.04812029431078561,
+              "per_axis_correlation": [
+                0.9431852517684505,
+                0.9541067418038951,
+                0.9779416082201543
+              ]
+            },
+            "inverse_direction": {
+              "gyro_difference_rmse_rad_s": 0.1574797143844867,
+              "median_rad_s": 0.09919889925875662,
+              "p95_rad_s": 0.31488388425372504,
+              "per_axis_correlation": [
+                -0.1520507182791701,
+                -0.014998487566104226,
+                0.11919459872102896
+              ]
+            }
+          },
+          "limitation": "Finite-interval gyro consistency is supporting evidence, not independent proof of camera origin/world pose convention; no automatic relabeling or trajectory score."
+        },
+        "raw_local_rows": 3654,
+        "initialization_log_detected": true,
+        "initialization_time_s": 2.227895417,
+        "initialization_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+        "shared_pre_post_boundary_s": 1494876986.4649806,
+        "reference_role": "COLMAP proxy, not independent GT",
+        "arms": {
+          "B": {
+            "raw_keyframe_count": 2430,
+            "input_grid_coverage": 0.9230769230769231,
+            "reference_grid_coverage": 0.9203703703703704,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          },
+          "C": {
+            "raw_keyframe_count": 2430,
+            "input_grid_coverage": 0.9230769230769231,
+            "reference_grid_coverage": 0.9203703703703704,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          },
+          "L": {
+            "raw_keyframe_count": 2430,
+            "input_grid_coverage": 0.9230769230769231,
+            "reference_grid_coverage": 0.9203703703703704,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          }
+        }
+      },
+      "encoding": {
+        "source_commit": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+        "model_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+        "vocabulary_sha256": "695985ec145406609d5c8d122092198886c4d89463c316e6a3b1606aee34143d",
+        "preprocess": "dl-vits14-final-norm-patch-280x448-letterbox-imagenet-k32-v1",
+        "device": "cpu",
+        "torch_version": "2.2.2+cpu",
+        "strict_official_tensors_loaded": 175,
+        "python_compatibility": "postponed DINO annotations only; original source bytes unchanged",
+        "parameters": 22056576,
+        "cold_load_s": 0.3608617690624669,
+        "status": "DESCRIPTORS_COMPLETE",
+        "keyframes": 2430,
+        "cache_hits": 0,
+        "new_image_inferences": 2430,
+        "archive_roster_sha256": "4a3016abb8bac1e296b99f8de967e77f0d79723e11d4774b5aaf83ad718a3b01",
+        "peak_rss_kib": 726896,
+        "inference_and_vlad_total_s": 511.7697190780891,
+        "inference_and_vlad_mean_s": 0.2106048226658803
+      }
+    },
+    "bus_outside_r2": {
+      "local": {
+        "status": "LOCAL_REPLAY_FINISHED",
+        "sequence": "bus_outside",
+        "repeat": 2,
+        "feature_bag_sha256": "bd095b248c714e1420e36462aaa72d5560f7fd48fe59f812b98fd9d8cabb9c8a",
+        "canonical_yaml_sha256": "cb9a252cdb0864aad843b7c6ad050f74ce0c1c07760df8963238d188364052f1",
+        "config_audit": {
+          "keys": 31,
+          "unchanged_keys": 30,
+          "only_changed_key": "output_path",
+          "camera_file": "afrl_cave_cam0_pinhole.yaml",
+          "camera_sha256": "5856ee4b261d5b0d67021ef81ad0a0c5e8e6aa885184c68591530224b3645aee",
+          "generated_yaml_sha256": "777f3f486d7ed26bab7fc5f39b5d8da3fb64bc9db758d48f5f290dccace79370"
+        },
+        "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+        "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+        "retained_artifact_budget": {
+          "first_archive_bound_bytes": 2411724800,
+          "known_cached_source_headers": 2430,
+          "effective_allowance_bytes": 1137704960,
+          "previous_archive_receipt_sha256": [
+            "de0ced8e8ba34f3b6fb05d2227ae997e2be371d5f0b1574a281bbf510f00b542"
+          ],
+          "reserve_bytes": 8589934592,
+          "role": "storage reuse only; estimator/input/scientific gates unchanged"
+        },
+        "resolved_vins_library": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/libvins_lib.so",
+        "local_run_started": true,
+        "loop_feedback": false,
+        "shared_arms": [
+          "B",
+          "C",
+          "L"
+        ],
+        "playback_rate": 1.0,
+        "playback_delay_s": 3,
+        "post_play_s": 8,
+        "capture_topics": [
+          "/vins_estimator/keyframe_pose",
+          "/vins_estimator/keyframe_point",
+          "/vins_estimator/odometry",
+          "/vins_estimator/extrinsic",
+          "/feature_tracker/feature",
+          "/imu/imu"
+        ],
+        "runner_sha256": "7b63b06b3fb8c9d498b879061b9ef1786d80df163426ca5acb47b7312917ebb3",
+        "source_commit": "902a886049409825ca88bd169b88e00ef8ceaa04",
+        "started_at": "2026-09-15T03:41:06.006002+08:00",
+        "completed_at": "2026-09-15T03:51:06.351723+08:00",
+        "initialization_log_detected": true,
+        "vio_rows": 3654,
+        "artifacts": {
+          "vio.csv": "33f4531a831d267311ad2df7fe344a8fd3bf627d45685724a3d21db1a44d0e56",
+          "capture.bag": "feb4dd4cba4da9a99ceed8a14ba58a766f39528df8b9dda5c23114f617e0e9e3",
+          "vins.log": "3a58315472161afaf0acab00f8225b408712f31272435a90f8a13f142b59b81b"
+        },
+        "passive_capture_audit": {
+          "expected": {
+            "counts": {
+              "/feature_tracker/feature": 3669,
+              "/imu/imu": 58487
+            },
+            "serialized_per_topic_sha256": {
+              "/feature_tracker/feature": "a08d5cbefc7914adc6736f2c2708044fad20c48ef84b65f1ba61e4d6344668b7",
+              "/imu/imu": "065870518ddace4088cd308df6461d5396a277480492acf287a5dd27940ea1da"
+            },
+            "first_header_ns": {
+              "/feature_tracker/feature": 1494876479721554599,
+              "/imu/imu": 1494876479846608931
+            }
+          },
+          "recorder_received": {
+            "counts": {
+              "/feature_tracker/feature": 3669,
+              "/imu/imu": 58487
+            },
+            "serialized_per_topic_sha256": {
+              "/feature_tracker/feature": "a08d5cbefc7914adc6736f2c2708044fad20c48ef84b65f1ba61e4d6344668b7",
+              "/imu/imu": "065870518ddace4088cd308df6461d5396a277480492acf287a5dd27940ea1da"
+            },
+            "first_header_ns": {
+              "/feature_tracker/feature": 1494876479721554599,
+              "/imu/imu": 1494876479846608931
+            }
+          },
+          "recorder_input_exact": true,
+          "first_nonlinear_odometry_header_ns": 1494876481949450016,
+          "first_nonlinear_output_from_input_s": 2.227895417,
+          "initialization_time_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+          "per_observation_estimator_residual_use": "Unknown: a passive recorder is not an estimator residual-use trace"
+        }
+      }
+    },
+    "bus_outside_r3": {},
+    "cemetery_r1": {},
+    "cemetery_r2": {},
+    "cemetery_r3": {}
+  }
+}

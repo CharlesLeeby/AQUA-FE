@@ -393,3 +393,7 @@ Current isolated branch now has exact keyframe/3D archive and original-PnP/graph
 ### 2026-09-15 — Same learned-loop baseline now executing prerequisites
 
 Root restored to11.43GiB initially; model-stage frozen reserve+allowance passes. Exact historical KLT package3c50b742/exporterbb4e50d8 recovered, one official DINOv2-S/14 load and synthetic finite-output inference passed, actual128-message canonical stream equivalence and8-frame pure-KLT probe passed. Full Bus export is running in isolated task worktree at checkpoint; local0/6,graph0/12,completed arm0/18. Current status PARTIAL_FULL_KLT_EXPORT_RUNNING supersedes old resource-blocked progress, not a scientific outcome. Per-phase capacity guards and avoidance of unrelated concurrent VINS remain. No old routes reopened; current entry docs/CODEX_HANDOFF_LEARNED_LOOP_BASELINE.md.
+
+### 2026-09-15 — First learned-loop system block complete
+
+Both full KLT inputs complete. Bus r1 local/archive/C/L complete (1/6local,2/12graph,3/18armoutputs); Bus r2 running. C0 versus L3native geometric passes; shared2430KF,497commonposes/92.037%PASS. Lglobaloutput changed but reference convention/independent correctness unresolved: no confirmed accuracy or learned-system win. All18planned rows retained; follow only remaining fixed matrix. Latest task handoff remains docs/CODEX_HANDOFF_LEARNED_LOOP_BASELINE.md, not old temporal-refinement/local seed routes.
