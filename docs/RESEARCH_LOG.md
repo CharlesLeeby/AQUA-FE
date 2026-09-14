@@ -1188,3 +1188,13 @@ Interpretation: UNSAFE_OR_UNRESOLVED; the proposed deletion does not solve the d
 - Current conclusion: design frozen for two complete historically developed sequences; execution PARTIAL_BLOCKED_RESOURCE, all scientific effect fields Not evaluated. Do not infer NO_REVISIT_DATA, learned gain, or NO_LEARNED_LOOP_INCREMENT from this preflight. No new innovation/success probability/paper acceptance claim.
 - Open questions: actual pretrained runtime load, vocabulary fitting images, complete archived map observations, independent query labels and correct/incorrect loops, global L/C differences.
 - Next experiment: only the same bounded B/C/L matrix after safe output storage/root reserve and execution identity/native interface completion. No new dataset/model or local-refinement variant is authorized by this entry. Handoff docs/CODEX_HANDOFF_LEARNED_LOOP_BASELINE.md.
+
+## 2026-09-14 — Shared geometry input is an executable prerequisite, not learned gain
+
+- Research question / hypothesis: can retrieval alone add legal useful loops with strictly shared local behavior? Hypothesis / Inference remains untested.
+- Motivation / related baseline: native live queues can select different keyframes, and TUM alone lacks map points. B/C/L must derive from one archived local output per repeat.
+- Proposed idea / why it might work: exact header joins and preserved body/world/observation identity feed an isolated native BRIEF/PnP/4DoF adapter; this removes an input-comparison ambiguity, not an algorithmic failure or a demonstrated trajectory error.
+- Assumptions / potential failures: complete passive capture, camera calibration, source identity and actual valid3D are still necessary. Successful compile/hash/synthetic tests cannot establish these on real data; independent correct-loop labels remain Unknown.
+- Evidence: Confirmed fact: adapter compiles and17 synthetic tests pass; native PnP source and solver mathematics unchanged. Backend binaries/canonical YAML agree with historical lock, but checked old shadow exporter hash differs, so directory name is not provenance. No model, real geometry or VIO executed.
+- Current conclusion: scientific status still Not evaluated. Root reserve recovered enough for small code work but not frozen runtime reserve plus artifacts. Nothing here promotes learning over C or reopens prior local-route negatives.
+- Open questions / next experiment: resolve the same frozen KLT input identity and actual model/archive prerequisites after capacity; execute only the registered full Bus/Cemetery matrix. No new hypothesis search, model or sequence substitution.

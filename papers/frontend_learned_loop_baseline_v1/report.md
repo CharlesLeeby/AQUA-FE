@@ -1,5 +1,83 @@
 # 水下学习回环基线 v1：有真实重访，系统比较尚未执行
 
+## 最新增量：2026-09-14T16:14:36+08:00
+
+**状态仍为 PARTIAL_BLOCKED_RESOURCE，系统增量 Not evaluated。** 已从候选层代码
+推进到隔离的原生回环适配器编译成功，但没有运行真实关键帧、PnP 或位姿图。
+
+| 第一屏问题 | 最新证据 |
+|---|---|
+| 有无真实重访？ | 仍为已锁定的完整 Bus/Cemetery，提供方描述重访；逐查询标签 Unknown。 |
+| 学习相对传统多带来什么？ | Not evaluated：模型加载/推理、C/L 检索均 0。 |
+| 几何是否成立？ | 已实现通往原生 BRIEF/PnP 的输入接口；真实几何验证 0，不能报合法新增回环。 |
+| 全局轨迹是否改善？ | 局部 VIO 0/6，位姿图 0/12，18 个 B/C/L 计划行仍全部 NOT_RUN_RESOURCE。 |
+| 本次计算？ | 原生适配器编译成功；9 个档案测试、8 个候选测试通过。训练/模型推理/VINS/位姿图/大文件下载均 0。 |
+| 是否值得继续？ | 固定基线仍值得完成检验；尚无支持或否定学习增量的系统结果。 |
+
+### 已实现与尚未验证的边界
+
+- [档案脚本](../../scripts/archive_loop_keyframes_v1.py)：从已有原生 pose/point 发布
+  被动保存一次局部输出，使用精确 header 时间戳关联原图；保留 native first10 skip、
+  零距离过滤、body pose、world XYZ、normalized xy、pixel uv、ID。缺失时失败，
+  不拿邻近图或 TUM 补造测量。`--verify-only ARCHIVE` 只读检查 receipt、逐文件哈希、
+  时间/ID/位姿/点结构；**不证明几何正确**。目前只接受与 KLT 相同的 800×600 mono8
+  转换图像，尚未生成真实档案。
+- [构建脚本](../../scripts/build_native_loop_baseline_v1.py)只复制 loop_fusion 源码到
+  本任务 `experiments/` 下构建；原外部工作区不动。隔离补丁限于 C/L 候选接口、
+  已注册的历史集合限制、验证日志和优化完成通知。`keyframe.cpp` 逐字节未变，
+  4DoF/6DoF 求解函数除只读完成通知之外未变；未重编译局部 VINS。
+- [原生适配器](../../scripts/native_loop_baseline_v1/native_loop_replay.cpp)读取同一
+  关键帧档案，调用原生 `findConnection()`，保留原图优化；记录候选、通过/拒绝、
+  原生相对约束、四前驱原始里程计边目录、局部/全局位姿及处理耗时。
+  四前驱目录不是声明所有边都进入每次优化的 active segment。
+- 首次准备在补丁锚点不唯一处失败，目录 `native_adapter_build` 保留。收窄到
+  `addKeyFrame` 后 `native_adapter_build_attempt2` 编译通过。随后修复 CSV CRLF
+  兼容与非法 pose 拒绝并增量重编译。没有把失败的准备计成 VIO 技术重复。
+- 17/17 合成测试的具体入口是已有候选测试和新增
+  [9 项档案测试](../../scripts/tests/test_archive_loop_keyframes_v1.py)。它们不是
+  真实数据几何/时序一致性验证。模型 encoder、真实档案联调、独立回环标签和
+  完整系统评价仍未完成；不能将这次编译称为系统 baseline 已交付。
+
+构建命令与运行尺度资产（不上传）：
+
+```bash
+python3 -B scripts/build_native_loop_baseline_v1.py --build-dir experiments/learned_loop_baseline_v1/native_adapter_build_attempt2
+cmake --build experiments/learned_loop_baseline_v1/native_adapter_build_attempt2/build --parallel 1
+python3 -B -m unittest discover -s scripts/tests -p test_archive_loop_keyframes_v1.py -v
+python3 -B -m unittest discover -s scripts/tests -p test_learned_loop_candidates_v1.py -v
+```
+
+构建器会拒绝覆盖已有目录；上面第一条是本次执行记录，不是让接手人重复执行。
+源码快照及逐文件原身份位于该 attempt2 的 `snapshot_identity.json`，二进制在
+`build/aqua_native_loop_replay`，SHA-256
+`e87f60c8d9b13f4c8db90a960b7a95610fb83ff609928db9ecc00f064cf6b027`。
+适配器源码/配置和二进制身份摘要在 [decision.json](decision.json)，没有模型/VIO
+运行源码提交可冒认。本次使用既有 GCC9.4、OpenCV4.2、Ceres1.14、Eigen3.3.7、ROS1；
+所检查 Python 为 torch2.2.2+cpu，未加载模型，也未安装或升级环境。
+
+### 资源与局部身份仍未完全就绪
+
+新实测根盘 **8,352,247,808 字节（7.78 GiB）**，比先前约 300 MiB 明显恢复；
+`/mnt/data` 575,979,520 字节，`/media/ma/Data` 227,987,456 字节。
+根盘 ≥2 GiB 的独立储备已通过，允许这次小型适配器构建；但任何现有输出盘仍不满足
+冻结的 **≥8 GiB 运行储备再加保留产物预算**，因此没有模型加载、下载或 replay。
+没有清理/迁移用户数据。需提供满足储备与产物预算的任务输出路径；只差几百 MiB
+达到 8 GiB 并不代表已有足够空间保存完整矩阵。若保留全部转换 mono 图，单两序列
+图像像素就有 15,119×800×600=7,257,120,000 字节，未含消息开销；必须先有有界
+产物预算，不能在近满盘下盲目生成。此为容量上界检查，不是实测磁盘占用或新方法。
+
+定向核对确认现有 `vins_node` / `libvins_lib.so` 与历史冻结身份一致，Bus/Cemetery
+旧 canonical YAML 和 frontend YAML 可读且哈希一致（具体值见 decision）。但检查到
+旧 v2 shadow 目录的 exporter 当前 SHA 为 `e20bc39f...`，不同于旧锁的 `bb4e50d8...`；
+基础 Git f6f8feec 中该文件也不是该旧锁内容。因此**不能把目录名当成源码身份**。
+尚未据此归因 KLT 行为改变或否定历史结果，亦未运行这份不同身份的 exporter。
+完整 KLT 源码/新输入锁仍待完成，磁盘恢复不自动等于所有执行前提就绪。
+
+本次按照项目研究 skill 的证据分层保留 `Not evaluated`，并按冻结资源合同暂停长运行；
+旧停止结论和原始协议/CSV 不改。没有后台系统实验在等待自动执行。
+
+## 初次检查快照（以下保留原始状态，不代表最新进度）
+
 更新：2026-09-14T01:15:11+08:00。状态：`PARTIAL_BLOCKED_RESOURCE`。
 
 | 第一屏问题 | 目前证据 |
