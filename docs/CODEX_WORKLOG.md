@@ -1449,3 +1449,18 @@ Objective/motivation: test whether removing strong LK retains H02 benefit and av
 - Known issues: at 01:15+08 root1541496832B, /mnt/data1850081280B, /media/ma/Data227987456B available; below conservative replay reserves root2GiB/runtime8GiB. Actual pretrained weight load, vocabulary fitting image manifest, full saved keyframe archive, backend config/build lock and native bridge still unresolved/Not evaluated.
 - Interpretation: PARTIAL_BLOCKED_RESOURCE is an execution status, not NO_REVISIT_DATA or NO_LEARNED_LOOP_INCREMENT. This work expands global-association scope without changing any earlier negative conclusion or proving innovation.
 - Next steps: provision safe task-specific output capacity/root reserve, then finish only the same protocol's loading/archive/native interface prerequisites and bounded B/C/L matrix. No automatic model, window or threshold search; no unattended task launched. Publication SHA and actual remote verification are reported after the scoped normal push.
+
+## 2026-09-14 14:47+08 — Learned loop continuation remains resource-blocked
+
+- Task objective: resume the same fixed Bus/Cemetery loop baseline from its published state, without repeated experiments or configuration changes.
+- Problem / motivation: user requested continuation; safe execution depends on actual capacity, not the previous chat's disk summary.
+- Files changed: docs/CODEX_HANDOFF_LEARNED_LOOP_BASELINE.md and this append-only worklog entry, in the isolated task worktree only.
+- Implementation: verified primary repository root/origin, clean task branch and published base3ce616e17206fcb9354537b1c4d59fe1e3d3484a; read governing protocol and checked relevant processes and the three existing filesystems. No task process was available to resume.
+- Technical decisions: retain frozen conservative root2GiB/runtime8GiB reserves; no model load, backend build/run, data deletion/migration, or new route. Original experiment report/decision/CSV/protocol/code remain unchanged.
+- Experiments performed: Not evaluated; no new experiment or test run. Only non-mutating preflight plus two small documentation edits.
+- Quantitative results: 2026-09-14T14:47:59+08:00 root315260928B (300.66MiB), /mnt/data576438272B (549.73MiB), /media/ma/Data227987456B (217.43MiB). New training/model load/inference/VIO/pose-graph/tests all0; totals remain local0/6, graph0/12, completed arm rows0/18.
+- Qualitative observations: free space has decreased since initial publication; the independent root reserve is already violated regardless of runtime-path choice.
+- Failed attempts: no failed model/VINS execution because none launched. Preflight failed its existing capacity requirement.
+- Known issues: actual pretrained loading, archive/native bridge and execution identity lock remain pending; no scientific comparison has become available.
+- Interpretation: unchanged PARTIAL_BLOCKED_RESOURCE, not an evaluated negative. Research-skill evidence separation and the frozen resource boundary prevent claiming progress or bypassing the guard.
+- Next steps: require restored root reserve and a sufficiently provisioned task output path before continuing the same bounded matrix. No unattended task scheduled; publish only this precise blocker update with normal scoped commit/push.
