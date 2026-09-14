@@ -24,13 +24,20 @@ def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def summarize(runtime, output):
+def summarize(runtime, output, blocked_sequence=None):
     evidence = {"role": "Existing immutable runtime receipts; no new computation",
-                "sources": {}, "blocks": {}}
+                "sources": {}, "inputs": {}, "blocks": {}}
+    for name in ("bus_full_klt", "cemetery_full_klt"):
+        path = runtime / name / "export_receipt.json"
+        data = read_json(path)
+        if data is not None:
+            evidence["sources"][str(path)] = digest(path)
+            evidence["inputs"][name] = data
     results, candidates = [], []
     candidate_fields = ("sequence_id repeat arm query_id query_time_s candidate_id "
                         "candidate_time_s rank score score_gate selected_for_geometry "
-                        "geometry_status correctness").split()
+                        "geometry_status correctness temporal_gap_s verification_s "
+                        "tx ty tz qw qx qy qz yaw_deg").split()
     for sequence in ("bus_outside", "cemetery"):
         for repeat in (1, 2, 3):
             name = "%s_r%d" % (sequence, repeat)
@@ -51,7 +58,27 @@ def summarize(runtime, output):
                         data["inference_and_vlad_total_s"] = sum(times)
                         data["inference_and_vlad_mean_s"] = sum(times)/len(times) if times else None
                     records[key] = data
+            cost = block / "retrieval_process_cost.txt"
+            if cost.is_file():
+                evidence["sources"][str(cost)] = digest(cost)
+                records["retrieval_pipeline_cost"] = dict(line.split("=", 1) for line in cost.read_text().splitlines() if "=" in line)
+                records["retrieval_pipeline_cost"]["scope"] = "wall includes descriptor NPZ load and candidate CSV write; not pure scoring"
             evidence["blocks"][name] = records
+            if all(records.get(arm, {}).get("status") == "GRAPH_COMPLETE" for arm in "CL"):
+                ranked = {"C": read_csv(block / "C/native/bow_candidates.csv"),
+                          "L": read_csv(block / "learned_candidates.csv")}
+                records["accepted_pair_retrieval_context"] = []
+                for arm, other in (("C", "L"), ("L", "C")):
+                    for pair in read_csv(block / arm / "native/geometry.csv"):
+                        if pair["geometry"] != "PASS":
+                            continue
+                        top = [x for x in ranked[other] if x["query_id"] == pair["query_id"]]
+                        records["accepted_pair_retrieval_context"].append(dict(
+                            arm=arm, query_id=pair["query_id"], candidate_id=pair["candidate_id"],
+                            other_arm=other,
+                            exact_pair_in_other_top4=any(x["candidate_id"] == pair["candidate_id"] for x in top),
+                            other_top4=[{k: x[k] for k in ("candidate_id", "score", "score_gate", "selected_for_geometry")} for x in top],
+                            interpretation="Ranking+registered gate configuration; no threshold counterfactual performed"))
             local, evaluation = records.get("local", {}), records.get("evaluation", {})
             support = evaluation.get("support", {})
             for arm in ("B", "C", "L"):
@@ -61,6 +88,8 @@ def summarize(runtime, output):
                            status="PENDING_SHARED_LOCAL", reason="Not run; not a measured failure or zero")
                 if (block / "input_lock.json").is_file() and not local:
                     row.update(status="PENDING_LOCAL_RECEIPT", reason="Local input locked; completion receipt not yet available")
+                elif sequence == blocked_sequence and not local:
+                    row.update(status="NOT_RUN_RESOURCE", reason="Frozen reserve plus retained-artifact allowance unavailable; not an algorithm failure")
                 if local:
                     row.update(status="PENDING_GLOBAL_PROCESSING", raw_local_poses=local.get("vio_rows", ""),
                                reason="Local receipt exists; see receipt status")
@@ -75,7 +104,9 @@ def summarize(runtime, output):
                                trajectory_coverage=ev.get("input_grid_coverage", ""),
                                common_pose_count=support.get("common_pose_count", ""),
                                common_reference_coverage=support.get("common_reference_coverage", ""),
-                               common_support_gate=support.get("support_gate", ""))
+                               common_support_gate=support.get("support_gate", ""),
+                               keyframe_count=ev.get("raw_keyframe_count", ""),
+                               shared_pre_post_boundary_s=evaluation.get("shared_pre_post_boundary_s", ""))
                 if arm == "B" and evaluation:
                     row.update(verified_candidates=0, rejected_candidates=0, confirmed_correct_loops=0,
                                confirmed_wrong_loops=0, unknown_loops=0)
@@ -90,22 +121,32 @@ def summarize(runtime, output):
                     lookup = {(x["query_id"], x["candidate_id"]): x for x in geo}
                     source = block / ("C/native/bow_candidates.csv" if arm == "C" else "learned_candidates.csv")
                     ranked = read_csv(source)
+                    row["ranked_candidates"] = len(ranked)
+                    row["selected_candidates"] = len(geo)
                     assert sum(int(x["selected_for_geometry"]) for x in ranked) == len(geo)
                     assert sum(x["geometry"] == "PASS" for x in geo) == count
                     for x in ranked:
                         item = {k: x.get(k, "") for k in candidate_fields}
                         item.update(sequence_id=sequence, repeat=repeat, arm=arm, correctness="Unknown")
+                        item["temporal_gap_s"] = float(x["query_time_s"]) - float(x["candidate_time_s"])
                         g = lookup.get((x["query_id"], x["candidate_id"]))
                         item["geometry_status"] = g["geometry"] if g else "NOT_SELECTED"
+                        if g:
+                            item.update({k: g[k] for k in ("verification_s tx ty tz qw qx qy qz yaw_deg").split()})
                         candidates.append(item)
                 if arm == "L" and "encoding" in records:
                     row["inference_ms_per_keyframe"] = 1000*(records["encoding"]["inference_and_vlad_mean_s"] or 0)
+                    row["new_image_inferences"] = records["encoding"]["new_image_inferences"]
+                    row["descriptor_cache_hits"] = records["encoding"]["cache_hits"]
+                    row["retrieval_pipeline_wall_s"] = records.get("retrieval_pipeline_cost", {}).get("wall_s", "")
                 results.append(row)
     fields = ("sequence_id repeat arm shared_local_id status initialization_time_s raw_local_poses "
               "trajectory_coverage common_pose_count common_reference_coverage common_support_gate recall_at_4 "
               "verified_candidates rejected_candidates confirmed_correct_loops confirmed_wrong_loops unknown_loops "
               "ape_se3_rmse_m rpe_1s_translation_rmse_m rpe_1s_rotation_rmse_deg sim3_scale_diagnostic "
-              "inference_ms_per_keyframe retrieval_ms verification_ms optimization_ms native_process_wall_s reason").split()
+              "inference_ms_per_keyframe retrieval_ms verification_ms optimization_ms native_process_wall_s "
+              "keyframe_count shared_pre_post_boundary_s ranked_candidates selected_candidates new_image_inferences "
+              "descriptor_cache_hits retrieval_pipeline_wall_s reason").split()
     assert len(results) == 18
     output.mkdir(parents=True, exist_ok=True)
     for filename, rows, columns in (("system_results.csv", results, fields),
@@ -123,5 +164,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--runtime", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--blocked-sequence", choices=("bus_outside", "cemetery"),
+                        help="Explicit existing preflight block; does not launch or change a gate")
     args = parser.parse_args()
-    summarize(args.runtime, args.output)
+    summarize(args.runtime, args.output, args.blocked_sequence)

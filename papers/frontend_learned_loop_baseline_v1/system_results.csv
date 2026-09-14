@@ -1,19 +1,19 @@
-sequence_id,repeat,arm,shared_local_id,status,initialization_time_s,raw_local_poses,trajectory_coverage,common_pose_count,common_reference_coverage,common_support_gate,recall_at_4,verified_candidates,rejected_candidates,confirmed_correct_loops,confirmed_wrong_loops,unknown_loops,ape_se3_rmse_m,rpe_1s_translation_rmse_m,rpe_1s_rotation_rmse_deg,sim3_scale_diagnostic,inference_ms_per_keyframe,retrieval_ms,verification_ms,optimization_ms,native_process_wall_s,reason
-bus_outside,1,B,bus_outside_r1,SYSTEM_COMPLETE_METRICS_NOT_EVALUATED,2.227895417,3654,0.9230769230769231,497,0.9203703703703704,PASS,,0,0,0,0,0,,,,,,,,,,REFERENCE_CONVENTION_UNRESOLVED
-bus_outside,1,C,bus_outside_r1,SYSTEM_COMPLETE_METRICS_NOT_EVALUATED,2.227895417,3654,0.9230769230769231,497,0.9203703703703704,PASS,,0,443,0,0,0,,,,,,,1513.1527139999998,,21.02119264600333,REFERENCE_CONVENTION_UNRESOLVED
-bus_outside,1,L,bus_outside_r1,SYSTEM_COMPLETE_METRICS_NOT_EVALUATED,2.227895417,3654,0.9230769230769231,497,0.9203703703703704,PASS,,3,2195,0,0,3,,,,,210.6048226658803,,6671.861011999996,,22.018607781967148,REFERENCE_CONVENTION_UNRESOLVED
-bus_outside,2,B,bus_outside_r2,PENDING_GLOBAL_PROCESSING,,3654,,,,,,,,,,,,,,,,,,,,Local receipt exists; see receipt status
-bus_outside,2,C,bus_outside_r2,PENDING_GLOBAL_PROCESSING,,3654,,,,,,,,,,,,,,,,,,,,Local receipt exists; see receipt status
-bus_outside,2,L,bus_outside_r2,PENDING_GLOBAL_PROCESSING,,3654,,,,,,,,,,,,,,,,,,,,Local receipt exists; see receipt status
-bus_outside,3,B,bus_outside_r3,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,,,,,Not run; not a measured failure or zero
-bus_outside,3,C,bus_outside_r3,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,,,,,Not run; not a measured failure or zero
-bus_outside,3,L,bus_outside_r3,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,,,,,Not run; not a measured failure or zero
-cemetery,1,B,cemetery_r1,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,,,,,Not run; not a measured failure or zero
-cemetery,1,C,cemetery_r1,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,,,,,Not run; not a measured failure or zero
-cemetery,1,L,cemetery_r1,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,,,,,Not run; not a measured failure or zero
-cemetery,2,B,cemetery_r2,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,,,,,Not run; not a measured failure or zero
-cemetery,2,C,cemetery_r2,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,,,,,Not run; not a measured failure or zero
-cemetery,2,L,cemetery_r2,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,,,,,Not run; not a measured failure or zero
-cemetery,3,B,cemetery_r3,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,,,,,Not run; not a measured failure or zero
-cemetery,3,C,cemetery_r3,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,,,,,Not run; not a measured failure or zero
-cemetery,3,L,cemetery_r3,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,,,,,Not run; not a measured failure or zero
+sequence_id,repeat,arm,shared_local_id,status,initialization_time_s,raw_local_poses,trajectory_coverage,common_pose_count,common_reference_coverage,common_support_gate,recall_at_4,verified_candidates,rejected_candidates,confirmed_correct_loops,confirmed_wrong_loops,unknown_loops,ape_se3_rmse_m,rpe_1s_translation_rmse_m,rpe_1s_rotation_rmse_deg,sim3_scale_diagnostic,inference_ms_per_keyframe,retrieval_ms,verification_ms,optimization_ms,native_process_wall_s,keyframe_count,shared_pre_post_boundary_s,ranked_candidates,selected_candidates,new_image_inferences,descriptor_cache_hits,retrieval_pipeline_wall_s,reason
+bus_outside,1,B,bus_outside_r1,SYSTEM_COMPLETE_METRICS_NOT_EVALUATED,2.227895417,3654,0.9230769230769231,497,0.9203703703703704,PASS,,0,0,0,0,0,,,,,,,,,,2430,1494876986.4649806,,,,,,REFERENCE_CONVENTION_UNRESOLVED
+bus_outside,1,C,bus_outside_r1,SYSTEM_COMPLETE_METRICS_NOT_EVALUATED,2.227895417,3654,0.9230769230769231,497,0.9203703703703704,PASS,,0,443,0,0,0,,,,,,,1513.1527139999998,,21.02119264600333,2430,1494876986.4649806,7099,443,,,,REFERENCE_CONVENTION_UNRESOLVED
+bus_outside,1,L,bus_outside_r1,SYSTEM_COMPLETE_METRICS_NOT_EVALUATED,2.227895417,3654,0.9230769230769231,497,0.9203703703703704,PASS,,3,2195,0,0,3,,,,,210.6048226658803,,6671.861011999996,,22.018607781967148,2430,1494876986.4649806,9510,2198,2430,0,44.36,REFERENCE_CONVENTION_UNRESOLVED
+bus_outside,2,B,bus_outside_r2,SYSTEM_COMPLETE_METRICS_NOT_EVALUATED,2.227895417,3654,0.9333333333333333,501,0.9277777777777778,PASS,,0,0,0,0,0,,,,,,,,,,2441,1494877020.8708794,,,,,,REFERENCE_CONVENTION_UNRESOLVED
+bus_outside,2,C,bus_outside_r2,SYSTEM_COMPLETE_METRICS_NOT_EVALUATED,2.227895417,3654,0.9333333333333333,501,0.9277777777777778,PASS,,0,443,0,0,0,,,,,,,1503.896731,,21.01881187001709,2441,1494877020.8708794,7150,443,,,,REFERENCE_CONVENTION_UNRESOLVED
+bus_outside,2,L,bus_outside_r2,SYSTEM_COMPLETE_METRICS_NOT_EVALUATED,2.227895417,3654,0.9333333333333333,501,0.9277777777777778,PASS,,2,2207,0,0,2,,,,,4.063294307727081,,6603.653405999995,,22.019814283004962,2441,1494877020.8708794,9554,2209,49,2392,37.09,REFERENCE_CONVENTION_UNRESOLVED
+bus_outside,3,B,bus_outside_r3,SYSTEM_COMPLETE_METRICS_NOT_EVALUATED,2.227895417,3654,0.9196581196581196,496,0.9185185185185185,PASS,,0,0,0,0,0,,,,,,,,,,2439,1494876983.1195722,,,,,,REFERENCE_CONVENTION_UNRESOLVED
+bus_outside,3,C,bus_outside_r3,SYSTEM_COMPLETE_METRICS_NOT_EVALUATED,2.227895417,3654,0.9196581196581196,496,0.9185185185185185,PASS,,0,445,0,0,0,,,,,,,1504.319987999999,,21.019026775029488,2439,1494876983.1195722,7140,445,,,,REFERENCE_CONVENTION_UNRESOLVED
+bus_outside,3,L,bus_outside_r3,SYSTEM_COMPLETE_METRICS_NOT_EVALUATED,2.227895417,3654,0.9196581196581196,496,0.9185185185185185,PASS,,5,2201,0,0,5,,,,,1.7928451203919455,,6410.039566000004,,22.021222527022474,2439,1494876983.1195722,9546,2206,22,2417,40.11,REFERENCE_CONVENTION_UNRESOLVED
+cemetery,1,B,cemetery_r1,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Frozen reserve plus retained-artifact allowance unavailable; not an algorithm failure
+cemetery,1,C,cemetery_r1,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Frozen reserve plus retained-artifact allowance unavailable; not an algorithm failure
+cemetery,1,L,cemetery_r1,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Frozen reserve plus retained-artifact allowance unavailable; not an algorithm failure
+cemetery,2,B,cemetery_r2,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Frozen reserve plus retained-artifact allowance unavailable; not an algorithm failure
+cemetery,2,C,cemetery_r2,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Frozen reserve plus retained-artifact allowance unavailable; not an algorithm failure
+cemetery,2,L,cemetery_r2,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Frozen reserve plus retained-artifact allowance unavailable; not an algorithm failure
+cemetery,3,B,cemetery_r3,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Frozen reserve plus retained-artifact allowance unavailable; not an algorithm failure
+cemetery,3,C,cemetery_r3,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Frozen reserve plus retained-artifact allowance unavailable; not an algorithm failure
+cemetery,3,L,cemetery_r3,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Frozen reserve plus retained-artifact allowance unavailable; not an algorithm failure

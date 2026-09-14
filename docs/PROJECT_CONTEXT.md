@@ -397,3 +397,7 @@ Root restored to11.43GiB initially; model-stage frozen reserve+allowance passes.
 ### 2026-09-15 — First learned-loop system block complete
 
 Both full KLT inputs complete. Bus r1 local/archive/C/L complete (1/6local,2/12graph,3/18armoutputs); Bus r2 running. C0 versus L3native geometric passes; shared2430KF,497commonposes/92.037%PASS. Lglobaloutput changed but reference convention/independent correctness unresolved: no confirmed accuracy or learned-system win. All18planned rows retained; follow only remaining fixed matrix. Latest task handoff remains docs/CODEX_HANDOFF_LEARNED_LOOP_BASELINE.md, not old temporal-refinement/local seed routes.
+
+### 2026-09-15 — Bus three-repeat matrix complete, Cemetery resource-blocked
+
+Current learned-loop status PARTIAL_BUS_COMPLETE_CEMETERY_RESOURCE_BLOCKED supersedes prior runningstate.3/6local,6/12C/L,9/18armoutputscomplete;1/2physicalsequences. Cgeometrypasses0/0/0,L3/2/5; commoncoverage91.85–92.78%PASS. Lchangedglobaloutputs but proxyconvention/independentlabels unresolved, noAPE/RPEwin. Cdefault0.05gateblocksall10L-passqueries(includingoneCtop1), so do not claim isolatedembeddingsuperiority. CemeteryfullKLTready;firstVIOpreflightrequires10.25GiBversus9.49GiBavailable and exitsbeforelaunch,notalgorithmfailure/repeat. Nojobsleft; resumeonlyremainingregisteredCemetery afterspacecondition, noBusrerun/thresholdchange/oldroute. Taskhandoff and full18rows maintained on actual exp/learned-loop-baseline-v1-20260914 branch.

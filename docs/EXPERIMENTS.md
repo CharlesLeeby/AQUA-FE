@@ -1139,3 +1139,15 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Validity: input features/IMU captured exactly; C/L raw odometry edges identical. Three accepted pairs have visual scene support, not independently confirmed or strictly blinded correctness. Repeats not independent scenes. All18rows retained.
 - Interpretation/conclusion: first native system block actually executed; no confirmed L/C global accuracy increment yet. No training, replacement configuration, new dataset download or local-backend change.
 - Follow-up: Bus r2 in progress, then remaining fixed blocks; no duplicate or favorable subset selection.
+
+### 2026-09-15 — frontend_learned_loop_baseline_v1 / complete Bus r1-r3
+
+- Status/scientific role: PARTIAL_BUS_COMPLETE_CEMETERY_RESOURCE_BLOCKED; mature fixed global-association baseline.1physicalsequencecompleteof2; technicalrepeatsnotindependentscenes.
+- Source/branch/config: exp/learned-loop-baseline-v1-20260914; Bus r2local902a886,archive/C/Lbf9efeff; r3allbf9efeff. OriginalKLT3c50b742, unchangedoriginVINSnode4e91d8ac/ROSnoetic/Ceres1.14. Samecanonical31keys with onlyoutput_path different, samecamera. Brawlocal,CnativeBRIEF,LfixedDINO-S14K32; samePNP/4DoF.
+- Commands/artifacts: runtime experiments/learned_loop_baseline_v1/bus_outside_r1-r3; exactcommands/source/build/input hashes in papers/frontend_learned_loop_baseline_v1/runtime_receipts.json. Tables: python3 -B scripts/summarize_loop_baseline_v1.py --runtime experiments/learned_loop_baseline_v1 --output papers/frontend_learned_loop_baseline_v1 --blocked-sequence cemetery.
+- Metrics/results: Cpasses0/0/0,reject443/443/445; Lpasses3/2/5,reject2195/2207/2201. KF2430/2441/2439; rawposes3654each, init2.227895s each; common497/501/496, span579s,coverage92.037/92.778/91.852%PASS. AllC=Bbytes,allLchanged. FormalAPE/RPE/Sim3/trueRecallNot evaluated, unvalidatedproxyconvention/noindependentexhaustivelabels. Trackingloss beyond available logsUnknown.
+- Costs: newencoding2430/49/22images,cache0/2392/2417;511.77/9.92/4.37sencoding; retrievalpipeline44.36/37.09/40.11s includingIO; native C~21/L~22s. IndependentoptimizationtimeUnknown.
+- Validity: fullpairedsharedinputs/rosters/rawodometryedges/configchecked;49999rankedcandidate rows,all18armrows retained.10nativepassesare7uniqueimagepairs, not10independentsamples; visualreviewnotstrictlyblinded, allformalcorrectnessUnknown.
+- Failure: Cemetery first preflight04:10:54 rejectedfree10185388032B<11001659392B, beforeVINS/outputdirectory. No technicalrepeat consumed,9rowsNOT_RUN_RESOURCE. No algorithm/gatechanged,nohistoryremoved.
+- Interpretation/conclusion: configured L gives repeatable native geometry-pass increment onBus; Cdefaultgateblocksall10queries,including1exacttop1. Neither a provenlearnedrepresentationwin nor a globalaccuracywin. Keep partial, not NO_LEARNED_LOOP_INCREMENT or PROMISING.
+- Follow-up: only registered Cemetery threeblocks after resourcepreflight; existingBus artifacts valid and not rerun. Accuracy awaits actual referenceprovenance, not lowerrules/newparameters.

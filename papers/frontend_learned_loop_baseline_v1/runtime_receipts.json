@@ -1,13 +1,317 @@
 {
   "role": "Existing immutable runtime receipts; no new computation",
   "sources": {
+    "experiments/learned_loop_baseline_v1/bus_full_klt/export_receipt.json": "8e643f0765db0a902a58681f8cd100ea140af25619edc30260534fa3294c21c7",
+    "experiments/learned_loop_baseline_v1/cemetery_full_klt/export_receipt.json": "0263e43bee46ffad35860edd7365c7a50ca52a41477ad09d5569bad1c2bf5949",
     "experiments/learned_loop_baseline_v1/bus_outside_r1/replay_receipt.json": "9401b43cc684c0df597efcc504df86cac796bd7b3529613a2a8b44d7b49b3e0b",
     "experiments/learned_loop_baseline_v1/bus_outside_r1/archive/archive_receipt.json": "de0ced8e8ba34f3b6fb05d2227ae997e2be371d5f0b1574a281bbf510f00b542",
     "experiments/learned_loop_baseline_v1/bus_outside_r1/C/graph_receipt.json": "0ca545dd8f16e28194a6fa75c77dc4d4fae2a996311c7ab83b96cd58319f01d6",
     "experiments/learned_loop_baseline_v1/bus_outside_r1/L/graph_receipt.json": "4d01196d1212d9bb61be89c13554f061b0a02d58dd32997db96bb870885a69c6",
     "experiments/learned_loop_baseline_v1/bus_outside_r1/evaluation/evaluation.json": "9da551ce737858982c275abddfde7155ebe03a97906620987655140d47941b80",
     "experiments/learned_loop_baseline_v1/bus_outside_r1/descriptors.json": "cab041b95ad0b34036a08cdc46b2f6b2b0422fe1c459c354759632a7a1c99ea1",
-    "experiments/learned_loop_baseline_v1/bus_outside_r2/replay_receipt.json": "3bd11be1182f7cf7b1816eb38f339f4b2dac713a3cf5cf5f83f1316eb564b97f"
+    "experiments/learned_loop_baseline_v1/bus_outside_r1/retrieval_process_cost.txt": "1fccaa6bf671d48568fd5cd4544f5cdf70e90698ffd0ab0e7282e8222cf0d2ab",
+    "experiments/learned_loop_baseline_v1/bus_outside_r2/replay_receipt.json": "3bd11be1182f7cf7b1816eb38f339f4b2dac713a3cf5cf5f83f1316eb564b97f",
+    "experiments/learned_loop_baseline_v1/bus_outside_r2/archive/archive_receipt.json": "97f9c8bc9507863d94c2ed2e6500c7bf9b63822a4414fc311308a205908891ba",
+    "experiments/learned_loop_baseline_v1/bus_outside_r2/C/graph_receipt.json": "7f2573f717d8da2a3e96bce99ee1f5a9783a155d0802d55dd8985f4974fa5147",
+    "experiments/learned_loop_baseline_v1/bus_outside_r2/L/graph_receipt.json": "e331adcc6266ae81a5046543fbc342ddd3da41b9ddd13b20d43cb42634e5e703",
+    "experiments/learned_loop_baseline_v1/bus_outside_r2/evaluation/evaluation.json": "00986ad7cdb1b550cdc5e4339264b0cce7a5730f726f764b37bfb06b16ab4163",
+    "experiments/learned_loop_baseline_v1/bus_outside_r2/descriptors.json": "34eec8cd22ba3f8edf502d56c208e4d35bb175c3a170bc4fbbf7fff5b2a8b2ff",
+    "experiments/learned_loop_baseline_v1/bus_outside_r2/retrieval_process_cost.txt": "aae45541fb7ad0beaa019c8da2f7672eb1026e971665de9ff902d48c90f36001",
+    "experiments/learned_loop_baseline_v1/bus_outside_r3/replay_receipt.json": "2b52ae285a569f00c6d22962e5b7ebaae0615db3075749502de388a2fb87bb4a",
+    "experiments/learned_loop_baseline_v1/bus_outside_r3/archive/archive_receipt.json": "28d3498400db1ef8b16bd47c706a5a05fb5f71e29ea1742a3b915aacc5bea969",
+    "experiments/learned_loop_baseline_v1/bus_outside_r3/C/graph_receipt.json": "17e33f24a6fbe8a299992034b27bd0098cd668ee9b5597b59c94702a17bd1d97",
+    "experiments/learned_loop_baseline_v1/bus_outside_r3/L/graph_receipt.json": "32ca924de5c81a6b3a02dd7cf7f2511dfe1a7bff016526b36188ff60d483d39f",
+    "experiments/learned_loop_baseline_v1/bus_outside_r3/evaluation/evaluation.json": "f1645993c5755da427511eeac7b417069e57557f39a4c77d35e98c645f104414",
+    "experiments/learned_loop_baseline_v1/bus_outside_r3/descriptors.json": "08ed7e2770ede07334c7d65bcff9936811aec5f79a73c5b7657d78bfd0e2b14d",
+    "experiments/learned_loop_baseline_v1/bus_outside_r3/retrieval_process_cost.txt": "23b5a6df18200c6f31902325dadab6f37925b1c0b8c9e7cbe0f32c73c78b726c"
+  },
+  "inputs": {
+    "bus_full_klt": {
+      "status": "EXPORT_COMPLETE",
+      "source_commit": "3c50b742d6e0c69796a69813e42823e9895ed684",
+      "exporter_sha256": "bb4e50d8b9777e76aee558d94ec0597461e9dcad4ff9c9486875b46a7c714d1d",
+      "argv": [
+        "--bag",
+        "/media/ma/Data/AQUA-FE_WS/datasets/full_downloads/afrl_hf/ros1_bags/bus_outside.bag",
+        "--image-topic",
+        "/camera/image_raw",
+        "--camera-config",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/backend_canonical/afrl_bus_s180_d045/afrl_cave_cam0_pinhole.yaml",
+        "--output-bag",
+        "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_full_klt/features.bag",
+        "--config",
+        "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/klt_source/uw_frontend/configs/experiments/low_texture_xfeat_seedchain_frontend.yaml",
+        "--method",
+        "klt",
+        "--semidense-fallback-method",
+        "none",
+        "--every-n",
+        "2",
+        "--frame-offset",
+        "0",
+        "--export-max-features",
+        "350",
+        "--export-min-age",
+        "2",
+        "--preprocess",
+        "adaptive_clahe",
+        "--timestamp-source",
+        "header",
+        "--max-header-stamp-delta",
+        "0.25",
+        "--invalid-header-policy",
+        "skip",
+        "--copy-topic",
+        "/imu/imu",
+        "--metrics-csv",
+        "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_full_klt/frontend_metrics.csv",
+        "--process-skipped-frames",
+        "--learned-export-online-seed-gate",
+        "--learned-export-online-seed-sources",
+        "xfeat",
+        "--learned-export-online-seed-warmup-frames",
+        "0",
+        "--learned-export-online-seed-max-observations",
+        "50",
+        "--learned-export-online-seed-max-per-frame",
+        "0",
+        "--learned-export-online-seed-post-quality-cap-per-frame",
+        "0",
+        "--learned-export-online-seed-min-age",
+        "1",
+        "--learned-export-online-seed-min-quality",
+        "0.10",
+        "--learned-export-online-seed-min-ncc",
+        "0.42",
+        "--learned-export-online-seed-max-fb",
+        "1.20",
+        "--learned-export-online-seed-require-confirmed",
+        "--learned-export-online-seed-microburst-gate",
+        "--learned-export-online-seed-microburst-frames",
+        "3",
+        "--learned-export-online-seed-microburst-extend-frames",
+        "12",
+        "--learned-export-online-seed-microburst-extend-min-initial-observations",
+        "20",
+        "--learned-export-online-seed-microburst-extend-min-initial-cells",
+        "0",
+        "--learned-export-online-seed-microburst-extend-min-bbox-area-ratio",
+        "0.0",
+        "--learned-export-online-seed-microburst-extend-grid-rows",
+        "6",
+        "--learned-export-online-seed-microburst-extend-grid-cols",
+        "6",
+        "--learned-export-online-seed-microburst-max-restarts",
+        "0",
+        "--learned-export-online-seed-microburst-restart-cooldown-frames",
+        "8",
+        "--learned-export-online-seed-dense-start-max-observations",
+        "5",
+        "--learned-export-online-seed-dense-start-min-classical-tracks",
+        "218",
+        "--learned-export-online-seed-dense-start-min-classical-grid",
+        "0.98",
+        "--learned-export-online-seed-dense-start-min-frame-candidates",
+        "8",
+        "--backend-quality-mode",
+        "vins_safe",
+        "--backend-quality-floor",
+        "0.80",
+        "--backend-quality-alpha",
+        "0.65",
+        "--backend-learned-quality-scale",
+        "1.0",
+        "--backend-sp-lg-quality-scale",
+        "1.0",
+        "--backend-xfeat-quality-scale",
+        "1.0",
+        "--backend-loftr-quality-scale",
+        "1.0",
+        "--low-parallax-learned-holdoff-frames",
+        "8",
+        "--export-classical-mirror-backbone",
+        "--final-mirror-persistence-replacement",
+        "--final-mirror-persistence-max-selected-frame",
+        "4",
+        "--final-mirror-persistence-min-age-advantage",
+        "2",
+        "--final-mirror-persistence-min-gftt-ratio",
+        "0.0",
+        "--final-mirror-persistence-grid-rows",
+        "4",
+        "--final-mirror-persistence-grid-cols",
+        "6",
+        "--final-mirror-persistence-max-per-frame",
+        "6",
+        "--final-mirror-persistence-source-router",
+        "--final-mirror-persistence-allow-all-non-loftr",
+        "--final-mirror-persistence-coverage-monotone",
+        "--mirror-measurement-selection-policy",
+        "baseline",
+        "--adaptive-warmup-full-min-init-parallax-px",
+        "7.0",
+        "--adaptive-warmup-full-max-init-parallax-px",
+        "12.5"
+      ],
+      "raw_bag": "/media/ma/Data/AQUA-FE_WS/datasets/full_downloads/afrl_hf/ros1_bags/bus_outside.bag",
+      "camera_sha256": "5856ee4b261d5b0d67021ef81ad0a0c5e8e6aa885184c68591530224b3645aee",
+      "input_adapter": "canonical AFRL decode-half-gray/header-sorted stream; no GT",
+      "independent_vio": false,
+      "wall_s": 2685.77075246803,
+      "feature_bag_sha256": "bd095b248c714e1420e36462aaa72d5560f7fd48fe59f812b98fd9d8cabb9c8a",
+      "raw_bag_sha256": "ff17bc711d71668c775fbe0de0cb9305a2e02969a42e996b994b7863df79b10d",
+      "input_index_sha256": "4ed4174de265937fa4d96f4f220e82d10d9b50c3b4b5dd112d7acdf1b5408e77",
+      "full_source_counts": {
+        "images": 7338,
+        "imu": 58487
+      },
+      "actual_input_image_messages": 7338,
+      "actual_input_imu_messages": 58487,
+      "probe": false
+    },
+    "cemetery_full_klt": {
+      "status": "EXPORT_COMPLETE",
+      "source_commit": "3c50b742d6e0c69796a69813e42823e9895ed684",
+      "exporter_sha256": "bb4e50d8b9777e76aee558d94ec0597461e9dcad4ff9c9486875b46a7c714d1d",
+      "argv": [
+        "--bag",
+        "/media/ma/Data/AQUA-FE_WS/datasets/full_downloads/afrl_hf/ros1_bags/cemetery.bag",
+        "--image-topic",
+        "/camera/image_raw",
+        "--camera-config",
+        "/media/ma/Data/AQUA-FE_WS_storage_offload/frontend_coverage_monotone_router_v2/backend_canonical/afrl_cemetery_s135_d045/afrl_cave_cam0_pinhole.yaml",
+        "--output-bag",
+        "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/cemetery_full_klt/features.bag",
+        "--config",
+        "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/klt_source/uw_frontend/configs/experiments/low_texture_xfeat_seedchain_frontend.yaml",
+        "--method",
+        "klt",
+        "--semidense-fallback-method",
+        "none",
+        "--every-n",
+        "2",
+        "--frame-offset",
+        "0",
+        "--export-max-features",
+        "350",
+        "--export-min-age",
+        "2",
+        "--preprocess",
+        "adaptive_clahe",
+        "--timestamp-source",
+        "header",
+        "--max-header-stamp-delta",
+        "0.25",
+        "--invalid-header-policy",
+        "skip",
+        "--copy-topic",
+        "/imu/imu",
+        "--metrics-csv",
+        "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/cemetery_full_klt/frontend_metrics.csv",
+        "--process-skipped-frames",
+        "--learned-export-online-seed-gate",
+        "--learned-export-online-seed-sources",
+        "xfeat",
+        "--learned-export-online-seed-warmup-frames",
+        "0",
+        "--learned-export-online-seed-max-observations",
+        "50",
+        "--learned-export-online-seed-max-per-frame",
+        "0",
+        "--learned-export-online-seed-post-quality-cap-per-frame",
+        "0",
+        "--learned-export-online-seed-min-age",
+        "1",
+        "--learned-export-online-seed-min-quality",
+        "0.10",
+        "--learned-export-online-seed-min-ncc",
+        "0.42",
+        "--learned-export-online-seed-max-fb",
+        "1.20",
+        "--learned-export-online-seed-require-confirmed",
+        "--learned-export-online-seed-microburst-gate",
+        "--learned-export-online-seed-microburst-frames",
+        "3",
+        "--learned-export-online-seed-microburst-extend-frames",
+        "12",
+        "--learned-export-online-seed-microburst-extend-min-initial-observations",
+        "20",
+        "--learned-export-online-seed-microburst-extend-min-initial-cells",
+        "0",
+        "--learned-export-online-seed-microburst-extend-min-bbox-area-ratio",
+        "0.0",
+        "--learned-export-online-seed-microburst-extend-grid-rows",
+        "6",
+        "--learned-export-online-seed-microburst-extend-grid-cols",
+        "6",
+        "--learned-export-online-seed-microburst-max-restarts",
+        "0",
+        "--learned-export-online-seed-microburst-restart-cooldown-frames",
+        "8",
+        "--learned-export-online-seed-dense-start-max-observations",
+        "5",
+        "--learned-export-online-seed-dense-start-min-classical-tracks",
+        "218",
+        "--learned-export-online-seed-dense-start-min-classical-grid",
+        "0.98",
+        "--learned-export-online-seed-dense-start-min-frame-candidates",
+        "8",
+        "--backend-quality-mode",
+        "vins_safe",
+        "--backend-quality-floor",
+        "0.80",
+        "--backend-quality-alpha",
+        "0.65",
+        "--backend-learned-quality-scale",
+        "1.0",
+        "--backend-sp-lg-quality-scale",
+        "1.0",
+        "--backend-xfeat-quality-scale",
+        "1.0",
+        "--backend-loftr-quality-scale",
+        "1.0",
+        "--low-parallax-learned-holdoff-frames",
+        "8",
+        "--export-classical-mirror-backbone",
+        "--final-mirror-persistence-replacement",
+        "--final-mirror-persistence-max-selected-frame",
+        "4",
+        "--final-mirror-persistence-min-age-advantage",
+        "2",
+        "--final-mirror-persistence-min-gftt-ratio",
+        "0.0",
+        "--final-mirror-persistence-grid-rows",
+        "4",
+        "--final-mirror-persistence-grid-cols",
+        "6",
+        "--final-mirror-persistence-max-per-frame",
+        "6",
+        "--final-mirror-persistence-source-router",
+        "--final-mirror-persistence-allow-all-non-loftr",
+        "--final-mirror-persistence-coverage-monotone",
+        "--mirror-measurement-selection-policy",
+        "baseline",
+        "--adaptive-warmup-full-min-init-parallax-px",
+        "7.0",
+        "--adaptive-warmup-full-max-init-parallax-px",
+        "12.5"
+      ],
+      "raw_bag": "/media/ma/Data/AQUA-FE_WS/datasets/full_downloads/afrl_hf/ros1_bags/cemetery.bag",
+      "camera_sha256": "9580011fcaa23217407c1d1dbf616d57e95d81498293129f70bc0700e40e5154",
+      "input_adapter": "canonical AFRL decode-half-gray/header-sorted stream; no GT",
+      "independent_vio": false,
+      "wall_s": 2806.5222584509756,
+      "feature_bag_sha256": "bc60b51f2107aa8f6795bfb8a9fb80aaabc4ca8458ea17bf6f042bcf45e0b807",
+      "raw_bag_sha256": "3b34942b496f15d0c8b83475097073c92acb6e4865d31bc4910d1f3908a9ee5c",
+      "input_index_sha256": "401063f295788e6d854be28452fa1bb64298d4a05fc4cb2cf26f6115c89ad7b0",
+      "full_source_counts": {
+        "images": 7781,
+        "imu": 43400
+      },
+      "actual_input_image_messages": 7781,
+      "actual_input_imu_messages": 43400,
+      "probe": false
+    }
   },
   "blocks": {
     "bus_outside_r1": {
@@ -305,7 +609,116 @@
         "peak_rss_kib": 726896,
         "inference_and_vlad_total_s": 511.7697190780891,
         "inference_and_vlad_mean_s": 0.2106048226658803
-      }
+      },
+      "retrieval_pipeline_cost": {
+        "wall_s": "44.36",
+        "peak_rss_kib": "320756",
+        "scope": "wall includes descriptor NPZ load and candidate CSV write; not pure scoring"
+      },
+      "accepted_pair_retrieval_context": [
+        {
+          "arm": "L",
+          "query_id": "2131",
+          "candidate_id": "1098",
+          "other_arm": "C",
+          "exact_pair_in_other_top4": false,
+          "other_top4": [
+            {
+              "candidate_id": "1101",
+              "score": "0.030504126900673931",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1103",
+              "score": "0.027456267085009506",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1099",
+              "score": "0.026446748594610343",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1102",
+              "score": "0.022583445879655932",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            }
+          ],
+          "interpretation": "Ranking+registered gate configuration; no threshold counterfactual performed"
+        },
+        {
+          "arm": "L",
+          "query_id": "2133",
+          "candidate_id": "1098",
+          "other_arm": "C",
+          "exact_pair_in_other_top4": false,
+          "other_top4": [
+            {
+              "candidate_id": "1103",
+              "score": "0.028561806892361007",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "255",
+              "score": "0.018634926132809315",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1586",
+              "score": "0.018517372011595284",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "40",
+              "score": "0.017988168026149127",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            }
+          ],
+          "interpretation": "Ranking+registered gate configuration; no threshold counterfactual performed"
+        },
+        {
+          "arm": "L",
+          "query_id": "2256",
+          "candidate_id": "1206",
+          "other_arm": "C",
+          "exact_pair_in_other_top4": false,
+          "other_top4": [
+            {
+              "candidate_id": "1202",
+              "score": "0.035953693550659756",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1199",
+              "score": "0.032671738997478356",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1201",
+              "score": "0.030597818563575234",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1204",
+              "score": "0.028282886686584057",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            }
+          ],
+          "interpretation": "Ranking+registered gate configuration; no threshold counterfactual performed"
+        }
+      ]
     },
     "bus_outside_r2": {
       "local": {
@@ -399,9 +812,781 @@
           "initialization_time_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
           "per_observation_estimator_residual_use": "Unknown: a passive recorder is not an estimator residual-use trace"
         }
-      }
+      },
+      "archive": {
+        "schema": "aqua-fe-native-keyframe-archive-v1",
+        "status": "COMPLETE",
+        "pose_frame": "world_T_imu_body",
+        "points_layout": "little-endian float32 rows: world_XYZ,norm_xy,pixel_uv,feature_id",
+        "selection": "native first10 skip; skip_count0; distance strictly greater than0",
+        "capture_bag_sha256": "feb4dd4cba4da9a99ceed8a14ba58a766f39528df8b9dda5c23114f617e0e9e3",
+        "images_bag_sha256": "ff17bc711d71668c775fbe0de0cb9305a2e02969a42e996b994b7863df79b10d",
+        "raw_bag_hash_reused_under_validated_index_identity": true,
+        "adapter_sha256": "05f428e6a72c854c15bc5f0d06f63b42de1c382c4b157a6911b665ed522da8df",
+        "adapter_commit": "bf9efeff031a335d7c415367ffaad9bcec7f5577",
+        "keyframes_csv_sha256": "670e643937870cc7dc587a2659e3aa309f0fbcdf74b69155d22bd8c0eeba7ab6",
+        "native_pose_messages": 2451,
+        "keyframes": 2441,
+        "exact_image_join_missing": 0,
+        "header_identity_csv_sha256": "ed259cd3ffb6091297bf2de41ef94e8e2b3103c09f6e104a7f0b91f976091536",
+        "header_join": "unique exact forward ROS C++ double conversion from captured feature headers; no nearest neighbor or tolerance",
+        "geometry_verified": "Not evaluated",
+        "ground_truth_used": false,
+        "raw_stream_input": true,
+        "image_storage": "shared content-addressed hardlink"
+      },
+      "C": {
+        "status": "GRAPH_COMPLETE",
+        "arm": "C",
+        "sequence": "bus_outside",
+        "repeat": 2,
+        "command": [
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/native_adapter_build_attempt2/build/aqua_native_loop_replay",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r2/archive",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r2/afrl_cave_cam0_pinhole.yaml",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r2/vins_same_backend.yaml",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_k10L6.bin",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_pattern.yml",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r2/C/native",
+          "C",
+          "bus_outside",
+          "2"
+        ],
+        "graph_started": true,
+        "binary_sha256": "e87f60c8d9b13f4c8db90a960b7a95610fb83ff609928db9ecc00f064cf6b027",
+        "shared_local_receipt_sha256": "3bd11be1182f7cf7b1816eb38f339f4b2dac713a3cf5cf5f83f1316eb564b97f",
+        "archive_roster_sha256": "670e643937870cc7dc587a2659e3aa309f0fbcdf74b69155d22bd8c0eeba7ab6",
+        "camera_sha256": "5856ee4b261d5b0d67021ef81ad0a0c5e8e6aa885184c68591530224b3645aee",
+        "config_sha256": "777f3f486d7ed26bab7fc5f39b5d8da3fb64bc9db758d48f5f290dccace79370",
+        "brief_vocabulary_sha256": "753e7e126c588906ad16197892bdcd914f3a0971037c8f8aeb3c63418458b035",
+        "brief_pattern_sha256": "cb9e20bf47d7557cd22f7820524c3cb13b3a315c451d5665955336100177cafd",
+        "candidates_sha256": null,
+        "runner_sha256": "30326cc3fdca90045c8ce3f44546932f406ab9eab0b2ad1d2edb9ce99a7e00db",
+        "source_commit": "bf9efeff031a335d7c415367ffaad9bcec7f5577",
+        "started_at": "2026-09-15T03:54:05.833981+08:00",
+        "native_process_wall_s": 21.01881187001709,
+        "keyframes": 2441,
+        "verified_candidates": 0,
+        "rejected_candidates": 443,
+        "correctness": "Unknown",
+        "optimization_time_separate": "Unknown: native process wall includes other work",
+        "completed_at": "2026-09-15T03:54:28.504495+08:00",
+        "artifacts": {
+          "bow_candidates.csv": "a71d67ad5d6caae7868f2861d0673a87814b04bb0eddc1d10ce6949a4dbe52de",
+          "geometry.csv": "9c6e573dcd6bd28162d0907f4351f446632dea1f212fb677853960a1d558e2cb",
+          "global_body.tum": "73b1edeeb6ded6241daf2b0f43e5b22314764439ecf3bc3dfbc04f43bd55ca0b",
+          "local_body.tum": "73b1edeeb6ded6241daf2b0f43e5b22314764439ecf3bc3dfbc04f43bd55ca0b",
+          "native_path_updates.csv": "f796c8f4c96efbf930a8c3b914629a3efa5ac016a7ea4797ad882a1d606875b9",
+          "processing.csv": "434ea8ebbfb6a40bff785c80b7810d5095cb5b22d743a5863da6901c068d501d",
+          "raw_odometry_edges.csv": "de04cec2b4822771c0fa4cb8d5ab798c3b73699796b5f554a6692d74900db096"
+        }
+      },
+      "L": {
+        "status": "GRAPH_COMPLETE",
+        "arm": "L",
+        "sequence": "bus_outside",
+        "repeat": 2,
+        "command": [
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/native_adapter_build_attempt2/build/aqua_native_loop_replay",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r2/archive",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r2/afrl_cave_cam0_pinhole.yaml",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r2/vins_same_backend.yaml",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_k10L6.bin",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_pattern.yml",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r2/L/native",
+          "L",
+          "bus_outside",
+          "2",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r2/learned_candidates.csv"
+        ],
+        "graph_started": true,
+        "binary_sha256": "e87f60c8d9b13f4c8db90a960b7a95610fb83ff609928db9ecc00f064cf6b027",
+        "shared_local_receipt_sha256": "3bd11be1182f7cf7b1816eb38f339f4b2dac713a3cf5cf5f83f1316eb564b97f",
+        "archive_roster_sha256": "670e643937870cc7dc587a2659e3aa309f0fbcdf74b69155d22bd8c0eeba7ab6",
+        "camera_sha256": "5856ee4b261d5b0d67021ef81ad0a0c5e8e6aa885184c68591530224b3645aee",
+        "config_sha256": "777f3f486d7ed26bab7fc5f39b5d8da3fb64bc9db758d48f5f290dccace79370",
+        "brief_vocabulary_sha256": "753e7e126c588906ad16197892bdcd914f3a0971037c8f8aeb3c63418458b035",
+        "brief_pattern_sha256": "cb9e20bf47d7557cd22f7820524c3cb13b3a315c451d5665955336100177cafd",
+        "candidates_sha256": "864b98976eac137fee0946868a19958c81dba5226808c1d15f796f94b243f183",
+        "runner_sha256": "30326cc3fdca90045c8ce3f44546932f406ab9eab0b2ad1d2edb9ce99a7e00db",
+        "source_commit": "bf9efeff031a335d7c415367ffaad9bcec7f5577",
+        "started_at": "2026-09-15T03:55:20.416308+08:00",
+        "native_process_wall_s": 22.019814283004962,
+        "keyframes": 2441,
+        "verified_candidates": 2,
+        "rejected_candidates": 2207,
+        "correctness": "Unknown",
+        "optimization_time_separate": "Unknown: native process wall includes other work",
+        "completed_at": "2026-09-15T03:55:44.130534+08:00",
+        "artifacts": {
+          "bow_candidates.csv": "b9014d13497ab68fb826e5c889acbb74834ff31326994141dd682e94b20f2080",
+          "geometry.csv": "f83dd0ac42e6b2bb6fe66d9fdb6015aaab3ae61beeccfac9a573dad0a845cca4",
+          "global_body.tum": "64df83afa809941bed460ed418b131555b8b45dc991877170810ffe028f159f3",
+          "local_body.tum": "73b1edeeb6ded6241daf2b0f43e5b22314764439ecf3bc3dfbc04f43bd55ca0b",
+          "native_path_updates.csv": "817a0061b563808d9e032dff70ce4ca2fdb4aa020c4233a9ed2e43150715b850",
+          "processing.csv": "99c819cd156553c242c2aebad1d7bd3847286540f8106ca808f6df70167c9623",
+          "raw_odometry_edges.csv": "de04cec2b4822771c0fa4cb8d5ab798c3b73699796b5f554a6692d74900db096"
+        }
+      },
+      "evaluation": {
+        "sequence": "bus_outside",
+        "repeat": 2,
+        "support": {
+          "common_pose_count": 501,
+          "common_span_s": 579.0,
+          "reference_evaluable_samples": 540,
+          "input_grid_samples": 585,
+          "common_reference_coverage": 0.9277777777777778,
+          "support_gate": "PASS"
+        },
+        "reference_identity": {
+          "sequence": "bus_outside",
+          "reference_sha256": "341770a61a2adae1135c4319bf858be32218ec406b446420d6a9a495b4a36bb7",
+          "config_sha256": "cb9a252cdb0864aad843b7c6ad050f74ce0c1c07760df8963238d188364052f1",
+          "intervals_total": 3387,
+          "valid_intervals": 3381,
+          "imu_samples": 58487,
+          "fixed_camera_imu_td_s": -8.121e-05,
+          "no_estimator_or_learned_outputs_used": true,
+          "fitting": "none: no bias/offset/scale/rotation fit",
+          "validity": "positive dt<=1s and enclosed IMU support",
+          "convention_validated": false,
+          "pose_convention": "Unknown",
+          "interpretations": {
+            "as_world_T_cam0": {
+              "gyro_difference_rmse_rad_s": 0.031897677019523195,
+              "median_rad_s": 0.01352660892664218,
+              "p95_rad_s": 0.04812029431078561,
+              "per_axis_correlation": [
+                0.9431852517684505,
+                0.9541067418038951,
+                0.9779416082201543
+              ]
+            },
+            "inverse_direction": {
+              "gyro_difference_rmse_rad_s": 0.1574797143844867,
+              "median_rad_s": 0.09919889925875662,
+              "p95_rad_s": 0.31488388425372504,
+              "per_axis_correlation": [
+                -0.1520507182791701,
+                -0.014998487566104226,
+                0.11919459872102896
+              ]
+            }
+          },
+          "limitation": "Finite-interval gyro consistency is supporting evidence, not independent proof of camera origin/world pose convention; no automatic relabeling or trajectory score."
+        },
+        "raw_local_rows": 3654,
+        "initialization_log_detected": true,
+        "initialization_time_s": 2.227895417,
+        "initialization_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+        "shared_pre_post_boundary_s": 1494877020.8708794,
+        "reference_role": "COLMAP proxy, not independent GT",
+        "arms": {
+          "B": {
+            "raw_keyframe_count": 2441,
+            "input_grid_coverage": 0.9333333333333333,
+            "reference_grid_coverage": 0.9277777777777778,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          },
+          "C": {
+            "raw_keyframe_count": 2441,
+            "input_grid_coverage": 0.9333333333333333,
+            "reference_grid_coverage": 0.9277777777777778,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          },
+          "L": {
+            "raw_keyframe_count": 2441,
+            "input_grid_coverage": 0.9333333333333333,
+            "reference_grid_coverage": 0.9277777777777778,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          }
+        }
+      },
+      "encoding": {
+        "source_commit": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+        "model_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+        "vocabulary_sha256": "695985ec145406609d5c8d122092198886c4d89463c316e6a3b1606aee34143d",
+        "preprocess": "dl-vits14-final-norm-patch-280x448-letterbox-imagenet-k32-v1",
+        "device": "cpu",
+        "torch_version": "2.2.2+cpu",
+        "strict_official_tensors_loaded": 175,
+        "python_compatibility": "postponed DINO annotations only; original source bytes unchanged",
+        "parameters": 22056576,
+        "cold_load_s": 0.32451218203641474,
+        "status": "DESCRIPTORS_COMPLETE",
+        "keyframes": 2441,
+        "cache_hits": 2392,
+        "new_image_inferences": 49,
+        "archive_roster_sha256": "670e643937870cc7dc587a2659e3aa309f0fbcdf74b69155d22bd8c0eeba7ab6",
+        "peak_rss_kib": 732160,
+        "inference_and_vlad_total_s": 9.918501405161805,
+        "inference_and_vlad_mean_s": 0.004063294307727081
+      },
+      "retrieval_pipeline_cost": {
+        "wall_s": "37.09",
+        "peak_rss_kib": "265380",
+        "scope": "wall includes descriptor NPZ load and candidate CSV write; not pure scoring"
+      },
+      "accepted_pair_retrieval_context": [
+        {
+          "arm": "L",
+          "query_id": "2266",
+          "candidate_id": "1203",
+          "other_arm": "C",
+          "exact_pair_in_other_top4": false,
+          "other_top4": [
+            {
+              "candidate_id": "1214",
+              "score": "0.02898764627729386",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1211",
+              "score": "0.021353395152832598",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1212",
+              "score": "0.018373467634639904",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1207",
+              "score": "0.017700509207289841",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            }
+          ],
+          "interpretation": "Ranking+registered gate configuration; no threshold counterfactual performed"
+        },
+        {
+          "arm": "L",
+          "query_id": "2267",
+          "candidate_id": "1215",
+          "other_arm": "C",
+          "exact_pair_in_other_top4": false,
+          "other_top4": [
+            {
+              "candidate_id": "1211",
+              "score": "0.035953693550659756",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1208",
+              "score": "0.032671738997478356",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1210",
+              "score": "0.030597818563575234",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1213",
+              "score": "0.028282886686584057",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            }
+          ],
+          "interpretation": "Ranking+registered gate configuration; no threshold counterfactual performed"
+        }
+      ]
     },
-    "bus_outside_r3": {},
+    "bus_outside_r3": {
+      "local": {
+        "status": "LOCAL_REPLAY_FINISHED",
+        "sequence": "bus_outside",
+        "repeat": 3,
+        "feature_bag_sha256": "bd095b248c714e1420e36462aaa72d5560f7fd48fe59f812b98fd9d8cabb9c8a",
+        "canonical_yaml_sha256": "cb9a252cdb0864aad843b7c6ad050f74ce0c1c07760df8963238d188364052f1",
+        "config_audit": {
+          "keys": 31,
+          "unchanged_keys": 30,
+          "only_changed_key": "output_path",
+          "camera_file": "afrl_cave_cam0_pinhole.yaml",
+          "camera_sha256": "5856ee4b261d5b0d67021ef81ad0a0c5e8e6aa885184c68591530224b3645aee",
+          "generated_yaml_sha256": "e99ce41d9eadb7fefaf4141a6238f44dc6620deac8eb6c5a3e99eb4e11747e9c"
+        },
+        "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+        "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+        "retained_artifact_budget": {
+          "first_archive_bound_bytes": 2411724800,
+          "known_cached_source_headers": 2479,
+          "effective_allowance_bytes": 1112014848,
+          "previous_archive_receipt_sha256": [
+            "de0ced8e8ba34f3b6fb05d2227ae997e2be371d5f0b1574a281bbf510f00b542",
+            "97f9c8bc9507863d94c2ed2e6500c7bf9b63822a4414fc311308a205908891ba"
+          ],
+          "reserve_bytes": 8589934592,
+          "role": "storage reuse only; estimator/input/scientific gates unchanged"
+        },
+        "resolved_vins_library": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/libvins_lib.so",
+        "local_run_started": true,
+        "loop_feedback": false,
+        "shared_arms": [
+          "B",
+          "C",
+          "L"
+        ],
+        "playback_rate": 1.0,
+        "playback_delay_s": 3,
+        "post_play_s": 8,
+        "capture_topics": [
+          "/vins_estimator/keyframe_pose",
+          "/vins_estimator/keyframe_point",
+          "/vins_estimator/odometry",
+          "/vins_estimator/extrinsic",
+          "/feature_tracker/feature",
+          "/imu/imu"
+        ],
+        "runner_sha256": "7b63b06b3fb8c9d498b879061b9ef1786d80df163426ca5acb47b7312917ebb3",
+        "source_commit": "bf9efeff031a335d7c415367ffaad9bcec7f5577",
+        "started_at": "2026-09-15T03:56:09.258948+08:00",
+        "completed_at": "2026-09-15T04:06:09.499591+08:00",
+        "initialization_log_detected": true,
+        "vio_rows": 3654,
+        "artifacts": {
+          "vio.csv": "d4272c264eb9f3bf31b492fef17535f8e5a4aff6b672ceaa7b8d5bfa81d4c19b",
+          "capture.bag": "6299fda08d7d7b5650ea16e0ce0618ba89dcac4eaf8e5880cc315f50c539c18a",
+          "vins.log": "db738886a9d4a6c210514c6e034dc008b423f4c4d254b2a79b78302821745c8a"
+        },
+        "passive_capture_audit": {
+          "expected": {
+            "counts": {
+              "/feature_tracker/feature": 3669,
+              "/imu/imu": 58487
+            },
+            "serialized_per_topic_sha256": {
+              "/feature_tracker/feature": "a08d5cbefc7914adc6736f2c2708044fad20c48ef84b65f1ba61e4d6344668b7",
+              "/imu/imu": "065870518ddace4088cd308df6461d5396a277480492acf287a5dd27940ea1da"
+            },
+            "first_header_ns": {
+              "/feature_tracker/feature": 1494876479721554599,
+              "/imu/imu": 1494876479846608931
+            }
+          },
+          "recorder_received": {
+            "counts": {
+              "/feature_tracker/feature": 3669,
+              "/imu/imu": 58487
+            },
+            "serialized_per_topic_sha256": {
+              "/feature_tracker/feature": "a08d5cbefc7914adc6736f2c2708044fad20c48ef84b65f1ba61e4d6344668b7",
+              "/imu/imu": "065870518ddace4088cd308df6461d5396a277480492acf287a5dd27940ea1da"
+            },
+            "first_header_ns": {
+              "/feature_tracker/feature": 1494876479721554599,
+              "/imu/imu": 1494876479846608931
+            }
+          },
+          "recorder_input_exact": true,
+          "first_nonlinear_odometry_header_ns": 1494876481949450016,
+          "first_nonlinear_output_from_input_s": 2.227895417,
+          "initialization_time_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+          "per_observation_estimator_residual_use": "Unknown: a passive recorder is not an estimator residual-use trace"
+        }
+      },
+      "archive": {
+        "schema": "aqua-fe-native-keyframe-archive-v1",
+        "status": "COMPLETE",
+        "pose_frame": "world_T_imu_body",
+        "points_layout": "little-endian float32 rows: world_XYZ,norm_xy,pixel_uv,feature_id",
+        "selection": "native first10 skip; skip_count0; distance strictly greater than0",
+        "capture_bag_sha256": "6299fda08d7d7b5650ea16e0ce0618ba89dcac4eaf8e5880cc315f50c539c18a",
+        "images_bag_sha256": "ff17bc711d71668c775fbe0de0cb9305a2e02969a42e996b994b7863df79b10d",
+        "raw_bag_hash_reused_under_validated_index_identity": true,
+        "adapter_sha256": "05f428e6a72c854c15bc5f0d06f63b42de1c382c4b157a6911b665ed522da8df",
+        "adapter_commit": "bf9efeff031a335d7c415367ffaad9bcec7f5577",
+        "keyframes_csv_sha256": "7cd8b9c3ece77aafc28599c95b1769f2b4018511a379570b6475a8c610fc07b3",
+        "native_pose_messages": 2449,
+        "keyframes": 2439,
+        "exact_image_join_missing": 0,
+        "header_identity_csv_sha256": "bc49146791312ee983cc44f84f0b3648812184c01c5a58a2dbf7b09937b7f241",
+        "header_join": "unique exact forward ROS C++ double conversion from captured feature headers; no nearest neighbor or tolerance",
+        "geometry_verified": "Not evaluated",
+        "ground_truth_used": false,
+        "raw_stream_input": true,
+        "image_storage": "shared content-addressed hardlink"
+      },
+      "C": {
+        "status": "GRAPH_COMPLETE",
+        "arm": "C",
+        "sequence": "bus_outside",
+        "repeat": 3,
+        "command": [
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/native_adapter_build_attempt2/build/aqua_native_loop_replay",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r3/archive",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r3/afrl_cave_cam0_pinhole.yaml",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r3/vins_same_backend.yaml",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_k10L6.bin",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_pattern.yml",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r3/C/native",
+          "C",
+          "bus_outside",
+          "3"
+        ],
+        "graph_started": true,
+        "binary_sha256": "e87f60c8d9b13f4c8db90a960b7a95610fb83ff609928db9ecc00f064cf6b027",
+        "shared_local_receipt_sha256": "2b52ae285a569f00c6d22962e5b7ebaae0615db3075749502de388a2fb87bb4a",
+        "archive_roster_sha256": "7cd8b9c3ece77aafc28599c95b1769f2b4018511a379570b6475a8c610fc07b3",
+        "camera_sha256": "5856ee4b261d5b0d67021ef81ad0a0c5e8e6aa885184c68591530224b3645aee",
+        "config_sha256": "e99ce41d9eadb7fefaf4141a6238f44dc6620deac8eb6c5a3e99eb4e11747e9c",
+        "brief_vocabulary_sha256": "753e7e126c588906ad16197892bdcd914f3a0971037c8f8aeb3c63418458b035",
+        "brief_pattern_sha256": "cb9e20bf47d7557cd22f7820524c3cb13b3a315c451d5665955336100177cafd",
+        "candidates_sha256": null,
+        "runner_sha256": "30326cc3fdca90045c8ce3f44546932f406ab9eab0b2ad1d2edb9ce99a7e00db",
+        "source_commit": "bf9efeff031a335d7c415367ffaad9bcec7f5577",
+        "started_at": "2026-09-15T04:08:13.153989+08:00",
+        "native_process_wall_s": 21.019026775029488,
+        "keyframes": 2439,
+        "verified_candidates": 0,
+        "rejected_candidates": 445,
+        "correctness": "Unknown",
+        "optimization_time_separate": "Unknown: native process wall includes other work",
+        "completed_at": "2026-09-15T04:08:35.848490+08:00",
+        "artifacts": {
+          "bow_candidates.csv": "f57d10f1aaf7b866f7c5a6e332392dc39cbea3a3b043cd8313a4d84bd4563f2c",
+          "geometry.csv": "4bc312d4da68e3f500893f70abf759f90c6e331845d5f1443f37400639a14eed",
+          "global_body.tum": "68177197ec601b679d8ad05d1a5fdaea35786859bcfcc0a401e6b7e022243bda",
+          "local_body.tum": "68177197ec601b679d8ad05d1a5fdaea35786859bcfcc0a401e6b7e022243bda",
+          "native_path_updates.csv": "a192f21eb6b7469573e7f505636ee79ac9f73da403077e19ef89f66bf53ab2fe",
+          "processing.csv": "10dc34f7ca71b13cc5ecda59ce46186a36b056b0a446d8769cf0edfabad91ba9",
+          "raw_odometry_edges.csv": "b49a7ed0e96bca14c6d95497cd08d8a21b9291903fe9d2bb71d673e5a9cd3c41"
+        }
+      },
+      "L": {
+        "status": "GRAPH_COMPLETE",
+        "arm": "L",
+        "sequence": "bus_outside",
+        "repeat": 3,
+        "command": [
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/native_adapter_build_attempt2/build/aqua_native_loop_replay",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r3/archive",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r3/afrl_cave_cam0_pinhole.yaml",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r3/vins_same_backend.yaml",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_k10L6.bin",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_pattern.yml",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r3/L/native",
+          "L",
+          "bus_outside",
+          "3",
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/bus_outside_r3/learned_candidates.csv"
+        ],
+        "graph_started": true,
+        "binary_sha256": "e87f60c8d9b13f4c8db90a960b7a95610fb83ff609928db9ecc00f064cf6b027",
+        "shared_local_receipt_sha256": "2b52ae285a569f00c6d22962e5b7ebaae0615db3075749502de388a2fb87bb4a",
+        "archive_roster_sha256": "7cd8b9c3ece77aafc28599c95b1769f2b4018511a379570b6475a8c610fc07b3",
+        "camera_sha256": "5856ee4b261d5b0d67021ef81ad0a0c5e8e6aa885184c68591530224b3645aee",
+        "config_sha256": "e99ce41d9eadb7fefaf4141a6238f44dc6620deac8eb6c5a3e99eb4e11747e9c",
+        "brief_vocabulary_sha256": "753e7e126c588906ad16197892bdcd914f3a0971037c8f8aeb3c63418458b035",
+        "brief_pattern_sha256": "cb9e20bf47d7557cd22f7820524c3cb13b3a315c451d5665955336100177cafd",
+        "candidates_sha256": "e9043467292829540b569d2f3680c763cee67db92dff6ebfb7a2ab5c9eead447",
+        "runner_sha256": "30326cc3fdca90045c8ce3f44546932f406ab9eab0b2ad1d2edb9ce99a7e00db",
+        "source_commit": "bf9efeff031a335d7c415367ffaad9bcec7f5577",
+        "started_at": "2026-09-15T04:09:25.039376+08:00",
+        "native_process_wall_s": 22.021222527022474,
+        "keyframes": 2439,
+        "verified_candidates": 5,
+        "rejected_candidates": 2201,
+        "correctness": "Unknown",
+        "optimization_time_separate": "Unknown: native process wall includes other work",
+        "completed_at": "2026-09-15T04:09:48.738134+08:00",
+        "artifacts": {
+          "bow_candidates.csv": "b9014d13497ab68fb826e5c889acbb74834ff31326994141dd682e94b20f2080",
+          "geometry.csv": "36d9c945e2aef480b20ce178ebfdfa35795e3b7fe4b31c037cecd0eea80bd535",
+          "global_body.tum": "5ea7094851da7e8a82097784711304e84b35f76d529100d1fc0d30e70d7be041",
+          "local_body.tum": "68177197ec601b679d8ad05d1a5fdaea35786859bcfcc0a401e6b7e022243bda",
+          "native_path_updates.csv": "b116087d7a86111c3e1cd80e7b230b6119c7eb9b749303a8258f688eae125e63",
+          "processing.csv": "8e3921b261aee7bb91a85e61eb4c045084baced0acda331078321bb1cb8aac7d",
+          "raw_odometry_edges.csv": "b49a7ed0e96bca14c6d95497cd08d8a21b9291903fe9d2bb71d673e5a9cd3c41"
+        }
+      },
+      "evaluation": {
+        "sequence": "bus_outside",
+        "repeat": 3,
+        "support": {
+          "common_pose_count": 496,
+          "common_span_s": 579.0,
+          "reference_evaluable_samples": 540,
+          "input_grid_samples": 585,
+          "common_reference_coverage": 0.9185185185185185,
+          "support_gate": "PASS"
+        },
+        "reference_identity": {
+          "sequence": "bus_outside",
+          "reference_sha256": "341770a61a2adae1135c4319bf858be32218ec406b446420d6a9a495b4a36bb7",
+          "config_sha256": "cb9a252cdb0864aad843b7c6ad050f74ce0c1c07760df8963238d188364052f1",
+          "intervals_total": 3387,
+          "valid_intervals": 3381,
+          "imu_samples": 58487,
+          "fixed_camera_imu_td_s": -8.121e-05,
+          "no_estimator_or_learned_outputs_used": true,
+          "fitting": "none: no bias/offset/scale/rotation fit",
+          "validity": "positive dt<=1s and enclosed IMU support",
+          "convention_validated": false,
+          "pose_convention": "Unknown",
+          "interpretations": {
+            "as_world_T_cam0": {
+              "gyro_difference_rmse_rad_s": 0.031897677019523195,
+              "median_rad_s": 0.01352660892664218,
+              "p95_rad_s": 0.04812029431078561,
+              "per_axis_correlation": [
+                0.9431852517684505,
+                0.9541067418038951,
+                0.9779416082201543
+              ]
+            },
+            "inverse_direction": {
+              "gyro_difference_rmse_rad_s": 0.1574797143844867,
+              "median_rad_s": 0.09919889925875662,
+              "p95_rad_s": 0.31488388425372504,
+              "per_axis_correlation": [
+                -0.1520507182791701,
+                -0.014998487566104226,
+                0.11919459872102896
+              ]
+            }
+          },
+          "limitation": "Finite-interval gyro consistency is supporting evidence, not independent proof of camera origin/world pose convention; no automatic relabeling or trajectory score."
+        },
+        "raw_local_rows": 3654,
+        "initialization_log_detected": true,
+        "initialization_time_s": 2.227895417,
+        "initialization_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+        "shared_pre_post_boundary_s": 1494876983.1195722,
+        "reference_role": "COLMAP proxy, not independent GT",
+        "arms": {
+          "B": {
+            "raw_keyframe_count": 2439,
+            "input_grid_coverage": 0.9196581196581196,
+            "reference_grid_coverage": 0.9185185185185185,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          },
+          "C": {
+            "raw_keyframe_count": 2439,
+            "input_grid_coverage": 0.9196581196581196,
+            "reference_grid_coverage": 0.9185185185185185,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          },
+          "L": {
+            "raw_keyframe_count": 2439,
+            "input_grid_coverage": 0.9196581196581196,
+            "reference_grid_coverage": 0.9185185185185185,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          }
+        }
+      },
+      "encoding": {
+        "source_commit": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+        "model_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+        "vocabulary_sha256": "695985ec145406609d5c8d122092198886c4d89463c316e6a3b1606aee34143d",
+        "preprocess": "dl-vits14-final-norm-patch-280x448-letterbox-imagenet-k32-v1",
+        "device": "cpu",
+        "torch_version": "2.2.2+cpu",
+        "strict_official_tensors_loaded": 175,
+        "python_compatibility": "postponed DINO annotations only; original source bytes unchanged",
+        "parameters": 22056576,
+        "cold_load_s": 0.3167125160107389,
+        "status": "DESCRIPTORS_COMPLETE",
+        "keyframes": 2439,
+        "cache_hits": 2417,
+        "new_image_inferences": 22,
+        "archive_roster_sha256": "7cd8b9c3ece77aafc28599c95b1769f2b4018511a379570b6475a8c610fc07b3",
+        "peak_rss_kib": 720716,
+        "inference_and_vlad_total_s": 4.372749248635955,
+        "inference_and_vlad_mean_s": 0.0017928451203919455
+      },
+      "retrieval_pipeline_cost": {
+        "wall_s": "40.11",
+        "peak_rss_kib": "321908",
+        "scope": "wall includes descriptor NPZ load and candidate CSV write; not pure scoring"
+      },
+      "accepted_pair_retrieval_context": [
+        {
+          "arm": "L",
+          "query_id": "2123",
+          "candidate_id": "1089",
+          "other_arm": "C",
+          "exact_pair_in_other_top4": false,
+          "other_top4": [
+            {
+              "candidate_id": "505",
+              "score": "0.024955177054979238",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1993",
+              "score": "0.024721278605375971",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "499",
+              "score": "0.023726537081747299",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "487",
+              "score": "0.022162194789775207",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            }
+          ],
+          "interpretation": "Ranking+registered gate configuration; no threshold counterfactual performed"
+        },
+        {
+          "arm": "L",
+          "query_id": "2130",
+          "candidate_id": "1099",
+          "other_arm": "C",
+          "exact_pair_in_other_top4": true,
+          "other_top4": [
+            {
+              "candidate_id": "1099",
+              "score": "0.022043653642297226",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1100",
+              "score": "0.020628394235249398",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1752",
+              "score": "0.018815607335347196",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1284",
+              "score": "0.011217435004754063",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            }
+          ],
+          "interpretation": "Ranking+registered gate configuration; no threshold counterfactual performed"
+        },
+        {
+          "arm": "L",
+          "query_id": "2264",
+          "candidate_id": "1197",
+          "other_arm": "C",
+          "exact_pair_in_other_top4": false,
+          "other_top4": [
+            {
+              "candidate_id": "1208",
+              "score": "0.02898764627729386",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1205",
+              "score": "0.021353395152832598",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1206",
+              "score": "0.018373467634639904",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1201",
+              "score": "0.017700509207289841",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            }
+          ],
+          "interpretation": "Ranking+registered gate configuration; no threshold counterfactual performed"
+        },
+        {
+          "arm": "L",
+          "query_id": "2265",
+          "candidate_id": "1209",
+          "other_arm": "C",
+          "exact_pair_in_other_top4": false,
+          "other_top4": [
+            {
+              "candidate_id": "1205",
+              "score": "0.035953693550659756",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1202",
+              "score": "0.032671738997478356",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1204",
+              "score": "0.030597818563575234",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1207",
+              "score": "0.028282886686584057",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            }
+          ],
+          "interpretation": "Ranking+registered gate configuration; no threshold counterfactual performed"
+        },
+        {
+          "arm": "L",
+          "query_id": "2269",
+          "candidate_id": "1209",
+          "other_arm": "C",
+          "exact_pair_in_other_top4": false,
+          "other_top4": [
+            {
+              "candidate_id": "1212",
+              "score": "0.045318885984744345",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1211",
+              "score": "0.035862865886422075",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1208",
+              "score": "0.030321821662022293",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "1210",
+              "score": "0.027943516034097348",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            }
+          ],
+          "interpretation": "Ranking+registered gate configuration; no threshold counterfactual performed"
+        }
+      ]
+    },
     "cemetery_r1": {},
     "cemetery_r2": {},
     "cemetery_r3": {}

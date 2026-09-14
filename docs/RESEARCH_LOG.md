@@ -1232,3 +1232,13 @@ Interpretation: UNSAFE_OR_UNRESOLVED; the proposed deletion does not solve the d
 - Inference: wheel/sidewall and bus-front pairs visually support actual overlap. Review was not strictly blinded, so do not promote to independent correct-loop labels or trueRecall.
 - Current conclusion: native legal-constraint increment observed in one repeat; accuracy gain and practical learned system increment Not evaluated. Unresolved reference convention prevents inventing error scores; no silentSim3.
 - Open questions/next experiment: finish the registered matrix and retain unknowns; no threshold/model/sequence substitution or stopped local-route restart.
+
+### 2026-09-15 — Repeated geometry increment includes a conventional score-gate effect
+
+- Question/hypothesis/motivation: which part of fixedC/Lretrieval differs at learnedacceptedqueries? Moregeometricpasses need not prove learnedrepresentation or globalaccuracy superiority.
+- Relatedbaseline/proposedidea: samefrozenB/C/L, no newmethod; only read existing rank/gate/geometric records.
+- Why it might work/assumptions: ranking and score calibration determine whether a true revisitedimage even reaches the same verifier. Assumes exactquery/candidateidentity; no futurelabels used online.
+- Evidence/Confirmedfact: threeBusrepeats C0/0/0,L3/2/5passes; all10Lpassquery Cbestscores.02204-.04532<.05.9exactpairsoutsideCtop4; r3(2130,1099)isCtop1butgaterejected. Sameconfigs/rawodometry/PNP,3/3C=Bbytes,Lglobalchanged.
+- Inference/potentialfailurecases: visualoverlap supports sevenuniqueacceptedpairs but reviewnotstrictlyblinded; falsegeometry, badmapscale and proxysemanticerror remain possible. Did not run thresholdcounterfactual or usepath-smoothnessastruth.
+- Currentconclusion: repeatable nativeconstraint acceptance increment for the registered retrievalconfig, not independentlearnedembedding necessity or a confirmedsystemgain. Formalaccuracy/trueRecallNot evaluated. ResourceguardpreventsCemetery startup, not a scientificnegative.
+- Openquestions/next experiment: complete remainingfixedCemeteryblocks when reserve+artifacts fit; obtainactualreferenceconvention andindependentlabel support for finalclaim. No extraBusrepeats, sequence substitution, fitting, training or local-frontend revival.

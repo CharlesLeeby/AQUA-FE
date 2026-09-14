@@ -1536,3 +1536,16 @@ Objective/motivation: test whether removing strong LK retains H02 benefit and av
 - Known issues: exact proxy camera pose convention unresolved; formalAPE/RPE/Sim3/trueRecallNot evaluated. CPU encoder timing not exclusive to process.
 - Interpretation: legal native constraints are an actual intermediate result, not a confirmed learned system win. Full denominator2sequences/6locals/18arms remains.
 - Next steps: finish existing fixed matrix, preserving all failures/unknowns, not adjust thresholds to seek a positive.
+
+### 2026-09-15 — Bus complete at three repeats; Cemetery stopped by original resource guard
+
+- Objective/problem: finish available registered paired loops and publish real results, not preparation status or a selected successful subset.
+- Files changed: task handoff/report/decision/system_results/loop_candidates/runtime_receipts, compact summarizer and required logs. Main workspace and external VINS unchanged.
+- Implementation/decisions: aggregation now includes actual accepted constraint components, gate/ranking context, encoding cache and process costs.18planned rows kept;9unrun Cemetery rows explicitlyNOT_RUN_RESOURCE. No new scientific mechanism or runtime algorithm change.
+- Experiments/results: Bus3/3local complete,6/6paired graphs complete; Cpasses0/0/0,L3/2/5, commonposes497/501/496, coverage92.037/92.778/91.852%, each3654rawposes and2.227895sinitialization. Overall3/6local,6/12graphs,9/18armoutputs; only1/2physicalsequencescomplete.
+- Quantitative costs: 2501new image inferences,4809cachehits,526.06sencoding+VLAD,4model loads including1syntheticprobe. NativeC/L~21/22s eachrepeat. Training0, datasetdownloads0,1officialmodelpayload cumulative.
+- Qualitative observations: all7unique accepted image pairs visually share wheel/sidewall or bus-front structures. Review not strictly blinded; independent correctness/trueRecall/APE/RPE/Sim3Not evaluated. C=Bbytes in3/3; Lchangedin3/3, not proof of error reduction.
+- Failed attempts/known issues: Cemetery r1 preflight exit1 before output creation or VINS;free10185388032B versus required11001659392B. Original8GiBreserve unchanged; not algorithm failure or consumedrepeat. Proxy convention still unresolved. No deletion/migration.
+- Interpretation: all10L-pass queries blocked by Cdefault0.05 gate; one exactpairwasCtop1. Increment concerns fixed retrieval+gate config, not isolated embedding superiority. No parameter counterfactual executed.
+- Verification: completed CSV/receipt invariants, exact shared config/roster/odometry edges, full candidate history limit and immutable artifact counts; source commits in runtime_receipts. First checkpointbf9efeff pushed and7remote files byte-matched; final snapshot will be separately pushed/read back.
+- Next steps: resume only remaining Cemetery blocks when original resource condition passes; do not repeatBus, switchsequences or revive stopped local routes. No job left unattended.
