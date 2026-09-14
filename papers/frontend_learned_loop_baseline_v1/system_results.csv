@@ -1,19 +1,19 @@
 sequence_id,repeat,arm,shared_local_id,status,initialization_time_s,trajectory_coverage,common_pose_count,recall_at_4,verified_candidates,rejected_candidates,confirmed_correct_loops,confirmed_wrong_loops,unknown_loops,ape_se3_rmse_m,rpe_1s_translation_rmse_m,rpe_1s_rotation_rmse_deg,sim3_scale_diagnostic,inference_ms_per_keyframe,retrieval_ms,verification_ms,optimization_ms,reason
-bus_outside,1,B,bus_outside_r1,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
-bus_outside,1,C,bus_outside_r1,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
-bus_outside,1,L,bus_outside_r1,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
-bus_outside,2,B,bus_outside_r2,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
-bus_outside,2,C,bus_outside_r2,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
-bus_outside,2,L,bus_outside_r2,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
-bus_outside,3,B,bus_outside_r3,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
-bus_outside,3,C,bus_outside_r3,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
-bus_outside,3,L,bus_outside_r3,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
-cemetery,1,B,cemetery_r1,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
-cemetery,1,C,cemetery_r1,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
-cemetery,1,L,cemetery_r1,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
-cemetery,2,B,cemetery_r2,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
-cemetery,2,C,cemetery_r2,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
-cemetery,2,L,cemetery_r2,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
-cemetery,3,B,cemetery_r3,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
-cemetery,3,C,cemetery_r3,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
-cemetery,3,L,cemetery_r3,NOT_RUN_RESOURCE,,,,,,,,,,,,,,,,,,No local archive or arm result generated; execution identities and native bridge pending
+bus_outside,1,B,bus_outside_r1,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure
+bus_outside,1,C,bus_outside_r1,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure
+bus_outside,1,L,bus_outside_r1,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure
+bus_outside,2,B,bus_outside_r2,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure
+bus_outside,2,C,bus_outside_r2,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure
+bus_outside,2,L,bus_outside_r2,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure
+bus_outside,3,B,bus_outside_r3,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure
+bus_outside,3,C,bus_outside_r3,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure
+bus_outside,3,L,bus_outside_r3,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure
+cemetery,1,B,cemetery_r1,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure
+cemetery,1,C,cemetery_r1,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure
+cemetery,1,L,cemetery_r1,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure
+cemetery,2,B,cemetery_r2,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure
+cemetery,2,C,cemetery_r2,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure
+cemetery,2,L,cemetery_r2,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure
+cemetery,3,B,cemetery_r3,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure
+cemetery,3,C,cemetery_r3,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure
+cemetery,3,L,cemetery_r3,PENDING_SHARED_LOCAL,,,,,,,,,,,,,,,,,,No complete local archive or arm result yet; full Bus KLT export running; not a measured zero or failure

@@ -1,0 +1,49 @@
+{
+  "updated_at": "2026-09-15T01:41:05+08:00",
+  "model_smoke": {
+    "source_commit": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+    "model_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+    "vocabulary_sha256": "695985ec145406609d5c8d122092198886c4d89463c316e6a3b1606aee34143d",
+    "preprocess": "dl-vits14-final-norm-patch-280x448-letterbox-imagenet-k32-v1",
+    "device": "cpu",
+    "torch_version": "2.2.2+cpu",
+    "strict_official_tensors_loaded": 175,
+    "python_compatibility": "postponed DINO annotations only; original source bytes unchanged",
+    "parameters": 22056576,
+    "cold_load_s": 0.5627310199197382,
+    "status": "PRETRAINED_LOAD_AND_FINITE_OUTPUT_PASS",
+    "smoke_inputs": 1,
+    "input_role": "synthetic_black_image_not_retrieval",
+    "token_shape": [
+      640,
+      384
+    ],
+    "descriptor_dimensions": 12288,
+    "descriptor_norm": 1,
+    "inference_and_vlad_s": 0.6705578729743138,
+    "peak_rss_kib": 481192,
+    "peak_cuda_memory_bytes": 0,
+    "cuda_memory_role": "Not applicable: CPU execution",
+    "training_steps": 0
+  },
+  "canonical_stream": {
+    "status": "PASS",
+    "scope": "actual Bus first128 original image+IMU records, no frontend or VINS",
+    "messages": 128,
+    "images": 16,
+    "serialized_payloads_and_order_identical": true,
+    "full_input_counts": {
+      "images": 7338,
+      "imu": 58487
+    },
+    "converter_source_commit": "3c50b742d6e0c69796a69813e42823e9895ed684"
+  },
+  "role": "Prerequisite checks only; real loop/trajectory outcomes Not evaluated",
+  "adapter_hash_capture_scope": "2026-09-15 in-progress checkpoint; not claimed to be a prelaunch receipt. Full Bus exporter still running with unchanged adapter bytes.",
+  "klt_stream_adapter_sha256": "b3e2887a3baaee1414fb64047605889b0d0574df780ee3e5ac49b8b029aeff18",
+  "encoder_sha256": "b671759fb93e7f5a3fa731870e0524e80b7f59a7d08afcd2fc42ccb9c02a8ad0",
+  "runtime_source_files": [
+    "experiments/learned_loop_baseline_v1/model_smoke.json",
+    "experiments/learned_loop_baseline_v1/stream_io_probe/result.json"
+  ]
+}

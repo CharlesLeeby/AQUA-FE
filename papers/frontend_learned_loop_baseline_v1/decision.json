@@ -1,11 +1,14 @@
 {
   "experiment_id": "frontend_learned_loop_baseline_v1",
-  "updated_at": "2026-09-14T16:14:36+08:00",
-  "status": "PARTIAL_BLOCKED_RESOURCE",
+  "updated_at": "2026-09-15T01:41:05+08:00",
+  "status": "PARTIAL_FULL_KLT_EXPORT_RUNNING",
   "scientific_role": "mature_component_global_association_baseline_not_algorithmic_novelty",
   "scientific_conclusion": "Not evaluated",
   "real_revisit": "Documented by dataset provider for full AFRL Bus Outside and Cemetery; pair-level labels Unknown",
-  "selected_sequences": ["bus_outside", "cemetery"],
+  "selected_sequences": [
+    "bus_outside",
+    "cemetery"
+  ],
   "selection_blind_to_new_learned_results": true,
   "historically_developed_sequences": true,
   "design_protocol_frozen": true,
@@ -16,15 +19,21 @@
   "local_vio_runs_actual": 0,
   "local_runs_reused": 0,
   "pose_graph_runs_actual": 0,
-  "learned_model_loads_actual": 0,
-  "learned_model_inferences_actual": 0,
+  "learned_model_loads_actual": 1,
+  "learned_model_inferences_actual": 1,
   "training_steps_actual": 0,
-  "model_or_dataset_payload_downloads": 0,
-  "small_remote_read": "Pinned source/metadata and 49160-byte vocabulary read in memory; not a model loading check",
-  "unit_tests": {"passed": 17, "total": 17, "candidate_tests": 8, "archive_tests": 9, "role": "synthetic interface checks, not retrieval or system evidence"},
+  "model_or_dataset_payload_downloads": 1,
+  "small_remote_read": "Pinned official source, checkpoint and matching K32 vocabulary downloaded; one failed annotation import before model load preserved as a preparation failure.",
+  "unit_tests": {
+    "passed": 17,
+    "total": 17,
+    "candidate_tests": 8,
+    "archive_tests": 9,
+    "role": "synthetic interface checks, not retrieval or system evidence"
+  },
   "vocabulary_identity_checked": true,
   "vocabulary_fit_image_manifest": "Unknown",
-  "pretrained_weight_runtime_validation": "Not evaluated",
+  "pretrained_weight_runtime_validation": "PASS:175 official state tensors exactly loaded; one synthetic finite-output test, not retrieval evidence",
   "candidate_adapter": "implemented; preprocessing/VLAD/shared history/top4/single-candidate policy only",
   "native_archive_to_verifier_bridge": "Implemented and compiled in isolated snapshot; real archive/PnP/graph execution Not evaluated",
   "archive_adapter": "Implemented exact header join, native roster/points preservation and read-only identity validation; real capture archive Not evaluated",
@@ -49,16 +58,36 @@
     "historical_frontend_config_sha256": "6f89d861cc002dfaf0eaf5f1294b0dbcfab9fe268c5dc0d09082f79811000bf3",
     "historical_exporter_registered_sha256": "bb4e50d8b9777e76aee558d94ec0597461e9dcad4ff9c9486875b46a7c714d1d",
     "historical_shadow_exporter_current_sha256": "e20bc39f90399ab26d4280541d4fb68f5d6a00ca497b729872b454f675e99e17",
-    "exporter_identity": "UNRESOLVED: inspected shadow file is not the registered historical exporter; do not call it identity-equivalent or execute it under that old identity"
+    "exporter_identity": "RESOLVED: exact historical bb4e50d8 exporter recovered from Git3c50b742; no changes to frozen source/gates",
+    "klt_source_commit": "3c50b742d6e0c69796a69813e42823e9895ed684",
+    "config_probe": "31 top-level keys:30 unchanged; only output_path changed; camera bytes identical"
   },
-  "python_environment_probe": "torch 2.2.2+cpu; no CUDA-enabled torch in the checked interpreter; no model instantiated",
+  "python_environment_probe": "isolated system-site-packages venv; existing torch2.2.2+cpu; CPU4 threads; no library upgrades",
   "full_keyframe_map_archive_reuse": "No eligible archive confirmed in finite check; not an exhaustive absence claim",
   "loop_candidates_table": "Header only because retrieval was not run; not a measured zero-loop result",
-  "resource_checked_at": "2026-09-14T16:14:36+08:00",
-  "resource_available_bytes": {"root": 8352247808, "mnt_data": 575979520, "media_ma_Data": 227987456},
-  "operational_reserve_bytes": {"root": 2147483648, "runtime": 8589934592},
-  "resource_interpretation": "Conservative existing replay safety reserves, not measured matrix storage consumption",
+  "resource_checked_at": "2026-09-15 asset-stage preflight",
+  "resource_available_bytes": {
+    "root": 12267446272,
+    "mnt_data": 560168960,
+    "media_ma_Data": 227987456
+  },
+  "operational_reserve_bytes": {
+    "root": 2147483648,
+    "runtime": 8589934592
+  },
+  "resource_interpretation": "Asset phase passed frozen reserve+384MiB allowance; each subsequent phase rechecks reserve+bounded artifacts, no whole-matrix free-space guarantee",
   "old_routes_reopened": false,
-  "next_action": "Provide runtime space above the frozen 8GiB reserve plus a bounded artifact allowance; complete unresolved KLT source/input identity and the fixed pretrained loading/native-interface checks, then execute only the same two-sequence matrix",
-  "sync_state_at_document_creation": "LOCAL_ONLY_PENDING_PUSH"
+  "next_action": "Finish the already-running full Bus KLT export, then shared Bus r1 local VIO/passive archive/C/L under unchanged protocol when no competing VINS runs. No duplicate exporter.",
+  "sync_state_at_document_creation": "LOCAL_ONLY_PENDING_PUSH",
+  "real_keyframe_inferences_actual": 0,
+  "download_detail": "One official 88283115-byte checkpoint; no dataset download. Small pinned source and matching vocabulary also saved.",
+  "frontend_export": {
+    "full_bus_status": "RUNNING at checkpoint, not yet an identity-valid complete input",
+    "probe": "8 exported frames, each350classical;0learned;16rawimages107IMU",
+    "canonical_stream_probe": "128/128 serialized messages identical to materialized conversion (16images112IMU)",
+    "source_commit": "3c50b742d6e0c69796a69813e42823e9895ed684",
+    "runtime": "experiments/learned_loop_baseline_v1/bus_full_klt"
+  },
+  "preflight_receipt": "prerequisite_checks.json",
+  "execution_identity_explanation": "Historical source/model/config lock resolved; full input bag receipt and real shared archive still pending. Frozen original protocol retained with streaming_input_addendum."
 }

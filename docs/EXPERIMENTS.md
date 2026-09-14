@@ -1106,3 +1106,15 @@ the method freeze; the only next step is the remaining frozen matrix and control
 - Validity / common support: no real archive processed, no complete loop edge or trajectory generated; planned18 rows remain NOT_RUN_RESOURCE. First ambiguous patch-anchor preparation failed and is retained separately; not a technical replay or scientific failure.
 - Interpretation / conclusion: interface scaffold compiles, not proof C/L equivalent execution or system effectiveness. Root7.78GiB cannot satisfy runtime8GiB plus artifacts; checked historical shadow exporter differs from old frontend lock, so complete execution identity remains unresolved despite matching backend binaries/YAML. Do not reinterpret old evidence or blame that difference without behavioral evidence.
 - Follow-up: same bounded matrix only after safe capacity, KLT identity resolution and actual fixed-model/native-archive validation; no extra method/window search.
+
+## 2026-09-15 — frontend_learned_loop_baseline_v1 prerequisite execution checkpoint
+
+- Status / scientific role: PARTIAL_FULL_KLT_EXPORT_RUNNING; mature global-association integration, not efficacy evidence.
+- Git / environment: task branch exp/learned-loop-baseline-v1-20260914, HEAD4bdef735 at model/input start; adapter hashes captured at the in-progress checkpoint, not a prelaunch receipt; actual KLT package3c50b742. Existing ROS noetic/VINS binary; Python3.8 torch2.2.2+cpu in isolated venv; no estimator edits.
+- Dataset / baseline / proposed: full Bus then Cemetery frozen; all B/C/L share method=klt,every_n2,cap350 and the same canonical camera/IMU. Only future L retrieval changes; no new learning-arm results yet.
+- Commands / artifacts: scripts/learned_loop_encoder_v1.py prepare|smoke; scripts/run_loop_klt_export_v1.py (full argv in experiments/learned_loop_baseline_v1/{bus_probe_attempt2,bus_full_klt}/input_lock.json); actual stream equality in stream_io_probe/result.json; public prerequisite_checks.json and streaming_input_addendum.md.
+- Metrics / results: one successful official load, one synthetic inference, training0;175 tensors exact, descriptor12288D finite/unit;8probe frames each350classical/0learned.128 actual image/IMU serialized messages exact. Full Bus export not yet complete at checkpoint.
+- Validity / common support: no full local archive yet; VIO0/6,graph0/12,arm0/18. APE/RPE,init,coverage,Recall,correct loops Not evaluated, not zero. Model cold load.563s/synthetic encoder.671s is not dataset throughput.
+- Failures: Python annotation import before model instantiation; empty initial frontend preparation directory and receipt self-hash bug retained. No failed VIO repeat.
+- Interpretation / conclusion: prior space blocker lifted for current stage, recovered original KLT source identity; no scientific loop conclusion. Initial root12267446272B, per-stage reserve+bounded allowance remains mandatory.
+- Follow-up: same complete Bus export then serial shared local/archive/C/L blocks; no additional model, changed threshold or substitute sequence.

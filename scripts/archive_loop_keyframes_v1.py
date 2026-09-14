@@ -12,6 +12,7 @@ import argparse
 import csv
 import hashlib
 import json
+import os
 from pathlib import Path
 
 import numpy as np
@@ -127,6 +128,9 @@ def main() -> None:
     parser.add_argument("--capture-bag", type=Path)
     parser.add_argument("--images-bag", type=Path)
     parser.add_argument("--image-topic", default="/camera/image_raw")
+    parser.add_argument("--raw-image-topic", help="Use the identical canonical streamed AFRL conversion")
+    parser.add_argument("--raw-index", type=Path)
+    parser.add_argument("--image-pool", type=Path, help="Task-local content-addressed PNG hardlinks shared across repeats")
     parser.add_argument("--output-dir", type=Path)
     args = parser.parse_args()
     if args.verify_only is not None:
@@ -159,8 +163,17 @@ def main() -> None:
     stamp_to_id = {stamp: i for i, stamp in enumerate(stamps)}
     saved = {}
     bridge = CvBridge()
-    with rosbag.Bag(str(args.images_bag), "r") as bag:
-        for _, message, _ in bag.read_messages(topics=[args.image_topic]):
+    if args.raw_image_topic is not None:
+        if args.raw_index is None:
+            parser.error("Raw AFRL images require their shared --raw-index")
+        from run_loop_klt_export_v1 import CanonicalAFRLBag
+        source = CanonicalAFRLBag(args.images_bag, args.raw_image_topic, args.raw_index)
+    else:
+        source = rosbag.Bag(str(args.images_bag), "r")
+    with source as bag:
+        stream = (bag.read_messages(topics=[args.image_topic], selected_image_stamps=set(stamps))
+                  if args.raw_image_topic is not None else bag.read_messages(topics=[args.image_topic]))
+        for _, message, _ in stream:
             stamp = message.header.stamp.to_nsec()
             if stamp not in stamp_to_id:
                 continue
@@ -174,8 +187,24 @@ def main() -> None:
             idx = stamp_to_id[stamp]
             image_rel, points_rel = f"images/{idx:06d}.png", f"points/{idx:06d}.bin"
             path = args.output_dir / image_rel
-            if not cv2.imwrite(str(path), image, [cv2.IMWRITE_PNG_COMPRESSION, 3]):
-                raise OSError("Failed to save keyframe PNG")
+            if args.image_pool is None:
+                if not cv2.imwrite(str(path), image, [cv2.IMWRITE_PNG_COMPRESSION, 3]):
+                    raise OSError("Failed to save keyframe PNG")
+            else:
+                args.image_pool.mkdir(parents=True, exist_ok=True)
+                ok, encoded = cv2.imencode(".png", image, [cv2.IMWRITE_PNG_COMPRESSION, 3])
+                if not ok:
+                    raise OSError("Failed to encode keyframe PNG")
+                blob = encoded.tobytes()
+                digest = hashlib.sha256(blob).hexdigest()
+                pooled = args.image_pool / (digest + ".png")
+                if pooled.exists():
+                    if hash_file(pooled) != digest:
+                        raise ValueError("Shared PNG content identity mismatch")
+                else:
+                    with pooled.open("xb") as f:
+                        f.write(blob)
+                os.link(pooled, path)  # Same filesystem; no copy or symlink fallback.
             point_data = points_array(points[stamp])
             point_path = args.output_dir / points_rel
             with point_path.open("xb") as stream:
@@ -206,6 +235,8 @@ def main() -> None:
         "exact_image_join_missing": 0,
         "geometry_verified": "Not evaluated",
         "ground_truth_used": False,
+        "raw_stream_input": args.raw_image_topic is not None,
+        "image_storage": "shared content-addressed hardlink" if args.image_pool else "independent PNG",
     }
     with (args.output_dir / "archive_receipt.json").open("x") as stream:
         json.dump(receipt, stream, indent=2)

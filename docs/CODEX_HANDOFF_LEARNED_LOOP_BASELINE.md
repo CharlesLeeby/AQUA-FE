@@ -1,64 +1,55 @@
 # AQUA-FE：学习式水下回环基线交接
 
-更新：2026-09-14T16:14:36+08:00。
-实验：`frontend_learned_loop_baseline_v1`。
-分支：`exp/learned-loop-baseline-v1-20260914`，不是 main。
-状态：**PARTIAL_BLOCKED_RESOURCE；系统增量 Not evaluated**。
+更新：2026-09-15T01:41:05+08:00。实验：`frontend_learned_loop_baseline_v1`。
+实际分支：`exp/learned-loop-baseline-v1-20260914`，不是 main。
+**PARTIAL_FULL_KLT_EXPORT_RUNNING；系统增量 Not evaluated。**
 
-新任务明确扩展到全局回环/重定位，不继续旧加点、SEA-RAFT 或 temporal refinement。
-原 `NO_TEMPORAL_REFINEMENT_GAIN` 与出生诊断 `DIAGNOSTIC_UNRESOLVED` 保留；
-后者不妨碍旧原型停止，本轮也没有补其验证预测。
+本任务已明确扩展到全局关联。旧加点/恢复/坐标精化停止结论全部保留，不重开。
 
-## 现在能说什么
+- **重访依据**：已预注册完整 AFRL Bus Outside、Cemetery，共2条序列；均有历史开发曝光。
+  提供方描述重访，不等于有逐查询真回环标签。
+- **模型已真实加载**：官方DINOv2 ViT-S/14，配套32×384词典，175个张量等值检查通过。
+  只做1张合成黑图推理；真实关键帧推理0。词典拟合图像清单 Unknown。
+- **输入正在执行**：找回精确历史 KLT 源码，8帧探针均350个经典点、学习0；
+  完整 Bus 前端已启动，尚无完整输入成功回执。没有重复启动或重跑旧v2后端。
+- **相同像素/消息**：流式输入与原转换128条消息逐字节一致；仅减少中间文件存储。
+  后端31个顶层项只改输出目录，其余30项不变。相机标定未改。
+- **系统仍未评估**：局部VIO0/6、C/L图处理0/12、B/C/L完成0/18。
+  当前没有WIN/TIE/LOSS、APE/RPE或新增合法回环可报告。
+- **空间与并发**：初次根盘11.43GiB已通过模型阶段预算；每阶段继续必要预检。
+  另一个工作区间歇运行VINS，不干预它，不与其并发本任务的定时求解器。
 
-- **真实重访有依据**：数据提供方明确描述完整 AFRL Bus 环绕巴士、Cemetery 重复经过。
-  已锁定这两条完整序列，不用旧短窗，不按学习结果换序列。两序列有历史开发曝光。
-- 已检查 6 条物理序列 / 7 个 bag，验证两条选中序列的图像、IMU、标定、proxy 和
-  时间格式；**未取得穷尽的逐查询真回环标签**。
-- 匹配的 ViT-S/14 K32 词典确实可读：32×384、49,160 字节、固定哈希通过。
-  配套 ONNX 远端存在，但模型加载/推理 **0**；词典具体拟合图像清单 **Unknown**。
-- 候选层 8/8、关键帧档案 9/9 合成测试通过；原生回环适配器已在隔离副本编译成功。
-  原生 PnP 与图优化算法未改，局部估计器未重编译。
-  **真实档案联调、模型 encoder、几何与系统验证尚未完成**；编译通过不代表回环有效。
-- **局部 VIO 0/6，位姿图 0/12，18 个计划 B/C/L 行全部未执行**。
-  没有 WIN/LOSS、APE/RPE、合法新增回环或学习增量可报告；不能把未运行说成负结果。
+唯一后续任务：完成当前完整 Bus 输入，再依冻结顺序运行共享局部输出及C/L。
+不换模型、阈值、序列，不把加载通过当学习增量。
+原生适配器已编译，但真实档案/几何/系统联调仍未完成。
+proxy不是独立GT；本包相机姿态方向说明待核实，未知字段不猜测。
 
-## 本次进展及仍未启动的原因
+## 直接可读的证据与接口
 
-新增共享档案接口：精确时间戳关联原生 body pose、3D 点、像素观测和原图，拒绝缺失，
-不使用参考轨迹；可只读检查 receipt/文件身份。新增 C/L 候选读取、原生验证日志和
-局部/全局输出接口，保留同一 PnP/4DoF 求解。首次准备的锚点错误已修复且失败目录
-保留；目前编译成功，17 个合成测试通过，未执行真实回环。
+- [报告（最新状态及历史失败全部保留）](../papers/frontend_learned_loop_baseline_v1/report.md)
+- [完整任务](../papers/frontend_learned_loop_baseline_v1/task_instructions.md) /
+  [冻结协议](../papers/frontend_learned_loop_baseline_v1/protocol.md) /
+  [两序列和有限检查清单](../papers/frontend_learned_loop_baseline_v1/sequence_manifest.csv)
+- [18行计划结果账本，尚未评估](../papers/frontend_learned_loop_baseline_v1/system_results.csv) /
+  [候选表（表头，尚未检索）](../papers/frontend_learned_loop_baseline_v1/loop_candidates.csv) /
+  [决策及实际计数](../papers/frontend_learned_loop_baseline_v1/decision.json)
+- [模型/输入实测小回执](../papers/frontend_learned_loop_baseline_v1/prerequisite_checks.json) /
+  [执行身份锁](../papers/frontend_learned_loop_baseline_v1/execution_lock.json) /
+  [流式输入附录](../papers/frontend_learned_loop_baseline_v1/streaming_input_addendum.md)
+- [固定encoder](../scripts/learned_loop_encoder_v1.py) /
+  [原KLT流式导出](../scripts/run_loop_klt_export_v1.py) /
+  [被动局部复放](../scripts/run_loop_vio_v1.py) /
+  [关键帧档案](../scripts/archive_loop_keyframes_v1.py) /
+  [原生图处理](../scripts/run_loop_graph_v1.py)
+- [候选层](../scripts/learned_loop_candidates_v1.py) /
+  [候选测试](../scripts/tests/test_learned_loop_candidates_v1.py) /
+  [档案测试](../scripts/tests/test_archive_loop_keyframes_v1.py) /
+  [原生构建器](../scripts/build_native_loop_baseline_v1.py) /
+  [C++接口](../scripts/native_loop_baseline_v1/native_loop_replay.cpp)
 
-根盘已恢复到 **7.78 GiB（8,352,247,808 字节）**；`/mnt/data` 575,979,520 字节，
-`/media/ma/Data` 227,987,456 字节。独立根盘 2 GiB 储备已通过，所以推进了小型构建；
-但仍无输出盘达到已冻结的 **8 GiB 运行储备＋有界产物空间**，没有启动模型或 VIO。
-单全部原始 mono 图像像素就约 7.26 GB，不能将“接近 8 GiB 空闲”当作矩阵容量已够。
-没有删/搬数据、升级环境或修改旧后端。实际本次训练/模型加载/推理/VINS/位姿图/大文件下载均 0。
-
-局部身份也还未锁完：现有 VINS 二进制、两序列 canonical YAML 与旧锁一致；检查到的
-历史 shadow exporter 当前哈希却与旧 method lock 不同，不能按目录名冒认冻结版本。
-该差异的 KLT 行为影响 **Unknown**，未运行这份文件，亦未改写旧结果。
-
-**唯一后续任务**：提供满足储备与产物预算的输出位置后，完成同一协议的 KLT 输入
-身份与真实模型/接口检查，继续固定两序列矩阵；不换模型、阈值或序列。
-当前没有后台实验在等候自动执行。
-
-## 可直接阅读的资产
-
-- [完整原任务](../papers/frontend_learned_loop_baseline_v1/task_instructions.md)
-- [报告：证据、接口、资源与身份](../papers/frontend_learned_loop_baseline_v1/report.md)
-- [盲于新结果的协议](../papers/frontend_learned_loop_baseline_v1/protocol.md)
-- [完整有限清单及固定两序列](../papers/frontend_learned_loop_baseline_v1/sequence_manifest.csv)
-- [系统结果账本：18 行 NOT_RUN_RESOURCE](../papers/frontend_learned_loop_baseline_v1/system_results.csv)
-- [候选表：尚未检索，只有表头](../papers/frontend_learned_loop_baseline_v1/loop_candidates.csv)
-- [决策与实际计算计数](../papers/frontend_learned_loop_baseline_v1/decision.json)
-- [候选适配器](../scripts/learned_loop_candidates_v1.py) / [小型测试](../scripts/tests/test_learned_loop_candidates_v1.py)
-- [共享关键帧档案与只读校验](../scripts/archive_loop_keyframes_v1.py) / [档案测试](../scripts/tests/test_archive_loop_keyframes_v1.py)
-- [隔离构建器](../scripts/build_native_loop_baseline_v1.py) / [原生回环输入接口](../scripts/native_loop_baseline_v1/native_loop_replay.cpp)
-
-基础源码：`8f5d91681c28460a2e4579bc71995ebefbe3abe4`。本次新代码/报告发布 SHA
-由推送回执提供；没有本轮模型或 VINS 运行源码 commit 可冒认。构建时适配器内容
-与二进制 SHA 在 decision 中，完整快照身份留本地 attempt2。数据引用与已检查
-小型资产 SHA 在报告中；模型、bag、大缓存没有上传。报告内 LOCAL_ONLY_PENDING_PUSH
-描述文档落盘时状态，远端发布是否成功以实际 push/读回回执为准。
+历史KLT运行源码commit：`3c50b742d6e0c69796a69813e42823e9895ed684`；
+DINO源commit：`7764ea0f912e53c92e82eb78a2a1631e92725fc8`。
+后端、模型、词典和构建二进制SHA见decision/检查回执。
+本轮前端启动时HEAD为4bdef735，使用新增未提交的IO适配器，其字节身份在运行中检查点记录（不冒称启动前receipt）；
+不得把之后报告发布commit写成当时源码身份。报告发布SHA以实际push及远端读回回执为准。
+大数据、权重、缓存未提交；没有删除或搬迁历史产物。

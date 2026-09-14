@@ -1198,3 +1198,16 @@ Interpretation: UNSAFE_OR_UNRESOLVED; the proposed deletion does not solve the d
 - Evidence: Confirmed fact: adapter compiles and17 synthetic tests pass; native PnP source and solver mathematics unchanged. Backend binaries/canonical YAML agree with historical lock, but checked old shadow exporter hash differs, so directory name is not provenance. No model, real geometry or VIO executed.
 - Current conclusion: scientific status still Not evaluated. Root reserve recovered enough for small code work but not frozen runtime reserve plus artifacts. Nothing here promotes learning over C or reopens prior local-route negatives.
 - Open questions / next experiment: resolve the same frozen KLT input identity and actual model/archive prerequisites after capacity; execute only the registered full Bus/Cemetery matrix. No new hypothesis search, model or sequence substitution.
+
+## 2026-09-15 — Separate restored execution capability from learned-loop evidence
+
+- Research question: on identical original KLT local measurements, does fixed learned retrieval add usable correct loops beyond native DBoW?
+- Hypothesis: global learned appearance may retrieve genuine revisits missed by traditional descriptors; remains untested.
+- Motivation / baseline: full Bus/Cemetery with documented revisits; protect original local frontend and native PnP/4DoF conditions.
+- Proposed idea: same frozen retrieval experiment, now using canonical stream serialization and pooled PNGs solely to reduce intermediate storage.
+- Why it might work / assumptions: identical serialized camera/IMU messages should preserve frontend inputs; 128-message actual comparison confirms this finite sample, not all future messages or solver behavior.
+- Potential failure cases: missing exact images/map points, unstable local scale, false appearance matches, vocabulary exposure, unavailable reference pose convention. A compiled graph and loaded model do not resolve these.
+- Evidence (Confirmed facts): historical KLT exporter recovered exactly from3c50b742;175 pretrained tensors loaded exactly;8export probe frames each350classical,0learned; complete Bus export started. New system results Not evaluated.
+- Current conclusion: technical readiness improved; no evidence yet for L>C, L>B or learned-specific utility. Old frontend/refinement negative conclusions unchanged. Distinguish HF scale-corrected proxy files from different older SVIn scale-ambiguous files; never select pose convention by proposed outcome.
+- Open questions: complete reference orientation convention, pair-level loop truth, real keyframe archive and geometry/system outcome.
+- Next experiment: complete existing Bus export and the unchanged two-sequence shared-local matrix, not another design/search.
