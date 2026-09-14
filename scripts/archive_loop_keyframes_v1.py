@@ -15,6 +15,7 @@ import json
 import math
 import os
 from pathlib import Path
+import subprocess
 
 import numpy as np
 
@@ -171,6 +172,7 @@ def main() -> None:
     parser.add_argument("--image-topic", default="/camera/image_raw")
     parser.add_argument("--raw-image-topic", help="Use the identical canonical streamed AFRL conversion")
     parser.add_argument("--raw-index", type=Path)
+    parser.add_argument("--export-receipt", type=Path, help="Reuse verified raw-bag hash under unchanged indexed file identity")
     parser.add_argument("--image-pool", type=Path, help="Task-local content-addressed PNG hardlinks shared across repeats")
     parser.add_argument("--output-dir", type=Path)
     args = parser.parse_args()
@@ -218,6 +220,17 @@ def main() -> None:
         source = CanonicalAFRLBag(args.images_bag, args.raw_image_topic, args.raw_index)
     else:
         source = rosbag.Bag(str(args.images_bag), "r")
+    image_source_hash = None
+    if args.export_receipt is not None:
+        if args.raw_image_topic is None or args.raw_index is None:
+            raise ValueError("Hash reuse requires the validated canonical raw index")
+        exported = json.loads(args.export_receipt.read_text())
+        if (exported.get("status") != "EXPORT_COMPLETE" or exported.get("probe") is not False
+                or Path(exported["raw_bag"]).resolve() != args.images_bag.resolve()
+                or exported["input_index_sha256"] != hash_file(args.raw_index)):
+            raise ValueError("Export/raw-image identity mismatch")
+        # CanonicalAFRLBag already checked original path,size,mtime and topic.
+        image_source_hash = exported["raw_bag_sha256"]
     with source as bag:
         stream = (bag.read_messages(topics=[args.image_topic], selected_image_stamps=set(original_to_native))
                   if args.raw_image_topic is not None else bag.read_messages(topics=[args.image_topic]))
@@ -282,7 +295,10 @@ def main() -> None:
         "points_layout": "little-endian float32 rows: world_XYZ,norm_xy,pixel_uv,feature_id",
         "selection": "native first10 skip; skip_count0; distance strictly greater than0",
         "capture_bag_sha256": hash_file(args.capture_bag),
-        "images_bag_sha256": hash_file(args.images_bag),
+        "images_bag_sha256": image_source_hash or hash_file(args.images_bag),
+        "raw_bag_hash_reused_under_validated_index_identity": image_source_hash is not None,
+        "adapter_sha256": hash_file(Path(__file__)),
+        "adapter_commit": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
         "keyframes_csv_sha256": hash_file(manifest),
         "native_pose_messages": len(poses),
         "keyframes": len(stamps),
