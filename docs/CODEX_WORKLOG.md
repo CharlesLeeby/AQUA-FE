@@ -1509,3 +1509,18 @@ Objective/motivation: test whether removing strong LK retains H02 benefit and av
 - Known issues: real archive/PnP/graph still pending; proxy convention and true-loop label completeness remain explicitly unresolved; component cost is not system gain.
 - Interpretation: interface correctness improvement, not research-method tuning. Native timestamp representation is preserved, not edited to match a neighboring image.
 - Next steps: finish same full input; frozen Bus r1 local/archive/C/L when resource checks permit; no additional methodological variants.
+
+## 2026-09-15 — Reuse proven image storage in later local-repeat preflights
+
+- Task objective: keep the original8GiB reserve without reserving already stored same-input keyframe images twice.
+- Problem / motivation: the original2300MiB VIO+first-archive allowance assumes every image is new; repeated archives hardlink existing images.
+- Files changed: scripts/run_loop_vio_v1.py and this log.
+- Implementation: optional prior-archive/pool arguments require complete archive and same feature/raw-input identities, intact small manifest hashes, and existing same-inode pool links. Subtract512KiB only per proven cached source header, with a512MiB minimum nonimage allowance.
+- Technical decisions: reserve, input bag, VINS binary/library/YAML, scientific gates and serial local order unchanged. This is a storage upper-bound refinement, not a result-dependent runability gate.
+- Experiments performed: read-only budget check against actual Bus r1 archive; no extra VIO or model invocation.
+- Quantitative results:2430 previously stored source images reduce allowance2411724800B to1137704960B; runtime reserve8589934592B unchanged.
+- Qualitative observations: same input identities allow useful reuse; existence alone in another input archive does not.
+- Failed attempts: none.
+- Known issues: later first-sequence archives still need their full allowance; no blanket guarantee that every future stage fits.
+- Interpretation: accounting for retained artifacts, not tuning estimator behavior or weakening a scientific criterion.
+- Next steps: finish Bus r1 L graph, then continue the same registered local repeats with valid storage reuse.

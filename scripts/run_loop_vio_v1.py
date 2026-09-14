@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import datetime
 import hashlib
 import json
@@ -137,6 +138,40 @@ def passive_capture_audit(features: Path, capture: Path) -> dict:
         per_observation_estimator_residual_use="Unknown: a passive recorder is not an estimator residual-use trace")
 
 
+def retained_archive_allowance(export: dict, previous: list, pool: Path | None) -> dict:
+    """Subtract only proven, already stored source images from the old bound.
+
+    512KiB bounds a 600x800 mono PNG plus overhead. Each old archive must have
+    used the identical full feature input. Images must still be hardlinked into
+    the exact pool used by the next archive. Consumer content hashes remain
+    checked normally; this function proves a storage upper bound, not accuracy.
+    """
+    cached, receipts = set(), []
+    for archive in previous:
+        if pool is None:
+            raise ValueError("Previous-image budget reuse requires its --image-pool")
+        saved = json.loads((archive / "archive_receipt.json").read_text())
+        local = json.loads((archive.parent / "replay_receipt.json").read_text())
+        if (saved.get("status") != "COMPLETE" or saved.get("raw_stream_input") is not True
+                or saved["images_bag_sha256"] != export["raw_bag_sha256"]
+                or local["feature_bag_sha256"] != export["feature_bag_sha256"]
+                or sha(archive / "keyframes.csv") != saved["keyframes_csv_sha256"]
+                or sha(archive / "header_identity.csv") != saved["header_identity_csv_sha256"]):
+            raise ValueError("Previous archive is not proven same-input storage")
+        with (archive / "header_identity.csv").open() as f:
+            originals = {r["id"]: int(r["original_feature_ns"]) for r in csv.DictReader(f)}
+        with (archive / "keyframes.csv").open() as f:
+            for row in csv.DictReader(f):
+                image, pooled = archive / row["image"], pool / (row["image_sha256"] + ".png")
+                if image.is_file() and pooled.is_file() and os.path.samefile(image, pooled):
+                    cached.add(originals[row["id"]])
+        receipts.append(sha(archive / "archive_receipt.json"))
+    allowance = max(512 * 1024**2, 2300 * 1024**2 - len(cached) * 512 * 1024)
+    return dict(first_archive_bound_bytes=2300 * 1024**2, known_cached_source_headers=len(cached),
+        effective_allowance_bytes=allowance, previous_archive_receipt_sha256=receipts,
+        reserve_bytes=8 * 1024**3, role="storage reuse only; estimator/input/scientific gates unchanged")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--sequence", choices=tuple(YAML_SHAS), required=True)
@@ -146,16 +181,19 @@ def main() -> None:
     parser.add_argument("--canonical-yaml", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--port", type=int, default=13470)
+    parser.add_argument("--cached-archive", type=Path, action="append", default=[])
+    parser.add_argument("--image-pool", type=Path)
     args = parser.parse_args()
     output = args.output_dir.resolve()
     # Includes capture, logs and a worst-case first shared PNG/point archive;
     # later descriptor/graph stages recheck their own bounded allowance.
-    guard(output, 2300 * 1024**2)
+    export = json.loads(args.export_receipt.read_text())
+    budget = retained_archive_allowance(export, args.cached_archive, args.image_pool)
+    guard(output, budget["effective_allowance_bytes"])
     if output.exists():
         raise FileExistsError("Previous repeat/partial attempt preserved; inspect its receipt")
     if sha(NODE) != NODE_SHA or sha(LIB) != LIB_SHA or sha(args.canonical_yaml) != YAML_SHAS[args.sequence]:
         raise ValueError("Frozen estimator/configuration identity mismatch")
-    export = json.loads(args.export_receipt.read_text())
     if export["status"] != "EXPORT_COMPLETE" or export.get("probe") is not False or sha(args.features) != export["feature_bag_sha256"]:
         raise ValueError("Not a valid full-sequence KLT input")
     # Do not start a second local estimator or interfere with unrelated processes.
@@ -174,6 +212,7 @@ def main() -> None:
     identity = dict(status="REGISTERED_BEFORE_LOCAL_RUN", sequence=args.sequence, repeat=args.repeat,
         feature_bag_sha256=export["feature_bag_sha256"], canonical_yaml_sha256=YAML_SHAS[args.sequence],
         config_audit=audit, vins_node_sha256=NODE_SHA, vins_lib_sha256=LIB_SHA,
+        retained_artifact_budget=budget,
         resolved_vins_library=str(Path(resolved.group(1)).resolve()),
         local_run_started=False, loop_feedback=False, shared_arms=["B", "C", "L"],
         playback_rate=1.0, playback_delay_s=3, post_play_s=8, capture_topics=CAPTURE_TOPICS,
