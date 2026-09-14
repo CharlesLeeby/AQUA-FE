@@ -213,6 +213,8 @@ def main() -> None:
         if player.returncode != 0:
             raise RuntimeError("Feature bag playback failed")
         time.sleep(8)
+        if estimator.poll() is not None or recorder.poll() is not None:
+            raise RuntimeError("Estimator/recorder exited during final drain")
         identity["status"] = "LOCAL_REPLAY_FINISHED"
     except Exception as exc:
         error = str(exc)
