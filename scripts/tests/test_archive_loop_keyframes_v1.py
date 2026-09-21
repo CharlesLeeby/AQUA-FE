@@ -18,6 +18,23 @@ def pose(x):
 
 
 class ArchiveContractTests(unittest.TestCase):
+    def test_duplicate_header_uses_only_frozen_published_image_phase(self):
+        # Image order 0,1,2,3,4,5; non-image rows do not advance it.
+        rows = np.asarray([
+            [1, 0, 0, 0, 0, 1], [10, 0, 1, 0, 1, 1],
+            [2, 1, 2, 0, 2, 0], [10, 0, 3, 0, 3, 1],
+            [3, 0, 4, 0, 4, 1], [20, 0, 5, 0, 5, 1],
+            [20, 0, 6, 0, 6, 1]], dtype=np.int64)
+        self.assertEqual(archive.published_occurrences(rows, {10, 20}, 2, 0),
+                         {10: 1, 20: 0})
+        self.assertEqual(archive.frozen_export_phase(
+            {"argv": ["--every-n", "2", "--frame-offset", "0"]}), (2, 0))
+
+    def test_ambiguous_published_duplicate_still_fails(self):
+        rows = np.asarray([[10, 0, i, 0, i, 1] for i in range(3)], dtype=np.int64)
+        with self.assertRaisesRegex(ValueError, "unique frozen-phase"):
+            archive.published_occurrences(rows, {10}, 2, 0)
+
     def test_native_time_round_trip_is_not_nearest_matching(self):
         original = 1532199344712222464
         mapping = archive.exact_header_map([original, original + 100000000])

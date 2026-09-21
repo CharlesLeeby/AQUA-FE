@@ -9,6 +9,7 @@ Consume this archive for both C and L, not the live node's lossy image queue.
 from __future__ import annotations
 
 import argparse
+from collections import defaultdict
 import csv
 import hashlib
 import json
@@ -48,6 +49,41 @@ def exact_header_map(original_stamps):
             raise ValueError("Duplicate/colliding feature timestamp; no ambiguous image join")
         result[native] = int(stamp)
     return result
+
+
+def published_occurrences(rows, selected_stamps, every_n: int, frame_offset: int) -> dict[int, int]:
+    """Resolve same-header raw images by the frozen export image-index phase.
+
+    Image indices count image messages only, exactly as export_vins_features.py
+    counts ``seen_images``. A selected stamp must map to one published image;
+    otherwise the archive remains ambiguous and must fail.
+    """
+    if every_n < 1 or not 0 <= frame_offset < every_n:
+        raise ValueError("Invalid frozen image sampling phase")
+    occurrences, chosen = defaultdict(int), defaultdict(list)
+    image_index = 0
+    for row in rows:
+        if int(row[5]) != 1:
+            continue
+        stamp = int(row[0])
+        occurrence = occurrences[stamp]
+        occurrences[stamp] += 1
+        if stamp in selected_stamps and image_index % every_n == frame_offset:
+            chosen[stamp].append(occurrence)
+        image_index += 1
+    if set(chosen) != set(selected_stamps) or any(len(items) != 1 for items in chosen.values()):
+        raise ValueError("Selected keyframe lacks a unique frozen-phase source image")
+    return {stamp: items[0] for stamp, items in chosen.items()}
+
+
+def frozen_export_phase(exported: dict) -> tuple[int, int]:
+    argv = exported.get("argv", [])
+    def option(name: str, default: int) -> int:
+        found = [argv[i + 1] for i, value in enumerate(argv[:-1]) if value == name]
+        if len(found) > 1:
+            raise ValueError("Ambiguous frozen exporter option: " + name)
+        return int(found[0]) if found else default
+    return option("--every-n", 1), option("--frame-offset", 0)
 
 
 def hash_file(path: Path) -> str:
@@ -221,6 +257,7 @@ def main() -> None:
     else:
         source = rosbag.Bag(str(args.images_bag), "r")
     image_source_hash = None
+    selected_occurrence = None
     if args.export_receipt is not None:
         if args.raw_image_topic is None or args.raw_index is None:
             raise ValueError("Hash reuse requires the validated canonical raw index")
@@ -231,12 +268,20 @@ def main() -> None:
             raise ValueError("Export/raw-image identity mismatch")
         # CanonicalAFRLBag already checked original path,size,mtime and topic.
         image_source_hash = exported["raw_bag_sha256"]
+        every_n, frame_offset = frozen_export_phase(exported)
+        selected_occurrence = published_occurrences(
+            source.rows, set(original_to_native), every_n, frame_offset)
+    seen_occurrences = defaultdict(int)
     with source as bag:
         stream = (bag.read_messages(topics=[args.image_topic], selected_image_stamps=set(original_to_native))
                   if args.raw_image_topic is not None else bag.read_messages(topics=[args.image_topic]))
         for _, message, _ in stream:
             original_stamp = message.header.stamp.to_nsec()
             if original_stamp not in original_to_native:
+                continue
+            occurrence = seen_occurrences[original_stamp]
+            seen_occurrences[original_stamp] += 1
+            if selected_occurrence is not None and occurrence != selected_occurrence[original_stamp]:
                 continue
             stamp = original_to_native[original_stamp]
             if stamp in saved:
@@ -308,6 +353,9 @@ def main() -> None:
         "geometry_verified": "Not evaluated",
         "ground_truth_used": False,
         "raw_stream_input": args.raw_image_topic is not None,
+        "duplicate_header_resolution": (
+            "Unique published image index from frozen exporter every_n/frame_offset"
+            if selected_occurrence is not None else "none; duplicate selected timestamps rejected"),
         "image_storage": "shared content-addressed hardlink" if args.image_pool else "independent PNG",
     }
     with (args.output_dir / "archive_receipt.json").open("x") as stream:

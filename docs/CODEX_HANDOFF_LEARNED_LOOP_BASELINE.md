@@ -1,46 +1,44 @@
 # AQUA-FE：学习式水下回环基线交接
 
-更新：2026-09-15T04:13:54+08:00。实验：`frontend_learned_loop_baseline_v1`。
+更新：2026-09-22T03:37:00+08:00。实验：`frontend_learned_loop_baseline_v1`。
 实际分支：`exp/learned-loop-baseline-v1-20260914`，不是 main。
-**PARTIAL_BUS_COMPLETE_CEMETERY_RESOURCE_BLOCKED；Bus三次B/C/L完成，无后台任务在运行。**
+**FULL_MATRIX_EXECUTED_OUTCOME_UNRESOLVED：Bus/Cemetery 各三次 B/C/L 已完成；无本任务后台运行。**
 
 本任务已明确扩展到全局关联。旧加点/恢复/坐标精化停止结论全部保留，不重开。
 
-- **重访依据**：已预注册完整 AFRL Bus Outside、Cemetery，共2条序列；均有历史开发曝光。
-  提供方描述重访，不等于有逐查询真回环标签。
-- **模型已真实执行**：官方DINOv2 ViT-S/14，配套32×384词典，175个张量等值检查通过。
-  三次共2501张唯一图像实际编码，另4809次身份有效缓存命中；总编码+VLAD526.06s。
-  首轮每张中位211ms，C/L原生处理每轮约21/22s；独立优化耗时Unknown。
-  累计官方模型加载4次（含一次合成探针）、训练0。词典拟合图像清单Unknown。
-- **完整输入齐全**：Bus7338张原图/58487条IMU；Cemetery7781张原图/43400条IMU。
-  原始KLT冻结代码未改，没有重跑旧v2；Cemetery导出结束，不是暂停状态。
-- **相同像素/消息**：流式输入与原转换128条消息逐字节一致；仅减少中间文件存储。
-  后端31个顶层项只改输出目录，其余30项不变。相机标定未改。
-- **当前系统结果**：局部VIO3/6、C/L图处理6/12、B/C/L输出9/18完成；只有1条物理序列完成。
-  三次均初始化2.228s、局部3654姿态；全部C输出与B字节一致，全部L输出改变。
-  全部18行保留，9行Cemetery为NOT_RUN_RESOURCE，不是FAIL或0回环。
-- **检索归因边界**：10次L通过查询的C最高分都未过冻结0.05门；其中1对正是C第一名。
-  因此支持的是固定检索配置（排名+门限）的几何通过增量，不是表征本身已胜出。
-  没有调任何阈值做反事实。10次通过对应7对唯一图像，并非10个独立回环场景。
-- **正确性**：已查看全部7对的12张唯一图像，轮胎/车头结构支持重访；审阅并非严格盲审，
-  正式独立正确/错误标签仍Unknown，不能将没有确认错误写成没有误闭环。
-- **不能声称精度收益**：参考具体位姿约定未独立确认，APE/RPE/尺度及真Recall@4均Not evaluated。
-  几何成立不自动证明正确回环，更不等于比传统方法精度好；当前无WIN/TIE/LOSS结论。
-- **资源阻塞**：04:10:54根盘可用9.49GiB；Cemetery首次运行需10.25GiB（含8GiB储备），
-  启动检查失败，未创建输出目录、未启动VINS、未消耗重复。其他两数据盘也不足。
-  不是磁盘已满；缺的是既定储备加产物预算。建议另增2–3GiB或提供足够空间的任务路径。
+- **真实重访与分母**：固定完整 AFRL Bus Outside、Cemetery 共2条序列、6次技术重复、18行B/C/L。
+  提供方描述重访，两序列有历史开发曝光；逐查询独立真回环标签仍Unknown。
+- **同局部输入**：六次有效局部 VIO、12次 C/L 图处理全部完成；相同特征/IMU 输入被动接收哈希匹配，
+  同一冻结 VINS 二进制、350 KLT 点上限、31项 YAML 中仅输出路径不同。Bus局部3654姿态、
+  Cemetery3806姿态；Cemetery三次首次 NON_LINEAR 输出11.155秒。C/B 六次轨迹字节一致。
+- **检索/几何结果**：C在Bus与Cemetery六次均0通过；L的Bus为3/2/5，Cemetery为0/1/1。
+  共12次原生 BRIEF/PnP 通过、8对不同图像；Cemetery后两次是同一物理图像对，不能当两处回环。
+  L只在Bus三次及Cemetery后两次改变全局输出。固定检索配置的排名和默认门限共同作用，
+  不能单独证明学习表征优越。没有调门或增加验证预算。
+- **准确度边界**：两序列共同支撑数值门六次均PASS；但精确COLMAP proxy的相机位姿约定
+  未独立验证，APE/RPE/Sim(3)均Not evaluated，真Recall@4及独立正确/错误标签仍Unknown。
+  因此没有正式系统WIN/TIE/LOSS，也不能宣称全局精度改善或无误闭环。
+- **计算成本**：官方DINOv2 ViT-S/14+K32匹配词典权重已严格加载；Bus新图2501张，
+  Cemetery新图3149张。Cemetery首轮编码+VLAD约674.78秒，后两轮3148/3149张缓存命中；
+  原生处理墙时含I/O/验证，不是独立图优化时间。训练0，新数据下载0；词典拟合图像清单Unknown。
+- **执行偏差与修复**：一次Cemetery r1局部启动被另一工作区VINS插队而中断，保留失败产物；
+  因此实际局部启动7次/有效6次，超出原最多6次启动上限，不能隐去。原始bag有内容不同的重复图像时间戳，
+  初次档案拒绝；仅用冻结`every_n=2,frame_offset=0`解析已发布图像，26项相关测试通过。
+  KLT、输入bag、VINS估计器、回环几何和图优化均未改。
 
-| Bus技术重复 | 关键帧 | C通过/选择 | L通过/选择 | common poses/覆盖 |
+| 序列/重复 | 关键帧 | C通过/选择 | L通过/选择 | common poses/覆盖 |
 |---|---:|---:|---:|---:|
-| r1 | 2430 | 0/443 | 3/2198 | 497/92.04% |
-| r2 | 2441 | 0/443 | 2/2209 | 501/92.78% |
-| r3 | 2439 | 0/445 | 5/2206 | 496/91.85% |
+| Bus r1 | 2430 | 0/443 | 3/2198 | 497/92.04% |
+| Bus r2 | 2441 | 0/443 | 2/2209 | 501/92.78% |
+| Bus r3 | 2439 | 0/445 | 5/2206 | 496/91.85% |
+| Cemetery r1 | 3149 | 0/514 | 0/3098 | 406/96.90% |
+| Cemetery r2 | 3148 | 0/514 | 1/3097 | 406/96.90% |
+| Cemetery r3 | 3149 | 0/514 | 1/3098 | 406/96.90% |
 
-L几何通过数中位3、范围2–5；C中位0、范围0–0，不能代替APE/RPE。
-唯一后续任务：满足原资源门后完成剩余Cemetery三次共享局部输出及C/L，不重跑Bus。
-不换模型、阈值、序列，不把加载通过当学习增量。
-原生适配器已完成Bus三次真实档案/几何/图优化联调，其余矩阵尚未完成。
-proxy不是独立GT；本包相机姿态方向说明待核实，未知字段不猜测。
+唯一后续决策：本轮停止方法/序列扩展。若需要正式全局精度结论，先独立核实两个精确哈希
+COLMAP proxy的相机位姿约定和通过对正确性，再只评估已保存的六块轨迹，不重跑VIO。
+尺度资产位于`/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/`；
+r1有效目录为`cemetery_r1_retry1`，首次中断与档案失败均保留，模型/包/缓存不上传。
 
 ## 直接可读的证据与接口
 
@@ -48,7 +46,7 @@ proxy不是独立GT；本包相机姿态方向说明待核实，未知字段不�
 - [完整任务](../papers/frontend_learned_loop_baseline_v1/task_instructions.md) /
   [冻结协议](../papers/frontend_learned_loop_baseline_v1/protocol.md) /
   [两序列和有限检查清单](../papers/frontend_learned_loop_baseline_v1/sequence_manifest.csv)
-- [18行结果账本，含未运行行](../papers/frontend_learned_loop_baseline_v1/system_results.csv) /
+- [18行结果账本](../papers/frontend_learned_loop_baseline_v1/system_results.csv) /
   [完整已执行候选表](../papers/frontend_learned_loop_baseline_v1/loop_candidates.csv) /
   [决策及实际计数](../papers/frontend_learned_loop_baseline_v1/decision.json)
 - [实际运行小回执、命令及身份](../papers/frontend_learned_loop_baseline_v1/runtime_receipts.json) /
@@ -72,7 +70,10 @@ DINO源commit：`7764ea0f912e53c92e82eb78a2a1631e92725fc8`。
 后端、模型、词典和构建二进制SHA见decision/检查回执。
 本轮前端启动时HEAD为4bdef735，使用新增未提交的IO适配器，其字节身份在运行中检查点记录（不冒称启动前receipt）；
 不得把之后报告发布commit写成当时源码身份。报告发布SHA以实际push及远端读回回执为准。
-大数据、权重、缓存未提交；没有删除或搬迁历史产物。
+大数据、权重、缓存未提交；没有删除历史产物。为满足冻结空间储备，仅将已锁定的85MB模型资产复制到本任务Elements输出盘，并核对权重哈希，原件仍在。
 Bus r1局部运行源码提交7c08909；档案/C调用4ee416e；L调用902a886。
 Bus r2局部902a886、其档案/C/L为bf9efeff；r3局部与档案/C/L均bf9efeff。
 这些是任务适配器运行身份，外部VINS二进制始终为同一4e91d8ac…，不等于文档发布SHA。
+Cemetery三次有效局部回放时适配器源码HEAD为`ad1590a9ea54fed22bbc876dc93b10903f4e6918`；
+随后仅修被动关键帧档案的重复header图像选取，实际档案脚本SHA `0d2f14875c27…`，
+而外部局部求解器始终是上述同一二进制。这个后续文档发布commit不追溯冒充运行时身份。

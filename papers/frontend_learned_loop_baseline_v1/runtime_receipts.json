@@ -1,29 +1,47 @@
 {
   "role": "Existing immutable runtime receipts; no new computation",
   "sources": {
-    "experiments/learned_loop_baseline_v1/bus_full_klt/export_receipt.json": "8e643f0765db0a902a58681f8cd100ea140af25619edc30260534fa3294c21c7",
-    "experiments/learned_loop_baseline_v1/cemetery_full_klt/export_receipt.json": "0263e43bee46ffad35860edd7365c7a50ca52a41477ad09d5569bad1c2bf5949",
-    "experiments/learned_loop_baseline_v1/bus_outside_r1/replay_receipt.json": "9401b43cc684c0df597efcc504df86cac796bd7b3529613a2a8b44d7b49b3e0b",
-    "experiments/learned_loop_baseline_v1/bus_outside_r1/archive/archive_receipt.json": "de0ced8e8ba34f3b6fb05d2227ae997e2be371d5f0b1574a281bbf510f00b542",
-    "experiments/learned_loop_baseline_v1/bus_outside_r1/C/graph_receipt.json": "0ca545dd8f16e28194a6fa75c77dc4d4fae2a996311c7ab83b96cd58319f01d6",
-    "experiments/learned_loop_baseline_v1/bus_outside_r1/L/graph_receipt.json": "4d01196d1212d9bb61be89c13554f061b0a02d58dd32997db96bb870885a69c6",
-    "experiments/learned_loop_baseline_v1/bus_outside_r1/evaluation/evaluation.json": "9da551ce737858982c275abddfde7155ebe03a97906620987655140d47941b80",
-    "experiments/learned_loop_baseline_v1/bus_outside_r1/descriptors.json": "cab041b95ad0b34036a08cdc46b2f6b2b0422fe1c459c354759632a7a1c99ea1",
-    "experiments/learned_loop_baseline_v1/bus_outside_r1/retrieval_process_cost.txt": "1fccaa6bf671d48568fd5cd4544f5cdf70e90698ffd0ab0e7282e8222cf0d2ab",
-    "experiments/learned_loop_baseline_v1/bus_outside_r2/replay_receipt.json": "3bd11be1182f7cf7b1816eb38f339f4b2dac713a3cf5cf5f83f1316eb564b97f",
-    "experiments/learned_loop_baseline_v1/bus_outside_r2/archive/archive_receipt.json": "97f9c8bc9507863d94c2ed2e6500c7bf9b63822a4414fc311308a205908891ba",
-    "experiments/learned_loop_baseline_v1/bus_outside_r2/C/graph_receipt.json": "7f2573f717d8da2a3e96bce99ee1f5a9783a155d0802d55dd8985f4974fa5147",
-    "experiments/learned_loop_baseline_v1/bus_outside_r2/L/graph_receipt.json": "e331adcc6266ae81a5046543fbc342ddd3da41b9ddd13b20d43cb42634e5e703",
-    "experiments/learned_loop_baseline_v1/bus_outside_r2/evaluation/evaluation.json": "00986ad7cdb1b550cdc5e4339264b0cce7a5730f726f764b37bfb06b16ab4163",
-    "experiments/learned_loop_baseline_v1/bus_outside_r2/descriptors.json": "34eec8cd22ba3f8edf502d56c208e4d35bb175c3a170bc4fbbf7fff5b2a8b2ff",
-    "experiments/learned_loop_baseline_v1/bus_outside_r2/retrieval_process_cost.txt": "aae45541fb7ad0beaa019c8da2f7672eb1026e971665de9ff902d48c90f36001",
-    "experiments/learned_loop_baseline_v1/bus_outside_r3/replay_receipt.json": "2b52ae285a569f00c6d22962e5b7ebaae0615db3075749502de388a2fb87bb4a",
-    "experiments/learned_loop_baseline_v1/bus_outside_r3/archive/archive_receipt.json": "28d3498400db1ef8b16bd47c706a5a05fb5f71e29ea1742a3b915aacc5bea969",
-    "experiments/learned_loop_baseline_v1/bus_outside_r3/C/graph_receipt.json": "17e33f24a6fbe8a299992034b27bd0098cd668ee9b5597b59c94702a17bd1d97",
-    "experiments/learned_loop_baseline_v1/bus_outside_r3/L/graph_receipt.json": "32ca924de5c81a6b3a02dd7cf7f2511dfe1a7bff016526b36188ff60d483d39f",
-    "experiments/learned_loop_baseline_v1/bus_outside_r3/evaluation/evaluation.json": "f1645993c5755da427511eeac7b417069e57557f39a4c77d35e98c645f104414",
-    "experiments/learned_loop_baseline_v1/bus_outside_r3/descriptors.json": "08ed7e2770ede07334c7d65bcff9936811aec5f79a73c5b7657d78bfd0e2b14d",
-    "experiments/learned_loop_baseline_v1/bus_outside_r3/retrieval_process_cost.txt": "23b5a6df18200c6f31902325dadab6f37925b1c0b8c9e7cbe0f32c73c78b726c"
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_full_klt/export_receipt.json": "8e643f0765db0a902a58681f8cd100ea140af25619edc30260534fa3294c21c7",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_full_klt/export_receipt.json": "0263e43bee46ffad35860edd7365c7a50ca52a41477ad09d5569bad1c2bf5949",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r1/replay_receipt.json": "9401b43cc684c0df597efcc504df86cac796bd7b3529613a2a8b44d7b49b3e0b",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r1/archive/archive_receipt.json": "de0ced8e8ba34f3b6fb05d2227ae997e2be371d5f0b1574a281bbf510f00b542",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r1/C/graph_receipt.json": "0ca545dd8f16e28194a6fa75c77dc4d4fae2a996311c7ab83b96cd58319f01d6",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r1/L/graph_receipt.json": "4d01196d1212d9bb61be89c13554f061b0a02d58dd32997db96bb870885a69c6",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r1/evaluation/evaluation.json": "9da551ce737858982c275abddfde7155ebe03a97906620987655140d47941b80",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r1/descriptors.json": "cab041b95ad0b34036a08cdc46b2f6b2b0422fe1c459c354759632a7a1c99ea1",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r1/retrieval_process_cost.txt": "1fccaa6bf671d48568fd5cd4544f5cdf70e90698ffd0ab0e7282e8222cf0d2ab",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r2/replay_receipt.json": "3bd11be1182f7cf7b1816eb38f339f4b2dac713a3cf5cf5f83f1316eb564b97f",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r2/archive/archive_receipt.json": "97f9c8bc9507863d94c2ed2e6500c7bf9b63822a4414fc311308a205908891ba",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r2/C/graph_receipt.json": "7f2573f717d8da2a3e96bce99ee1f5a9783a155d0802d55dd8985f4974fa5147",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r2/L/graph_receipt.json": "e331adcc6266ae81a5046543fbc342ddd3da41b9ddd13b20d43cb42634e5e703",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r2/evaluation/evaluation.json": "00986ad7cdb1b550cdc5e4339264b0cce7a5730f726f764b37bfb06b16ab4163",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r2/descriptors.json": "34eec8cd22ba3f8edf502d56c208e4d35bb175c3a170bc4fbbf7fff5b2a8b2ff",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r2/retrieval_process_cost.txt": "aae45541fb7ad0beaa019c8da2f7672eb1026e971665de9ff902d48c90f36001",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r3/replay_receipt.json": "2b52ae285a569f00c6d22962e5b7ebaae0615db3075749502de388a2fb87bb4a",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r3/archive/archive_receipt.json": "28d3498400db1ef8b16bd47c706a5a05fb5f71e29ea1742a3b915aacc5bea969",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r3/C/graph_receipt.json": "17e33f24a6fbe8a299992034b27bd0098cd668ee9b5597b59c94702a17bd1d97",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r3/L/graph_receipt.json": "32ca924de5c81a6b3a02dd7cf7f2511dfe1a7bff016526b36188ff60d483d39f",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r3/evaluation/evaluation.json": "f1645993c5755da427511eeac7b417069e57557f39a4c77d35e98c645f104414",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r3/descriptors.json": "08ed7e2770ede07334c7d65bcff9936811aec5f79a73c5b7657d78bfd0e2b14d",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/bus_outside_r3/retrieval_process_cost.txt": "23b5a6df18200c6f31902325dadab6f37925b1c0b8c9e7cbe0f32c73c78b726c",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r1/replay_receipt.json": "cbee86cb48fb6087a01f1d68eb7a18f7a4e4989079490e225e9c02b8ef0be0c6",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r1/archive/archive_receipt.json": "bdb25823100657b08063d0492404999cc37dc1be009ed1fd7e63e15601a412da",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r1/C/graph_receipt.json": "b1c8d8726d7791a13af880b6000f96a261cc76085cfc78faada977a213cf9cad",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r1/L/graph_receipt.json": "cf8fa9fcf06af62ca9a04e69cd586393ebc6c09a552b7088602f08451de9c7be",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r1/evaluation/evaluation.json": "1d191f70e078a702e80916ababa000e185c59fb928add3ab1f6fef6d0a8a5b31",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r1/descriptors.json": "bc452b9cb4e05ec1c229448541e0867c905e0d75dddb4edb268214c6a8ea226e",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r2/replay_receipt.json": "c79178335efe380e913790af41806c6d2740a0a19e0dd4354935863e374c82e3",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r2/archive/archive_receipt.json": "1294a5f343fd3820344b724c3b2cde4d2a5f0df2049fef864efb23deca6c7b67",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r2/C/graph_receipt.json": "f2ea3e1075f53a08010f2c56286673f966f3f4dff0a0a88eb5415079227f143a",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r2/L/graph_receipt.json": "8885b81afa7c509245c87f8fdf5abc630c63ad3518c3916b2a052369b359ceee",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r2/evaluation/evaluation.json": "25a07274119066ad1a7dea279f3a436efe2850406d18af085721a101d4c66942",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r2/descriptors.json": "b549620eda353ff731f1c136b72f4985aba62643dc7b01119172f761763f53a0",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r3/replay_receipt.json": "0773314ba47750232b42f36e493c816099d66d4ced2e4cf77d680fad2d4bd1f7",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r3/archive/archive_receipt.json": "c159166c59c63c1796330dc2f0953a6ce6ae55af226cd2910f785e5e75a2782b",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r3/C/graph_receipt.json": "023263328c090d92fdf378a35d94f2ebf72741f66155bd51d6f7bf90ff5c6f15",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r3/L/graph_receipt.json": "6844bc17748c365416705550e7f2f972a3c262c8e46bfc09e4d7061651d3b229",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r3/evaluation/evaluation.json": "40200fe263fafb0d250bb476083d939014f9111caa4511ba23853ac8b93d85fd",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/summary_view_complete/cemetery_r3/descriptors.json": "5cf6b61ea601d4daf5cebd2fc4f115002ec0d1ba0603144d820954ce37682f0d"
   },
   "inputs": {
     "bus_full_klt": {
@@ -1587,8 +1605,996 @@
         }
       ]
     },
-    "cemetery_r1": {},
-    "cemetery_r2": {},
-    "cemetery_r3": {}
+    "cemetery_r1": {
+      "local": {
+        "status": "LOCAL_REPLAY_FINISHED",
+        "sequence": "cemetery",
+        "repeat": 1,
+        "feature_bag_sha256": "bc60b51f2107aa8f6795bfb8a9fb80aaabc4ca8458ea17bf6f042bcf45e0b807",
+        "canonical_yaml_sha256": "47a9e75a9c2076276d0068c2d3d38da697d931a1311138794842a9e1c388f23e",
+        "config_audit": {
+          "keys": 31,
+          "unchanged_keys": 30,
+          "only_changed_key": "output_path",
+          "camera_file": "afrl_cave_cam0_pinhole.yaml",
+          "camera_sha256": "9580011fcaa23217407c1d1dbf616d57e95d81498293129f70bc0700e40e5154",
+          "generated_yaml_sha256": "aec788bb78c45ffb60178f91662bead8514a895254847f208c4b227189dcb1ab"
+        },
+        "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+        "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+        "retained_artifact_budget": {
+          "first_archive_bound_bytes": 2411724800,
+          "known_cached_source_headers": 0,
+          "effective_allowance_bytes": 2411724800,
+          "previous_archive_receipt_sha256": [],
+          "reserve_bytes": 8589934592,
+          "role": "storage reuse only; estimator/input/scientific gates unchanged"
+        },
+        "resolved_vins_library": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/libvins_lib.so",
+        "local_run_started": true,
+        "loop_feedback": false,
+        "shared_arms": [
+          "B",
+          "C",
+          "L"
+        ],
+        "playback_rate": 1.0,
+        "playback_delay_s": 3,
+        "post_play_s": 8,
+        "capture_topics": [
+          "/vins_estimator/keyframe_pose",
+          "/vins_estimator/keyframe_point",
+          "/vins_estimator/odometry",
+          "/vins_estimator/extrinsic",
+          "/feature_tracker/feature",
+          "/imu/imu"
+        ],
+        "runner_sha256": "7b63b06b3fb8c9d498b879061b9ef1786d80df163426ca5acb47b7312917ebb3",
+        "source_commit": "ad1590a9ea54fed22bbc876dc93b10903f4e6918",
+        "started_at": "2026-09-22T01:33:06.274781+08:00",
+        "completed_at": "2026-09-22T01:40:36.774662+08:00",
+        "initialization_log_detected": true,
+        "vio_rows": 3806,
+        "artifacts": {
+          "vio.csv": "e572b233543f1c05706bd620f6e43bd41e073bb89090808d8dcf620a7c8cee0e",
+          "capture.bag": "152c390931059b38a2965b8d99d1a408ec0374cfa447ff2e4e8be55cede2b49b",
+          "vins.log": "5c24f4deb7e63ff5305a363a68566c91a2fa97c8a1c4e182c29d1aba7c4bc2b6"
+        },
+        "passive_capture_audit": {
+          "expected": {
+            "counts": {
+              "/feature_tracker/feature": 3891,
+              "/imu/imu": 43400
+            },
+            "serialized_per_topic_sha256": {
+              "/feature_tracker/feature": "c7e930571586174bfcdb677bec49d12402b5a0cf0bdaa8e90899a696b60f5936",
+              "/imu/imu": "2a891e423fdfb78ba03c7de0460b78e68086db3d325931f1f4c94a409c7f166b"
+            },
+            "first_header_ns": {
+              "/imu/imu": 1535224862038179491,
+              "/feature_tracker/feature": 1535224862091901400
+            }
+          },
+          "recorder_received": {
+            "counts": {
+              "/feature_tracker/feature": 3891,
+              "/imu/imu": 43400
+            },
+            "serialized_per_topic_sha256": {
+              "/feature_tracker/feature": "c7e930571586174bfcdb677bec49d12402b5a0cf0bdaa8e90899a696b60f5936",
+              "/imu/imu": "2a891e423fdfb78ba03c7de0460b78e68086db3d325931f1f4c94a409c7f166b"
+            },
+            "first_header_ns": {
+              "/imu/imu": 1535224862038179491,
+              "/feature_tracker/feature": 1535224862091901400
+            }
+          },
+          "recorder_input_exact": true,
+          "first_nonlinear_odometry_header_ns": 1535224873193542719,
+          "first_nonlinear_output_from_input_s": 11.155363228,
+          "initialization_time_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+          "per_observation_estimator_residual_use": "Unknown: a passive recorder is not an estimator residual-use trace"
+        }
+      },
+      "archive": {
+        "schema": "aqua-fe-native-keyframe-archive-v1",
+        "status": "COMPLETE",
+        "pose_frame": "world_T_imu_body",
+        "points_layout": "little-endian float32 rows: world_XYZ,norm_xy,pixel_uv,feature_id",
+        "selection": "native first10 skip; skip_count0; distance strictly greater than0",
+        "capture_bag_sha256": "152c390931059b38a2965b8d99d1a408ec0374cfa447ff2e4e8be55cede2b49b",
+        "images_bag_sha256": "3b34942b496f15d0c8b83475097073c92acb6e4865d31bc4910d1f3908a9ee5c",
+        "raw_bag_hash_reused_under_validated_index_identity": true,
+        "adapter_sha256": "0d2f14875c279ba1cd90d44e29068b638b82352dd23b373a3cdadbab607aff88",
+        "adapter_commit": "ad1590a9ea54fed22bbc876dc93b10903f4e6918",
+        "keyframes_csv_sha256": "7472097aebd8eaf45d49ce46a10ba979a3ccdd17ee4da1a598d9b6ca4c3569c8",
+        "native_pose_messages": 3159,
+        "keyframes": 3149,
+        "exact_image_join_missing": 0,
+        "header_identity_csv_sha256": "f36a40c54ac613c6e28acadf457e4af1aab9ffe96ff36115cd1afcd4156fbbd1",
+        "header_join": "unique exact forward ROS C++ double conversion from captured feature headers; no nearest neighbor or tolerance",
+        "geometry_verified": "Not evaluated",
+        "ground_truth_used": false,
+        "raw_stream_input": true,
+        "duplicate_header_resolution": "Unique published image index from frozen exporter every_n/frame_offset",
+        "image_storage": "independent PNG"
+      },
+      "C": {
+        "status": "GRAPH_COMPLETE",
+        "arm": "C",
+        "sequence": "cemetery",
+        "repeat": 1,
+        "command": [
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/native_adapter_build_attempt2/build/aqua_native_loop_replay",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r1_retry1/archive_retry1",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r1_retry1/afrl_cave_cam0_pinhole.yaml",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r1_retry1/vins_same_backend.yaml",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_k10L6.bin",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_pattern.yml",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r1_retry1/C/native",
+          "C",
+          "cemetery",
+          "1"
+        ],
+        "graph_started": true,
+        "binary_sha256": "e87f60c8d9b13f4c8db90a960b7a95610fb83ff609928db9ecc00f064cf6b027",
+        "shared_local_receipt_sha256": "cbee86cb48fb6087a01f1d68eb7a18f7a4e4989079490e225e9c02b8ef0be0c6",
+        "archive_roster_sha256": "7472097aebd8eaf45d49ce46a10ba979a3ccdd17ee4da1a598d9b6ca4c3569c8",
+        "camera_sha256": "9580011fcaa23217407c1d1dbf616d57e95d81498293129f70bc0700e40e5154",
+        "config_sha256": "aec788bb78c45ffb60178f91662bead8514a895254847f208c4b227189dcb1ab",
+        "brief_vocabulary_sha256": "753e7e126c588906ad16197892bdcd914f3a0971037c8f8aeb3c63418458b035",
+        "brief_pattern_sha256": "cb9e20bf47d7557cd22f7820524c3cb13b3a315c451d5665955336100177cafd",
+        "candidates_sha256": null,
+        "runner_sha256": "30326cc3fdca90045c8ce3f44546932f406ab9eab0b2ad1d2edb9ce99a7e00db",
+        "source_commit": "ad1590a9ea54fed22bbc876dc93b10903f4e6918",
+        "started_at": "2026-09-22T01:47:45.549194+08:00",
+        "native_process_wall_s": 24.02491326793097,
+        "keyframes": 3149,
+        "verified_candidates": 0,
+        "rejected_candidates": 514,
+        "correctness": "Unknown",
+        "optimization_time_separate": "Unknown: native process wall includes other work",
+        "completed_at": "2026-09-22T01:48:11.152482+08:00",
+        "artifacts": {
+          "bow_candidates.csv": "9954059e2b017d0476eca8ca817e1014c38ac2f90bc073fa6be77e6733aaab56",
+          "geometry.csv": "751cdf3cf7d593f33c4befeb80ba40d9d16b562e69f3452c7b38c0abe94c4de3",
+          "global_body.tum": "b4eceff02b8ca18cd0d84d63c188df7c1dc6ba9fbb0924431e2dbcf3f06dde63",
+          "local_body.tum": "b4eceff02b8ca18cd0d84d63c188df7c1dc6ba9fbb0924431e2dbcf3f06dde63",
+          "native_path_updates.csv": "f59bb346703cd14735f625c731de4df70f74fb500cda410996767494c4873e8e",
+          "processing.csv": "8c3e1b687f492706480b2ff35b5a5c912ae59e8bdc728da1d2c8ebaa81ba2c1c",
+          "raw_odometry_edges.csv": "b2b63c1f3b7853bb373ecb710d448c901b4c9876beb8e1dfdb0c02a97c1ed549"
+        }
+      },
+      "L": {
+        "status": "GRAPH_COMPLETE",
+        "arm": "L",
+        "sequence": "cemetery",
+        "repeat": 1,
+        "command": [
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/native_adapter_build_attempt2/build/aqua_native_loop_replay",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r1_retry1/archive_retry1",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r1_retry1/afrl_cave_cam0_pinhole.yaml",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r1_retry1/vins_same_backend.yaml",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_k10L6.bin",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_pattern.yml",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r1_retry1/L/native",
+          "L",
+          "cemetery",
+          "1",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r1_retry1/learned_candidates.csv"
+        ],
+        "graph_started": true,
+        "binary_sha256": "e87f60c8d9b13f4c8db90a960b7a95610fb83ff609928db9ecc00f064cf6b027",
+        "shared_local_receipt_sha256": "cbee86cb48fb6087a01f1d68eb7a18f7a4e4989079490e225e9c02b8ef0be0c6",
+        "archive_roster_sha256": "7472097aebd8eaf45d49ce46a10ba979a3ccdd17ee4da1a598d9b6ca4c3569c8",
+        "camera_sha256": "9580011fcaa23217407c1d1dbf616d57e95d81498293129f70bc0700e40e5154",
+        "config_sha256": "aec788bb78c45ffb60178f91662bead8514a895254847f208c4b227189dcb1ab",
+        "brief_vocabulary_sha256": "753e7e126c588906ad16197892bdcd914f3a0971037c8f8aeb3c63418458b035",
+        "brief_pattern_sha256": "cb9e20bf47d7557cd22f7820524c3cb13b3a315c451d5665955336100177cafd",
+        "candidates_sha256": "a58cbe9230d6891e17a2f3dd038a454846a653e67cd2780b4a6b13a64baddcbb",
+        "runner_sha256": "30326cc3fdca90045c8ce3f44546932f406ab9eab0b2ad1d2edb9ce99a7e00db",
+        "source_commit": "ad1590a9ea54fed22bbc876dc93b10903f4e6918",
+        "started_at": "2026-09-22T02:04:00.427044+08:00",
+        "native_process_wall_s": 28.028353704838082,
+        "keyframes": 3149,
+        "verified_candidates": 0,
+        "rejected_candidates": 3098,
+        "correctness": "Unknown",
+        "optimization_time_separate": "Unknown: native process wall includes other work",
+        "completed_at": "2026-09-22T02:04:30.144928+08:00",
+        "artifacts": {
+          "bow_candidates.csv": "b9014d13497ab68fb826e5c889acbb74834ff31326994141dd682e94b20f2080",
+          "geometry.csv": "bc9e80195b47ba90a3f63cffcbd28042b54f8af9629097866867057efb1d1f49",
+          "global_body.tum": "b4eceff02b8ca18cd0d84d63c188df7c1dc6ba9fbb0924431e2dbcf3f06dde63",
+          "local_body.tum": "b4eceff02b8ca18cd0d84d63c188df7c1dc6ba9fbb0924431e2dbcf3f06dde63",
+          "native_path_updates.csv": "f59bb346703cd14735f625c731de4df70f74fb500cda410996767494c4873e8e",
+          "processing.csv": "024b87f756812c0174633f119cf4d233eb1174237fce6b496c6ad08d103044ec",
+          "raw_odometry_edges.csv": "b2b63c1f3b7853bb373ecb710d448c901b4c9876beb8e1dfdb0c02a97c1ed549"
+        }
+      },
+      "evaluation": {
+        "sequence": "cemetery",
+        "repeat": 1,
+        "support": {
+          "common_pose_count": 406,
+          "common_span_s": 420.0,
+          "reference_evaluable_samples": 419,
+          "input_grid_samples": 434,
+          "common_reference_coverage": 0.9689737470167065,
+          "support_gate": "PASS"
+        },
+        "reference_identity": {
+          "sequence": "cemetery",
+          "reference_sha256": "cd34aa974c4561d270fcde3efc9badfebfab9b85622ab0a15289ffbf0981860f",
+          "config_sha256": "47a9e75a9c2076276d0068c2d3d38da697d931a1311138794842a9e1c388f23e",
+          "intervals_total": 2518,
+          "valid_intervals": 2510,
+          "imu_samples": 43400,
+          "fixed_camera_imu_td_s": 0.04280051428389464,
+          "no_estimator_or_learned_outputs_used": true,
+          "fitting": "none: no bias/offset/scale/rotation fit",
+          "validity": "positive dt<=1s and enclosed IMU support",
+          "convention_validated": false,
+          "pose_convention": "Unknown",
+          "interpretations": {
+            "as_world_T_cam0": {
+              "gyro_difference_rmse_rad_s": 0.050193238500672074,
+              "median_rad_s": 0.01382717168709173,
+              "p95_rad_s": 0.0724626238149868,
+              "per_axis_correlation": [
+                0.8061237072004129,
+                0.9630929619851211,
+                0.9533945451517073
+              ]
+            },
+            "inverse_direction": {
+              "gyro_difference_rmse_rad_s": 0.16434976753480982,
+              "median_rad_s": 0.10239760959135522,
+              "p95_rad_s": 0.3005490741450145,
+              "per_axis_correlation": [
+                -0.07133829246481228,
+                0.10694053203429807,
+                0.6662095711311455
+              ]
+            }
+          },
+          "limitation": "Finite-interval gyro consistency is supporting evidence, not independent proof of camera origin/world pose convention; no automatic relabeling or trajectory score."
+        },
+        "raw_local_rows": 3806,
+        "initialization_log_detected": true,
+        "initialization_time_s": 11.155363228,
+        "initialization_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+        "shared_pre_post_boundary_s": null,
+        "reference_role": "COLMAP proxy, not independent GT",
+        "arms": {
+          "B": {
+            "raw_keyframe_count": 3149,
+            "input_grid_coverage": 0.9700460829493087,
+            "reference_grid_coverage": 0.9689737470167065,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          },
+          "C": {
+            "raw_keyframe_count": 3149,
+            "input_grid_coverage": 0.9700460829493087,
+            "reference_grid_coverage": 0.9689737470167065,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          },
+          "L": {
+            "raw_keyframe_count": 3149,
+            "input_grid_coverage": 0.9700460829493087,
+            "reference_grid_coverage": 0.9689737470167065,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          }
+        }
+      },
+      "encoding": {
+        "source_commit": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+        "model_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+        "vocabulary_sha256": "695985ec145406609d5c8d122092198886c4d89463c316e6a3b1606aee34143d",
+        "preprocess": "dl-vits14-final-norm-patch-280x448-letterbox-imagenet-k32-v1",
+        "device": "cpu",
+        "torch_version": "2.2.2+cpu",
+        "strict_official_tensors_loaded": 175,
+        "python_compatibility": "postponed DINO annotations only; original source bytes unchanged",
+        "parameters": 22056576,
+        "cold_load_s": 0.38112740800715983,
+        "status": "DESCRIPTORS_COMPLETE",
+        "keyframes": 3149,
+        "cache_hits": 0,
+        "new_image_inferences": 3149,
+        "archive_roster_sha256": "7472097aebd8eaf45d49ce46a10ba979a3ccdd17ee4da1a598d9b6ca4c3569c8",
+        "peak_rss_kib": 812508,
+        "inference_and_vlad_total_s": 674.7842979005072,
+        "inference_and_vlad_mean_s": 0.2142852644968267
+      },
+      "accepted_pair_retrieval_context": []
+    },
+    "cemetery_r2": {
+      "local": {
+        "status": "LOCAL_REPLAY_FINISHED",
+        "sequence": "cemetery",
+        "repeat": 2,
+        "feature_bag_sha256": "bc60b51f2107aa8f6795bfb8a9fb80aaabc4ca8458ea17bf6f042bcf45e0b807",
+        "canonical_yaml_sha256": "47a9e75a9c2076276d0068c2d3d38da697d931a1311138794842a9e1c388f23e",
+        "config_audit": {
+          "keys": 31,
+          "unchanged_keys": 30,
+          "only_changed_key": "output_path",
+          "camera_file": "afrl_cave_cam0_pinhole.yaml",
+          "camera_sha256": "9580011fcaa23217407c1d1dbf616d57e95d81498293129f70bc0700e40e5154",
+          "generated_yaml_sha256": "b9161f43e7b744928fb5c36891949b75d44fc1a15676dedce55a1e72860b7941"
+        },
+        "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+        "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+        "retained_artifact_budget": {
+          "first_archive_bound_bytes": 2411724800,
+          "known_cached_source_headers": 0,
+          "effective_allowance_bytes": 2411724800,
+          "previous_archive_receipt_sha256": [],
+          "reserve_bytes": 8589934592,
+          "role": "storage reuse only; estimator/input/scientific gates unchanged"
+        },
+        "resolved_vins_library": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/libvins_lib.so",
+        "local_run_started": true,
+        "loop_feedback": false,
+        "shared_arms": [
+          "B",
+          "C",
+          "L"
+        ],
+        "playback_rate": 1.0,
+        "playback_delay_s": 3,
+        "post_play_s": 8,
+        "capture_topics": [
+          "/vins_estimator/keyframe_pose",
+          "/vins_estimator/keyframe_point",
+          "/vins_estimator/odometry",
+          "/vins_estimator/extrinsic",
+          "/feature_tracker/feature",
+          "/imu/imu"
+        ],
+        "runner_sha256": "7b63b06b3fb8c9d498b879061b9ef1786d80df163426ca5acb47b7312917ebb3",
+        "source_commit": "ad1590a9ea54fed22bbc876dc93b10903f4e6918",
+        "started_at": "2026-09-22T02:05:04.702222+08:00",
+        "completed_at": "2026-09-22T02:12:34.405426+08:00",
+        "initialization_log_detected": true,
+        "vio_rows": 3806,
+        "artifacts": {
+          "vio.csv": "3a12a4233d60c423b3dedc1457fede9c8f407bada9fef2b3cdb9384da42f4afb",
+          "capture.bag": "558735f36a85ea3a45de537db14fc201f51ce72bc65fde3e0cbffa433a3d90de",
+          "vins.log": "a1fa84163113ca981259de2afec0b3fd373fe898540448c5c8d872fa2c1904d6"
+        },
+        "passive_capture_audit": {
+          "expected": {
+            "counts": {
+              "/feature_tracker/feature": 3891,
+              "/imu/imu": 43400
+            },
+            "serialized_per_topic_sha256": {
+              "/feature_tracker/feature": "c7e930571586174bfcdb677bec49d12402b5a0cf0bdaa8e90899a696b60f5936",
+              "/imu/imu": "2a891e423fdfb78ba03c7de0460b78e68086db3d325931f1f4c94a409c7f166b"
+            },
+            "first_header_ns": {
+              "/imu/imu": 1535224862038179491,
+              "/feature_tracker/feature": 1535224862091901400
+            }
+          },
+          "recorder_received": {
+            "counts": {
+              "/feature_tracker/feature": 3891,
+              "/imu/imu": 43400
+            },
+            "serialized_per_topic_sha256": {
+              "/feature_tracker/feature": "c7e930571586174bfcdb677bec49d12402b5a0cf0bdaa8e90899a696b60f5936",
+              "/imu/imu": "2a891e423fdfb78ba03c7de0460b78e68086db3d325931f1f4c94a409c7f166b"
+            },
+            "first_header_ns": {
+              "/imu/imu": 1535224862038179491,
+              "/feature_tracker/feature": 1535224862091901400
+            }
+          },
+          "recorder_input_exact": true,
+          "first_nonlinear_odometry_header_ns": 1535224873193542719,
+          "first_nonlinear_output_from_input_s": 11.155363228,
+          "initialization_time_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+          "per_observation_estimator_residual_use": "Unknown: a passive recorder is not an estimator residual-use trace"
+        }
+      },
+      "archive": {
+        "schema": "aqua-fe-native-keyframe-archive-v1",
+        "status": "COMPLETE",
+        "pose_frame": "world_T_imu_body",
+        "points_layout": "little-endian float32 rows: world_XYZ,norm_xy,pixel_uv,feature_id",
+        "selection": "native first10 skip; skip_count0; distance strictly greater than0",
+        "capture_bag_sha256": "558735f36a85ea3a45de537db14fc201f51ce72bc65fde3e0cbffa433a3d90de",
+        "images_bag_sha256": "3b34942b496f15d0c8b83475097073c92acb6e4865d31bc4910d1f3908a9ee5c",
+        "raw_bag_hash_reused_under_validated_index_identity": true,
+        "adapter_sha256": "0d2f14875c279ba1cd90d44e29068b638b82352dd23b373a3cdadbab607aff88",
+        "adapter_commit": "ad1590a9ea54fed22bbc876dc93b10903f4e6918",
+        "keyframes_csv_sha256": "da47bccf5fe265b7a5ca7a055784cccd5010ca3f81562d3f3132b3823b7204e0",
+        "native_pose_messages": 3158,
+        "keyframes": 3148,
+        "exact_image_join_missing": 0,
+        "header_identity_csv_sha256": "7a1fedfb17f848daf396d3c6a7115b491d32ef1cecc365b1a6136717f385e9d0",
+        "header_join": "unique exact forward ROS C++ double conversion from captured feature headers; no nearest neighbor or tolerance",
+        "geometry_verified": "Not evaluated",
+        "ground_truth_used": false,
+        "raw_stream_input": true,
+        "duplicate_header_resolution": "Unique published image index from frozen exporter every_n/frame_offset",
+        "image_storage": "independent PNG"
+      },
+      "C": {
+        "status": "GRAPH_COMPLETE",
+        "arm": "C",
+        "sequence": "cemetery",
+        "repeat": 2,
+        "command": [
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/native_adapter_build_attempt2/build/aqua_native_loop_replay",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r2/archive",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r2/afrl_cave_cam0_pinhole.yaml",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r2/vins_same_backend.yaml",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_k10L6.bin",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_pattern.yml",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r2/C/native",
+          "C",
+          "cemetery",
+          "2"
+        ],
+        "graph_started": true,
+        "binary_sha256": "e87f60c8d9b13f4c8db90a960b7a95610fb83ff609928db9ecc00f064cf6b027",
+        "shared_local_receipt_sha256": "c79178335efe380e913790af41806c6d2740a0a19e0dd4354935863e374c82e3",
+        "archive_roster_sha256": "da47bccf5fe265b7a5ca7a055784cccd5010ca3f81562d3f3132b3823b7204e0",
+        "camera_sha256": "9580011fcaa23217407c1d1dbf616d57e95d81498293129f70bc0700e40e5154",
+        "config_sha256": "b9161f43e7b744928fb5c36891949b75d44fc1a15676dedce55a1e72860b7941",
+        "brief_vocabulary_sha256": "753e7e126c588906ad16197892bdcd914f3a0971037c8f8aeb3c63418458b035",
+        "brief_pattern_sha256": "cb9e20bf47d7557cd22f7820524c3cb13b3a315c451d5665955336100177cafd",
+        "candidates_sha256": null,
+        "runner_sha256": "30326cc3fdca90045c8ce3f44546932f406ab9eab0b2ad1d2edb9ce99a7e00db",
+        "source_commit": "ad1590a9ea54fed22bbc876dc93b10903f4e6918",
+        "started_at": "2026-09-22T02:22:34.161373+08:00",
+        "native_process_wall_s": 49.59959423891269,
+        "keyframes": 3148,
+        "verified_candidates": 0,
+        "rejected_candidates": 514,
+        "correctness": "Unknown",
+        "optimization_time_separate": "Unknown: native process wall includes other work",
+        "completed_at": "2026-09-22T02:23:26.108611+08:00",
+        "artifacts": {
+          "bow_candidates.csv": "91114f7b2aa26b00a4133b5a2edf23cab85ddc00d02d287ea9b240fcadab508e",
+          "geometry.csv": "6dc89fd34910632bb06875cd104f7192b4169c53143c3b20e97026076af8876f",
+          "global_body.tum": "8a779693eea92fca56bc4be650bd547a00446a7ba70c193ed3b1685cad45536d",
+          "local_body.tum": "8a779693eea92fca56bc4be650bd547a00446a7ba70c193ed3b1685cad45536d",
+          "native_path_updates.csv": "99610dc3020f18dac7744aecebddc143f25a8fcd90a77b9efa3c52f97bc3c851",
+          "processing.csv": "066214cb14eb8ba8de2ddbca3ad4c8489d9314f8efe70dc238fa944f7a72dae7",
+          "raw_odometry_edges.csv": "a2ee77f6d1a1a0895f6034b5b27635303a4386cc829b09d47022d90da790c274"
+        }
+      },
+      "L": {
+        "status": "GRAPH_COMPLETE",
+        "arm": "L",
+        "sequence": "cemetery",
+        "repeat": 2,
+        "command": [
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/native_adapter_build_attempt2/build/aqua_native_loop_replay",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r2/archive",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r2/afrl_cave_cam0_pinhole.yaml",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r2/vins_same_backend.yaml",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_k10L6.bin",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_pattern.yml",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r2/L/native",
+          "L",
+          "cemetery",
+          "2",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r2/learned_candidates.csv"
+        ],
+        "graph_started": true,
+        "binary_sha256": "e87f60c8d9b13f4c8db90a960b7a95610fb83ff609928db9ecc00f064cf6b027",
+        "shared_local_receipt_sha256": "c79178335efe380e913790af41806c6d2740a0a19e0dd4354935863e374c82e3",
+        "archive_roster_sha256": "da47bccf5fe265b7a5ca7a055784cccd5010ca3f81562d3f3132b3823b7204e0",
+        "camera_sha256": "9580011fcaa23217407c1d1dbf616d57e95d81498293129f70bc0700e40e5154",
+        "config_sha256": "b9161f43e7b744928fb5c36891949b75d44fc1a15676dedce55a1e72860b7941",
+        "brief_vocabulary_sha256": "753e7e126c588906ad16197892bdcd914f3a0971037c8f8aeb3c63418458b035",
+        "brief_pattern_sha256": "cb9e20bf47d7557cd22f7820524c3cb13b3a315c451d5665955336100177cafd",
+        "candidates_sha256": "28a5f501a261a697a457c6f3a01cfc858f540ed806c9f5ed76b70b96a403473d",
+        "runner_sha256": "30326cc3fdca90045c8ce3f44546932f406ab9eab0b2ad1d2edb9ce99a7e00db",
+        "source_commit": "ad1590a9ea54fed22bbc876dc93b10903f4e6918",
+        "started_at": "2026-09-22T02:43:56.788402+08:00",
+        "native_process_wall_s": 51.58244613092393,
+        "keyframes": 3148,
+        "verified_candidates": 1,
+        "rejected_candidates": 3096,
+        "correctness": "Unknown",
+        "optimization_time_separate": "Unknown: native process wall includes other work",
+        "completed_at": "2026-09-22T02:44:50.094653+08:00",
+        "artifacts": {
+          "bow_candidates.csv": "b9014d13497ab68fb826e5c889acbb74834ff31326994141dd682e94b20f2080",
+          "geometry.csv": "932e4235e7424c0017088973eaee55c3e2d6b916be1d19fd33261a818cf81d95",
+          "global_body.tum": "ebb3ed7aca4521f24effa4346b91e91792e4186a95fd275e746f3b38253b6f97",
+          "local_body.tum": "8a779693eea92fca56bc4be650bd547a00446a7ba70c193ed3b1685cad45536d",
+          "native_path_updates.csv": "0aa22a595f459823c6d2aad8e865093e12f0ee049f147947ccb8b2c26416a812",
+          "processing.csv": "631cc8d9262a4ba6e414ed676d05b144ec951a3d7cfdb0d35eb1806be617662a",
+          "raw_odometry_edges.csv": "a2ee77f6d1a1a0895f6034b5b27635303a4386cc829b09d47022d90da790c274"
+        }
+      },
+      "evaluation": {
+        "sequence": "cemetery",
+        "repeat": 2,
+        "support": {
+          "common_pose_count": 406,
+          "common_span_s": 420.0,
+          "reference_evaluable_samples": 419,
+          "input_grid_samples": 434,
+          "common_reference_coverage": 0.9689737470167065,
+          "support_gate": "PASS"
+        },
+        "reference_identity": {
+          "sequence": "cemetery",
+          "reference_sha256": "cd34aa974c4561d270fcde3efc9badfebfab9b85622ab0a15289ffbf0981860f",
+          "config_sha256": "47a9e75a9c2076276d0068c2d3d38da697d931a1311138794842a9e1c388f23e",
+          "intervals_total": 2518,
+          "valid_intervals": 2510,
+          "imu_samples": 43400,
+          "fixed_camera_imu_td_s": 0.04280051428389464,
+          "no_estimator_or_learned_outputs_used": true,
+          "fitting": "none: no bias/offset/scale/rotation fit",
+          "validity": "positive dt<=1s and enclosed IMU support",
+          "convention_validated": false,
+          "pose_convention": "Unknown",
+          "interpretations": {
+            "as_world_T_cam0": {
+              "gyro_difference_rmse_rad_s": 0.050193238500672074,
+              "median_rad_s": 0.01382717168709173,
+              "p95_rad_s": 0.0724626238149868,
+              "per_axis_correlation": [
+                0.8061237072004129,
+                0.9630929619851211,
+                0.9533945451517073
+              ]
+            },
+            "inverse_direction": {
+              "gyro_difference_rmse_rad_s": 0.16434976753480982,
+              "median_rad_s": 0.10239760959135522,
+              "p95_rad_s": 0.3005490741450145,
+              "per_axis_correlation": [
+                -0.07133829246481228,
+                0.10694053203429807,
+                0.6662095711311455
+              ]
+            }
+          },
+          "limitation": "Finite-interval gyro consistency is supporting evidence, not independent proof of camera origin/world pose convention; no automatic relabeling or trajectory score."
+        },
+        "raw_local_rows": 3806,
+        "initialization_log_detected": true,
+        "initialization_time_s": 11.155363228,
+        "initialization_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+        "shared_pre_post_boundary_s": 1535225065.829597,
+        "reference_role": "COLMAP proxy, not independent GT",
+        "arms": {
+          "B": {
+            "raw_keyframe_count": 3148,
+            "input_grid_coverage": 0.9700460829493087,
+            "reference_grid_coverage": 0.9689737470167065,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          },
+          "C": {
+            "raw_keyframe_count": 3148,
+            "input_grid_coverage": 0.9700460829493087,
+            "reference_grid_coverage": 0.9689737470167065,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          },
+          "L": {
+            "raw_keyframe_count": 3148,
+            "input_grid_coverage": 0.9700460829493087,
+            "reference_grid_coverage": 0.9689737470167065,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          }
+        }
+      },
+      "encoding": {
+        "source_commit": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+        "model_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+        "vocabulary_sha256": "695985ec145406609d5c8d122092198886c4d89463c316e6a3b1606aee34143d",
+        "preprocess": "dl-vits14-final-norm-patch-280x448-letterbox-imagenet-k32-v1",
+        "device": "cpu",
+        "torch_version": "2.2.2+cpu",
+        "strict_official_tensors_loaded": 175,
+        "python_compatibility": "postponed DINO annotations only; original source bytes unchanged",
+        "parameters": 22056576,
+        "cold_load_s": 0.3611915768124163,
+        "status": "DESCRIPTORS_COMPLETE",
+        "keyframes": 3148,
+        "cache_hits": 3148,
+        "new_image_inferences": 0,
+        "archive_roster_sha256": "da47bccf5fe265b7a5ca7a055784cccd5010ca3f81562d3f3132b3823b7204e0",
+        "peak_rss_kib": 770176,
+        "inference_and_vlad_total_s": 0.0,
+        "inference_and_vlad_mean_s": 0.0
+      },
+      "accepted_pair_retrieval_context": [
+        {
+          "arm": "L",
+          "query_id": "1447",
+          "candidate_id": "615",
+          "other_arm": "C",
+          "exact_pair_in_other_top4": false,
+          "other_top4": [
+            {
+              "candidate_id": "619",
+              "score": "0.018723496883908487",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "299",
+              "score": "0.017378451518099691",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "300",
+              "score": "0.017378451518099691",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "302",
+              "score": "0.017378451518099691",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            }
+          ],
+          "interpretation": "Ranking+registered gate configuration; no threshold counterfactual performed"
+        }
+      ]
+    },
+    "cemetery_r3": {
+      "local": {
+        "status": "LOCAL_REPLAY_FINISHED",
+        "sequence": "cemetery",
+        "repeat": 3,
+        "feature_bag_sha256": "bc60b51f2107aa8f6795bfb8a9fb80aaabc4ca8458ea17bf6f042bcf45e0b807",
+        "canonical_yaml_sha256": "47a9e75a9c2076276d0068c2d3d38da697d931a1311138794842a9e1c388f23e",
+        "config_audit": {
+          "keys": 31,
+          "unchanged_keys": 30,
+          "only_changed_key": "output_path",
+          "camera_file": "afrl_cave_cam0_pinhole.yaml",
+          "camera_sha256": "9580011fcaa23217407c1d1dbf616d57e95d81498293129f70bc0700e40e5154",
+          "generated_yaml_sha256": "827d7c54884b81a7ebd61e2eb8c3eb319aedfdab54605ab5dc11bd3661ae714a"
+        },
+        "vins_node_sha256": "4e91d8ac0735163fb6617e18d64ae0de91cc903d036f0e568a29bd3e5f5f4278",
+        "vins_lib_sha256": "373a598c7ce591b4fe97ced9b3ee1de5bbf0322c105a54afcb03a91b810f71e8",
+        "retained_artifact_budget": {
+          "first_archive_bound_bytes": 2411724800,
+          "known_cached_source_headers": 0,
+          "effective_allowance_bytes": 2411724800,
+          "previous_archive_receipt_sha256": [],
+          "reserve_bytes": 8589934592,
+          "role": "storage reuse only; estimator/input/scientific gates unchanged"
+        },
+        "resolved_vins_library": "/home/ma/SLAM/VINS-Fusion-origin/devel/lib/libvins_lib.so",
+        "local_run_started": true,
+        "loop_feedback": false,
+        "shared_arms": [
+          "B",
+          "C",
+          "L"
+        ],
+        "playback_rate": 1.0,
+        "playback_delay_s": 3,
+        "post_play_s": 8,
+        "capture_topics": [
+          "/vins_estimator/keyframe_pose",
+          "/vins_estimator/keyframe_point",
+          "/vins_estimator/odometry",
+          "/vins_estimator/extrinsic",
+          "/feature_tracker/feature",
+          "/imu/imu"
+        ],
+        "runner_sha256": "7b63b06b3fb8c9d498b879061b9ef1786d80df163426ca5acb47b7312917ebb3",
+        "source_commit": "ad1590a9ea54fed22bbc876dc93b10903f4e6918",
+        "started_at": "2026-09-22T03:20:01.388232+08:00",
+        "completed_at": "2026-09-22T03:27:30.309497+08:00",
+        "initialization_log_detected": true,
+        "vio_rows": 3806,
+        "artifacts": {
+          "vio.csv": "9434607a7a76f24f1f333e7be2bba7fa3d455b1945511fd244a3dff86ec23d2b",
+          "capture.bag": "63778552f620dd44c53aa639eedebb80c7a0fca748571bdbced6642070aaa04d",
+          "vins.log": "bfe2419558857d6553fa374486eb3f678fb23224666b69c18ad357e78a247093"
+        },
+        "passive_capture_audit": {
+          "expected": {
+            "counts": {
+              "/feature_tracker/feature": 3891,
+              "/imu/imu": 43400
+            },
+            "serialized_per_topic_sha256": {
+              "/feature_tracker/feature": "c7e930571586174bfcdb677bec49d12402b5a0cf0bdaa8e90899a696b60f5936",
+              "/imu/imu": "2a891e423fdfb78ba03c7de0460b78e68086db3d325931f1f4c94a409c7f166b"
+            },
+            "first_header_ns": {
+              "/imu/imu": 1535224862038179491,
+              "/feature_tracker/feature": 1535224862091901400
+            }
+          },
+          "recorder_received": {
+            "counts": {
+              "/feature_tracker/feature": 3891,
+              "/imu/imu": 43400
+            },
+            "serialized_per_topic_sha256": {
+              "/feature_tracker/feature": "c7e930571586174bfcdb677bec49d12402b5a0cf0bdaa8e90899a696b60f5936",
+              "/imu/imu": "2a891e423fdfb78ba03c7de0460b78e68086db3d325931f1f4c94a409c7f166b"
+            },
+            "first_header_ns": {
+              "/imu/imu": 1535224862038179491,
+              "/feature_tracker/feature": 1535224862091901400
+            }
+          },
+          "recorder_input_exact": true,
+          "first_nonlinear_odometry_header_ns": 1535224873193542719,
+          "first_nonlinear_output_from_input_s": 11.155363228,
+          "initialization_time_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+          "per_observation_estimator_residual_use": "Unknown: a passive recorder is not an estimator residual-use trace"
+        }
+      },
+      "archive": {
+        "schema": "aqua-fe-native-keyframe-archive-v1",
+        "status": "COMPLETE",
+        "pose_frame": "world_T_imu_body",
+        "points_layout": "little-endian float32 rows: world_XYZ,norm_xy,pixel_uv,feature_id",
+        "selection": "native first10 skip; skip_count0; distance strictly greater than0",
+        "capture_bag_sha256": "63778552f620dd44c53aa639eedebb80c7a0fca748571bdbced6642070aaa04d",
+        "images_bag_sha256": "3b34942b496f15d0c8b83475097073c92acb6e4865d31bc4910d1f3908a9ee5c",
+        "raw_bag_hash_reused_under_validated_index_identity": true,
+        "adapter_sha256": "0d2f14875c279ba1cd90d44e29068b638b82352dd23b373a3cdadbab607aff88",
+        "adapter_commit": "ad1590a9ea54fed22bbc876dc93b10903f4e6918",
+        "keyframes_csv_sha256": "90988323d60ef52d9c9a71bbc6a751ce568ad58231409d4587fc28b64f60eb0d",
+        "native_pose_messages": 3159,
+        "keyframes": 3149,
+        "exact_image_join_missing": 0,
+        "header_identity_csv_sha256": "f36a40c54ac613c6e28acadf457e4af1aab9ffe96ff36115cd1afcd4156fbbd1",
+        "header_join": "unique exact forward ROS C++ double conversion from captured feature headers; no nearest neighbor or tolerance",
+        "geometry_verified": "Not evaluated",
+        "ground_truth_used": false,
+        "raw_stream_input": true,
+        "duplicate_header_resolution": "Unique published image index from frozen exporter every_n/frame_offset",
+        "image_storage": "independent PNG"
+      },
+      "C": {
+        "status": "GRAPH_COMPLETE",
+        "arm": "C",
+        "sequence": "cemetery",
+        "repeat": 3,
+        "command": [
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/native_adapter_build_attempt2/build/aqua_native_loop_replay",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r3/archive",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r3/afrl_cave_cam0_pinhole.yaml",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r3/vins_same_backend.yaml",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_k10L6.bin",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_pattern.yml",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r3/C/native",
+          "C",
+          "cemetery",
+          "3"
+        ],
+        "graph_started": true,
+        "binary_sha256": "e87f60c8d9b13f4c8db90a960b7a95610fb83ff609928db9ecc00f064cf6b027",
+        "shared_local_receipt_sha256": "0773314ba47750232b42f36e493c816099d66d4ced2e4cf77d680fad2d4bd1f7",
+        "archive_roster_sha256": "90988323d60ef52d9c9a71bbc6a751ce568ad58231409d4587fc28b64f60eb0d",
+        "camera_sha256": "9580011fcaa23217407c1d1dbf616d57e95d81498293129f70bc0700e40e5154",
+        "config_sha256": "827d7c54884b81a7ebd61e2eb8c3eb319aedfdab54605ab5dc11bd3661ae714a",
+        "brief_vocabulary_sha256": "753e7e126c588906ad16197892bdcd914f3a0971037c8f8aeb3c63418458b035",
+        "brief_pattern_sha256": "cb9e20bf47d7557cd22f7820524c3cb13b3a315c451d5665955336100177cafd",
+        "candidates_sha256": null,
+        "runner_sha256": "30326cc3fdca90045c8ce3f44546932f406ab9eab0b2ad1d2edb9ce99a7e00db",
+        "source_commit": "ad1590a9ea54fed22bbc876dc93b10903f4e6918",
+        "started_at": "2026-09-22T03:31:44.182090+08:00",
+        "native_process_wall_s": 25.02607374987565,
+        "keyframes": 3149,
+        "verified_candidates": 0,
+        "rejected_candidates": 514,
+        "correctness": "Unknown",
+        "optimization_time_separate": "Unknown: native process wall includes other work",
+        "completed_at": "2026-09-22T03:32:10.893393+08:00",
+        "artifacts": {
+          "bow_candidates.csv": "9954059e2b017d0476eca8ca817e1014c38ac2f90bc073fa6be77e6733aaab56",
+          "geometry.csv": "13a2906aa1370aa8fd9eb1dc364be455df8cc9336eb1877a373c74cb39952ab4",
+          "global_body.tum": "fdccd33e5acf5994ee1daaee2e3aa876e1d013386650d85aa04e6f21c192f2d1",
+          "local_body.tum": "fdccd33e5acf5994ee1daaee2e3aa876e1d013386650d85aa04e6f21c192f2d1",
+          "native_path_updates.csv": "2999be98b7b82416fd212a5d0df5c92e59c059152f7f2e45a65da6d08da19c30",
+          "processing.csv": "179f980fcb990cdced3a084a2c33add81c4b203cbb51d822d5699ff276d69f89",
+          "raw_odometry_edges.csv": "a620c0055112dccd043e1d585b0b25a8d877f9cbc52cd48c150cc4f882576580"
+        }
+      },
+      "L": {
+        "status": "GRAPH_COMPLETE",
+        "arm": "L",
+        "sequence": "cemetery",
+        "repeat": 3,
+        "command": [
+          "/home/ma/AQUA-FE_WS_learned_loop_baseline_v1/experiments/learned_loop_baseline_v1/native_adapter_build_attempt2/build/aqua_native_loop_replay",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r3/archive",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r3/afrl_cave_cam0_pinhole.yaml",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r3/vins_same_backend.yaml",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_k10L6.bin",
+          "/home/ma/SLAM/VINS-Fusion-origin/src/VINS-Fusion-master/support_files/brief_pattern.yml",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r3/L/native",
+          "L",
+          "cemetery",
+          "3",
+          "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/cemetery_r3/learned_candidates.csv"
+        ],
+        "graph_started": true,
+        "binary_sha256": "e87f60c8d9b13f4c8db90a960b7a95610fb83ff609928db9ecc00f064cf6b027",
+        "shared_local_receipt_sha256": "0773314ba47750232b42f36e493c816099d66d4ced2e4cf77d680fad2d4bd1f7",
+        "archive_roster_sha256": "90988323d60ef52d9c9a71bbc6a751ce568ad58231409d4587fc28b64f60eb0d",
+        "camera_sha256": "9580011fcaa23217407c1d1dbf616d57e95d81498293129f70bc0700e40e5154",
+        "config_sha256": "827d7c54884b81a7ebd61e2eb8c3eb319aedfdab54605ab5dc11bd3661ae714a",
+        "brief_vocabulary_sha256": "753e7e126c588906ad16197892bdcd914f3a0971037c8f8aeb3c63418458b035",
+        "brief_pattern_sha256": "cb9e20bf47d7557cd22f7820524c3cb13b3a315c451d5665955336100177cafd",
+        "candidates_sha256": "2a8e577aee44496f251356d66e98fe0a7d2a9a6beecbb9a9e062208692405392",
+        "runner_sha256": "30326cc3fdca90045c8ce3f44546932f406ab9eab0b2ad1d2edb9ce99a7e00db",
+        "source_commit": "ad1590a9ea54fed22bbc876dc93b10903f4e6918",
+        "started_at": "2026-09-22T03:36:23.964184+08:00",
+        "native_process_wall_s": 28.030189465964213,
+        "keyframes": 3149,
+        "verified_candidates": 1,
+        "rejected_candidates": 3097,
+        "correctness": "Unknown",
+        "optimization_time_separate": "Unknown: native process wall includes other work",
+        "completed_at": "2026-09-22T03:36:53.687886+08:00",
+        "artifacts": {
+          "bow_candidates.csv": "b9014d13497ab68fb826e5c889acbb74834ff31326994141dd682e94b20f2080",
+          "geometry.csv": "d24a725f77c6fc6a948afd1901de7751e70d381d03e150c9860a1ada4b5324ee",
+          "global_body.tum": "4f00c1564d5d89eabce09ba75020ed6aa10d820dec432c0ad087d6ea316b073a",
+          "local_body.tum": "fdccd33e5acf5994ee1daaee2e3aa876e1d013386650d85aa04e6f21c192f2d1",
+          "native_path_updates.csv": "22d40e30f15076e5ba0418f9757ba38c444ac1e64408ae51e9266aae08b6f59c",
+          "processing.csv": "bf1838933b175af06300304a36be32dc66c6f526428baeaf7daaab01ca4129dd",
+          "raw_odometry_edges.csv": "a620c0055112dccd043e1d585b0b25a8d877f9cbc52cd48c150cc4f882576580"
+        }
+      },
+      "evaluation": {
+        "sequence": "cemetery",
+        "repeat": 3,
+        "support": {
+          "common_pose_count": 406,
+          "common_span_s": 420.0,
+          "reference_evaluable_samples": 419,
+          "input_grid_samples": 434,
+          "common_reference_coverage": 0.9689737470167065,
+          "support_gate": "PASS"
+        },
+        "reference_identity": {
+          "sequence": "cemetery",
+          "reference_sha256": "cd34aa974c4561d270fcde3efc9badfebfab9b85622ab0a15289ffbf0981860f",
+          "config_sha256": "47a9e75a9c2076276d0068c2d3d38da697d931a1311138794842a9e1c388f23e",
+          "intervals_total": 2518,
+          "valid_intervals": 2510,
+          "imu_samples": 43400,
+          "fixed_camera_imu_td_s": 0.04280051428389464,
+          "no_estimator_or_learned_outputs_used": true,
+          "fitting": "none: no bias/offset/scale/rotation fit",
+          "validity": "positive dt<=1s and enclosed IMU support",
+          "convention_validated": false,
+          "pose_convention": "Unknown",
+          "interpretations": {
+            "as_world_T_cam0": {
+              "gyro_difference_rmse_rad_s": 0.050193238500672074,
+              "median_rad_s": 0.01382717168709173,
+              "p95_rad_s": 0.0724626238149868,
+              "per_axis_correlation": [
+                0.8061237072004129,
+                0.9630929619851211,
+                0.9533945451517073
+              ]
+            },
+            "inverse_direction": {
+              "gyro_difference_rmse_rad_s": 0.16434976753480982,
+              "median_rad_s": 0.10239760959135522,
+              "p95_rad_s": 0.3005490741450145,
+              "per_axis_correlation": [
+                -0.07133829246481228,
+                0.10694053203429807,
+                0.6662095711311455
+              ]
+            }
+          },
+          "limitation": "Finite-interval gyro consistency is supporting evidence, not independent proof of camera origin/world pose convention; no automatic relabeling or trajectory score."
+        },
+        "raw_local_rows": 3806,
+        "initialization_log_detected": true,
+        "initialization_time_s": 11.155363228,
+        "initialization_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+        "shared_pre_post_boundary_s": 1535225065.829597,
+        "reference_role": "COLMAP proxy, not independent GT",
+        "arms": {
+          "B": {
+            "raw_keyframe_count": 3149,
+            "input_grid_coverage": 0.9700460829493087,
+            "reference_grid_coverage": 0.9689737470167065,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          },
+          "C": {
+            "raw_keyframe_count": 3149,
+            "input_grid_coverage": 0.9700460829493087,
+            "reference_grid_coverage": 0.9689737470167065,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          },
+          "L": {
+            "raw_keyframe_count": 3149,
+            "input_grid_coverage": 0.9700460829493087,
+            "reference_grid_coverage": 0.9689737470167065,
+            "status": "Not evaluated",
+            "reason": "REFERENCE_CONVENTION_UNRESOLVED"
+          }
+        }
+      },
+      "encoding": {
+        "source_commit": "7764ea0f912e53c92e82eb78a2a1631e92725fc8",
+        "model_sha256": "b938bf1bc15cd2ec0feacfe3a1bb553fe8ea9ca46a7e1d8d00217f29aef60cd9",
+        "vocabulary_sha256": "695985ec145406609d5c8d122092198886c4d89463c316e6a3b1606aee34143d",
+        "preprocess": "dl-vits14-final-norm-patch-280x448-letterbox-imagenet-k32-v1",
+        "device": "cpu",
+        "torch_version": "2.2.2+cpu",
+        "strict_official_tensors_loaded": 175,
+        "python_compatibility": "postponed DINO annotations only; original source bytes unchanged",
+        "parameters": 22056576,
+        "cold_load_s": 0.3641065659467131,
+        "status": "DESCRIPTORS_COMPLETE",
+        "keyframes": 3149,
+        "cache_hits": 3149,
+        "new_image_inferences": 0,
+        "archive_roster_sha256": "90988323d60ef52d9c9a71bbc6a751ce568ad58231409d4587fc28b64f60eb0d",
+        "peak_rss_kib": 769856,
+        "inference_and_vlad_total_s": 0.0,
+        "inference_and_vlad_mean_s": 0.0
+      },
+      "accepted_pair_retrieval_context": [
+        {
+          "arm": "L",
+          "query_id": "1448",
+          "candidate_id": "616",
+          "other_arm": "C",
+          "exact_pair_in_other_top4": false,
+          "other_top4": [
+            {
+              "candidate_id": "620",
+              "score": "0.018723496883908487",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "300",
+              "score": "0.017378451518099691",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "301",
+              "score": "0.017378451518099691",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            },
+            {
+              "candidate_id": "303",
+              "score": "0.017378451518099691",
+              "score_gate": "0",
+              "selected_for_geometry": "0"
+            }
+          ],
+          "interpretation": "Ranking+registered gate configuration; no threshold counterfactual performed"
+        }
+      ]
+    }
   }
 }
