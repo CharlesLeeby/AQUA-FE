@@ -1,8 +1,24 @@
 # AQUA-FE：学习式水下回环基线交接
 
-更新：2026-09-22T03:37:00+08:00。实验：`frontend_learned_loop_baseline_v1`。
+更新：2026-09-23T23:40:00+08:00。实验：`frontend_learned_loop_baseline_v1`。
 实际分支：`exp/learned-loop-baseline-v1-20260914`，不是 main。
-**FULL_MATRIX_EXECUTED_OUTCOME_UNRESOLVED：Bus/Cemetery 各三次 B/C/L 已完成；无本任务后台运行。**
+**CONDITIONAL_PROXY_EVALUATION_COMPLETE_FORMAL_CLAIM_UNRESOLVED：六组保存轨迹的18行条件评价已完成；无本任务后台运行。**
+
+本轮找到两条参考文件的作者来源，逐字节相同；完整新旧文件只差首姿态刚体变换，尺度未改变。
+这与新数据页的尺度说明存在未解决冲突，原始COLMAP相机/尺度回执也未提供。
+因此正式精度仍为Not evaluated；额外数值明确放在独立的[条件proxy诊断表](../papers/frontend_learned_loop_baseline_v1/proxy_diagnostic_accuracy.csv)，不冒称米制GT误差。
+
+| 序列 | C固定尺度APE中位 | L固定尺度APE中位 | 中位数之比变化 | C/L显式Sim(3) APE中位 |
+|---|---:|---:|---:|---:|
+| Bus | 1.040787 | 0.910719 | −12.50% | 0.689820 / 0.484339 |
+| Cemetery | 0.854371 | 0.880116 | +3.01% | 0.810968 / 0.846645 |
+
+以上平移数字仅在作者源码支持的camera-pose解释与发布proxy数值口径下成立，不标m。
+Bus三次分别改善9.51/16.41/18.68%；Cemetery一次持平、两次恶化3.45/2.44%。
+固定1秒RPE变化很小，所有18行×两种对齐均经evo交叉检查PASS，原共同支撑门未变。
+全部8对通过图像已非盲目视复核：Bus对应结构支持重访，Cemetery重复石块证据较弱；
+正式独立正确/错误标签与真Recall@4仍Unknown。不能授予正式系统WIN或PROMISING。
+本轮新增VIO/图优化/模型推理/训练均0，29项测试通过，旧结果保留。
 
 本任务已明确扩展到全局关联。旧加点/恢复/坐标精化停止结论全部保留，不重开。
 
@@ -16,7 +32,8 @@
   L只在Bus三次及Cemetery后两次改变全局输出。固定检索配置的排名和默认门限共同作用，
   不能单独证明学习表征优越。没有调门或增加验证预算。
 - **准确度边界**：两序列共同支撑数值门六次均PASS；但精确COLMAP proxy的相机位姿约定
-  未独立验证，APE/RPE/Sim(3)均Not evaluated，真Recall@4及独立正确/错误标签仍Unknown。
+  未独立认证，正式APE/RPE/Sim(3)精度仍Not evaluated；带假设的数值诊断已完成如上表，
+  真Recall@4及独立正确/错误标签仍Unknown。
   因此没有正式系统WIN/TIE/LOSS，也不能宣称全局精度改善或无误闭环。
 - **计算成本**：官方DINOv2 ViT-S/14+K32匹配词典权重已严格加载；Bus新图2501张，
   Cemetery新图3149张。Cemetery首轮编码+VLAD约674.78秒，后两轮3148/3149张缓存命中；
@@ -35,12 +52,18 @@
 | Cemetery r2 | 3148 | 0/514 | 1/3097 | 406/96.90% |
 | Cemetery r3 | 3149 | 0/514 | 1/3098 | 406/96.90% |
 
-唯一后续决策：本轮停止方法/序列扩展。若需要正式全局精度结论，先独立核实两个精确哈希
-COLMAP proxy的相机位姿约定和通过对正确性，再只评估已保存的六块轨迹，不重跑VIO。
+唯一后续决策：本轮条件评价到此结束。正式系统结论需要提供方对两个精确文件的相机/尺度
+来源认证，以及独立回环标签；现有公开资产未补齐。没有待执行的VIO、推理或调参任务。
 尺度资产位于`/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/`；
 r1有效目录为`cemetery_r1_retry1`，首次中断与档案失败均保留，模型/包/缓存不上传。
 
 ## 直接可读的证据与接口
+
+- [本轮全部18行条件数值](../papers/frontend_learned_loop_baseline_v1/proxy_diagnostic_accuracy.csv) /
+  [作者来源与尺度冲突核验](../papers/frontend_learned_loop_baseline_v1/reference_provenance_completion.json) /
+  [8对图像复核](../papers/frontend_learned_loop_baseline_v1/accepted_pair_review.csv) /
+  [新评价回执](../papers/frontend_learned_loop_baseline_v1/evaluation_completion_receipts.json) /
+  [评价补充说明](../papers/frontend_learned_loop_baseline_v1/evaluation_completion_addendum.md)
 
 - [报告（最新状态及历史失败全部保留）](../papers/frontend_learned_loop_baseline_v1/report.md)
 - [完整任务](../papers/frontend_learned_loop_baseline_v1/task_instructions.md) /

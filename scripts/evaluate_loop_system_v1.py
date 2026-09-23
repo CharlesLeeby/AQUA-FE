@@ -121,6 +121,8 @@ def main():
     p.add_argument("--reference-identity", type=Path, required=True,
         help="Evidence record; cannot enable metrics by assuming a convention")
     p.add_argument("--output-dir", type=Path, required=True)
+    p.add_argument("--source-supported-proxy-diagnostic", action="store_true",
+        help="Explicit conditional numeric diagnostic; never certifies unknown reference convention/metric scale")
     a = p.parse_args()
     if a.output_dir.exists():
         raise FileExistsError("Previous evaluation retained")
@@ -156,7 +158,12 @@ def main():
     rt, rp, rq = reference(a.reference, "afrl_digits" if local["sequence"] == "cemetery" else "raw")
     convention_ok = (ref_identity.get("pose_convention") == "world_T_cam0"
         and ref_identity.get("convention_validated") is True and bool(ref_identity.get("evidence")))
-    ref = resample_trajectory(rt, rp, grid, 1., rq if convention_ok else None, sample_kind="reference")
+    diagnostic_ok = (a.source_supported_proxy_diagnostic
+        and ref_identity.get("source_supported_pose_convention") == "world_T_cam0"
+        and bool(ref_identity.get("evidence")))
+    if a.source_supported_proxy_diagnostic and not diagnostic_ok:
+        raise ValueError("Conditional diagnostic requires explicit author-source convention evidence")
+    ref = resample_trajectory(rt, rp, grid, 1., rq if convention_ok or diagnostic_ok else None, sample_kind="reference")
     transform = load_body_t_sensor(a.local_dir / "vins_same_backend.yaml")
     estimates = {}
     for arm, (stamps, positions, quaternions) in raw.items():
@@ -173,12 +180,17 @@ def main():
         initialization_log_detected=local["initialization_log_detected"],
         initialization_time_s=local.get("passive_capture_audit", {}).get("first_nonlinear_output_from_input_s", "Unknown"),
         initialization_definition=local.get("passive_capture_audit", {}).get("initialization_time_definition", "Unknown"),
-        shared_pre_post_boundary_s=boundary, reference_role="COLMAP proxy, not independent GT", arms={})
+        shared_pre_post_boundary_s=boundary, reference_role="COLMAP proxy, not independent GT",
+        conditional_proxy_diagnostic=bool(diagnostic_ok),
+        formal_accuracy_status="Not evaluated" if diagnostic_ok else "reference/support gated",
+        numeric_unit="supplied proxy units; not certified metres" if diagnostic_ok else "reference units",
+        diagnostic_assumption="published poses interpreted as world_T_cam0 per author source" if diagnostic_ok else None,
+        arms={})
     for arm, est in estimates.items():
         result = dict(raw_keyframe_count=len(raw[arm][0]), input_grid_coverage=float(est.valid.mean()),
             reference_grid_coverage=float((est.valid & ref.valid).sum() / ref.valid.sum()) if ref.valid.any() else 0.,
             status="Not evaluated", reason="REFERENCE_CONVENTION_UNRESOLVED" if not convention_ok else "COMMON_SUPPORT_FAIL")
-        if convention_ok and audit["support_gate"] == "PASS":
+        if (convention_ok or diagnostic_ok) and audit["support_gate"] == "PASS":
             primary, ape = errors_with_evo(grid[common], ref.positions[common], ref.quaternions[common],
                 est.positions[common], est.quaternions[common])
             diagnostic, _ = errors_with_evo(grid[common], ref.positions[common], ref.quaternions[common],
@@ -188,7 +200,8 @@ def main():
                 before = grid[common] < boundary
                 for name, mask in (("pre_loop", before), ("post_loop", ~before)):
                     segments[name] = dict(poses=int(mask.sum()), ape_rmse_same_whole_sequence_alignment=rmse(ape[mask]))
-            result.update(status="EVALUATED_PROXY", reason="", fixed_scale=primary,
+            result.update(status="DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY" if diagnostic_ok else "EVALUATED_PROXY",
+                reason="SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE" if diagnostic_ok else "", fixed_scale=primary,
                 sim3_explicit_diagnostic=diagnostic, pre_post=segments)
         record["arms"][arm] = result
     a.output_dir.mkdir(parents=True)

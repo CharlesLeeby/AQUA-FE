@@ -1,0 +1,1188 @@
+{
+  "role": "Conditional saved-output diagnostics, not formal accuracy or independent loop labels",
+  "source_receipts": {
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/reference_completion_20260923/bus_outside_r1/evaluation.json": "e6add709df77cf2d3bd33105a08e6fa1c831e2fd30290da17551d37213f210a3",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/reference_completion_20260923/bus_outside_r2/evaluation.json": "a6b58504329207931e777cb0ed8b50284b0e841a8b6aefa46c0b519066d39adb",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/reference_completion_20260923/bus_outside_r3/evaluation.json": "ca946de89e0794338e056508c995dcb7ceb057af130aff6b11c2ad9d7a06d972",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/reference_completion_20260923/cemetery_r1/evaluation.json": "77780fd3f53b70be09bffc843766bfd268bed08240ce10a881549c4d98d9017b",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/reference_completion_20260923/cemetery_r2/evaluation.json": "93ecfa156d27433dbc2ecb37d40032ebf1f9659f6d5c2f3e48430f08b9c3b4fd",
+    "/media/ma/Elements/AQUA-FE_learned_loop_baseline_v1_runtime/reference_completion_20260923/cemetery_r3/evaluation.json": "731f261432752f3f58316a3382f4e8013675b8c08c33b37b99e7451f7429f0d6"
+  },
+  "evaluator_sha256": "e28a3e3752a9d32da9a44967a1806783e59b00dcbfeb9ebe813d9bab7ae594b5",
+  "publisher_sha256": "cdaad6a560e719fce0f0d633f45f9a44d96c7c8666107618bce0c1bde9bd78bf",
+  "blocks": {
+    "bus_outside_r1": {
+      "sequence": "bus_outside",
+      "repeat": 1,
+      "support": {
+        "common_pose_count": 497,
+        "common_span_s": 579.0,
+        "reference_evaluable_samples": 540,
+        "input_grid_samples": 585,
+        "common_reference_coverage": 0.9203703703703704,
+        "support_gate": "PASS"
+      },
+      "reference_identity": {
+        "reference_sha256": "341770a61a2adae1135c4319bf858be32218ec406b446420d6a9a495b4a36bb7",
+        "convention_validated": false,
+        "pose_convention": "Unknown: full independent certification unavailable",
+        "source_supported_pose_convention": "world_T_cam0",
+        "source_support_boundary": "Author converter inverts COLMAP extrinsics, assigns camera 1 to left, writes xyzw camera poses; exact published files reproduce author's unscaled origin alignment. Original reconstruction/images.txt and per-file camera-ID export receipt not released; source support is not full independent certification.",
+        "metric_scale_validated": false,
+        "metric_scale_status": "CONFLICT: provider describes stereo metric correction; exact new files are unscaled rigid transforms of old up-to-scale references",
+        "timestamp_mode": "raw",
+        "prior_raw_gyro_check": {
+          "as_world_T_cam0": {
+            "gyro_difference_rmse_rad_s": 0.031897677019523195,
+            "median_rad_s": 0.01352660892664218,
+            "p95_rad_s": 0.04812029431078561,
+            "per_axis_correlation": [
+              0.9431852517684505,
+              0.9541067418038951,
+              0.9779416082201543
+            ]
+          },
+          "inverse_direction": {
+            "gyro_difference_rmse_rad_s": 0.1574797143844867,
+            "median_rad_s": 0.09919889925875662,
+            "p95_rad_s": 0.31488388425372504,
+            "per_axis_correlation": [
+              -0.1520507182791701,
+              -0.014998487566104226,
+              0.11919459872102896
+            ]
+          }
+        },
+        "evidence": [
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/data/bus_outside/colmap_aligned.txt",
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/compute_results.py",
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/slam_utils/colmap_utils.py",
+          "https://huggingface.co/datasets/afrl-uw/stereo-vi-underwater-dataset/resolve/bdb079e7fef85b1f956f3469bd4cc1c521f25772/colmap_groundtruth/bus_outside.txt"
+        ],
+        "audit": {
+          "rows": 3388,
+          "byte_identical_to_author_aligned": true,
+          "old_provider_equals_author_unaligned_numeric": true,
+          "transformation": "first-pose left SE(3), no fit, scale exactly fixed to 1",
+          "first_pose_rotation": [
+            [
+              0.06712149122903346,
+              0.03183770907704383,
+              -0.9972367149758963
+            ],
+            [
+              0.997059420558526,
+              0.03490025193859717,
+              0.06822378097202869
+            ],
+            [
+              0.036975901485801176,
+              -0.9988835431096803,
+              -0.029401530809880626
+            ]
+          ],
+          "first_pose_translation": [
+            -2.429522807766822,
+            2.437444549739619,
+            0.681119215305394
+          ],
+          "max_position_residual": 5.618430578060438e-15,
+          "max_rotation_residual_rad": 1.4299369275003598e-15,
+          "timestamp_writer_reproduced_all_rows": true,
+          "source_reference_path_length": 54.72079138842724,
+          "published_reference_path_length": 54.720791388427216
+        }
+      },
+      "raw_local_rows": 3654,
+      "initialization_log_detected": true,
+      "initialization_time_s": 2.227895417,
+      "initialization_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+      "shared_pre_post_boundary_s": 1494876986.4649806,
+      "reference_role": "COLMAP proxy, not independent GT",
+      "conditional_proxy_diagnostic": true,
+      "formal_accuracy_status": "Not evaluated",
+      "numeric_unit": "supplied proxy units; not certified metres",
+      "diagnostic_assumption": "published poses interpreted as world_T_cam0 per author source",
+      "arms": {
+        "B": {
+          "raw_keyframe_count": 2430,
+          "input_grid_coverage": 0.9230769230769231,
+          "reference_grid_coverage": 0.9203703703703704,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 1.0407865370687652,
+            "rpe_1s_translation_rmse": 0.040986057194018384,
+            "rpe_1s_rotation_rmse_deg": 0.5307886596530728,
+            "rpe_pairs": 470,
+            "scale": 1.0,
+            "alignment_rotation_det": 1.0000000000000018,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.6898201415423229,
+            "rpe_1s_translation_rmse": 0.03025597528164719,
+            "rpe_1s_rotation_rmse_deg": 0.5307886596530728,
+            "rpe_pairs": 470,
+            "scale": 0.8201535772551475,
+            "alignment_rotation_det": 1.0000000000000018,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {
+            "pre_loop": {
+              "poses": 421,
+              "ape_rmse_same_whole_sequence_alignment": 1.0083239884821762
+            },
+            "post_loop": {
+              "poses": 76,
+              "ape_rmse_same_whole_sequence_alignment": 1.2048729412397068
+            }
+          }
+        },
+        "C": {
+          "raw_keyframe_count": 2430,
+          "input_grid_coverage": 0.9230769230769231,
+          "reference_grid_coverage": 0.9203703703703704,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 1.0407865369716323,
+            "rpe_1s_translation_rmse": 0.04098605693825802,
+            "rpe_1s_rotation_rmse_deg": 0.5307886660013215,
+            "rpe_pairs": 470,
+            "scale": 1.0,
+            "alignment_rotation_det": 0.9999999999999996,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.6898201414980675,
+            "rpe_1s_translation_rmse": 0.030255975043080308,
+            "rpe_1s_rotation_rmse_deg": 0.5307886660013215,
+            "rpe_pairs": 470,
+            "scale": 0.8201535772726407,
+            "alignment_rotation_det": 0.9999999999999996,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {
+            "pre_loop": {
+              "poses": 421,
+              "ape_rmse_same_whole_sequence_alignment": 1.008323988365248
+            },
+            "post_loop": {
+              "poses": 76,
+              "ape_rmse_same_whole_sequence_alignment": 1.2048729412330714
+            }
+          }
+        },
+        "L": {
+          "raw_keyframe_count": 2430,
+          "input_grid_coverage": 0.9230769230769231,
+          "reference_grid_coverage": 0.9203703703703704,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 0.9418250892696169,
+            "rpe_1s_translation_rmse": 0.040987741078024165,
+            "rpe_1s_rotation_rmse_deg": 0.530772179840864,
+            "rpe_pairs": 470,
+            "scale": 1.0,
+            "alignment_rotation_det": 1.0000000000000004,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.4843391374812659,
+            "rpe_1s_translation_rmse": 0.030102120620811565,
+            "rpe_1s_rotation_rmse_deg": 0.530772179840864,
+            "rpe_pairs": 470,
+            "scale": 0.8162376967710164,
+            "alignment_rotation_det": 1.0000000000000004,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {
+            "pre_loop": {
+              "poses": 421,
+              "ape_rmse_same_whole_sequence_alignment": 0.9430131482202664
+            },
+            "post_loop": {
+              "poses": 76,
+              "ape_rmse_same_whole_sequence_alignment": 0.9352165317381851
+            }
+          }
+        }
+      }
+    },
+    "bus_outside_r2": {
+      "sequence": "bus_outside",
+      "repeat": 2,
+      "support": {
+        "common_pose_count": 501,
+        "common_span_s": 579.0,
+        "reference_evaluable_samples": 540,
+        "input_grid_samples": 585,
+        "common_reference_coverage": 0.9277777777777778,
+        "support_gate": "PASS"
+      },
+      "reference_identity": {
+        "reference_sha256": "341770a61a2adae1135c4319bf858be32218ec406b446420d6a9a495b4a36bb7",
+        "convention_validated": false,
+        "pose_convention": "Unknown: full independent certification unavailable",
+        "source_supported_pose_convention": "world_T_cam0",
+        "source_support_boundary": "Author converter inverts COLMAP extrinsics, assigns camera 1 to left, writes xyzw camera poses; exact published files reproduce author's unscaled origin alignment. Original reconstruction/images.txt and per-file camera-ID export receipt not released; source support is not full independent certification.",
+        "metric_scale_validated": false,
+        "metric_scale_status": "CONFLICT: provider describes stereo metric correction; exact new files are unscaled rigid transforms of old up-to-scale references",
+        "timestamp_mode": "raw",
+        "prior_raw_gyro_check": {
+          "as_world_T_cam0": {
+            "gyro_difference_rmse_rad_s": 0.031897677019523195,
+            "median_rad_s": 0.01352660892664218,
+            "p95_rad_s": 0.04812029431078561,
+            "per_axis_correlation": [
+              0.9431852517684505,
+              0.9541067418038951,
+              0.9779416082201543
+            ]
+          },
+          "inverse_direction": {
+            "gyro_difference_rmse_rad_s": 0.1574797143844867,
+            "median_rad_s": 0.09919889925875662,
+            "p95_rad_s": 0.31488388425372504,
+            "per_axis_correlation": [
+              -0.1520507182791701,
+              -0.014998487566104226,
+              0.11919459872102896
+            ]
+          }
+        },
+        "evidence": [
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/data/bus_outside/colmap_aligned.txt",
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/compute_results.py",
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/slam_utils/colmap_utils.py",
+          "https://huggingface.co/datasets/afrl-uw/stereo-vi-underwater-dataset/resolve/bdb079e7fef85b1f956f3469bd4cc1c521f25772/colmap_groundtruth/bus_outside.txt"
+        ],
+        "audit": {
+          "rows": 3388,
+          "byte_identical_to_author_aligned": true,
+          "old_provider_equals_author_unaligned_numeric": true,
+          "transformation": "first-pose left SE(3), no fit, scale exactly fixed to 1",
+          "first_pose_rotation": [
+            [
+              0.06712149122903346,
+              0.03183770907704383,
+              -0.9972367149758963
+            ],
+            [
+              0.997059420558526,
+              0.03490025193859717,
+              0.06822378097202869
+            ],
+            [
+              0.036975901485801176,
+              -0.9988835431096803,
+              -0.029401530809880626
+            ]
+          ],
+          "first_pose_translation": [
+            -2.429522807766822,
+            2.437444549739619,
+            0.681119215305394
+          ],
+          "max_position_residual": 5.618430578060438e-15,
+          "max_rotation_residual_rad": 1.4299369275003598e-15,
+          "timestamp_writer_reproduced_all_rows": true,
+          "source_reference_path_length": 54.72079138842724,
+          "published_reference_path_length": 54.720791388427216
+        }
+      },
+      "raw_local_rows": 3654,
+      "initialization_log_detected": true,
+      "initialization_time_s": 2.227895417,
+      "initialization_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+      "shared_pre_post_boundary_s": 1494877020.8708794,
+      "reference_role": "COLMAP proxy, not independent GT",
+      "conditional_proxy_diagnostic": true,
+      "formal_accuracy_status": "Not evaluated",
+      "numeric_unit": "supplied proxy units; not certified metres",
+      "diagnostic_assumption": "published poses interpreted as world_T_cam0 per author source",
+      "arms": {
+        "B": {
+          "raw_keyframe_count": 2441,
+          "input_grid_coverage": 0.9333333333333333,
+          "reference_grid_coverage": 0.9277777777777778,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 0.992910304717783,
+            "rpe_1s_translation_rmse": 0.04215781413012168,
+            "rpe_1s_rotation_rmse_deg": 0.5318156828598695,
+            "rpe_pairs": 475,
+            "scale": 1.0,
+            "alignment_rotation_det": 0.9999999999999992,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.6495325085092009,
+            "rpe_1s_translation_rmse": 0.03188057953757644,
+            "rpe_1s_rotation_rmse_deg": 0.5318156828598695,
+            "rpe_pairs": 475,
+            "scale": 0.826586258010333,
+            "alignment_rotation_det": 0.9999999999999992,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {
+            "pre_loop": {
+              "poses": 459,
+              "ape_rmse_same_whole_sequence_alignment": 0.9479939484863464
+            },
+            "post_loop": {
+              "poses": 42,
+              "ape_rmse_same_whole_sequence_alignment": 1.3923382002114995
+            }
+          }
+        },
+        "C": {
+          "raw_keyframe_count": 2441,
+          "input_grid_coverage": 0.9333333333333333,
+          "reference_grid_coverage": 0.9277777777777778,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 0.9929103046473741,
+            "rpe_1s_translation_rmse": 0.04215781404117698,
+            "rpe_1s_rotation_rmse_deg": 0.5318156903942549,
+            "rpe_pairs": 475,
+            "scale": 1.0,
+            "alignment_rotation_det": 0.999999999999999,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.6495325084850343,
+            "rpe_1s_translation_rmse": 0.03188057945329746,
+            "rpe_1s_rotation_rmse_deg": 0.5318156903942549,
+            "rpe_pairs": 475,
+            "scale": 0.8265862580242871,
+            "alignment_rotation_det": 0.999999999999999,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {
+            "pre_loop": {
+              "poses": 459,
+              "ape_rmse_same_whole_sequence_alignment": 0.9479939484124997
+            },
+            "post_loop": {
+              "poses": 42,
+              "ape_rmse_same_whole_sequence_alignment": 1.392338200162047
+            }
+          }
+        },
+        "L": {
+          "raw_keyframe_count": 2441,
+          "input_grid_coverage": 0.9333333333333333,
+          "reference_grid_coverage": 0.9277777777777778,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 0.8300006114592335,
+            "rpe_1s_translation_rmse": 0.04204418592523117,
+            "rpe_1s_rotation_rmse_deg": 0.5317938042336449,
+            "rpe_pairs": 475,
+            "scale": 1.0,
+            "alignment_rotation_det": 0.9999999999999996,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.38706909022474245,
+            "rpe_1s_translation_rmse": 0.031920190442831,
+            "rpe_1s_rotation_rmse_deg": 0.5317938042336449,
+            "rpe_pairs": 475,
+            "scale": 0.8312772593317242,
+            "alignment_rotation_det": 0.9999999999999996,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {
+            "pre_loop": {
+              "poses": 459,
+              "ape_rmse_same_whole_sequence_alignment": 0.8170017130756864
+            },
+            "post_loop": {
+              "poses": 42,
+              "ape_rmse_same_whole_sequence_alignment": 0.9606628751616706
+            }
+          }
+        }
+      }
+    },
+    "bus_outside_r3": {
+      "sequence": "bus_outside",
+      "repeat": 3,
+      "support": {
+        "common_pose_count": 496,
+        "common_span_s": 579.0,
+        "reference_evaluable_samples": 540,
+        "input_grid_samples": 585,
+        "common_reference_coverage": 0.9185185185185185,
+        "support_gate": "PASS"
+      },
+      "reference_identity": {
+        "reference_sha256": "341770a61a2adae1135c4319bf858be32218ec406b446420d6a9a495b4a36bb7",
+        "convention_validated": false,
+        "pose_convention": "Unknown: full independent certification unavailable",
+        "source_supported_pose_convention": "world_T_cam0",
+        "source_support_boundary": "Author converter inverts COLMAP extrinsics, assigns camera 1 to left, writes xyzw camera poses; exact published files reproduce author's unscaled origin alignment. Original reconstruction/images.txt and per-file camera-ID export receipt not released; source support is not full independent certification.",
+        "metric_scale_validated": false,
+        "metric_scale_status": "CONFLICT: provider describes stereo metric correction; exact new files are unscaled rigid transforms of old up-to-scale references",
+        "timestamp_mode": "raw",
+        "prior_raw_gyro_check": {
+          "as_world_T_cam0": {
+            "gyro_difference_rmse_rad_s": 0.031897677019523195,
+            "median_rad_s": 0.01352660892664218,
+            "p95_rad_s": 0.04812029431078561,
+            "per_axis_correlation": [
+              0.9431852517684505,
+              0.9541067418038951,
+              0.9779416082201543
+            ]
+          },
+          "inverse_direction": {
+            "gyro_difference_rmse_rad_s": 0.1574797143844867,
+            "median_rad_s": 0.09919889925875662,
+            "p95_rad_s": 0.31488388425372504,
+            "per_axis_correlation": [
+              -0.1520507182791701,
+              -0.014998487566104226,
+              0.11919459872102896
+            ]
+          }
+        },
+        "evidence": [
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/data/bus_outside/colmap_aligned.txt",
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/compute_results.py",
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/slam_utils/colmap_utils.py",
+          "https://huggingface.co/datasets/afrl-uw/stereo-vi-underwater-dataset/resolve/bdb079e7fef85b1f956f3469bd4cc1c521f25772/colmap_groundtruth/bus_outside.txt"
+        ],
+        "audit": {
+          "rows": 3388,
+          "byte_identical_to_author_aligned": true,
+          "old_provider_equals_author_unaligned_numeric": true,
+          "transformation": "first-pose left SE(3), no fit, scale exactly fixed to 1",
+          "first_pose_rotation": [
+            [
+              0.06712149122903346,
+              0.03183770907704383,
+              -0.9972367149758963
+            ],
+            [
+              0.997059420558526,
+              0.03490025193859717,
+              0.06822378097202869
+            ],
+            [
+              0.036975901485801176,
+              -0.9988835431096803,
+              -0.029401530809880626
+            ]
+          ],
+          "first_pose_translation": [
+            -2.429522807766822,
+            2.437444549739619,
+            0.681119215305394
+          ],
+          "max_position_residual": 5.618430578060438e-15,
+          "max_rotation_residual_rad": 1.4299369275003598e-15,
+          "timestamp_writer_reproduced_all_rows": true,
+          "source_reference_path_length": 54.72079138842724,
+          "published_reference_path_length": 54.720791388427216
+        }
+      },
+      "raw_local_rows": 3654,
+      "initialization_log_detected": true,
+      "initialization_time_s": 2.227895417,
+      "initialization_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+      "shared_pre_post_boundary_s": 1494876983.1195722,
+      "reference_role": "COLMAP proxy, not independent GT",
+      "conditional_proxy_diagnostic": true,
+      "formal_accuracy_status": "Not evaluated",
+      "numeric_unit": "supplied proxy units; not certified metres",
+      "diagnostic_assumption": "published poses interpreted as world_T_cam0 per author source",
+      "arms": {
+        "B": {
+          "raw_keyframe_count": 2439,
+          "input_grid_coverage": 0.9196581196581196,
+          "reference_grid_coverage": 0.9185185185185185,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 1.1198852540984607,
+            "rpe_1s_translation_rmse": 0.045931392292239956,
+            "rpe_1s_rotation_rmse_deg": 0.5156384416110283,
+            "rpe_pairs": 468,
+            "scale": 1.0,
+            "alignment_rotation_det": 1.0,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.8243342170213219,
+            "rpe_1s_translation_rmse": 0.03518823663256252,
+            "rpe_1s_rotation_rmse_deg": 0.5156384416110283,
+            "rpe_pairs": 468,
+            "scale": 0.8229768773938071,
+            "alignment_rotation_det": 1.0,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {
+            "pre_loop": {
+              "poses": 417,
+              "ape_rmse_same_whole_sequence_alignment": 1.0505333173662452
+            },
+            "post_loop": {
+              "poses": 79,
+              "ape_rmse_same_whole_sequence_alignment": 1.4313190986928332
+            }
+          }
+        },
+        "C": {
+          "raw_keyframe_count": 2439,
+          "input_grid_coverage": 0.9196581196581196,
+          "reference_grid_coverage": 0.9185185185185185,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 1.119885254031179,
+            "rpe_1s_translation_rmse": 0.04593139239658863,
+            "rpe_1s_rotation_rmse_deg": 0.5156384492933607,
+            "rpe_pairs": 468,
+            "scale": 1.0,
+            "alignment_rotation_det": 0.9999999999999992,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.8243342170047104,
+            "rpe_1s_translation_rmse": 0.03518823672624959,
+            "rpe_1s_rotation_rmse_deg": 0.5156384492933607,
+            "rpe_pairs": 468,
+            "scale": 0.8229768774095991,
+            "alignment_rotation_det": 0.9999999999999992,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {
+            "pre_loop": {
+              "poses": 417,
+              "ape_rmse_same_whole_sequence_alignment": 1.050533317271004
+            },
+            "post_loop": {
+              "poses": 79,
+              "ape_rmse_same_whole_sequence_alignment": 1.431319098731303
+            }
+          }
+        },
+        "L": {
+          "raw_keyframe_count": 2439,
+          "input_grid_coverage": 0.9196581196581196,
+          "reference_grid_coverage": 0.9185185185185185,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 0.910719400030335,
+            "rpe_1s_translation_rmse": 0.04581616140632092,
+            "rpe_1s_rotation_rmse_deg": 0.5156140796668319,
+            "rpe_pairs": 468,
+            "scale": 1.0,
+            "alignment_rotation_det": 1.0000000000000004,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.4975729936102594,
+            "rpe_1s_translation_rmse": 0.03512531741630672,
+            "rpe_1s_rotation_rmse_deg": 0.5156140796668319,
+            "rpe_pairs": 468,
+            "scale": 0.8245528833390373,
+            "alignment_rotation_det": 1.0000000000000004,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {
+            "pre_loop": {
+              "poses": 417,
+              "ape_rmse_same_whole_sequence_alignment": 0.9228603464966975
+            },
+            "post_loop": {
+              "poses": 79,
+              "ape_rmse_same_whole_sequence_alignment": 0.8437437303187691
+            }
+          }
+        }
+      }
+    },
+    "cemetery_r1": {
+      "sequence": "cemetery",
+      "repeat": 1,
+      "support": {
+        "common_pose_count": 406,
+        "common_span_s": 420.0,
+        "reference_evaluable_samples": 419,
+        "input_grid_samples": 434,
+        "common_reference_coverage": 0.9689737470167065,
+        "support_gate": "PASS"
+      },
+      "reference_identity": {
+        "reference_sha256": "cd34aa974c4561d270fcde3efc9badfebfab9b85622ab0a15289ffbf0981860f",
+        "convention_validated": false,
+        "pose_convention": "Unknown: full independent certification unavailable",
+        "source_supported_pose_convention": "world_T_cam0",
+        "source_support_boundary": "Author converter inverts COLMAP extrinsics, assigns camera 1 to left, writes xyzw camera poses; exact published files reproduce author's unscaled origin alignment. Original reconstruction/images.txt and per-file camera-ID export receipt not released; source support is not full independent certification.",
+        "metric_scale_validated": false,
+        "metric_scale_status": "CONFLICT: provider describes stereo metric correction; exact new files are unscaled rigid transforms of old up-to-scale references",
+        "timestamp_mode": "afrl_digits",
+        "prior_raw_gyro_check": {
+          "as_world_T_cam0": {
+            "gyro_difference_rmse_rad_s": 0.050193238500672074,
+            "median_rad_s": 0.01382717168709173,
+            "p95_rad_s": 0.0724626238149868,
+            "per_axis_correlation": [
+              0.8061237072004129,
+              0.9630929619851211,
+              0.9533945451517073
+            ]
+          },
+          "inverse_direction": {
+            "gyro_difference_rmse_rad_s": 0.16434976753480982,
+            "median_rad_s": 0.10239760959135522,
+            "p95_rad_s": 0.3005490741450145,
+            "per_axis_correlation": [
+              -0.07133829246481228,
+              0.10694053203429807,
+              0.6662095711311455
+            ]
+          }
+        },
+        "evidence": [
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/data/cemetery/colmap_aligned.txt",
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/compute_results.py",
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/slam_utils/colmap_utils.py",
+          "https://huggingface.co/datasets/afrl-uw/stereo-vi-underwater-dataset/resolve/bdb079e7fef85b1f956f3469bd4cc1c521f25772/colmap_groundtruth/cemetery.txt"
+        ],
+        "audit": {
+          "rows": 2519,
+          "byte_identical_to_author_aligned": true,
+          "old_provider_equals_author_unaligned_numeric": true,
+          "transformation": "first-pose left SE(3), no fit, scale exactly fixed to 1",
+          "first_pose_rotation": [
+            [
+              0.642955060618667,
+              0.30699262339710864,
+              -0.7016867671579732
+            ],
+            [
+              0.7654571166211375,
+              -0.28884988849627,
+              0.5750140385501447
+            ],
+            [
+              -0.026157076268213706,
+              -0.9068193155725421,
+              -0.4207071858973239
+            ]
+          ],
+          "first_pose_translation": [
+            -2.138543873266303,
+            -0.8488124789819617,
+            0.9581031438107295
+          ],
+          "max_position_residual": 2.8780270159990897e-15,
+          "max_rotation_residual_rad": 1.2798664211290787e-15,
+          "timestamp_writer_reproduced_all_rows": true,
+          "source_reference_path_length": 107.05485462923562,
+          "published_reference_path_length": 107.05485462923565
+        }
+      },
+      "raw_local_rows": 3806,
+      "initialization_log_detected": true,
+      "initialization_time_s": 11.155363228,
+      "initialization_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+      "shared_pre_post_boundary_s": null,
+      "reference_role": "COLMAP proxy, not independent GT",
+      "conditional_proxy_diagnostic": true,
+      "formal_accuracy_status": "Not evaluated",
+      "numeric_unit": "supplied proxy units; not certified metres",
+      "diagnostic_assumption": "published poses interpreted as world_T_cam0 per author source",
+      "arms": {
+        "B": {
+          "raw_keyframe_count": 3149,
+          "input_grid_coverage": 0.9700460829493087,
+          "reference_grid_coverage": 0.9689737470167065,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 0.8543712892193025,
+            "rpe_1s_translation_rmse": 0.05870938298059751,
+            "rpe_1s_rotation_rmse_deg": 1.031833474842886,
+            "rpe_pairs": 402,
+            "scale": 1.0,
+            "alignment_rotation_det": 1.0000000000000016,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.8109680639840386,
+            "rpe_1s_translation_rmse": 0.05363392281271226,
+            "rpe_1s_rotation_rmse_deg": 1.031833474842886,
+            "rpe_pairs": 402,
+            "scale": 1.0763725604916323,
+            "alignment_rotation_det": 1.0000000000000016,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {}
+        },
+        "C": {
+          "raw_keyframe_count": 3149,
+          "input_grid_coverage": 0.9700460829493087,
+          "reference_grid_coverage": 0.9689737470167065,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 0.8543712891884603,
+            "rpe_1s_translation_rmse": 0.05870938313136201,
+            "rpe_1s_rotation_rmse_deg": 1.0318334633929616,
+            "rpe_pairs": 402,
+            "scale": 1.0,
+            "alignment_rotation_det": 1.0000000000000004,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.8109680639584113,
+            "rpe_1s_translation_rmse": 0.053633922991967474,
+            "rpe_1s_rotation_rmse_deg": 1.0318334633929616,
+            "rpe_pairs": 402,
+            "scale": 1.0763725604851813,
+            "alignment_rotation_det": 1.0000000000000004,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {}
+        },
+        "L": {
+          "raw_keyframe_count": 3149,
+          "input_grid_coverage": 0.9700460829493087,
+          "reference_grid_coverage": 0.9689737470167065,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 0.8543712891884603,
+            "rpe_1s_translation_rmse": 0.05870938313136201,
+            "rpe_1s_rotation_rmse_deg": 1.0318334633929616,
+            "rpe_pairs": 402,
+            "scale": 1.0,
+            "alignment_rotation_det": 1.0000000000000004,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.8109680639584113,
+            "rpe_1s_translation_rmse": 0.053633922991967474,
+            "rpe_1s_rotation_rmse_deg": 1.0318334633929616,
+            "rpe_pairs": 402,
+            "scale": 1.0763725604851813,
+            "alignment_rotation_det": 1.0000000000000004,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {}
+        }
+      }
+    },
+    "cemetery_r2": {
+      "sequence": "cemetery",
+      "repeat": 2,
+      "support": {
+        "common_pose_count": 406,
+        "common_span_s": 420.0,
+        "reference_evaluable_samples": 419,
+        "input_grid_samples": 434,
+        "common_reference_coverage": 0.9689737470167065,
+        "support_gate": "PASS"
+      },
+      "reference_identity": {
+        "reference_sha256": "cd34aa974c4561d270fcde3efc9badfebfab9b85622ab0a15289ffbf0981860f",
+        "convention_validated": false,
+        "pose_convention": "Unknown: full independent certification unavailable",
+        "source_supported_pose_convention": "world_T_cam0",
+        "source_support_boundary": "Author converter inverts COLMAP extrinsics, assigns camera 1 to left, writes xyzw camera poses; exact published files reproduce author's unscaled origin alignment. Original reconstruction/images.txt and per-file camera-ID export receipt not released; source support is not full independent certification.",
+        "metric_scale_validated": false,
+        "metric_scale_status": "CONFLICT: provider describes stereo metric correction; exact new files are unscaled rigid transforms of old up-to-scale references",
+        "timestamp_mode": "afrl_digits",
+        "prior_raw_gyro_check": {
+          "as_world_T_cam0": {
+            "gyro_difference_rmse_rad_s": 0.050193238500672074,
+            "median_rad_s": 0.01382717168709173,
+            "p95_rad_s": 0.0724626238149868,
+            "per_axis_correlation": [
+              0.8061237072004129,
+              0.9630929619851211,
+              0.9533945451517073
+            ]
+          },
+          "inverse_direction": {
+            "gyro_difference_rmse_rad_s": 0.16434976753480982,
+            "median_rad_s": 0.10239760959135522,
+            "p95_rad_s": 0.3005490741450145,
+            "per_axis_correlation": [
+              -0.07133829246481228,
+              0.10694053203429807,
+              0.6662095711311455
+            ]
+          }
+        },
+        "evidence": [
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/data/cemetery/colmap_aligned.txt",
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/compute_results.py",
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/slam_utils/colmap_utils.py",
+          "https://huggingface.co/datasets/afrl-uw/stereo-vi-underwater-dataset/resolve/bdb079e7fef85b1f956f3469bd4cc1c521f25772/colmap_groundtruth/cemetery.txt"
+        ],
+        "audit": {
+          "rows": 2519,
+          "byte_identical_to_author_aligned": true,
+          "old_provider_equals_author_unaligned_numeric": true,
+          "transformation": "first-pose left SE(3), no fit, scale exactly fixed to 1",
+          "first_pose_rotation": [
+            [
+              0.642955060618667,
+              0.30699262339710864,
+              -0.7016867671579732
+            ],
+            [
+              0.7654571166211375,
+              -0.28884988849627,
+              0.5750140385501447
+            ],
+            [
+              -0.026157076268213706,
+              -0.9068193155725421,
+              -0.4207071858973239
+            ]
+          ],
+          "first_pose_translation": [
+            -2.138543873266303,
+            -0.8488124789819617,
+            0.9581031438107295
+          ],
+          "max_position_residual": 2.8780270159990897e-15,
+          "max_rotation_residual_rad": 1.2798664211290787e-15,
+          "timestamp_writer_reproduced_all_rows": true,
+          "source_reference_path_length": 107.05485462923562,
+          "published_reference_path_length": 107.05485462923565
+        }
+      },
+      "raw_local_rows": 3806,
+      "initialization_log_detected": true,
+      "initialization_time_s": 11.155363228,
+      "initialization_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+      "shared_pre_post_boundary_s": 1535225065.829597,
+      "reference_role": "COLMAP proxy, not independent GT",
+      "conditional_proxy_diagnostic": true,
+      "formal_accuracy_status": "Not evaluated",
+      "numeric_unit": "supplied proxy units; not certified metres",
+      "diagnostic_assumption": "published poses interpreted as world_T_cam0 per author source",
+      "arms": {
+        "B": {
+          "raw_keyframe_count": 3148,
+          "input_grid_coverage": 0.9700460829493087,
+          "reference_grid_coverage": 0.9689737470167065,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 0.8507443495637554,
+            "rpe_1s_translation_rmse": 0.05864723556520822,
+            "rpe_1s_rotation_rmse_deg": 1.0321845540010661,
+            "rpe_pairs": 402,
+            "scale": 1.0,
+            "alignment_rotation_det": 0.9999999999999978,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.8076949111035457,
+            "rpe_1s_translation_rmse": 0.053636123326625304,
+            "rpe_1s_rotation_rmse_deg": 1.0321845540010661,
+            "rpe_pairs": 402,
+            "scale": 1.0758522384198863,
+            "alignment_rotation_det": 0.9999999999999978,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {
+            "pre_loop": {
+              "poses": 190,
+              "ape_rmse_same_whole_sequence_alignment": 0.8456999073885486
+            },
+            "post_loop": {
+              "poses": 216,
+              "ape_rmse_same_whole_sequence_alignment": 0.8551569914292781
+            }
+          }
+        },
+        "C": {
+          "raw_keyframe_count": 3148,
+          "input_grid_coverage": 0.9700460829493087,
+          "reference_grid_coverage": 0.9689737470167065,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 0.8507443495353814,
+            "rpe_1s_translation_rmse": 0.058647235717359025,
+            "rpe_1s_rotation_rmse_deg": 1.0321845425119347,
+            "rpe_pairs": 402,
+            "scale": 1.0,
+            "alignment_rotation_det": 0.9999999999999983,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.8076949110791443,
+            "rpe_1s_translation_rmse": 0.05363612350732054,
+            "rpe_1s_rotation_rmse_deg": 1.0321845425119347,
+            "rpe_pairs": 402,
+            "scale": 1.0758522384147111,
+            "alignment_rotation_det": 0.9999999999999983,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {
+            "pre_loop": {
+              "poses": 190,
+              "ape_rmse_same_whole_sequence_alignment": 0.8456999073373481
+            },
+            "post_loop": {
+              "poses": 216,
+              "ape_rmse_same_whole_sequence_alignment": 0.8551569914207601
+            }
+          }
+        },
+        "L": {
+          "raw_keyframe_count": 3148,
+          "input_grid_coverage": 0.9700460829493087,
+          "reference_grid_coverage": 0.9689737470167065,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 0.8801157844847095,
+            "rpe_1s_translation_rmse": 0.05870083014057895,
+            "rpe_1s_rotation_rmse_deg": 1.0321825042739792,
+            "rpe_pairs": 402,
+            "scale": 1.0,
+            "alignment_rotation_det": 1.0,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.8466447492580503,
+            "rpe_1s_translation_rmse": 0.0540127383510189,
+            "rpe_1s_rotation_rmse_deg": 1.0321825042739792,
+            "rpe_pairs": 402,
+            "scale": 1.0678950045219637,
+            "alignment_rotation_det": 1.0,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {
+            "pre_loop": {
+              "poses": 190,
+              "ape_rmse_same_whole_sequence_alignment": 0.8778204508236235
+            },
+            "post_loop": {
+              "poses": 216,
+              "ape_rmse_same_whole_sequence_alignment": 0.8821298905633145
+            }
+          }
+        }
+      }
+    },
+    "cemetery_r3": {
+      "sequence": "cemetery",
+      "repeat": 3,
+      "support": {
+        "common_pose_count": 406,
+        "common_span_s": 420.0,
+        "reference_evaluable_samples": 419,
+        "input_grid_samples": 434,
+        "common_reference_coverage": 0.9689737470167065,
+        "support_gate": "PASS"
+      },
+      "reference_identity": {
+        "reference_sha256": "cd34aa974c4561d270fcde3efc9badfebfab9b85622ab0a15289ffbf0981860f",
+        "convention_validated": false,
+        "pose_convention": "Unknown: full independent certification unavailable",
+        "source_supported_pose_convention": "world_T_cam0",
+        "source_support_boundary": "Author converter inverts COLMAP extrinsics, assigns camera 1 to left, writes xyzw camera poses; exact published files reproduce author's unscaled origin alignment. Original reconstruction/images.txt and per-file camera-ID export receipt not released; source support is not full independent certification.",
+        "metric_scale_validated": false,
+        "metric_scale_status": "CONFLICT: provider describes stereo metric correction; exact new files are unscaled rigid transforms of old up-to-scale references",
+        "timestamp_mode": "afrl_digits",
+        "prior_raw_gyro_check": {
+          "as_world_T_cam0": {
+            "gyro_difference_rmse_rad_s": 0.050193238500672074,
+            "median_rad_s": 0.01382717168709173,
+            "p95_rad_s": 0.0724626238149868,
+            "per_axis_correlation": [
+              0.8061237072004129,
+              0.9630929619851211,
+              0.9533945451517073
+            ]
+          },
+          "inverse_direction": {
+            "gyro_difference_rmse_rad_s": 0.16434976753480982,
+            "median_rad_s": 0.10239760959135522,
+            "p95_rad_s": 0.3005490741450145,
+            "per_axis_correlation": [
+              -0.07133829246481228,
+              0.10694053203429807,
+              0.6662095711311455
+            ]
+          }
+        },
+        "evidence": [
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/data/cemetery/colmap_aligned.txt",
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/compute_results.py",
+          "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/slam_utils/colmap_utils.py",
+          "https://huggingface.co/datasets/afrl-uw/stereo-vi-underwater-dataset/resolve/bdb079e7fef85b1f956f3469bd4cc1c521f25772/colmap_groundtruth/cemetery.txt"
+        ],
+        "audit": {
+          "rows": 2519,
+          "byte_identical_to_author_aligned": true,
+          "old_provider_equals_author_unaligned_numeric": true,
+          "transformation": "first-pose left SE(3), no fit, scale exactly fixed to 1",
+          "first_pose_rotation": [
+            [
+              0.642955060618667,
+              0.30699262339710864,
+              -0.7016867671579732
+            ],
+            [
+              0.7654571166211375,
+              -0.28884988849627,
+              0.5750140385501447
+            ],
+            [
+              -0.026157076268213706,
+              -0.9068193155725421,
+              -0.4207071858973239
+            ]
+          ],
+          "first_pose_translation": [
+            -2.138543873266303,
+            -0.8488124789819617,
+            0.9581031438107295
+          ],
+          "max_position_residual": 2.8780270159990897e-15,
+          "max_rotation_residual_rad": 1.2798664211290787e-15,
+          "timestamp_writer_reproduced_all_rows": true,
+          "source_reference_path_length": 107.05485462923562,
+          "published_reference_path_length": 107.05485462923565
+        }
+      },
+      "raw_local_rows": 3806,
+      "initialization_log_detected": true,
+      "initialization_time_s": 11.155363228,
+      "initialization_definition": "First captured /vins_estimator/odometry feature time; native publisher is gated by NON_LINEAR, not the later first selected loop keyframe",
+      "shared_pre_post_boundary_s": 1535225065.829597,
+      "reference_role": "COLMAP proxy, not independent GT",
+      "conditional_proxy_diagnostic": true,
+      "formal_accuracy_status": "Not evaluated",
+      "numeric_unit": "supplied proxy units; not certified metres",
+      "diagnostic_assumption": "published poses interpreted as world_T_cam0 per author source",
+      "arms": {
+        "B": {
+          "raw_keyframe_count": 3149,
+          "input_grid_coverage": 0.9700460829493087,
+          "reference_grid_coverage": 0.9689737470167065,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 0.8756445200461813,
+            "rpe_1s_translation_rmse": 0.05933964422929827,
+            "rpe_1s_rotation_rmse_deg": 1.0344074201987867,
+            "rpe_pairs": 402,
+            "scale": 1.0,
+            "alignment_rotation_det": 1.0000000000000013,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.8270976453985859,
+            "rpe_1s_translation_rmse": 0.053652487667017565,
+            "rpe_1s_rotation_rmse_deg": 1.0344074201987867,
+            "rpe_pairs": 402,
+            "scale": 1.0821904002774627,
+            "alignment_rotation_det": 1.0000000000000013,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {
+            "pre_loop": {
+              "poses": 190,
+              "ape_rmse_same_whole_sequence_alignment": 0.8765912708429732
+            },
+            "post_loop": {
+              "poses": 216,
+              "ape_rmse_same_whole_sequence_alignment": 0.8748108829628328
+            }
+          }
+        },
+        "C": {
+          "raw_keyframe_count": 3149,
+          "input_grid_coverage": 0.9700460829493087,
+          "reference_grid_coverage": 0.9689737470167065,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 0.8756445200136523,
+            "rpe_1s_translation_rmse": 0.05933964438611547,
+            "rpe_1s_rotation_rmse_deg": 1.0344074087727544,
+            "rpe_pairs": 402,
+            "scale": 1.0,
+            "alignment_rotation_det": 1.0000000000000004,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.8270976453706277,
+            "rpe_1s_translation_rmse": 0.05365248785731132,
+            "rpe_1s_rotation_rmse_deg": 1.0344074087727544,
+            "rpe_pairs": 402,
+            "scale": 1.082190400271552,
+            "alignment_rotation_det": 1.0000000000000004,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {
+            "pre_loop": {
+              "poses": 190,
+              "ape_rmse_same_whole_sequence_alignment": 0.8765912707883924
+            },
+            "post_loop": {
+              "poses": 216,
+              "ape_rmse_same_whole_sequence_alignment": 0.8748108829497405
+            }
+          }
+        },
+        "L": {
+          "raw_keyframe_count": 3149,
+          "input_grid_coverage": 0.9700460829493087,
+          "reference_grid_coverage": 0.9689737470167065,
+          "status": "DIAGNOSTIC_ONLY_NOT_FORMAL_ACCURACY",
+          "reason": "SOURCE_SUPPORTED_CONVENTION_AND_DISPUTED_METRIC_SCALE",
+          "fixed_scale": {
+            "ape_rmse": 0.8969816843048668,
+            "rpe_1s_translation_rmse": 0.05938227439340938,
+            "rpe_1s_rotation_rmse_deg": 1.0344033720831265,
+            "rpe_pairs": 402,
+            "scale": 1.0,
+            "alignment_rotation_det": 0.9999999999999974,
+            "evo_crosscheck": "PASS"
+          },
+          "sim3_explicit_diagnostic": {
+            "ape_rmse": 0.8569015684042592,
+            "rpe_1s_translation_rmse": 0.05397583229143045,
+            "rpe_1s_rotation_rmse_deg": 1.0344033720831265,
+            "rpe_pairs": 402,
+            "scale": 1.0754537304871508,
+            "alignment_rotation_det": 0.9999999999999974,
+            "evo_crosscheck": "PASS"
+          },
+          "pre_post": {
+            "pre_loop": {
+              "poses": 190,
+              "ape_rmse_same_whole_sequence_alignment": 0.8986697982385204
+            },
+            "post_loop": {
+              "poses": 216,
+              "ape_rmse_same_whole_sequence_alignment": 0.8954941385043932
+            }
+          }
+        }
+      }
+    }
+  }
+}

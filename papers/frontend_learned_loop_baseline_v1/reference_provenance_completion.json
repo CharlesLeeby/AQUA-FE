@@ -1,0 +1,214 @@
+{
+  "created_at": "2026-09-23T15:27:11.516802+00:00",
+  "author_commit": "5cecd1f7544a3e0c074ee6f47c997d292ad9ef34",
+  "provider_commit": "bdb079e7fef85b1f956f3469bd4cc1c521f25772",
+  "old_provider_commit": "fcda5466e08d955c5207fdc7e05f6eb57bf0fc7e",
+  "no_B_C_L_results_used": true,
+  "role": "source provenance, not independent metric truth",
+  "sources": {
+    "https://huggingface.co/api/datasets/afrl-uw/stereo-vi-underwater-dataset": {
+      "sha256": "f5dadf4d04b3c8ff60f61be55de287269a1e10a5c464f63ebb70c01394592704",
+      "bytes": 1897
+    },
+    "https://api.github.com/repos/AutonomousFieldRoboticsLab/SVIn/commits/main": {
+      "sha256": "c7aeaa5c6bd6cb5652163ed3ce41647c091a19e132fbe2bb4ff12b2411313a01",
+      "bytes": 5239
+    },
+    "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/compute_results.py": {
+      "sha256": "fc8b759ecf59a596ff74f7ed2e53fe0844d7136cf09a9deb074b4817b2c541aa",
+      "bytes": 9955
+    },
+    "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/slam_utils/colmap_utils.py": {
+      "sha256": "324b056ad1375cf774a67b64fd1d2085d72162f6358c3fa0b4c517febad42c1d",
+      "bytes": 6397
+    },
+    "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/slam_utils/traj_utils.py": {
+      "sha256": "6773e9eaa6767ae3503a8dd0d806b17557ce143aa7608c85f0917695fc6a507d",
+      "bytes": 2809
+    },
+    "https://huggingface.co/datasets/afrl-uw/stereo-vi-underwater-dataset/resolve/bdb079e7fef85b1f956f3469bd4cc1c521f25772/README.md": {
+      "sha256": "372450be8e61e4def5807c86e917096dd45f161c0127bd42252641f016bae48d",
+      "bytes": 2492
+    },
+    "https://raw.githubusercontent.com/AutonomousFieldRoboticsLab/SVIn/fcda5466e08d955c5207fdc7e05f6eb57bf0fc7e/colmap_groundtruth/README.md": {
+      "sha256": "ef581f81f5f4f62326d784db3f80b9d0693693d6f96847d06225e30b919906bc",
+      "bytes": 1304
+    },
+    "https://huggingface.co/datasets/afrl-uw/stereo-vi-underwater-dataset/resolve/bdb079e7fef85b1f956f3469bd4cc1c521f25772/colmap_groundtruth/bus_outside.txt": {
+      "sha256": "341770a61a2adae1135c4319bf858be32218ec406b446420d6a9a495b4a36bb7",
+      "bytes": 531566
+    },
+    "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/data/bus_outside/colmap_aligned.txt": {
+      "sha256": "341770a61a2adae1135c4319bf858be32218ec406b446420d6a9a495b4a36bb7",
+      "bytes": 531566
+    },
+    "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/data/bus_outside/colmap.txt": {
+      "sha256": "902e6382608cdbd1c5021b6a7b9e54218cab363f6f51359570d54afcc82fe994",
+      "bytes": 542787
+    },
+    "https://raw.githubusercontent.com/AutonomousFieldRoboticsLab/SVIn/fcda5466e08d955c5207fdc7e05f6eb57bf0fc7e/colmap_groundtruth/bus_outside.txt": {
+      "sha256": "a4881769b7b485751ef6d40d7b72dd5eecbd258818901ee5d7b822d317ba8dfc",
+      "bytes": 542819
+    },
+    "https://huggingface.co/datasets/afrl-uw/stereo-vi-underwater-dataset/resolve/bdb079e7fef85b1f956f3469bd4cc1c521f25772/colmap_groundtruth/cemetery.txt": {
+      "sha256": "cd34aa974c4561d270fcde3efc9badfebfab9b85622ab0a15289ffbf0981860f",
+      "bytes": 380426
+    },
+    "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/data/cemetery/colmap_aligned.txt": {
+      "sha256": "cd34aa974c4561d270fcde3efc9badfebfab9b85622ab0a15289ffbf0981860f",
+      "bytes": 380426
+    },
+    "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/data/cemetery/colmap.txt": {
+      "sha256": "c8ac6c47b696cfb0741b60323cd54aeb22b8a89941d174ecc3ffbbbab2b51eb6",
+      "bytes": 400134
+    },
+    "https://raw.githubusercontent.com/AutonomousFieldRoboticsLab/SVIn/fcda5466e08d955c5207fdc7e05f6eb57bf0fc7e/colmap_groundtruth/cemetery.txt": {
+      "sha256": "3a65724fedd26a5c84deb3a6a041970f9eacf7fe17a0ce2884975005c1329fa8",
+      "bytes": 400166
+    }
+  },
+  "references": {
+    "bus_outside": {
+      "reference_sha256": "341770a61a2adae1135c4319bf858be32218ec406b446420d6a9a495b4a36bb7",
+      "convention_validated": false,
+      "pose_convention": "Unknown: full independent certification unavailable",
+      "source_supported_pose_convention": "world_T_cam0",
+      "source_support_boundary": "Author converter inverts COLMAP extrinsics, assigns camera 1 to left, writes xyzw camera poses; exact published files reproduce author's unscaled origin alignment. Original reconstruction/images.txt and per-file camera-ID export receipt not released; source support is not full independent certification.",
+      "metric_scale_validated": false,
+      "metric_scale_status": "CONFLICT: provider describes stereo metric correction; exact new files are unscaled rigid transforms of old up-to-scale references",
+      "timestamp_mode": "raw",
+      "prior_raw_gyro_check": {
+        "as_world_T_cam0": {
+          "gyro_difference_rmse_rad_s": 0.031897677019523195,
+          "median_rad_s": 0.01352660892664218,
+          "p95_rad_s": 0.04812029431078561,
+          "per_axis_correlation": [
+            0.9431852517684505,
+            0.9541067418038951,
+            0.9779416082201543
+          ]
+        },
+        "inverse_direction": {
+          "gyro_difference_rmse_rad_s": 0.1574797143844867,
+          "median_rad_s": 0.09919889925875662,
+          "p95_rad_s": 0.31488388425372504,
+          "per_axis_correlation": [
+            -0.1520507182791701,
+            -0.014998487566104226,
+            0.11919459872102896
+          ]
+        }
+      },
+      "evidence": [
+        "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/data/bus_outside/colmap_aligned.txt",
+        "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/compute_results.py",
+        "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/slam_utils/colmap_utils.py",
+        "https://huggingface.co/datasets/afrl-uw/stereo-vi-underwater-dataset/resolve/bdb079e7fef85b1f956f3469bd4cc1c521f25772/colmap_groundtruth/bus_outside.txt"
+      ],
+      "audit": {
+        "rows": 3388,
+        "byte_identical_to_author_aligned": true,
+        "old_provider_equals_author_unaligned_numeric": true,
+        "transformation": "first-pose left SE(3), no fit, scale exactly fixed to 1",
+        "first_pose_rotation": [
+          [
+            0.06712149122903346,
+            0.03183770907704383,
+            -0.9972367149758963
+          ],
+          [
+            0.997059420558526,
+            0.03490025193859717,
+            0.06822378097202869
+          ],
+          [
+            0.036975901485801176,
+            -0.9988835431096803,
+            -0.029401530809880626
+          ]
+        ],
+        "first_pose_translation": [
+          -2.429522807766822,
+          2.437444549739619,
+          0.681119215305394
+        ],
+        "max_position_residual": 5.618430578060438e-15,
+        "max_rotation_residual_rad": 1.4299369275003598e-15,
+        "timestamp_writer_reproduced_all_rows": true,
+        "source_reference_path_length": 54.72079138842724,
+        "published_reference_path_length": 54.720791388427216
+      }
+    },
+    "cemetery": {
+      "reference_sha256": "cd34aa974c4561d270fcde3efc9badfebfab9b85622ab0a15289ffbf0981860f",
+      "convention_validated": false,
+      "pose_convention": "Unknown: full independent certification unavailable",
+      "source_supported_pose_convention": "world_T_cam0",
+      "source_support_boundary": "Author converter inverts COLMAP extrinsics, assigns camera 1 to left, writes xyzw camera poses; exact published files reproduce author's unscaled origin alignment. Original reconstruction/images.txt and per-file camera-ID export receipt not released; source support is not full independent certification.",
+      "metric_scale_validated": false,
+      "metric_scale_status": "CONFLICT: provider describes stereo metric correction; exact new files are unscaled rigid transforms of old up-to-scale references",
+      "timestamp_mode": "afrl_digits",
+      "prior_raw_gyro_check": {
+        "as_world_T_cam0": {
+          "gyro_difference_rmse_rad_s": 0.050193238500672074,
+          "median_rad_s": 0.01382717168709173,
+          "p95_rad_s": 0.0724626238149868,
+          "per_axis_correlation": [
+            0.8061237072004129,
+            0.9630929619851211,
+            0.9533945451517073
+          ]
+        },
+        "inverse_direction": {
+          "gyro_difference_rmse_rad_s": 0.16434976753480982,
+          "median_rad_s": 0.10239760959135522,
+          "p95_rad_s": 0.3005490741450145,
+          "per_axis_correlation": [
+            -0.07133829246481228,
+            0.10694053203429807,
+            0.6662095711311455
+          ]
+        }
+      },
+      "evidence": [
+        "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/data/cemetery/colmap_aligned.txt",
+        "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/vi_comparison/compute_results.py",
+        "https://raw.githubusercontent.com/joshi-bharat/slamutils-python/5cecd1f7544a3e0c074ee6f47c997d292ad9ef34/slam_utils/colmap_utils.py",
+        "https://huggingface.co/datasets/afrl-uw/stereo-vi-underwater-dataset/resolve/bdb079e7fef85b1f956f3469bd4cc1c521f25772/colmap_groundtruth/cemetery.txt"
+      ],
+      "audit": {
+        "rows": 2519,
+        "byte_identical_to_author_aligned": true,
+        "old_provider_equals_author_unaligned_numeric": true,
+        "transformation": "first-pose left SE(3), no fit, scale exactly fixed to 1",
+        "first_pose_rotation": [
+          [
+            0.642955060618667,
+            0.30699262339710864,
+            -0.7016867671579732
+          ],
+          [
+            0.7654571166211375,
+            -0.28884988849627,
+            0.5750140385501447
+          ],
+          [
+            -0.026157076268213706,
+            -0.9068193155725421,
+            -0.4207071858973239
+          ]
+        ],
+        "first_pose_translation": [
+          -2.138543873266303,
+          -0.8488124789819617,
+          0.9581031438107295
+        ],
+        "max_position_residual": 2.8780270159990897e-15,
+        "max_rotation_residual_rad": 1.2798664211290787e-15,
+        "timestamp_writer_reproduced_all_rows": true,
+        "source_reference_path_length": 107.05485462923562,
+        "published_reference_path_length": 107.05485462923565
+      }
+    }
+  }
+}
